@@ -2,26 +2,26 @@
 @font-face {
 	font-family:'Hharmony';
 	font-weight: 400;
-	src: url(/assets/fonts/hharmony_L.eot);
-	src: url(/assets/fonts/hharmony_L.eot?#iefix) format('embedded-opentype'),
-				url(/assets/fonts/hharmony_L.woff) format('woff'),
-				url(/assets/fonts/hharmony_L.ttf) format('truetype');
+	src: url(../fonts/hharmony_L.eot);
+	src: url(../fonts/hharmony_L.eot?#iefix) format('embedded-opentype'),
+				url(../fonts/hharmony_L.woff) format('woff'),
+				url(../fonts/hharmony_L.ttf) format('truetype');
 }
 @font-face {
 	font-family:'Hharmony';
 	font-weight: 500;
-	src: url(/assets/fonts/hharmony_M.eot);
-	src: url(/assets/fonts/hharmony_M.eot?#iefix) format('embedded-opentype'),
-				url(/assets/fonts/hharmony_M.woff) format('woff'),
-				url(/assets/fonts/hharmony_M.ttf) format('truetype');
+	src: url(../fonts/hharmony_M.eot);
+	src: url(../fonts/hharmony_M.eot?#iefix) format('embedded-opentype'),
+				url(../fonts/hharmony_M.woff) format('woff'),
+				url(../fonts/hharmony_M.ttf) format('truetype');
 }
 @font-face {
 	font-family:'Hharmony';
 	font-weight: 700;
-	src: url(/assets/fonts/hharmony_B.eot);
-	src: url(/assets/fonts/hharmony_B.eot?#iefix) format('embedded-opentype'),
-				url(/assets/fonts/hharmony_B.woff) format('woff'),
-				url(/assets/fonts/hharmony_B.ttf) format('truetype');
+	src: url(../fonts/hharmony_B.eot);
+	src: url(../fonts/hharmony_B.eot?#iefix) format('embedded-opentype'),
+				url(../fonts/hharmony_B.woff) format('woff'),
+				url(../fonts/hharmony_B.ttf) format('truetype');
 }
 
 /* base */
