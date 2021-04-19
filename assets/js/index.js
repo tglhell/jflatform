@@ -25,7 +25,7 @@ $(function () {
 						}, 300 * i);
 					}(i));
 				}
-			}, 2000);
+			}, 300);
 		});
 	}
 
@@ -38,7 +38,7 @@ $(function () {
 		for (var i = 0; i < posItemLength; i++) {
 			let thisPos = posItemTxt.eq(i).offset().top;
 			posArr.push(thisPos);
-			if (scrPos > posArr[i] - ffHgt + ftwVal) {
+			if (scrPos > posArr[i] - ffHgt + (ftwVal / 2)) {
 				posItemTxt.eq(i).removeAttr('ir').attr('ir-idx', i);
 			} else {
 				posItemTxt.eq(i).removeAttr('ir-idx').attr('ir', '');
