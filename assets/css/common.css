@@ -1,35 +1,27 @@
 /* font initializing */
 @font-face {
-	font-family:'IBMPlexSans';
+	font-family:'Hharmony';
 	font-weight: 400;
-	src: url(/anchors_biz/assets/fonts/IBMPlexSansKR-Regular.eot);
-	src: url(/anchors_biz/assets/fonts/IBMPlexSansKR-Regular.eot?#iefix) format('embedded-opentype'),
-				url(/anchors_biz/assets/fonts/IBMPlexSansKR-Regular.woff) format('woff'),
-				url(/anchors_biz/assets/fonts/IBMPlexSansKR-Regular.ttf) format('truetype');
+	src: url(/assets/fonts/hharmony_L.eot);
+	src: url(/assets/fonts/hharmony_L.eot?#iefix) format('embedded-opentype'),
+				url(/assets/fonts/hharmony_L.woff) format('woff'),
+				url(/assets/fonts/hharmony_L.ttf) format('truetype');
 }
 @font-face {
-	font-family:'IBMPlexSans';
+	font-family:'Hharmony';
 	font-weight: 500;
-	src: url(/anchors_biz/assets/fonts/IBMPlexSansKR-Medium.eot);
-	src: url(/anchors_biz/assets/fonts/IBMPlexSansKR-Medium.eot?#iefix) format('embedded-opentype'),
-				url(/anchors_biz/assets/fonts/IBMPlexSansKR-Medium.woff) format('woff'),
-				url(/anchors_biz/assets/fonts/IBMPlexSansKR-Medium.ttf) format('truetype');
+	src: url(/assets/fonts/hharmony_M.eot);
+	src: url(/assets/fonts/hharmony_M.eot?#iefix) format('embedded-opentype'),
+				url(/assets/fonts/hharmony_M.woff) format('woff'),
+				url(/assets/fonts/hharmony_M.ttf) format('truetype');
 }
 @font-face {
-	font-family:'IBMPlexSans';
-	font-weight: 600;
-	src: url(/anchors_biz/assets/fonts/IBMPlexSansKR-SemiBold.eot);
-	src: url(/anchors_biz/assets/fonts/IBMPlexSansKR-SemiBold.eot?#iefix) format('embedded-opentype'),
-				url(/anchors_biz/assets/fonts/IBMPlexSansKR-SemiBold.woff) format('woff'),
-				url(/anchors_biz/assets/fonts/IBMPlexSansKR-SemiBold.ttf) format('truetype');
-}
-@font-face {
-	font-family:'IBMPlexSans';
+	font-family:'Hharmony';
 	font-weight: 700;
-	src: url(/anchors_biz/assets/fonts/IBMPlexSansKR-Bold.eot);
-	src: url(/anchors_biz/assets/fonts/IBMPlexSansKR-Bold.eot?#iefix) format('embedded-opentype'),
-				url(/anchors_biz/assets/fonts/IBMPlexSansKR-Bold.woff) format('woff'),
-				url(/anchors_biz/assets/fonts/IBMPlexSansKR-Bold.ttf) format('truetype');
+	src: url(/assets/fonts/hharmony_B.eot);
+	src: url(/assets/fonts/hharmony_B.eot?#iefix) format('embedded-opentype'),
+				url(/assets/fonts/hharmony_B.woff) format('woff'),
+				url(/assets/fonts/hharmony_B.ttf) format('truetype');
 }
 
 /* base */
@@ -176,20 +168,20 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, dl, dd, figure, form, field
 	font-weight: normal;
 }
 html, body {
-	font-family: 'IBMPlexSans', sans-serif;
+	font-family: 'Hharmony', sans-serif;
 	font-size: 14px;
 	line-height: 1.2;
 	color: #444;
 	letter-spacing: -0.025em;
 }
 button, input, select, textarea {
-	font-family: 'IBMPlexSans', sans-serif;
+	font-family: 'Hharmony', sans-serif;
 }
 pre,
 code,
 kbd,
 samp {
-	font-family: 'IBMPlexSans', sans-serif;
+	font-family: 'Hharmony', sans-serif;
 	font-size: 1em;
 }
 strong {
@@ -229,10 +221,10 @@ body::-webkit-scrollbar {
 }
 body::-webkit-scrollbar-thumb {
 	border-radius: 5px;
-	background: rgba(153, 153, 153, .75);
+	background: rgba(153, 153, 153, .85);
 }
 body::-webkit-scrollbar-track {
-background: rgba(0, 0, 0, .15);
+background: rgba(0, 0, 0, .1);
 }
 body.n-scroll::-webkit-scrollbar-thumb,
 body.n-scroll::-webkit-scrollbar-track {
@@ -347,48 +339,4 @@ color: #898989;
 .inp-text:-webkit-autofill {
 	-webkit-box-shadow: 0 0 0 1000px #f4f4f4 inset;
 	box-shadow: 0 0 0 1000px #f4f4f4 inset;
-}
-
-/* checkbox */
-.checkbox-list {
-	overflow: hidden;
-}
-.checkbox-list li {
-	float: left;
-	width: 25%;
-}
-.checkbox input[type="checkbox"] {
-	display: none;
-}
-.checkbox label {
-	position: relative;
-	display: inline-block;
-	height: 22px;
-	padding-left: 30px;
-	font-size: 16px;
-	color: #555;
-	line-height: 22px;
-}
-.checkbox label:before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 22px;
-	height: 22px;
-	background: url(/anchors_biz/assets/images/common/ico_checkbox.png) no-repeat;
-	background-size: 22px;
-}
-.checkbox label:after {
-	content: '';
-	transition: .3s;
-	position: absolute;
-	bottom: 1px;
-	left: 1px;
-	width: 20px;
-	height: 20px;
-	background: #fff;
-}
-.checkbox input[type="checkbox"]:checked+label:after {
-	height: 0;
 }

@@ -1,0 +1,80 @@
+[ir-idx="1"],
+[ir-idx="2"],
+[ir-idx="3"],
+[ir-idx="4"],
+[ir-idx="5"],
+[ir-idx="6"],
+[ir-idx="7"],
+[ir-idx="8"] {
+	transition-delay: 0s;
+}
+
+.step1 {
+	padding: 146px 0;
+	padding: 9.125vw 0;
+	min-height: 1000px;
+	background: url(/assets/images/bg_step1_car.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.step1 .step-cont {
+	text-align: center;
+}
+
+.step2 {
+	padding: 86px 0;
+	padding: 5.375vw 0;
+	background-color: #00aad2;
+	background-size: cover;
+}
+
+.step2 .step-top-tit {
+	margin-bottom: 12px;
+}
+
+.step3 {
+	min-height: 2440px;
+	padding: 266px 0;
+	background: url(/assets/images/bg_step3_car.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.step3 .step-cont {
+	text-align: center;
+}
+
+.step3 .step-top-tit {
+	display: inline-block;
+	padding: 73px 34px;
+	border: 1px solid #777;
+	border-radius: 50%;
+}
+
+.step3 .step-cont {
+	margin-top: 80px;
+}
+
+.step-cont {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.step-top-tit {
+	font-size: 17px;
+	font-weight: 700;
+	color: #fff;
+	line-height: 2;
+	text-transform: uppercase;
+}
+
+.step-top-text {
+	font-size: 21px;
+	color: #fff;
+	line-height: 2;
+}
+
+.step-mid-text {
+	font-size: 27px;
+	color: #fff;
+	line-height: 1.85;
+}
