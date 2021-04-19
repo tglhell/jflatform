@@ -1,2 +1,0 @@
-# jflatform
-J-Flatform
