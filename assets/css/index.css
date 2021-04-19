@@ -1,17 +1,14 @@
-[ir-idx="1"],
-[ir-idx="2"],
-[ir-idx="3"],
-[ir-idx="4"],
-[ir-idx="5"],
-[ir-idx="6"],
-[ir-idx="7"],
-[ir-idx="8"] {
+[ir-idx] {
 	transition-delay: .3s;
+}
+
+.wrap {
+	max-width: 1600px;
+	margin: 0 auto;
 }
 
 .step1 {
 	padding: 146px 0;
-	padding: 9.125vw 0;
 	min-height: 1000px;
 	background: url(../images/bg_step1_car.jpg) no-repeat top center;
 	background-size: cover;
@@ -23,7 +20,6 @@
 
 .step2 {
 	padding: 86px 0;
-	padding: 5.375vw 0;
 	background-color: #00aad2;
 	background-size: cover;
 }
@@ -34,7 +30,7 @@
 
 .step3 {
 	min-height: 2440px;
-	padding: 266px 0;
+	padding: 187px 0;
 	background: url(../images/bg_step3_car.jpg) no-repeat top center;
 	background-size: cover;
 }
@@ -44,14 +40,57 @@
 }
 
 .step3 .step-top-tit {
+	position: relative;
 	display: inline-block;
 	padding: 73px 34px;
-	border: 1px solid #777;
+	border: 1px solid rgba(122, 122, 122, .7);
 	border-radius: 50%;
 }
 
+.step3 .step-top-tit:before {
+	content: '';
+	position: absolute;
+	top: -268px;
+	left: 50%;
+	width: 1px;
+	height: 268px;
+	background-color: rgba(122, 122, 122, .3);
+}
+
+.step3 .step-top-tit.style2 {
+	margin-top: 580px;
+}
+
+.step3 .step-top-tit.style2:before {
+	top: -658px;
+	height: 658px;
+}
+
 .step3 .step-cont {
-	margin-top: 80px;
+	margin-top: 85px;
+}
+
+.step3 .step-cont .step-mid-text {
+	position: relative;
+}
+
+.step3 .step-cont .step-mid-text:before {
+	content: '';
+	position: absolute;
+	top: -57px;
+	left: 50%;
+	width: 3px;
+	height: 43px;
+	background: url(../images/bg_dot_white.png) no-repeat top center;
+}
+
+.step4 {
+	padding: 187px 0;
+	background-color: #fff;
+}
+
+.step4-circle-list {
+	
 }
 
 .step-cont {

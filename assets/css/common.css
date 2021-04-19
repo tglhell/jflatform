@@ -215,6 +215,7 @@ caption {
 }
 body {
 	overflow-x: hidden;
+	background-color: #000;
 }
 body::-webkit-scrollbar {
 	width: 7px;
@@ -339,4 +340,9 @@ color: #898989;
 .inp-text:-webkit-autofill {
 	-webkit-box-shadow: 0 0 0 1000px #f4f4f4 inset;
 	box-shadow: 0 0 0 1000px #f4f4f4 inset;
+}
+
+/* text color */
+.txt-black {
+	color: #000 !important;
 }

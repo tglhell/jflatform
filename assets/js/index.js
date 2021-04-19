@@ -1,7 +1,7 @@
 $(function () {
 	const showMainList = $('[ir] > li');
-	const posItem = $('.wrap .step-pos');
 	const posItemTxt = $('.step-cont');
+	const ftwVal = $('body').css('font-weight') / 4;
 	let posArr = [];
 	let ffHgt = $(window).height();
 	let posItemLength = posItemTxt.length;
@@ -38,8 +38,8 @@ $(function () {
 		for (var i = 0; i < posItemLength; i++) {
 			let thisPos = posItemTxt.eq(i).offset().top;
 			posArr.push(thisPos);
-			if (scrPos > posArr[i] - ffHgt + 100) {
-				posItemTxt.eq(i).removeAttr('ir').attr('ir-idx', (i + (posItemLength + 1)));
+			if (scrPos > posArr[i] - ffHgt + ftwVal) {
+				posItemTxt.eq(i).removeAttr('ir').attr('ir-idx', i);
 			} else {
 				posItemTxt.eq(i).removeAttr('ir-idx').attr('ir', '');
 			}
