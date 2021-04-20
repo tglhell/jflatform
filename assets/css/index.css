@@ -1,16 +1,33 @@
 [ir-idx] {
+	transition-delay: .2s;
+}
+
+[ir-idx="40"],
+[ir-idx="43"] {
 	transition-delay: .3s;
 }
 
 [ir-idx="11"],
 [ir-idx="14"],
-[ir-idx="17"] {
+[ir-idx="17"],
+[ir-idx="41"],
+[ir-idx="44"],
+[ir-idx="50"],
+[ir-idx="53"],
+[ir-idx="59"],
+[ir-idx="62"] {
 	transition-delay: .6s;
 }
 
 [ir-idx="12"],
 [ir-idx="15"],
-[ir-idx="18"] {
+[ir-idx="18"],
+[ir-idx="42"],
+[ir-idx="45"],
+[ir-idx="51"],
+[ir-idx="54"],
+[ir-idx="60"],
+[ir-idx="63"] {
 	transition-delay: .9s;
 }
 
@@ -36,9 +53,8 @@
 	background-size: cover;
 }
 
-.step2 .step-top-tit,
-.step4 .step-top-tit {
-	margin-bottom: 12px;
+.step3 .step-top-tit {
+	margin-bottom: 0;
 }
 
 .step3 {
@@ -102,6 +118,10 @@
 	background-color: #fff;
 }
 
+.step4 .step-top-text {
+	line-height: 1.67;
+}
+
 .step4-circle-list {
 	margin-top: 135px;
 	padding: 0 254px;
@@ -155,12 +175,100 @@
 	border-radius: 50%;
 }
 
+.step5 {
+	padding: 187px 0;
+	background-color: #00aad2;
+}
+
+.step-detail {
+	margin-top: 150px !important;
+}
+
+.step-detail2 {
+	margin-top: 280px !important;
+}
+
+.step-detail3 {
+	margin-top: 246px !important;
+}
+
+.step5 .step-top-text,
+.step6 .step-top-text {
+	line-height: 1.67;
+}
+
+.step5-circle-list {
+	font-size: 0;
+	padding: 0 143px;
+}
+
+.step5-circle-list li {
+	display: inline-block;
+	width: 25%;
+	margin-left: -2px;
+}
+
+.step5-circle-list.style2 li {
+	width: 33.33%;
+	margin-left: -10px;
+}
+
+.step5-circle-list.style2 li:first-child {
+	width: 33.34%;
+}
+
+.step5-circle-list li .circle-list-item {
+	padding: 83px 0;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	font-size: 20px;
+	color: #fff;
+	line-height: 1.5;
+	text-align: center;
+}
+
+.step5-circle-list.style2 li .circle-list-item {
+	padding: 121px 0;
+	background-color: #fff;
+	color: #002c5f;
+}
+
+.step5-circle-list li:nth-child(odd)[ir] {
+	-webkit-transform: translateX(-100px);
+	transform: translateX(-100px);
+}
+
+.step5-circle-list li:nth-child(even)[ir] {
+	-webkit-transform: translateX(100px);
+	transform: translateX(100px);
+}
+
+.step5-circle-list.style2 li:nth-child(2)[ir] {
+	-webkit-transform: translateY(100px);
+	transform: translateY(100px);
+}
+
+.step5-circle-list.style2 li:nth-child(3)[ir] {
+	-webkit-transform: translateX(100px);
+	transform: translateX(100px);
+}
+
+.step6 {
+	padding: 190px 0;
+	background-color: #fff;
+}
+
+.step6 .step-hash {
+	margin-top: 50px;
+}
+
 .step-cont {
 	max-width: 1200px;
 	margin: 0 auto;
 }
 
 .step-top-tit {
+	margin-bottom: 15px;
 	font-size: 17px;
 	font-weight: 700;
 	color: #fff;
@@ -174,8 +282,133 @@
 	line-height: 2;
 }
 
+.step-top-text span + span {
+	margin-left: 20px;
+}
+
 .step-mid-text {
 	font-size: 27px;
 	color: #fff;
 	line-height: 1.85;
+}
+
+.step-mid-text span + span {
+	margin-left: 15px;
+}
+
+.step-big-text {
+	font-size: 71px;
+	color: #fff;
+	line-height: 1.13;
+}
+
+.principle-outer {
+	text-align: center;
+}
+
+.principle-step-tit {
+	position: relative;
+	display: inline-block;
+	margin-top: 90px;
+	padding: 31px 40px 32px;
+	font-size: 45px;
+	font-weight: 700;
+	color: #fff;
+	line-height: 1.27;
+}
+
+.principle-step-tit:before {
+	content: '';
+	position: absolute;
+	top: 6px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 223px;
+	background-color: #00aad2;
+}
+
+.principle-step-tit:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: 1px solid #000;
+	border-radius: 223px;
+}
+
+.principle-step-tit span {
+	position: relative;
+	font-size: 45px;
+	font-weight: 700;
+	color: #fff;
+	line-height: 1.27;
+}
+
+.principle-step-text {
+	margin-top: 56px;
+	font-size: 29px;
+	font-weight: 500;
+	color: #000;
+	line-height: 1.45;
+}
+
+.color-chip {
+	position: relative;
+}
+
+.color-chip-right div,
+.color-chip-right ul {
+	width: 50%;
+	margin: 0 50%;
+}
+
+.color-chip:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.color-chip li {
+	float: left;
+	width: 116px;
+	height: 116px;
+	margin-top: 60px;
+	border-radius: 50%;
+	vertical-align: top;
+}
+
+.color-chip li:nth-child(4n) {
+	clear: both;
+	margin-left: 0;
+}
+
+.color-chip li + li {
+	margin-left: 50px;
+}
+
+.color-chip .navi {
+	background-color: #002c5f;
+}
+
+.color-chip .sky {
+	background-color: #00aad2;
+}
+
+.color-chip .orange {
+	background-color: #e63312;
+}
+
+.color-chip .black {
+	background-color: #000;
+}
+
+.color-chip .gray {
+	background-color: #7f7f7f;
+}
+
+.color-chip .light-gray {
+	background-color: #e0e0e0;
 }

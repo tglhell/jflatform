@@ -300,19 +300,6 @@ margin-top: -1px;
 [ir-idx="5"] {
 	transition-delay: .8s;
 }
-[ir-group-idx] {
-	transition-delay: 1.2s;
-}
-[ir-group-idx] li {
-	opacity: 0;
-	-webkit-transform: translateY(50px);
-	transform: translateY(50px);
-}
-[ir-group-idx] li.active {
-	opacity: 1;
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
-}
 
 /* input */
 .inp-text {
@@ -327,7 +314,7 @@ margin-top: -1px;
 }
 .inp-text::-webkit-input-placeholder {
 	font-size: 15px;
-color: #898989;
+	color: #898989;
 }
 .inp-text::placeholder {
 	font-size: 16px;
@@ -345,4 +332,9 @@ color: #898989;
 /* text color */
 .txt-black {
 	color: #000 !important;
+}
+
+/* align */
+.align-c {
+	text-align: center;
 }
