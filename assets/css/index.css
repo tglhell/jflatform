@@ -295,7 +295,7 @@
 }
 
 .step8 .square-sm li {
-	box-shadow: 2px 40px 30px 2px rgba(0, 0, 0, .4);
+	box-shadow: 2px 40px 30px 2px rgba(0 0 0 / 40%);
 }
 
 .step8 .square-sm li:nth-child(odd) {
@@ -305,7 +305,7 @@
 	margin-top: 44px;
 	border: 1px solid rgba(0 0 0 / 80%);
 	border-radius: 0;
-	box-shadow: 2px 40px 30px 2px rgba(0, 0, 0, .2);
+	box-shadow: 2px 40px 30px 2px rgba(0 0 0 / 20%);
 }
 
 .step8 .square-sm li:nth-child(odd):before {
@@ -316,9 +316,9 @@
 	right: -1px;
 	z-indeX: 2;
 	height: 70px;
-	background: rgb(255, 255, 255);
-	background: linear-gradient(0deg, rgba(255, 255, 255, 0.48503151260504207) 0%, rgba(255, 255, 255, 1) 80%);
-	box-shadow: 2px 40px 30px 2px rgba(255, 255, 255, .8);
+	background: rgb(255 255 255);
+	background: linear-gradient(0deg, rgba(255 255 255 / 50%) 0%, rgba(255 255 255 / 100%) 80%);
+	box-shadow: 2px 40px 30px 2px rgba(255 255 255 / 80%);
 }
 
 .step8 .square-sm li + li {
