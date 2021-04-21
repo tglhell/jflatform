@@ -310,12 +310,6 @@
 	transition-delay: .9s;
 }
 
-[ir-idx="22"], [ir-idx="23"], [ir-idx="24"], [ir-idx="25"],
-[ir-idx="27"], [ir-idx="28"], [ir-idx="29"] {
-	-webkit-transition: all .7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	transition: all .7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
 .step-cont {
 	max-width: 1200px;
 	margin: 0 auto;
