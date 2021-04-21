@@ -518,14 +518,22 @@
 .square-sm li[ir] {
 	-webkit-transform: scale(2);
 	transform: scale(2);
+	z-index: 2;
+}
+
+.square-sm li[ir-idx] {
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
 }
 
 .square-sm li:nth-child(1)[ir] {
 	left: 400px;
+	z-index: 1;
 }
 
 .square-sm li:nth-child(3)[ir] {
 	right: 400px;
+	z-index: 1;
 }
 
 .square-sm li:nth-child(1)[ir-idx] {
