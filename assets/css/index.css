@@ -527,12 +527,12 @@
 }
 
 .square-sm li:nth-child(1)[ir] {
-	left: 400px;
+	left: 50%;
 	z-index: 1;
 }
 
 .square-sm li:nth-child(3)[ir] {
-	right: 400px;
+	right: 50%;
 	z-index: 1;
 }
 
