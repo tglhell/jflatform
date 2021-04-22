@@ -9,6 +9,7 @@
 	height: 1000px;
 	max-height: 100%;
 	margin: 0 auto;
+	padding-top: 146px;
 	text-align: center;
 }
 
@@ -35,9 +36,9 @@
 }
 
 .step1 .step-top-text {
-	animation: aniText 3.5s cubic-bezier(0.86, 0, 0.07, 1);
+	animation: aniText 3s cubic-bezier(0.86, 0, 0.07, 1);
 	position: relative;
-	padding-top: 146px;
+	z-index: 2;
 }
 
 @keyframes aniStep {
@@ -68,14 +69,15 @@
 
 @keyframes aniText {
 	0% {
-		-webkit-transform: translateX(-150px);
-		transform: translateX(-150px);
 		opacity: 0;
+		-webkit-transform: scale(0);
+		transform: scale(0);
+		padding-top: 320px;
 	}
-	100% {
-		-webkit-transform: translateX(0px);
-		transform: translateX(0px);
+	50% {
 		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
 	}
 }
 
