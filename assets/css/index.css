@@ -357,20 +357,20 @@
 	transition-delay: .2s;
 }
 
-[ir-idx="40"],
-[ir-idx="43"] {
+[ir-idx="39"],
+[ir-idx="42"] {
 	-webkit-transition-delay: .3s;
 	transition-delay: .3s;
 }
 
-[ir-idx="11"], [ir-idx="14"], [ir-idx="17"], [ir-idx="41"], [ir-idx="44"],
-[ir-idx="50"], [ir-idx="53"], [ir-idx="59"], [ir-idx="62"], [ir-idx="71"] {
+[ir-idx="10"], [ir-idx="13"], [ir-idx="16"], [ir-idx="40"], [ir-idx="43"],
+[ir-idx="49"], [ir-idx="52"], [ir-idx="58"], [ir-idx="61"], [ir-idx="70"] {
 	-webkit-transition-delay: .6s;
 	transition-delay: .6s;
 }
 
-[ir-idx="12"], [ir-idx="15"], [ir-idx="18"], [ir-idx="42"], [ir-idx="45"],
-[ir-idx="51"], [ir-idx="54"], [ir-idx="60"], [ir-idx="63"] {
+[ir-idx="11"], [ir-idx="14"], [ir-idx="17"], [ir-idx="41"], [ir-idx="44"],
+[ir-idx="50"], [ir-idx="53"], [ir-idx="59"], [ir-idx="62"] {
 	-webkit-transition-delay: .9s;
 	transition-delay: .9s;
 }
