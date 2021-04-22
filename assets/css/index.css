@@ -18,6 +18,10 @@
 	text-align: center;
 }
 
+.step1 .step-cont:first-child .step-top-text {
+	animation: aniText 3s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
 .step1 .step-cont + .step-cont {
 	animation: aniStep2 1.5s cubic-bezier(0.86, 0, 0.07, 1);
 	padding-bottom: 146px;
@@ -46,6 +50,19 @@
 	100% {
 		-webkit-transform: translateY(0%);
 		transform: translateY(0%);
+		opacity: 1;
+	}
+}
+
+@keyframes aniText {
+	0% {
+		-webkit-transform: translateX(-150px);
+		transform: translateX(-150px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateX(0px);
+		transform: translateX(0px);
 		opacity: 1;
 	}
 }
