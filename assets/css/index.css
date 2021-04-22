@@ -594,3 +594,15 @@
 .square-sm li + li {
 	margin: 106px 0 0 106px;
 }
+
+.page-scroll-indicator {
+	-webkit-transition: none;
+	transition: none;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	height: 5px;
+	background: #18cf00;
+	width: 0%;
+}
