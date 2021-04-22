@@ -4,28 +4,40 @@
 }
 
 .step1 {
+	position: relative;
+	max-width: 1600px;
 	height: 1000px;
 	max-height: 100%;
-	background-size: cover;
-}
-
-.step1 .step-cont {
-	animation: aniStep 1.5s cubic-bezier(0.86, 0, 0.07, 1);
-	max-width: 1600px;
-	height: 50%;
-	padding-top: 146px;
-	background: url(../images/bg_step1_car_01.jpg) no-repeat top center;
+	margin: 0 auto;
 	text-align: center;
 }
 
-.step1 .step-cont:first-child .step-top-text {
-	animation: aniText 3s cubic-bezier(0.86, 0, 0.07, 1);
+.step1:before {
+	content: '';
+	animation: aniStep 1.5s cubic-bezier(0.86, 0, 0.07, 1);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 50%;
+	background: url(../images/bg_step1_car_01.jpg) no-repeat top center;
 }
 
-.step1 .step-cont + .step-cont {
+.step1:after {
+	content: '';
 	animation: aniStep2 1.5s cubic-bezier(0.86, 0, 0.07, 1);
-	padding-bottom: 146px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 50%;
 	background-image: url(../images/bg_step1_car_02.jpg);
+}
+
+.step1 .step-top-text {
+	animation: aniText 3s cubic-bezier(0.86, 0, 0.07, 1);
+	position: relative;
+	padding-top: 146px;
 }
 
 @keyframes aniStep {
