@@ -1,0 +1,87 @@
+html,
+body,
+.wrap {
+	height: 100%;
+	background: rgb(245 199 239);
+	background: radial-gradient(circle, rgba(245 199 239 / 100%) 0%, rgba(125 255 249 / 100%) 180%);
+}
+
+.header {
+	height: 100px;
+	background-color: gray;
+}
+
+.container {
+	height: calc(100vh - 200px);
+}
+
+.footer {
+	height: 100px;
+	background-color: gray;
+}
+
+.test-svg-box {
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	position: relative;
+	top: 50%;
+	widtH: 600px;
+	height: 600px;
+	margin: 0 auto;
+}
+
+.test-svg-box > div {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+
+.test-svg-box > div + div  {
+	z-index: 2;
+}
+
+.test-svg-box svg {
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	stroke-width: 5px;
+	fill: none;
+}
+
+.test-svg-box svg * {
+	transition: none;
+	transition: none;
+}
+
+.test-svg-box .bg-bar svg {
+	stroke: #fff;
+}
+
+.test-svg-box .main-bar svg {
+	stroke: #35ac06;
+}
+
+.test-svg-box .main-bar svg circle {
+	stroke-dasharray: 1257px;
+	stroke-dashoffset: 0;
+}
+
+.test-svg-box .main-bar svg circle {
+	animation: circle-time 10s linear infinite;
+	stroke-dasharray: 1257px;
+	stroke-dashoffset: 1257;
+}
+
+@keyframes circle-time {
+	0% {
+		stroke-dashoffset: 1257;
+	}
+	95% {
+		stroke-dashoffset: 0;
+	}
+	100% {
+		stroke-dashoffset: -1257;
+	}
+}
