@@ -1,0 +1,89 @@
+.wrap {
+	background-color: #fff;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-indeX: 2;
+	height: 80px;
+	padding: 20px 30px;
+	background-color: rgba(255 255 255 / 80%);
+	box-shadow: 2px 2px 20px 5px rgba(0 0 0 / 10%);
+}
+
+.header h1 {
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	position: relative;
+	top: 50%;
+	left: 0;
+}
+
+.parallax-outer {
+	position: relative;
+	-webkit-transition: none;
+	transition: none;
+	min-height: 70vh;
+	background: url(/assets/images/bg_parallx.jpg) no-repeat 0 0;
+	background-size: cover;
+}
+
+.prx-list {
+	position: absolute;
+	bottom: 50px;
+	right: 50px;
+	font-size: 0;
+	text-align: right;
+}
+
+.prx-list li {
+	-webkit-transition: none;
+	transition: none;
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin-top: 5px;
+	background-color: rgba(180 18 18 / 30%);
+}
+
+.prx-list li:hover {
+	-webkit-transition: none;
+	transition: none;
+	background-color: rgba(180 18 18 / 50%);
+}
+
+.prx-list li:nth-child(even) {
+	margin-left: 5px;
+}
+
+.prx-list li:nth-child(2n + 1) {
+	clear: both;
+}
+
+.main-cont {
+	max-width: 1600px;
+	min-height: 100vh;
+	margin: 0 auto;
+	padding: 80px 30px;
+}
+
+.main-cont p {
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 1.3;
+}
+
+.page-scroll-indicator {
+	-webkit-transition: none;
+	transition: none;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	height: 7px;
+	background: #b804be;
+	width: 0%;
+}
