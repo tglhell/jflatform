@@ -5,3 +5,7 @@ body {
 .sample-cont {
 	text-align: center;
 }
+
+.sample-cont img {
+	width: 100%;
+}
