@@ -230,7 +230,7 @@ body::-webkit-scrollbar-thumb:hover {
 	background: rgba(187, 185, 185, 0.85);
 }
 body::-webkit-scrollbar-track {
-background: rgba(0, 0, 0, .1);
+	background: transparent;
 }
 body.n-scroll::-webkit-scrollbar-thumb,
 body.n-scroll::-webkit-scrollbar-track {
