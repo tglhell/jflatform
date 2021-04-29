@@ -217,7 +217,7 @@ caption {
 }
 body {
 	overflow-x: hidden;
-	background-color: #000;
+	background-color: #fff;
 }
 body::-webkit-scrollbar {
 	width: 7px;
@@ -230,7 +230,7 @@ body::-webkit-scrollbar-thumb:hover {
 	background: rgba(187, 185, 185, 0.85);
 }
 body::-webkit-scrollbar-track {
-	background: #fff;
+	background: transparent;
 }
 body.n-scroll::-webkit-scrollbar-thumb,
 body.n-scroll::-webkit-scrollbar-track {
