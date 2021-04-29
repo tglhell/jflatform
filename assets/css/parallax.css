@@ -87,3 +87,17 @@
 	background: #b804be;
 	width: 0%;
 }
+
+.svg-diagonal-box {
+	position: relative;
+	margin-top: 80px;
+}
+
+.svg-diagonal-box svg {
+	-webkit-transform: rotateX(180deg);
+	transform: rotateX(180deg);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
