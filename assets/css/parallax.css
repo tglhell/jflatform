@@ -101,3 +101,13 @@
 	left: 0;
 	right: 0;
 }
+
+.animate-num {
+	width: 300px;
+	max-width: 100%;
+	display: inline-block;
+	margin-top: 50px;
+	font-size: 100px;
+	font-weight: 500;
+	vertical-align: top;
+}
