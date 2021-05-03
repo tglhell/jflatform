@@ -3,7 +3,7 @@ $(function () {
 	let valChk = false;
 	$(window).scroll(function () {
 		let scrPos = $(this).scrollTop();
-		let AniItem = $('.animate-num');
+		const AniItem = $('.animate-num');
 		$('.prx-scr').css('background-position-y', scrPos / 5);
 		if (!valChk) {
 			for (let i = 0; i < AniItem.length; i++ ) {
