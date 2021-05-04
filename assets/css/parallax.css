@@ -116,3 +116,8 @@
 	vertical-align: top;
 	text-align: center;
 }
+
+.animate-num::selection {
+	background-color: red;
+	color: #fff;
+}
