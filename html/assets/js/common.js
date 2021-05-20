@@ -1,6 +1,7 @@
 $(function (){
-	// tab
 	var tabTar = $('.js-tab');
+	var prxImg = $('.parallax-img img');
+	var prxVal = 8;
 	tabTar.each(function () {
 		tabAutoHgt ($(this));
 	});
@@ -17,8 +18,18 @@ $(function (){
 		var tabBoxItemHgt = tabRoot.find('.js-tab-cont .active').height() + tabPdtVal;
 		tabRoot.find(tabBoxItem).parent().css({'height':tabBoxItemHgt});
 	});
+	
+	prxImg.ready(function(){
+		prxImg.each(function(){
+			prxHgt ($(this));
+		});
+	});
 
-	// popup
+	$(window).scroll(function(){
+		var scrPos = $(this).scrollTop();
+		prxImg.css({'transform':'translateY(' + scrPos / prxVal + 'px)'});
+	});
+
 	$('body').on('click', '.pop-open', (function () {
 		var returnTar;
 		return function (e) {
@@ -40,16 +51,26 @@ $(function (){
 				});
 			}, 0);
 			setTimeout(function(){
-				var popIdxHgt = $('.layer-popup-wrap' + '[data-pop-idx=' + popIdx + ']').find(popCont).height();
+				popIdxHgt = $('.layer-popup-wrap' + '[data-pop-idx=' + popIdx + ']').find(popCont).height();
 				if (hSize < popIdxHgt) {
 					popCont.parent().css('height', 'auto');
-					$('.layer-popup-wrap').animate({scrollTop:0}, 300);
+					$('.layer-popup-wrap').stop().animate({scrollTop:0}, 300);
 				}
 			}, 500);
 
 			$('.btn-close-popup, .layer-popup-wrap').click(function (e) {
 				var tarItem = $('.layer-popup-cont > div, .layer-title, .layer-cont *');
-				if (!$(e.target).is(tarItem)) {
+				if (hSize < popIdxHgt) {
+					$('.layer-popup-wrap').stop().animate({scrollTop:0}, 200, function(){
+						popClose ();
+					});
+				} else {
+					if (!$(e.target).is(tarItem)) {
+						popClose ();
+					}
+				}
+
+				function popClose () {
 					$('.layer-popup-wrap').fadeOut(500);
 					popCont.removeAttr('tabindex').fadeOut(500).parent().removeAttr('style');
 					$('.tar-loop').remove();
@@ -60,21 +81,29 @@ $(function (){
 						if (wSize > 1024) {
 							$('body').css({'overflow':'auto', 'width':'auto'});
 						}
-					}, 800);
+					}, 500);
 				}
 			});
 		}
 	})());
 
-	// window resize event
 	$(window).on('resize', function () {
-		// tab
 		tabTar.each(function () {
 			tabAutoHgt ($(this));
 		});
+
+		prxImg.ready(function(){
+			prxImg.each(function(){
+				prxHgt ($(this));
+			});
+		});
 	});
 
-	// function event
+	function prxHgt (target) {
+		var prxHgt = parseInt(target.height() / 2);
+		target.css('margin-top', -prxHgt);
+	}
+
 	function tabAutoHgt (target) {
 		var tabCntHgt = target.find('.js-tab-cont .active').height();
 		tabPdtVal = parseInt(target.find('.js-tab-cont').css('padding-top')) * 2;
