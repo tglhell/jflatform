@@ -1,6 +1,6 @@
 $(function (){
 	var tabTar = $('.js-tab');
-	var prxImg = $('.parallax-img img');
+	var prxImg = $('.parallax-cont img');
 
 	tabTar.each(function () {
 		tabAutoHgt ($(this));
@@ -23,8 +23,8 @@ $(function (){
 		var irLeng = $(this).find('.ir-item').length;
 		for (var i = 0; i <= irLeng; i++) {
 			$(this).find('.ir-item').eq(i).css('transition-delay', '.' + i + 's');
-			if (i > 9) {
-				$(this).find('.ir-item').eq(i).css('transition-delay', '1.' + (i - 10) + 's');
+			if (i > irCnt) {
+				$(this).find('.ir-item').eq(i).css('transition-delay', '1.' + i - (irCnt + 1) + 's');
 			}
 		}
 	});

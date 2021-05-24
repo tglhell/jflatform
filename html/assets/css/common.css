@@ -383,10 +383,10 @@ body::-webkit-scrollbar-track,
 }
 
 /* parallax scroll */
-.parallax-img {
+.parallax-cont {
 	overflow: hidden;
 }
-.parallax-img img {
+.parallax-cont img {
 	position: relative;
 	top: 50%;
 	width: 100%;
