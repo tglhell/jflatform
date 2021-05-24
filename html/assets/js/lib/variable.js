@@ -7,4 +7,4 @@ scrVal = 300;
 fadeVal = 500;
 
 // parallax scroll value
-prxVal = 8; // the lower the bigger
+prxVal = 6; // the lower the bigger
