@@ -496,9 +496,6 @@ body::-webkit-scrollbar-track,
 }
 
 @media (max-width: 767px) {
-	.layer-popup-body {
-		padding: 0;
-	}
 	.layer-popup-cont {
 		min-width: auto;
 		width: calc(100% - 50px);
