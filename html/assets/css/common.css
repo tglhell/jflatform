@@ -245,12 +245,8 @@ body::-webkit-scrollbar-track,
 
 
 /** common **/
-/* selectbox */
-.slt-Box {
-	border: 1px solid #aaa;
-}
 
-/** transition value **/
+/* transition value */
 [data-ir],
 .ir-count[data-ir] > .ir-item {
 	-webkit-transition: all .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -271,13 +267,18 @@ body::-webkit-scrollbar-track,
 	transform: scale(1.3);
 }
 
+/* selectbox */
+.slt-Box {
+	border: 1px solid #aaa;
+}
+
 /* input */
 .inp-box {
 	width: 100%;
 	height: 40px;
 	padding: 0 18px;
-	border: none;
-	background: #f4f4f4;
+	border: 1px solid #999;
+	background: #fff;
 	font-size: 16px;
 	color: #555;
 	vertical-align: middle;
