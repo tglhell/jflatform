@@ -26,10 +26,10 @@ $(function () {
 				mousewheel: {
 					releaseOnEdges: true,
 				},
-				simulateTouch: false,
+				simulateTouch: true,
 				speed: 300,
 				loop: false,
-				spaceBetween: 30,
+				spaceBetween: 0,
 				observer: true,
 				observeParents: true,
 			}

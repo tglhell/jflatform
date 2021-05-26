@@ -115,6 +115,21 @@ $(function () {
 		}
 	})());
 
+	function checkMobile () {
+		var varUA = navigator.userAgent.toLowerCase(); // get userAgent value
+		if ( varUA.indexOf('android') > -1) {
+			$('html').addClass('android');
+			return "android";
+		} else if ( varUA.indexOf("iphone") > -1||varUA.indexOf("ipad") > -1||varUA.indexOf("ipod") > -1 ) {
+			$('html').addClass('ios');
+			return "ios";
+		} else {
+			$('html').addClass('other');
+			return "other";
+		}
+	}
+	checkMobile ();
+
 	$(window).on('resize', function () {
 		tabTar.each(function () {
 			tabAutoHgt ($(this));
