@@ -17,11 +17,44 @@
 	
 	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../assets/js/common.js"></script>
 
+	<style>
+		.layer-popup-body .layer-cont p {
+			padding: 25px 0;
+		}
+		.test-cont {
+			height: 500px;
+			border: 1px solid #000;
+		}
+		.test-cont + .test-cont {
+			margin-top: 50px;
+		}
+		.btn {
+			margin: 50px 0;
+		}
+	</style>
 	<script>
 		$(function(){
+			var chkVal = false;
 			$('.view_code').on('click', function(){
 				$(this).next('.code-toolbar').toggleClass('open');
+			});
+
+			$(window).scroll(function () {
+				var chkBtnPos = $('.scr-btn');
+				var thisPos = $(this).scrollTop();
+				var scrBtnPos = chkBtnPos.offset().top - $(window).height() + scrPos;
+				if (!chkVal) {
+					if (thisPos > scrBtnPos) {
+						$('html, body').animate({scrollTop:scrBtnPos});
+						chkBtnPos.trigger('click');
+						chkVal = true;
+					}
+				}
+				if (thisPos < scrBtnPos) {
+					chkVal = false;
+				}
 			});
 		});
 	</script>	
@@ -46,8 +79,8 @@
 			<a href="coding_guide_type.html" title="TYPE">기본 GUIDE 정의</a>
 			<a href="coding_guide_naming.html" title="NAMING">네이밍 정의</a>
 			<a href="coding_guide_box.html" title="BOX">BOX</a>
-			<a href="javascript:void(0);" title="BUTTON" class="active">BUTTON</a>
-			<a href="coding_guide_form.html" title="FORM">FORM</a>
+			<a href="coding_guide_button.html" title="BUTTON">BUTTON</a>
+			<a href="javascript:void(0);" title="FORM" class="active">FORM</a>
 			<a href="coding_guide_font.html" title="FONT">FONT</a>
 			<a href="coding_guide_table.html" title="TABLE">TABLE</a>
 			<a href="coding_guide_tab.html" title="TAB">TAB</a>
@@ -64,40 +97,50 @@
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--
-<h3>Button Type</h3>
-<div class="cta-outer align-center">
-	<button class="btn"><span>확인</span></button>
-	<button class="btn btn-type2"><span>취소</span></button>
-</div>
 
-<h3>Link Type</h3>
-<div class="cta-outer align-center">
-	<a href="#" class="btn"><span>확인</span></a>
-	<a href="#" class="btn btn-type2"><span>취소</span></a>
-</div>
 --></code></pre>
-<!-- //코드 삽입 -->			
+<!-- //코드 삽입 -->
 			<div class="conIn_tip">
-				기본 클래스는 "<strong>btn</strong>"이며, 여러 스타일에 따라 클래스 "<strong>btn-type2</strong>" ~ "<strong>btn-type(n)</strong>"을 붙여 사용함.
+
 			</div>
 
 			<!-- form -->
 			<div>
 				작성코드<br><br>
 
-				<h3>Button Type</h3>
-				<br>
-				<div class="cta-outer align-center">
-					<button class="btn"><span>확인</span></button>
-					<button class="btn btn-type2"><span>취소</span></button>
+				<div class="test-cont"></div>
+				<div class="test-cont"></div>
+				<div class="test-cont"></div>
+				<div class="test-cont"></div>
+				<div class="cta-outer">
+					<button class="btn pop-open scr-btn" data-pop-idx="1"><span>Popup Normal</span></button>
 				</div>
-				<br><br><br><br>
-				<h3>Link Type</h3>
-				<br>
-				<div class="cta-outer align-center">
-					<a href="#" class="btn btn-type2"><span>확인</span></a>
-					<a href="#" class="btn"><span>취소</span></a>
+				<div class="test-cont"></div>
+				<div class="test-cont"></div>
+				<div class="test-cont"></div>
+				<div class="test-cont"></div>
+				<div class="test-cont"></div>
+
+				<!-- layer 1-->
+				<div class="layer-popup-wrap" data-pop-idx="1">
+					<div class="layer-popup-body">
+						<div class="layer-popup-cont">
+							<h1 class="layer-title">Layer Title 1</h1>
+							<div class="layer-cont">
+								<p>layerCont Text1</p>
+								<p>layerCont Text2</p>
+								<p>layerCont Text3</p>
+								<p>layerCont Text4</p>
+								<p>layerCont Text5</p>
+								<p>layerCont Text6 layerCont Text6 layerCont Text6 layerCont Text6 layerCont Text6 layerCont Text6 layerCont Text6</p>
+								<p>layerCont Text7</p>
+								<p>layerCont Text8</p>
+							</div>
+							<button class="btn-close-popup">close</button>
+						</div>
+					</div>
 				</div>
+				<!-- //layer 1-->
 			</div>
 			<!-- //form -->
 
@@ -110,5 +153,5 @@
 		<span class="blind">Top</span>
 	</a>
 </div>
-</body>
+</body>	
 </html>

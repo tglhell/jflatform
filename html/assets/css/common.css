@@ -164,7 +164,7 @@ html, body {
 	height: 100%;
 	font-family: 'Noto-Sans-JP', sans-serif;
 	font-size: 14px;
-	line-height: 1.2;
+	line-height: 1.4;
 	color: #444;
 	letter-spacing: -0.025em;
 }
@@ -298,6 +298,83 @@ body::-webkit-scrollbar-track,
 .inp-box:-webkit-autofill {
 	-webkit-box-shadow: 0 0 0 1000px #f4f4f4 inset;
 	box-shadow: 0 0 0 1000px #f4f4f4 inset;
+}
+
+/* button */
+.cta-outer {
+	margin: 0 -5px;
+	font-size: 0;
+}
+.btn {
+	padding: 0 5px;
+}
+.btn span {
+	-webkit-transition: color .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition: color .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	position: relative;
+	z-index: 2;
+	display: inline-block;
+	width: 210px;
+	height: 50px;
+	padding: 0 15px;
+	border: 1px solid #007fa8;
+	font-size: 16px;
+	color: #007fa8;
+	vertical-align: middle;
+}
+.btn:hover span {
+	-webkit-transition: color .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition: color .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	color: #fff;
+}
+.btn.btn-type2:hover span {
+	color: #007fa8;
+}
+.btn span:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.btn span:after {
+	content: '';
+	-webkit-transition: background-color, right .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition: background-color, right .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 100%;
+	z-index: -1;
+	background-color: #007fa8;
+}
+.btn.btn-type2 span:after {
+	background-color: #fff;
+}
+.btn:hover span:after {
+	-webkit-transition: background-color, right .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition: background-color, right .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	right: 0;
+}
+.btn.btn-type2 span {
+	background-color: #007fa8;
+	color: #fff;
+}
+@media screen and (max-width: 767px) {
+	.cta-outer {
+		margin: 0;
+	}
+	.btn {
+		display: block;
+		width: 100%;
+		padding: 0;
+	}
+	.btn + .btn {
+		margin-top: 10px;
+	}
+	.btn span {
+		width: 100%;
+	}
 }
 
 /* align */

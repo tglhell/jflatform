@@ -1,4 +1,4 @@
-$(function (){
+$(function () {
 	var tabTar = $('.js-tab');
 	var prxImg = $('.parallax-cont img');
 
@@ -19,7 +19,7 @@ $(function (){
 		tabRoot.find(tabBoxItem).parent().css({'height':tabBoxItemHgt});
 	});
 
-	$('.ir-count').each(function(){
+	$('.ir-count').each(function () {
 		var irLeng = $(this).find('.ir-item').length;
 		for (var i = 0; i <= irLeng; i++) {
 			$(this).find('.ir-item').eq(i).css('transition-delay', '.' + i + 's');
@@ -28,14 +28,14 @@ $(function (){
 			}
 		}
 	});
-	
-	prxImg.ready(function(){
-		prxImg.each(function(){
+
+	prxImg.ready(function () {
+		prxImg.each(function () {
 			prxHgt ($(this));
 		});
 	});
 
-	$(window).scroll(function(){
+	$(window).scroll(function () {
 		var scrPos = $(this).scrollTop();
 		prxImg.css({'transform':'translateY(' + scrPos / prxVal + 'px)'});
 	});
@@ -61,7 +61,7 @@ $(function (){
 					popCont.focus();
 				});
 			}, 0);
-			setObj(function(){
+			setObj(function () {
 				popIdxHgt = $('.layer-popup-wrap' + '[data-pop-idx=' + popIdx + ']').find(popCont).height();
 				if (hSize < popIdxHgt) {
 					popCont.parent().css('height', 'auto');
@@ -74,7 +74,7 @@ $(function (){
 				if (!$(e.target).is(tarItem)) {
 					if ($(this).scrollTop() !== 0) {
 						if (hSize < popIdxHgt) {
-							popWrap.stop().animate({scrollTop:0}, scrVal, function(){
+							popWrap.stop().animate({scrollTop:0}, scrVal, function () {
 								popClose ();
 							});
 						}
@@ -88,9 +88,11 @@ $(function (){
 				popWrap.fadeOut(fadeVal);
 				popCont.removeAttr('tabindex').fadeOut(fadeVal).parent().removeAttr('style');
 				$('.tar-loop').remove();
-				setObj(function () {
-					returnTar.focus();
-				}, 0);
+				if ($('.scr-btn').length == 0) {
+					setObj(function () {
+						returnTar.focus();
+					}, 0);
+				}
 				setObj(function () {
 					if (wSize > tbl) {
 						$('body').css({'overflow':'auto', 'width':'auto'});
@@ -105,8 +107,8 @@ $(function (){
 			tabAutoHgt ($(this));
 		});
 
-		prxImg.ready(function(){
-			prxImg.each(function(){
+		prxImg.ready(function () {
+			prxImg.each(function () {
 				prxHgt ($(this));
 			});
 		});

@@ -20,17 +20,6 @@
 	<script type="text/javascript" src="../assets/js/common.js"></script>
 
 	<style>
-		.sample-btn:focus {
-			outline: 1px solid #000;
-		}
-		.sample-btn span {
-			display: inline-block;
-			padding: 4px 12px;
-			border: 1px solid #999;
-			font-size: 14px;
-			color: #000;
-			line-height: 1.4;
-		}
 		.layer-popup-body .layer-cont p {
 			padding: 25px 0;
 		}
@@ -106,8 +95,10 @@
 			<div>
 				작성코드<br><br>
 				
-				<button class="sample-btn pop-open" data-pop-idx="1"><span>Popup Normal</span></button>
-				<button class="sample-btn pop-open" data-pop-idx="2"><span>Popup Scroll</span></button>
+				<div class="cta-outer">
+					<button class="btn pop-open" data-pop-idx="1"><span>Popup Normal</span></button>
+					<button class="btn pop-open" data-pop-idx="2"><span>Popup Scroll</span></button>
+				</div>
 
 				<!-- layer 1-->
 				<div class="layer-popup-wrap" data-pop-idx="1">
