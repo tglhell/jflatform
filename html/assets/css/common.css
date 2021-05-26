@@ -302,11 +302,15 @@ body::-webkit-scrollbar-track,
 
 /* button */
 .cta-outer {
-	margin: 0 -5px;
+	/* margin: 0 -5px; */
 	font-size: 0;
 }
 .btn {
-	padding: 0 5px;
+	display: inline-block;
+	margin-right: 5px;
+}
+.btn:nth-child(even) {
+	margin: 0 0 0 5px;
 }
 .btn span {
 	-webkit-transition: color .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -314,7 +318,7 @@ body::-webkit-scrollbar-track,
 	position: relative;
 	z-index: 2;
 	display: inline-block;
-	width: 210px;
+	min-width: 210px;
 	height: 50px;
 	padding: 0 15px;
 	border: 1px solid #007fa8;

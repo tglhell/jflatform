@@ -36,8 +36,20 @@ $(function () {
 	});
 
 	$(window).scroll(function () {
+		var chkBtnPos = $('.scr-fix-btn');
 		var scrPos = $(this).scrollTop();
+		var scrBtnPos = chkBtnPos.offset().top - $(window).height() + scrFixPos;
 		prxImg.css({'transform':'translateY(' + scrPos / prxVal + 'px)'});
+		if (!chkBool) {
+			if (scrPos > scrBtnPos) {
+				$('html, body').animate({scrollTop:scrBtnPos});
+				chkBtnPos.trigger('click');
+				chkBool = true;
+			}
+		}
+		if (scrPos < scrBtnPos) {
+			chkBool = false;
+		}
 	});
 
 	$('body').on('click', '.pop-open', (function () {
