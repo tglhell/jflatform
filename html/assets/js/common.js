@@ -115,16 +115,6 @@ $(function () {
 		}
 	})());
 
-	function checkMobile () {
-		var UserAgent = navigator.platform;
-		if (UserAgent.match(/i(Phone|Pod)/i) != null ){
-			$('html').addClass('ios');
-		} else{
-			$('html').addClass('android');
-		}
-	}
-	checkMobile ();
-
 	$(window).on('resize', function () {
 		tabTar.each(function () {
 			tabAutoHgt ($(this));
@@ -136,6 +126,16 @@ $(function () {
 			});
 		});
 	});
+	
+	function checkMobile () {
+		var UserAgent = navigator.platform;
+		if (UserAgent.match(/i(Phone|Pod)/i) != null){
+			$('html').addClass('ios');
+		} else{
+			$('html').addClass('android');
+		}
+	}
+	checkMobile ();
 
 	function prxHgt (target) {
 		let prxHgt = parseInt(target.height() / 2);
