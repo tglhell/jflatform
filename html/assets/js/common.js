@@ -46,9 +46,10 @@ $(function () {
 				chkBtnPos.trigger('click');
 				chkBool = true;
 			}
-		}
-		if (scrPos < scrBtnPos) {
-			chkBool = false;
+		} else {
+			if (scrPos < scrBtnPos) {
+				chkBool = false;
+			}
 		}
 	});
 
