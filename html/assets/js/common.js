@@ -116,16 +116,11 @@ $(function () {
 	})());
 
 	function checkMobile () {
-		var varUA = navigator.userAgent.toLowerCase(); // get userAgent value
-		if ( varUA.indexOf('android') > -1) {
-			$('html').addClass('android');
-			return "android";
-		} else if ( varUA.indexOf("iphone") > -1||varUA.indexOf("ipad") > -1||varUA.indexOf("ipod") > -1 ) {
+		var UserAgent = navigator.platform;
+		if (UserAgent.match(/i(Phone|Pod)/i) != null ){
 			$('html').addClass('ios');
-			return "ios";
-		} else {
-			$('html').addClass('other');
-			return "other";
+		} else{
+			$('html').addClass('android');
 		}
 	}
 	checkMobile ();
