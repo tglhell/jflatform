@@ -1,30 +1,31 @@
 $(function () {
-	var tabTar = $('.js-tab');
-	var prxImg = $('.parallax-cont img');
+	const tabTar = $('.js-tab');
+	const prxImg = $('.parallax-cont img');
+	const irCont = $('.ir-count');
 
 	tabTar.each(function () {
 		tabAutoHgt ($(this));
 	});
 
 	$('body').on('click', '.js-tab li', function (e) {
-		var tabRoot = $(this).closest('.js-tab');
-		var tabIdx = $(this).index();
-		var tabBoxItem = $('.js-tab-cont > div');
+		const tabRoot = $(this).closest('.js-tab');
+		const tabBoxItem = $('.js-tab-cont > div');
+		let tabIdx = $(this).index();
 
 		e.preventDefault();
 		$(this).addClass('active').siblings().removeClass('active');
 		tabRoot.find(tabBoxItem).removeClass('active').eq(tabIdx).addClass('active');
 
-		var tabBoxItemHgt = tabRoot.find('.js-tab-cont .active').height() + tabPdtVal;
+		let tabBoxItemHgt = tabRoot.find('.js-tab-cont .active').height() + tabPdtVal;
 		tabRoot.find(tabBoxItem).parent().css({'height':tabBoxItemHgt});
 	});
 
-	$('.ir-count').each(function () {
-		var irLeng = $(this).find('.ir-item').length;
-		for (var i = 0; i <= irLeng; i++) {
+	irCont.each(function () {
+		let irLeng = $(this).find('.ir-item').length;
+		for (let i = 0; i <= irLeng; i++) {
 			$(this).find('.ir-item').eq(i).css('transition-delay', '.' + i + 's');
 			if (i > irCnt) {
-				$(this).find('.ir-item').eq(i).css('transition-delay', '1.' + i - (irCnt + 1) + 's');
+				$(this).find('.ir-item').eq(i).css('transition-delay', sAd + '.' + i - (irCnt + sAd) + 's');
 			}
 		}
 	});
@@ -36,11 +37,11 @@ $(function () {
 	});
 
 	$(window).scroll(function () {
-		var scrPos = $(this).scrollTop();
-		var chkBtnPos = $('.scr-fix-btn');
+		const chkBtnPos = $('.scr-fix-btn');
+		let scrPos = $(this).scrollTop();
 		prxImg.css({'transform':'translateY(' + scrPos / prxVal + 'px)'});
 		if (chkBtnPos.length >= 1) {
-			var scrBtnPos = chkBtnPos.offset().top - $(window).height() + scrFixPos;
+			let scrBtnPos = chkBtnPos.offset().top - $(window).height() + scrFixPos;
 			if (!chkBool) {
 				if (scrPos > scrBtnPos) {
 					$('html').animate({scrollTop:scrBtnPos});
@@ -56,20 +57,18 @@ $(function () {
 	});
 
 	$('body').on('click', '.pop-open', (function () {
-		var returnTar;
+		let returnTar;
 		return function (e) {
-			var bodyWid = $('body').width();
-			var wSize = $(window).width();
-			var hSize = $(window).height();
-			var popIdx = $(this).attr('data-pop-idx');
-			var popWrap = $('.layer-popup-wrap');
-			var popCont = $('.layer-popup-cont');
+			const bodyWid = $('body').width();
+			const wSize = $(window).width();
+			const hSize = $(window).height();
+			const popIdx = $(this).attr('data-pop-idx');
+			const popWrap = $('.layer-popup-wrap');
+			const popCont = $('.layer-popup-cont');
 			returnTar = $(e.target).closest('button');
 			$('.layer-popup-wrap' + '[data-pop-idx=' + popIdx + ']').fadeIn(fadeVal).css('display', 'block');
 			popCont.attr('tabindex', '0').fadeIn(fadeVal);
-			if (wSize > tbl) {
-				$('body').css({'overflow':'hidden', 'width':bodyWid});
-			}
+			$('body').css({'overflow':'hidden', 'width':bodyWid});
 			setObj(function () {
 				popCont.focus().append('<a href="#" class="tar-loop"></a>');
 				$('.tar-loop').focusin(function () {
@@ -85,7 +84,7 @@ $(function () {
 			}, fadeVal);
 
 			$('body').on('click', '.btn-close-popup, .layer-popup-wrap', function (e) {
-				var tarItem = $('.layer-popup-cont > div, .layer-title, .layer-cont *');
+				const tarItem = $('.layer-popup-cont > div, .layer-title, .layer-cont *');
 				if (!$(e.target).is(tarItem)) {
 					if ($(this).scrollTop() !== 0) {
 						if (hSize < popIdxHgt) {
@@ -107,8 +106,9 @@ $(function () {
 					returnTar.focus();
 				}, 0);
 				setObj(function () {
-					if (wSize > tbl) {
-						$('body').css({'overflow':'auto', 'width':'auto'});
+					$('body').css({'overflow':'auto', 'width':'auto'});
+					if ($('.swiper-container').length >= 1) {
+						$('.swiper-wrapper').css('transform', 'translate3d(0, 0, 0)');
 					}
 				}, fadeVal);
 			}
@@ -128,12 +128,12 @@ $(function () {
 	});
 
 	function prxHgt (target) {
-		var prxHgt = parseInt(target.height() / 2);
+		let prxHgt = parseInt(target.height() / 2);
 		target.css('margin-top', -prxHgt);
 	}
 
 	function tabAutoHgt (target) {
-		var tabCntHgt = target.find('.js-tab-cont .active').height();
+		let tabCntHgt = target.find('.js-tab-cont .active').height();
 		tabPdtVal = parseInt(target.find('.js-tab-cont').css('padding-top')) * 2;
 		target.find('.js-tab-cont').css('height', tabCntHgt + tabPdtVal);
 	}
