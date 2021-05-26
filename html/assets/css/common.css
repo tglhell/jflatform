@@ -368,10 +368,11 @@ body::-webkit-scrollbar-track,
 	.cta-outer {
 		margin: 0;
 	}
-	.btn {
+	.btn,
+	.btn:nth-child(even) {
 		display: block;
 		width: 100%;
-		padding: 0;
+		margin: 0;
 	}
 	.btn + .btn {
 		margin-top: 10px;
