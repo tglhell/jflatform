@@ -39,7 +39,7 @@ $(function () {
 		swiper1.on('reachEnd', function(){
 			setObj(function(){
 				$('.btn-close-popup').trigger('click');
-			}, scrFixPos);
+			}, fadeVal);
 		})
 	}
 });

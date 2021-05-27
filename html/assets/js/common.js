@@ -49,7 +49,7 @@ $(function () {
 					chkBool = true;
 				}
 			} else {
-				if (scrPos < scrBtnPos) {
+				if (scrPos == 0) {
 					chkBool = false;
 				}
 			}
@@ -60,8 +60,7 @@ $(function () {
 		let returnTar;
 		return function (e) {
 			const bodyWid = $('body').width();
-			const wSize = $(window).width();
-			const hSize = $(window).height();
+			const hgtSize = $(window).height();
 			const popIdx = $(this).attr('data-pop-idx');
 			const popWrap = $('.layer-popup-wrap');
 			const popCont = $('.layer-popup-cont');
@@ -77,7 +76,7 @@ $(function () {
 			}, 0);
 			setObj(function () {
 				popIdxHgt = $('.layer-popup-wrap' + '[data-pop-idx=' + popIdx + ']').find(popCont).height();
-				if (hSize < popIdxHgt) {
+				if (hgtSize < popIdxHgt) {
 					popCont.parent().css('height', 'auto');
 					popWrap.stop().animate({scrollTop:0}, scrVal);
 				}
@@ -87,7 +86,7 @@ $(function () {
 				const tarItem = $('.layer-popup-cont > div, .layer-title, .layer-cont *');
 				if (!$(e.target).is(tarItem)) {
 					if ($(this).scrollTop() !== 0) {
-						if (hSize < popIdxHgt) {
+						if (hgtSize < popIdxHgt) {
 							popWrap.stop().animate({scrollTop:0}, scrVal, function () {
 								popClose ();
 							});
@@ -128,7 +127,7 @@ $(function () {
 	});
 	
 	function checkMobile () {
-		var UserAgent = navigator.platform;
+		let UserAgent = navigator.platform;
 		if (UserAgent.match(/i(Phone|Pod)/i) != null){
 			$('html').addClass('ios');
 		} else{

@@ -161,7 +161,6 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, dl, dd, figure, form, field
 	font-weight: normal;
 }
 html, body {
-	height: 100%;
 	font-family: 'Noto-Sans-JP', sans-serif;
 	font-size: 14px;
 	line-height: 1.4;
@@ -242,10 +241,43 @@ body::-webkit-scrollbar-track,
 }
 
 /* layout */
+.test {
+	background-color: #f4f4f4;
+}
+.skip-nav a {
+	position: absolute;
+	top: -28px;
+	left: 0;
+	right: 0;
+}
+.skip-nav a:focus,
+.skip-nav a:active {
+	top: 0;
+}
+.skip-nav a {
+	display: block;
+	background-color: #000;
+	font-size: 14px;
+	color: #fff;
+	line-height: 2;
+	text-align: center;
+}
+.hmj-header {
+	height: 100px;
+	background-color: #f4f4f4;
+}
+.hmj-container {
+	max-width: 1120px;
+	min-height: calc(100vh - 300px); /* calc(100vh - (header height + footer height)) */
+	margin: 0 auto;
+}
+.hmj-footer {
+	height: 200px;
+	background-color: #f4f4f4;
+}
 
 
 /** common **/
-
 /* transition value */
 [data-ir],
 .ir-count[data-ir] > .ir-item {
@@ -515,7 +547,7 @@ body::-webkit-scrollbar-track,
 	display: inline-block;
 	min-width: 500px;
 	/* max-width: calc(100% - 100px); */
-	max-width: calc(800px - 100px);
+	max-width: 800px;
 	box-shadow: 7px 7px 2px 2px rgba(0, 0, 0, .1);
 	background: #fff;
 	text-align: left;
