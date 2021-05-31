@@ -118,7 +118,7 @@
 	background-color: #fff;
 }
 .main-swiper-num01 .swiper-pagination[class*="swp-prs"]:after {
-	-webkit-transition: right 3.8s linear;
-	transition: right 3.8s linear;
+	-webkit-transition: right 4s linear;
+	transition: right 4s linear;
 	right: 0;
 }
