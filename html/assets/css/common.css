@@ -297,8 +297,8 @@ body::-webkit-scrollbar-track,
 	transition: all .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.ir-style2[data-ir],
-.ir-style2[data-ir] > .ir-item {
+.ir-style02[data-ir],
+.ir-style02[data-ir] > .ir-item {
 	-webkit-transform: scale(1.3);
 	transform: scale(1.3);
 }
@@ -371,7 +371,7 @@ body::-webkit-scrollbar-track,
 	transition: color .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 	color: #fff;
 }
-.btn.btn-type2:hover span {
+.btn.btn-type02:hover span {
 	color: #007fa8;
 }
 .btn span:before {
