@@ -195,7 +195,7 @@
 					<h1 class="layer-title">Layer Title 1</h1>
 					<div class="layer-cont">
 						<p>this page is sample page. this page is sample page. this page is sample page. this page is sample page. this page is sample page.</p>
-						<div class="swiper-outer-box swiper-num01">
+						<div class="swiper-outer-box sample-swiper-num01">
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
@@ -228,5 +228,51 @@
 	</a>
 </div>
 
+<script>
+	$(function(){
+		if ($('.sample-swiper-num01').length == 1) {
+			let swpOpt = {},
+			slideLength = $('.sample-swiper-num01 .swiper-slide').length;
+			if (slideLength == 1) {
+				swpOpt = {
+					allowSlidePrev: false,
+					allowSlideNext: false,
+					simulateTouch: false
+				}
+				$('.sample-swiper-num01 [class*="swiper-button"]').hide();
+			} else {
+				swpOpt = {
+					navigation: {
+						nextEl: '.sample-swiper-num01 .swiper-button-next',
+						prevEl: '.sample-swiper-num01 .swiper-button-prev',
+					},
+					pagination: {
+						el: '.sample-swiper-num01 .swiper-pagination',
+						clickable: true,
+					},
+					// slidesPerView: 'auto',
+					// centeredSlides: true,
+					freeMode: true,
+					mousewheel: {
+						releaseOnEdges: true,
+					},
+					simulateTouch: true,
+					speed: 300,
+					loop: false,
+					spaceBetween: 0,
+					observer: true,
+					observeParents: true,
+				}
+			}
+			let sampleSwp = new Swiper('.sample-swiper-num01 .swiper-container', swpOpt);
+			
+			sampleSwp.on('reachEnd', function(){
+				setObj(function(){
+					$('.btn-close-popup').trigger('click');
+				}, fadeVal);
+			});
+		}
+	});
+</script>
 </body>
 </html>

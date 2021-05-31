@@ -18,15 +18,49 @@
 	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
 	<script type="text/javascript" src="../assets/js/common.js"></script>
-
 	<style>
 		.content-img {
-			height: 600px;
+			height: 500px;
 			height: 31.25vw;
 		}
 		.description-sample {
 			margin: 50px 0;
 			font-size: 16px;
+		}
+		.cont-box {
+			position: relative;
+			margin-top: 100px;
+		}
+		.cont-box:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+		.cont-box-left {
+			float: left;
+			width: 60%;
+		}
+		.cont-box-right {
+			position: relative;
+			float: right;
+			width: 40%;
+			padding: 0 100px;
+		}
+		.cont-box-right > p + p {
+			margin-top: 50px;
+		}
+		.space-test {
+			height: 1200px;
+		}
+		.prx-val2 .prx-item {
+			position: absolute;
+			top: -300px;
+			right: 0;
+		}
+		.prx-txt {
+			font-size: 24px;
+			writing-mode: tb-rl;
+			text-orientation: upright;
 		}
 	</style>
 	<script>
@@ -35,7 +69,7 @@
 				$(this).next('.code-toolbar').toggleClass('open');
 			});
 		});
-	</script>	
+	</script>
 </head>
 <body>
 <div class="wrap" id="codingGiuide">
@@ -88,20 +122,23 @@
 				
 				<div class="top-cont-wrap">
 					<div class="content-img parallax-cont">
-						<img src="../assets/images/@img_parallax_sample.jpg" alt="parallax sample image">
-					</div>
-
-					<div class="content-img parallax-cont">
-						<img src="../assets/images/@img_parallax_sample.jpg" alt="parallax sample image">
+						<div class="prx-item"><img src="../assets/images/@img_parallax_sample.jpg" alt="parallax sample image"></div>
 					</div>
 				</div>
-				<p class="description-sample">sample text.</p>
-				<p class="description-sample">sample text.</p>
-				<p class="description-sample">sample text.</p>
-				<p class="description-sample">sample text.</p>
-				<p class="description-sample">sample text.</p>
-				<p class="description-sample">sample text.</p>
-				<p class="description-sample">sample text.</p>
+				<div class="cont-box">
+					<div class="cont-box-left parallax-cont content-img">
+						<div class="prx-item"><img src="../assets/images/@img_parallax_sample2.jpg" alt="parallax sample image"></div>
+					</div>
+					<div class="cont-box-right">
+						<div class="parallax-cont prx-type2 prx-val2">
+							<div class="prx-item"><img src="../assets/images/@img_scroll_sample03.jpg" alt="sample03"></div>
+						</div>
+						<div class="parallax-cont prx-type2 prx-val3">
+							<p class="prx-txt prx-item">이 페이지는 샘플 페이지입니다.<br>このページは、サンプルのページです。<br>this page is sample page.<br>このページは、サンプルのページです。</p>
+						</div>
+					</div>
+				</div>
+				<div class="space-test"></div>
 			</div>
 
 		</div>

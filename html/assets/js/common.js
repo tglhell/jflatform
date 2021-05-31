@@ -1,6 +1,9 @@
 $(function () {
 	const tabTar = $('.js-tab');
-	const prxImg = $('.parallax-cont img');
+	const prxImg = $('.prx-item > img');
+	const prxItem = $('.parallax-cont .prx-item > *');
+	const prxItem2 = $('.parallax-cont.prx-val2 .prx-item');
+	const prxItem3 = $('.parallax-cont.prx-val3 .prx-item');
 	const irCont = $('.ir-count');
 
 	tabTar.each(function () {
@@ -31,15 +34,19 @@ $(function () {
 	});
 
 	prxImg.ready(function () {
-		prxImg.each(function () {
-			prxHgt ($(this));
+		prxItem.each(function () {
+			if (!$(this).parent().hasClass('prx-type2')) {
+				prxHgt ($(this));
+			}
 		});
 	});
 
 	$(window).scroll(function () {
 		const chkBtnPos = $('.scr-fix-btn');
 		let scrPos = $(this).scrollTop();
-		prxImg.css({'transform':'translateY(' + scrPos / prxVal + 'px)'});
+		prxItem.css({'transform':'translateY(' + scrPos / prxVal + 'px)'});
+		prxItem2.css({'transform':'translateY(' + scrPos / prxVal2 + 'px)'});
+		prxItem3.css({'transform':'translateY(-' + scrPos / prxVal + 'px)'});
 		if (chkBtnPos.length >= 1) {
 			let scrBtnPos = chkBtnPos.offset().top - $(window).height() + scrFixPos;
 			if (!chkBool) {
@@ -119,25 +126,29 @@ $(function () {
 			tabAutoHgt ($(this));
 		});
 
-		prxImg.ready(function () {
-			prxImg.each(function () {
+		prxItem.ready(function () {
+			prxItem.each(function () {
 				prxHgt ($(this));
 			});
 		});
 	});
 	
-	function checkMobile () {
+	function checkAgent () {
 		let UserAgent = navigator.platform;
-		if (UserAgent.match(/i(Phone|Pod)/i) != null){
+		let agentBrowser = navigator.userAgent.toLowerCase();
+		if (UserAgent.match(/i(Phone|Pod)/i) != null) {
 			$('html').addClass('ios');
-		} else{
+		} else {
 			$('html').addClass('android');
 		}
+		if ((navigator.appName == 'Netscape' && agentBrowser.indexOf('trident') != -1) || (agentBrowser.indexOf("msie") != -1)) {
+			$('html').addClass('ie11');
+		}
 	}
-	checkMobile ();
+	checkAgent ();
 
 	function prxHgt (target) {
-		let prxHgt = parseInt(target.height() / 2);
+		let prxHgt = parseInt(target.height() / 4);
 		target.css('margin-top', -prxHgt);
 	}
 

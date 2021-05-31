@@ -249,31 +249,35 @@ body::-webkit-scrollbar-track,
 	top: -28px;
 	left: 0;
 	right: 0;
-}
-.skip-nav a:focus,
-.skip-nav a:active {
-	top: 0;
-}
-.skip-nav a {
-	display: block;
 	background-color: #000;
 	font-size: 14px;
 	color: #fff;
 	line-height: 2;
 	text-align: center;
 }
+.skip-nav a:focus,
+.skip-nav a:active {
+	top: 0;
+}
 .hmj-header {
-	height: 100px;
-	background-color: #f4f4f4;
+	height: 82px;
+	background-color: #fff;
 }
 .hmj-container {
-	max-width: 1120px;
-	min-height: calc(100vh - 300px); /* calc(100vh - (header height + footer height)) */
+	max-width: 1920px;
+	min-height: calc(100vh - 233px); /* calc(100vh - (header height + footer height)) */
 	margin: 0 auto;
 }
+.hmj-container .hmj-content {
+	max-width: 1120px;
+	margin: 0 auto;
+}
+.hmj-container .hmj-content.full {
+	max-width: none;
+}
 .hmj-footer {
-	height: 200px;
-	background-color: #f4f4f4;
+	height: 151px;
+	background-color: #000;
 }
 
 
@@ -505,10 +509,18 @@ body::-webkit-scrollbar-track,
 .parallax-cont {
 	overflow: hidden;
 }
+.parallax-cont.prx-type2 {
+	overflow: visible;
+}
 .parallax-cont img {
 	position: relative;
 	top: 50%;
 	width: 100%;
+}
+.ie11 .parallax-cont .prx-item,
+.ie11 .parallax-cont .prx-item * {
+	-webkit-transition: all .1s linear;
+	transition: all .1s linear;
 }
 
 /* layer Popup */

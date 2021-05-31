@@ -1,45 +1,49 @@
 $(function () {
-	if ($('.swiper-num01').length == 1) {
-		// Swiper1
-		var swpOpt1 = {},
-		slideLength = $('.swiper-num01 .swiper-slide').length;
+	if ($('.main-swiper-num01').length == 1) {
+		let swpOpt = {},
+		slideLength = $('.main-swiper-num01 .swiper-slide').length;
 		if (slideLength == 1) {
-			swpOpt1 = {
+			swpOpt = {
 				allowSlidePrev: false,
 				allowSlideNext: false,
 				simulateTouch: false
 			}
-			$('.swiper-num01 [class*="swiper-button"]').hide();
+			$('.main-swiper-num01 [class*="swiper-button"]').hide();
 		} else {
-			swpOpt1 = {
+			swpOpt = {
 				navigation: {
-					nextEl: '.swiper-num01 .swiper-button-next',
-					prevEl: '.swiper-num01 .swiper-button-prev',
+					nextEl: '.main-swiper-num01 .swiper-button-next',
+					prevEl: '.main-swiper-num01 .swiper-button-prev',
 				},
 				pagination: {
-					el: '.swiper-num01 .swiper-pagination',
+					el: '.main-swiper-num01 .swiper-pagination',
 					clickable: true,
 				},
-				// slidesPerView: 'auto',
-				// centeredSlides: true,
-				freeMode: true,
-				mousewheel: {
-					releaseOnEdges: true,
+				autoplay: {
+					delay: 4000,
+					disableOnInteraction: false,
 				},
 				simulateTouch: true,
 				speed: 300,
-				loop: false,
+				loop: true,
 				spaceBetween: 0,
-				observer: true,
-				observeParents: true,
+				on: {
+					slideChange: function () {
+						mainSwpAutoIdx ();
+					}
+				}
 			}
 		}
-		var swiper1 = new Swiper('.swiper-num01 .swiper-container', swpOpt1);
-		
-		swiper1.on('reachEnd', function(){
-			setObj(function(){
-				$('.btn-close-popup').trigger('click');
-			}, fadeVal);
-		})
+		let mainSwp = new Swiper('.main-swiper-num01 .swiper-container', swpOpt);
+
+		function mainSwpAutoIdx () {
+			const mainSwpPagination = $('.main-swiper-num01').find('.swiper-pagination');
+			const mainSwpLength = mainSwpPagination.find('.swiper-pagination-bullet').length;
+			const mainSwpIdx = parseInt(mainSwpPagination.find('.swiper-pagination-bullet-active').index()) + 1 + ' / ' + mainSwpLength;
+			mainSwpPagination.removeClass('swp-prs', function(){
+				mainSwpPagination.attr('data-swp-idx', mainSwpIdx).addClass('swp-prs');
+			});
+		}
+		mainSwpAutoIdx ();
 	}
 });
