@@ -27,11 +27,12 @@ table {width:100%;border-spacing: 0;}
 .underline {text-decoration:underline;}
 .underline.type2 {text-decoration:line-through;}
 .font_color01  {color:#c00032;}
+.sub_tit {font-weight: bold; font-size: 13px}
+.text_bold {font-weight:bold}
 
 .coding_type h1{float:left;}
 .coding_type a{padding:2px 10px;margin-left:15px;color:#fff; font-size:12px; border:1px solid #007fa8; border-radius:3px; background:#007fa8;}
 .coding_type a.active{background:#888;}
-.font_color01 {color:#c00032}
 
 header.guide_header {border-bottom:1px solid #ccc; color:#fff; height:60px; padding-top:20px; padding-left:20px;}
 header.guide_header h1 {font-size:24px; font-weight:normal; color:#304989; font-weight:700}

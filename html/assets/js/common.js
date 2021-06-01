@@ -2,8 +2,8 @@ $(function () {
 	const tabTar = $('.js-tab');
 	const prxImg = $('.prx-item > img');
 	const prxItem = $('.parallax-cont .prx-item > *');
-	const prxItem2 = $('.parallax-cont.prx-val2 .prx-item');
-	const prxItem3 = $('.parallax-cont.prx-val3 .prx-item');
+	const prxItem2 = $('.parallax-cont.prx-val02 .prx-item');
+	const prxItem3 = $('.parallax-cont.prx-val03 .prx-item');
 	const irCont = $('.ir-count');
 
 	tabTar.each(function () {
@@ -35,7 +35,7 @@ $(function () {
 
 	prxImg.ready(function () {
 		prxItem.each(function () {
-			if (!$(this).parent().hasClass('prx-type2')) {
+			if (!$(this).parent().hasClass('prx-type02')) {
 				prxHgt ($(this));
 			}
 		});
@@ -51,7 +51,6 @@ $(function () {
 			let scrBtnPos = chkBtnPos.offset().top - $(window).height() + scrFixPos;
 			if (!chkBool) {
 				if (scrPos > scrBtnPos) {
-					$('html').animate({scrollTop:scrBtnPos});
 					chkBtnPos.trigger('click');
 					chkBool = true;
 				}

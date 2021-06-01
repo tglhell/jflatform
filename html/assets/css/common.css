@@ -162,7 +162,7 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, dl, dd, figure, form, field
 }
 html, body {
 	font-family: 'Noto-Sans-JP', sans-serif;
-	font-size: 14px;
+	font-size: 10px;
 	line-height: 1.4;
 	color: #444;
 	letter-spacing: -0.025em;
@@ -280,7 +280,6 @@ body::-webkit-scrollbar-track,
 	background-color: #000;
 }
 
-
 /** common **/
 /* transition value */
 [data-ir],
@@ -296,7 +295,6 @@ body::-webkit-scrollbar-track,
 	-webkit-transition: all .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 	transition: all .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-
 .ir-style02[data-ir],
 .ir-style02[data-ir] > .ir-item {
 	-webkit-transform: scale(1.3);
@@ -392,7 +390,7 @@ body::-webkit-scrollbar-track,
 	z-index: -1;
 	background-color: #007fa8;
 }
-.btn.btn-type2 span:after {
+.btn.btn-type02 span:after {
 	background-color: #fff;
 }
 .btn:hover span:after {
@@ -400,7 +398,7 @@ body::-webkit-scrollbar-track,
 	transition: background-color, right .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 	right: 0;
 }
-.btn.btn-type2 span {
+.btn.btn-type02 span {
 	background-color: #007fa8;
 	color: #fff;
 }
@@ -509,7 +507,7 @@ body::-webkit-scrollbar-track,
 .parallax-cont {
 	overflow: hidden;
 }
-.parallax-cont.prx-type2 {
+.parallax-cont.prx-type02 {
 	overflow: visible;
 }
 .parallax-cont img {
@@ -642,3 +640,40 @@ body::-webkit-scrollbar-track,
 		max-width: 100%;
 	}
 }
+
+/* responsive font-size - Uncomment if necessary */
+/* @media screen and (min-width: 640px) and (max-width: 767px) {
+	html, body {
+		font-size: 1em;
+	}
+}
+@media screen and (min-width: 600px) and (max-width: 639px) {
+	html, body {
+		font-size: 0.938em;
+	}
+}
+@media screen and (min-width: 560px) and (max-width: 599px) {
+	html, body {
+		font-size: 0.875em;
+	}
+}
+@media screen and (min-width: 520px) and (max-width: 559px) {
+	html, body {
+		font-size: 0.813em;
+	}
+}
+@media screen and (min-width: 480px) and (max-width: 519px) {
+	html, body {
+		font-size: 0.75em;
+	}
+}
+@media screen and (min-width: 440px) and (max-width: 479px) {
+	html, body {
+		font-size: 0.688em;
+	}
+}
+@media screen and (min-width: 400px) and (max-width: 439px) {
+	html, body {
+		font-size: 0.625em;
+	}
+} */

@@ -59,7 +59,7 @@
 .sample-swiper-num01 img {
     width: 100%;
 }
-@media(max-width:1140px) {
+@media (max-width: 1140px) {
     [class*="swiper-button"] {
         display: none;
     }
