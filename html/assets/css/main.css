@@ -50,48 +50,69 @@
 }
 .scr-idx-list li {
     position: relative;
-    width: 16px;
-    height: 16px;
 }
 .scr-idx-list li a {
-    transition: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 12px;
-    height: 12px;
-    margin: -6px 0 0 -6px;
-    border: 1px solid #999;
-    border-radius: 50%;
-    vertical-align: top;
+	-webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+	padding-right: 30px;
+    font-size: 14px;
+	color: #fff;
 }
 .scr-idx-list li a:focus {
-    outline: none;
+	outline: none;
 }
 .scr-idx-list li a:before {
-    transition: all 0.5s ease-in-out;
+	-webkit-transition: border 0.5s ease-in-out;
+    transition: border 0.5s ease-in-out;
+	content: '';
+	position: absolute;
+	top: 7px;
+	right: 0;
+	width: 14px;
+	height: 14px;
+	margin: -5px 0 0 -5px;
+	border: 1px solid #999;
+	border-radius: 50%;
+	vertical-align: top;
+}
+.scr-idx-list li a:after {
+	-webkit-transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 8px;
+    top: 6px;
+    right: 4px;
+	width: 8px;
     height: 8px;
-    margin: -4px 0 0 -4px;
     border-radius: 50%;
-    background: #fff;
+    background-color: #fff;
 }
-.scr-idx-list li a:hover:before {
-    background: #fff;
+.scr-idx-list li a:hover:after {
+    background-color: #666;
 }
 .scr-idx-list li a.active {
-    width: 16px;
-    height: 16px;
-    margin: -8px 0 0 -8px;
+	-webkit-transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
     border-color: #086fe4;
+	color: #086fe4;
     pointer-events: none;
 }
 .scr-idx-list li a.active:before {
-    transition: all 0.5s ease-in-out;
+	-webkit-transition: border 0.5s ease-in-out;
+    transition: border 0.5s ease-in-out;
+	top: 4px;
+	right: -2px;
+	width: 18px;
+	height: 18px;
+    border-color: #086fe4;
+}
+.scr-idx-list li a.active:after {
+	-webkit-transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+	top: 3px;
+	right: 2px;
+	width: 12px;
+    height: 12px;
     background-color: #086fe4;
 }
 .scr-idx-list li + li {

@@ -15,7 +15,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-	height: 100vh;
 }
 .swiper-pagination {
     bottom: -10px;
@@ -78,8 +77,12 @@
 	max-width: 100%;
 	margin-left: -560px;
 }
+.main-swiper-num01 .swiper-container .swiper-slide {
+	height: 100vh;
+}
 .main-swiper-num01 .swiper-container .swiper-slide img {
 	height: 100%;
+	object-fit: cover;
 }
 .main-swiper-num01 .swiper-button-outer .swiper-button-next {
 	left: 50px;
