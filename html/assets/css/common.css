@@ -1,4 +1,4 @@
-/* font initializing */
+/* ja initializing font */
 @font-face {
 	font-family: 'Noto-Sans-JP', sans-serif;
 	font-weight: 300;
@@ -161,20 +161,19 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, dl, dd, figure, form, field
 	font-weight: normal;
 }
 html, body {
-	font-family: 'Noto-Sans-JP', sans-serif;
-	font-size: 10px;
+	font-size: 14px;
 	line-height: 1.4;
 	color: #444;
 	letter-spacing: -0.025em;
 }
 button, input, select, textarea {
-	font-family: 'Noto-Sans-JP', sans-serif;
+	font-family: sans-serif;
 }
 pre,
 code,
 kbd,
 samp {
-	font-family: 'Noto-Sans-JP', sans-serif;
+	font-family: sans-serif;
 	font-size: 1em;
 }
 strong {
@@ -260,8 +259,9 @@ body::-webkit-scrollbar-track,
 	top: 0;
 }
 .hmj-header {
+	position: relative;
+	z-index: 10;
 	height: 82px;
-	background-color: #fff;
 }
 .hmj-container {
 	max-width: 1920px;
@@ -517,8 +517,8 @@ body::-webkit-scrollbar-track,
 }
 .ie11 .parallax-cont .prx-item,
 .ie11 .parallax-cont .prx-item * {
-	-webkit-transition: all .1s linear;
-	transition: all .1s linear;
+	-webkit-transition: all .05s linear;
+	transition: all .05s linear;
 }
 
 /* layer Popup */
@@ -677,3 +677,21 @@ body::-webkit-scrollbar-track,
 		font-size: 0.625em;
 	}
 } */
+
+/* ja initializing font style */
+[lang="ja"],
+[lang="ja"] body {
+	font-family: 'Noto-Sans-JP', sans-serif;
+}
+[lang="ja"] button,
+[lang="ja"] input,
+[lang="ja"] select,
+[lang="ja"] textarea {
+	font-family: 'Noto-Sans-JP', sans-serif;
+}
+[lang="ja"] pre,
+[lang="ja"] code,
+[lang="ja"] kbd,
+[lang="ja"] samp {
+	font-family: 'Noto-Sans-JP', sans-serif;
+}

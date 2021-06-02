@@ -1,1 +1,98 @@
 /* main */
+.scr-item {
+	-webkit-transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 100%;
+	right: 0;
+	opacity: 0;
+	padding: 82px 0;
+	background-color: rgba(0, 0, 0, .9);
+	color: #fff;
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+}
+.scr-item:first-child {
+	left: 0%;
+	opacity: 1;
+	padding: 0;
+}
+.scr-item.active {
+	-webkit-transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+	opacity: 1;
+	left: 0%;
+}
+.hmj-footer {
+	-webkit-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	opacity: 0;
+	z-index: -1;
+}
+.hmj-footer.active {
+	-webkit-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	position: relative;
+	opacity: 1;
+	z-index: 10;
+}
+
+.scr-navi-wrap {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    z-index: 999;
+}
+.scr-idx-list li {
+    position: relative;
+    width: 16px;
+    height: 16px;
+}
+.scr-idx-list li a {
+    transition: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    margin: -6px 0 0 -6px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    vertical-align: top;
+}
+.scr-idx-list li a:focus {
+    outline: none;
+}
+.scr-idx-list li a:before {
+    transition: all 0.5s ease-in-out;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+    border-radius: 50%;
+    background: #fff;
+}
+.scr-idx-list li a:hover:before {
+    background: #fff;
+}
+.scr-idx-list li a.active {
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border-color: #086fe4;
+    pointer-events: none;
+}
+.scr-idx-list li a.active:before {
+    transition: all 0.5s ease-in-out;
+    background-color: #086fe4;
+}
+.scr-idx-list li + li {
+    margin-top: 5px;
+}
