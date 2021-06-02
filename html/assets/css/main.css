@@ -1,29 +1,30 @@
 /* main */
 .scr-item {
-	-webkit-transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
-	transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-webkit-transition: all .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition: all .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 	position: fixed;
-	top: 0;
+	top: 100%;
 	bottom: 0;
-	left: 100%;
+	left: 0;
 	right: 0;
 	opacity: 0;
+	z-index: 2;
 	padding: 82px 0;
-	background-color: rgba(0, 0, 0, .9);
+	background-color: #000;
 	color: #fff;
 	-ms-touch-action: pan-y;
 	touch-action: pan-y;
 }
 .scr-item:first-child {
-	left: 0%;
+	top: 0%;
 	opacity: 1;
 	padding: 0;
 }
 .scr-item.active {
-	-webkit-transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
-	transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+	-webkit-transition: all .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition: all .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 	opacity: 1;
-	left: 0%;
+	top: 0%;
 }
 .hmj-footer {
 	-webkit-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);

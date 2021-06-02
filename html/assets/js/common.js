@@ -10,7 +10,7 @@ $(function () {
 		tabAutoHgt ($(this));
 	});
 
-	$('body').on('click', '.js-tab li', function (e) {
+	$('.js-tab li').on('click', function (e) {
 		const tabRoot = $(this).closest('.js-tab');
 		const tabBoxItem = $('.js-tab-cont > div');
 		let tabIdx = $(this).index();
@@ -62,7 +62,7 @@ $(function () {
 		}
 	});
 
-	$('body').on('click', '.pop-open', (function () {
+	$('.pop-open').on('click', (function () {
 		let returnTar;
 		return function (e) {
 			const bodyWid = $('body').width();
@@ -88,7 +88,7 @@ $(function () {
 				}
 			}, fadeVal);
 
-			$('body').on('click', '.btn-close-popup, .layer-popup-wrap', function (e) {
+			$('.btn-close-popup, .layer-popup-wrap').on('click', function (e) {
 				const tarItem = $('.layer-popup-cont > div, .layer-title, .layer-cont *');
 				if (!$(e.target).is(tarItem)) {
 					if ($(this).scrollTop() !== 0) {

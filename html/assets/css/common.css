@@ -240,9 +240,6 @@ body::-webkit-scrollbar-track,
 }
 
 /* layout */
-.test {
-	background-color: #f4f4f4;
-}
 .skip-nav a {
 	position: absolute;
 	top: -28px;
@@ -264,16 +261,15 @@ body::-webkit-scrollbar-track,
 	height: 82px;
 }
 .hmj-container {
-	max-width: 1920px;
 	min-height: calc(100vh - 233px); /* calc(100vh - (header height + footer height)) */
-	margin: 0 auto;
 }
 .hmj-container .hmj-content {
 	max-width: 1120px;
 	margin: 0 auto;
+	padding: 50px 30px;
 }
 .hmj-container .hmj-content.full {
-	max-width: none;
+	max-width: 1920px;
 }
 .hmj-footer {
 	height: 151px;
