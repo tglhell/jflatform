@@ -1,7 +1,7 @@
 /* main */
 .scr-item {
-	-webkit-transition: all .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-	transition: all .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	-webkit-transition: all .7s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition: all .7s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 	position: fixed;
 	top: 100%;
 	bottom: 0;
@@ -21,8 +21,8 @@
 	padding: 0;
 }
 .scr-item.active {
-	-webkit-transition: all .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-	transition: all .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	-webkit-transition: all .7s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition: all .7s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 	opacity: 1;
 	top: 0%;
 }
@@ -52,10 +52,10 @@
     position: relative;
 }
 .scr-idx-list li a {
-	-webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+	-webkit-transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
 	padding-right: 30px;
-    font-size: 14px;
+    font-size: 0;
 	color: #fff;
 }
 .scr-idx-list li a:focus {
@@ -94,6 +94,7 @@
 	-webkit-transition: color 0.5s ease-in-out;
     transition: color 0.5s ease-in-out;
     border-color: #086fe4;
+	font-size: 14px;
 	color: #086fe4;
     pointer-events: none;
 }

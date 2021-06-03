@@ -9,6 +9,7 @@ mo = 767;
 scrFixPos = 200;
 scrVal = 300;
 fadeVal = 500;
+posVal = 700;
 sAd = 1;
 irCnt = 9;
 

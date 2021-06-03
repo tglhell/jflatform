@@ -7,7 +7,7 @@ $(function () {
 		let tScrIdx = $('.scr-item.active-idx').index();
 		if (!$('html, body').is(':animated')) {
 			if (e.originalEvent.wheelDelta < 0) {
-				$('html, body').stop().animate({'overflow':'visible'}, fadeVal);
+				$('html, body').stop().animate({'overflow':'visible'}, posVal);
 				if (tScrIdx !== $(this.length)) {
 					scrItem.eq(tScrIdx + 1).addClass('active');
 					scrItem.eq(tScrIdx + 1).addClass('active-idx').siblings().removeClass('active-idx');
@@ -18,7 +18,7 @@ $(function () {
 				}
 				return false;
 			} else {
-				$('html, body').stop().animate({'overflow':'visible'}, fadeVal);
+				$('html, body').stop().animate({'overflow':'visible'}, posVal);
 				if (!ftrCnt.hasClass('active')) {
 					if (tScrIdx !== 0) {
 						scrItem.eq(tScrIdx).removeClass('active');
@@ -38,6 +38,7 @@ $(function () {
 	scrIdxLst.on('click', function (e) {
 		e.preventDefault();
 		const scrIdxNum = $(this).parent().index();
+		ftrCnt.removeClass('active');
 		scrItem.removeClass('active');
 		$('.scr-item:nth-child(-n + ' + (scrIdxNum + 1) + ')').addClass('active');
 		scrItem.eq(scrIdxNum).addClass('active-idx').siblings().removeClass('active-idx');

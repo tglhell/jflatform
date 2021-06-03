@@ -17,12 +17,6 @@
 	
 	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
-
-	<style>
-		.inp-box {
-			margin-top: 10px;
-		}
-	</style>
 	<script>
 		$(function(){
 			$('.view_code').on('click', function(){
@@ -62,27 +56,122 @@
 			<a href="coding_guide_etc.html" title="ETC">ETC</a>
 		</div>
 
-		<div class="contents_infor">
+		<div class="contents_infor guide-content">
 
-			<h2 class="title">Title</h2>
-			<h3 class="title">section title</h3>
+			<h2 class="title">FORM</h2>
+			<br><br>
+			<!-- form -->
+			<h3>&#x25CE; INPUT</h3>
+			<br>
+			<h4 class="btm-border">- 텍스트 타입</h4>
+			<br>
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--
+<pre class="language-html"><code><!--<div class="inp-outer-box">
+	<label for="inpTxt01">이름</label>
+	<input type="text" id="inpTxt01" class="inp-item">
+</div>
 
+<div class="inp-outer-box">
+	<label for="inpTxt04">전화번호 <span class="required">*</span></label>
+	<div class="inp-slice-box">
+		<input type="text" id="inpTxt04" class="inp-item" placeholder="전화번호를 입력해 주세요.">
+		<span class="inp-hpn">-</span>
+		<input type="text" id="inpTxt05" class="inp-item" placeholder="전화번호를 입력해 주세요.">
+		<span class="inp-hpn">-</span>
+		<input type="text" id="inpTxt06" class="inp-item" placeholder="전화번호를 입력해 주세요.">
+	</div>
+</div>
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
-
+				클래스 "<strong>inp-outer-box</strong>"안에 label과 input부분을 넣어서 사용함.
 			</div>
-
-			<!-- form -->
-			<div>
-				작성코드<br><br>
-
-				<h3>input</h3>
-				<input type="text" class="inp-box">
+			<br>
+			<div class="inp-outer-box">
+				<label for="inpTxt01">이름</label>
+				<input type="text" id="inpTxt01" class="inp-item" placeholder="이름을 입력해 주세요.">
 			</div>
+			<br>
+			<div class="inp-outer-box">
+				<label for="inpName01_01">이름</label>
+				<div class="inp-group-box">
+					<input type="text" id="inpName01_01" class="inp-item" placeholder="이름을 입력해 주세요.">
+					<input type="text" id="inpName01_02" class="inp-item" placeholder="이름을 입력해 주세요.">
+				</div>
+			</div>
+			<br>
+			<div class="inp-outer-box">
+				<label for="inpNum01_01">전화번호 <span class="required">*</span></label>
+				<div class="inp-slice-box">
+					<input type="text" id="inpNum01_01" class="inp-item" placeholder="전화번호를 입력해 주세요.">
+					<span class="inp-hpn">-</span>
+					<input type="text" id="inpNum01_02" class="inp-item" placeholder="전화번호를 입력해 주세요.">
+					<span class="inp-hpn">-</span>
+					<input type="text" id="inpNum01_03" class="inp-item" placeholder="전화번호를 입력해 주세요.">
+				</div>
+			</div>
+			<br><br><br>
+			<h4 class="btm-border">- 버튼 타입</h4>
+			<br>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="inp-outer-box">
+	<label for="inpTxt01">이름</label>
+	<input type="text" id="inpTxt01" class="inp-item">
+</div>
+
+<div class="inp-outer-box">
+	<label for="inpTxt01">전화번호</label>
+	<input type="text" id="inpTxt01" class="inp-item">
+</div>
+
+<div class="inp-outer-box">
+	<label for="inpTxt04">전화번호 <span class="required">*</span></label>
+	<div class="inp-slice-box">
+		<input type="text" id="inpTxt04" class="inp-item" placeholder="전화번호를 입력해 주세요.">
+		<span class="inp-hpn">-</span>
+		<input type="text" id="inpTxt05" class="inp-item" placeholder="전화번호를 입력해 주세요.">
+		<span class="inp-hpn">-</span>
+		<input type="text" id="inpTxt06" class="inp-item" placeholder="전화번호를 입력해 주세요.">
+	</div>
+	<button class="btn-inp-func"><span>전화걸기</span></button>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				클래스 "<strong>inp-outer-box</strong>"안에 label과 input부분을 넣어서 사용함.
+			</div>
+			<br>
+			<div class="inp-outer-box">
+				<input type="text" id="inpTxt02" class="inp-item" placeholder="텍스트를 입력해 주세요.">
+				<button class="btn-inp-func"><span>확인</span></button>
+			</div>
+			<br>
+			<div class="inp-outer-box">
+				<label for="inpNum02_01">전화번호 <span class="required">*</span></label>
+				<div class="inp-slice-box">
+					<input type="text" id="inpNum02_01" class="inp-item" placeholder="전화번호를 입력해 주세요.">
+					<span class="inp-hpn">-</span>
+					<input type="text" id="inpNum02_02" class="inp-item" placeholder="전화번호를 입력해 주세요.">
+					<span class="inp-hpn">-</span>
+					<input type="text" id="inpNum02_03" class="inp-item" placeholder="전화번호를 입력해 주세요.">
+				</div>
+				<button class="btn-inp-func"><span>전화걸기</span></button>
+			</div>
+			<br><br><br>
+			<h4 class="btm-border">- 노멀 타입</h4>
+			<br>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<input type="text" class="inp-item" placeholder="텍스트를 입력해 주세요.">
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				단일 input만 사용함.
+			</div>
+			<br>
+			<input type="text" class="inp-item" placeholder="텍스트를 입력해 주세요.">
 			<!-- //form -->
 
 		</div>
