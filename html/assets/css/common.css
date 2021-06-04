@@ -346,7 +346,7 @@ body::-webkit-scrollbar-track,
 	position: relative;
 	width: 100%;
 	height: 46px;
-	padding: 0 18px;
+	padding: 0 9px;
 	border: 1px solid #ccc;
 	background: #fff;
 	font-size: 14px;
@@ -354,15 +354,15 @@ body::-webkit-scrollbar-track,
 	vertical-align: middle;
 }
 .inp-box::-webkit-input-placeholder {
-	font-size: 15px;
+	font-size: 14px;
 	color: #898989;
 }
 .inp-box::placeholder {
-	font-size: 16px;
+	font-size: 14px;
 	color: #898989;
 }
 .inp-box:-ms-input-placeholder {
-	font-size: 16px;
+	font-size: 14px;
 	color: #898989;
 }
 .inp-box:-webkit-autofill {
@@ -390,7 +390,7 @@ body::-webkit-scrollbar-track,
 }
 .inp-slice-box .btn {
 	min-width: auto;
-	padding: 0 15px;
+	padding: 0 10px;
 	white-space: nowrap;
 }
 .inp-slice-box .btn:nth-child(even) {
@@ -408,7 +408,6 @@ body::-webkit-scrollbar-track,
 	.inp-slice-box .btn:nth-child(even) {
 		width: auto;
 		min-width: auto;
-		padding: 0 10px;
 		white-space: nowrap;
 	}
 }
