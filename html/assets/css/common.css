@@ -313,11 +313,12 @@ body::-webkit-scrollbar-track,
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	width: 100%;
 	align-items: center;
 	justify-content: center;
 }
 .inp-outer-box label {
-	min-width: 192px;
+	min-width: 124px;
 	margin-right: 10px;
 }
 .inp-outer-box .inp-item {
@@ -333,10 +334,10 @@ body::-webkit-scrollbar-track,
 	width: 100%;
 }
 .inp-group-box .inp-item:nth-child(odd) {
-	margin-right: 5px;
+	margin-right: 3px;
 }
 .inp-group-box .inp-item:nth-child(even) {
-	margin-left: 5px;
+	margin-left: 3px;
 }
 .inp-group-box .inp-item:only-child {
 	margin: 0;
@@ -377,29 +378,39 @@ body::-webkit-scrollbar-track,
 	justify-content: center;
 	width: 100%;
 }
-.inp-slice-box .inp-item {
-	width: 33.33%;
+.inp-slice-box .inp-item:only-child {
+	width: 100%;
 }
 .inp-slice-box .inp-hpn {
-	width: 15px;
+	min-width: 15px;
 	height: 1px;
 	margin:0 5px;
 	background-color: #999;
 	font-size: 0;
 }
-.btn-inp-func {
-	display: inline-block;
-	height: 46px;
-	margin-left: 10px;
+.inp-slice-box .btn {
+	min-width: auto;
 	padding: 0 15px;
-	border: 1px solid #007fa8;
-	background-color: #007fa8;
-}
-.btn-inp-func span {
-	display: block;
-	font-size: 14px;
-	color: #fff;
 	white-space: nowrap;
+}
+.inp-slice-box .btn:nth-child(even) {
+	margin-left: 6px;
+}
+@media screen and (max-width: 767px) {
+	.inp-outer-box {
+		display: block;
+	}
+	.inp-outer-box label {
+		display: inline-block;
+		margin: 0 0 10px;
+	}
+	.inp-slice-box .btn,
+	.inp-slice-box .btn:nth-child(even) {
+		width: auto;
+		min-width: auto;
+		padding: 0 10px;
+		white-space: nowrap;
+	}
 }
 
 /* button */
@@ -412,7 +423,7 @@ body::-webkit-scrollbar-track,
 	z-index: 2;
 	display: inline-block;
 	min-width: 210px;
-	height: 50px;
+	height: 56px;
 	margin-right: 5px;
 	padding: 0 15px;
 	border: 1px solid #007fa8;
@@ -426,6 +437,9 @@ body::-webkit-scrollbar-track,
 }
 .btn:nth-child(even) {
 	margin: 0 0 0 5px;
+}
+.btn.btn-small {
+	height: 46px;
 }
 .btn span {
 	-webkit-transition: color .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -524,6 +538,7 @@ body::-webkit-scrollbar-track,
 	.btn:nth-child(even) {
 		display: block;
 		width: 100%;
+		min-width: auto;
 		margin: 0;
 	}
 	.btn + .btn {
@@ -531,6 +546,24 @@ body::-webkit-scrollbar-track,
 	}
 	.btn span {
 		width: 100%;
+	}
+	.cta-outer.mo-type {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+	.cta-outer.mo-type .btn {
+		width: 50%;
+	}
+	.cta-outer.mo-type .btn:nth-child(odd) {
+		margin-right: 5px;
+	}
+	.cta-outer.mo-type .btn:nth-child(even) {
+		margin: 0 0 0 5px;
 	}
 }
 
