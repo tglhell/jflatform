@@ -384,14 +384,12 @@ body::-webkit-scrollbar-track,
 .inp-slice-box .inp-hpn {
 	min-width: 15px;
 	height: 1px;
-	margin:0 5px;
+	margin: 0 5px;
 	background-color: #999;
 	font-size: 0;
 }
 .inp-slice-box .btn {
-	min-width: auto;
-	padding: 0 10px;
-	white-space: nowrap;
+	min-width: 150px;
 }
 .inp-slice-box .btn:nth-child(even) {
 	margin-left: 6px;
@@ -407,7 +405,7 @@ body::-webkit-scrollbar-track,
 	.inp-slice-box .btn,
 	.inp-slice-box .btn:nth-child(even) {
 		width: auto;
-		min-width: auto;
+		min-width: 104px;
 		white-space: nowrap;
 	}
 }
@@ -424,8 +422,10 @@ body::-webkit-scrollbar-track,
 	min-width: 210px;
 	height: 56px;
 	margin-right: 5px;
-	padding: 0 15px;
 	border: 1px solid #007fa8;
+}
+.btn span {
+	padding: 0 10px;
 }
 .btn:only-child {
 	margin-right: 0;
@@ -542,9 +542,6 @@ body::-webkit-scrollbar-track,
 	}
 	.btn + .btn {
 		margin-top: 10px;
-	}
-	.btn span {
-		width: 100%;
 	}
 	.cta-outer.mo-type {
 		display: -webkit-box;
