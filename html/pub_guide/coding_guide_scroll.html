@@ -51,6 +51,58 @@
 		.btn {
 			margin-top: 30px;
 		}
+
+		.tbl-x-scroll {
+			overflow-x: auto;
+			width: 100%;
+			margin-top: 30px;
+		}
+		.tbl-x-scroll th:first-child,
+		.tbl-x-scroll td:first-child {
+			position: sticky;
+			left: 0;
+			z-index: 999;
+		}
+		.tbl-x-scroll th:first-child:before,
+		.tbl-x-scroll th:first-child:after,
+		.tbl-x-scroll td:first-child:before,
+		.tbl-x-scroll td:first-child:after {
+			content: '';
+			position: absolute;
+			top: -1px;
+			bottom: -1px;
+			width: 1px;
+			background-color: #ccc;
+		}
+		.tbl-x-scroll th:first-child:before,
+		.tbl-x-scroll td:first-child:before {
+			left: -1px;
+		}
+		.tbl-x-scroll th:first-child:after,
+		.tbl-x-scroll td:first-child:after {
+			right: -1px;
+		}
+		.tbl-x-scroll th {
+			background: #3498db;
+			color: #fff;
+			font-weight: bold;
+		}
+		.tbl-x-scroll td {
+			background-color: #fff;
+		}
+		.tbl-x-scroll td,
+		.tbl-x-scroll th {
+			padding: 10px;
+			border: 1px solid #ccc;
+			text-align: left;
+			font-size: 18px;
+		}
+
+		@media screen and (max-width: 767px) {
+			.tbl-x-scroll table {
+				width: 800px;
+			}
+		}
 	</style>
 	<script>
 		$(function(){
@@ -180,6 +232,44 @@
 					</div>
 					<div class="sample-cont ir-animate">
 						This page is a sample page 7.
+						<div class="tbl-x-scroll">
+							<table>
+								<tbody>
+									<tr>
+										<th>First Name</th>
+										<td>James</td>
+										<td>Andor</td>
+										<td>Tamas</td>
+										<td>Zoli</td>
+										<td>Szabi</td>
+									</tr>
+									<tr>
+										<th>Last Name</th>
+										<td>Matman</td>
+										<td>Nagy</td>
+										<td>Biro</td>
+										<td>Mastah</td>
+										<td>Nagy</td>
+									</tr>
+									<tr>
+										<th>Job Title</th>
+										<td>Chief Sandwich Eater</td>
+										<td>Designer</td>
+										<td>Game Tester</td>
+										<td>Developer</td>
+										<td>Chief Sandwich Eater</td>
+									</tr>
+									<tr>
+										<th>Twitter</th>
+										<td>@james</td>
+										<td>@andornagy</td>
+										<td>@tamas</td>
+										<td>@zoli</td>
+										<td>@szabi</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
