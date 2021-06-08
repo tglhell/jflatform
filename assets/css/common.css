@@ -343,3 +343,7 @@ margin-top: -1px;
 .align-c {
 	text-align: center;
 }
+
+.sample-cont a {
+	width: 100%;
+}
