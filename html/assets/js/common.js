@@ -120,6 +120,22 @@ $(function () {
 		}
 	})());
 
+	//checkbox all select 
+	$(".check-group").on("click", ".all input", function () {
+		$(this).parents(".check-group").find('input').prop("checked", $(this).is(":checked"));
+	});
+
+	//checkbox part select 
+	$(".check-group").on("click", ".normal input", function() {
+		var is_checked = true;
+
+		$(".check-group .normal input").each(function(){
+			is_checked = is_checked && $(this).is(":checked");
+		});
+
+		$(".all input").prop("checked", is_checked);
+	});
+
 	$(window).on('resize', function () {
 		tabTar.each(function () {
 			tabAutoHgt ($(this));

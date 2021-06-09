@@ -1,27 +1,69 @@
 /* ja initializing font */
 @font-face {
-	font-family: 'Noto-Sans-JP', sans-serif;
+	font-family: 'Noto-Sans-JP', Gulim, Dotum, sans-serif;
 	font-weight: 300;
-	src: url(../fonts/NotoSansJP-Light.eot);
-	src: url(../fonts/NotoSansJP-Light.eot?#iefix) format('embedded-opentype'),
-			url(../fonts/NotoSansJP-Light.woff) format('woff'),
-			url(../fonts/NotoSansJP-Light.ttf) format('truetype');
+	src: url(../fonts/jp/NotoSansJP-Light.eot);
+	src: url(../fonts/jp/NotoSansJP-Light.eot?#iefix) format('embedded-opentype'),
+			url(../fonts/jp/NotoSansJP-Light.woff) format('woff'),
+			url(../resources/fonts/NotoSansJP-Light.woff2) format('woff2');
 }
 @font-face {
-	font-family: 'Noto-Sans-JP', sans-serif;
+	font-family: 'Noto-Sans-JP', Gulim, Dotum, sans-serif;
 	font-weight: 400;
-	src: url(../fonts/NotoSansJP-Regular.eot);
-	src: url(../fonts/NotoSansJP-Regular.eot?#iefix) format('embedded-opentype'),
-			url(../fonts/NotoSansJP-Regular.woff) format('woff'),
-			url(../fonts/NotoSansJP-Regular.ttf) format('truetype');
+	src: url(../fonts/jp/NotoSansJP-Regular.eot);
+	src: url(../fonts/jp/NotoSansJP-Regular.eot?#iefix) format('embedded-opentype'),
+			url(../fonts/jp/NotoSansJP-Regular.woff) format('woff'),
+			url(../resources/fonts/NotoSansJP-Regular.woff2) format('woff2');
 }
 @font-face {
-	font-family: 'Noto-Sans-JP', sans-serif;
+	font-family: 'Noto-Sans-JP', Gulim, Dotum, sans-serif;
 	font-weight: 700;
-	src: url(../fonts/NotoSansJP-Bold.eot);
-	src: url(../fonts/NotoSansJP-Bold.eot?#iefix) format('embedded-opentype'),
-			url(../fonts/NotoSansJP-Bold.woff) format('woff'),
-			url(../fonts/NotoSansJP-Bold.ttf) format('truetype');
+	src: url(../fonts/jp/NotoSansJP-Bold.eot);
+	src: url(../fonts/jp/NotoSansJP-Bold.eot?#iefix) format('embedded-opentype'),
+			url(../fonts/jp/NotoSansJP-Bold.woff) format('woff'),
+			url(../fonts/jp/NotoSansJP-Bold.woff2) format('woff2');
+}
+
+/* en initializing font */
+@font-face {
+	font-family: 'HyundaiSansHeadOffice', sans-serif;
+	font-weight: 400;
+	src: url(../fonts/en/HyundaiSansHeadOffice-Regular.eot);
+	src: url(../fonts/en/HyundaiSansHeadOffice-Regular.eot?#iefix) format('embedded-opentype'),
+			url(../fonts/en/HyundaiSansHeadOffice-Regular.woff) format('woff'),
+			url(../fonts/en/HyundaiSansHeadOffice-Regular.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'HyundaiSansHeadOffice', sans-serif;
+	font-weight: 400;
+	src: url(../fonts/en/HyundaiSansHeadOffice-Medium.eot);
+	src: url(../fonts/en/HyundaiSansHeadOffice-Medium.eot?#iefix) format('embedded-opentype'),
+			url(../fonts/en/HyundaiSansHeadOffice-Medium.woff) format('woff'),
+			url(../fonts/en/HyundaiSansHeadOffice-Medium.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'HyundaiSansHeadOffice', sans-serif;
+	font-weight: 700;
+	src: url(../fonts/en/HyundaiSansHeadOffice-Bold.eot);
+	src: url(../fonts/en/HyundaiSansHeadOffice-Bold.eot?#iefix) format('embedded-opentype'),
+			url(../fonts/en/HyundaiSansHeadOffice-Bold.woff) format('woff'),
+			url(../fonts/en/HyundaiSansHeadOffice-Bold.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'HyundaiSansTextOffice', sans-serif;
+	font-weight: 400;
+	src: url(../fonts/en/HyundaiSansTextOffice-Regular.eot);
+	src: url(../fonts/en/HyundaiSansTextOffice-Regular.eot?#iefix) format('embedded-opentype'),
+			url(../fonts/en/HyundaiSansTextOffice-Regular.woff) format('woff'),
+			url(../fonts/en/HyundaiSansTextOffice-Regular.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'HyundaiSansTextOffice', sans-serif;
+	font-weight: 700;
+	src: url(../fonts/en/HyundaiSansTextOffice-Bold.eot);
+	src: url(../fonts/en/HyundaiSansTextOffice-Bold.eot?#iefix) format('embedded-opentype'),
+			url(../fonts/en/HyundaiSansTextOffice-Bold.woff) format('woff'),
+			url(../fonts/en/HyundaiSansTextOffice-Bold.woff2) format('woff2');
 }
 
 /* reset */
@@ -128,6 +170,10 @@ textarea, pre {
 input[type='search']::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
+input[disabled],
+select[disabled] {
+	cursor: default;
+}
 label {
 	cursor: default;
 }
@@ -145,7 +191,6 @@ img, textarea, input {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-	table-layout: fixed;
 }
 table th {
 	font-weight: normal;
@@ -161,19 +206,16 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, dl, dd, figure, form, field
 	font-weight: normal;
 }
 html, body {
+	font-family: 'HyundaiSansHeadOffice', sans-serif;
 	font-size: 14px;
 	line-height: 1.4;
 	color: #444;
 	letter-spacing: -0.025em;
 }
-button, input, select, textarea {
-	font-family: sans-serif;
-}
 pre,
 code,
 kbd,
 samp {
-	font-family: sans-serif;
 	font-size: 1em;
 }
 strong {
@@ -303,8 +345,21 @@ body::-webkit-scrollbar-track,
 }
 
 /* selectbox */
-.slt-Box {
-	border: 1px solid #aaa;
+.slt-box {
+	width: 100%;
+	height: 46px;
+	padding: 13px 27px 13px 10px;
+	border: solid 1px #cccccc;
+	background: #fff url(../images/common/ico_slt_box.png) no-repeat right 19px center;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.slt-box:disabled,
+.slt-box.disabled {
+	border-color: #cccccc;
+	background-color: #f4f4f4;
+	color: #777777;
 }
 
 /* input */
@@ -353,6 +408,11 @@ body::-webkit-scrollbar-track,
 	color: #777;
 	vertical-align: middle;
 }
+.inp-item:disabled,
+.inp-item.disabled {
+	background-color: #f4f4f4;
+	color: #777777;
+}
 .inp-box::-webkit-input-placeholder {
 	font-size: 14px;
 	color: #898989;
@@ -389,7 +449,7 @@ body::-webkit-scrollbar-track,
 	font-size: 0;
 }
 .inp-slice-box .btn {
-	min-width: 150px;
+	min-width: auto;
 }
 .inp-slice-box .btn:nth-child(even) {
 	margin-left: 6px;
@@ -405,9 +465,143 @@ body::-webkit-scrollbar-track,
 	.inp-slice-box .btn,
 	.inp-slice-box .btn:nth-child(even) {
 		width: auto;
-		min-width: 104px;
 		white-space: nowrap;
 	}
+}
+
+/* checkbox */
+.chk {
+	position:relative;
+	display:inline-flex;
+	margin-right:26px;
+	line-height: 1;
+}
+.chk input[type="checkbox"] {
+	width: 24px;
+	min-width: 24px;
+	height: 24px;
+	margin-right: 10px;
+	border: solid 1px #cccccc;
+	background-color: #ffffff;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.chk input[type="checkbox"]::before {
+	content: '';
+	width: 10px;
+	height: 6px;
+	border-bottom: solid 2px transparent;
+	border-left: solid 2px transparent;
+	transform: rotate(-45deg);	
+	position:absolute;
+	top:6px;
+	left:6px;
+}
+.chk input[type="checkbox"]:checked {
+	background-color: #00aad2;
+	border:none;
+}
+.chk input[type="checkbox"]:checked::before {
+	border-color: #ffffff
+}
+.chk input[type="checkbox"]:disabled {
+	background-color: #999999;
+	border:none;
+}
+.chk input[type="checkbox"]:disabled::before {
+	border-color: #cccccc
+}
+.chk input[type="checkbox"]:checked:disabled::before {
+	border-color: #ffffff
+}
+.chk input[type="checkbox"] + span {
+	display: inline-block;
+	font-size: 14px;
+	color: #000;
+	padding-top: 3px;
+	line-height: 1.4;
+}
+.chk input[type="checkbox"]:disabled + span {
+	color: #777777;
+}
+.check-group > .chk {
+	margin-bottom: 16px;
+}
+.check-group li {
+	line-height: 1;
+}
+.check-group li + li {
+	margin-top: 5px
+}
+.check-group li.all {
+	margin-bottom: 20px;
+}
+
+/* radio */
+.radio {
+	position:relative;
+	display:inline-flex;
+	margin-right:15px;
+	line-height: 1;
+}
+.radio input[type="radio"] {
+	width: 24px;
+	min-width: 24px;
+	height: 24px;
+	margin-right: 8px;
+	border: solid 1px #cccccc;
+	border-radius: 12px;
+	background-color: #ffffff;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.radio input[type="radio"]::before {
+	content: '';
+	width: 10px;
+	height: 10px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	position:absolute;
+	top:7px;
+	left:7px;
+}
+.radio input[type="radio"]:checked {
+	background-color: #00aad2;
+	border:none;
+}
+.radio input[type="radio"]:checked::before {
+	border-color: #ffffff
+}
+.radio input[type="radio"]:disabled {
+	background-color: #999999;
+	border:none;
+}
+.radio input[type="radio"]:disabled::before {
+	background-color: #cccccc
+}
+.radio input[type="radio"]:checked:disabled::before {
+	background-color: #ffffff
+}
+.radio input[type="radio"] + span {
+	display: inline-block;
+	font-size: 14px;
+	color: #000;
+	padding-top: 3px;
+	line-height: 1.4;
+}
+.radio input[type="radio"]:disabled + span {
+	color: #777777;
+}
+.radio-group > .radio {
+	margin-bottom: 16px;
+}
+.radio-group li {
+	line-height: 1;
+}
+.radio-group li + li {
+	margin-top: 32px
 }
 
 /* button */
@@ -426,6 +620,7 @@ body::-webkit-scrollbar-track,
 }
 .btn span {
 	padding: 0 10px;
+	word-break: keep-all;
 }
 .btn:only-child {
 	margin-right: 0;
@@ -572,6 +767,59 @@ body::-webkit-scrollbar-track,
 }
 .align-right {
 	text-align: right;
+}
+
+/* table */
+.tbl-box {
+	overflow-x: auto;
+	width: 100%;
+	margin-top: 30px;
+}
+.tbl-box.row-fix th:first-child,
+.tbl-box.row-fix td:first-child {
+	position: sticky;
+	left: 0;
+	z-index: 999;
+}
+.tbl-box th:first-child:before,
+.tbl-box th:first-child:after,
+.tbl-box td:first-child:before,
+.tbl-box td:first-child:after {
+	content: '';
+	position: absolute;
+	top: -1px;
+	bottom: -1px;
+	width: 1px;
+	background-color: #ccc;
+}
+.tbl-box th:first-child:before,
+.tbl-box td:first-child:before {
+	left: -1px;
+}
+.tbl-box th:first-child:after,
+.tbl-box td:first-child:after {
+	right: -1px;
+}
+.tbl-box th {
+	background: #3498db;
+	color: #fff;
+	font-weight: bold;
+}
+.tbl-box td {
+	background-color: #fff;
+}
+.tbl-box td,
+.tbl-box th {
+	padding: 10px;
+	border: 1px solid #ccc;
+	text-align: left;
+	font-size: 18px;
+}
+
+@media screen and (max-width: 767px) {
+	.tbl-box table {
+		width: 800px;
+	}
 }
 
 /* tab */
@@ -824,17 +1072,11 @@ body::-webkit-scrollbar-track,
 /* ja initializing font style */
 [lang="ja"],
 [lang="ja"] body {
-	font-family: 'Noto-Sans-JP', sans-serif;
+	font-family: 'Noto-Sans-JP', Gulim, Dotum, sans-serif;
 }
-[lang="ja"] button,
-[lang="ja"] input,
-[lang="ja"] select,
-[lang="ja"] textarea {
-	font-family: 'Noto-Sans-JP', sans-serif;
-}
-[lang="ja"] pre,
-[lang="ja"] code,
-[lang="ja"] kbd,
-[lang="ja"] samp {
-	font-family: 'Noto-Sans-JP', sans-serif;
+
+/* en initializing font style */
+[lang="en"],
+[lang="en"] body {
+	font-family: 'HyundaiSansHeadOffice', sans-serif;
 }

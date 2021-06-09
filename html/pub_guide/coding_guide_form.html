@@ -17,6 +17,7 @@
 	
 	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../assets/js/common.js"></script>
 	<script>
 		$(function(){
 			$('.view_code').on('click', function(){
@@ -59,12 +60,11 @@
 		<div class="contents_infor guide-content">
 
 			<h2 class="title">FORM</h2>
-			<br><br>
+
 			<!-- form -->
-			<h3>&#x25CE; INPUT</h3>
-			<br>
+			<h3 class="title">&#x25CE; INPUT</h3>
 			<h4 class="btm-border">- 텍스트 타입</h4>
-			<br>
+
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--<div class="inp-outer-box">
@@ -92,10 +92,10 @@
 </div>
 --></code></pre>
 <!-- //코드 삽입 -->
+
 			<div class="conIn_tip">
 				클래스 "<strong>inp-outer-box</strong>"안에 label과 input부분을 넣어서 사용함.
 			</div>
-			<br>
 			<div class="inp-outer-box">
 				<label for="inpTxt01">이름</label>
 				<input type="text" id="inpTxt01" class="inp-item" placeholder="이름을 입력해 주세요.">
@@ -119,9 +119,9 @@
 					<input type="text" id="inpNum01_03" class="inp-item" placeholder="5678">
 				</div>
 			</div>
-			<br><br><br>
+
 			<h4 class="btm-border">- 버튼 타입</h4>
-			<br>
+
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--<div class="inp-outer-box">
@@ -142,7 +142,6 @@
 			<div class="conIn_tip">
 				클래스 "<strong>inp-outer-box</strong>"안에 label과 input부분을 넣어서 사용함.
 			</div>
-			<br>
 			<div class="inp-outer-box">
 				<div class="inp-slice-box">
 					<input type="text" class="inp-item" placeholder="입력해 주세요.">
@@ -156,19 +155,164 @@
 					<button class="btn btn-small btn-type02"><span>郵便番号検索</span></button>
 				</div>
 			</div>
-			<br><br><br>
+
 			<h4 class="btm-border">- 노멀 타입</h4>
-			<br>
+
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--<input type="text" class="inp-item" placeholder="텍스트를 입력해 주세요.">
+<input type="text" class="inp-item" placeholder="Disabled" disabled>
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
-				단일 input만 사용함.
+				단일 input만 사용함.<br>
+				<strong>disabled/class="disabled"</strong> 둘다 사용가능
 			</div>
-			<br>
 			<input type="text" class="inp-item" placeholder="텍스트를 입력해 주세요.">
+			<br><br>
+			<input type="text" class="inp-item" placeholder="Disabled" disabled>
+
+			<hr>
+			<h3 class="title">&#x25CE; Select</h3>
+			<h4 class="btm-border">- Select 기본</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="slt-box">
+	<select title="selectBox" class="slt-item">
+		<option value="00" selected disabled hidden>Select All</option>
+		<option value="01">Option01</option>
+		<option value="02">Option02</option>
+	</select>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				.slt-box
+			</div>
+			<select title="selectBox" class="slt-box">
+				<option value="00" selected disabled hidden>Select All</option>
+				<option value="01">Option01</option>
+				<option value="02">Option02</option>
+			</select>
+			<br><br>
+			<select title="selectBox" class="slt-box" disabled>
+				<option value="00" selected disabled hidden>Select All</option>
+				<option value="01">Option01</option>
+				<option value="02">Option02</option>
+			</select>
+
+			<h3 class="title">&#x25CE; Checkbox</h3>
+			<h4 class="btm-border">- 체크박스 기본스타일</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<label class="chk"><input type="checkbox"><span>Default</span></label>
+<label class="chk"><input type="checkbox" checked="checked"><span>Checked</span></label>			
+<label class="chk"><input type="checkbox" disabled="disabled"><span>Disabled</span></label>
+<label class="chk"><input type="checkbox" checked="checked" disabled="disabled"><span>Checked+Disabled</span></label>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				.chk &gt; input + span
+			</div>		
+			<label class="chk"><input type="checkbox"><span>Default</span></label>
+			<label class="chk"><input type="checkbox" checked="checked"><span>Checked</span></label>			
+			<label class="chk"><input type="checkbox" disabled="disabled"><span>Disabled</span></label>
+			<label class="chk"><input type="checkbox" checked="checked" disabled="disabled"><span>Checked+Disabled</span></label>
+
+			<h4 class="btm-border">- 체크박스 그룹</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="check-group">
+	<label class="chk"><input type="checkbox"><span>선택1</span></label>
+	<label class="chk"><input type="checkbox" checked="checked"><span>선택2</span></label>
+</div>
+
+<ul class="check-group">
+	<li class="all"><label class="chk "><input type="checkbox"><span>전체동의</span></label></li>
+	<li><label class="chk"><input type="checkbox"><span>동의1</span></label></li>
+	<li><label class="chk"><input type="checkbox" checked="checked"><span>동의2</span></label></li>
+</ul>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				div.check-group &gt; .chk + .chk
+			</div>
+			<div class="check-group">
+				<label class="chk"><input type="checkbox"><span>선택1</span></label>
+				<label class="chk"><input type="checkbox" checked="checked"><span>선택2</span></label>				
+				<label class="chk"><input type="checkbox"><span>クレジットカード クレジットカードクレジットカードクレジットカード</span></label>
+			</div>
+
+			<div class="conIn_tip">
+				ul.check-group &gt; li + li<br>
+				전체동의가 있는경우 <strong>li.all</strong> 추가
+			</div>
+
+			<ul class="check-group">
+				<li class="all"><label class="chk"><input type="checkbox"><span>전체동의</span></label></li>
+				<li class="normal"><label class="chk"><input type="checkbox"><span>동의1</span></label></li>
+				<li class="normal"><label class="chk"><input type="checkbox"><span>동의2</span></label></li>
+			</ul>
+
+
+			<hr>
+			<h3 class="title">&#x25CE; Radio</h3>
+			<h4 class="btm-border">- 라디오박스 기본스타일</h4>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<label class="radio"><input type="radio" name="radio" id="radioChk01"><span>Default</span></label>
+	<label class="radio"><input type="radio" checked="checked" name="radio" id="radioChk02"><span>Checked</span></label>
+	<label class="radio"><input type="radio" disabled="disabled" name="radio" id="radioChk03"><span>Disabled</span></label>
+	<label class="radio"><input type="radio" checked="checked" disabled="disabled"><span>Checked+Disabled</span></label>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				.radio &gt; input+span
+			</div>
+			
+			<label class="radio"><input type="radio" name="radio" id="radioChk01"><span>Default</span></label>
+			<label class="radio"><input type="radio" checked="checked" name="radio" id="radioChk02"><span>Checked</span></label>
+			<label class="radio"><input type="radio" disabled="disabled" name="radio" id="radioChk03"><span>Disabled</span></label>
+			<label class="radio"><input type="radio" checked="checked" disabled="disabled"><span>Checked+Disabled</span></label>
+
+			<h4 class="btm-border">- 라디오 그룹</h4>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="radio-group">
+	<label class="radio"><input type="radio" name="radio" id="radioChk01"><span>ブランド拠点に配送</span></label>
+	<label class="radio"><input type="radio" checked="checked" name="radio" id="radioChk02"><span>自宅へ配送</span></label>
+	<label class="radio"><input type="radio" name="radio" id="radioChk02"><span>自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 </span></label>
+</div>
+
+<ul class="radio-group">
+	<li><label class="radio "><input type="radio" name="radioGroup" id="radioChk01" checked="checked"><span>LINE PAY</span></label></li>
+	<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk02"><span>Card</span></label></li>
+	<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk03"><span>Bank Transfer</span></label></li>
+</ul>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				div.radio-group &gt; .radio + .radio
+			</div>
+			<div class="radio-group">
+				<label class="radio"><input type="radio" name="radio1" id="radioChk04"><span>ブランド拠点に配送</span></label>
+				<label class="radio"><input type="radio" checked="checked" name="radio1" id="radioChk05"><span>自宅へ配送</span></label>
+				<label class="radio"><input type="radio" name="radio1" id="radioChk06"><span>自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 </span></label>
+			</div>
+
+			<div class="conIn_tip">
+				ul.radio-group &gt; li + li
+			</div>
+			<ul class="radio-group">
+				<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk07" checked="checked"><span>LINE PAY</span></label></li>
+				<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk08"><span>Card</span></label></li>
+				<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk09"><span>Bank Transfer</span></label></li>
+			</ul>
 			<!-- //form -->
 
 		</div>

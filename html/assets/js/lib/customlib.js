@@ -19,10 +19,10 @@ $(function () {
 					el: '.main-swiper-num01 .swiper-pagination',
 					clickable: true,
 				},
-				// autoplay: {
-				// 	delay: 4000,
-				// 	disableOnInteraction: false,
-				// },
+				autoplay: {
+					delay: 4000,
+					disableOnInteraction: false,
+				},
 				simulateTouch: true,
 				speed: 300,
 				loop: true,

@@ -29,7 +29,7 @@ table {width:100%;border-spacing: 0;}
 .font_color01  {color:#c00032;}
 .sub_tit {font-weight: bold; font-size: 13px}
 .text_bold {font-weight:bold}
-.btm-border {position: relative; padding-bottom: 10px;}
+.btm-border {position: relative; padding-bottom: 10px; margin:30px 0 10px}
 .btm-border:after {content: ''; position: absolute;	bottom: 0; left: 0;	right: 0; height: 1px; background-color: #bbb;}
 
 .coding_type h1{float:left;}
@@ -41,7 +41,7 @@ header.guide_header h1 {font-size:24px; font-weight:normal; color:#304989; font-
 
 .guide_container {padding:15px; }
 .guide_container h2 {margin-bottom:10px; color:#333;font-weight: bold;font-size:16px;}
-.guide_container h3.title {margin-bottom:10px; color:#333; margin-top:20px;font-weight: bold;font-size:14px}
+.guide_container h3.title {color:#000; font-weight: bold;font-size:16px; margin: 40px 0 15px}
 .guide_container .contents_infor.guide-content {max-width: 1120px; margin: 0 auto;}
 .guide_container .box_content {background:#eef1f6; padding:15px; margin-bottom:30px; border-radius:3px; border:1px solid #bccfef; font-size:16px;  color:#333; margin-top:10px}
 .guide_container .box_content.type2 {background:#f0f0f0; padding:10px; margin-bottom:30px; border-radius:3px; border:1px dashed #333; font-size:14px; color:#666;}
@@ -80,7 +80,7 @@ header.guide_header h1 {font-size:24px; font-weight:normal; color:#304989; font-
 .cont_codGuide .tab a + a{margin-left:1px;}
 .cont_codGuide h2:after{content: '';display: block;clear: both;overflow: hidden;}
 .cont_codGuide h2.tit{font-size:18px;color:#141414; font-weight: bold;}
-.cont_codGuide .contents_infor .conIn_tip{line-height:20px; margin:15px 0;font-weight:500;background:#f3f3f3;border:1px dashed #ccc;border-width:2px;padding:10px 15px;}
+.cont_codGuide .contents_infor .conIn_tip{line-height:20px; margin:20px 0 15px;font-weight:500;background:#f3f3f3;border:1px dashed #ccc;border-width:2px;padding:10px 15px;}
 .cont_codGuide .contents_infor .conIn_tip em{font-weight:bold; font-size:13px;}
 .cont_codGuide .contents_infor .step + .step{margin-top:15px;}
 .cont_codGuide .view_code {color:#000;display: block;font-size:12px}
