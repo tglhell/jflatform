@@ -1,4 +1,4 @@
-$(function () {
+jQuery.event.add(window, 'load', function () {
 	const tabTar = $('.js-tab');
 	const prxImg = $('.prx-item > img');
 	const prxItem = $('.parallax-cont .prx-item > *');
