@@ -2,26 +2,26 @@
 @font-face {
 	font-family: 'Noto-Sans-JP';
 	font-weight: 300;
-	src: url(../fonts/jp/NotoSansJP-Light.eot);
-	src: url(../fonts/jp/NotoSansJP-Light.eot?#iefix) format('embedded-opentype'),
-			url(../fonts/jp/NotoSansJP-Light.woff) format('woff'),
+	src: url(../fonts/ja/NotoSansJP-Light.eot);
+	src: url(../fonts/ja/NotoSansJP-Light.eot?#iefix) format('embedded-opentype'),
+			url(../fonts/ja/NotoSansJP-Light.woff) format('woff'),
 			url(../resources/fonts/NotoSansJP-Light.woff2) format('woff2');
 }
 @font-face {
 	font-family: 'Noto-Sans-JP';
 	font-weight: 400;
-	src: url(../fonts/jp/NotoSansJP-Regular.eot);
-	src: url(../fonts/jp/NotoSansJP-Regular.eot?#iefix) format('embedded-opentype'),
-			url(../fonts/jp/NotoSansJP-Regular.woff) format('woff'),
+	src: url(../fonts/ja/NotoSansJP-Regular.eot);
+	src: url(../fonts/ja/NotoSansJP-Regular.eot?#iefix) format('embedded-opentype'),
+			url(../fonts/ja/NotoSansJP-Regular.woff) format('woff'),
 			url(../resources/fonts/NotoSansJP-Regular.woff2) format('woff2');
 }
 @font-face {
 	font-family: 'Noto-Sans-JP';
 	font-weight: 700;
-	src: url(../fonts/jp/NotoSansJP-Bold.eot);
-	src: url(../fonts/jp/NotoSansJP-Bold.eot?#iefix) format('embedded-opentype'),
-			url(../fonts/jp/NotoSansJP-Bold.woff) format('woff'),
-			url(../fonts/jp/NotoSansJP-Bold.woff2) format('woff2');
+	src: url(../fonts/ja/NotoSansJP-Bold.eot);
+	src: url(../fonts/ja/NotoSansJP-Bold.eot?#iefix) format('embedded-opentype'),
+			url(../fonts/ja/NotoSansJP-Bold.woff) format('woff'),
+			url(../fonts/ja/NotoSansJP-Bold.woff2) format('woff2');
 }
 
 /* en initializing font */
@@ -248,37 +248,35 @@ caption {
 body {
 	overflow-x: hidden;
 }
-body::-webkit-scrollbar,
-.layer-popup-wrap::-webkit-scrollbar {
-	width: 7px;
-}
-body::-webkit-scrollbar-thumb,
-.layer-popup-wrap::-webkit-scrollbar-thumb {
-	border-radius: 5px;
-	background: rgba(153, 153, 153, .85);
-}
-body::-webkit-scrollbar-thumb:hover,
-.layer-popup-wrap::-webkit-scrollbar-thumb:hover {
-	background: rgba(187, 185, 185, 0.85);
-}
-body::-webkit-scrollbar-track,
-.layer-popup-wrap::-webkit-scrollbar-track {
-	background: transparent;
-}
-
-/* .blind {
-	position: absolute;
+.blind {
 	clip: rect(0, 0, 0, 0);
+	overflow: hidden;
+	width: 1px;
 	height: 1px;
 	margin-top: -1px;
-} */
-.n-hidden {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
 }
-.n-hidden::-ms-expand {
-	display: none; /* hidden arrow for IE10, 11 */
+@media screen and (min-width: 768px) {
+	body::-webkit-scrollbar,
+	.layer-popup-wrap::-webkit-scrollbar,
+	.layer-popup-wrap .layer-cont::-webkit-scrollbar {
+		width: 7px;
+	}
+	body::-webkit-scrollbar-thumb,
+	.layer-popup-wrap::-webkit-scrollbar-thumb,
+	.layer-popup-wrap .layer-cont::-webkit-scrollbar-thumb {
+		border-radius: 5px;
+		background: rgba(153, 153, 153, .85);
+	}
+	body::-webkit-scrollbar-thumb:hover,
+	.layer-popup-wrap::-webkit-scrollbar-thumb:hover,
+	.layer-popup-wrap .layer-cont::-webkit-scrollbar-thumb:hover {
+		background: rgba(187, 185, 185, 0.85);
+	}
+	body::-webkit-scrollbar-track,
+	.layer-popup-wrap::-webkit-scrollbar-track,
+	.layer-popup-wrap .layer-cont::-webkit-scrollbar-track {
+		background: transparent;
+	}
 }
 
 /* layout */
@@ -954,6 +952,18 @@ body::-webkit-scrollbar-track,
 	text-align: left;
 	vertical-align: middle;
 }
+.layer-popup-wrap.full {
+	overflow-y: hidden;
+}
+.layer-popup-wrap.full .layer-popup-cont {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	min-width: auto;
+	max-width: none;
+}
 .layer-popup-cont:focus {
 	outline: 1px solid #ccc;
 }
@@ -962,6 +972,7 @@ body::-webkit-scrollbar-track,
 	top: 0;
 	left: 0;
 	right: 0;
+	z-index: 5;
 	padding: 10px;
 	border-bottom: 1px solid #ccc;
 	background: rgba(187, 187, 187, .5);
@@ -979,6 +990,7 @@ body::-webkit-scrollbar-track,
 	position: absolute;
 	top: 12px;
 	right: 12px;
+	z-index: 10;
 	width: 20px;
 	height: 20px;
 	font-size: 0;
@@ -1029,6 +1041,9 @@ body::-webkit-scrollbar-track,
 		min-width: auto;
 		width: calc(100% - 50px);
 		max-width: 100%;
+	}
+	.full .layer-popup-cont {
+		width: 100%;
 	}
 }
 

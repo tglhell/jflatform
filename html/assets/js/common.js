@@ -75,7 +75,9 @@ jQuery.event.add(window, 'load', function () {
 			returnTar = $(e.target).closest('button');
 			$('.layer-popup-wrap' + '[data-pop-idx=' + popIdx + ']').fadeIn(fadeVal).css('display', 'block');
 			popCont.attr('tabindex', '0').fadeIn(fadeVal);
-			$('body').css({'overflow':'hidden', 'width':bodyWid});
+			if (!$('.layer-popup-wrap' + '[data-pop-idx=' + popIdx + ']').hasClass('full')) {
+				$('body').css({'overflow':'hidden', 'width':bodyWid});
+			}
 			setObj(function () {
 				popCont.focus().append('<a href="#" class="tar-loop"></a>');
 				$('.tar-loop').focusin(function () {

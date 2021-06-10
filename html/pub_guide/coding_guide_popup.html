@@ -64,11 +64,15 @@
 
 		<div class="contents_infor">
 
-			<h2 class="title">Popup A TYPE</h2>
+			<h2 class="title">POPUP</h2>
+
+			<!-- layer popup -->
+			<h3 class="title">&#x25CE; layer-popup</h3>
+			<h4 class="btm-border">- 일반 사이즈 (최소 사이즈 500px, 최대 사이즈 800px)</h4>
+
 			<!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!-- 
-<button class="sample-btn pop-open" data-pop-idx="1"><span>Popup Open 1</span></button>
+<pre class="language-html"><code><!--<button class="sample-btn pop-open" data-pop-idx="1"><span>Popup Open 1</span></button>
 
 <div class="layer-popup-wrap" data-pop-idx="1">
 	<div class="layer-popup-body">
@@ -84,70 +88,132 @@
 		</div>
 	</div>
 </div>
-
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
 				팝업 띄울 버튼에 클래스 "<strong>pop-open</strong>"을 붙이고, 클래스 "<strong>layer-popup-wrap</strong>"과의 <strong>data-pop-idx</strong>값이 같아야 함.
 			</div>
 
-			<!-- layer popup -->
-			<div>
-				작성코드<br><br>
-				
-				<div class="cta-outer">
-					<button class="btn pop-open" data-pop-idx="1"><span>Popup Normal</span></button>
-					<button class="btn pop-open" data-pop-idx="2"><span>Popup Scroll</span></button>
-				</div>
-
-				<!-- layer 1-->
-				<div class="layer-popup-wrap" data-pop-idx="1">
-					<div class="layer-popup-body">
-						<div class="layer-popup-cont">
-							<h1 class="layer-title">Layer Title 1</h1>
-							<div class="layer-cont">
-								<p>layerCont Text1</p>
-								<p>layerCont Text2</p>
-								<p>layerCont Text3</p>
-								<p>layerCont Text4</p>
-								<p>layerCont Text5</p>
-								<p>layerCont Text6 layerCont Text6 layerCont Text6 layerCont Text6 layerCont Text6 layerCont Text6 layerCont Text6</p>
-								<p>layerCont Text7</p>
-								<p>layerCont Text8</p>
-							</div>
-							<button class="btn-close-popup">close</button>
-						</div>
-					</div>
-				</div>
-				<!-- //layer 1-->
-
-				<!-- layer 2-->
-				<div class="layer-popup-wrap" data-pop-idx="2">
-					<div class="layer-popup-body">
-						<div class="layer-popup-cont">
-							<h1 class="layer-title">Layer Title 1</h1>
-							<div class="layer-cont">
-								<p>layerCont Text1</p>
-								<p>layerCont Text2</p>
-								<p>layerCont Text3</p>
-								<p>layerCont Text4</p>
-								<p>layerCont Text5</p>
-								<p>layerCont Text6</p>
-								<p>layerCont Text7</p>
-								<p>layerCont Text8</p>
-								<p>layerCont Text8</p>
-								<p>layerCont Text8</p>
-								<p>layerCont Text8</p>
-								<p>layerCont Text8</p>
-								<p>layerCont Text8</p>
-								<p>layerCont Text8</p>
-							</div>
-							<button class="btn-close-popup">close</button>
-						</div>
-					</div>
-				</div>
-				<!-- //layer 2-->
+			<div class="cta-outer">
+				<button class="btn pop-open" data-pop-idx="1"><span>Popup Normal</span></button>
+				<button class="btn pop-open" data-pop-idx="2"><span>Popup Scroll</span></button>
 			</div>
+
+			<!-- layer 1 -->
+			<div class="layer-popup-wrap" data-pop-idx="1">
+				<div class="layer-popup-body">
+					<div class="layer-popup-cont">
+						<h1 class="layer-title">Layer Title 1</h1>
+						<div class="layer-cont">
+							<p>layerCont Text1</p>
+							<p>layerCont Text2</p>
+							<p>layerCont Text3</p>
+							<p>layerCont Text4</p>
+							<p>layerCont Text5</p>
+							<p>layerCont Text6 layerCont Text6 layerCont Text6 layerCont Text6 layerCont Text6 layerCont Text6 layerCont Text6</p>
+							<p>layerCont Text7</p>
+							<p>layerCont Text8</p>
+						</div>
+						<button class="btn-close-popup">close</button>
+					</div>
+				</div>
+			</div>
+			<!-- //layer 1 -->
+
+			<!-- layer 2 -->
+			<div class="layer-popup-wrap" data-pop-idx="2">
+				<div class="layer-popup-body">
+					<div class="layer-popup-cont">
+						<h1 class="layer-title">Layer Title 1</h1>
+						<div class="layer-cont">
+							<p>layerCont Text1</p>
+							<p>layerCont Text2</p>
+							<p>layerCont Text3</p>
+							<p>layerCont Text4</p>
+							<p>layerCont Text5</p>
+							<p>layerCont Text6</p>
+							<p>layerCont Text7</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text8</p>
+						</div>
+						<button class="btn-close-popup">close</button>
+					</div>
+				</div>
+			</div>
+			<!-- //layer 2 -->
+
+			<h4 class="btm-border">- 풀 사이즈</h4>
+
+			<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<button class="sample-btn pop-open" data-pop-idx="3"><span>Popup Open 1</span></button>
+
+<div class="layer-popup-wrap full" data-pop-idx="3">
+	<div class="layer-popup-body">
+		<div class="layer-popup-cont">
+			<h1 class="layer-title">Layer Title 1</h1>
+			<div class="layer-cont">
+				<p>layerCont Text1</p>
+				<p>layerCont Text2</p>
+				<p>layerCont Text3</p>
+				<p>layerCont Text4</p>
+				<p>layerCont Text5</p>
+				<p>layerCont Text6</p>
+				<p>layerCont Text7</p>
+				<p>layerCont Text8</p>
+				<p>layerCont Text8</p>
+				<p>layerCont Text8</p>
+				<p>layerCont Text8</p>
+				<p>layerCont Text8</p>
+				<p>layerCont Text8</p>
+				<p>layerCont Text8</p>
+			</div>
+			<button class="btn-close-popup">close</button>
+		</div>
+	</div>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				.layer-popup-wrap에 클래스 "<strong>full</strong>"를 추가함.
+			</div>
+
+			<div class="cta-outer">
+				<button class="btn pop-open" data-pop-idx="3"><span>Popup Full</span></button>
+			</div>
+
+			<!-- layer 3 -->
+			<div class="layer-popup-wrap full" data-pop-idx="3">
+				<div class="layer-popup-body">
+					<div class="layer-popup-cont">
+						<h1 class="layer-title">Layer Title 1</h1>
+						<div class="layer-cont">
+							<p>layerCont Text1</p>
+							<p>layerCont Text2</p>
+							<p>layerCont Text3</p>
+							<p>layerCont Text4</p>
+							<p>layerCont Text5</p>
+							<p>layerCont Text6</p>
+							<p>layerCont Text7</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text8</p>
+						</div>
+						<button class="btn-close-popup">close</button>
+					</div>
+				</div>
+			</div>
+			<!-- //layer 3 -->
+
 			<!-- //layer popup -->
 
 		</div>
