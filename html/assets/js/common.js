@@ -44,9 +44,11 @@ $(function () {
 	$(window).scroll(function () {
 		const chkBtnPos = $('.scr-fix-btn');
 		let scrPos = $(this).scrollTop();
-		prxItem.css({'transform':'translateY(' + scrPos / prxVal + 'px)'});
-		prxItem2.css({'transform':'translateY(' + scrPos / prxVal2 + 'px)'});
-		prxItem3.css({'transform':'translateY(-' + scrPos / prxVal + 'px)'});
+		if ($('.parallax-cont').length >= 1) {
+			prxItem.css({'transform':'translateY(' + scrPos / prxVal + 'px)'});
+			prxItem2.css({'transform':'translateY(' + scrPos / prxVal2 + 'px)'});
+			prxItem3.css({'transform':'translateY(-' + scrPos / prxVal + 'px)'});
+		}
 		if (chkBtnPos.length >= 1) {
 			let scrBtnPos = chkBtnPos.offset().top - $(window).height() + scrFixPos;
 			if (!chkBool) {

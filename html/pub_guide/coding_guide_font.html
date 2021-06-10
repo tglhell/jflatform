@@ -24,7 +24,15 @@
 				$(this).next('.code-toolbar').toggleClass('open');
 			});
 		});
-	</script>	
+	</script>
+	<style>
+		.sample-text {
+			font-size: 20px;
+		}
+		[lang="en"].font-style2 {
+			font-family: 'HyundaiSansTextOffice', sans-serif;
+		}
+	</style>
 </head>
 
 <body>
@@ -59,18 +67,28 @@
 
 		<div class="contents_infor">
 
-			<h2 class="title">Title</h2>
-			<h3 class="title">section title</h3>
+			<h2 class="title">FONT</h2>
+
+			<!-- font -->
+			<h3 class="title">&#x25CE; 언어별 폰트 정의</h3>
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--
-
+<pre class="language-html"><code><!--<p lang="ja" class="sample-text">このテキストは、サンプルのテキストです。</p>
+<p lang="en" class="sample-text">This text is sample text.</p>
+<p lang="en" class="sample-text font-style2">This text is sample text. This text is sample text. This text is sample text. This text is sample text.</p>
+<p lang="en" class="sample-text font-style2">이 페이지는 샘플 페이지 입니다.</p>
 --></code></pre>
 <!-- //코드 삽입 -->
 
-		<div class="conIn_tip">
-			일어는 notoSansJP
-		</div>
+			<div class="conIn_tip">
+				일어는 <strong>NotoSansJP</strong><br>영문은 <strong>HyundaiSansHeadOffice</strong>, <strong>HyundaiSansTextOffice</strong><br>공통 font-family는 "<strong>HyundaiSansHeadOffice</strong>", 본문의 경우는 "<strong>HyundaiSansTextOffice</strong>"를 사용하기 때문에 클래스 "<strong>font-type2</strong>"를 사용함.
+			</div>
+			<br>
+			<p lang="ja" class="sample-text">[NotoSansJP] このテキストは、サンプルのテキストです。</p><br>
+			<p lang="en" class="sample-text">[HyundaiSansHeadOffice] This text is sample text.</p><br>
+			<p lang="en" class="sample-text font-style2">[HyundaiSansTextOffice] This text is sample text. This text is sample text. This text is sample text. This text is sample text.</p><br>
+			<p lang="en" class="sample-text font-style2">[HyundaiSansTextOffice] 이 텍스트는 샘플 텍스트 입니다.</p>
+			<!--//font -->
 
 		</div>
 		<!-- //contents_infor -->

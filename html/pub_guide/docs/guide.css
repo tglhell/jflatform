@@ -42,7 +42,8 @@ header.guide_header h1 {font-size:24px; font-weight:normal; color:#304989; font-
 .guide_container {padding:15px; }
 .guide_container h2 {margin-bottom:10px; color:#333;font-weight: bold;font-size:16px;}
 .guide_container h3.title {color:#000; font-weight: bold;font-size:16px; margin: 40px 0 15px}
-.guide_container .contents_infor.guide-content {max-width: 1120px; margin: 0 auto;}
+.guide_container .contents_infor {max-width: 1120px; margin: 0 auto;}
+.guide_container .contents_infor.guide-content {max-width: none;}
 .guide_container .box_content {background:#eef1f6; padding:15px; margin-bottom:30px; border-radius:3px; border:1px solid #bccfef; font-size:16px;  color:#333; margin-top:10px}
 .guide_container .box_content.type2 {background:#f0f0f0; padding:10px; margin-bottom:30px; border-radius:3px; border:1px dashed #333; font-size:14px; color:#666;}
 .guide_container .box_content.type3 {background:none; padding:10px; margin-bottom:30px; border-radius:3px; border:1px dashed #333; font-size:14px; color:#666;}

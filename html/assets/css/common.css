@@ -1,6 +1,6 @@
 /* ja initializing font */
 @font-face {
-	font-family: 'Noto-Sans-JP', Gulim, Dotum, sans-serif;
+	font-family: 'Noto-Sans-JP';
 	font-weight: 300;
 	src: url(../fonts/jp/NotoSansJP-Light.eot);
 	src: url(../fonts/jp/NotoSansJP-Light.eot?#iefix) format('embedded-opentype'),
@@ -8,7 +8,7 @@
 			url(../resources/fonts/NotoSansJP-Light.woff2) format('woff2');
 }
 @font-face {
-	font-family: 'Noto-Sans-JP', Gulim, Dotum, sans-serif;
+	font-family: 'Noto-Sans-JP';
 	font-weight: 400;
 	src: url(../fonts/jp/NotoSansJP-Regular.eot);
 	src: url(../fonts/jp/NotoSansJP-Regular.eot?#iefix) format('embedded-opentype'),
@@ -16,7 +16,7 @@
 			url(../resources/fonts/NotoSansJP-Regular.woff2) format('woff2');
 }
 @font-face {
-	font-family: 'Noto-Sans-JP', Gulim, Dotum, sans-serif;
+	font-family: 'Noto-Sans-JP';
 	font-weight: 700;
 	src: url(../fonts/jp/NotoSansJP-Bold.eot);
 	src: url(../fonts/jp/NotoSansJP-Bold.eot?#iefix) format('embedded-opentype'),
@@ -26,7 +26,7 @@
 
 /* en initializing font */
 @font-face {
-	font-family: 'HyundaiSansHeadOffice', sans-serif;
+	font-family: 'HyundaiSansHeadOffice';
 	font-weight: 400;
 	src: url(../fonts/en/HyundaiSansHeadOffice-Regular.eot);
 	src: url(../fonts/en/HyundaiSansHeadOffice-Regular.eot?#iefix) format('embedded-opentype'),
@@ -34,15 +34,15 @@
 			url(../fonts/en/HyundaiSansHeadOffice-Regular.woff2) format('woff2');
 }
 @font-face {
-	font-family: 'HyundaiSansHeadOffice', sans-serif;
-	font-weight: 400;
+	font-family: 'HyundaiSansHeadOffice';
+	font-weight: 500;
 	src: url(../fonts/en/HyundaiSansHeadOffice-Medium.eot);
 	src: url(../fonts/en/HyundaiSansHeadOffice-Medium.eot?#iefix) format('embedded-opentype'),
 			url(../fonts/en/HyundaiSansHeadOffice-Medium.woff) format('woff'),
 			url(../fonts/en/HyundaiSansHeadOffice-Medium.woff2) format('woff2');
 }
 @font-face {
-	font-family: 'HyundaiSansHeadOffice', sans-serif;
+	font-family: 'HyundaiSansHeadOffice';
 	font-weight: 700;
 	src: url(../fonts/en/HyundaiSansHeadOffice-Bold.eot);
 	src: url(../fonts/en/HyundaiSansHeadOffice-Bold.eot?#iefix) format('embedded-opentype'),
@@ -50,7 +50,7 @@
 			url(../fonts/en/HyundaiSansHeadOffice-Bold.woff2) format('woff2');
 }
 @font-face {
-	font-family: 'HyundaiSansTextOffice', sans-serif;
+	font-family: 'HyundaiSansTextOffice';
 	font-weight: 400;
 	src: url(../fonts/en/HyundaiSansTextOffice-Regular.eot);
 	src: url(../fonts/en/HyundaiSansTextOffice-Regular.eot?#iefix) format('embedded-opentype'),
@@ -58,7 +58,7 @@
 			url(../fonts/en/HyundaiSansTextOffice-Regular.woff2) format('woff2');
 }
 @font-face {
-	font-family: 'HyundaiSansTextOffice', sans-serif;
+	font-family: 'HyundaiSansTextOffice';
 	font-weight: 700;
 	src: url(../fonts/en/HyundaiSansTextOffice-Bold.eot);
 	src: url(../fonts/en/HyundaiSansTextOffice-Bold.eot?#iefix) format('embedded-opentype'),
@@ -801,7 +801,7 @@ body::-webkit-scrollbar-track,
 	right: -1px;
 }
 .tbl-box th {
-	background: #3498db;
+	background: #007fa8;
 	color: #fff;
 	font-weight: bold;
 }
@@ -1072,7 +1072,7 @@ body::-webkit-scrollbar-track,
 /* ja initializing font style */
 [lang="ja"],
 [lang="ja"] body {
-	font-family: 'Noto-Sans-JP', Gulim, Dotum, sans-serif;
+	font-family: 'Noto-Sans-JP', sans-serif;
 }
 
 /* en initializing font style */
