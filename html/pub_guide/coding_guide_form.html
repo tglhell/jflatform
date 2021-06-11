@@ -100,6 +100,7 @@
 				<label for="inpTxt01">이름</label>
 				<input type="text" id="inpTxt01" class="inp-item" placeholder="이름을 입력해 주세요.">
 			</div>
+			<p class="error-msg lbl-type">error text</p>
 			<br>
 			<div class="inp-outer-box">
 				<label for="inpName01_01">이름</label>
@@ -108,6 +109,16 @@
 					<input type="text" id="inpName01_02" class="inp-item" placeholder="이름">
 				</div>
 			</div>
+			<p class="error-msg lbl-type">error text</p>
+			<br>
+			<div class="inp-outer-box">
+				<label for="inpName01_01">이름</label>
+				<div class="inp-group-box">
+					<input type="text" id="inpName01_03" class="inp-item" placeholder="성">
+					<input type="text" id="inpName01_04" class="inp-item" placeholder="이름">
+				</div>
+			</div>
+			<p class="error-msg lbl-type">error text</p>
 			<br>
 			<div class="inp-outer-box">
 				<label for="inpNum01_01">전화번호 <span class="required">*</span></label>
@@ -119,6 +130,7 @@
 					<input type="text" id="inpNum01_03" class="inp-item" placeholder="5678">
 				</div>
 			</div>
+			<p class="error-msg lbl-type">error text</p>
 
 			<h4 class="btm-border">- 버튼 타입</h4>
 
@@ -137,24 +149,47 @@
 		<button class="btn btn-small btn-type02"><span>郵便番号検索</span></button>
 	</div>
 </div>
+
+<div class="inp-outer-box post-type">
+	<label for="inpNum01_01">郵便番号検索 <span class="required">*</span></label>
+	<div class="inp-slice-box">
+		<input type="text" id="inpNum02_01" class="inp-item" placeholder="080">
+		<span class="inp-hpn">-</span>
+		<input type="text" id="inpNum02_02" class="inp-item" placeholder="1234">
+		<button class="btn btn-middle btn-type02"><span>郵便番号検索</span></button>
+	</div>
+</div>
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
-				클래스 "<strong>inp-outer-box</strong>"안에 label과 input부분을 넣어서 사용함.
+				클래스 "<strong>inp-outer-box</strong>"안에 label과 input부분을 넣어서 사용함.<br>주소 부분은 .inp-outer-box에 클래스 "<strong>post-type</strong>"를 추가하여 스타일 분리.
 			</div>
 			<div class="inp-outer-box">
 				<div class="inp-slice-box">
 					<input type="text" class="inp-item" placeholder="입력해 주세요.">
-					<button class="btn btn-small btn-type02"><span>확인</span></button>
+					<button class="btn btn-middle btn-type02"><span>확인</span></button>
 				</div>
 			</div>
+			<p class="error-msg">error text</p>
 			<br>
 			<div class="inp-outer-box">
 				<div class="inp-slice-box">
 					<input type="text" class="inp-item" placeholder="입력해 주세요.">
-					<button class="btn btn-small btn-type02"><span>郵便番号検索</span></button>
+					<button class="btn btn-middle btn-type02"><span>郵便番号検索</span></button>
 				</div>
 			</div>
+			<p class="error-msg">error text</p>
+			<br>
+			<div class="inp-outer-box post-type">
+				<label for="inpNum01_01">郵便番号検索 <span class="required">*</span></label>
+				<div class="inp-slice-box">
+					<input type="text" id="inpNum02_01" class="inp-item" placeholder="080">
+					<span class="inp-hpn">-</span>
+					<input type="text" id="inpNum02_02" class="inp-item" placeholder="1234">
+					<button class="btn btn-middle btn-type02"><span>郵便番号検索</span></button>
+				</div>
+			</div>
+			<p class="error-msg lbl-type">error text</p>
 
 			<h4 class="btm-border">- 노멀 타입</h4>
 
@@ -169,8 +204,10 @@
 				<strong>disabled/class="disabled"</strong> 둘다 사용가능
 			</div>
 			<input type="text" class="inp-item" placeholder="텍스트를 입력해 주세요.">
+			<p class="error-msg">error text</p>
 			<br><br>
 			<input type="text" class="inp-item" placeholder="Disabled" disabled>
+			<p class="error-msg">error text</p>
 
 			<hr>
 			<h3 class="title">&#x25CE; Select</h3>
