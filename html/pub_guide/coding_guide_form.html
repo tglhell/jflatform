@@ -67,10 +67,11 @@
 
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<div class="inp-outer-box">
+<pre class="language-html"><code><!--<div class="inp-outer-box val-error">
 	<label for="inpTxt01">이름</label>
 	<input type="text" id="inpTxt01" class="inp-item" placeholder="이름을 입력해 주세요.">
 </div>
+<p class="error-msg lbl-type">error text</p>
 
 <div class="inp-outer-box">
 	<label for="inpName01_01">이름</label>
@@ -79,6 +80,16 @@
 		<input type="text" id="inpName01_02" class="inp-item" placeholder="이름">
 	</div>
 </div>
+<p class="error-msg lbl-type">error text</p>
+
+<div class="inp-outer-box val-error">
+	<label for="inpName01_01">이름</label>
+	<div class="inp-group-box">
+		<input type="text" id="inpName01_03" class="inp-item" placeholder="성">
+		<input type="text" id="inpName01_04" class="inp-item" placeholder="이름">
+	</div>
+</div>
+<p class="error-msg lbl-type">error text</p>
 
 <div class="inp-outer-box">
 	<label for="inpNum01_01">전화번호 <span class="required">*</span></label>
@@ -90,18 +101,22 @@
 		<input type="text" id="inpNum01_03" class="inp-item" placeholder="5678">
 	</div>
 </div>
+<p class="error-msg lbl-type">error text</p>
 --></code></pre>
 <!-- //코드 삽입 -->
 
 			<div class="conIn_tip">
-				클래스 "<strong>inp-outer-box</strong>"안에 label과 input부분을 넣어서 사용함.
+				클래스 "<strong>inp-outer-box</strong>"안에 label과 input부분을 넣어서 사용함.<br>validation check error 메세지는 .inp-outer-box에 클래스 "<strong>val-error</strong>"를 추가.<br>input box 좌측에 label이 있는 경우는 .error-msg에 클래스 "<strong>lbl-type</strong>"를 추가함.
 			</div>
-			<div class="inp-outer-box">
+
+			<div class="inp-outer-box val-error">
 				<label for="inpTxt01">이름</label>
 				<input type="text" id="inpTxt01" class="inp-item" placeholder="이름을 입력해 주세요.">
 			</div>
 			<p class="error-msg lbl-type">error text</p>
+
 			<br>
+
 			<div class="inp-outer-box">
 				<label for="inpName01_01">이름</label>
 				<div class="inp-group-box">
@@ -110,8 +125,10 @@
 				</div>
 			</div>
 			<p class="error-msg lbl-type">error text</p>
+
 			<br>
-			<div class="inp-outer-box">
+
+			<div class="inp-outer-box val-error">
 				<label for="inpName01_01">이름</label>
 				<div class="inp-group-box">
 					<input type="text" id="inpName01_03" class="inp-item" placeholder="성">
@@ -119,7 +136,9 @@
 				</div>
 			</div>
 			<p class="error-msg lbl-type">error text</p>
+
 			<br>
+
 			<div class="inp-outer-box">
 				<label for="inpNum01_01">전화번호 <span class="required">*</span></label>
 				<div class="inp-slice-box">
@@ -137,20 +156,22 @@
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--<div class="inp-outer-box">
-	<div class="inp-slice-box">
+	<div class="inp-slice-box val-error">
 		<input type="text" class="inp-item" placeholder="입력해 주세요.">
-		<button class="btn btn-small btn-type02"><span>확인</span></button>
+		<button class="btn btn-middle btn-type02"><span>확인</span></button>
 	</div>
 </div>
+<p class="error-msg">error text</p>
 
 <div class="inp-outer-box">
 	<div class="inp-slice-box">
 		<input type="text" class="inp-item" placeholder="입력해 주세요.">
-		<button class="btn btn-small btn-type02"><span>郵便番号検索</span></button>
+		<button class="btn btn-middle btn-type02"><span>郵便番号検索</span></button>
 	</div>
 </div>
+<p class="error-msg">error text</p>
 
-<div class="inp-outer-box post-type">
+<div class="inp-outer-box post-type val-error">
 	<label for="inpNum01_01">郵便番号検索 <span class="required">*</span></label>
 	<div class="inp-slice-box">
 		<input type="text" id="inpNum02_01" class="inp-item" placeholder="080">
@@ -159,19 +180,23 @@
 		<button class="btn btn-middle btn-type02"><span>郵便番号検索</span></button>
 	</div>
 </div>
+<p class="error-msg lbl-type">error text</p>
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
 				클래스 "<strong>inp-outer-box</strong>"안에 label과 input부분을 넣어서 사용함.<br>주소 부분은 .inp-outer-box에 클래스 "<strong>post-type</strong>"를 추가하여 스타일 분리.
 			</div>
-			<div class="inp-outer-box">
+
+			<div class="inp-outer-box val-error">
 				<div class="inp-slice-box">
 					<input type="text" class="inp-item" placeholder="입력해 주세요.">
 					<button class="btn btn-middle btn-type02"><span>확인</span></button>
 				</div>
 			</div>
 			<p class="error-msg">error text</p>
+
 			<br>
+
 			<div class="inp-outer-box">
 				<div class="inp-slice-box">
 					<input type="text" class="inp-item" placeholder="입력해 주세요.">
@@ -179,8 +204,10 @@
 				</div>
 			</div>
 			<p class="error-msg">error text</p>
+
 			<br>
-			<div class="inp-outer-box post-type">
+
+			<div class="inp-outer-box post-type val-error">
 				<label for="inpNum01_01">郵便番号検索 <span class="required">*</span></label>
 				<div class="inp-slice-box">
 					<input type="text" id="inpNum02_01" class="inp-item" placeholder="080">
@@ -195,18 +222,31 @@
 
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<input type="text" class="inp-item" placeholder="텍스트를 입력해 주세요.">
-<input type="text" class="inp-item" placeholder="Disabled" disabled>
+<pre class="language-html"><code><!--<div class="inp-outer-box val-error">
+	<input type="text" class="inp-item" placeholder="텍스트를 입력해 주세요.">
+</div>
+<p class="error-msg">error text</p>
+
+<div class="inp-outer-box">
+	<input type="text" class="inp-item" placeholder="Disabled" disabled>
+</div>
+<p class="error-msg">error text</p>
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
 				단일 input만 사용함.<br>
 				<strong>disabled/class="disabled"</strong> 둘다 사용가능
 			</div>
-			<input type="text" class="inp-item" placeholder="텍스트를 입력해 주세요.">
+			<div class="inp-outer-box val-error">
+				<input type="text" class="inp-item" placeholder="텍스트를 입력해 주세요.">
+			</div>
 			<p class="error-msg">error text</p>
-			<br><br>
-			<input type="text" class="inp-item" placeholder="Disabled" disabled>
+
+			<br>
+
+			<div class="inp-outer-box">
+				<input type="text" class="inp-item" placeholder="Disabled" disabled>
+			</div>
 			<p class="error-msg">error text</p>
 
 			<hr>

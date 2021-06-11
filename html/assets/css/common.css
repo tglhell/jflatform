@@ -451,7 +451,11 @@ body {
 	vertical-align: middle;
 }
 .error-msg {
+	display: none;
 	color: #e63312;
+}
+.val-error + .error-msg {
+	display: block;
 }
 .error-msg.lbl-type {
 	margin-left: 134px;
@@ -482,6 +486,9 @@ body {
 	font-size: 14px;
 	color: #777;
 	vertical-align: middle;
+}
+.val-error .inp-item {
+	border-color: #e63312;
 }
 .inp-item:disabled,
 .inp-item.disabled {
@@ -547,6 +554,9 @@ body {
 		width: auto;
 		white-space: nowrap;
 	}
+	.error-msg.lbl-type {
+	margin-left: 0;
+}
 }
 
 /* checkbox */
