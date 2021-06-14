@@ -69,15 +69,24 @@
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--<div class="inp-outer-box val-error">
 	<label for="inpTxt01">이름</label>
-	<input type="text" id="inpTxt01" class="inp-item" placeholder="이름을 입력해 주세요.">
+	<div class="inp-area">
+		<input type="text" id="inpTxt01" class="inp-item" placeholder="이름을 입력해 주세요.">
+		<button class="inp-close"></button>
+	</div>
 </div>
 <p class="error-msg lbl-type">error text</p>
 
 <div class="inp-outer-box">
 	<label for="inpName01_01">이름</label>
 	<div class="inp-group-box">
-		<input type="text" id="inpName01_01" class="inp-item" placeholder="성">
-		<input type="text" id="inpName01_02" class="inp-item" placeholder="이름">
+		<div class="inp-area">
+			<input type="text" id="inpName01_02" class="inp-item" placeholder="이름">
+			<button class="inp-close"></button>
+		</div>
+		<div class="inp-area">
+			<input type="text" id="inpName01_01" class="inp-item" placeholder="성">
+			<button class="inp-close"></button>
+		</div>
 	</div>
 </div>
 <p class="error-msg lbl-type">error text</p>
@@ -85,8 +94,14 @@
 <div class="inp-outer-box val-error">
 	<label for="inpName01_01">이름</label>
 	<div class="inp-group-box">
-		<input type="text" id="inpName01_03" class="inp-item" placeholder="성">
-		<input type="text" id="inpName01_04" class="inp-item" placeholder="이름">
+		<div class="inp-area">
+			<input type="text" id="inpName01_03" class="inp-item" placeholder="성">
+			<button class="inp-close"></button>
+		</div>
+		<div class="inp-area">
+			<input type="text" id="inpName01_04" class="inp-item" placeholder="이름">
+			<button class="inp-close"></button>
+		</div>
 	</div>
 </div>
 <p class="error-msg lbl-type">error text</p>
@@ -94,11 +109,20 @@
 <div class="inp-outer-box">
 	<label for="inpNum01_01">전화번호 <span class="required">*</span></label>
 	<div class="inp-slice-box">
-		<input type="text" id="inpNum01_01" class="inp-item" placeholder="080">
+		<div class="inp-area">
+			<input type="text" id="inpNum01_01" class="inp-item" placeholder="080">
+			<button class="inp-close"></button>
+		</div>
 		<span class="inp-hpn">-</span>
-		<input type="text" id="inpNum01_02" class="inp-item" placeholder="1234">
+		<div class="inp-area">
+			<input type="text" id="inpNum01_02" class="inp-item" placeholder="1234">
+			<button class="inp-close"></button>
+		</div>
 		<span class="inp-hpn">-</span>
-		<input type="text" id="inpNum01_03" class="inp-item" placeholder="5678">
+		<div class="inp-area">
+			<input type="text" id="inpNum01_03" class="inp-item" placeholder="5678">
+			<button class="inp-close"></button>
+		</div>
 	</div>
 </div>
 <p class="error-msg lbl-type">error text</p>
@@ -111,7 +135,10 @@
 
 			<div class="inp-outer-box val-error">
 				<label for="inpTxt01">이름</label>
-				<input type="text" id="inpTxt01" class="inp-item" placeholder="이름을 입력해 주세요.">
+				<div class="inp-area">
+					<input type="text" id="inpTxt01" class="inp-item" placeholder="이름을 입력해 주세요.">
+					<button class="inp-close"></button>
+				</div>
 			</div>
 			<p class="error-msg lbl-type">error text</p>
 
@@ -120,8 +147,14 @@
 			<div class="inp-outer-box">
 				<label for="inpName01_01">이름</label>
 				<div class="inp-group-box">
-					<input type="text" id="inpName01_01" class="inp-item" placeholder="성">
-					<input type="text" id="inpName01_02" class="inp-item" placeholder="이름">
+					<div class="inp-area">
+						<input type="text" id="inpName01_02" class="inp-item" placeholder="이름">
+						<button class="inp-close"></button>
+					</div>
+					<div class="inp-area">
+						<input type="text" id="inpName01_01" class="inp-item" placeholder="성">
+						<button class="inp-close"></button>
+					</div>
 				</div>
 			</div>
 			<p class="error-msg lbl-type">error text</p>
@@ -131,8 +164,14 @@
 			<div class="inp-outer-box val-error">
 				<label for="inpName01_01">이름</label>
 				<div class="inp-group-box">
-					<input type="text" id="inpName01_03" class="inp-item" placeholder="성">
-					<input type="text" id="inpName01_04" class="inp-item" placeholder="이름">
+					<div class="inp-area">
+						<input type="text" id="inpName01_03" class="inp-item" placeholder="성">
+						<button class="inp-close"></button>
+					</div>
+					<div class="inp-area">
+						<input type="text" id="inpName01_04" class="inp-item" placeholder="이름">
+						<button class="inp-close"></button>
+					</div>
 				</div>
 			</div>
 			<p class="error-msg lbl-type">error text</p>
@@ -142,11 +181,20 @@
 			<div class="inp-outer-box">
 				<label for="inpNum01_01">전화번호 <span class="required">*</span></label>
 				<div class="inp-slice-box">
-					<input type="text" id="inpNum01_01" class="inp-item" placeholder="080">
+					<div class="inp-area">
+						<input type="text" id="inpNum01_01" class="inp-item" placeholder="080">
+						<button class="inp-close"></button>
+					</div>
 					<span class="inp-hpn">-</span>
-					<input type="text" id="inpNum01_02" class="inp-item" placeholder="1234">
+					<div class="inp-area">
+						<input type="text" id="inpNum01_02" class="inp-item" placeholder="1234">
+						<button class="inp-close"></button>
+					</div>
 					<span class="inp-hpn">-</span>
-					<input type="text" id="inpNum01_03" class="inp-item" placeholder="5678">
+					<div class="inp-area">
+						<input type="text" id="inpNum01_03" class="inp-item" placeholder="5678">
+						<button class="inp-close"></button>
+					</div>
 				</div>
 			</div>
 			<p class="error-msg lbl-type">error text</p>
@@ -156,16 +204,22 @@
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--<div class="inp-outer-box">
-	<div class="inp-slice-box val-error">
-		<input type="text" class="inp-item" placeholder="입력해 주세요.">
+	<div class="inp-slice-box">
+		<div class="inp-area">
+			<input type="search" class="inp-item" placeholder="입력해 주세요.">
+			<button class="inp-close"></button>
+		</div>
 		<button class="btn btn-middle btn-type02"><span>확인</span></button>
 	</div>
 </div>
 <p class="error-msg">error text</p>
 
-<div class="inp-outer-box">
+<div class="inp-outer-box val-error">
 	<div class="inp-slice-box">
-		<input type="text" class="inp-item" placeholder="입력해 주세요.">
+		<div class="inp-area">
+			<input type="text" class="inp-item" placeholder="입력해 주세요.">
+			<button class="inp-close"></button>
+		</div>
 		<button class="btn btn-middle btn-type02"><span>郵便番号検索</span></button>
 	</div>
 </div>
@@ -174,9 +228,15 @@
 <div class="inp-outer-box post-type val-error">
 	<label for="inpNum01_01">郵便番号検索 <span class="required">*</span></label>
 	<div class="inp-slice-box">
-		<input type="text" id="inpNum02_01" class="inp-item" placeholder="080">
+		<div class="inp-area">
+			<input type="text" id="inpNum02_01" class="inp-item" placeholder="080">
+			<button class="inp-close"></button>
+		</div>
 		<span class="inp-hpn">-</span>
-		<input type="text" id="inpNum02_02" class="inp-item" placeholder="1234">
+		<div class="inp-area">
+			<input type="text" id="inpNum02_02" class="inp-item" placeholder="1234">
+			<button class="inp-close"></button>
+		</div>
 		<button class="btn btn-middle btn-type02"><span>郵便番号検索</span></button>
 	</div>
 </div>
@@ -189,7 +249,10 @@
 
 			<div class="inp-outer-box">
 				<div class="inp-slice-box">
-					<input type="search" class="inp-item" placeholder="입력해 주세요.">
+					<div class="inp-area">
+						<input type="search" class="inp-item" placeholder="입력해 주세요.">
+						<button class="inp-close"></button>
+					</div>
 					<button class="btn btn-middle btn-type02"><span>확인</span></button>
 				</div>
 			</div>
@@ -199,7 +262,10 @@
 
 			<div class="inp-outer-box val-error">
 				<div class="inp-slice-box">
-					<input type="text" class="inp-item" placeholder="입력해 주세요.">
+					<div class="inp-area">
+						<input type="text" class="inp-item" placeholder="입력해 주세요.">
+						<button class="inp-close"></button>
+					</div>
 					<button class="btn btn-middle btn-type02"><span>郵便番号検索</span></button>
 				</div>
 			</div>
@@ -210,13 +276,18 @@
 			<div class="inp-outer-box post-type val-error">
 				<label for="inpNum01_01">郵便番号検索 <span class="required">*</span></label>
 				<div class="inp-slice-box">
-					<input type="text" id="inpNum02_01" class="inp-item" placeholder="080">
+					<div class="inp-area">
+						<input type="text" id="inpNum02_01" class="inp-item" placeholder="080">
+						<button class="inp-close"></button>
+					</div>
 					<span class="inp-hpn">-</span>
-					<input type="text" id="inpNum02_02" class="inp-item" placeholder="1234">
+					<div class="inp-area">
+						<input type="text" id="inpNum02_02" class="inp-item" placeholder="1234">
+						<button class="inp-close"></button>
+					</div>
 					<button class="btn btn-middle btn-type02"><span>郵便番号検索</span></button>
 				</div>
 			</div>
-			<div></div>
 			<p class="error-msg lbl-type">error text</p>
 
 			<h4 class="btm-border">- 노멀 타입</h4>
@@ -224,31 +295,42 @@
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--<div class="inp-outer-box val-error">
-	<input type="text" class="inp-item" placeholder="텍스트를 입력해 주세요.">
+	<div class="inp-area">
+		<input type="text" class="inp-item" placeholder="텍스트를 입력해 주세요.">
+		<button class="inp-close"></button>
+	</div>
 </div>
 <p class="error-msg">error text</p>
 
 <div class="inp-outer-box">
-	<input type="text" class="inp-item" placeholder="Disabled" disabled>
+	<div class="inp-area">
+		<input type="text" class="inp-item" placeholder="Disabled" disabled>
+		<button class="inp-close"></button>
+	</div>
 </div>
-<p class="error-msg">error text</p>
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
 				단일 input만 사용함.<br>
 				<strong>disabled/class="disabled"</strong> 둘다 사용가능
 			</div>
+
 			<div class="inp-outer-box val-error">
-				<input type="text" class="inp-item" placeholder="텍스트를 입력해 주세요.">
+				<div class="inp-area">
+					<input type="text" class="inp-item" placeholder="텍스트를 입력해 주세요.">
+					<button class="inp-close"></button>
+				</div>
 			</div>
 			<p class="error-msg">error text</p>
 
 			<br>
 
 			<div class="inp-outer-box">
-				<input type="text" class="inp-item" placeholder="Disabled" disabled>
+				<div class="inp-area">
+					<input type="text" class="inp-item" placeholder="Disabled" disabled>
+					<button class="inp-close"></button>
+				</div>
 			</div>
-			<p class="error-msg">error text</p>
 
 			<hr>
 			<h3 class="title">&#x25CE; Select</h3>
@@ -281,7 +363,7 @@
 			</select>
 
 			<h3 class="title">&#x25CE; Checkbox</h3>
-			<h4 class="btm-border">- 체크박스 기본스타일</h4>
+			<h4 class="btm-border">- 체크박스 기본스타일 / 타이틀타입</h4>
 
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
@@ -289,16 +371,19 @@
 <label class="chk"><input type="checkbox" checked="checked"><span>Checked</span></label>			
 <label class="chk"><input type="checkbox" disabled="disabled"><span>Disabled</span></label>
 <label class="chk"><input type="checkbox" checked="checked" disabled="disabled"><span>Checked+Disabled</span></label>
+<label class="chk head"><input type="checkbox"><span>HeadText</span></label>
 --></code></pre>
 <!-- //코드 삽입 -->
 
 			<div class="conIn_tip">
-				.chk &gt; input + span
+				.chk &gt; input + span <br>
+				.chk.head &gt; input + span
 			</div>		
 			<label class="chk"><input type="checkbox"><span>Default</span></label>
 			<label class="chk"><input type="checkbox" checked="checked"><span>Checked</span></label>			
 			<label class="chk"><input type="checkbox" disabled="disabled"><span>Disabled</span></label>
 			<label class="chk"><input type="checkbox" checked="checked" disabled="disabled"><span>Checked+Disabled</span></label>
+			<label class="chk head"><input type="checkbox"><span>HeadText</span></label>
 
 			<h4 class="btm-border">- 체크박스 그룹</h4>
 
@@ -391,6 +476,40 @@
 				<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk08"><span>Card</span></label></li>
 				<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk09"><span>Bank Transfer</span></label></li>
 			</ul>
+
+
+			<h3 class="title">&#x25CE; Etc</h3>
+			<h4 class="btm-border">- 상품수량</h4>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="amount-calc">
+	<button class="down">decrease</button>
+	<input type="text" value="1" />
+	<button class="up">increase</button>
+</div>
+<div class="amount-calc disabled">
+	<button class="down">decrease</button>
+	<input type="text" value="1" />
+	<button class="up">increase</button>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				상품수량 변경하기에 사용 / 품절일 경우
+			</div>
+			<div class="amount-calc">
+				<button class="down">decrease</button>
+				<input type="text" value="1" />
+				<button class="up">increase</button>
+			</div>
+
+			<div class="amount-calc disabled">
+				<button class="down">decrease</button>
+				<input type="text" value="1" />
+				<button class="up">increase</button>
+			</div>
+
 			<!-- //form -->
 
 		</div>

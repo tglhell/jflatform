@@ -5,6 +5,7 @@ jQuery.event.add(window, 'load', function () {
 	const prxItem2 = $('.parallax-cont.prx-val02 .prx-item');
 	const prxItem3 = $('.parallax-cont.prx-val03 .prx-item');
 	const irCont = $('.ir-count');
+	const inpItem = $('.inp-item');
 
 	tabTar.each(function () {
 		tabAutoHgt ($(this));
@@ -62,6 +63,19 @@ jQuery.event.add(window, 'load', function () {
 				}
 			}
 		}
+	});
+
+	inpItem.on('keyup', function () {
+		let inpItemVal = $(this).val();
+		if (inpItemVal == 0) {
+			$(this).parent().removeClass('active');
+		} else {
+			$(this).parent().addClass('active');
+		}
+	});
+
+	$('.inp-close').on('click', function () {
+		$(this).closest('.inp-area').removeClass('active').find(inpItem).val('');
 	});
 
 	$('.pop-open').on('click', (function () {
