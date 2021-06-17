@@ -52,6 +52,7 @@
 			<a href="coding_guide_tab.html" title="TAB">TAB</a>
 			<a href="coding_guide_parallax.html" title="PARALLAX">PARALLAX</a>
 			<a href="coding_guide_scroll.html" title="SCROLL">SCROLL</a>
+			<a href="coding_guide_swiper.html" title="SWIPER">SWIPER</a>
 			<a href="coding_guide_popup.html" title="POPUP">POPUP</a>
 			<a href="coding_guide_etc.html" title="ETC">ETC</a>
 		</div>
@@ -69,10 +70,9 @@
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--<div class="cta-outer">
 	<button class="btn"><span>취소</span></button>
-	<button class="btn btn-disabled"><span>취소</span></button>
 </div>
 
-<div class="cta-outer">
+<div class="cta-outer full-type">
 	<a href="#" class="btn btn-middle"><span>취소</span></a>
 	<a href="#" class="btn btn-middle btn-disabled"><span>취소</span></a>
 </div>
@@ -89,15 +89,14 @@
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
-				기본 클래스는 "<strong>btn</strong>"이며, disable 스타일은 클래스 "<strong>btn-disabled</strong>"를 사용함. 버튼 기본 높이값은 <strong>56px</strong>, 작은 사이즈는 클래스 "<strong>btn-middle, btn-small, btn-extra-small</strong>"을 추가함.
+				기본 클래스는 "<strong>btn</strong>"이며, disable 스타일은 클래스 "<strong>btn-disabled</strong>"를 사용함.<br>pc에서 가득차는 스타일은 .cta-outer에 클래스 "<strong>full-type</strong>"을 추가함.<br>버튼 기본 높이값은 <strong>56px</strong>, 작은 사이즈는 클래스 "<strong>btn-middle, btn-small, btn-extra-small</strong>"을 추가함.
 			</div>
 
 			<div class="cta-outer">
 				<button class="btn"><span>취소</span></button>
-				<button class="btn btn-disabled"><span>취소</span></button>
 			</div>
 			<br>
-			<div class="cta-outer">
+			<div class="cta-outer full-type">
 				<a href="#" class="btn btn-middle"><span>취소</span></a>
 				<a href="#" class="btn btn-middle btn-disabled"><span>취소</span></a>
 			</div>
@@ -117,167 +116,93 @@
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--<div class="cta-outer">
-	<button class="btn btn-type02"><span>확인</span></button>
-	<button class="btn btn-type02 btn-disabled"><span>확인</span></button>
+	<button class="btn btn-type2"><span>확인</span></button>
+	<button class="btn btn-type2 btn-disabled"><span>확인</span></button>
 </div>
 
-<div class="cta-outer">
-	<a href="#" class="btn btn-middle btn-type02"><span>확인</span></a>
-	<a href="#" class="btn btn-middle btn-type02 btn-disabled"><span>확인</span></a>
+<div class="cta-outer full-type">
+	<a href="#" class="btn btn-middle btn-type2"><span>확인</span></a>
+	<a href="#" class="btn btn-middle btn-type2 btn-disabled"><span>확인</span></a>
 </div>
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
-				기본 클래스인 "<strong>btn</strong>"에 클래스 "<strong>btn-type02</strong>"추가하여 사용함.
+				기본 클래스인 "<strong>btn</strong>"에 클래스 "<strong>btn-type2</strong>"추가하여 사용함.
 			</div>
 
 			<div class="cta-outer">
-				<button class="btn btn-type02"><span>확인</span></button>
-				<button class="btn btn-type02 btn-disabled"><span>확인</span></button>
+				<button class="btn btn-type2"><span>확인</span></button>
+				<button class="btn btn-type2 btn-disabled"><span>확인</span></button>
 			</div>
 			<br>
-			<div class="cta-outer">
-				<a href="#" class="btn btn-middle btn-type02"><span>확인</span></a>
-				<a href="#" class="btn btn-middle btn-type02 btn-disabled"><span>확인</span></a>
+			<div class="cta-outer full-type">
+				<a href="#" class="btn btn-middle btn-type2"><span>확인</span></a>
+				<a href="#" class="btn btn-middle btn-type2 btn-disabled"><span>확인</span></a>
 			</div>
-			<br>
 
 			<h4 class="btm-border">- 혼합형</h4>
 
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--<div class="cta-outer">
-	<button class="btn btn-type03"><span>확인</span></button>
-	<button class="btn btn-type03 btn-disabled"><span>확인</span></button>
+	<button class="btn btn-type3"><span>확인</span></button>
+	<button class="btn btn-type2"><span>확인</span></button>
+	<button class="btn btn-type3"><span>확인</span></button>
 </div>
 
-<div class="cta-outer">
-	<a href="#" class="btn btn-middle btn-type03"><span>확인</span></a>
-	<a href="#" class="btn btn-middle btn-type03 btn-disabled"><span>확인</span></a>
+<div class="cta-outer full-type">
+	<a href="#" class="btn btn-middle btn-type3"><span>확인</span></a>
+	<a href="#" class="btn btn-middle btn-type3 btn-disabled"><span>확인</span></a>
 </div>
 
-<div class="cta-outer">
-	<button class="btn btn-small btn-type03"><span>확인</span></button>
-	<button class="btn btn-small btn-type03 btn-disabled"><span>확인</span></button>
-</div>
---></code></pre>
-<!-- //코드 삽입 -->
-			<div class="conIn_tip">
-				기본 클래스인 "<strong>btn</strong>"에 클래스 "<strong>btn-type03</strong>"추가하여 사용하고, 아이콘은 css의 "<strong>.btn-type03 span:before</strong>"부분을 수정함.
-			</div>
-
-			<div class="cta-outer">
-				<button class="btn btn-type03"><span>확인</span></button>
-				<button class="btn btn-type03 btn-disabled"><span>확인</span></button>
-			</div>
-			<br>
-			<div class="cta-outer">
-				<a href="#" class="btn btn-middle btn-type03"><span>확인</span></a>
-				<a href="#" class="btn btn-middle btn-type03 btn-disabled"><span>확인</span></a>
-			</div>
-			<br>
-			<div class="cta-outer">
-				<button class="btn btn-small btn-type03"><span>확인</span></button>
-				<button class="btn btn-small btn-type03 btn-disabled"><span>확인</span></button>
-			</div>
-
-			<h4 class="btm-border">- 모바일에서 한 라인에 버튼2개인 경우</h4>
-<!-- 코드 삽입 -->
-<button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<div class="cta-outer mo-type">
-	<button class="btn"><span>취소</span></button>
-	<button class="btn btn-type02"><span>확인</span></button>
-</div>
-
-<div class="cta-outer mo-type">
-	<a href="#" class="btn btn-middle"><span>확인</span></a>
-	<a href="#" class="btn btn-middle btn-disabled"><span>확인</span></a>
-</div>
-
-<div class="cta-outer mo-type">
-	<button class="btn btn-small"><span>확인</span></button>
-	<button class="btn btn-small btn-disabled"><span>확인</span></button>
+<div class="cta-outer full-type">
+	<button class="btn btn-small btn-type3"><span>확인</span></button>
+	<button class="btn btn-small btn-type3"><span>확인</span></button>
+	<button class="btn btn-small btn-type3"><span>확인</span></button>
 </div>
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
-				클래스 "<strong>cta-outer</strong>"에 클래스 "<strong>mo-type</strong>"을 추가함.
+				기본 클래스인 "<strong>btn</strong>"에 클래스 "<strong>btn-type3</strong>"추가하여 사용하고, 아이콘은 css의 "<strong>.btn-type3 span:before</strong>"부분을 수정함.
 			</div>
 
-			<div class="cta-outer mo-type">
-				<button class="btn"><span>취소</span></button>
-				<button class="btn btn-type02"><span>확인</span></button>
+			<div class="cta-outer">
+				<button class="btn btn-type3"><span>확인</span></button>
+				<button class="btn btn-type3"><span>확인</span></button>
+				<button class="btn btn-type3"><span>확인</span></button>
 			</div>
 			<br>
-			<div class="cta-outer mo-type">
-				<a href="#" class="btn btn-middle"><span>확인</span></a>
-				<a href="#" class="btn btn-middle btn-disabled"><span>확인</span></a>
+			<div class="cta-outer full-type">
+				<a href="#" class="btn btn-middle btn-type3"><span>확인</span></a>
+				<a href="#" class="btn btn-middle btn-type3 btn-disabled"><span>확인</span></a>
 			</div>
 			<br>
-			<div class="cta-outer mo-type">
-				<button class="btn btn-small"><span>확인</span></button>
-				<button class="btn btn-small btn-disabled"><span>확인</span></button>
-			</div>
-
-			<h4 class="btm-border">- pc에서 width: 100%인 경우</h4>
-<!-- 코드 삽입 -->
-<button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<div class="cta-outer full-type mo-type">
-	<a href="#" class="btn"><span>취소</span></a>
-	<a href="#" class="btn btn-type02"><span>확인</span></a>
-</div>
-
-<div class="cta-outer full-type mo-type">
-	<button class="btn btn-middle"><span>확인</span></button>
-	<button class="btn btn-middle btn-disabled"><span>확인</span></button>
-</div>
-
-<div class="cta-outer full-type mo-type">
-	<button class="btn btn-small"><span>확인</span></button>
-	<button class="btn btn-small btn-disabled"><span>확인</span></button>
-</div>
---></code></pre>
-<!-- //코드 삽입 -->
-			<div class="conIn_tip">
-				클래스 "<strong>cta-outer</strong>"에 클래스 "<strong>full-type</strong>"을 추가함.
-			</div>
-
-			<div class="cta-outer full-type mo-type">
-				<a href="#" class="btn"><span>취소</span></a>
-				<a href="#" class="btn btn-type02"><span>확인</span></a>
-			</div>
-			<br>
-			<div class="cta-outer full-type mo-type">
-				<button class="btn btn-middle"><span>확인</span></button>
-				<button class="btn btn-middle btn-disabled"><span>확인</span></button>
-			</div>
-			<br>
-			<div class="cta-outer full-type mo-type">
-				<button class="btn btn-small"><span>확인</span></button>
-				<button class="btn btn-small btn-disabled"><span>확인</span></button>
+			<div class="cta-outer full-type">
+				<button class="btn btn-small btn-type3"><span>확인</span></button>
+				<button class="btn btn-small btn-type3"><span>확인</span></button>
+				<button class="btn btn-small btn-type3"><span>확인</span></button>
 			</div>
 
 			<h4 class="btm-border">- pc width: 200px, mobile width : 160px</h4>
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<div class="cta-outer full-type mo-type">
+<pre class="language-html"><code><!--<div class="cta-outer fix-type">
 	<a href="#" class="btn"><span>취소</span></a>
-	<a href="#" class="btn btn-type02"><span>확인</span></a>
 </div>
 
-<div class="cta-outer full-type mo-type">
+<div class="cta-outer fix-type">
 	<button class="btn btn-middle"><span>확인</span></button>
 	<button class="btn btn-middle btn-disabled"><span>확인</span></button>
 </div>
 
-<div class="cta-outer full-type mo-type">
+<div class="cta-outer fix-type">
 	<button class="btn btn-small"><span>확인</span></button>
 	<button class="btn btn-small btn-disabled"><span>확인</span></button>
 </div>
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
-				클래스 "<strong>cta-outer</strong>"에 클래스 "<strong>full-type</strong>"을 추가함.
+				클래스 "<strong>cta-outer</strong>"에 클래스 "<strong>fix-type</strong>"을 추가함.
 			</div>
 
 			<div class="cta-outer fix-type">
@@ -293,6 +218,18 @@
 				<button class="btn btn-small"><span>확인</span></button>
 				<button class="btn btn-small btn-disabled"><span>확인</span></button>
 			</div>
+
+			<h4 class="btm-border">- 삭제 버튼</h4>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<button class="btn-del"><span>삭제</span></button>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				.btn-del
+			</div>
+
+			<button class="btn-del"><span>삭제</span></button>
 
 			<!-- //form -->
 

@@ -2,8 +2,8 @@ jQuery.event.add(window, 'load', function () {
 	const tabTar = $('.js-tab');
 	const prxImg = $('.prx-item > img');
 	const prxItem = $('.parallax-cont .prx-item > *');
-	const prxItem2 = $('.parallax-cont.prx-val02 .prx-item');
-	const prxItem3 = $('.parallax-cont.prx-val03 .prx-item');
+	const prxItem2 = $('.parallax-cont.prx-val2 .prx-item');
+	const prxItem3 = $('.parallax-cont.prx-val3 .prx-item');
 	const irCont = $('.ir-count');
 	const inpItem = $('.inp-item');
 
@@ -36,7 +36,7 @@ jQuery.event.add(window, 'load', function () {
 
 	prxImg.ready(function () {
 		prxItem.each(function () {
-			if (!$(this).parent().hasClass('prx-type02')) {
+			if (!$(this).parent().hasClass('prx-type2')) {
 				prxHgt ($(this));
 			}
 		});
@@ -190,4 +190,51 @@ jQuery.event.add(window, 'load', function () {
 		tabPdtVal = parseInt(target.find('.js-tab-cont').css('padding-top')) * 2;
 		target.find('.js-tab-cont').css('height', tabCntHgt + tabPdtVal);
 	}
+
+	//toggle common
+	function toggle(){
+		$('.toggle').off()
+		$('.toggle .cont').slideUp(0);
+		$('.toggle').on('click', '.tit-btn' ,function(){
+			var toggleItem = $(this).parent('.item');
+			if(toggleItem.hasClass('active')) {
+				toggleItem.removeClass('active');
+				toggleItem.find('.cont').slideUp(300);
+			} else {
+				toggleItem.addClass('active');
+				toggleItem.find('.cont').slideDown(300);
+			}
+		});
+	};
+	toggle();
+
+	// accordion common
+	function accordion(){
+		$('.accordion').off()
+		$('.accordion').on('click', '.tit-btn', function() {
+			var accordionItem = $(this).parent('.item');
+			accordionItem.toggleClass('active').siblings('.item').removeClass('active');
+			$('.accordion .item').find('.cont').slideUp(0);
+			if(accordionItem.hasClass('active')) {
+				accordionItem.find('.cont').slideDown(300);
+			} else {
+				accordionItem.find('.cont').slideUp(300);
+			}
+		})
+	};
+	accordion();
+	
 });
+
+function selectDropdown(data){
+	$('.select-dropdown .tit-btn').each(function(index, item){
+		var name = $(item).attr('data-name');
+		if(name == data){
+			$('.select-dropdown .item').removeClass('active');
+			$(item).parent('.item').addClass('active');
+			// var itemTop = $(item).offset().top;
+			// $('html,body').animate({scrollTop:itemTop}, 500);
+		}
+	});
+};
+

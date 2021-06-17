@@ -2,6 +2,7 @@
 body{background:#fff;}
 * {list-style:none;padding:0;margin:0;text-decoration: none;}
 table {width:100%;border-spacing: 0;}
+br {color:transparent;}
 .header{position:relative;display:flex;justify-content: space-between;padding:20px;font-size:26px;height:auto; font-family: "wFontKrUL";color:#fff; background:#141414;}
 .header > div {}
 .header em{color:#b9daff;}
