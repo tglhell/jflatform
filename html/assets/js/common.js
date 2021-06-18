@@ -136,6 +136,7 @@ jQuery.event.add(window, 'load', function () {
 					if ($('.swiper-container').length >= 1) {
 						$('.swiper-wrapper').css('transform', 'translate3d(0, 0, 0)');
 					}
+					popCont.parent().css('height', '100%');
 				}, fadeVal);
 			}
 		}
@@ -229,7 +230,7 @@ jQuery.event.add(window, 'load', function () {
 	//moToggle 
 	function moToggle(){
 		$('.mo-toggle').off()
-		$('.mo-toggle .cont').slideUp(0);
+		// $('.mo-toggle .cont').slideUp(0);
 		$('.mo-toggle').on('click', '.tit-btn' ,function(){
 			var toggleItem = $(this).parent('.item');
 			if(toggleItem.hasClass('active')) {
