@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>HMJ 온라인 판매 사이트 구축</title>
+
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/order.css">
+	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../../assets/js/common.js"></script>
+</head>
+
+<body>
+
+<div class="hmj-wrap order"> <!-- test 클래스는 제거 예정 : 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+	<div class="skip-nav">
+		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
+	</div>
+
+	<!-- header -->
+	<div class="hmj-header" style="border-bottom:1px solid #000;">
+		<!-- <img src="../assets/images/@header.jpg" alt="header"> -->
+		<h1><a href="hmj_layout.html"><img src="../../assets/images/common/img_header_logo.png" alt="Hyundai Logo"></a></h1>
+
+		<div class="gnb-menu-outer">
+			<ul class="gnb-menu-list">
+				<li>
+					<button><span>ブランド</span></button>
+				</li>
+				<li>
+					<button><span>IONIQ5</span></button>
+				</li>
+				<li>
+					<button><span>NEXO</span></button>
+				</li>
+				<li>
+					<button><span>購買</span></button>
+				</li>
+				<li>
+					<button><span>サービス</span></button>
+				</li>
+				<li>
+					<button><span>コンテンツ</span></button>
+				</li>
+				<li>
+					<button><span>ストア</span></button>
+				</li>
+				<li>
+					<button><span>お客様センター</span></button>
+				</li>
+			</ul>
+		</div>
+
+		<div class="gnb-right-menu">
+			<ul class="gnb-right-list">
+				<li>
+					<button class="btn-search"><span><img src="../../assets/images/common/ico_search.png" alt="검색"></span></button>
+				</li>
+				<li>
+					<button class="btn-mypage"><span><img src="../../assets/images/common/ico_mypage.png" alt="마이페이지"></span></button>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--//header -->
+
+	<!-- container -->
+	<div id="hmjContainer" class="hmj-container" style="z-index:100;">
+		<div class="hmj-content">
+			<div class="cont-outer">
+                <div class="cont-center">
+                    <div class="mo-toggle">
+                        <div class="item">
+                            <h3 class="title tit-btn">購入者</h3>
+                            <div class="cont">
+                                <ul class="form-list">
+                                    <li>
+                                        <div class="inp-outer-box">
+                                            <label for="inpName01_01">お名前(フリガナ) <span class="required">*</span></label>
+                                            <div class="inp-group-box">
+                                                <div class="inp-area">
+                                                    <input type="text" id="inpName01_02" class="inp-item" placeholder="이름">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <input type="text" id="inpName01_01" class="inp-item" placeholder="성">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="error-msg lbl-type">error text</p>
+                                    </li>
+                                    <li>
+                                        <div class="inp-outer-box">
+                                            <label for="inpName01_01">お名前(フリガナ) <span class="required">*</span></label>
+                                            <div class="inp-group-box">
+                                                <div class="inp-area">
+                                                    <input type="text" id="inpName01_02" class="inp-item" placeholder="이름">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <input type="text" id="inpName01_01" class="inp-item" placeholder="성">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="error-msg lbl-type">error text</p>
+                                    </li>
+                                    <li>
+                                        <div class="inp-outer-box">
+                                            <label for="inpNum01_01">電話番号 <span class="required">*</span></label>
+                                            <div class="inp-slice-box">
+                                                <div class="inp-area">
+                                                    <input type="text" id="inpNum01_01" class="inp-item" placeholder="080">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <span class="inp-hpn">-</span>
+                                                <div class="inp-area">
+                                                    <input type="text" id="inpNum01_02" class="inp-item" placeholder="1234">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <span class="inp-hpn">-</span>
+                                                <div class="inp-area">
+                                                    <input type="text" id="inpNum01_03" class="inp-item" placeholder="5678">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="error-msg lbl-type">error text</p>
+                                    </li>
+                                    <li>
+                                        <div class="inp-outer-box post-type">
+                                            <label for="inpNum01_01">住所 <span class="required">*</span></label>
+                                            <div class="inp-group-box">
+                                                <div class="inp-slice-box">
+                                                    <div class="inp-area">
+                                                        <input type="text" id="inpNum02_01" class="inp-item" placeholder="〒" readonly="">
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                    <span class="inp-hpn">-</span>
+                                                    <div class="inp-area">
+                                                        <input type="text" id="inpNum02_02" class="inp-item" placeholder="" readonly="">
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                    <button class="btn btn-middle btn-type2"><span>郵便番号検索</span></button>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <select title="selectBox" class="slt-box">
+                                                        <option value="00" selected="" disabled="" hidden="">都道府県</option>
+                                                        <option value="01">Option01</option>
+                                                        <option value="02">Option02</option>
+                                                    </select>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <input type="text" class="inp-item" placeholder="市区町村">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <input type="text" class="inp-item" placeholder="番地">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <input type="text" class="inp-item" placeholder="ビル・マンション名(選択)">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="error-msg lbl-type">error text</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h3 class="title tit-btn">お届け先</h3>
+                            <div class="cont">
+                                배송지
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h3 class="title tit-btn">ご注文内容</h3>
+                            <div class="cont">
+                                주문상품
+                            </div>
+                        </div>
+                    </div>
+				</div>
+
+                <div class="cont-right">
+                    <div class="mo-toggle">
+                        <div class="item">
+                            <h3 class="title tit-btn">割引</h3>
+                            <div class="cont">
+                                할인
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h3 class="title tit-btn">合計金額</h3>
+                            <div class="cont">
+                                주문금액
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h3 class="title tit-btn">支払い方法</h3>
+                            <div class="cont">
+                                결제수단
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+	<!--//container -->
+
+	<!-- footer -->
+	<div class="hmj-footer">
+		<img src="../../assets/images/@footer.jpg" alt="footer">
+	</div>
+	<!--//footer -->
+</div>
+
+<script>
+</script>
+</body>
+</html>
