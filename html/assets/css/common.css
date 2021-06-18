@@ -661,6 +661,15 @@ body {
 .inp-slice-box .btn {
 	width: auto;
 }
+.inp-btn-box {
+	display: table;
+	width: 100%;
+}
+.inp-btn-box .inp-area {
+	display: table-cell;
+	width: 100%;
+	vertical-align: top;
+}
 .post-type .inp-slice-box .btn {
 	min-width: 136px;
 	background-color: #444;
