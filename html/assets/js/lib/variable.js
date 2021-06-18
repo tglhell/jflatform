@@ -2,7 +2,7 @@
 chkBool = false;
 
 // responsive
-tbl = 1024;
+tbl = 1119;
 mo = 767;
 
 // number value

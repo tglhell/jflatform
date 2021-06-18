@@ -1,36 +1,23 @@
 /* ja initializing font */
-@font-face {
-	font-family: 'Noto-Sans-JP';
-	font-weight: 300;
-	src: url(../fonts/ja/NotoSansJP-Light.eot);
-	src: url(../fonts/ja/NotoSansJP-Light.eot?#iefix) format('embedded-opentype'),
-			url(../fonts/ja/NotoSansJP-Light.woff) format('woff'),
-			url(../resources/fonts/NotoSansJP-Light.woff2) format('woff2');
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+/* @font-face {
+    font-family: 'Noto Sans JP';
+    src: url('../fonts/ja/NotoSansJP-Regular.eot');
+    src: url('../fonts/ja/NotoSansJP-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ja/NotoSansJP-Regular.woff2') format('woff2'),
+        url('../fonts/ja/NotoSansJP-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 @font-face {
-	font-family: 'Noto-Sans-JP';
-	font-weight: 400;
-	src: url(../fonts/ja/NotoSansJP-Regular.eot);
-	src: url(../fonts/ja/NotoSansJP-Regular.eot?#iefix) format('embedded-opentype'),
-			url(../fonts/ja/NotoSansJP-Regular.woff) format('woff'),
-			url(../resources/fonts/NotoSansJP-Regular.woff2) format('woff2');
-}
-@font-face {
-	font-family: 'Noto-Sans-JP';
-	font-weight: 500;
-	src: url(../fonts/ja/NotoSansJP-Medium.eot);
-	src: url(../fonts/ja/NotoSansJP-Medium.eot?#iefix) format('embedded-opentype'),
-			url(../fonts/ja/NotoSansJP-Medium.woff) format('woff'),
-			url(../resources/fonts/NotoSansJP-Medium.woff2) format('woff2');
-}
-@font-face {
-	font-family: 'Noto-Sans-JP';
-	font-weight: 700;
-	src: url(../fonts/ja/NotoSansJP-Bold.eot);
-	src: url(../fonts/ja/NotoSansJP-Bold.eot?#iefix) format('embedded-opentype'),
-			url(../fonts/ja/NotoSansJP-Bold.woff) format('woff'),
-			url(../fonts/ja/NotoSansJP-Bold.woff2) format('woff2');
-}
+    font-family: 'Noto Sans JP';
+    src: url('../fonts/ja/NotoSansJP-Medium.eot');
+    src: url('../fonts/ja/NotoSansJP-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ja/NotoSansJP-Medium.woff2') format('woff2'),
+        url('../fonts/ja/NotoSansJP-Medium.woff') format('woff');
+    font-weight: 500;
+} */
 
 /* en initializing font */
 @font-face {
@@ -50,14 +37,6 @@
 			url(../fonts/en/HyundaiSansHeadOffice-Medium.woff2) format('woff2');
 }
 @font-face {
-	font-family: 'HyundaiSansHeadOffice';
-	font-weight: 700;
-	src: url(../fonts/en/HyundaiSansHeadOffice-Bold.eot);
-	src: url(../fonts/en/HyundaiSansHeadOffice-Bold.eot?#iefix) format('embedded-opentype'),
-			url(../fonts/en/HyundaiSansHeadOffice-Bold.woff) format('woff'),
-			url(../fonts/en/HyundaiSansHeadOffice-Bold.woff2) format('woff2');
-}
-@font-face {
 	font-family: 'HyundaiSansTextOffice';
 	font-weight: 400;
 	src: url(../fonts/en/HyundaiSansTextOffice-Regular.eot);
@@ -67,11 +46,11 @@
 }
 @font-face {
 	font-family: 'HyundaiSansTextOffice';
-	font-weight: 700;
-	src: url(../fonts/en/HyundaiSansTextOffice-Bold.eot);
-	src: url(../fonts/en/HyundaiSansTextOffice-Bold.eot?#iefix) format('embedded-opentype'),
-			url(../fonts/en/HyundaiSansTextOffice-Bold.woff) format('woff'),
-			url(../fonts/en/HyundaiSansTextOffice-Bold.woff2) format('woff2');
+	font-weight: 500;
+	src: url(../fonts/en/HyundaiSansTextOffice-Medium.eot);
+	src: url(../fonts/en/HyundaiSansTextOffice-Medium.eot?#iefix) format('embedded-opentype'),
+			url(../fonts/en/HyundaiSansTextOffice-Medium.woff) format('woff'),
+			url(../fonts/en/HyundaiSansTextOffice-Medium.woff2) format('woff2');
 }
 
 /* reset */
@@ -185,6 +164,18 @@ button {
 textarea, pre {
 	overflow: auto;
 }
+select, .chk, .radio {
+	outline:none;
+	appearance:none;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-o-appearance:none;
+	border-radius:0;
+	-webkit-border-radius:0;
+}
+select::-ms-expand {
+	display: none;
+}
 input[type='search']::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
@@ -224,7 +215,7 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, dl, dd, figure, form, field
 	font-weight: normal;
 }
 html, body {
-	font-family: 'HyundaiSansHeadOffice', sans-serif;
+	font-family: 'HyundaiSansHeadOffice', 'Noto Sans JP', sans-serif;
 	font-size: 14px;
 	line-height: 1.4;
 	color: #000;
@@ -320,15 +311,20 @@ body {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	height: 101px;
+	height: 100px;
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 120px;
 	padding: 0 6.25vw;
+	border-bottom: 1px solid #ccc;
+}
+.hmj-header h1 {
+	font-size: 14px;
+	line-height: 1;
 }
 .hmj-header h1 a {
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
 }
 .hmj-header h1 a img {
 	width: 66px;
@@ -364,6 +360,13 @@ body {
 .hmj-header .gnb-right-list li {
 	margin: 0 14px;
 }
+.hmj-header .gnb-right-list li .btn-cart {
+	display: none;
+}
+.hmj-header .gnb-right-list li .btn-cart span img {
+	width: 24px;
+	height: 24px;
+}
 .hmj-header .gnb-right-list li .btn-search span img {
 	width: 22px;
 	height: 22px;
@@ -374,7 +377,7 @@ body {
 }
 
 .hmj-container {
-	min-height: calc(100vh - 252px); /* calc(100vh - (header height + footer height)) */
+	min-height: calc(100vh - 251px); /* calc(100vh - (header height + footer height)) */
 }
 .hmj-container .hmj-content .cont-outer {
 	max-width: 1140px;
@@ -402,9 +405,48 @@ body {
 	padding-left: 60px;
 }
 @media screen and (max-width: 1119px) {
+	.hmj-header {
+		height: 52px;
+		padding: 0 8px 0 24px;
+	}
+	.hmj-header h1 a img {
+		width: 46px;
+		height: 24px;
+	}
+	.hmj-header .gnb-right-list li {
+		margin: 0;
+	}
+	.hmj-header .gnb-right-list li .btn-cart {
+		display: block;
+	}
+	.hmj-header .gnb-right-list li .btn-mypage {
+		display: none;
+	}
+	.hmj-header .gnb-right-list li button span {
+		position: relative;
+		display: inline-block;
+		width: 48px;
+		height: 52px;
+	}
+	.hmj-header .gnb-right-list li button span:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+	.hmj-header .gnb-right-list li button span img {
+		vertical-align: middle;
+	}
+	.gnb-menu-outer {
+		display: none;
+	}
+
+	.hmj-container {
+		min-height: calc(100vh - 203px);
+	}
 	.hmj-container .hmj-content .cont-outer {
 		display: block;
-		padding: 20px;
+		padding: 0 20px;
 	}
 	.hmj-container .hmj-content .cont-center {
 		display: block;
@@ -454,12 +496,29 @@ body {
 	margin-top: 20px;
 }
 
-/* font */
-.fc-color {
+/* font style */
+.font-type2 {
+	font-family: 'HyundaiSansTextOffice', sans-serif;
+}
+
+/* font color */
+.fc-color { /* Blue */
 	color: #002c5f;
 }
-.fc-color2 {
+.fc-color2 { /* Active Blue */
 	color: #00aad2;
+}
+.fc-color3 { /* Sky Blue */
+	color: #aacae6;
+}
+.fc-color4 { /* Sand */
+	color: #e4dcd3;
+}
+.fc-color5 { /* Light Sand */
+	color: #f6f3f2;
+}
+.fc-color6 { /* White */
+	color: #fff;
 }
 
 /* form */
@@ -474,9 +533,6 @@ body {
 	padding: 13px 27px 13px 10px;
 	border: solid 1px #cccccc;
 	background: #fff url(../images/common/ico_slt_box.png) no-repeat right 9px center;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
 	font-size: 14px;
 	color: #777777;
 }
@@ -543,14 +599,17 @@ body {
 	border: 1px solid #ccc;
 	background: #fff;
 	font-size: 14px;
-	color: #777;
+	color: #000;
 	vertical-align: middle;
+}
+.inp-item:focus {
+	border-color: #000;
+	outline: none;
 }
 .val-error .inp-item,
 .val-error .slt-box,
 .val-error .chk input[type=checkbox],
-.val-error .radio input[type=radio]
- {
+.val-error .radio input[type=radio] {
 	border-color: #e63312;
 }
 .inp-item:disabled,
@@ -558,19 +617,19 @@ body {
 	background-color: #f4f4f4;
 	color: #777777;
 }
-.inp-box::-webkit-input-placeholder {
+.inp-item::-webkit-input-placeholder {
 	font-size: 14px;
 	color: #777777;
 }
-.inp-box::placeholder {
+.inp-item::placeholder {
 	font-size: 14px;
 	color: #777777;
 }
-.inp-box:-ms-input-placeholder {
+.inp-item:-ms-input-placeholder {
 	font-size: 14px;
 	color: #777777;
 }
-.inp-box:-webkit-autofill {
+.inp-item:-webkit-autofill {
 	-webkit-box-shadow: 0 0 0 1000px #f4f4f4 inset;
 	box-shadow: 0 0 0 1000px #f4f4f4 inset;
 }
@@ -701,60 +760,49 @@ body {
 
 /* checkbox */
 .chk {
-	position:relative;
-	display:inline-flex;
+	display:inline-block;
 	margin-right:26px;
 	line-height: 1;
 }
 .chk input[type="checkbox"] {
-	position: relative;
+	display: none;
+}
+.chk input[type="checkbox"] + span {
+	display: flex;
+	line-height: 1.4;
+	align-items: center;
+}
+.chk input[type="checkbox"] + span::before {
+	content: '';
+	display: inline-block;
 	width: 24px;
 	min-width: 24px;
 	height: 24px;
 	margin-right: 10px;
 	border: solid 1px #cccccc;
 	background-color: #ffffff;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+	vertical-align: middle;
+	box-sizing: border-box;
+	align-self: baseline;
 }
-.chk input[type="checkbox"]::before {
-	content: '';
-	width: 10px;
-	height: 6px;
-	border-bottom: solid 2px transparent;
-	border-left: solid 2px transparent;
-	transform: rotate(-45deg);	
-	position:absolute;
-	top:6px;
-	left:6px;
+.chk input[type="checkbox"]:focus + span::before {
+	border-color: #00aad2;
 }
-.chk input[type="checkbox"]:checked {
-	background-color: #00aad2;
-	border:none;
-}
-.chk input[type="checkbox"]:checked::before {
-	border-color: #ffffff
-}
-.chk input[type="checkbox"]:disabled {
-	background-color: #999999;
-	border:none;
-}
-.chk input[type="checkbox"]:disabled::before {
-	border-color: #cccccc
-}
-.chk input[type="checkbox"]:checked:disabled::before {
-	border-color: #ffffff
-}
-.chk input[type="checkbox"] + span {
-	display: inline-block;
-	font-size: 14px;
-	color: #000;
-	padding-top: 3px;
-	line-height: 1.4;
+.chk input[type="checkbox"]:checked + span::before {
+	background: #00aad2 url('../images/common/ico_chk_checked.png') no-repeat center;
+	background-size: 24px auto;
+	border:none
 }
 .chk input[type="checkbox"]:disabled + span {
-	color: #777777;
+	color: #999;
+}
+.chk input[type="checkbox"]:disabled + span::before {
+	background-color: #999999;
+	background-image: none;
+	border:none;
+}
+.chk input[type="checkbox"]:checked:disabled + span::before {
+	background-image: url('../images/common/ico_chk_disabled.png');
 }
 .chk.head {
 	display: block;
@@ -763,27 +811,41 @@ body {
 .chk.head input[type="checkbox"] + span {
 	font-weight: 500;
 }
-.check-group > .chk {
+/* .check-group > .chk {
 	margin-bottom: 16px;
-}
+} */
 .check-group li {
 	line-height: 1;
 }
 .check-group li + li {
-	margin-top: 5px
+	margin-top: 16px
 }
 .check-group li.all {
 	margin-bottom: 20px;
 }
+.check-group li.normal {
+	margin-top: 5px;
+}
 
 /* radio */
 .radio {
-	position:relative;
-	display:inline-flex;
+	display:inline-block;
 	margin-right:15px;
 	line-height: 1;
 }
 .radio input[type="radio"] {
+	display: none;
+}
+.radio input[type="radio"] + span {
+	display: flex;
+	font-size: 14px;
+	color: #000;
+	line-height: 1.4;
+	align-items: center;
+}
+.radio input[type="radio"] + span::before {
+	content: '';
+	display: inline-block;
 	width: 24px;
 	min-width: 24px;
 	height: 24px;
@@ -791,55 +853,33 @@ body {
 	border: solid 1px #cccccc;
 	border-radius: 12px;
 	background-color: #ffffff;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+	align-self: baseline;
+	box-sizing: border-box;
+	vertical-align: middle;
 }
-.radio input[type="radio"]::before {
-	content: '';
-	width: 10px;
-	height: 10px;
-	background-color: #ffffff;
-	border-radius: 5px;
-	position:absolute;
-	top:7px;
-	left:7px;
-}
-.radio input[type="radio"]:checked {
-	background-color: #00aad2;
-	border:none;
-}
-.radio input[type="radio"]:checked::before {
-	border-color: #ffffff
-}
-.radio input[type="radio"]:disabled {
-	background-color: #999999;
-	border:none;
-}
-.radio input[type="radio"]:disabled::before {
-	background-color: #cccccc
-}
-.radio input[type="radio"]:checked:disabled::before {
-	background-color: #ffffff
-}
-.radio input[type="radio"] + span {
-	display: inline-block;
-	font-size: 14px;
-	color: #000;
-	padding-top: 3px;
-	line-height: 1.4;
+.radio input[type="radio"]:checked + span::before {
+	background: #00aad2 url('../images/common/ico_radio_checked.png') no-repeat center;
+	background-size: 24px auto;
+	border: none;
 }
 .radio input[type="radio"]:disabled + span {
-	color: #777777;
+	color: #999;
 }
-.radio-group > .radio {
+.radio input[type="radio"]:disabled + span::before {
+	background-color: #999999;
+	border: none;
+}
+.radio input[type="radio"]:checked:disabled + span::before {
+	background-image: url('../images/common/ico_radio_disabled.png')
+}
+/* .radio-group > .radio {
 	margin-bottom: 16px;
-}
+} */
 .radio-group li {
 	line-height: 1;
 }
 .radio-group li + li {
-	margin-top: 32px
+	margin-top: 16px
 }
 
 /* button */
@@ -857,7 +897,6 @@ body {
 	position: relative;
 	z-index: 2;
 	display: inline-block;
-	width: 265px;
 	height: 56px;
 	border: 1px solid #002c5f;
 	vertical-align: middle;
@@ -869,7 +908,16 @@ body {
 	width: 100%;
 }
 .cta-outer.fix-type .btn {
-	width: 200px;
+	width: 220px;
+}
+.cta-outer.fix-type .btn.btn-middle {
+	width: 180px;
+}
+.cta-outer.fix-type .btn.btn-small {
+	width: 140px;
+}
+.cta-outer.fix-type .btn.btn-extra-small {
+	width: 100px;
 }
 .btn:before {
 	content: '';
@@ -881,7 +929,7 @@ body {
 	margin-left: 8px;
 }
 .btn span {
-	padding: 0 16px;
+	padding: 0 20px;
 	word-break: keep-all;
 }
 .btn:only-child {
@@ -896,9 +944,12 @@ body {
 }
 .btn.btn-small {
 	height: 36px;
-	border-color: #ccc;
+	width: auto;
 }
-.btn.btn-extra-small {
+.btn-extra-small {
+	height: 28px;
+}
+.btn.btn-tbl {
 	width: auto;
 	height: 28px;
 	border-color: #ccc;
@@ -909,37 +960,47 @@ body {
 	position: relative;
 	z-index: 2;
 	display: inline-block;
-	font-size: 14px;
-	font-weight: 700;
+	font-size: 18px;
+	font-weight: 700;	
 	color: #002c5f;
 	vertical-align: middle;
 }
-.btn.btn-small span,
-.btn.btn-extra-small span {
-	color: #000;
+.btn.btn-middle span {
+	font-size: 16px;
+}
+.btn.btn-small span {
+	padding: 0 16px;
+	font-size: 14px;
 }
 .btn.btn-extra-small span {
+	padding: 0 12px;
+	font-size: 12px;
+}
+.btn.btn-tbl span {
+	color: #000;
 	font-weight: normal;
 }
 .btn.btn-type2 {
 	background-color: #002c5f;
 }
-.btn.btn-small.btn-type2 {
-	border-color: #ccc;
-	background-color: #000;
-}
-
 .btn.btn-type2:after {
 	background-color: #fff;
 }
 .btn.btn-type2 span {
 	color: #fff;
 }
-.btn.btn-type3 span {
+.btn-type3 {
+	background-color: #444;
+}
+.btn-type3 span {
+	font-weight: normal;
+	color: #fff;
+}
+.btn.btn-icon span {
 	position: relative;
 	padding-left: 30px;
 }
-.btn.btn-type3 span:before {
+.btn.btn-icon span:before {
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 	content: '';
@@ -954,8 +1015,6 @@ body {
 .btn.btn-disabled {
 	pointer-events: none;
 	outline: none;
-}
-.btn.btn-disabled {
 	border-color: #bbb;
 }
 .btn.btn-disabled span {
@@ -970,7 +1029,7 @@ body {
 .btn.btn-type2.btn-disabled span {
 	color: #888;
 }
-.btn.btn-type3.btn-disabled span:before {
+.btn.btn-icon.btn-disabled span:before {
 	opacity: .3;
 }
 .btn-del {
@@ -1015,6 +1074,14 @@ body {
 .btn-del span {
 	font-size: 0;
 }
+
+.btn-text {
+	font-size: 12px;
+	border-bottom: 1px solid #777;
+	color: #777;
+	display: inline-block;
+	height: 20px;
+}
 @media screen and (max-width: 1119px) {
 	.cta-outer {
 		display: -webkit-box;
@@ -1036,6 +1103,17 @@ body {
 	}
 }
 
+/* text-link */
+.text-link {
+	padding-bottom: 2px;
+	color: #000;
+	border-bottom: 1px solid #000;
+}
+.text-link:hover {
+	color: #002C5F;
+	border-color: #002C5F;
+}
+
 /* amount calc */
 .amount-calc {
 	display: inline-flex
@@ -1044,29 +1122,17 @@ body {
 	width: 24px;
 	height: 23px;
 	border: solid 1px #cccccc;
-	background-color: #ffffff;
 	font-size: 0;
 	line-height: 0;
 	position: relative;
 }
-.amount-calc > button::before {
-	content:'';
-	display: inline-block;
-	width: 9px;
-	height: 1px;
-	margin: 0 auto;
-	background-color: #000000;
+.amount-calc .down {
+	background: #fff url('../images/common/ico_minus.png') no-repeat center;
+	background-size: 8px auto;
 }
-.amount-calc > button.up::after {
-	content:'';
-	display: inline-block;
-	width: 9px;
-	height: 1px;
-	background-color: #000000;
-	transform: rotate(90deg);
-	position: absolute;
-	top: 10px;
-	left: 7px;
+.amount-calc .up {
+	background: #fff url('../images/common/ico_plus.png') no-repeat center;
+	background-size: 8px auto;
 }
 .amount-calc > input {
 	width: 48px;
@@ -1083,9 +1149,11 @@ body {
 	color: #cccccc;
 	cursor: default;
 }
-.amount-calc.disabled > button::before,
-.amount-calc.disabled > button::after {
-	background-color: #cccccc;
+.amount-calc.disabled .down{
+	background-image: url('../images/common/ico_minus_disabled.png')
+}
+.amount-calc.disabled .up{
+	background-image: url('../images/common/ico_plus_disabled.png')
 }
 
 /* align */
@@ -1268,6 +1336,25 @@ body {
 	display: block;
 }
 
+/* mo-toggle */
+.mo-toggle .tit-btn {
+	position: relative;
+}
+.mo-toggle .cont {
+	display: block;
+}
+@media screen and (max-width: 1119px) {
+	.mo-toggle .tit-btn {
+		cursor: pointer;
+	}
+	.mo-toggle .cont {
+		display: none;
+	}
+	.mo-toggle .active .cont {
+		display: block;
+	}
+}
+
 /* accordion */
 .accordion .tit-btn {
 	cursor: pointer;
@@ -1327,8 +1414,11 @@ body {
 	display: none;
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, .6);
+	background-color: rgba(0, 0, 0, .6);
 	text-align: center;
+}
+.layer-popup-wrap.inner-pop {
+	background: none;
 }
 .layer-popup-wrap .tar-loop {
 	position: absolute;
@@ -1350,24 +1440,10 @@ body {
 	position: relative;
 	display: inline-block;
 	min-width: 500px;
-	/* max-width: calc(100% - 100px); */
-	max-width: 800px;
 	box-shadow: 7px 7px 2px 2px rgba(0, 0, 0, .1);
 	background: #fff;
 	text-align: left;
 	vertical-align: middle;
-}
-.layer-popup-wrap.full {
-	overflow-y: hidden;
-}
-.layer-popup-wrap.full .layer-popup-cont {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	min-width: auto;
-	max-width: none;
 }
 .layer-popup-cont:focus {
 	outline: 1px solid #ccc;
@@ -1378,26 +1454,24 @@ body {
 	left: 0;
 	right: 0;
 	z-index: 5;
-	padding: 10px;
+	padding: 0 40px;
 	border-bottom: 1px solid #ccc;
-	background: rgba(187, 187, 187, .5);
-	text-align: center;
+	background-color: rgba(255, 255, 255, .9);
 	font-size: 18px;
-	text-shadow: 0 2px 0 rgba(0, 0, 0, .2);
-	line-height: 26px;
+	line-height: 56px;
 }
 .layer-popup-body .layer-cont {
 	overflow-y: auto;
 	height: 100%;
-	padding: 71px 25px 25px 25px;
+	padding: 76px 40px 40px;
 }
 .layer-popup-body .btn-close-popup {
 	position: absolute;
 	top: 12px;
-	right: 12px;
+	right: 33px;
 	z-index: 10;
-	width: 20px;
-	height: 20px;
+	width: 33px;
+	height: 33px;
 	font-size: 0;
 	line-height: 0;
 }
@@ -1411,10 +1485,10 @@ body {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 20px;
-	height: 1px;
-	margin-left: -10px;
-	background: #aaa;
+	width: 24px;
+	height: 2px;
+	margin-left: -12px;
+	background-color: #000;
 }
 .layer-popup-body .btn-close-popup:before {
 	-webkit-transition: all .3s ease-in-out;
@@ -1447,53 +1521,29 @@ body {
 		width: calc(100% - 50px);
 		max-width: 100%;
 	}
-	.full .layer-popup-cont {
+	.layer-popup-body .layer-title {
+		height: 52px;
+		padding: 0 20px;
+		line-height: 52px;
+	}
+	.layer-popup-body .layer-cont {
+		padding: 72px 20px 20px;
+	}
+	.layer-popup-body .btn-close-popup {
+		top: 10px;
+		right: 14px;
+	}
+	.mo-full .layer-popup-cont {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 3;
 		width: 100%;
+		padding: 0;
 	}
-}
-
-/* responsive font-size - Uncomment if necessary */
-/* @media screen and (min-width: 640px) and (max-width: 767px) {
-	html, body {
-		font-size: 1em;
+	.mo-full .layer-popup-cont:before {
+		content: none;
 	}
-}
-@media screen and (min-width: 600px) and (max-width: 639px) {
-	html, body {
-		font-size: 0.938em;
-	}
-}
-@media screen and (min-width: 560px) and (max-width: 599px) {
-	html, body {
-		font-size: 0.875em;
-	}
-}
-@media screen and (min-width: 520px) and (max-width: 559px) {
-	html, body {
-		font-size: 0.813em;
-	}
-}
-@media screen and (min-width: 480px) and (max-width: 519px) {
-	html, body {
-		font-size: 0.75em;
-	}
-}
-@media screen and (min-width: 440px) and (max-width: 479px) {
-	html, body {
-		font-size: 0.688em;
-	}
-}
-@media screen and (min-width: 400px) and (max-width: 439px) {
-	html, body {
-		font-size: 0.625em;
-	}
-} */
-
-/* ja initializing font style */
-[lang="ja"],
-[lang="ja"] body {
-	font-family: 'Noto-Sans-JP', 'HyundaiSansHeadOffice', sans-serif;
-}
-[lang="ja"] .font-style2 {
-	font-family: 'Noto-Sans-JP', 'HyundaiSansTextOffice', sans-serif;
 }

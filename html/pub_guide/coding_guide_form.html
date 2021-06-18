@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ja">
+<html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -439,9 +439,9 @@
 <p class="error-msg lbl-type">error text</p>
 
 <ul class="check-group">
-	<li class="all"><label class="chk "><input type="checkbox"><span>전체동의</span></label></li>
-	<li><label class="chk"><input type="checkbox"><span>동의1</span></label></li>
-	<li><label class="chk"><input type="checkbox" checked="checked"><span>동의2</span></label></li>
+	<li class="all"><label class="chk"><input type="checkbox"><span>전체동의</span></label></li>
+	<li class="normal"><label class="chk"><input type="checkbox"><span>동의1</span></label></li>
+	<li class="normal"><label class="chk"><input type="checkbox"><span>동의2</span></label></li>
 </ul>
 <p class="error-msg lbl-type">error text</p>
 --></code></pre>
@@ -458,7 +458,17 @@
 
 			<div class="conIn_tip">
 				ul.check-group &gt; li + li<br>
-				전체동의가 있는경우 <strong>li.all</strong> 추가
+			</div>
+
+			<ul class="check-group">
+				<li><label class="chk"><input type="checkbox"><span>동의1</span></label></li>
+				<li><label class="chk"><input type="checkbox"><span>동의2</span></label></li>
+			</ul>
+			<p class="error-msg lbl-type">error text</p>
+
+
+			<div class="conIn_tip">
+				전체동의가 있는경우 <strong>class="all, class="normal"</strong> 추가
 			</div>
 
 			<ul class="check-group">
