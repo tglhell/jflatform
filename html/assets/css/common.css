@@ -601,6 +601,8 @@ body {
 	margin: 0;
 }
 .inp-item {
+	-webkit-transition: border-color .5s ease-in-out;
+	transition: border-color .5s ease-in-out;
 	position: relative;
 	width: 100%;
 	height: 46px;
@@ -612,6 +614,8 @@ body {
 	vertical-align: middle;
 }
 .inp-item:focus {
+	-webkit-transition: border-color .5s ease-in-out;
+	transition: border-color .5s ease-in-out;
 	border-color: #000;
 	outline: none;
 }
