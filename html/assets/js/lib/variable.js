@@ -15,4 +15,3 @@ irCnt = 9;
 
 // parallax scroll value
 prxVal = 4; // the lower the bigger
-prxVal2 = 4; // the lower the bigger
