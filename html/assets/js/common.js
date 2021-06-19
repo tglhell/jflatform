@@ -74,8 +74,10 @@ jQuery.event.add(window, 'load', function () {
 		}
 	});
 
-	$('.inp-close').on('click', function () {
-		$(this).closest('.inp-area').removeClass('active').find(inpItem).val('');
+	$('.inp-close').on('click', function (e) {
+		let returnTar = $(e.target).prev();
+		$(this).closest('.inp-area').removeClass('active').find(inpItem).val(null);
+		returnTar.focus();
 	});
 
 	$('.pop-open').on('click', (function () {
@@ -107,7 +109,7 @@ jQuery.event.add(window, 'load', function () {
 			}, fadeVal);
 
 			$('.btn-close-popup, .layer-popup-wrap').on('click', function (e) {
-				let _this = $(this).closest('.layer-popup-wrap');
+				const _this = $(this).closest('.layer-popup-wrap');
 				const tarItem = $('.layer-popup-cont > div, .layer-title, .layer-cont *');
 				if (!$(e.target).is(tarItem)) {
 					if ($(this).scrollTop() !== 0) {
