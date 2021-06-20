@@ -623,6 +623,8 @@ body {
 .val-error .slt-box,
 .val-error .chk input[type=checkbox],
 .val-error .radio input[type=radio] {
+	-webkit-transition: border-color .5s ease-in-out;
+	transition: border-color .5s ease-in-out;
 	border-color: #e63312;
 }
 .inp-item:disabled,
