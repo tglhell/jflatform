@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ja">
+<html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -73,7 +73,7 @@
 		<div class="hmj-content">
 			<div class="cont-outer">
                 <div class="cont-center">
-                    <button class="btn btn-extra-small all-del"><span>全体削除</span></button>
+                    <button class="btn btn-tbl all-del"><span>全体削除</span></button>
                     <!-- goods -->
                     <ul class="prod-list">
                         <li>
@@ -87,13 +87,13 @@
                                         </div>
                                         <div class="option">
                                             <span>オプション</span>
-                                            <button>オプション変更</button>
+                                            <button class="pop-open" data-pop-idx="1">オプション変更</button>
                                         </div>
                                         <div class="price-info">
                                             <span class="price">¥ 31,000</span>
                                             <div class="amount-calc">
                                                 <button class="down">decrease</button>
-                                                <input type="text" value="1">
+                                                <input type="number" value="1">
                                                 <button class="up">increase</button>
                                             </div>
                                         </div>
@@ -116,7 +116,7 @@
                                             <span class="price">¥ 31,000</span>
                                             <div class="amount-calc">
                                                 <button class="down">decrease</button>
-                                                <input type="text" value="1">
+                                                <input type="number" value="1">
                                                 <button class="up">increase</button>
                                             </div>
                                         </div>
@@ -145,7 +145,7 @@
                                         <div class="price">¥ 36,000</div>
                                     </li>
                                 </ul>
-                                <div class="msg"><em>¥50,000</em> 以上 お買い上げの場合</div>
+                                <div class="msg"><strong>¥50,000</strong> 以上 お買い上げの場合</div>
                             </div>
                         </li>
                         <li>
@@ -165,7 +165,7 @@
                                             <span class="price">¥ 31,000</span>
                                             <div class="amount-calc">
                                                 <button class="down">decrease</button>
-                                                <input type="text" value="1">
+                                                <input type="number" value="1">
                                                 <button class="up">increase</button>
                                             </div>
                                         </div>
@@ -191,7 +191,7 @@
                                             <span class="price">¥ 31,000</span>
                                             <div class="amount-calc disabled">
                                                 <button class="down">decrease</button>
-                                                <input type="text" value="1">
+                                                <input type="number" value="1">
                                                 <button class="up">increase</button>
                                             </div>
                                         </div>
@@ -220,7 +220,7 @@
                                         <div class="price">¥ 36,000</div>
                                     </li>
                                 </ul>
-                                <!-- <div class="msg"><em>¥50,000</em> 以上 お買い上げの場合</div> -->
+                                <!-- <div class="msg"><strong>¥50,000</strong> 以上 お買い上げの場合</div> -->
                             </div>
                         </li>
                     </ul>
@@ -231,20 +231,20 @@
                 <div class="cont-right">
                     <div class="price-area">
                         <ul>
-                            <li>
+                            <li class="amount">
                                 <span class="name">全商品</span>
                                 <span class="price">全 4個</span>
                             </li>
                             <li>
-                                <span class="name">商品金額 (税込)</span>
+                                <span class="name">商品販売価格(税込)</span>
                                 <span class="price">¥ 36,000</span>
                             </li>
-                            <li class="delivery">
+                            <li class="text-small">
                                 <span class="name">送料</span>
                                 <span class="price">¥ 500</span>
                             </li>
                             <li class="total">
-                                <span class="name"><strong>注文金額</strong> (税込み)</span>
+                                <span class="name"><strong>合計金額</strong>(税込)</span>
                                 <span class="price fc-color2">¥ 35,150</span>
                             </li>
                         </ul>
@@ -269,6 +269,31 @@
 	</div>
 	<!--//footer -->
 </div>
+
+<!-- layerPopup -->
+<div class="layer-popup-wrap" data-pop-idx="1">
+    <div class="layer-popup-body">
+        <div class="layer-popup-cont">
+            <h1 class="layer-title">オプション変更</h1>
+            <div class="layer-cont">
+                <div class="option-wrap">
+                    <p class="select-btn active"><button>オプション 1</button></p>
+                    <ul class="select-list">
+                        <li class="on">オプション 1</li>
+                        <li>オプション 2</li>
+                        <li>オプション 3</li>
+                    </ul>
+                </div>
+                <div class="cta-outer full-type">
+                    <button class="btn btn-middle"><span>취소</span></button>
+                    <button class="btn btn-type2 btn-middle"><span>취소</span></button>
+                </div>
+            </div>
+            <button class="btn-close-popup">close</button>
+        </div>
+    </div>
+</div>
+<!-- //layerPopup -->
 
 </body>
 </html>
