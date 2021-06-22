@@ -412,12 +412,32 @@
 
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<div class="slt-box">
-	<select title="selectBox" class="slt-item">
-		<option value="00" selected disabled hidden>Select All</option>
-		<option value="01">Option01</option>
-		<option value="02">Option02</option>
-	</select>
+<pre class="language-html"><code><!--<select title="selectBox" class="slt-box">
+	<option value="00" selected disabled hidden>Select All</option>
+	<option value="01">Option01</option>
+	<option value="02">Option02</option>
+</select>
+<select title="selectBox" class="slt-box" disabled>
+	<option value="00" selected disabled hidden>Select All</option>
+	<option value="01">Option01</option>
+	<option value="02">Option02</option>
+</select>
+
+<div class="slt-box">
+	<p class="selected-value">Custom Select Text</p>
+	<ul class="select-items">
+		<li>option1</li>
+		<li>option2</li>
+		<li>option3</li>
+	</ul>
+</div>
+<div class="slt-box disabled">
+	<p class="selected-value">Custom Select Text</p>
+	<ul class="select-items">
+		<li>option1</li>
+		<li>option2</li>
+		<li>option3</li>
+	</ul>
 </div>
 --></code></pre>
 <!-- //코드 삽입 -->
@@ -429,12 +449,31 @@
 				<option value="01">Option01</option>
 				<option value="02">Option02</option>
 			</select>
-			<br><br>
 			<select title="selectBox" class="slt-box" disabled>
 				<option value="00" selected disabled hidden>Select All</option>
 				<option value="01">Option01</option>
 				<option value="02">Option02</option>
 			</select>
+			<br><br>
+
+			<h4 class="btm-border">- Custom Select</h4>
+			
+			<div class="slt-box">
+				<p class="selected-value">Custom Select Text</p>
+				<ul class="select-items">
+					<li>option1</li>
+					<li>option2</li>
+					<li>option3</li>
+				</ul>
+			</div>
+			<div class="slt-box disabled">
+				<p class="selected-value">Custom Select Text</p>
+				<ul class="select-items">
+					<li>option1</li>
+					<li>option2</li>
+					<li>option3</li>
+				</ul>
+			</div>
 
 			<h3 class="title">&#x25CE; Checkbox</h3>
 			<h4 class="btm-border">- 체크박스 기본스타일 / 타이틀타입</h4>
@@ -645,7 +684,7 @@
 
 			<div class="conIn_tip">
 				.inp-textarea &lt; textarea <br>
-				row조절가능
+				row조절가능 / error-msg
 			</div>
 
 			<div class="inp-textarea">
@@ -700,6 +739,18 @@
 				<button class="up">increase</button>
 			</div>
 
+
+			<h4 class="btm-border">- 파일찾기</h4>
+			<div class="conIn_tip">
+				
+			</div>
+
+			<div class="filebox">
+				<input class="upload-name" value="파일선택" disabled="disabled">
+				<label for="ex_filename">업로드</label>
+				<input type="file" id="ex_filename" class="upload-hidden">
+			</div>
+
 			<!-- //form -->
 
 		</div>
@@ -711,5 +762,14 @@
 		<span class="blind">Top</span>
 	</a>
 </div>
+
+<script>
+	$(document).ready(function(){ var fileTarget = $('.filebox .upload-hidden'); 
+		fileTarget.on('change', function(){ 
+			var filename = $(this)[0].files[0].name; 
+			$(this).siblings('.upload-name').val(filename); 
+		});
+	});
+</script>
 </body>	
 </html>

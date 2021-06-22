@@ -260,7 +260,41 @@ jQuery.event.add(window, 'load', function () {
 		})
 	};
 	accordion();
-	
+
+	function customSelect() {
+		$('div.slt-box').on('click', '.selected-value', function(e) {
+			if($(this).hasClass('active')) {
+				$(this).removeClass('active');
+				$(this).next('.select-items').hide();
+			} else {
+				$(this).addClass('active');
+				$(this).next('.select-items').show();
+			};
+
+			//select option text 
+			$('.select-items').on('click', 'li', function() {
+				var selectItem = $(this).text();
+				$(this).addClass('selected').siblings('li').removeClass('selected');
+				$(this).parent().hide();								
+				$(e.target).text(selectItem);
+				$(e.target).removeClass('active');
+			})
+		});
+
+		//status desabled 
+		if($('div.slt-box.disabled')) {
+			$('div.slt-box.disabled').off();
+		};
+
+		//outside click
+		$('.wrap').click(function(e) {
+			if(!$('div.slt-box').has(e.target).length) {
+				$('.selected-value').removeClass('active');
+				$('.select-items').hide();
+			}
+		})
+	};
+	customSelect();
 });
 
 function selectDropdown(data){
