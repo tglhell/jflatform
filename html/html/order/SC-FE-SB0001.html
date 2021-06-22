@@ -22,49 +22,63 @@
 	</div>
 
 	<!-- header -->
-	<div class="hmj-header">
-		<!-- <img src="../assets/images/@header.jpg" alt="header"> -->
-		<h1><a href="hmj_layout.html"><img src="../../assets/images/common/img_header_logo.png" alt="Hyundai Logo"></a></h1>
+	<div class="hmj-header hc-type2"><!-- 백버튼 있는타입 hc-type2 -->
+		<!-- header -->
+		<div class="header-cont">
+			<h1><a href="hmj_layout.html"><img src="../../assets/images/common/img_header_logo.png" alt="Hyundai Logo"></a></h1>
 
-		<div class="gnb-menu-outer">
-			<ul class="gnb-menu-list">
-				<li>
-					<button><span>ブランド</span></button>
-				</li>
-				<li>
-					<button><span>IONIQ5</span></button>
-				</li>
-				<li>
-					<button><span>NEXO</span></button>
-				</li>
-				<li>
-					<button><span>購買</span></button>
-				</li>
-				<li>
-					<button><span>サービス</span></button>
-				</li>
-				<li>
-					<button><span>コンテンツ</span></button>
-				</li>
-				<li>
-					<button><span>ストア</span></button>
-				</li>
-				<li>
-					<button><span>お客様センター</span></button>
-				</li>
-			</ul>
-		</div>
+			<div class="gnb-menu-outer">
+				<ul class="gnb-menu-list">
+					<li>
+						<button><span>ブランド</span></button>
+					</li>
+					<li>
+						<button><span>IONIQ5</span></button>
+					</li>
+					<li>
+						<button><span>NEXO</span></button>
+					</li>
+					<li>
+						<button><span>購買</span></button>
+					</li>
+					<li>
+						<button><span>サービス</span></button>
+					</li>
+					<li>
+						<button><span>コンテンツ</span></button>
+					</li>
+					<li>
+						<button><span>ストア</span></button>
+					</li>
+					<li>
+						<button><span>カスタマーセンター</span></button>
+					</li>
+				</ul>
+			</div>
 
-		<div class="gnb-right-menu">
-			<ul class="gnb-right-list">
-				<li>
-					<button class="btn-search"><span><img src="../../assets/images/common/ico_search.png" alt="검색"></span></button>
-				</li>
-				<li>
-					<button class="btn-mypage"><span><img src="../../assets/images/common/ico_mypage.png" alt="마이페이지"></span></button>
-				</li>
-			</ul>
+			<div class="gnb-right-menu">
+				<ul class="gnb-right-list">
+					<li>
+						<button class="btn-cart"><span><img src="../../assets/images/common/ico_cart.png" alt="장바구니"></span></button>
+					</li>
+					<li>
+						<button class="btn-search"><span><img src="../../assets/images/common/ico_search.png" alt="검색"></span></button>
+					</li>
+					<li>
+						<button class="btn-mypage"><span><img src="../../assets/images/common/ico_mypage.png" alt="마이페이지"></span></button>
+					</li>
+				</ul>
+			</div>
+		</div>		
+		<div class="sub-cont">
+			<div class="history">
+				<span>HOME</span>
+				<span>カート</span>
+			</div>
+			<button type="button" class="back-page">Back page</button>
+			<div class="page-title">カート</div>
 		</div>
+		<!-- //header -->
 	</div>
 	<!--//header -->
 
@@ -77,17 +91,17 @@
                     <!-- goods -->
                     <ul class="prod-list">
                         <li>
-                            <label class="chk head"><input type="checkbox"><span>H Geunine  <em class="fc-color2">[2]</em></span></label>
+                            <label class="chk head"><input type="checkbox"><span>ストア名 A  <em class="fc-color2">[2]</em></span></label>
                             <ul class="item">
                                 <li>
-                                    <div class="name"><label class="chk"><input type="checkbox"><span>[H Geunine] アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5(NE)一般用 緩速 充電器 SET アイオニック5(NE)一般用 緩速 充電器 SET 一般用 緩速 充電器 SET一般用 緩速 充電器 SET一般用 緩速 充電器 SET</span></label></div>
+                                    <div class="name"><label class="chk"><input type="checkbox"><span>[ブランド] 商品名</span></label></div>
                                     <div class="info">
                                         <div class="thumb">
                                             <a href="javascript:void(0);"><img src="../../assets/images/@img_80_80.jpg" alt="상품명 이미지"></a>
                                         </div>
                                         <div class="option">
-                                            <span>オプション</span>
-                                            <button class="pop-open" data-pop-idx="1">オプション変更</button>
+                                            <span>オプション名</span>
+                                            <button class="pop-open btn-text" data-pop-idx="1">オプション変更</button>
                                         </div>
                                         <div class="price-info">
                                             <span class="price">¥ 31,000</span>
@@ -97,21 +111,25 @@
                                                 <button class="up">increase</button>
                                             </div>
                                         </div>
-                                        <div class="price-btn">
-                                            <div class="price">¥ 31,000</div>
-                                            <div class="cta-outer">
-                                                <button class="btn btn-small"><span>ご購入手続き</span></button>
-                                            </div>
+                                    </div>
+                                    <div class="price-btn">
+                                        <div class="price">¥ 31,000</div>
+                                        <div class="cta-outer">
+                                            <button class="btn btn-small"><span>ご購入手続き</span></button>
                                         </div>
                                     </div>
                                     <button class="btn-del"><span>삭제</span></button>
                                 </li>
                                 <li>
-                                    <div class="name"><label class="chk"><input type="checkbox"><span>[H Geunine] アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5(NE)一般用 緩速 充電器 SET アイオニック5(NE)一般用 緩速 充電器 SET 一般用 緩速 充電器 SET一般用 緩速 充電器 SET一般用 緩速 充電器 SET</span></label></div>
+                                    <div class="name"><label class="chk"><input type="checkbox"><span>[ブランド] 商品名</span></label></div>
                                     <div class="info">
                                         <div class="thumb">
                                             <a href="javascript:void(0);"><img src="../../assets/images/@img_80_80.jpg" alt="상품명 이미지"></a>
                                         </div>
+                                        <!-- <div class="option">
+                                            <span>オプションオプションオプションオプションオプションオプションオプション</span>
+                                            <button class="pop-open" data-pop-idx="1">オプション変更</button>
+                                        </div> -->
                                         <div class="price-info">
                                             <span class="price">¥ 31,000</span>
                                             <div class="amount-calc">
@@ -120,11 +138,11 @@
                                                 <button class="up">increase</button>
                                             </div>
                                         </div>
-                                        <div class="price-btn">
-                                            <div class="price">¥ 31,000</div>
-                                            <div class="cta-outer">
-                                                <button class="btn btn-small"><span>ご購入手続き</span></button>
-                                            </div>
+                                    </div>
+                                    <div class="price-btn">
+                                        <div class="price">¥ 31,000</div>
+                                        <div class="cta-outer">
+                                            <button class="btn btn-small"><span>ご購入手続き</span></button>
                                         </div>
                                     </div>
                                     <button class="btn-del"><span>삭제</span></button>
@@ -152,15 +170,15 @@
                             <label class="chk head"><input type="checkbox"><span>H Geunine  <em class="fc-color2">[2]</em></span></label>
                             <ul class="item">
                                 <li>
-                                    <div class="name"><label class="chk"><input type="checkbox"><span>[H Geunine] アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5(NE)一般用 緩速 充電器 SET アイオニック5(NE)一般用 緩速 充電器 SET 一般用 緩速 充電器 SET一般用 緩速 充電器 SET一般用 緩速 充電器 SET</span></label></div>
+                                    <div class="name"><label class="chk"><input type="checkbox"><span>[H Geunine] IONIQ(NE)一般用普通充電器SET</span></label></div>
                                     <div class="info">
                                         <div class="thumb">
                                             <a href="javascript:void(0);"><img src="../../assets/images/@img_80_80.jpg" alt="상품명 이미지"></a>
                                         </div>
-                                        <!-- <div class="option">
-                                            <span>オプション</span>
-                                            <button>オプション変更</button>
-                                        </div> -->
+                                        <div class="option">
+                                            <span>一般用</span>
+                                            <button class="pop-open btn-text" data-pop-idx="1">オプション変更</button>
+                                        </div>
                                         <div class="price-info">
                                             <span class="price">¥ 31,000</span>
                                             <div class="amount-calc">
@@ -169,17 +187,17 @@
                                                 <button class="up">increase</button>
                                             </div>
                                         </div>
-                                        <div class="price-btn">
-                                            <div class="price">¥ 31,000</div>
-                                            <div class="cta-outer">
-                                                <button class="btn btn-small"><span>ご購入手続き</span></button>
-                                            </div>
+                                    </div>
+                                    <div class="price-btn">
+                                        <div class="price">¥ 31,000</div>
+                                        <div class="cta-outer">
+                                            <button class="btn btn-small"><span>ご購入手続き</span></button>
                                         </div>
                                     </div>
                                     <button class="btn-del"><span>삭제</span></button>
                                 </li>
                                 <li class="soldout">
-                                    <div class="name"><label class="chk"><input type="checkbox" disabled="disabled"><span>[H Geunine] アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5アイオニック5(NE)一般用 緩速 充電器 SET アイオニック5(NE)一般用 緩速 充電器 SET 一般用 緩速 充電器 SET一般用 緩速 充電器 SET一般用 緩速 充電器 SET</span></label></div>
+                                    <div class="name"><label class="chk"><input type="checkbox" disabled="disabled"><span>[H Geunine] IONIQ(NE)一般用普通充電器SET</span></label></div>
                                     <div class="info">
                                         <div class="thumb">
                                             <a href="javascript:void(0);">
@@ -187,19 +205,23 @@
                                                 <span class="soldout">Sold out</span>
                                             </a>
                                         </div>
+                                        <div class="option">
+                                            <span>一般用</span>
+                                            <button class="pop-open btn-text" data-pop-idx="1">オプション変更</button>
+                                        </div>
                                         <div class="price-info">
                                             <span class="price">¥ 31,000</span>
                                             <div class="amount-calc disabled">
                                                 <button class="down">decrease</button>
-                                                <input type="number" value="1">
+                                                <input type="number" value="1" disabled="disabled">
                                                 <button class="up">increase</button>
                                             </div>
                                         </div>
-                                        <div class="price-btn">
-                                            <div class="price">¥ 31,000</div>
-                                            <div class="cta-outer">
-                                                <button class="btn btn-small disabled" disabled="disabled"><span>ご購入手続き</span></button>
-                                            </div>
+                                    </div>
+                                    <div class="price-btn">
+                                        <div class="price">¥ 31,000</div>
+                                        <div class="cta-outer">
+                                            <button class="btn btn-small" disabled="disabled"><span>ご購入手続き</span></button>
                                         </div>
                                     </div>
                                     <button class="btn-del"><span>삭제</span></button>
@@ -250,7 +272,7 @@
                         </ul>
                         <div class="cta-outer full-type mo-type">
                             <a href="#" class="btn"><span>商品をもっと見る</span></a>
-                            <button class="btn btn-type2"><span>ご注文手￿きへ</span></button>
+                            <button class="btn btn-type2"><span>ご注文手続きへ</span></button>
                         </div>
                     </div>
                     <ul class="notice mt20">
@@ -276,17 +298,17 @@
         <div class="layer-popup-cont">
             <h1 class="layer-title">オプション変更</h1>
             <div class="layer-cont">
-                <div class="option-wrap">
-                    <p class="select-btn active"><button>オプション 1</button></p>
-                    <ul class="select-list">
-                        <li class="on">オプション 1</li>
+                <div class="slt-box">
+                    <p class="selected-value">オプション 1</p>
+                    <ul class="select-items">
+                        <li>オプション 1</li>
                         <li>オプション 2</li>
                         <li>オプション 3</li>
                     </ul>
                 </div>
                 <div class="cta-outer full-type">
-                    <button class="btn btn-middle"><span>취소</span></button>
-                    <button class="btn btn-type2 btn-middle"><span>취소</span></button>
+                    <button class="btn btn-middle btn-close"><span>キャンセル</span></button>
+                    <button class="btn btn-type2 btn-middle"><span>変更</span></button>
                 </div>
             </div>
             <button class="btn-close-popup">close</button>

@@ -108,9 +108,9 @@ jQuery.event.add(window, 'load', function () {
 				}
 			}, fadeVal);
 
-			$('.btn-close-popup, .layer-popup-wrap').on('click', function (e) {
+			$('.btn-close, .layer-popup-wrap').on('click', function (e) {
 				const _this = $(this).closest('.layer-popup-wrap');
-				const tarItem = $('.layer-popup-cont > div, .layer-title, .layer-cont *');
+				const tarItem = $('.layer-popup-cont > div, .layer-title, .layer-cont *:not(.btn-close *)');
 				if (!$(e.target).is(tarItem)) {
 					if ($(this).scrollTop() !== 0) {
 						if (hgtSize < popIdxHgt) {
