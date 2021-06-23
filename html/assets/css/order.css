@@ -150,7 +150,8 @@
     .cart .hmj-container {
         padding-bottom:163px;
     }
-    .cart .hmj-footer {
+    .cart .hmj-footer,
+    .order .hmj-footer {
         display: none;
     }
 }
@@ -273,7 +274,7 @@
 }
 .cart .prod-list .item .info .option button {
     position: absolute;
-    top:-3px;
+    top: 0;
     right:0;
 }
 .cart .prod-list .item .info .price-info {
@@ -422,40 +423,38 @@
 }
 
 /* order */
-.order .mo-toggle h3.title {
+h3.title {
     font-size:18px;
     font-weight:700;
     height:56px;
     line-height:56px;
     border-bottom:1px solid #ccc;
 }
-.order .mo-toggle > .item:not(:first-child) {
-    margin-top:40px;
+.delivery-info li:not(.default) {
+    margin-top:10px;
 }
-.order .cont-center .mo-toggle .item .cont:not(.prod-area){
-    padding:20px 0;
+.delivery-info li.default {
+    position: relative;
+    margin-bottom:26px;
 }
-.order .cont-right .mo-toggle .item .cont{ /*:not(.payment)*/
-    padding-top:20px;
+.delivery-info li.default em {
+    margin-right:12px;
+    font-weight:500;
+}
+.order .mo-toggle .item .cont:not(.prod-area){
+    margin:20px 0 40px;
+}
+.order .mo-toggle .item .cont.payment {
+    margin-bottom:0;
 }
 .order .cont-right .mo-toggle {
     padding:20px;
     border: 1px solid #ccc;    
 }
 .order .form-list li:not(:first-child) {
-    margin-top:20px;
+    margin-top:26px;
 }
-.order .delivery-info li:not(:first-child) {
-    margin-top:10px;
-}
-.order .delivery-info li:first-child {
-    position: relative;
-    margin-bottom:20px;
-}
-.order .delivery-info li:first-child strong {
-    margin-right:10px;
-}
-.order .delivery-info .flag {
+.order .flag {
     display: inline-block;
     height:20px;
     line-height:20px;
@@ -480,19 +479,24 @@
 .order .payment .cta-outer {
     margin-top:40px;
 }
+.order .prod-list > li:not(:first-child) {
+    margin-top:40px;
+    border-top:1px solid #ccc;
+}
 .order .prod-list h4.title {
-    line-height: 56px;
+    padding:20px 0;
     font-weight: 700;
+    line-height: 1;
 }
 .order .prod-list .item li {
     position: relative;
     min-height:80px;
-    padding-left:100px;
-    margin:20px 0 40px;
+    margin-bottom:40px;
+    padding:0 125px 0 100px;
 
 }
 .order .prod-list .item li > div:not(.thumb) {
-    margin-top:10px;
+    margin-bottom:10px;
 }
 .order .prod-list .item .thumb {
     position: absolute;
@@ -510,29 +514,46 @@
     font-size:12px;
 }
 .order .prod-list .item .price {
+    position: absolute;
+    top: 0;
+    right: 0;
     font-size:16px;
+    font-weight:700;
 }
 @media screen and (max-width: 1119px) {
-    .order .cont-center .mo-toggle {
+    .order .hmj-container .hmj-content .cont-right {}
+    .order .mo-toggle > .item {
+        margin-top:20px;
+    }
+    .order .cont-center .mo-toggle .item:first-child {
         margin-top:10px;
     }
     .order .cont-right .mo-toggle {
-        margin-top:20px;
         padding:0;
         border:none;
     }
-    .order .mo-toggle > .item:not(:first-child) {
-        margin-top:20px;
+    .order .delivery-info li.default {
+        margin-bottom:20px;
     }
-    .order .delivery-info li:first-child strong {
+    .order .delivery-info li.default em {
         display:block;
-        margin-bottom:10px;
+        margin-bottom:7px;
     }
     .order .cont.prod-area {
         margin-bottom:40px;
     }
-    .order .cont-right .item.active {
-        margin-bottom:40px;
+    .order .prod-list .item li {
+        padding-right:0;
+    }
+    .order .prod-list .item .price {
+        position: relative;
+    }
+    .order .prod-list > li:not(:first-child) {
+        margin-top:20px;
+        border-top:none;
+    }
+    .order .payment .cta-outer {
+        margin-top:60px;
     }
 }
 
@@ -559,7 +580,4 @@
 .layer-cont .option-wrap .select-list li.on {
     background-color:#f2f2f2;
     color:#000;
-}
-.layer-cont .cta-outer {
-    margin-top:40px;
 }
