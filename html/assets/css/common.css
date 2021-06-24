@@ -1022,10 +1022,12 @@ textarea:disabled {
 .chk input[type="checkbox"] + span::after,
 .radio input[type="radio"] + span::after {
 	content: '+';
-	position: relative;
-	display: inline-block;
 	visibility: hidden;
+	position: relative;
 	left: -999px;
+	display: inline-block;
+	width: 8px;
+	margin-left: -8px;
 }
 .chk input[type="checkbox"]:focus + span::before {
 	border-color: #00aad2;
