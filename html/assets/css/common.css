@@ -29,35 +29,39 @@
 /* en initializing font */
 @font-face {
 	font-family: 'HyundaiSansHeadOffice';
-	font-weight: 400;
 	src: url(../fonts/en/HyundaiSansHeadOffice-Regular.eot);
 	src: url(../fonts/en/HyundaiSansHeadOffice-Regular.eot?#iefix) format('embedded-opentype'),
-			url(../fonts/en/HyundaiSansHeadOffice-Regular.woff) format('woff'),
-			url(../fonts/en/HyundaiSansHeadOffice-Regular.woff2) format('woff2');
+		url(../fonts/en/HyundaiSansHeadOffice-Regular.woff) format('woff'),
+		url(../fonts/en/HyundaiSansHeadOffice-Regular.woff2) format('woff2');
+	font-weight: 400;
+	unicode-range: /* U+0041-005A, U+0061-007A,  */U+0030-0039;
 }
 @font-face {
 	font-family: 'HyundaiSansHeadOffice';
-	font-weight: 700;
 	src: url(../fonts/en/HyundaiSansHeadOffice-Medium.eot);
 	src: url(../fonts/en/HyundaiSansHeadOffice-Medium.eot?#iefix) format('embedded-opentype'),
-			url(../fonts/en/HyundaiSansHeadOffice-Medium.woff) format('woff'),
-			url(../fonts/en/HyundaiSansHeadOffice-Medium.woff2) format('woff2');
+		url(../fonts/en/HyundaiSansHeadOffice-Medium.woff) format('woff'),
+		url(../fonts/en/HyundaiSansHeadOffice-Medium.woff2) format('woff2');
+	font-weight: 700;
+	unicode-range: /* U+0041-005A, U+0061-007A,  */U+0030-0039;
 }
 @font-face {
 	font-family: 'HyundaiSansTextOffice';
-	font-weight: 400;
 	src: url(../fonts/en/HyundaiSansTextOffice-Regular.eot);
 	src: url(../fonts/en/HyundaiSansTextOffice-Regular.eot?#iefix) format('embedded-opentype'),
-			url(../fonts/en/HyundaiSansTextOffice-Regular.woff) format('woff'),
-			url(../fonts/en/HyundaiSansTextOffice-Regular.woff2) format('woff2');
+		url(../fonts/en/HyundaiSansTextOffice-Regular.woff) format('woff'),
+		url(../fonts/en/HyundaiSansTextOffice-Regular.woff2) format('woff2');
+	font-weight: 400;
+	unicode-range: /* U+0041-005A, U+0061-007A,  */U+0030-0039;
 }
 @font-face {
 	font-family: 'HyundaiSansTextOffice';
-	font-weight: 700;
 	src: url(../fonts/en/HyundaiSansTextOffice-Medium.eot);
 	src: url(../fonts/en/HyundaiSansTextOffice-Medium.eot?#iefix) format('embedded-opentype'),
-			url(../fonts/en/HyundaiSansTextOffice-Medium.woff) format('woff'),
-			url(../fonts/en/HyundaiSansTextOffice-Medium.woff2) format('woff2');
+		url(../fonts/en/HyundaiSansTextOffice-Medium.woff) format('woff'),
+		url(../fonts/en/HyundaiSansTextOffice-Medium.woff2) format('woff2');
+	font-weight: 700;
+	unicode-range: /* U+0041-005A, U+0061-007A,  */U+0030-0039;
 }
 
 /* reset */
@@ -220,7 +224,7 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, dl, dd, figure, form, field
 	font-weight: normal;
 }
 button, input, select, textarea {
-	font-family: 'HyundaiSansHeadOffice', 'Noto Sans JP', sans-serif;
+	font: inherit;
 }
 html, body {
 	font-family: 'HyundaiSansHeadOffice', 'Noto Sans JP', sans-serif;
@@ -483,10 +487,10 @@ body {
 		font-size: 18px;
 		padding-top: 13px
 	}
-	.hmj-header.hc-type2 .header-cont {
+	.hmj-wrap.type2 .header-cont {
 		display: none;
 	}
-	.hmj-header.hc-type2 .back-page {
+	.hmj-wrap.type2 .back-page {
 		display: inline-block;
 		width: 46px;
 		height: 100%;
@@ -495,7 +499,7 @@ body {
 		font-size: 0;
 		vertical-align: top;
 	}
-	.hmj-header.hc-type2 .sub-cont .page-title {
+	.hmj-wrap.type2 .sub-cont .page-title {
 		text-align: left;
 		width: auto;
 		display: inline-block;
@@ -503,7 +507,7 @@ body {
 		padding-top: 15px;
 	}
 
-	.hc-type2 ~ .hmj-container {
+	.hmj-wrap.type2 .hmj-container {
 		min-height: calc(100vh - 403px);
 	}
 	.hmj-container {
@@ -534,6 +538,11 @@ body {
 	height: 151px;
 	margin-top: 200px;
 	background-color: #000;
+}
+@media screen and (max-width: 1119px) {
+	.hmj-wrap.type2 .hmj-footer {
+		display: none;
+	}
 }
 
 /** common **/
@@ -766,7 +775,7 @@ div.slt-box select {
 	background: #fff;
 	font-size: 14px;
 	color: #000;
-	vertical-align: middle;
+	line-height: 44px;
 }
 .val-error .inp-item,
 .val-error .slt-box,
@@ -1119,11 +1128,8 @@ textarea:disabled {
 	display: flex;
 }
 .btn {
-	z-index: 2;
 	display: inline-block;
-	height: 56px;
 	border: 1px solid #002c5f;
-	line-height: 56px;
 	vertical-align: top;
 }
 .btn + .btn {
@@ -1154,68 +1160,72 @@ textarea:disabled {
 .btn:active {
 	outline: 1px solid #000;
 } */
-.btn.btn-middle {
-	height: 46px;
-	line-height: 46px;
-}
-.btn.btn-small {
-	height: 36px;
-	line-height: 36px;
-}
-.btn-extra-small {
-	height: 26px;
-	line-height: 26px;
-}
 .btn.btn-tbl {
 	width: auto;
-	height: 26px;
 	border-color: #ccc;
 }
 .btn.btn-tbl.type2 {
 	width: 100%;
 	max-width: 420px;
-	height: 36px;
 }
 .btn.btn-tbl + .btn.btn-tbl {
 	margin-left: 8px;
 }
 .btn span {
-	-webkit-transition: color .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-	transition: color .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 	position: relative;
-	z-index: 2;
 	display: inline-block;
 	width: 100%;
+	height: 54px;
 	padding: 0 20px;
 	font-size: 18px;
 	font-weight: 700;
 	color: #002c5f;
+	line-height: 0;
 	vertical-align: top;
 	word-break: keep-all;
 }
+.btn span:after {
+	content: '';
+	display: inline-block;
+	height: 1.85em;
+}
 .btn.btn-middle span {
+	height: 44px;
 	padding: 0 18px;
 	font-size: 16px;
 }
+.btn.btn-middle span:after {
+	height: 1.7em;
+}
 .btn.btn-small span {
+	height: 34px;
 	padding: 0 16px;
 	font-size: 14px;
 }
+.btn.btn-small span:after,
+.btn.btn-tbl.type2 span {
+	height: 1.6em;
+}
 .btn.btn-extra-small span {
+	height: 24px;
 	padding: 0 12px;
 	font-size: 12px;
+}
+.btn.btn-extra-small span:after,
+.btn.btn-tbl span:after {
+	height: 1.4em;
 }
 .btn.btn-tbl span {
+	height: 24px;
 	padding: 0 12px;
 	font-size: 12px;
-	color: #000;
 	font-weight: normal;
-	line-height: 26px;
+	color: #000;
 }
 .btn.btn-tbl.type2 span {
+	height: 34px;
 	font-size: 16px;
 	font-weight: 500;
-	line-height: 36px;
 }
 .btn.btn-type2 {
 	background-color: #002c5f;
@@ -1234,7 +1244,6 @@ textarea:disabled {
 }
 .btn.btn-icon {
 	position: relative;
-	height: 25px;
 	border: none;
 }
 .btn.btn-icon:before {
@@ -1252,6 +1261,7 @@ textarea:disabled {
 }
 .btn.btn-icon span {
 	position: relative;
+	height: 25px;
 	padding: 0 0 0 31px;
 	font-size: 14px;
 	font-weight: 400;
@@ -1294,10 +1304,6 @@ textarea:disabled {
 .btn:disabled span,
 .btn.btn-disabled span {
 	color: #fff;
-}
-.btn:disabled span:after,
-.btn.btn-disabled span:after {
-	content: none;
 }
 .btn:disabled .btn-icon span:before,
 .btn.btn-icon.btn-disabled span:before {
@@ -1625,6 +1631,22 @@ textarea:disabled {
 @media screen and (max-width: 1119px) {
 	.mo-toggle .tit-btn {
 		cursor: pointer;
+	}	
+	.mo-toggle .tit-btn::after {
+		content: '';
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		background: url('../images/common/ico_mo_toggle.png') no-repeat center;
+		background-size: 24px;
+		position: absolute;
+		right: 0;
+		top: 16px;
+		transition: all 0.5s ease;
+	}
+	.mo-toggle .active .tit-btn::after {
+		transform: rotate(-180deg);
+		top: 16px
 	}
 	.mo-toggle .cont {
 		display: none;
