@@ -226,9 +226,6 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, dl, dd, figure, form, field
 button, input, select, textarea {
 	font: inherit;
 }
-.ie11 input, .ie11 select {
-	font-family: 'Noto Sans JP', 'HyundaiSansHeadOffice', sans-serif;
-}
 html, body {
 	font-family: 'HyundaiSansHeadOffice','Noto Sans JP', sans-serif;
 	font-size: 14px;
@@ -278,6 +275,9 @@ body {
 	width: 1px;
 	height: 1px;
 	margin-top: -1px;
+}
+.ie11 input, .ie11 select {
+	font-family: 'Noto Sans JP', 'HyundaiSansHeadOffice', sans-serif;
 }
 @media screen and (min-width: 768px) {
 	body::-webkit-scrollbar,
