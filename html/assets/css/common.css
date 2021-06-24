@@ -34,7 +34,7 @@
 		url(../fonts/en/HyundaiSansHeadOffice-Regular.woff) format('woff'),
 		url(../fonts/en/HyundaiSansHeadOffice-Regular.woff2) format('woff2');
 	font-weight: 400;
-	unicode-range: /* U+0041-005A, U+0061-007A,  */U+0030-0039;
+	unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 }
 @font-face {
 	font-family: 'HyundaiSansHeadOffice';
@@ -43,7 +43,7 @@
 		url(../fonts/en/HyundaiSansHeadOffice-Medium.woff) format('woff'),
 		url(../fonts/en/HyundaiSansHeadOffice-Medium.woff2) format('woff2');
 	font-weight: 700;
-	unicode-range: /* U+0041-005A, U+0061-007A,  */U+0030-0039;
+	unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 }
 @font-face {
 	font-family: 'HyundaiSansTextOffice';
@@ -52,7 +52,7 @@
 		url(../fonts/en/HyundaiSansTextOffice-Regular.woff) format('woff'),
 		url(../fonts/en/HyundaiSansTextOffice-Regular.woff2) format('woff2');
 	font-weight: 400;
-	unicode-range: /* U+0041-005A, U+0061-007A,  */U+0030-0039;
+	unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 }
 @font-face {
 	font-family: 'HyundaiSansTextOffice';
@@ -61,7 +61,7 @@
 		url(../fonts/en/HyundaiSansTextOffice-Medium.woff) format('woff'),
 		url(../fonts/en/HyundaiSansTextOffice-Medium.woff2) format('woff2');
 	font-weight: 700;
-	unicode-range: /* U+0041-005A, U+0061-007A,  */U+0030-0039;
+	unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 }
 
 /* reset */
@@ -226,8 +226,11 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, dl, dd, figure, form, field
 button, input, select, textarea {
 	font: inherit;
 }
+.ie11 input, .ie11 select {
+	font-family: 'Noto Sans JP', 'HyundaiSansHeadOffice', sans-serif;
+}
 html, body {
-	font-family: 'HyundaiSansHeadOffice', 'Noto Sans JP', sans-serif;
+	font-family: 'HyundaiSansHeadOffice','Noto Sans JP', sans-serif;
 	font-size: 14px;
 	line-height: 1.4;
 	color: #000;
@@ -1003,6 +1006,11 @@ textarea:disabled {
 }
 .chk input[type="checkbox"] + span::before {
 	content: '';
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	position: absolute;
+	top: 50%;
+	left: 0;
 	display: inline-block;
 	width: 24px;
 	min-width: 24px;
@@ -1010,9 +1018,14 @@ textarea:disabled {
 	border: solid 1px #cccccc;
 	background-color: #ffffff;
 	box-sizing: border-box;
-	position: absolute;
-	top: 0;
-	left: 0;
+}
+.chk input[type="checkbox"] + span::after,
+.radio input[type="radio"] + span::after {
+	content: '+';
+	position: relative;
+	display: inline-block;
+	visibility: hidden;
+	left: -999px;
 }
 .chk input[type="checkbox"]:focus + span::before {
 	border-color: #00aad2;
@@ -1066,19 +1079,24 @@ textarea:disabled {
 	display: none;
 }
 .radio input[type="radio"] + span {
-	display: flex;
+	position: relative;
+	display: inline-block;
+	padding-left: 32px;
 	font-size: 14px;
 	color: #000;
 	line-height: 1.4;
-	align-items: center;
 }
 .radio input[type="radio"] + span::before {
 	content: '';
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	position: absolute;
+	top: 50%;
+	left: 0;
 	display: inline-block;
 	width: 24px;
 	min-width: 24px;
 	height: 24px;
-	margin-right: 8px;
 	border: solid 1px #cccccc;
 	border-radius: 12px;
 	background-color: #ffffff;
