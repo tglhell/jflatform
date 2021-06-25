@@ -16,13 +16,13 @@
 
 <body>
 
-<div class="hmj-wrap order"> <!-- test 클래스는 제거 예정 : 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+<div class="hmj-wrap type2">
 	<div class="skip-nav">
 		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
 	</div>
 
 	<!-- header -->
-	<div class="hmj-header hc-type2"><!-- 백버튼 있는타입 hc-type2 -->
+	<div class="hmj-header">
 		<!-- header -->
 		<div class="header-cont">
 			<h1><a href="hmj_layout.html"><img src="../../assets/images/common/img_header_logo.png" alt="Hyundai Logo"></a></h1>
@@ -73,17 +73,17 @@
 		<div class="sub-cont">
 			<div class="history">
 				<span>HOME</span>
-				<span>カート</span>
+				<span>ご注文</span>
 			</div>
 			<button type="button" class="back-page">Back page</button>
-			<div class="page-title">カート</div>
+			<div class="page-title">ご注文</div>
 		</div>
 		<!-- //header -->
 	</div>
 	<!--//header -->
 
 	<!-- container -->
-	<div id="hmjContainer" class="hmj-container" style="z-index:100;">
+	<div id="hmjContainer" class="hmj-container order">
 		<div class="hmj-content">
 			<div class="cont-outer">
                 <div class="cont-center">
@@ -94,7 +94,7 @@
                                 <ul class="form-list">
                                     <li>
                                         <div class="inp-outer-box">
-                                            <label for="inpName01_01">お名前</label>
+                                            <label for="inpName01_01">姓名</label>
                                             <div class="inp-group-box mo-full">
                                                 <div class="inp-area">
                                                     <input type="text" id="inpName01_01" class="inp-item" placeholder="木村" disabled="disabled">
@@ -110,7 +110,7 @@
                                     </li>
                                     <li>
                                         <div class="inp-outer-box">
-                                            <label for="inpName01_01">お名前(フリガナ)</label>
+                                            <label for="inpName01_01">姓名(フリガナ)</label>
                                             <div class="inp-group-box mo-full">
                                                 <div class="inp-area">
                                                     <input type="text" id="inpName02_01" class="inp-item" placeholder="きむら" disabled="disabled">
@@ -126,7 +126,7 @@
                                     </li>
                                     <li>
                                         <div class="inp-outer-box">
-                                            <label for="inpNum01_01">電話番号</label>
+                                            <label for="inpNum01_01">携帯電話</label>
                                             <div class="inp-slice-box">
                                                 <div class="inp-area">
                                                     <input type="number" id="inpNum01_01" class="inp-item" placeholder="080" disabled="disabled">
@@ -151,7 +151,7 @@
                                             <label for="inpNum01_01">メールアドレス</label>
                                             <div class="inp-slice-box">
                                                 <div class="inp-area">
-                                                    <input type="text" id="inpEmail" class="inp-item" placeholder="080">
+                                                    <input type="text" id="inpEmail" class="inp-item" placeholder="E-mailアドレスを入力してください。">
                                                     <button class="inp-close"></button>
                                                 </div>
                                             </div>
@@ -161,25 +161,25 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item active">
                             <h3 class="title tit-btn">お届け先</h3>
                             <div class="cont">
                                 <ul class="delivery-info">
                                     <li class="default">
                                         <em>[家] 我が家</em>
-                                        <span class="flag">基本届け先</span>
-                                        <button class="btn btn-tbl"><span>配送先の変更</span></button>
+                                        <span class="shipping-flag">基本お届け先</span>
+                                        <button class="btn btn-tbl"><span>お届け先の変更</span></button>
                                     </li>
                                     <li>木村 拓哉 (きむらたくや) </li>
                                     <li>080-123-4567</li>
-                                    <li>〒220-0012  Minatomirai Center Bldg. 16F, 3-6-1, Minatomirai, Nishi-ku, Yokohama City, Kanagawa</li>
+                                    <li class="address">〒220-0012  Minatomirai Center Bldg. 16F, 3-6-1, Minatomirai, Nishi-ku, Yokohama City, Kanagawa</li>
                                 </ul>        
                                 
                                 <!-- NO delivery -->
                                 <ul class="form-list">
                                     <li>
                                         <div class="inp-outer-box">
-                                            <label for="inpName01_01">お名前 <span class="required">*</span></label>
+                                            <label for="inpName01_01">姓名 <span class="required">*</span></label>
                                             <div class="inp-group-box mo-full">
                                                 <div class="inp-area">
                                                     <input type="text" id="inpName01_01" class="inp-item" placeholder="木村">
@@ -195,7 +195,7 @@
                                     </li>
                                     <li>
                                         <div class="inp-outer-box mo-full">
-                                            <label for="inpName01_01">お名前(フリガナ) <span class="required">*</span></label>
+                                            <label for="inpName01_01">姓名 (フリガナ) <span class="required">*</span></label>
                                             <div class="inp-group-box">
                                                 <div class="inp-area">
                                                     <input type="text" id="inpName02_01" class="inp-item" placeholder="きむら">
@@ -211,20 +211,20 @@
                                     </li>
                                     <li>
                                         <div class="inp-outer-box">
-                                            <label for="inpNum01_01">電話番号 <span class="required">*</span></label>
+                                            <label for="inpNum01_01">携帯電話 <span class="required">*</span></label>
                                             <div class="inp-slice-box">
                                                 <div class="inp-area">
-                                                    <input type="number" id="inpNum01_01" class="inp-item" placeholder="080">
+                                                    <input type="number" id="inpNum01_01" class="inp-item" placeholder="数字">
                                                     <button class="inp-close"></button>
                                                 </div>
                                                 <span class="inp-hpn">-</span>
                                                 <div class="inp-area">
-                                                    <input type="number" id="inpNum01_02" class="inp-item" placeholder="1234">
+                                                    <input type="number" id="inpNum01_02" class="inp-item" placeholder="数字">
                                                     <button class="inp-close"></button>
                                                 </div>
                                                 <span class="inp-hpn">-</span>
                                                 <div class="inp-area">
-                                                    <input type="number" id="inpNum01_03" class="inp-item" placeholder="5678">
+                                                    <input type="number" id="inpNum01_03" class="inp-item" placeholder="数字">
                                                     <button class="inp-close"></button>
                                                 </div>
                                             </div>
@@ -235,31 +235,23 @@
                                         <div class="inp-outer-box post-type">
                                             <label for="inpNum01_01">住所 <span class="required">*</span></label>
                                             <div class="inp-group-box">
-                                                <div class="inp-slice-box">
+                                                <div class="inp-btn-box">
                                                     <div class="inp-area">
-                                                        <input type="text" id="inpNum02_01" class="inp-item" placeholder="〒" readonly="">
-                                                        <button class="inp-close"></button>
-                                                    </div>
-                                                    <span class="inp-hpn">-</span>
-                                                    <div class="inp-area">
-                                                        <input type="text" id="inpNum02_02" class="inp-item" placeholder="" readonly="">
+                                                        <input type="text" class="inp-item" placeholder="〒" readonly>
                                                         <button class="inp-close"></button>
                                                     </div>
                                                     <button class="btn btn-middle btn-type2"><span>郵便番号検索</span></button>
                                                 </div>
                                                 <div class="inp-area">
-                                                    <select title="selectBox" class="slt-box">
-                                                        <option value="00" selected="" disabled="" hidden="">都道府県</option>
-                                                        <option value="01">Option01</option>
-                                                        <option value="02">Option02</option>
-                                                    </select>
-                                                </div>
-                                                <div class="inp-area">
-                                                    <input type="text" class="inp-item" placeholder="市区町村">
+                                                    <input type="text" class="inp-item" placeholder="都道府県" readonly>
                                                     <button class="inp-close"></button>
                                                 </div>
                                                 <div class="inp-area">
-                                                    <input type="text" class="inp-item" placeholder="番地">
+                                                    <input type="text" class="inp-item" placeholder="市区町村" readonly>
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <input type="text" class="inp-item" placeholder="番地" readonly>
                                                     <button class="inp-close"></button>
                                                 </div>
                                                 <div class="inp-area">
@@ -274,10 +266,10 @@
                                 <!-- //NO delivery -->
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item active">
                             <h3 class="title tit-btn">ご注文内容</h3>
                             <div class="cont prod-area">
-                                <ul class="prod-list">
+                                <ul class="prod-info">
                                     <li>
                                         <h4 class="title">H Geunine  <em class="fc-color2">[2]</em></h4>
                                         <ul class="item">
@@ -296,7 +288,7 @@
                                                 <div class="price">¥ 31,000</div>
                                             </li>
                                         </ul>
-                                        <div class="delivery">
+                                        <div class="delivery-price">
                                             <ul>
                                                 <li>
                                                     <div class="name">商品販売価格(税込)</div>
@@ -331,7 +323,7 @@
                                                 <div class="price">¥ 31,000</div>
                                             </li>
                                         </ul>
-                                        <div class="delivery">
+                                        <div class="delivery-price">
                                             <ul>
                                                 <li>
                                                     <div class="name">商品販売価格(税込)</div>
@@ -356,7 +348,7 @@
 
                 <div class="cont-right">
                     <div class="mo-toggle">
-                        <div class="item">
+                        <div class="item active">
                             <h3 class="title tit-btn">割引</h3>
                             <div class="cont coupon">
                                 <label class="chk"><input type="checkbox"><span>割引適用</span></label>
@@ -366,10 +358,10 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item active">
                             <h3 class="title tit-btn">合計金額</h3>
                             <div class="cont price-area">
-                                <ul>
+                                <ul class="total-price">
                                     <li>
                                         <span class="name">商品販売価格(税込)</span>
                                         <span class="price">¥ 36,000</span>
@@ -389,18 +381,18 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item active">
                             <h3 class="title tit-btn">支払い方法</h3>
                             <div class="cont payment">
                                 <ul class="radio-group">
                                     <li><label class="radio"><input type="radio" name="radioGroup" id="radioChk01" checked="checked"><span>Card</span></label></li>
-                                    <li><label class="radio"><input type="radio" name="radioGroup" id="radioChk02"><span>Bank Transfer</span></label></li>
+                                    <li><label class="radio"><input type="radio" name="radioGroup" id="radioChk02"><span>LINEPAY</span></label></li>
                                 </ul>
                                 <ul class="check-group">
-                                    <li><label class="chk"><input type="checkbox"><span><a href="javascript:void(0);" class="text-link fc-color">個人情報保護政策お</a>よび<a href="javascript:void(0);" class="text-link fc-color">利用約款に同</a>意して注文</span></label></li>
+                                    <li><label class="chk"><input type="checkbox"><span><a href="javascript:void(0);" class="text-link fc-color">個人情報保護方針</a>および<a href="javascript:void(0);" class="text-link fc-color">会員規約に</a>同意の上「注文する」ボタンを押してください。</span></label></li>
                                 </ul>
                                 <div class="cta-outer full-type">
-                                    <button class="btn btn-type2"><span>決済する</span></button>
+                                    <button class="btn btn-type2"><span>ご注文</span></button>
                                 </div>
                             </div>
                         </div>

@@ -16,7 +16,7 @@
 
 <body>
 
-<div class="hmj-wrap type2">
+<div class="hmj-wrap">
 	<div class="skip-nav">
 		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
 	</div>
@@ -73,33 +73,33 @@
 		<div class="sub-cont">
 			<div class="history">
 				<span>HOME</span>
-				<span>カート</span>
+				<span>注文失敗</span>
 			</div>
 			<button type="button" class="back-page">Back page</button>
-			<div class="page-title">カート</div>
+			<div class="page-title">注文失敗</div>
 		</div>
 		<!-- //header -->
 	</div>
 	<!--//header -->
 
 	<!-- container -->
-	<div id="hmjContainer" class="hmj-container cart">
+	<div id="hmjContainer" class="hmj-container order">
 		<div class="hmj-content">
-			<div class="cont-outer fullcase">
-				<div class="nodata">
-					<p>カート入れられた商品がありません。</p>
-					<div class="cta-outer fix-type">
-						<a href="javascript:void(0);" class="btn btn-middle"><span>SHOPメイン</span></a>
+			<div class="cont-outer mincase">
+				<div class="complete-area">
+					<span class="icon fail">주문실패</span>
+					<div class="text-type1">大変申し訳ございません。</div>
+					<div class="text-type2">
+						<p>ただいまのご注文は正常完了しておりません。</p>
+						<p>確認後、カートで再度購入手続きを行うか、顧客センターにお問い合わせください。</p>
 					</div>
+					<div class="error-text">エラー : <strong>決済失敗</strong></div>
 				</div>
-			</div>
-
-			<div class="cont-outer mt20">
-				<ul class="notice">
-					<li>カート商品は<em class="fc-color">90日間</em>保管され、販売終了となると自動的に削除されます。</li>
-					<li class="fc-color">実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</li>
-				</ul>
-			</div>
+                <div class="cta-outer">
+                    <a href="#" class="btn"><span>SHOPメイン</span></a>
+                    <a href="#" class="btn btn-type2"><span>カート</span></a>
+                </div>
+            </div>
 		</div>
 	</div>
 	<!--//container -->
@@ -111,5 +111,7 @@
 	<!--//footer -->
 </div>
 
+<script>
+</script>
 </body>
 </html>

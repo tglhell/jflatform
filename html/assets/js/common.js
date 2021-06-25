@@ -171,6 +171,7 @@ jQuery.event.add(window, 'load', function () {
 			});
 		});
 
+		containerAutoHgt();
 		resChk();
 	});
 
@@ -211,6 +212,19 @@ jQuery.event.add(window, 'load', function () {
 		tabPdtVal = parseInt(target.find('.js-tab-cont').css('padding-top')) * 2;
 		target.find('.js-tab-cont').css('height', tabCntHgt + tabPdtVal);
 	}
+
+	function containerAutoHgt () {
+		let hmjHeaderHgt= $('.hmj-header').outerHeight(true);
+		let hmjFooterHgt= $('.hmj-footer').outerHeight(true);
+		let containerHgtSum = $(window).height() - (hmjHeaderHgt + hmjFooterHgt);
+		$('.hmj-container').css('min-height', containerHgtSum);
+		if ($(window).width() <= tbl) {
+			if ($('.hmj-wrap').hasClass('type2')) {
+				$('.hmj-container').css('min-height', containerHgtSum + hmjFooterHgt);
+			}
+		}
+	}
+	containerAutoHgt();
 
 	//toggle common
 	function toggle(){
@@ -308,4 +322,3 @@ function selectDropdown(data){
 		}
 	});
 };
-

@@ -180,11 +180,11 @@
 				<label for="inpName01_01">お名前(フリガナ) <span class="required">*</span></label>
 				<div class="inp-group-box mo-full">
 					<div class="inp-area">
-						<input type="text" id="inpName01_02" class="inp-item" placeholder="名前">
+						<input type="text" id="inpName01_02" class="inp-item" placeholder="이름">
 						<button class="inp-close"></button>
 					</div>
 					<div class="inp-area">
-						<input type="text" id="inpName01_01" class="inp-item" placeholder="名字">
+						<input type="text" id="inpName01_01" class="inp-item" placeholder="성">
 						<button class="inp-close"></button>
 					</div>
 				</div>
@@ -197,11 +197,11 @@
 				<label for="inpName01_01">이름</label>
 				<div class="inp-group-box mo-full">
 					<div class="inp-area">
-						<input type="text" id="inpName01_03" class="inp-item" placeholder="名前">
+						<input type="text" id="inpName01_03" class="inp-item" placeholder="성">
 						<button class="inp-close"></button>
 					</div>
 					<div class="inp-area">
-						<input type="text" id="inpName01_04" class="inp-item" placeholder="名字">
+						<input type="text" id="inpName01_04" class="inp-item" placeholder="이름">
 						<button class="inp-close"></button>
 					</div>
 				</div>
@@ -273,18 +273,15 @@
 			<button class="btn btn-middle btn-type2"><span>郵便番号検索</span></button>
 		</div>
 		<div class="inp-area">
-			<select title="selectBox" class="slt-box">
-				<option value="00" selected="" disabled="" hidden="">都道府県</option>
-				<option value="01">Option01</option>
-				<option value="02">Option02</option>
-			</select>
-		</div>
-		<div class="inp-area">
-			<input type="text" class="inp-item" placeholder="市区町村">
+			<input type="text" class="inp-item" placeholder="都道府県" readonly>
 			<button class="inp-close"></button>
 		</div>
 		<div class="inp-area">
-			<input type="text" class="inp-item" placeholder="番地">
+			<input type="text" class="inp-item" placeholder="市区町村" readonly>
+			<button class="inp-close"></button>
+		</div>
+		<div class="inp-area">
+			<input type="text" class="inp-item" placeholder="番地" readonly>
 			<button class="inp-close"></button>
 		</div>
 		<div class="inp-area">
@@ -329,31 +326,23 @@
 			<div class="inp-outer-box post-type">
 				<label for="inpNum01_01">住所 <span class="required">*</span></label>
 				<div class="inp-group-box">
-					<div class="inp-slice-box">
+					<div class="inp-btn-box">
 						<div class="inp-area">
-							<input type="text" id="inpNum02_01" class="inp-item" placeholder="〒" readonly>
-							<button class="inp-close"></button>
-						</div>
-						<span class="inp-hpn">-</span>
-						<div class="inp-area">
-							<input type="text" id="inpNum02_02" class="inp-item" placeholder="" readonly>
+							<input type="text" class="inp-item" placeholder="〒" readonly>
 							<button class="inp-close"></button>
 						</div>
 						<button class="btn btn-middle btn-type2"><span>郵便番号検索</span></button>
 					</div>
 					<div class="inp-area">
-						<select title="selectBox" class="slt-box">
-							<option value="00" selected="" disabled="" hidden="">都道府県</option>
-							<option value="01">Option01</option>
-							<option value="02">Option02</option>
-						</select>
-					</div>
-					<div class="inp-area">
-						<input type="text" class="inp-item" placeholder="市区町村">
+						<input type="text" class="inp-item" placeholder="都道府県" readonly>
 						<button class="inp-close"></button>
 					</div>
 					<div class="inp-area">
-						<input type="text" class="inp-item" placeholder="番地">
+						<input type="text" class="inp-item" placeholder="市区町村" readonly>
+						<button class="inp-close"></button>
+					</div>
+					<div class="inp-area">
+						<input type="text" class="inp-item" placeholder="番地" readonly>
 						<button class="inp-close"></button>
 					</div>
 					<div class="inp-area">
@@ -455,7 +444,6 @@
 				<option value="02">Option02</option>
 			</select>
 			<br><br>
-
 			<h4 class="btm-border">- Custom Select</h4>
 			
 			<div class="slt-box">
@@ -593,7 +581,7 @@
 			</div>
 			<div class="radio-group"><!-- 에러시 val-error -->
 				<label class="radio"><input type="radio" name="radio1" id="radioChk04"><span>ブランド拠点に配送</span></label>
-				<label class="radio"><input type="radio" checked="checked" name="radio1" id="radioChk05"><span>Sample Text</span></label>
+				<label class="radio"><input type="radio" checked="checked" name="radio1" id="radioChk05"><span>自宅へ配送</span></label>
 				<label class="radio"><input type="radio" name="radio1" id="radioChk06"><span>自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 </span></label>
 			</div>
 			<p class="error-msg lbl-type">error text</p>
@@ -603,7 +591,7 @@
 			</div>
 			<ul class="radio-group">
 				<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk07" checked="checked"><span>LINE PAY</span></label></li>
-				<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk08"><span>ブランド</span></label></li>
+				<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk08"><span>Card</span></label></li>
 				<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk09"><span>Bank Transfer</span></label></li>
 			</ul>
 			<p class="error-msg lbl-type">error text</p>

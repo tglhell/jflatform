@@ -73,8 +73,10 @@
 
 			<!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<button class="btn pop-open" data-pop-idx="1"><span>Popup Width:500px</span></button>
-<button class="btn pop-open" data-pop-idx="2"><span>Popup Width:700px</span></button>
+<pre class="language-html"><code><!--<div class="cta-outer">
+	<button class="btn pop-open" data-pop-idx="1"><span>500px</span></button>
+	<button class="btn pop-open" data-pop-idx="2"><span>700px</span></button>
+</div>
 
 <div class="layer-popup-wrap" data-pop-idx="1">
 	<div class="layer-popup-body">
@@ -119,8 +121,10 @@
 				팝업 띄울 버튼에 클래스 "<strong>pop-open</strong>"을 붙이고, 클래스 "<strong>layer-popup-wrap</strong>"과의 <strong>data-pop-idx</strong>값이 같아야 함.<br>기본 사이즈는 700px, 500px은 .layer-popup-cont에 클래스 "<strong>pop-small</strong>"을 추가함.
 			</div>
 
-			<button class="btn pop-open" data-pop-idx="1"><span>Popup Width:500px</span></button>
-			<button class="btn pop-open" data-pop-idx="2"><span>Popup Width:700px</span></button>
+			<div class="cta-outer">
+				<button class="btn pop-open" data-pop-idx="1"><span>500px</span></button>
+				<button class="btn pop-open" data-pop-idx="2"><span>700px</span></button>
+			</div>
 
 			<div class="layer-popup-wrap" data-pop-idx="1">
 				<div class="layer-popup-body">
@@ -164,7 +168,9 @@
 
 			<!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<button class="btn pop-open" data-pop-idx="3"><span>Popup Mobile Full</span></button>
+<pre class="language-html"><code><!--<div class="cta-outer">
+	<button class="btn pop-open" data-pop-idx="3"><span>Popup Mobile Full</span></button>
+</div>
 
 <div class="layer-popup-wrap mo-full" data-pop-idx="3">
 	<div class="layer-popup-body">
@@ -198,7 +204,9 @@
 				.layer-popup-wrap에 클래스 "<strong>mo-full</strong>"를 추가함.
 			</div>
 
-			<button class="btn pop-open" data-pop-idx="3"><span>Popup Mobile Full</span></button>
+			<div class="cta-outer">
+				<button class="btn pop-open" data-pop-idx="3"><span>Popup Mobile Full</span></button>
+			</div>
 
 			<div class="layer-popup-wrap mo-full" data-pop-idx="3">
 				<div class="layer-popup-body">
@@ -231,7 +239,9 @@
 
 			<!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<button class="btn pop-open" data-pop-idx="4"><span>Double Popup</span></button>
+<pre class="language-html"><code><!--<div class="cta-outer">
+	<button class="btn pop-open" data-pop-idx="4"><span>Double Popup</span></button>
+</div>
 
 <div class="layer-popup-wrap" data-pop-idx="4">
 	<div class="layer-popup-body">
@@ -280,12 +290,14 @@
 				내부 버튼의 data-pop-idx와 popup의 인덱스가 같아야하며, 내부 팝업은 .layer-popup-wrap에 클래스 "<strong>inner-pop</strong>"을 추가함.
 			</div>
 
-			<button class="btn pop-open" data-pop-idx="4"><span>Double Popup</span></button>
+			<div class="cta-outer">
+				<button class="btn pop-open" data-pop-idx="4"><span>Double Popup</span></button>
+			</div>
 
 			<div class="layer-popup-wrap" data-pop-idx="4">
 				<div class="layer-popup-body">
 					<div class="layer-popup-cont">
-						<h1 class="layer-title">Layer Title 3</h1>
+						<h1 class="layer-title">Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3</h1>
 						<div class="layer-cont">
 							<p>layerCont Text1</p>
 							<p>layerCont Text2</p>
@@ -296,8 +308,8 @@
 							<p>layerCont Text7</p>
 							<p>layerCont Text8</p>
 							<div class="cta-outer full-type">
+								<button class="btn btn-type2 btn-close"><span>Cancel</span></button>
 								<button class="btn pop-open" data-pop-idx="5"><span>Inner popup</span></button>
-								<button class="btn btn-type2 btn-close"><span>CANCEL</span></button>
 							</div>
 						</div>
 						<button class="btn-close-popup btn-close">close</button>
