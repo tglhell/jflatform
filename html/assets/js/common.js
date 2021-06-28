@@ -95,7 +95,7 @@ jQuery.event.add(window, 'load', function () {
 				$('body').css({'overflow':'hidden', 'width':bodyWid});
 			}
 			setObj(function () {
-				popCont.focus().append('<a href="#" class="tar-loop"></a>');
+				popWrap.find(popCont).focus().append('<a href="#" class="tar-loop"></a>');
 				$('.tar-loop').focusin(function () {
 					popCont.focus();
 				});
@@ -127,7 +127,7 @@ jQuery.event.add(window, 'load', function () {
 			function popClose (target) {
 				target.fadeOut(fadeVal);
 				target.find(popCont).removeAttr('tabindex').fadeOut(fadeVal).parent().removeAttr('style');
-				$('.tar-loop').remove();
+				target.find('.tar-loop').remove();
 				setObj(function () {
 					returnTar.focus();
 				}, 0);

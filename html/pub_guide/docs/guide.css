@@ -90,7 +90,7 @@ header.guide_header h1 {font-size:24px; font-weight:normal; color:#304989; font-
 table.guide_list {border-top:1px solid #bbb;border-left:1px solid #bbb; color:#666;}
 table.guide_list tr:hover td{background:#fffad2!important;}
 /*table tr:nth-child(2n){background:#eee;}*/
-table.guide_list th,td{line-height:20px !important;border-bottom:1px solid #bbb;border-right:1px solid #bbb;font-size:13px}
+table.guide_list th,table.guide_list td{line-height:20px !important;border-bottom:1px solid #bbb;border-right:1px solid #bbb;font-size:13px}
 table.guide_list thead th{padding:3px 8px;height:36px;background:#141414;color:#fff;}
 table.guide_list tbody td{padding:2px 8px;height:30px; text-align:center;}
 table.guide_list tbody th{padding:3px 8px 3px;background:#d2dde9;text-align:left;font-size:16px;height:30px;border-bottom:2px solid #bbb;}

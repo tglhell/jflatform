@@ -5,6 +5,11 @@
 .hmj-content .cont-right {
     padding-top:60px;
 }
+.hmj-content .cont-right > .inside-type {
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 5px 7px 14px 0 rgb(0 0 0 / 7%);    
+}
 
 .total-price .price {
     float:right;
@@ -71,46 +76,25 @@
 .delivery-price li {
     position: relative;
 }
-.delivery-price li:first-child:before {
+.delivery-price li:not(:last-child):after {
     content:'';
-    width: 13px;
-    height: 1px;
-    transform: rotate(-270deg);
-    background-color: #000;
     position: absolute;
     top: 50%;
     right: 0;
+    width: 24px;
+    height: 24px;
+    margin-top:-12px;
+    background-size: 24px;
+    font-size: 0;
+    text-indent: -99999px;
 }
 .delivery-price li:first-child:after {
-    content:'';
-    width: 1px;
-    height: 13px;
-    background-color: #000;
-    transform: rotate(90deg);
-    position: absolute;
-    top: 50%;
-    right: 6px;
-    margin-top:-6px;
-}
-.delivery-price li:nth-child(2):before {
-    content:'';
-    width: 13px;
-    height: 1px;
-    background-color: #000;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    margin-top:-4px;
+    right:15px;
+    background-image: url(../images/common/icn_arrows_plus.png);
 }
 .delivery-price li:nth-child(2):after {
-    content:'';
-    width: 13px;
-    height: 1px;
-    background-color: #000;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    margin-top:0;
+    right:-20px;
+    background-image: url(../images/common/icn_arrows_equal.png);
 }
 .delivery-price .msg {
     height: 38px;
@@ -130,12 +114,15 @@
     .hmj-content .cont-right {
         padding-top:0;
     }
+    .hmj-content .cont-right > .inside-type {
+        border:none;
+        box-shadow: none;
+    }
     .hmj-container.cart  {
         padding-bottom:163px;
     }
-    .delivery-price li:before,
-    .delivery-price li:after {
-        display: none;;   
+    .delivery-price li:not(:last-child):after {
+        display: none;
     }
     .delivery-price ul {
         padding:10px;
@@ -168,13 +155,8 @@
 .cart .nodata .cta-outer {
     margin-top:20px;
 }
-.cart .notice {
-    color:#777;
-    line-height:21px;
-    padding-left:15px;
-    text-indent: -15px;
-}
-.cart .notice li:before {
+
+.cart .caution li:before {
     background-color: #444;
     display: inline-block;
     width: 3px;
@@ -186,7 +168,7 @@
     margin-right: 10px;
     vertical-align: 3px;
 }
-.cart .notice li:not(:first-child) {
+.cart .caution li:not(:first-child) {
     margin-top:8px;
 }
 .cart .all-del {
@@ -200,7 +182,7 @@
 .cart .prod-list > li:not(:first-child){
     margin-top:40px;
 }
-.cart .prod-list .head {
+.cart .prod-list .type2 {
     padding:20px 0;
     border-top:2px solid #000;
     border-bottom:1px solid #ccc;    
@@ -308,8 +290,6 @@
     float:right;
 }
 .cart .price-area {
-    padding:20px;
-    border:1px solid #ccc;
     line-height:20px;
 }
 
@@ -317,7 +297,7 @@
     .cart .all-del {
         margin:8px 0;
     }
-    .cart .prod-list .head {
+    .cart .prod-list .type2 {
         margin:0 -20px;
         padding:15px 20px;
     }
@@ -350,13 +330,12 @@
         float:unset;
         width:100%;
     }
-	.cart .price-area {
+    .cart.hmj-container .cont-right > .price-area {
         z-index:100;
         position: fixed;
         width: 100%;
         left: 0;
         bottom: 0;
-        border: none;
         border-top: 1px solid #000;
         background-color: #fff;
 	}
@@ -386,17 +365,13 @@
         right: 0;
         line-height: 36px;
     }
-    .cart .notice {
-        font-size:12px;
-        line-height:20px;
-    }
-    .cart .hmj-content .cont-right .notice {
+    .cart .hmj-content .cont-right .caution {
         position: relative;
         border-top:1px solid #ccc;
         margin: 20px -20px 0;
         padding:32px 20px 60px;
     }
-    .cart .hmj-content .cont-right .notice:before {
+    .cart .hmj-content .cont-right .caution:before {
         content: '';
         display: block;
         position: absolute;
@@ -452,10 +427,6 @@ h3.title {
 .order .mo-toggle .item .cont.payment {
     margin-bottom:0;
 }
-.order .cont-right .mo-toggle {
-    padding:20px;
-    border: 1px solid #ccc;    
-}
 .order .delivery-info .btn-tbl {
     position: absolute;
     top: 0;
@@ -466,8 +437,6 @@ h3.title {
 }
 .order .payment .check-group {
     margin-top:40px;
-    padding-top:20px;
-    border-top:1px solid #ccc;
 }
 .order .payment .cta-outer {
     margin-top:40px;
@@ -517,15 +486,14 @@ h3.title {
     .order.hmj-container .hmj-content .cont-outer {
         padding-bottom:40px;
     }
+    .hmj-content .cont-right > .inside-type.mo-toggle {
+        padding:0;
+    }
     .order .mo-toggle > .item {
         margin-top:20px;
     }
     .order .cont-center .mo-toggle .item:first-child {
         margin-top:10px;
-    }
-    .order .cont-right .mo-toggle {
-        padding:0;
-        border:none;
     }
     .order .delivery-info li.default {
         margin-bottom:20px;
@@ -551,7 +519,7 @@ h3.title {
     }
     .order .payment .check-group {
         margin: 40px -20px 0;
-        padding:20px 20px 0 ;    
+        padding:0 20px 0 ;    
     }
 }
 
@@ -617,14 +585,14 @@ h3.title {
 }
 .order .order-info .payment {
     display: table;
+    width:100%;
 }
 .order .order-info .payment > * {
     display: table-cell;
-    font-weight:700;
 }
 .order .order-info .payment dd {
-    padding-left:40px;
-    color:#777;
+    text-align:right;
+    font-weight:300;
 }
 .order .cont-outer.mincase .cta-outer:last-child {
     margin-top:60px;
@@ -677,13 +645,6 @@ h3.title {
         text-align:left;
     }
     .order .complete-area .order-number dd {
-        text-align:right;
-    }
-    .order .order-info .payment {
-        width:100%;
-    }
-    .order .order-info .payment dd {
-        padding-left:0;
         text-align:right;
     }
 }
@@ -748,6 +709,7 @@ ul.shipping-list li.default .shipping-flag{
 }
 .shipping-list .detail .address {
 	line-height: 1.5;
+    font-weight:300;
 }
 .shipping-list .cta-outer {
 	position: absolute;
