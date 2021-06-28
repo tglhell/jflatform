@@ -1896,6 +1896,14 @@ textarea:disabled {
 	vertical-align: middle;
 	border-top: 2px solid #00AAD2;
 }
+.fix-center .layer-popup-cont {
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	position: fixed;
+	top: 40px;
+	bottom: 40px;
+	left: 50%;
+}
 .layer-popup-cont.pop-small {
 	width: 500px;
 }
@@ -1906,21 +1914,16 @@ textarea:disabled {
 	outline: 1px solid #ccc;
 } */
 .layer-popup-body .layer-title {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 5;
-	padding: 0 80px 0 40px;
+	padding: 13px 80px 13px 40px;
 	border-bottom: 1px solid #ccc;
 	background-color: rgba(255, 255, 255, .9);
 	font-size: 18px;
-	line-height: 51px;
+	line-height: 1.5;
 }
 .layer-popup-body .layer-cont {
 	overflow-y: auto;
 	height: 100%;
-	padding: 72px 40px 40px;
+	padding: 20px 40px 40px;
 }
 .layer-popup-body .btn-close-popup {
 	position: absolute;
@@ -1982,12 +1985,10 @@ textarea:disabled {
 		width: calc(100% - 50px);
 	}
 	.layer-popup-body .layer-title {
-		height: 52px;
-		padding: 0 60px 0 20px;
-		line-height: 52px;
+		padding: 13px 60px 13px 20px;
 	}
 	.layer-popup-body .layer-cont {
-		padding: 72px 20px 20px;
+		padding: 20px;
 	}
 	.layer-popup-body .btn-close-popup {
 		top: 10px;
@@ -2006,6 +2007,13 @@ textarea:disabled {
 	}
 	.mo-full .layer-popup-cont:before {
 		content: none;
+	}
+	.fix-center .layer-popup-cont {
+		-webkit-transform: none;
+		transform: none;
+		left: 20px;
+		right: 20px;
+		width: auto;
 	}
 }
 
