@@ -1785,8 +1785,13 @@ textarea:disabled {
 	margin: 0 5px;
 	font-size: 14px;
 	color: #444;
-	line-height: 36px;
+	line-height: 0;
 	text-align: center;
+}
+.hmj-pagination [class*="btn-page"]:after {
+	content: '';
+	display: inline-block;
+	height: 1.65em;
 }
 .hmj-pagination .btn-page-prev,
 .hmj-pagination .btn-page-next {
@@ -1794,6 +1799,14 @@ textarea:disabled {
 	margin: 0 16px;
 	font-size: 0;
 	color: #000;
+}
+.hmj-pagination .btn-page-num.active {
+	color: #00aad2;
+	pointer-events: none;
+}
+.hmj-pagination .btn-page-prev.disabled,
+.hmj-pagination .btn-page-next.disabled {
+	pointer-events: none;
 }
 .hmj-pagination .btn-page-prev:before,
 .hmj-pagination .btn-page-next:before {
@@ -1814,12 +1827,15 @@ textarea:disabled {
 	right: 17px;
 	border-width: 1px 1px 0 0;
 }
-.hmj-pagination .btn-page-num.active {
-	color: #00aad2;
-	pointer-events: none;
+.hmj-pagination .btn-page-prev.disabled:before,
+.hmj-pagination .btn-page-next.disabled:before {
+	border-color: #ccc;
 }
 @media screen and (max-width: 1119px) {
 	.hmj-pagination [class*="btn-page"]:not(.btn-page-next) {
+		display: none;
+	}
+	.hmj-pagination .btn-page-next.disabled {
 		display: none;
 	}
 	.hmj-pagination .btn-page-next {
