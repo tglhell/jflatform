@@ -16,13 +16,13 @@
 
 <body>
 
-<div class="hmj-wrap order"> <!-- test 클래스는 제거 예정 : 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+<div class="hmj-wrap type2"> <!-- test 클래스는 제거 예정 : 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
 	<div class="skip-nav">
 		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
 	</div>
 
 	<!-- header -->
-	<div class="hmj-header hc-type2"><!-- 백버튼 있는타입 hc-type2 -->
+	<div class="hmj-header"><!-- 백버튼 있는타입 hc-type2 -->
 		<!-- header -->
 		<div class="header-cont">
 			<h1><a href="hmj_layout.html"><img src="../../assets/images/common/img_header_logo.png" alt="Hyundai Logo"></a></h1>
@@ -100,7 +100,7 @@
 </div>
 
 <!-- popShippingList -->
-<div class="layer-popup-wrap mo-full" data-pop-idx="popShippingRegist" style="display: block;">
+<div class="layer-popup-wrap mo-full" data-pop-idx="popShippingRegist">
     <div class="layer-popup-body">
         <div class="layer-popup-cont">
             <h1 class="layer-title">お届け先の登録</h1>
@@ -140,9 +140,9 @@
                             <p class="error-msg lbl-type">error text</p>
                         </li>
                         <li>
-                            <div class="inp-outer-box mo-full">
+                            <div class="inp-outer-box">
                                 <label for="inpName02_01">お名前(フリガナ) <span class="required">*</span></label>
-                                <div class="inp-group-box">
+                                <div class="inp-group-box mo-full">
                                     <div class="inp-area">
                                         <input type="text" id="inpName02_01" class="inp-item" placeholder="きむら">
                                         <button class="inp-close"></button>
@@ -226,5 +226,10 @@
     </div>
 </div>
 
+<script>
+	jQuery.event.add(window, 'load', function () {
+		$('.pop-open').trigger('click');
+	});
+</script>
 </body>
 </html>

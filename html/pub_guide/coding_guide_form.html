@@ -40,9 +40,9 @@
 				, buttonText: "달력 선택" //버튼에 마우스 갖다 댔을 때 표시되는 텍스트                
 				, yearSuffix: "년" //달력의 년도 부분 뒤에 붙는 텍스트
 				, monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'] //달력의 월 부분 텍스트
-				, monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 Tooltip 텍스트
-				, dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'] //달력의 요일 부분 텍스트
-				, dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'] //달력의 요일 부분 Tooltip 텍스트
+				, monthNames: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'] //달력의 월 부분 Tooltip 텍스트
+				, dayNamesMin: ['日', '月', '火', '水', '木', '金', '土'] //달력의 요일 부분 텍스트
+				, dayNames: ['日', '月', '火', '水', '木', '金', '土'] //달력의 요일 부분 Tooltip 텍스트
 				//,minDate: "-1M" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
 				//,maxDate: "+1M" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)                    
 			});
@@ -730,9 +730,9 @@
 			</div>
 
 
-			<h4 class="btm-border">- 파일찾기</h4>
+			<h4 class="btm-border">- 파일찾기 (작업중)</h4>
 			<div class="conIn_tip">
-				
+				추후 디자인 여부에 따라 수정예정
 			</div>
 
 			<div class="filebox">
@@ -740,6 +740,19 @@
 				<label for="ex_filename">업로드</label>
 				<input type="file" id="ex_filename" class="upload-hidden">
 			</div>
+
+
+			<h4 class="btm-border">- 달력 (작업중)</h4>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div id="datePicker" class="date-picker"></div>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				시승신청, 충전, 정비 등 예약에서 사용
+			</div>
+
+			<div id="datePicker" class="date-picker"></div>
 
 			<!-- //form -->
 
