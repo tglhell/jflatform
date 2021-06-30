@@ -664,6 +664,9 @@ ul.shipping-list li.default .shipping-flag{
 .shipping-list .radio span.tit {
 	font-size: 16px;
 }
+.ios .shipping-list .radio span.tit {
+	line-height: 28px;
+}
 .shipping-list .detail {
 	margin-top: 22px;
 }
@@ -707,9 +710,6 @@ ul.shipping-list li.default .shipping-flag{
 }
 
 /* FindPostalCode */
-.layer-popup-cont.postal-code {
-    padding-bottom:234px;
-}
 .layer-popup-cont.postal-code .layer-cont {
     padding-bottom:0;
 }
@@ -759,11 +759,18 @@ ul.shipping-list li.default .shipping-flag{
     font-weight:300;
 }
 .layer-popup-wrap .postal-code .bottom-fixed {
-    position: absolute;
-    bottom: 40px;
+    position: fixed;
+    bottom: 0;
     left: 0;
     right: 0;
-    padding: 0 20px;      
+    padding: 0 20px;
+	background-color: #fff;
+}
+.layer-popup-wrap .postal-code .bottom-fixed .hmj-pagination {
+    margin-top:20px;
+}
+.layer-popup-wrap .postal-code .bottom-fixed .cta-outer {
+    margin-bottom:40px;
 }
 .layer-popup-wrap .postal-code .no-search {
     text-align:center;
@@ -781,16 +788,17 @@ ul.shipping-list li.default .shipping-flag{
     font-weight:300;
 }
 @media screen and (max-width: 1119px) {
-    .layer-popup-cont.postal-code {
-        padding-bottom:200px;
+    .layer-popup-wrap .postal-code .bottom-fixed .hmj-pagination {
+        margin-top:10px;
     }
-    .layer-popup-wrap .postal-code .bottom-fixed {
-        bottom: 20px;   
+    .layer-popup-wrap .postal-code .bottom-fixed .cta-outer {
+        margin-bottom:20px;
     }
     .layer-popup-wrap .postal-code .search-result {
         margin:20px -20px 0;
     }
     .layer-popup-wrap .postal-code .no-search .icon {
         margin-top:60px;
+        margin-bottom:16px;
     }
 }
