@@ -144,8 +144,10 @@
 </div>
 
 <script>
-	jQuery.event.add(window, 'load', function () {
-		$('.pop-open').trigger('click');
+	$(function(){
+		setTimeout(function () {
+			$('.pop-open').trigger('click');
+		}, 100);
 	});
 </script>
 </body>

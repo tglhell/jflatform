@@ -99,7 +99,7 @@
 	<!--//footer -->
 </div>
 
-<!-- popShippingList -->
+<!-- findPostalCode -->
 <div class="layer-popup-wrap mo-full fix-center" data-pop-idx="findPostalCode">
     <div class="layer-popup-body">
         <div class="layer-popup-cont postal-code">
@@ -145,11 +145,6 @@
 						<a href="#" class="btn-page-num">5</a>
 						<a href="#" class="btn-page-next">もっと見る(1/3)</a>
 					</div>
-					<div class="bottom-fixed">
-                        <div class="cta-outer">
-                            <button class="btn btn-middle btn-type2"><span>適用</span></button>
-                        </div>
-                    </div>
                 </div>
                 <!-- no search -->
                 <div class="no-search" style="display:none;">
@@ -159,14 +154,23 @@
                 <!-- no search -->
                 <!-- //search after -->
             </div>
+			<!-- search after -->
+			<div class="bottom-fixed">
+				<div class="cta-outer">
+					<button class="btn btn-middle btn-type2"><span>適用</span></button>
+				</div>
+			</div>
+			<!-- //search after -->
             <button class="btn-close-popup btn-close">close</button>
         </div>
     </div>
 </div>
 
 <script>
-	jQuery.event.add(window, 'load', function () {
-		$('.pop-open').trigger('click');
+	$(function(){
+		setTimeout(function () {
+			$('.pop-open').trigger('click');
+		}, 100);
 	});
 </script>
 

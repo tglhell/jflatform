@@ -262,6 +262,9 @@ jQuery.event.add(window, 'load', function () {
 				popWrap.find('.layer-cont').css('height', $('.layer-popup-body').height() - (popHeaderHgt + popBottomHgt));
 			}
 		}
+		// console.log(popHeaderHgt)
+		// console.log(popBottomHgt)
+		// console.log($('.layer-popup-body').height() - (popHeaderHgt + popBottomHgt) + 80)
 	}
 
 	//toggle common
