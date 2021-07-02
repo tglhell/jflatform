@@ -12,18 +12,18 @@
 	
 	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../assets/js/common.js"></script>
 	<script type="text/javascript" src="../assets/js/main.js"></script>
-	<!-- <script type="text/javascript" src="../assets/js/main2.js"></script> -->
 	<style>
-		*:not(.ie11) .main-top-cont video {
+		.main-top-cont video {
 			width: 100%;
 			max-width: none;
 			height: 100vh;
 			object-fit: cover;
 		}
 		.ie11 .main-top-cont video {
-			-webkit-transform: translateX(-50%) translateY(-50%);
-			transform: translateX(-50%) translateY(-50%);
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -31,10 +31,23 @@
 			min-height: 100%;
 			width: auto;
 			height: auto;
-		}	
+		}
+		.btn-test {
+			position: fixed;
+			bottom: 50px;
+			right: 150px;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: #000;
+		}
+		.btn-test  span {
+			color: #fff;
+		}
 	</style>
 	<script>
-		$(function(){
+		$(function () {
+			const videoItem = $('.main-top-cont video');
 			function checkAgent () {
 				let UserAgent = navigator.platform;
 				let agentBrowser = navigator.userAgent.toLowerCase();
@@ -48,6 +61,29 @@
 				}
 			}
 			checkAgent ();
+
+			setObj(function(){
+				videoItem.get(0).currentTime = videoTimeArr[0];
+				videoItem.get(0).play();
+				videoItem.on('timeupdate', function () {
+					let currentPos = videoItem[0].currentTime;
+					if (currentPos >= videoTimeArr[1]) {
+						videoItem.get(0).pause();
+					}
+				});
+			}, fadeVal);
+
+			$('.btn-test').click(function () {
+				videoItem.off();
+				videoItem.get(0).currentTime = videoTimeArr[2];
+				videoItem.get(0).play();
+				videoItem.on('timeupdate', function () {
+					let currentPos = videoItem[0].currentTime;
+					if (currentPos >= videoTimeArr[3]) {
+						videoItem.get(0).pause();
+					}
+				});
+			});
 		});
 	</script>
 </head>
@@ -74,8 +110,12 @@
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
-								<video autoplay="autoplay" loop="loop" muted="muted" playsinline>
+								<!-- <video id="videoTest" autoplay="autoplay" loop="loop" muted="muted" playsinline> -->
+								<video id="videoTest" loop="loop" muted="muted" playsinline poster="../../assets/images/@mov_poster.jpg">
+									<!-- <source src="../../assets/media/mov_sample.mov#t=0,4.3"> -->
+									<!-- <source src="../../assets/media/mov_sample.mov#t=11.7,16"> -->
 									<source src="../../assets/media/mov_sample.mov">
+									<!-- <source src="../../assets/media/All-New Hyundai NEXO - Driving Trailer.mp4#t=0,5"> -->
 								</video>
 							</div>
 						</div>
@@ -86,6 +126,7 @@
 						<div class="swiper-pagination"></div>
 					</div>
 				</div>
+				<button class="btn-test"><span>Go</span></button>
 			</div>
 		</div>
 	</div>
