@@ -6,22 +6,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>HMJ 온라인 판매 사이트 구축</title>
 
-	<!-- <link rel="stylesheet" href="../assets/css/lib/swiper.min.css">
-    <link rel="stylesheet" href="../assets/css/lib/customlib.css"> -->
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/main.css">
 	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
 	
 	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
-	<!-- <script type="text/javascript" src="../assets/js/common.js"></script> -->
 	<script type="text/javascript" src="../assets/js/main.js"></script>
 	<script type="text/javascript" src="../assets/js/main2.js"></script>
-	<!-- <script type="text/javascript" src="../assets/js/lib/swiper.min.js"></script>
-	<script type="text/javascript" src="../assets/js/lib/customlib.js"></script> -->
 	<style>
 		*:not(.ie11) .main-top-cont video {
 			width: 100%;
+			max-width: none;
 			height: 100vh;
 			object-fit: cover;
 		}
@@ -30,12 +26,36 @@
 			transform: translateX(-50%);
 			position: relative;
 			top: 0;
-			bottom: 0;
 			left: 50%;
 			height: auto;
-			max-width: none;
+		}
+		@media screen and (max-width: 1919px) {
+			.ie11 .main-top-cont video {
+				-webkit-transform: translateX(-50%) translateY(-50%);
+				transform: translateX(-50%) translateY(-50%);
+				position: absolute;
+				top: 50%;
+				height: auto;
+			}
 		}
 	</style>
+	<script>
+		$(function(){
+			function checkAgent () {
+				let UserAgent = navigator.platform;
+				let agentBrowser = navigator.userAgent.toLowerCase();
+				if (UserAgent.match(/i(Phone|Pod)/i) != null) {
+					$('html').addClass('ios');
+				} else {
+					$('html').addClass('android');
+				}
+				if ((navigator.appName == 'Netscape' && agentBrowser.indexOf('trident') != -1) || (agentBrowser.indexOf("msie") != -1)) {
+					$('html').addClass('ie11');
+				}
+			}
+			checkAgent ();
+		});
+	</script>
 </head>
 
 <body>
@@ -49,7 +69,6 @@
 	<div class="hmj-header">
 		<!-- <h1><img src="images/logo_header.png" alt="로고"></h1>
 		<div><em>HMJ 온라인 판매 사이트 구축</em></div> -->
-		<img src="../../assets/images/prototype/img_movie_b.png" alt="header">
 	</div>
 	<!--//header -->
 
