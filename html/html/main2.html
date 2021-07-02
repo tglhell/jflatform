@@ -13,7 +13,7 @@
 	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
 	<script type="text/javascript" src="../assets/js/main.js"></script>
-	<script type="text/javascript" src="../assets/js/main2.js"></script>
+	<!-- <script type="text/javascript" src="../assets/js/main2.js"></script> -->
 	<style>
 		*:not(.ie11) .main-top-cont video {
 			width: 100%;
@@ -22,22 +22,16 @@
 			object-fit: cover;
 		}
 		.ie11 .main-top-cont video {
-			-webkit-transform: translateX(-50%);
-			transform: translateX(-50%);
-			position: relative;
-			top: 0;
+			-webkit-transform: translateX(-50%) translateY(-50%);
+			transform: translateX(-50%) translateY(-50%);
+			position: absolute;
+			top: 50%;
 			left: 50%;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
 			height: auto;
-		}
-		@media screen and (max-width: 1919px) {
-			.ie11 .main-top-cont video {
-				-webkit-transform: translateX(-50%) translateY(-50%);
-				transform: translateX(-50%) translateY(-50%);
-				position: absolute;
-				top: 50%;
-				height: auto;
-			}
-		}
+		}	
 	</style>
 	<script>
 		$(function(){
