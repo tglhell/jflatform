@@ -163,19 +163,19 @@ jQuery.event.add(window, 'load', function () {
 		$(".all input").prop("checked", is_checked);
 	});
 
-	$('.layer-cont').on('touchstart', function(event) {
-		lastY = event.touches[0].clientY;
+	$('.layer-cont').on('touchstart', function(e) {
+		lastY = e.touches[0].clientY;
 	});
 
-	$('.layer-cont').on('touchmove', function(event) {
-		let top = event.touches[0].clientY;
-		let scrollTop = $(event.currentTarget).scrollTop();
+	$('.layer-cont').on('touchmove', function(e) {
+		let top = e.touches[0].clientY;
+		let scrollTop = $(e.currentTarget).scrollTop();
 		let direction = (lastY - top) < 0 ? 'up' : 'down';
 		
 		if (scrollTop <= 0 && direction == 'up') {
-			event.preventDefault();
-		} else if (scrollTop >= (event.currentTarget.scrollHeight - $(window).outerHeight()) && direction == 'down') {
-			event.preventDefault();
+			e.preDefault();
+		} else if (scrollTop >= (e.currentTarget.scrollHeight - $(window).outerHeight()) && direction == 'down') {
+			e.preventDefault();
 		}
 		lastY = top;
 	});
