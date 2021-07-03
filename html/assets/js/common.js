@@ -173,7 +173,7 @@ jQuery.event.add(window, 'load', function () {
 		let direction = (lastY - top) < 0 ? 'up' : 'down';
 		
 		if (scrollTop <= 0 && direction == 'up') {
-			e.preDefault();
+			e.preventDefault();
 		} else if (scrollTop >= (e.currentTarget.scrollHeight - $(window).outerHeight()) && direction == 'down') {
 			e.preventDefault();
 		}
