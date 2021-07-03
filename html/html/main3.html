@@ -32,7 +32,46 @@
 			width: auto;
 			height: auto;
 		}
+		.btn-test {
+			position: fixed;
+			bottom: 50px;
+			right: 150px;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: #000;
+		}
+		.btn-test  span {
+			color: #fff;
+		}
 	</style>
+	<script>
+		$(function () {
+			const videoItem = $('.main-top-cont video');
+			setObj(function(){
+				videoItem.get(0).currentTime = videoTimeArr[0];
+				videoItem.get(0).play();
+				videoItem.on('timeupdate', function () {
+					let currentPos = videoItem[0].currentTime;
+					if (currentPos >= videoTimeArr[1]) {
+						videoItem.get(0).pause();
+					}
+				});
+			}, fadeVal);
+
+			$('.btn-test').click(function () {
+				videoItem.off();
+				videoItem.get(0).currentTime = videoTimeArr[2];
+				videoItem.get(0).play();
+				videoItem.on('timeupdate', function () {
+					let currentPos = videoItem[0].currentTime;
+					if (currentPos >= videoTimeArr[3]) {
+						videoItem.get(0).pause();
+					}
+				});
+			});
+		});
+	</script>
 </head>
 
 <body>
@@ -57,8 +96,12 @@
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
-								<video id="videoTest" autoplay="autoplay" loop="loop" muted="muted" playsinline>
-									<source src="../../assets/media/All-New Hyundai NEXO - Driving Trailer.mp4">
+								<!-- <video id="videoTest" autoplay="autoplay" loop="loop" muted="muted" playsinline> -->
+								<video id="videoTest" loop="loop" muted="muted" playsinline poster="../../assets/images/@mov_poster.jpg">
+									<!-- <source src="../../assets/media/mov_sample.mov#t=0,4.3"> -->
+									<!-- <source src="../../assets/media/mov_sample.mov#t=11.7,16"> -->
+									<source src="../../assets/media/mov_sample.mov">
+									<!-- <source src="../../assets/media/All-New Hyundai NEXO - Driving Trailer.mp4#t=0,5"> -->
 								</video>
 							</div>
 						</div>
@@ -69,6 +112,7 @@
 						<div class="swiper-pagination"></div>
 					</div>
 				</div>
+				<button class="btn-test"><span>Go</span></button>
 			</div>
 		</div>
 	</div>
