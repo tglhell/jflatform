@@ -55,12 +55,12 @@
 					let currentPos = videoItem[0].currentTime;
 					if (currentPos >= videoTimeArr[1]) {
 						videoItem.get(0).pause();
+						videoItem.off();
 					}
 				});
 			}, fadeVal);
 
 			$('.btn-test').click(function () {
-				videoItem.off();
 				videoItem.get(0).currentTime = videoTimeArr[2];
 				videoItem.get(0).play();
 				videoItem.on('timeupdate', function () {
