@@ -34,7 +34,7 @@ $(function () {
 		sampleSwp.on('reachEnd', function(){
 			setObj(function(){
 				$('.btn-close-popup').trigger('click');
-			}, fadeVal);
+			}, secVal[4]);
 		});
 	}
 });

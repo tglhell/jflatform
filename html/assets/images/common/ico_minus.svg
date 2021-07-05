@@ -2,8 +2,10 @@
     <g fill="none" fill-rule="evenodd">
         <g>
             <g>
-                <path d="M0 0H24V24H0z" transform="translate(-246.000000, -365.000000) translate(246.000000, 365.000000)"/>
-                <path fill="#000" d="M8 11H16V12.3H8z" transform="translate(-246.000000, -365.000000) translate(246.000000, 365.000000)"/>
+                <g>
+                    <path d="M0 0H24V24H0z" transform="translate(-246.000000, -1449.000000) translate(20.000000, 1393.000000) translate(226.000000, 56.000000)"/>
+                    <path fill="#000" d="M8 11H16V12.3H8z" transform="translate(-246.000000, -1449.000000) translate(20.000000, 1393.000000) translate(226.000000, 56.000000)"/>
+                </g>
             </g>
         </g>
     </g>

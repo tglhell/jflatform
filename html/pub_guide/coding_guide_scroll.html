@@ -51,6 +51,92 @@
 		.btn {
 			margin-top: 30px;
 		}
+
+		/* sample-swiper 02 */
+		.sample-swiper-num02 img {
+			width: 50%;
+		}
+		.sample-swiper-num02 .swiper-info-cont {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 50%;
+			padding: 30px;
+		}
+		.sample-swiper-num02 .swiper-info-cont p {
+			font-size: 14px;
+		}
+		.sample-swiper-num02 .swiper-info-cont .s-info-text {
+			margin-top: 60px;
+		}
+		.sample-swiper-num02 [data-ir-idx="9"] {
+			transition-delay: .2s;
+		}
+		.sample-swiper-num02 [data-ir-idx="10"] {
+			transition-delay: .7s;
+		}
+		.sample-swiper-num02 [data-ir-idx="11"] {
+			transition-delay: 1.2s;
+		}
+		.sample-swiper-num02 .swiper-slide.ir-animate[data-ir] {
+			-webkit-transition: all .5s ease-in-out;
+			transition: all .5s ease-in-out;
+		}
+		.sample-swiper-num02 .swiper-slide.ir-animate img[data-ir],
+		.sample-swiper-num02 .swiper-slide.ir-animate .s-info-tit[data-ir],
+		.sample-swiper-num02 .swiper-slide.ir-animate .s-info-text[data-ir] {
+			-webkit-transition: all .5s ease-in-out;
+			transition: all .5s ease-in-out;
+			-webkit-transform: translateY(100px);
+			transform: translateY(100px);
+		}
+		.sample-swiper-num02 .swiper-slide.ir-animate img[data-ir-idx],
+		.sample-swiper-num02 .swiper-slide.ir-animate .s-info-tit[data-ir-idx],
+		.sample-swiper-num02 .swiper-slide.ir-animate .s-info-text[data-ir-idx] {
+			-webkit-transition: all .5s ease-in-out;
+			transition: all .5s ease-in-out;
+			-webkit-transform: translateY(0px);
+			transform: translateY(0px);
+		}
+		.sample-swiper-num02 .swiper-slide.ir-animate.swiper-slide-active img[data-ir-idx="9"] {
+			transition-delay: .2s;
+		}
+		.sample-swiper-num02 .swiper-slide.ir-animate.swiper-slide-active .swiper-info-cont [data-ir-idx="10"] {
+			transition-delay: .7s;
+		}
+		.sample-swiper-num02 .swiper-slide.ir-animate.swiper-slide-active .swiper-info-cont [data-ir-idx="11"] {
+			transition-delay: 1.2s;
+		}
+		.sample-swiper-num02 .swiper-slide:not(.ir-animate) img.ir-animate,
+		.sample-swiper-num02 .swiper-slide:not(.ir-animate) .s-info-tit.ir-animate,
+		.sample-swiper-num02 .swiper-slide:not(.ir-animate) .s-info-text.ir-animate,
+		.sample-swiper-num02 .swiper-slide img.ir-animate[data-ir-idx="9"],
+		.sample-swiper-num02 .swiper-slide .s-info-tit.ir-animate[data-ir-idx="10"],
+		.sample-swiper-num02 .swiper-slide .s-info-text.ir-animate[data-ir-idx="11"] {
+			-webkit-transition: all .5s ease-in-out;
+			transition: all .5s ease-in-out;
+			-webkit-transform: translateY(100px);
+			transform: translateY(100px);
+		}
+		.sample-swiper-num02 .swiper-slide:not(.ir-animate).swiper-slide-active img.ir-animate,
+		.sample-swiper-num02 .swiper-slide:not(.ir-animate).swiper-slide-active .s-info-tit.ir-animate,
+		.sample-swiper-num02 .swiper-slide:not(.ir-animate).swiper-slide-active .s-info-text.ir-animate,
+		.sample-swiper-num02 .swiper-slide.swiper-slide-active img.ir-animate[data-ir-idx="9"],
+		.sample-swiper-num02 .swiper-slide.swiper-slide-active .s-info-tit.ir-animate[data-ir-idx="10"],
+		.sample-swiper-num02 .swiper-slide.swiper-slide-active .s-info-text.ir-animate[data-ir-idx="11"] {
+			-webkit-transition: all .5s ease-in-out;
+			transition: all .5s ease-in-out;
+			-webkit-transform: translateY(0px);
+			transform: translateY(0px);
+		}
+		.sample-swiper-num02 .swiper-slide:not(.ir-animate).swiper-slide-active .s-info-tit.ir-animate,
+		.sample-swiper-num02 .swiper-slide.swiper-slide-active .s-info-tit.ir-animate[data-ir-idx="10"] {
+			transition-delay: .5s;
+		}
+		.sample-swiper-num02 .swiper-slide:not(.ir-animate).swiper-slide-active .s-info-text.ir-animate,
+		.sample-swiper-num02 .swiper-slide.swiper-slide-active .s-info-text.ir-animate[data-ir-idx="11"] {
+			transition-delay: 1s;
+		}
 	</style>
 	<script>
 		$(function(){
@@ -175,12 +261,55 @@
 					</div>
 					<div class="sample-cont ir-animate">
 						This page is a sample page 6.
+						<div class="sample-img-outer">
+							<div class="swiper-outer-box sample-swiper-num02">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide ir-animate">
+											<img class="ir-animate" src="../assets/images/@img_scroll_sample01.jpg" alt="sample01">
+											<div class="swiper-info-cont">
+												<p class="s-info-tit ir-animate">swiper title</p>
+												<p class="s-info-text ir-animate">swiper cont text</p>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<img  class="ir-animate" src="../assets/images/@img_scroll_sample02.jpg" alt="sample02">
+											<div class="swiper-info-cont">
+												<p class="s-info-tit ir-animate">swiper title</p>
+												<p class="s-info-text ir-animate">swiper cont text</p>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<img class="ir-animate" src="../assets/images/@img_scroll_sample03.jpg" alt="sample03">
+											<div class="swiper-info-cont">
+												<p class="s-info-tit ir-animate">swiper title</p>
+												<p class="s-info-text ir-animate">swiper cont text</p>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<img class="ir-animate" src="../assets/images/@img_scroll_sample04.jpg" alt="sample04">
+											<div class="swiper-info-cont">
+												<p class="s-info-tit ir-animate">swiper title</p>
+												<p class="s-info-text ir-animate">swiper cont text</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+					</div>
+					<div class="sample-cont ir-animate">
+						This page is a sample page 7.
+					</div>
+					<div class="sample-cont ir-animate">
+						This page is a sample page 8.
 						<div class="cta-outer">
 							<button class="btn pop-open scr-fix-btn" data-pop-idx="1"><span>Run from current location</span></button>
 						</div>
 					</div>
 					<div class="sample-cont ir-animate">
-						This page is a sample page 7.
+						This page is a sample page 9.
 					</div>
 				</div>
 			</div>
@@ -270,8 +399,41 @@
 			sampleSwp.on('reachEnd', function(){
 				setObj(function(){
 					$('.btn-close-popup').trigger('click');
-				}, fadeVal);
+				}, secVal[4]);
 			});
+		}
+
+		if ($('.sample-swiper-num02').length == 1) {
+			let swpOpt2 = {},
+			slideLength2 = $('.sample-swiper-num02 .swiper-slide').length;
+			if (slideLength2 == 1) {
+				swpOpt2 = {
+					allowSlidePrev: false,
+					allowSlideNext: false,
+					simulateTouch: false
+				}
+				$('.sample-swiper-num02 [class*="swiper-button"]').hide();
+			} else {
+				swpOpt2 = {
+					navigation: {
+						nextEl: '.sample-swiper-num02 .swiper-button-next',
+						prevEl: '.sample-swiper-num02 .swiper-button-prev',
+					},
+					pagination: {
+						el: '.sample-swiper-num02 .swiper-pagination',
+						clickable: true,
+					},
+					// slidesPerView: 'auto',
+					// centeredSlides: true,
+					simulateTouch: true,
+					speed: 300,
+					loop: false,
+					spaceBetween: 0,
+					observer: true,
+					observeParents: true,
+				}
+			}
+			let sampleSwp2 = new Swiper('.sample-swiper-num02 .swiper-container', swpOpt2);
 		}
 	});
 </script>

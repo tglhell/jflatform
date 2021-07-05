@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>HMJ 온라인 판매 사이트 구축</title>
+
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/order.css">
+	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../../assets/js/common.js"></script>
+</head>
+
+<body>
+
+<div class="hmj-wrap type2"> <!-- test 클래스는 제거 예정 : 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+	<div class="skip-nav">
+		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
+	</div>
+
+	<!-- header -->
+	<div class="hmj-header"><!-- 백버튼 있는타입 hc-type2 -->
+		<!-- header -->
+		<div class="header-cont">
+			<h1><a href="hmj_layout.html"><img src="../../assets/images/common/img_header_logo.png" alt="Hyundai Logo"></a></h1>
+
+			<div class="gnb-menu-outer">
+				<ul class="gnb-menu-list">
+					<li>
+						<button><span>ブランド</span></button>
+					</li>
+					<li>
+						<button><span>IONIQ5</span></button>
+					</li>
+					<li>
+						<button><span>NEXO</span></button>
+					</li>
+					<li>
+						<button><span>購買</span></button>
+					</li>
+					<li>
+						<button><span>サービス</span></button>
+					</li>
+					<li>
+						<button><span>コンテンツ</span></button>
+					</li>
+					<li>
+						<button><span>ストア</span></button>
+					</li>
+					<li>
+						<button><span>カスタマーセンター</span></button>
+					</li>
+				</ul>
+			</div>
+
+			<div class="gnb-right-menu">
+				<ul class="gnb-right-list">
+					<li>
+						<button class="btn-cart"><span><img src="../../assets/images/common/ico_cart.png" alt="장바구니"></span></button>
+					</li>
+					<li>
+						<button class="btn-search"><span><img src="../../assets/images/common/ico_search.png" alt="검색"></span></button>
+					</li>
+					<li>
+						<button class="btn-mypage"><span><img src="../../assets/images/common/ico_mypage.png" alt="마이페이지"></span></button>
+					</li>
+				</ul>
+			</div>
+		</div>		
+		<div class="sub-cont">
+			<div class="history">
+				<span>HOME</span>
+				<span>カート</span>
+			</div>
+			<button type="button" class="back-page">Back page</button>
+			<div class="page-title">カート</div>
+		</div>
+		<!-- //header -->
+	</div>
+	<!--//header -->
+
+	<!-- container -->
+	<div id="hmjContainer" class="hmj-container" style="z-index:100;">
+		<div class="hmj-content">
+			<div class="cont-outer">
+                <button type="button" class="btn pop-open" data-pop-idx="popShippingRegist"><span>배송지등록</span></button>
+            </div>
+		</div>
+	</div>
+	<!--//container -->
+
+	<!-- footer -->
+	<div class="hmj-footer">
+		<img src="../../assets/images/@footer.jpg" alt="footer">
+	</div>
+	<!--//footer -->
+</div>
+
+<!-- popShippingList -->
+<div class="layer-popup-wrap mo-full" data-pop-idx="popShippingRegist">
+    <div class="layer-popup-body">
+        <div class="layer-popup-cont">
+            <h1 class="layer-title">お届け先の登録</h1>
+            <div class="layer-cont">
+                <div class="shipping-list">
+                    <div class="inp-slice-flex">
+                        <label class="radio"><input type="radio" name="newShipping" checked><span class="tit">自宅</span></label>
+                        <label class="radio"><input type="radio" name="newShipping"><span class="tit">その他</span></label>
+                    </div>
+
+                    <!-- 주소입력 -->
+                    <ul class="form-list">
+                        <li>
+                            <div class="inp-outer-box">
+                                <label for="inpTxt01">住所名(選択)</label>
+                                <div class="inp-area">
+                                    <input type="text" id="inpTxt01" class="inp-item" placeholder="住所名を入力">
+                                    <button class="inp-close"></button>
+                                </div>
+                            </div>
+                            <p class="error-msg lbl-type">error text</p>
+                        </li>
+                        <li>
+                            <div class="inp-outer-box">
+                                <label for="inpName01_01">お名前 <span class="required">*</span></label>
+                                <div class="inp-group-box mo-full">
+                                    <div class="inp-area">
+                                        <input type="text" id="inpName01_01" class="inp-item" placeholder="木村">
+                                        <button class="inp-close"></button>
+                                    </div>
+                                    <div class="inp-area">
+                                        <input type="text" id="inpName01_02" class="inp-item" placeholder="拓哉">
+                                        <button class="inp-close"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="error-msg lbl-type">error text</p>
+                        </li>
+                        <li>
+                            <div class="inp-outer-box">
+                                <label for="inpName02_01">お名前(フリガナ) <span class="required">*</span></label>
+                                <div class="inp-group-box mo-full">
+                                    <div class="inp-area">
+                                        <input type="text" id="inpName02_01" class="inp-item" placeholder="きむら">
+                                        <button class="inp-close"></button>
+                                    </div>
+                                    <div class="inp-area">
+                                        <input type="text" id="inpName02_02" class="inp-item" placeholder="たくや">
+                                        <button class="inp-close"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="error-msg lbl-type">error text</p>
+                        </li>
+                        <li>
+                            <div class="inp-outer-box">
+                                <label for="inpNum01_01">電話番号 <span class="required">*</span></label>
+                                <div class="inp-slice-box">
+                                    <div class="inp-area">
+                                        <input type="number" id="inpNum01_01" class="inp-item" placeholder="080">
+                                        <button class="inp-close"></button>
+                                    </div>
+                                    <span class="inp-hpn">-</span>
+                                    <div class="inp-area">
+                                        <input type="number" id="inpNum01_02" class="inp-item" placeholder="1234">
+                                        <button class="inp-close"></button>
+                                    </div>
+                                    <span class="inp-hpn">-</span>
+                                    <div class="inp-area">
+                                        <input type="number" id="inpNum01_03" class="inp-item" placeholder="5678">
+                                        <button class="inp-close"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="error-msg lbl-type">error text</p>
+                        </li>
+                        <li>
+                            <div class="inp-outer-box post-type">
+                                <label for="inpNum01_01">住所 <span class="required">*</span></label>
+                                <div class="inp-group-box">
+                                    <div class="inp-btn-box">
+                                        <div class="inp-area">
+                                            <input type="text" class="inp-item" placeholder="〒" readonly>
+                                            <button class="inp-close"></button>
+                                        </div>
+                                        <button class="btn btn-middle btn-type2"><span>郵便番号検索</span></button>
+                                    </div>
+                                    <div class="inp-area">
+                                        <input type="text" class="inp-item" placeholder="都道府県" readonly>
+                                        <button class="inp-close"></button>
+                                    </div>
+                                    <div class="inp-area">
+                                        <input type="text" class="inp-item" placeholder="市区町村" readonly>
+                                        <button class="inp-close"></button>
+                                    </div>
+                                    <div class="inp-area">
+                                        <input type="text" class="inp-item" placeholder="番地" readonly>
+                                        <button class="inp-close"></button>
+                                    </div>
+                                    <div class="inp-area">
+                                        <input type="text" class="inp-item" placeholder="ビル・マンション名(選択)">
+                                        <button class="inp-close"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="error-msg lbl-type">error text</p>
+                        </li>
+                    </ul>
+                    <!-- //주소등록 -->
+
+                    <div class="save-check">
+                        <label class="chk type3"><input type="checkbox"><span>基本お届け先として登録</span></label>
+                    </div>
+                </div>
+
+                <div class="cta-outer">
+                    <button class="btn btn-middle btn-close"><span>キャンセル</span></button>
+                    <button class="btn btn-type2 btn-middle"><span>登録</span></button>
+                </div>
+            </div>
+            <button class="btn-close-popup btn-close">close</button>
+        </div>
+    </div>
+</div>
+
+<script>
+	$(function(){
+		setTimeout(function () {
+			$('.pop-open').trigger('click');
+		}, 100);
+	});
+</script>
+</body>
+</html>

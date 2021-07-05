@@ -675,9 +675,9 @@ body {
 select.slt-box {
 	width: 100%;
 	height: 46px;
-	padding: 0 27px 0 10px;
+	padding: 0 30px 0 10px;
 	border: solid 1px #cccccc;
-	background: #fff url(../images/common/ico_slt_box.png) no-repeat right 9px center;
+	background: #fff url(../images/common/ico_slt_box.svg) no-repeat right 6px center;
 	font-size: 14px;
 	cursor: pointer;
 }
@@ -709,7 +709,7 @@ div.slt-box select {
 	color: #000;
 	border: solid 1px #cccccc;
 	background-color: #fff;	
-	padding: 13px 34px 13px 10px;
+	padding: 13px 30px 13px 10px;
 	min-height: 46px;
 }
 .slt-box .selected-value, .slt-box .select-items li {
@@ -726,13 +726,12 @@ div.slt-box select {
 .slt-box .selected-value::after {
 	position: absolute;
 	content: "";
-	top: 20px;
-    right: 15px;
-    width: 8px;
-    height: 6px;
+	top: 11px;
+    right: 6px;
+    width: 24px;
+    height: 24px;
 	display: inline-block;
-	background: url(../images/common/ico_slt_box.png) no-repeat center;
-	background-size: 8px auto;
+	background: url(../images/common/ico_slt_box.svg) no-repeat center;
 }
 .slt-box .selected-value.active::after {
 	transform: rotate(-180deg);
@@ -1092,13 +1091,13 @@ textarea:disabled {
 	line-height: 1;
 }
 .check-group li + li {
-	margin-top: 16px
+	margin-top: 10px
 }
 .check-group li.all {
 	margin-bottom: 20px;
 }
 .check-group li.normal {
-	margin-top: 5px;
+	margin-top: 10px;
 }
 
 /* radio */
@@ -1488,12 +1487,10 @@ textarea:disabled {
 	cursor: default;
 }
 .amount-calc.disabled .down{
-	background-image: url('../images/common/ico_minus_disabled.png');
-	background-size: 8px auto;
+	background-image: url('../images/common/ico_minus_disabled.svg');
 }
 .amount-calc.disabled .up{
-	background-image: url('../images/common/ico_plus_disabled.png');
-	background-size: 8px auto;
+	background-image: url('../images/common/ico_plus_disabled.svg');
 }
 
 /* align */
@@ -1606,6 +1603,7 @@ textarea:disabled {
 	transition: all .3s ease-in-out;
 	display: block;
 	padding: 7px 10px;
+	font-size: 14px;
 }
 .tab-box-list li a:active,
 .tab-box-list li a:focus {
@@ -1654,6 +1652,26 @@ textarea:disabled {
 	transition: all .5s ease-in-out;
 	opacity: 1;
 	z-index: 2;
+}
+@media screen and (max-width: 1119px) {
+	.tab-box-wrap.x-scroll .tab-box-list {
+		-ms-overflow-style: none;
+		overflow-x: auto;
+		display: inline-block;
+		font-size: 0;
+		white-space: nowrap;
+	}
+	.tab-box-wrap.x-scroll .tab-box-list::-webkit-scrollbar {
+		display: none;
+	}
+	.tab-box-wrap.x-scroll .tab-box-list li {
+		display: inline-block;
+		min-width: 272px;
+		width: auto;
+	}
+	.tab-box-wrap.x-scroll .tab-box-list li:first-child {
+		min-width: 273px;
+	}
 }
 
 /* caution */
@@ -1868,6 +1886,40 @@ textarea:disabled {
 	}
 }
 
+/* date picker */
+.date-picker .ui-widget.ui-widget-content {
+	margin: 0;
+	border: none;
+	padding: 0;
+	width: 100%;
+	max-width: 700px;
+}
+.date-picker .ui-datepicker table {
+	margin: 0;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+.date-picker .ui-datepicker thead {
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc;
+}
+.date-picker .ui-datepicker thead th {
+	color: #777;
+	font-size: 14px;
+	padding: 5px 0;
+}
+
+/* flag */
+.shipping-flag {
+    display: inline-block;
+    height:20px;
+    /* line-height:20px; */
+    padding:0 6px;
+    color:#00aad2;
+    font-size:12px;
+    border:1px solid #00aad2;
+}
+
 /* layer Popup */
 .layer-popup-wrap {
 	-webkit-overflow-scrolling: touch;
@@ -2004,36 +2056,100 @@ textarea:disabled {
 	}
 }
 
-/* flag */
-.shipping-flag {
-    display: inline-block;
-    height:20px;
-    /* line-height:20px; */
-    padding:0 6px;
-    color:#00aad2;
+/* FindPostalCode */
+.layer-popup-cont.postal-code .layer-cont {
+    padding-bottom:0;
+}
+.layer-popup-wrap .postal-code .top-text {
+    margin-bottom:26px;
+    font-size:16px;
+    font-weight:300;
+}
+.layer-popup-wrap .postal-code .search-result {
+    position: relative;
+    min-height:40px;
+    margin-top:20px;
+    padding: 10px 74px 10px 20px;
+    background-color: #f2f2f2;
+    word-break: break-word;   
+}
+.layer-popup-wrap .postal-code .search-result .fc-color2 {
+    font-weight:500;
+}
+.layer-popup-wrap .postal-code .search-result .count {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+.layer-popup-wrap .postal-code .info-text {
+    color:#444;
     font-size:12px;
-    border:1px solid #00aad2;
+    font-weight:300;
+    text-align:center;
+    padding:10px 0;
+    border-bottom:1px solid #ccc;
 }
-
-/* date picker */
-.date-picker .ui-widget.ui-widget-content {
-	margin: 0;
-	border: none;
-	padding: 0;
-	width: 100%;
-	max-width: 700px;
+.layer-popup-wrap .postal-code .search-list {
+    margin-bottom:18px;
 }
-.date-picker .ui-datepicker table {
-	margin: 0;
-	border: 1px solid #ccc;
+.layer-popup-wrap .postal-code .search-list li {
+    padding:20px 0;
+    border-bottom:1px solid #ccc;
+}
+.layer-popup-wrap .postal-code .search-list li .radio {
+    display: block;
+}
+.layer-popup-wrap .postal-code .search-list .radio span.text {
+    display: block;
+    margin-top:10px;
+    line-height:21px;
+    font-weight:300;
+}
+.layer-popup-wrap .postal-code .bottom-fixed {
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
 	background-color: #fff;
 }
-.date-picker .ui-datepicker thead {
-	background-color: #f2f2f2;
-	border-bottom: 1px solid #ccc;
+.ios .layer-popup-wrap .postal-code .bottom-fixed {
+	position: fixed;
 }
-.date-picker .ui-datepicker thead th {
-	color: #777;
-	font-size: 14px;
-	padding: 5px 0;
+.layer-popup-wrap .postal-code .bottom-fixed .hmj-pagination {
+    margin-top:20px;
 }
+.layer-popup-wrap .postal-code .bottom-fixed .cta-outer {
+    margin-bottom:40px;
+}
+.layer-popup-wrap .postal-code .no-search {
+    text-align:center;
+}
+.layer-popup-wrap .postal-code .no-search .icon {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 160px auto 20px;
+    background-image: url(../images/common/ico_no_search.svg);
+    font-size: 0;
+    text-indent: -99999px;
+}
+.layer-popup-wrap .postal-code .no-search .error-text {
+    font-weight:300;
+}
+@media screen and (max-width: 1119px) {
+    .layer-popup-wrap .postal-code .bottom-fixed .hmj-pagination {
+        margin-top:10px;
+    }
+    .layer-popup-wrap .postal-code .bottom-fixed .cta-outer {
+        margin-bottom:20px;
+    }
+    .layer-popup-wrap .postal-code .search-result {
+        margin:20px -20px 0;
+    }
+    .layer-popup-wrap .postal-code .no-search .icon {
+        margin-top:60px;
+        margin-bottom:16px;
+    }
+}
+

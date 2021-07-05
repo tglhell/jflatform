@@ -150,3 +150,17 @@
 .sample-swiper-num01 img {
     width: 100%;
 }
+
+.sample-swiper-num02 .swiper-container .swiper-slide {
+    width: 100%;
+    border: 1px solid #000;
+    background: rgba(0, 0, 0, .03);
+    box-sizing: border-box;
+}
+.sample-swiper-num02 .swiper-container .swiper-slide:hover {
+    background: rgba(0, 0, 0, .08);
+    text-shadow: 1px 2px 0 rgba(0, 0, 0, .1);
+}
+.sample-swiper-num02 img {
+    width: 100%;
+}
