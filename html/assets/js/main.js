@@ -7,7 +7,7 @@ $(function () {
 		let tScrIdx = $('.scr-item.active-idx').index();
 		if (!$('html, body').is(':animated')) {
 			if (e.originalEvent.wheelDelta < 0) {
-				$('html, body').stop().animate({'overflow':'visible'}, posVal);
+				$('html, body').stop().animate({'overflow':'visible'}, secVal[6]);
 				if (tScrIdx !== $(this.length)) {
 					scrItem.eq(tScrIdx + 1).addClass('active');
 					scrItem.eq(tScrIdx + 1).addClass('active-idx').siblings().removeClass('active-idx');
@@ -18,7 +18,7 @@ $(function () {
 				}
 				return false;
 			} else {
-				$('html, body').stop().animate({'overflow':'visible'}, posVal);
+				$('html, body').stop().animate({'overflow':'visible'}, secVal[6]);
 				if (!ftrCnt.hasClass('active')) {
 					if (tScrIdx !== 0) {
 						scrItem.eq(tScrIdx).removeClass('active');
