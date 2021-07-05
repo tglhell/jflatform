@@ -1,5 +1,6 @@
 // boolean value
 chkBool = false;
+chkSwitch = false;
 
 // responsive
 tbl = 1119;
