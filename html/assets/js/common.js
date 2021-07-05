@@ -92,6 +92,7 @@ jQuery.event.add(window, 'load', function () {
 			const popCont = $('.layer-popup-cont');
 			popWrap = $('.layer-popup-wrap' + '[data-pop-idx=' + popIdx + ']');
 			returnTar = $(e.target).closest('button');
+			chkBool = true;
 			$('.layer-popup-wrap' + '[data-pop-idx=' + popIdx + ']').fadeIn(secVal[4], function () {
 				popAutoHgt();
 			});
@@ -113,7 +114,6 @@ jQuery.event.add(window, 'load', function () {
 				}
 			}, secVal[4]);
 
-
 			$('.btn-close, .layer-popup-wrap').on('click', function (e) {
 				const _this = $(this).closest('.layer-popup-wrap');
 				const tarItem = $('.layer-popup-cont > div, .layer-title, .layer-cont *:not(.btn-close *)');
@@ -134,6 +134,7 @@ jQuery.event.add(window, 'load', function () {
 				target.fadeOut(secVal[4]);
 				target.find(popCont).removeAttr('tabindex').fadeOut(secVal[4]).parent().removeAttr('style');
 				target.find('.tar-loop').remove();
+				chkBool = false;
 				setObj(function () {
 					returnTar.focus();
 				}, 0);
@@ -193,19 +194,18 @@ jQuery.event.add(window, 'load', function () {
 				prxHgt ($(this));
 			});
 		});
-		
-		if (popWrap.css('display') === 'block') {
-			popAutoHgt();
-		}
 
-		if ($(window).width() < tbl) { // modify 2021.02.16
+		if ($(window).width() < tbl) {
 			setObj(function(){
 				$('.js-tab.x-scroll').each(function () {
 					$(this).find('.active a').trigger('click');
 				});
 			}, secVal[4])
 		}
-
+		
+		if (chkBool) {
+			popAutoHgt();
+		}
 		containerAutoHgt();
 		resChk();
 	});
