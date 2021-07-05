@@ -188,13 +188,11 @@ jQuery.event.add(window, 'load', function () {
 		tabTar.each(function () {
 			tabAutoHgt ($(this));
 		});
-
 		prxItem.ready(function () {
 			prxItem.each(function () {
 				prxHgt ($(this));
 			});
 		});
-
 		if ($(window).width() < tbl) {
 			setObj(function(){
 				$('.js-tab.x-scroll').each(function () {
@@ -202,7 +200,6 @@ jQuery.event.add(window, 'load', function () {
 				});
 			}, secVal[4])
 		}
-		
 		if (chkBool) {
 			popAutoHgt();
 		}
