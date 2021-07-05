@@ -92,7 +92,7 @@ jQuery.event.add(window, 'load', function () {
 			const popCont = $('.layer-popup-cont');
 			popWrap = $('.layer-popup-wrap' + '[data-pop-idx=' + popIdx + ']');
 			returnTar = $(e.target).closest('button');
-			$('.layer-popup-wrap' + '[data-pop-idx=' + popIdx + ']').fadeIn(secVal[4]).css('display', 'block', function () {
+			$('.layer-popup-wrap' + '[data-pop-idx=' + popIdx + ']').fadeIn(secVal[4], function () {
 				popAutoHgt();
 			});
 			popCont.attr('tabindex', '0').fadeIn(secVal[4]);
@@ -194,7 +194,7 @@ jQuery.event.add(window, 'load', function () {
 			});
 		});
 		
-		if ($('.layer-popup-wrap').length >= 1 && $('.layer-popup-wrap').css('display') === 'block') {
+		if (popWrap.css('display') === 'block') {
 			popAutoHgt();
 		}
 
