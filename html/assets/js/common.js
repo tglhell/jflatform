@@ -66,6 +66,11 @@ jQuery.event.add(window, 'load', function () {
 				}
 			}
 		}
+		if (scrPos > 0) {
+			$('#topBtn').fadeIn(secVal[2]);
+		} else {
+			$('#topBtn').fadeOut(secVal[2]);
+		}
 	});
 
 	inpItem.on('keyup', function () {
@@ -184,6 +189,12 @@ jQuery.event.add(window, 'load', function () {
 		lastY = top;
 	});
 
+	$('.btn-top').on('click', function (e) {
+		e.preventDefault();
+		$('html, body').animate({ scrollTop:'0'}, '0');
+		$(this).blur();
+	});
+
 	$(window).on('resize', function () {
 		tabTar.each(function () {
 			tabAutoHgt ($(this));
@@ -193,15 +204,15 @@ jQuery.event.add(window, 'load', function () {
 				prxHgt ($(this));
 			});
 		});
+		if (chkSwitch) {
+			popAutoHgt();
+		}
 		if ($(window).width() < tbl) {
 			setObj(function(){
 				$('.js-tab.x-scroll').each(function () {
 					$(this).find('.active a').trigger('click');
 				});
 			}, secVal[4])
-		}
-		if (chkSwitch) {
-			popAutoHgt();
 		}
 		containerAutoHgt();
 		resChk();

@@ -1382,6 +1382,11 @@ textarea:disabled {
 	min-width: auto;
 }
 
+/* btn-top */
+#topBtn {
+	display: none;
+}
+
 @media screen and (min-width: 1120px) {
 	.btn span {
 		line-height: 0;
