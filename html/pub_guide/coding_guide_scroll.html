@@ -21,7 +21,7 @@
 	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
 	<script type="text/javascript" src="../assets/js/common.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/swiper.min.js"></script>
-	<script type="text/javascript" src="../assets/js/lib/customlib.js"></script>
+	<!-- <script type="text/javascript" src="../assets/js/lib/customlib.js"></script> -->
 	<style>
 		.sample-wrap {
 			overflow: hidden;
@@ -66,7 +66,7 @@
 			font-size: 14px;
 		}
 		.sample-swiper-num02 .swiper-info-cont .s-info-text {
-			margin-top: 60px;
+			margin-top: 20px;
 		}
 		.sample-swiper-num02 [data-ir-idx="9"] {
 			transition-delay: .2s;
@@ -227,7 +227,8 @@
 					<div class="sample-cont ir-animate">
 						This page is a sample page 2.
 						<div class="cta-outer">
-							<a href="hmj_layout_test.html" class="btn btn-type2 btn-link-pos"><span>더보기</span></a>
+							<a href="hmj_layout_test.html" class="btn btn-type3"><span>일반 진입</span></a>
+							<a href="hmj_layout_test.html?page=1" class="btn btn-type2"><span>더보기로 진입</span></a>
 						</div>
 					</div>
 					<div class="sample-cont ir-animate">
@@ -354,10 +355,7 @@
 		<!-- //layer 1-->
 	</div>
 </div>
-<div id="topBtn">
-	<!-- <a href="#codingGiuide" title="move to top" role="button">
-		<span class="blind">Top</span>
-	</a> -->
+<div class="btn-top-box">
 	<a href="#" title="move to top" role="button" class="btn-top">
 		<span class="blind">Top</span>
 	</a>

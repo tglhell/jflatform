@@ -48,12 +48,12 @@ jQuery.event.add(window, 'load', function () {
 	$(window).scroll(function () {
 		const chkBtnPos = $('.scr-fix-btn');
 		let scrPos = $(this).scrollTop();
-		if ($('.parallax-cont').length >= 1) {
+		if ($('.parallax-cont').length >= irNum[0]) {
 			prxItem.css({'transform':'translateY(' + scrPos / irNum[3] + 'px)'});
 			prxItem2.css({'transform':'translateY(' + scrPos / irNum[3] + 'px)'});
 			prxItem3.css({'transform':'translateY(-' + scrPos / irNum[3] + 'px)'});
 		}
-		if (chkBtnPos.length >= 1) {
+		if (chkBtnPos.length >= irNum[0]) {
 			let scrBtnPos = chkBtnPos.offset().top - $(window).height() + secVal[1];
 			if (!chkBool) {
 				if (scrPos > scrBtnPos) {
@@ -67,9 +67,9 @@ jQuery.event.add(window, 'load', function () {
 			}
 		}
 		if (scrPos > 0) {
-			$('#topBtn').fadeIn(secVal[2]);
+			$('.btn-top-box').fadeIn(secVal[2]);
 		} else {
-			$('#topBtn').fadeOut(secVal[2]);
+			$('.btn-top-box').fadeOut(secVal[2]);
 		}
 	});
 
@@ -147,7 +147,7 @@ jQuery.event.add(window, 'load', function () {
 					if (!target.hasClass('inner-pop')) {
 						$('body').css({'overflow':'auto', 'width':'auto'});
 					}
-					if ($('.swiper-container').length >= 1) {
+					if ($('.swiper-container').length >= irNum[0]) {
 						$('.swiper-wrapper').css('transform', 'translate3d(0, 0, 0)');
 					}
 					popCont.parent().css('height', '100%');
@@ -189,9 +189,9 @@ jQuery.event.add(window, 'load', function () {
 		lastY = top;
 	});
 
-	$('.btn-top').on('click', function (e) {
+	$('.btn-top-box').on('click', '.btn-top', function (e) {
 		e.preventDefault();
-		$('html, body').animate({ scrollTop:'0'}, '0');
+		$('html, body').animate({scrollTop:'0'}, '0');
 		$(this).blur();
 	});
 
@@ -213,6 +213,9 @@ jQuery.event.add(window, 'load', function () {
 					$(this).find('.active a').trigger('click');
 				});
 			}, secVal[4])
+		}
+		if ($('.tbl-box.row-fix').length >= 1) {
+			tblFixRow ();
 		}
 		containerAutoHgt();
 		resChk();
@@ -252,7 +255,7 @@ jQuery.event.add(window, 'load', function () {
 
 	function tabAutoHgt (target) {
 		let tabCntHgt = target.find('.js-tab-cont .active').height();
-		tabPdtVal = parseInt(target.find('.js-tab-cont').css('padding-top')) * 2;
+		tabPdtVal = parseInt(target.find('.js-tab-cont').css('padding-top')) * irNum[1];
 		target.find('.js-tab-cont').css('height', tabCntHgt + tabPdtVal);
 	}
 
@@ -284,7 +287,7 @@ jQuery.event.add(window, 'load', function () {
 	}
 
 	function tabScrCenter(target){
-		const tabScrBox = target.closest('.js-tab.x-scroll').find('.tab-box-list');
+		const tabScrBox = target.closest('.js-tab.x-scroll').find('.tab-box-outer');
 		const tabScrBoxItem = tabScrBox.find('li');
 		let tabScrBoxHarf = tabScrBox.width() / irNum[1];
 		let tabScrPos;
@@ -305,6 +308,27 @@ jQuery.event.add(window, 'load', function () {
 		}
 		tabScrBox.animate({scrollLeft:tabScrPos}, secVal[2]);
 	}
+
+	function tblFixRow () {
+		if ($(window).width() <= tbl) {
+			$('.tbl-box.row-fix').on('scroll',function(){
+				const tblBox = $('.tbl-box.row-fix');
+				const fixRow = $('.tbl-box.row-fix tr th:nth-child(1)')
+				let fixLeft = tblBox.offset().left;
+				
+				if ($(this).scrollLeft() > 0) {
+					fixRow.offset({
+					'left':fixLeft
+					});
+				} else {
+					fixRow.css({
+					'left': 0
+					});
+				}
+			});
+		}
+	}
+	tblFixRow();
 
 	//toggle common
 	function toggle(){

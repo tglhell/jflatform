@@ -17,16 +17,6 @@
 	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
 	<script type="text/javascript" src="../assets/js/common.js"></script>
-	<script>
-		$(function () {
-			setObj(function () {
-				const tFocus = $('.test-focus-area');
-				let tFocusPos = tFocus.offset().top;
-
-				$('html, body').stop().animate({scrollTop:tFocusPos}, secVal[4]);
-			}, secVal[2]);
-		});
-	</script>
 </head>
 
 <body>
@@ -202,7 +192,7 @@
 				<p>content</p>
 				<p>content</p>
 
-				<div class="test-focus-area" style="margin-top: 150px;">
+				<div class="move-focus" style="margin-top: 150px;">
 					<p>here !!!!</p>
 					<p>here !!!!</p>
 					<p>here !!!!</p>
@@ -219,6 +209,24 @@
 	</div>
 	<!--//footer -->
 </div>
-
+<div class="btn-top-box">
+	<a href="#" title="move to top" role="button" class="btn-top">
+		<span class="blind">Top</span>
+	</a>
+</div>
+<script>
+	$(function(){
+		setObj(function () {
+			const mFocus = $('.move-focus');
+			let mFocusPos = mFocus.offset().top;
+			let urlValChk = location.href.substr(
+				location.href.lastIndexOf('=') + irNum[0]
+			);
+			if (urlValChk == irNum[0]) {
+				$('html, body').stop().animate({scrollTop:mFocusPos}, secVal[4], 'easeInQuad');
+			}
+		}, secVal[2]);
+	});
+</script>
 </body>
 </html>
