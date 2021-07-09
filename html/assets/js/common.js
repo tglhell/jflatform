@@ -208,7 +208,7 @@ jQuery.event.add(window, 'load', function () {
 			popAutoHgt();
 		}
 		if ($(window).width() < tbl) {
-			setObj(function(){
+			setObj(function () {
 				$('.js-tab.x-scroll').each(function () {
 					$(this).find('.active a').trigger('click');
 				});
@@ -216,6 +216,9 @@ jQuery.event.add(window, 'load', function () {
 		}
 		if ($('.tbl-box.row-fix').length >= 1) {
 			tblFixRow ();
+		}
+		if ($('.tbl-box.col-fix').length >= 1) {
+			tblFixCol ();
 		}
 		containerAutoHgt();
 		resChk();
@@ -286,7 +289,7 @@ jQuery.event.add(window, 'load', function () {
 		}
 	}
 
-	function tabScrCenter(target){
+	function tabScrCenter (target) {
 		const tabScrBox = target.closest('.js-tab.x-scroll').find('.tab-box-outer');
 		const tabScrBoxItem = tabScrBox.find('li');
 		let tabScrBoxHarf = tabScrBox.width() / irNum[1];
@@ -294,7 +297,7 @@ jQuery.event.add(window, 'load', function () {
 		let tabListWidth = 0;
 		let tabTarLeft = 0;
 		let tabPdValue = parseInt(tabScrBoxItem.parent().css('padding-left'));
-		tabScrBoxItem.each(function(){
+		tabScrBoxItem.each(function () {
 			tabListWidth += $(this).outerWidth();
 		});
 		for (let i = 0; i < target.index(); i++) tabTarLeft += tabScrBoxItem.eq(i).outerWidth();
@@ -306,29 +309,50 @@ jQuery.event.add(window, 'load', function () {
 		}else {
 			tabScrPos = tabTarPos - tabScrBoxHarf;
 		}
-		tabScrBox.animate({scrollLeft:tabScrPos}, secVal[2]);
+		tabScrBox.stop().animate({scrollLeft:tabScrPos}, secVal[2]);
 	}
 
 	function tblFixRow () {
 		if ($(window).width() <= tbl) {
-			$('.tbl-box.row-fix').on('scroll',function(){
+			$('.tbl-box.row-fix').on('scroll', function(){
 				const tblBox = $('.tbl-box.row-fix');
 				const fixRow = $('.tbl-box.row-fix tr th:nth-child(1)')
 				let fixLeft = tblBox.offset().left;
 				
 				if ($(this).scrollLeft() > 0) {
-					fixRow.offset({
-					'left':fixLeft
-					});
+					fixRow.offset({'left':fixLeft});
+					fixRow.css({'z-index':'999'});
 				} else {
-					fixRow.css({
-					'left': 0
-					});
+					fixRow.css({'left':'0', 'z-index':'-1'});
 				}
 			});
 		}
 	}
-	tblFixRow();
+	if ($('.tbl-box.row-fix').length >= 1) {
+		tblFixRow();
+	}
+
+	function tblFixCol () {
+		if ($(window).width() <= tbl) {
+			$('.tbl-box.col-fix').on('scroll', function(){
+				const tblBox = $('.tbl-box.col-fix');
+				const fixCol = $('.tbl-box.col-fix thead tr th')
+				let fixTop = tblBox.offset().top;
+
+				console.log(fixTop);
+				
+				if ($(this).scrollTop() > 0) {
+					fixCol.offset({'top':fixTop});
+					fixCol.css({'z-index':'999'});
+				} else {
+					fixCol.css({'top':'0', 'z-index':'-1'});
+				}
+			});
+		}
+	}
+	if ($('.tbl-box.col-fix').length >= 1) {
+		tblFixCol();
+	}
 
 	//toggle common
 	function toggle(){

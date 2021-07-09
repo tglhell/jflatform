@@ -476,6 +476,14 @@ body {
 	width: 700px;
 	vertical-align: top;
 }
+.hmj-container .hmj-content .cont-left {
+	display: table-cell;
+	width: 300px;
+	padding-right: 60px;
+}
+.hmj-container .hmj-content .cont-left + .cont-center {
+	width: 820px;
+}
 .hmj-container .hmj-content .cont-right {
 	display: table-cell;
 	width: 420px;
@@ -565,7 +573,15 @@ body {
 		display: block;
 		width: 100%;
 		padding-left: 0;
-	}	
+	}
+	.hmj-container .hmj-content .cont-left {
+		display: block;
+		width: 100%;
+		padding-right: 0;
+	}
+	.hmj-container .hmj-content .cont-left + .cont-center {
+		width: 100%;
+	}
 }
 
 .hmj-footer {
@@ -1565,6 +1581,11 @@ textarea:disabled {
 .tbl-box + .tbl-box.col-fix {
     margin-top: 0;
 }
+.tbl-box.col-fix thead tr th {
+    position: sticky;
+	top: 0;
+	z-index: 999;
+}
 .tbl-box.col-fix th,
 .tbl-box.col-fix td {
     border-width: 1px 0 0 1px;
@@ -1599,6 +1620,9 @@ textarea:disabled {
 @media screen and (max-width: 1119px) {
 	.tbl-box table {
 		width: 1120px;
+	}
+	.tbl-box.col-fix table {
+		width: 100%;
 	}
 }
 
@@ -1830,6 +1854,15 @@ textarea:disabled {
 .ie11 .parallax-cont .prx-item * {
 	-webkit-transition: all .05s linear;
 	transition: all .05s linear;
+}
+
+/* text flag */
+.hmj-text-flag {
+	display: inline-block;
+	padding: 0 11px 2px;
+	border: 1px solid #00aad2;
+	font-size: 12px;
+	color: #00aad2;
 }
 
 /* pagination */

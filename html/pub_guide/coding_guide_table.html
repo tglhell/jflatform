@@ -162,6 +162,14 @@
 <pre class="language-html"><code><!--<div class="tbl-box row-fix">
 	<table>
 		<caption class="blind">고정 타입</caption>
+		<colgroup>
+			<col style="width: 15%;">
+			<col style="width: 17%;">
+			<col style="width: 17%;">
+			<col style="width: 17%;">
+			<col style="width: 17%;">
+			<col style="width: 17%;">
+		</colgroup>
 		<tbody>
 			<tr>
 				<th scope="row">title1</th>
@@ -208,6 +216,14 @@
 			<div class="tbl-box row-fix">
 				<table>
 					<caption class="blind">고정 타입</caption>
+					<colgroup>
+						<col style="width: 15%;">
+						<col style="width: 17%;">
+						<col style="width: 17%;">
+						<col style="width: 17%;">
+						<col style="width: 17%;">
+						<col style="width: 17%;">
+					</colgroup>
 					<tbody>
 						<tr>
 							<th scope="row">title1</th>
@@ -252,41 +268,46 @@
 <pre class="language-html"><code><!--<div class="tbl-box">
 	<table>
 		<caption class="blind">col 비고정 타입</caption>
+		<colgroup>
+			<col style="width:50%">
+			<col>
+		</colgroup>
 		<thead>
 			<tr>
 				<th scope="col">title1</th>
 				<th scope="col">title2</th>
-				<th scope="col">title3333333</th>
-				<th scope="col">title4444444</th>
-				<th scope="col">title52423523535</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
 				<td>test</td>
 				<td>test1</td>
-				<td>test2</td>
-				<td>test3</td>
-				<td>test4</td>
 			</tr>
 			<tr>
-				<td>test test</td>
-				<td>test1 test1</td>
-				<td>test2 test2</td>
 				<td>test3 test3</td>
 				<td>test4 test4</td>
 			</tr>
 			<tr>
-				<td>test test test</td>
-				<td>test1 test1 test1</td>
-				<td>test2 test2 test2</td>
 				<td>test3 test3 test3</td>
 				<td>test4 test4 test4</td>
 			</tr>
 			<tr>
-				<td>test test test test</td>
-				<td>test1 test1 test1 test1</td>
-				<td>test2 test2 test2 test2</td>
+				<td>test3 test3 test3 test3</td>
+				<td>test4 test4 test4 test4</td>
+			</tr>
+			<tr>
+				<td>test3 test3 test3 test3</td>
+				<td>test4 test4 test4 test4</td>
+			</tr>
+			<tr>
+				<td>test3 test3 test3 test3</td>
+				<td>test4 test4 test4 test4</td>
+			</tr>
+			<tr>
+				<td>test3 test3 test3 test3</td>
+				<td>test4 test4 test4 test4</td>
+			</tr>
+			<tr>
 				<td>test3 test3 test3 test3</td>
 				<td>test4 test4 test4 test4</td>
 			</tr>
@@ -303,41 +324,46 @@
 			<div class="tbl-box">
 				<table>
 					<caption class="blind">col 비고정 타입</caption>
+					<colgroup>
+						<col style="width:50%">
+						<col>
+					</colgroup>
 					<thead>
 						<tr>
 							<th scope="col">title1</th>
 							<th scope="col">title2</th>
-							<th scope="col">title3333333</th>
-							<th scope="col">title4444444</th>
-							<th scope="col">title52423523535</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td>test</td>
 							<td>test1</td>
-							<td>test2</td>
-							<td>test3</td>
-							<td>test4</td>
 						</tr>
 						<tr>
-							<td>test test</td>
-							<td>test1 test1</td>
-							<td>test2 test2</td>
 							<td>test3 test3</td>
 							<td>test4 test4</td>
 						</tr>
 						<tr>
-							<td>test test test</td>
-							<td>test1 test1 test1</td>
-							<td>test2 test2 test2</td>
 							<td>test3 test3 test3</td>
 							<td>test4 test4 test4</td>
 						</tr>
 						<tr>
-							<td>test test test test</td>
-							<td>test1 test1 test1 test1</td>
-							<td>test2 test2 test2 test2</td>
+							<td>test3 test3 test3 test3</td>
+							<td>test4 test4 test4 test4</td>
+						</tr>
+						<tr>
+							<td>test3 test3 test3 test3</td>
+							<td>test4 test4 test4 test4</td>
+						</tr>
+						<tr>
+							<td>test3 test3 test3 test3</td>
+							<td>test4 test4 test4 test4</td>
+						</tr>
+						<tr>
+							<td>test3 test3 test3 test3</td>
+							<td>test4 test4 test4 test4</td>
+						</tr>
+						<tr>
 							<td>test3 test3 test3 test3</td>
 							<td>test4 test4 test4 test4</td>
 						</tr>
@@ -349,99 +375,54 @@
 
 			<!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<div class="tbl-box-outer">
-	<div class="tbl-box">
-		<table>
-			<caption class="blind">col 비고정 타입</caption>
-			<colgroup>
-				<col style="width:20%">
-				<col style="width:25%">
-				<col style="width:15%">
-				<col style="width:20%">
-				<col>
-			</colgroup>
-			<thead>
-				<tr>
-					<th scope="col">title1</th>
-					<th scope="col">title2</th>
-					<th scope="col">title3333333</th>
-					<th scope="col">title4444444</th>
-					<th scope="col">title52423523535</th>
-				</tr>
-			</thead>
-		</table>
-	</div>
-
-	<div class="tbl-box col-fix">
-		<table>
-			<caption class="blind">col 비고정 타입</caption>
-			<colgroup>
-				<col style="width:20%">
-				<col style="width:25%">
-				<col style="width:15%">
-				<col style="width:20%">
-				<col>
-			</colgroup>
-			<tbody>
-				<tr>
-					<td>test</td>
-					<td>test1</td>
-					<td>test2</td>
-					<td>test3</td>
-					<td>test4</td>
-				</tr>
-				<tr>
-					<td>test test</td>
-					<td>test1 test1</td>
-					<td>test2 test2</td>
-					<td>test3 test3</td>
-					<td>test4 test4</td>
-				</tr>
-				<tr>
-					<td>test test test</td>
-					<td>test1 test1 test1</td>
-					<td>test2 test2 test2</td>
-					<td>test3 test3 test3</td>
-					<td>test4 test4 test4</td>
-				</tr>
-				<tr>
-					<td>test test test test</td>
-					<td>test1 test1 test1 test1</td>
-					<td>test2 test2 test2 test2</td>
-					<td>test3 test3 test3 test3</td>
-					<td>test4 test4 test4 test4</td>
-				</tr>
-				<tr>
-					<td>test test test test</td>
-					<td>test1 test1 test1 test1</td>
-					<td>test2 test2 test2 test2</td>
-					<td>test3 test3 test3 test3</td>
-					<td>test4 test4 test4 test4</td>
-				</tr>
-				<tr>
-					<td>test test test test</td>
-					<td>test1 test1 test1 test1</td>
-					<td>test2 test2 test2 test2</td>
-					<td>test3 test3 test3 test3</td>
-					<td>test4 test4 test4 test4</td>
-				</tr>
-				<tr>
-					<td>test test test test</td>
-					<td>test1 test1 test1 test1</td>
-					<td>test2 test2 test2 test2</td>
-					<td>test3 test3 test3 test3</td>
-					<td>test4 test4 test4 test4</td>
-				</tr>
-				<tr>
-					<td>test test test test</td>
-					<td>test1 test1 test1 test1</td>
-					<td>test2 test2 test2 test2</td>
-					<td>test3 test3 test3 test3</td>
-					<td>test4 test4 test4 test4</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+<pre class="language-html"><code><!--<div class="tbl-box col-fix">
+	<table>
+		<caption class="blind">col 비고정 타입</caption>
+		<colgroup>
+			<col style="width:50%">
+			<col>
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">title1</th>
+				<th scope="col">title2</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>test</td>
+				<td>test1</td>
+			</tr>
+			<tr>
+				<td>test3 test3</td>
+				<td>test4 test4</td>
+			</tr>
+			<tr>
+				<td>test3 test3 test3</td>
+				<td>test4 test4 test4</td>
+			</tr>
+			<tr>
+				<td>test3 test3 test3 test3</td>
+				<td>test4 test4 test4 test4</td>
+			</tr>
+			<tr>
+				<td>test3 test3 test3 test3</td>
+				<td>test4 test4 test4 test4</td>
+			</tr>
+			<tr>
+				<td>test3 test3 test3 test3</td>
+				<td>test4 test4 test4 test4</td>
+			</tr>
+			<tr>
+				<td>test3 test3 test3 test3</td>
+				<td>test4 test4 test4 test4</td>
+			</tr>
+			<tr>
+				<td>test3 test3 test3 test3</td>
+				<td>test4 test4 test4 test4</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
 --></code></pre>
 <!-- //코드 삽입 -->
@@ -449,100 +430,55 @@
 			<div class="conIn_tip">
 				.tbl-box (col-fix케이스는 클래스 "<strong>col-fix</strong>"를 추가).
 			</div>
-			
-			<div class="tbl-box-outer">
-				<div class="tbl-box">
-					<table>
-						<caption class="blind">col 비고정 타입</caption>
-						<colgroup>
-							<col style="width:20%">
-							<col style="width:25%">
-							<col style="width:15%">
-							<col style="width:20%">
-							<col>
-						</colgroup>
-						<thead>
-							<tr>
-								<th scope="col">title1</th>
-								<th scope="col">title2</th>
-								<th scope="col">title3333333</th>
-								<th scope="col">title4444444</th>
-								<th scope="col">title52423523535</th>
-							</tr>
-						</thead>
-					</table>
-				</div>
-	
-				<div class="tbl-box col-fix">
-					<table>
-						<caption class="blind">col 비고정 타입</caption>
-						<colgroup>
-							<col style="width:20%">
-							<col style="width:25%">
-							<col style="width:15%">
-							<col style="width:20%">
-							<col>
-						</colgroup>
-						<tbody>
-							<tr>
-								<td>test</td>
-								<td>test1</td>
-								<td>test2</td>
-								<td>test3</td>
-								<td>test4</td>
-							</tr>
-							<tr>
-								<td>test test</td>
-								<td>test1 test1</td>
-								<td>test2 test2</td>
-								<td>test3 test3</td>
-								<td>test4 test4</td>
-							</tr>
-							<tr>
-								<td>test test test</td>
-								<td>test1 test1 test1</td>
-								<td>test2 test2 test2</td>
-								<td>test3 test3 test3</td>
-								<td>test4 test4 test4</td>
-							</tr>
-							<tr>
-								<td>test test test test</td>
-								<td>test1 test1 test1 test1</td>
-								<td>test2 test2 test2 test2</td>
-								<td>test3 test3 test3 test3</td>
-								<td>test4 test4 test4 test4</td>
-							</tr>
-							<tr>
-								<td>test test test test</td>
-								<td>test1 test1 test1 test1</td>
-								<td>test2 test2 test2 test2</td>
-								<td>test3 test3 test3 test3</td>
-								<td>test4 test4 test4 test4</td>
-							</tr>
-							<tr>
-								<td>test test test test</td>
-								<td>test1 test1 test1 test1</td>
-								<td>test2 test2 test2 test2</td>
-								<td>test3 test3 test3 test3</td>
-								<td>test4 test4 test4 test4</td>
-							</tr>
-							<tr>
-								<td>test test test test</td>
-								<td>test1 test1 test1 test1</td>
-								<td>test2 test2 test2 test2</td>
-								<td>test3 test3 test3 test3</td>
-								<td>test4 test4 test4 test4</td>
-							</tr>
-							<tr>
-								<td>test test test test</td>
-								<td>test1 test1 test1 test1</td>
-								<td>test2 test2 test2 test2</td>
-								<td>test3 test3 test3 test3</td>
-								<td>test4 test4 test4 test4</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+
+			<div class="tbl-box col-fix">
+				<table>
+					<caption class="blind">col 비고정 타입</caption>
+					<colgroup>
+						<col style="width:50%">
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">title1</th>
+							<th scope="col">title2</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>test</td>
+							<td>test1</td>
+						</tr>
+						<tr>
+							<td>test3 test3</td>
+							<td>test4 test4</td>
+						</tr>
+						<tr>
+							<td>test3 test3 test3</td>
+							<td>test4 test4 test4</td>
+						</tr>
+						<tr>
+							<td>test3 test3 test3 test3</td>
+							<td>test4 test4 test4 test4</td>
+						</tr>
+						<tr>
+							<td>test3 test3 test3 test3</td>
+							<td>test4 test4 test4 test4</td>
+						</tr>
+						<tr>
+							<td>test3 test3 test3 test3</td>
+							<td>test4 test4 test4 test4</td>
+						</tr>
+						<tr>
+							<td>test3 test3 test3 test3</td>
+							<td>test4 test4 test4 test4</td>
+						</tr>
+						<tr>
+							<td>test3 test3 test3 test3</td>
+							<td>test4 test4 test4 test4</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			<br><br><br><br>
 
