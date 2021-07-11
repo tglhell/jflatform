@@ -172,11 +172,11 @@ jQuery.event.add(window, 'load', function () {
 		$(".all input").prop("checked", is_checked);
 	});
 
-	$('.layer-cont').on('touchstart', function(e) {
+	$('.layer-cont').on('touchstart', function (e) {
 		lastY = e.touches[0].clientY;
 	});
 
-	$('.layer-cont').on('touchmove', function(e) {
+	$('.layer-cont').on('touchmove', function (e) {
 		let top = e.touches[0].clientY;
 		let scrollTop = $(e.currentTarget).scrollTop();
 		let direction = (lastY - top) < 0 ? 'up' : 'down';
@@ -304,9 +304,9 @@ jQuery.event.add(window, 'load', function () {
 		let tabTarPos = (tabTarLeft + target.outerWidth() / irNum[1] + tabPdValue);
 		if (tabTarPos <= tabScrBoxHarf) {
 			tabScrPos = 0;
-		}else if (tabListWidth - tabTarPos <= tabScrBoxHarf) {
+		} else if (tabListWidth - tabTarPos <= tabScrBoxHarf) {
 			tabScrPos = tabListWidth - tabScrBox.width() + (tabPdValue * irNum[1]);
-		}else {
+		} else {
 			tabScrPos = tabTarPos - tabScrBoxHarf;
 		}
 		tabScrBox.stop().animate({scrollLeft:tabScrPos}, secVal[2]);
@@ -314,11 +314,10 @@ jQuery.event.add(window, 'load', function () {
 
 	function tblFixRow () {
 		if ($(window).width() <= tbl) {
-			$('.tbl-box.row-fix').on('scroll', function(){
+			$('.tbl-box.row-fix').on('scroll', function () {
 				const tblBox = $('.tbl-box.row-fix');
-				const fixRow = $('.tbl-box.row-fix tr th:nth-child(1)')
+				const fixRow = $('.tbl-box.row-fix tr th:nth-child(1)');
 				let fixLeft = tblBox.offset().left;
-				
 				if ($(this).scrollLeft() > 0) {
 					fixRow.offset({'left':fixLeft});
 					fixRow.css({'z-index':'999'});
@@ -334,13 +333,10 @@ jQuery.event.add(window, 'load', function () {
 
 	function tblFixCol () {
 		if ($(window).width() <= tbl) {
-			$('.tbl-box.col-fix').on('scroll', function(){
+			$('.tbl-box.col-fix').on('scroll', function () {
 				const tblBox = $('.tbl-box.col-fix');
-				const fixCol = $('.tbl-box.col-fix thead tr th')
+				const fixCol = $('.tbl-box.col-fix thead tr th');
 				let fixTop = tblBox.offset().top;
-
-				console.log(fixTop);
-				
 				if ($(this).scrollTop() > 0) {
 					fixCol.offset({'top':fixTop});
 					fixCol.css({'z-index':'999'});
