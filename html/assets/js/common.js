@@ -100,11 +100,11 @@ jQuery.event.add(window, 'load', function () {
 				if (e.originalEvent.deltaY > 0) {
 					headerOuter.addClass('header-fixed');
 					headerOuter.css('margin-top', -headerFixHgt);
-					console.log('up1');
+					console.log('up2');
 				} else {
 					headerOuter.removeClass('header-fixed');
 					headerOuter.css('margin-top', '0');
-					console.log('down1');
+					console.log('down2');
 				}
 			} else {
 				e.stopPropagation();
