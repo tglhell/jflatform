@@ -76,8 +76,7 @@ jQuery.event.add(window, 'load', function () {
 			if (scrPos > lastScrTopPos) {
 				headerOuter.addClass('header-fixed');
 				headerOuter.css('margin-top', -headerFixHgt);
-			}
-			else {
+			} else {
 				headerOuter.removeClass('header-fixed');
 				headerOuter.css('margin-top', 0);
 			}
