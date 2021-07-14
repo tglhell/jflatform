@@ -109,6 +109,14 @@
 				} else {
 					$('.gnb-menu-outer').css('left', '-200px');
 				}
+
+				$('.hmj-content').on('click', function (e) {
+					const tarItem = $('.hmj-wrap:not(.hmj-header)');
+					if (!$(e.target).is(tarItem)) {
+						$('.gnb-menu-outer').css('left', '-200px');
+						$('.btn-menu').removeClass('active');
+					}
+				});
 			});
 		});
 	</script>
