@@ -7,7 +7,6 @@ jQuery.event.add(window, 'load', function () {
 	const irCont = $('.ir-count');
 	const inpItem = $('.inp-item');
 	const headerOuter = $('.hmj-header');
-	let lastY = 0;
 
 	tabTar.each(function () {
 		tabAutoHgt ($(this));
@@ -46,8 +45,7 @@ jQuery.event.add(window, 'load', function () {
 		});
 	});
 	
-	var lastScrollTop = 0;
-	$(window).on('scroll wheel DOMMouseScroll', function (e) {
+	$(window).on('scroll', function (e) {
 		const chkBtnPos = $('.scr-fix-btn');
 		const headerFixHgt = headerOuter.find('.header-cont').outerHeight(true) + irNum[0];
 		let scrPos = $(this).scrollTop();
@@ -70,61 +68,21 @@ jQuery.event.add(window, 'load', function () {
 					}
 				}
 			}
-			// if (scrPos > 0) {
-			// 	$('.btn-top-box').fadeIn(secVal[2]);
-			// 	// headerOuter.addClass('header-fixed');
-			// 	// headerOuter.css('margin-top', -headerFixHgt);
-			// } else {
-			// 	$('.btn-top-box').fadeOut(secVal[2]);
-			// 	// headerOuter.removeClass('header-fixed');
-			// 	// headerOuter.css('margin-top', 0);
-			// }
-			if (scrPos > lastScrollTop) {
+			if (scrPos > 0) {
 				$('.btn-top-box').fadeIn(secVal[2]);
+			} else {
+				$('.btn-top-box').fadeOut(secVal[2]);
+			}
+			if (scrPos > lastScrTopPos) {
 				headerOuter.addClass('header-fixed');
 				headerOuter.css('margin-top', -headerFixHgt);
-				console.log('down4');
 			}
 			else {
-				$('.btn-top-box').fadeOut(secVal[2]);
 				headerOuter.removeClass('header-fixed');
 				headerOuter.css('margin-top', 0);
-				console.log('up4');
 			}
-			lastScrollTop = scrPos;
-		}/*  else if (e.type == 'wheel') {
-			if (!$('html, body').is(':animated')) {
-				// if (e.originalEvent.wheelDelta < 0) {
-				// 	headerOuter.addClass('header-fixed');
-				// 	headerOuter.css('margin-top', -headerFixHgt);
-				// } else {
-				// 	headerOuter.removeClass('header-fixed');
-				// 	headerOuter.css('margin-top', '0');
-				// }
-				// if (e.originalEvent.wheelDelta > 0) {
-				// 	headerOuter.addClass('header-fixed');
-				// 	headerOuter.css('margin-top', -headerFixHgt);
-				// 	console.log('up');
-				// }
-				// else if (e.originalEvent.wheelDelta < 0) {
-				// 	headerOuter.removeClass('header-fixed');
-				// 	headerOuter.css('margin-top', '0');
-				// 	console.log('down');
-				// }
-				if (e.originalEvent.deltaY > 0) {
-					headerOuter.addClass('header-fixed');
-					headerOuter.css('margin-top', -headerFixHgt);
-					console.log('up2');
-				} else {
-					headerOuter.removeClass('header-fixed');
-					headerOuter.css('margin-top', '0');
-					console.log('down2');
-				}
-			} else {
-				e.stopPropagation();
-				return false;
-			}
-		} */
+			lastScrTopPos = scrPos;
+		}
 	});
 
 	inpItem.on('keyup', function () {
