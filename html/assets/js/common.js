@@ -75,10 +75,12 @@ jQuery.event.add(window, 'load', function () {
 			}
 			if (scrPos > lastScrTopPos) {
 				headerOuter.addClass('header-fixed');
-				headerOuter.css('margin-top', -headerFixHgt);
+				headerOuter.css('top', -headerFixHgt);
+				$('.gnb-menu-outer').css('top', '52px');
 			} else {
 				headerOuter.removeClass('header-fixed');
-				headerOuter.css('margin-top', 0);
+				headerOuter.css('top', 0);
+				$('.gnb-menu-outer').css('top', '105px');
 			}
 			lastScrTopPos = scrPos;
 		}
