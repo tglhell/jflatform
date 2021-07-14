@@ -36,6 +36,7 @@
 			position: fixed;
 			bottom: 50px;
 			right: 150px;
+			display: none;
 			width: 50px;
 			height: 50px;
 			border-radius: 50%;
@@ -56,6 +57,7 @@
 					if (currentPos >= videoTimeArr[1]) {
 						videoItem.get(0).pause();
 						videoItem.off();
+						$('.btn-test').fadeIn(secVal[4]);
 					}
 				});
 			}, secVal[2]);
