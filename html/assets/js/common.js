@@ -6,6 +6,7 @@ jQuery.event.add(window, 'load', function () {
 	const prxItem3 = $('.parallax-cont.prx-val3 .prx-item');
 	const irCont = $('.ir-count');
 	const inpItem = $('.inp-item');
+	const headerOuter = $('.hmj-header');
 	let lastY = 0;
 
 	tabTar.each(function () {
@@ -45,32 +46,52 @@ jQuery.event.add(window, 'load', function () {
 		});
 	});
 
-	$(window).scroll(function () {
+	$(window).on('scroll mousewheel DOMMouseScroll', function (e) {
 		const chkBtnPos = $('.scr-fix-btn');
+		const headerFixHgt = headerOuter.find('.header-cont').outerHeight(true) + irNum[0];
 		let scrPos = $(this).scrollTop();
-		if ($('.parallax-cont').length >= irNum[0]) {
-			prxItem.css({'transform':'translateY(' + scrPos / irNum[3] + 'px)'});
-			prxItem2.css({'transform':'translateY(' + scrPos / irNum[3] + 'px)'});
-			prxItem3.css({'transform':'translateY(-' + scrPos / irNum[3] + 'px)'});
-		}
-		if (chkBtnPos.length >= irNum[0]) {
-			let scrBtnPos = chkBtnPos.offset().top - $(window).height() + secVal[1];
-			if (!chkBool) {
-				if (scrPos > scrBtnPos) {
-					chkBtnPos.trigger('click');
-					chkBool = true;
-				}
-			} else {
-				if (scrPos == 0) {
-					chkBool = false;
+		if (e.type == 'scroll') {
+			if ($('.parallax-cont').length >= irNum[0]) {
+				prxItem.css({'transform':'translateY(' + scrPos / irNum[3] + 'px)'});
+				prxItem2.css({'transform':'translateY(' + scrPos / irNum[3] + 'px)'});
+				prxItem3.css({'transform':'translateY(-' + scrPos / irNum[3] + 'px)'});
+			}
+			if (chkBtnPos.length >= irNum[0]) {
+				let scrBtnPos = chkBtnPos.offset().top - $(window).height() + secVal[1];
+				if (!chkBool) {
+					if (scrPos > scrBtnPos) {
+						chkBtnPos.trigger('click');
+						chkBool = true;
+					}
+				} else {
+					if (scrPos == 0) {
+						chkBool = false;
+					}
 				}
 			}
-		}
-		if (scrPos > 0) {
-			$('.btn-top-box').fadeIn(secVal[2]);
-		} else {
-			$('.btn-top-box').fadeOut(secVal[2]);
-		}
+			if (scrPos > 0) {
+				$('.btn-top-box').fadeIn(secVal[2]);
+				headerOuter.addClass('header-fixed');
+				headerOuter.css('margin-top', -headerFixHgt);
+			} else {
+				$('.btn-top-box').fadeOut(secVal[2]);
+				headerOuter.removeClass('header-fixed');
+				headerOuter.css('margin-top', 0);
+			}
+		}/*  else {
+			if (!$('html, body').is(':animated')) {
+				if (e.originalEvent.wheelDelta < 0) {
+					headerOuter.addClass('header-fixed');
+					headerOuter.css('margin-top', headerFixHgt);
+				} else {
+					headerOuter.removeClass('header-fixed');
+					headerOuter.css('margin-top', '0');
+				}
+			} else {
+				e.stopPropagation();
+				return false;
+			}
+		} */
 	});
 
 	inpItem.on('keyup', function () {
@@ -304,9 +325,9 @@ jQuery.event.add(window, 'load', function () {
 		let tabTarPos = (tabTarLeft + target.outerWidth() / irNum[1] + tabPdValue);
 		if (tabTarPos <= tabScrBoxHarf) {
 			tabScrPos = 0;
-		} else if (tabListWidth - tabTarPos <= tabScrBoxHarf) {
+		}else if (tabListWidth - tabTarPos <= tabScrBoxHarf) {
 			tabScrPos = tabListWidth - tabScrBox.width() + (tabPdValue * irNum[1]);
-		} else {
+		}else {
 			tabScrPos = tabTarPos - tabScrBoxHarf;
 		}
 		tabScrBox.stop().animate({scrollLeft:tabScrPos}, secVal[2]);

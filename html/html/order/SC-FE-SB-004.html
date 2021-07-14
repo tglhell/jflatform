@@ -91,179 +91,140 @@
                         <div class="item">
                             <h3 class="title tit-btn">購入者</h3>
                             <div class="cont">
-                                <ul class="form-list">
-                                    <li>
-                                        <div class="inp-outer-box">
-                                            <label for="inpName01_01">姓名</label>
-                                            <div class="inp-group-box mo-full">
-                                                <div class="inp-area">
-                                                    <input type="text" id="inpName01_01" class="inp-item" placeholder="木村" disabled="disabled">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                                <div class="inp-area">
-                                                    <input type="text" id="inpName01_02" class="inp-item" placeholder="拓哉" disabled="disabled">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="error-msg lbl-type">error text</p>
-                                    </li>
-                                    <li>
-                                        <div class="inp-outer-box">
-                                            <label for="inpName01_01">姓名(フリガナ)</label>
-                                            <div class="inp-group-box mo-full">
-                                                <div class="inp-area">
-                                                    <input type="text" id="inpName02_01" class="inp-item" placeholder="きむら" disabled="disabled">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                                <div class="inp-area">
-                                                    <input type="text" id="inpName02_02" class="inp-item" placeholder="たくや" disabled="disabled">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="error-msg lbl-type">error text</p>
-                                    </li>
-                                    <li>
-                                        <div class="inp-outer-box">
-                                            <label for="inpNum01_01">携帯電話</label>
-                                            <div class="inp-slice-box">
-                                                <div class="inp-area">
-                                                    <input type="number" id="inpNum01_01" class="inp-item" placeholder="080" disabled="disabled">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                                <span class="inp-hpn">-</span>
-                                                <div class="inp-area">
-                                                    <input type="number" id="inpNum01_02" class="inp-item" placeholder="1234" disabled="disabled">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                                <span class="inp-hpn">-</span>
-                                                <div class="inp-area">
-                                                    <input type="number" id="inpNum01_03" class="inp-item" placeholder="5678" disabled="disabled">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="error-msg lbl-type">error text</p>
-                                    </li>
-                                    <li>
-                                        <div class="inp-outer-box">
-                                            <label for="inpNum01_01">メールアドレス</label>
-                                            <div class="inp-slice-box">
-                                                <div class="inp-area">
-                                                    <input type="text" id="inpEmail" class="inp-item" placeholder="E-mailアドレスを入力してください。">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="error-msg lbl-type">error text</p>
-                                    </li>
+                                <!-- modify 0713 -->
+                                <ul class="delivery-info">
+                                    <li>木村 拓哉 (きむらたくや) </li>
+                                    <li>080-123-4567</li>
+                                    <li>hmk@hyundai.co.jp</li>
                                 </ul>
+                                <!-- // modify 0713 -->
                             </div>
                         </div>
                         <div class="item active">
                             <h3 class="title tit-btn">お届け先</h3>
                             <div class="cont">
-                                <ul class="delivery-info">
+                                <ul class="delivery-info" style="display: none;">
                                     <li class="default">
                                         <em>[家] 我が家</em>
-                                        <span class="shipping-flag">基本お届け先</span>
+                                        <span class="text-flag">基本お届け先</span>
                                         <button class="btn btn-tbl"><span>お届け先の変更</span></button>
                                     </li>
                                     <li>木村 拓哉 (きむらたくや) </li>
                                     <li>080-123-4567</li>
                                     <li class="address">〒220-0012  Minatomirai Center Bldg. 16F, 3-6-1, Minatomirai, Nishi-ku, Yokohama City, Kanagawa</li>
-                                </ul>        
+                                </ul> 
                                 
-                                <!-- NO delivery -->
-                                <ul class="form-list">
-                                    <li>
-                                        <div class="inp-outer-box">
-                                            <label for="inpName01_01">姓名 <span class="required">*</span></label>
-                                            <div class="inp-group-box mo-full">
+                                <!-- NO delivery modify 0713 -->
+                                <div class="shipping-list">
+                                    <div class="inp-slice-flex">
+                                        <label class="radio"><input type="radio" name="newShipping" checked=""><span class="tit">自宅</span></label>
+                                        <label class="radio"><input type="radio" name="newShipping"><span class="tit">その他</span></label>
+                                    </div>
+                
+                                    <ul class="form-list">
+                                        <li>
+                                            <div class="inp-outer-box">
+                                                <label for="inpTxt01">住所名(選択)</label>
                                                 <div class="inp-area">
-                                                    <input type="text" id="inpName01_01" class="inp-item" placeholder="木村">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                                <div class="inp-area">
-                                                    <input type="text" id="inpName01_02" class="inp-item" placeholder="拓哉">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="error-msg lbl-type">error text</p>
-                                    </li>
-                                    <li>
-                                        <div class="inp-outer-box mo-full">
-                                            <label for="inpName01_01">姓名 (フリガナ) <span class="required">*</span></label>
-                                            <div class="inp-group-box">
-                                                <div class="inp-area">
-                                                    <input type="text" id="inpName02_01" class="inp-item" placeholder="きむら">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                                <div class="inp-area">
-                                                    <input type="text" id="inpName02_02" class="inp-item" placeholder="たくや">
+                                                    <input type="text" id="inpTxt01" class="inp-item" placeholder="住所名を入力">
                                                     <button class="inp-close"></button>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <p class="error-msg lbl-type">error text</p>
-                                    </li>
-                                    <li>
-                                        <div class="inp-outer-box">
-                                            <label for="inpNum01_01">携帯電話 <span class="required">*</span></label>
-                                            <div class="inp-slice-box">
-                                                <div class="inp-area">
-                                                    <input type="number" id="inpNum01_01" class="inp-item" placeholder="数字">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                                <span class="inp-hpn">-</span>
-                                                <div class="inp-area">
-                                                    <input type="number" id="inpNum01_02" class="inp-item" placeholder="数字">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                                <span class="inp-hpn">-</span>
-                                                <div class="inp-area">
-                                                    <input type="number" id="inpNum01_03" class="inp-item" placeholder="数字">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="error-msg lbl-type">error text</p>
-                                    </li>
-                                    <li>
-                                        <div class="inp-outer-box post-type">
-                                            <label for="inpNum01_01">住所 <span class="required">*</span></label>
-                                            <div class="inp-group-box">
-                                                <div class="inp-btn-box">
+                                            <p class="error-msg lbl-type">error text</p>
+                                        </li>
+                                        <li>
+                                            <div class="inp-outer-box">
+                                                <label for="inpName01_01">姓名 <span class="required">*</span></label>
+                                                <div class="inp-group-box mo-full">
                                                     <div class="inp-area">
-                                                        <input type="text" class="inp-item" placeholder="〒" readonly>
+                                                        <input type="text" id="inpName01_01" class="inp-item" placeholder="木村">
                                                         <button class="inp-close"></button>
                                                     </div>
-                                                    <button class="btn btn-middle btn-type2 pop-open" data-pop-idx="findPostalCode"><span>郵便番号検索</span></button>
-                                                </div>
-                                                <div class="inp-area">
-                                                    <input type="text" class="inp-item" placeholder="都道府県" readonly>
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                                <div class="inp-area">
-                                                    <input type="text" class="inp-item" placeholder="市区町村" readonly>
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                                <div class="inp-area">
-                                                    <input type="text" class="inp-item" placeholder="番地" readonly>
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                                <div class="inp-area">
-                                                    <input type="text" class="inp-item" placeholder="ビル・マンション名(選択)">
-                                                    <button class="inp-close"></button>
+                                                    <div class="inp-area">
+                                                        <input type="text" id="inpName01_02" class="inp-item" placeholder="拓哉">
+                                                        <button class="inp-close"></button>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <p class="error-msg lbl-type">error text</p>
-                                    </li>
-                                </ul>
-                                <!-- //NO delivery -->
+                                            <p class="error-msg lbl-type">error text</p>
+                                        </li>
+                                        <li>
+                                            <div class="inp-outer-box mo-full">
+                                                <label for="inpName01_01">姓名 (フリガナ) <span class="required">*</span></label>
+                                                <div class="inp-group-box">
+                                                    <div class="inp-area">
+                                                        <input type="text" id="inpName02_01" class="inp-item" placeholder="きむら">
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                    <div class="inp-area">
+                                                        <input type="text" id="inpName02_02" class="inp-item" placeholder="たくや">
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="error-msg lbl-type">error text</p>
+                                        </li>
+                                        <li>
+                                            <div class="inp-outer-box">
+                                                <label for="inpNum01_01">携帯電話 <span class="required">*</span></label>
+                                                <div class="inp-slice-box">
+                                                    <div class="inp-area">
+                                                        <input type="number" id="inpNum01_01" class="inp-item" placeholder="数字">
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                    <span class="inp-hpn">-</span>
+                                                    <div class="inp-area">
+                                                        <input type="number" id="inpNum01_02" class="inp-item" placeholder="数字">
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                    <span class="inp-hpn">-</span>
+                                                    <div class="inp-area">
+                                                        <input type="number" id="inpNum01_03" class="inp-item" placeholder="数字">
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="error-msg lbl-type">error text</p>
+                                        </li>
+                                        <li>
+                                            <div class="inp-outer-box post-type">
+                                                <label for="inpNum01_01">住所 <span class="required">*</span></label>
+                                                <div class="inp-group-box">
+                                                    <div class="inp-btn-box">
+                                                        <div class="inp-area">
+                                                            <input type="text" class="inp-item" placeholder="〒" readonly>
+                                                            <button class="inp-close"></button>
+                                                        </div>
+                                                        <button class="btn btn-middle btn-type2 pop-open" data-pop-idx="findPostalCode"><span>郵便番号検索</span></button>
+                                                    </div>
+                                                    <div class="inp-area">
+                                                        <input type="text" class="inp-item" placeholder="都道府県" readonly>
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                    <div class="inp-area">
+                                                        <input type="text" class="inp-item" placeholder="市区町村" readonly>
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                    <div class="inp-area">
+                                                        <input type="text" class="inp-item" placeholder="番地" readonly>
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                    <div class="inp-area">
+                                                        <input type="text" class="inp-item" placeholder="ビル・マンション名(選択)">
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="error-msg lbl-type">error text</p>
+                                        </li>
+                                    </ul>
+                
+                                    <div class="save-check">
+                                        <label class="chk"><input type="checkbox"><span>基本お届け先として登録</span></label><!-- modify 0713 -->
+                                    </div>
+                                </div>
+                                
+                                <!-- //NO delivery modify 0713-->
                             </div>
                         </div>
                         <div class="item active">
@@ -274,17 +235,17 @@
                                         <h4 class="title">H Geunine  <em class="fc-color2">[2]</em></h4>
                                         <ul class="item">
                                             <li>
-                                                <div class="thumb"><img src="../../assets/images/@img_80_80.jpg" alt="상품명 이미지"></div>
+                                                <div class="thumb"><img src="../../assets/images/@img_96_96.jpg" alt="상품명 이미지"></div>
                                                 <div class="name">充電器 SET アイオニック5(NE)一般用 緩速 充電器 SET 一般用 緩速 充電器 SET一般用 緩速 充電</div>
-                                                <div class="amount">1</div>
                                                 <div class="option">white</div>
+                                                <div class="amount">1</div>
                                                 <div class="price">¥ 31,000</div>
                                             </li>
                                             <li>
-                                                <div class="thumb"><img src="../../assets/images/@img_80_80.jpg" alt="상품명 이미지"></div>
+                                                <div class="thumb"><img src="../../assets/images/@img_96_96.jpg" alt="상품명 이미지"></div>
                                                 <div class="name">充電器 SET アイオニック5(NE)一般用 緩速 充電器 SET 一般用 緩速 充電器 SET一般用 緩速 充電</div>
-                                                <div class="amount">1</div>
                                                 <div class="option">white</div>
+                                                <div class="amount">1</div>
                                                 <div class="price">¥ 31,000</div>
                                             </li>
                                         </ul>
@@ -309,14 +270,14 @@
                                         <h4 class="title">H Geunine  <em class="fc-color2">[2]</em></h4>
                                         <ul class="item">
                                             <li>
-                                                <div class="thumb"><img src="../../assets/images/@img_80_80.jpg" alt="상품명 이미지"></div>
+                                                <div class="thumb"><img src="../../assets/images/@img_96_96.jpg" alt="상품명 이미지"></div>
                                                 <div class="name">充電器 SET アイオニック5(NE)一般用 緩速 充電器 SET 一般用 緩速 充電器 SET一般用 緩速 充電</div>
                                                 <div class="amount">1</div>
                                                 <div class="option">white</div>
                                                 <div class="price">¥ 31,000</div>
                                             </li>
                                             <li>
-                                                <div class="thumb"><img src="../../assets/images/@img_80_80.jpg" alt="상품명 이미지"></div>
+                                                <div class="thumb"><img src="../../assets/images/@img_96_96.jpg" alt="상품명 이미지"></div>
                                                 <div class="name">充電器 SET アイオニック5(NE)一般用 緩速 充電器 SET 一般用 緩速 充電器 SET一般用 緩速 充電</div>
                                                 <div class="amount">1</div>
                                                 <div class="option">white</div>
@@ -388,9 +349,18 @@
                                     <li><label class="radio"><input type="radio" name="radioGroup" id="radioChk01" checked="checked"><span>クレジットカード</span></label></li>
                                     <li><label class="radio"><input type="radio" name="radioGroup" id="radioChk02"><span>LINEPAY</span></label></li>
                                 </ul>
-                                <ul class="check-group">
-                                    <li><label class="chk type3"><input type="checkbox"><span><a href="javascript:void(0);" class="text-link fc-color">個人情報保護方針</a>および<a href="javascript:void(0);" class="text-link fc-color">会員規約に</a>同意の上「注文する」ボタンを押してください。</span></label></li>
+                                <!-- modify 0713 -->
+                                <ul class="check-terms">
+                                    <li>
+                                        <label class="chk"><input type="checkbox"><!-- error class="chk val-error"-->
+                                            <span><em>(必須)</em>購入利用約款にすべて同意します。</span>
+                                            <a href="javascript:void(0);" class="link-more">詳細を見る</a>
+                                        </label>
+                                        <p class="error-msg">error text</p>
+                                    </li>
+                                    
                                 </ul>
+                                <!-- // modify 0713 -->
                                 <div class="cta-outer full-type">
                                     <button class="btn btn-type2"><span>ご注文</span></button>
                                 </div>

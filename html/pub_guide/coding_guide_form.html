@@ -310,6 +310,22 @@
 
 			<br>
 
+			<div class="inp-outer-box">
+				<div class="inp-btn-box">
+					<div class="inp-area">
+						<input type="search" class="inp-item" placeholder="ご希望の仕様を探してみてください">
+						<button class="inp-close"></button>
+					</div>
+					<div class="inp-slice-box">
+						<button class="btn btn-middle btn-type2 auto-width"><span>検索</span></button>
+						<button class="btn-reset"><span><img src="../assets/images/common/btn_reset.svg" alt="리셋"></span></button>
+					</div>
+				</div>
+			</div>
+			<p class="error-msg">error text</p>
+
+			<br>
+
 			<div class="inp-outer-box val-error">
 				<div class="inp-btn-box">
 					<div class="inp-area">
@@ -420,6 +436,7 @@
 		<li>option3</li>
 	</ul>
 </div>
+
 <div class="slt-box disabled">
 	<p class="selected-value">Custom Select Text</p>
 	<ul class="select-items">
@@ -428,6 +445,7 @@
 		<li>option3</li>
 	</ul>
 </div>
+
 <div class="inp-outer-box">
 	<div class="inp-slice-box">
 		<select title="selectBox" class="slt-box">
@@ -444,6 +462,28 @@
 		<span class="inp-hpn">-</span>
 		<select title="selectBox" class="slt-box">
 			<option value="00" selected disabled hidden>Select All</option>
+			<option value="01">Option01</option>
+			<option value="02">Option02</option>
+		</select>
+	</div>
+</div>
+
+<div class="inp-outer-box">
+	<div class="inp-slice-box none-hyphen">
+		<select title="selectBox" class="slt-box">
+			<option value="00" selected disabled hidden>全車両</option>
+			<option value="01">Option01</option>
+			<option value="02">Option02</option>
+		</select>
+		<span class="inp-hpn">-</span>
+		<select title="selectBox" class="slt-box">
+			<option value="00" selected disabled hidden>全車両</option>
+			<option value="01">Option01</option>
+			<option value="02">Option02</option>
+		</select>
+		<span class="inp-hpn">-</span>
+		<select title="selectBox" class="slt-box">
+			<option value="00" selected disabled hidden>全車両</option>
 			<option value="01">Option01</option>
 			<option value="02">Option02</option>
 		</select>
@@ -487,6 +527,28 @@
 				</div>
 			</div>
 			<br><br>
+			<div class="inp-outer-box">
+				<div class="inp-slice-box none-hyphen">
+					<select title="selectBox" class="slt-box">
+						<option value="00" selected disabled hidden>全車両</option>
+						<option value="01">Option01</option>
+						<option value="02">Option02</option>
+					</select>
+					<span class="inp-hpn">-</span>
+					<select title="selectBox" class="slt-box">
+						<option value="00" selected disabled hidden>全車両</option>
+						<option value="01">Option01</option>
+						<option value="02">Option02</option>
+					</select>
+					<span class="inp-hpn">-</span>
+					<select title="selectBox" class="slt-box">
+						<option value="00" selected disabled hidden>全車両</option>
+						<option value="01">Option01</option>
+						<option value="02">Option02</option>
+					</select>
+				</div>
+			</div>
+			<br><br>
 			<h4 class="btm-border">- Custom Select</h4>
 			
 			<div class="slt-box">
@@ -522,15 +584,18 @@
 
 			<div class="conIn_tip">
 				.chk &gt; input + span <br>
-				Text Bold- .type2추가 / Text light .type3추가
 			</div>		
 			<label class="chk"><input type="checkbox"><span>Default</span></label>
 			<label class="chk"><input type="checkbox" checked="checked"><span>Checked</span></label>			
 			<label class="chk"><input type="checkbox" disabled="disabled"><span>Disabled</span></label>
 			<label class="chk"><input type="checkbox" checked="checked" disabled="disabled"><span>Checked+Disabled</span></label>
+			
+			
+			<div class="conIn_tip">
+				.chk.type2 &gt; input + span <br>
+				Text Bold & Display Block
+			</div>
 			<label class="chk type2"><input type="checkbox"><span>Bold Text Type</span></label>
-			<label class="chk type3"><input type="checkbox"><span>light Text Type</span></label>
-
 			<h4 class="btm-border">- 체크박스 그룹</h4>
 
 <!-- 코드 삽입 -->
@@ -539,47 +604,87 @@
 	<label class="chk"><input type="checkbox"><span>선택1</span></label>
 	<label class="chk"><input type="checkbox" checked="checked"><span>선택2</span></label>
 </div>
-<p class="error-msg lbl-type">error text</p>
-
-<ul class="check-group">
-	<li class="all"><label class="chk"><input type="checkbox"><span>전체동의</span></label></li>
-	<li class="normal"><label class="chk"><input type="checkbox"><span>동의1</span></label></li>
-	<li class="normal"><label class="chk"><input type="checkbox"><span>동의2</span></label></li>
-</ul>
-<p class="error-msg lbl-type">error text</p>
+<p class="error-msg">error text</p>
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
 				div.check-group &gt; .chk + .chk
 			</div>
-			<div class="check-group"><!-- 에러시 val-error -->
+			<div class="check-group"><!-- 에러시 + val-error -->
 				<label class="chk"><input type="checkbox"><span>선택1</span></label>
 				<label class="chk"><input type="checkbox" checked="checked"><span>선택2</span></label>				
 				<label class="chk"><input type="checkbox"><span>クレジットカード クレジットカードクレジットカードクレジットカード</span></label>
 			</div>
-			<p class="error-msg lbl-type">error text</p>
+			<p class="error-msg">error text</p>
 
+			<h4 class="btm-border">- 약관</h4>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<ul class="check-terms">
+	<li>
+		<label class="chk"><input type="checkbox"><span><em>(必須)</em>個人情報の収集及び利用目的につい
+			ての同意</span>
+			<a href="#" class="link-more">詳細を見る</a>
+		</label>					
+		<p class="error-msg">error text</p>
+	</li>
+	<li>
+		<label class="chk val-error"><input type="checkbox"><span><em>(必須)</em>個人情報の収集及び利用目的につい
+			ての同意</span>
+			<a href="#" class="link-more">詳細を見る</a>
+		</label>					
+		<p class="error-msg">error text</p>
+	</li>
+	<li>
+		<label class="chk val-error"><input type="checkbox"><span><em>(必須)</em>登録された携帯電話あてに試乗サービ
+		ス利用についてご案内させていただきます。</span></label>
+		<p class="error-msg">error text</p>
+	</li>
+</ul>
+
+<ul class="check-terms">
+	<li class="all"><label class="chk"><input type="checkbox"><span>전체동의</span></label></li>
+	<li class="normal"><label class="chk"><input type="checkbox"><span>동의1</span></label></li>
+	<li class="normal"><label class="chk"><input type="checkbox"><span>동의2</span></label></li>
+</ul>
+--></code></pre>
+<!-- //코드 삽입 -->
 			<div class="conIn_tip">
-				ul.check-group &gt; li + li<br>
+				ul.check-terms &gt; li + li<br>
 			</div>
 
-			<ul class="check-group">
-				<li><label class="chk"><input type="checkbox"><span>동의1</span></label></li>
-				<li><label class="chk"><input type="checkbox"><span>동의2</span></label></li>
+			<ul class="check-terms">
+				<li>
+					<label class="chk"><input type="checkbox"><span><em>(必須)</em>個人情報の収集及び利用目的につい
+						ての同意</span>
+						<a href="#" class="link-more">詳細を見る</a>
+					</label>					
+					<p class="error-msg">error text</p>
+				</li>
+				<li>
+					<label class="chk val-error"><input type="checkbox"><span><em>(必須)</em>個人情報の収集及び利用目的につい
+						ての同意</span>
+						<a href="#" class="link-more">詳細を見る</a>
+					</label>					
+					<p class="error-msg">error text</p>
+				</li>
+				<li>
+					<label class="chk val-error"><input type="checkbox"><span><em>(必須)</em>登録された携帯電話あてに試乗サービ
+					ス利用についてご案内させていただきます。</span></label>
+					<p class="error-msg">error text</p>
+				</li>
 			</ul>
-			<p class="error-msg lbl-type">error text</p>
 
 
 			<div class="conIn_tip">
 				전체동의가 있는경우 <strong>class="all, class="normal"</strong> 추가
 			</div>
 
-			<ul class="check-group">
+			<ul class="check-terms">
 				<li class="all"><label class="chk"><input type="checkbox"><span>전체동의</span></label></li>
 				<li class="normal"><label class="chk"><input type="checkbox"><span>동의1</span></label></li>
 				<li class="normal"><label class="chk"><input type="checkbox"><span>동의2</span></label></li>
 			</ul>
-			<p class="error-msg lbl-type">error text</p>
 
 
 			<hr>
@@ -611,14 +716,14 @@
 	<label class="radio"><input type="radio" checked="checked" name="radio" id="radioChk02"><span>自宅へ配送</span></label>
 	<label class="radio"><input type="radio" name="radio" id="radioChk02"><span>自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 </span></label>
 </div>
-<p class="error-msg lbl-type">error text</p>
+<p class="error-msg">error text</p>
 
 <ul class="radio-group">
 	<li><label class="radio "><input type="radio" name="radioGroup" id="radioChk01" checked="checked"><span>LINE PAY</span></label></li>
 	<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk02"><span>Card</span></label></li>
 	<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk03"><span>Bank Transfer</span></label></li>
 </ul>
-<p class="error-msg lbl-type">error text</p>
+<p class="error-msg ">error text</p>
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
@@ -629,7 +734,7 @@
 				<label class="radio"><input type="radio" checked="checked" name="radio1" id="radioChk05"><span>自宅へ配送</span></label>
 				<label class="radio"><input type="radio" name="radio1" id="radioChk06"><span>自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 </span></label>
 			</div>
-			<p class="error-msg lbl-type">error text</p>
+			<p class="error-msg">error text</p>
 
 			<div class="conIn_tip">
 				ul.radio-group &gt; li + li
@@ -639,7 +744,7 @@
 				<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk08"><span>Card</span></label></li>
 				<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk09"><span>Bank Transfer</span></label></li>
 			</ul>
-			<p class="error-msg lbl-type">error text</p>
+			<p class="error-msg">error text</p>
 
 			<h3 class="title">&#x25CE; Date Picker</h3>
 			<h4 class="btm-border">- 기본</h4>

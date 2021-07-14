@@ -1,0 +1,354 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>HMJ 온라인 판매 사이트 구축</title>
+
+	<link rel="stylesheet" href="../../assets/css/lib/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/lib/customlib.css">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/spec.css">
+	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/swiper.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
+	<script type="text/javascript" src="../../assets/js/common.js"></script>
+	<script type="text/javascript" src="../../assets/js/spec.js"></script>
+	
+</head>
+
+<body>
+
+<div class="hmj-wrap">
+	<div class="skip-nav">
+		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
+	</div>
+
+	<!-- header -->
+	<div class="hmj-header">
+		<!-- header -->
+		<div class="header-cont">
+			<h1><a href="hmj_layout.html"><img src="../../assets/images/common/img_header_logo.png" alt="Hyundai Logo"></a></h1>
+
+			<div class="gnb-menu-outer">
+				<ul class="gnb-menu-list">
+					<li>
+						<button><span>ブランド</span></button>
+					</li>
+					<li>
+						<button><span>IONIQ5</span></button>
+					</li>
+					<li>
+						<button><span>NEXO</span></button>
+					</li>
+					<li>
+						<button><span>購買</span></button>
+					</li>
+					<li>
+						<button><span>サービス</span></button>
+					</li>
+					<li>
+						<button><span>コンテンツ</span></button>
+					</li>
+					<li>
+						<button><span>ストア</span></button>
+					</li>
+				</ul>
+			</div>
+
+			<div class="gnb-right-menu">
+				<ul class="gnb-right-list">
+					<li>
+						<button class="btn-cart"><span><img src="../../assets/images/common/ico_cart.png" alt="장바구니"></span></button>
+					</li>
+					<li>
+						<button class="btn-search">
+							<span>
+								<picture>
+									<source srcset="../../assets/images/common/ico_search.png" media="(min-width: 1120px)">
+									<source srcset="../../assets/images/common/ico_search_mo.png" media="(max-width: 1119px)">
+									<img src="../../assets/images/common/ico_search.png" alt="검색">
+								</picture>
+							</span>
+						</button>
+					</li>
+					<li>
+						<button class="btn-mypage"><span><img src="../../assets/images/common/ico_mypage.png" alt="마이페이지"></span></button>
+					</li>
+				</ul>
+			</div>
+		</div>		
+		<div class="sub-cont">
+			<div class="history">
+				<span>ホーム</span>
+				<span>自動車 仕様百科</span>
+			</div>
+			<button type="button" class="back-page">Back page</button>
+			<div class="page-title">自動車 仕様百科</div>
+		</div>
+		<!-- //header -->
+	</div>
+	<!--//header -->
+
+	<!-- container -->
+	<div id="hmjContainer" class="hmj-container">
+		<div class="hmj-content">
+			<div class="cont-outer fullcase">
+				<div class="top-search-wrap">
+					<div class="search-inner">
+						<div class="inp-btn-box">
+							<div class="inp-area">
+								<input type="search" class="inp-item" placeholder="ご希望の仕様を探してみてください">
+								<button class="inp-close"></button>
+							</div>
+							<div class="inp-slice-box">
+								<button class="btn btn-middle btn-type2 auto-width"><span>検索</span></button>
+								<button class="btn-reset pop-open" data-pop-idx="1"><span><img src="../../assets/images/common/btn_reset.svg" alt="리셋"></span></button>
+							</div>
+						</div>
+						<div class="inp-outer-box">
+							<div class="inp-slice-box none-hyphen">
+								<select title="selectBox" class="slt-box">
+									<option value="00" selected="" disabled="" hidden="">全車両</option>
+									<option value="01">IONIQ 5</option>
+									<option value="02">NEXO</option>
+								</select>
+								<span class="inp-hpn">-</span>
+								<select title="selectBox" class="slt-box" disabled><!-- disabled일 경우 -->
+									<option value="00" selected="" disabled="" hidden="">全車両</option>
+									<option value="01">Option01</option>
+									<option value="02">Option02</option>
+								</select>
+								<span class="inp-hpn">-</span>
+								<select title="selectBox" class="slt-box">
+									<option value="00" selected="" disabled="" hidden="">全車両</option>
+									<option value="01">Option01</option>
+									<option value="02">Option02</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cont-inner">
+					<!-- 결과 없음 -->
+					<div class="search-no-result">
+						<p class="search-result-txt">
+							<span>‘IONIQ’</span> について検索結果はありません。
+						</p>
+						<ul class="caution">
+							<li>入力した検索語のスペルが正しいか確認してください。</li>
+							<li>検索ワードの単語数を減らしたり、より一般的な検索ワードを検索してみてください。</li>
+						</ul>
+					</div>
+					<!-- 결과 있음 -->
+					<p class="search-result-txt">
+						<span>‘スマート’</span> について <span>‘IONIQ 5 2022年型’</span> の <span>‘外観分類’</span> で、N件の検索結果があります。
+					</p>
+					<div class="list-wrap text">
+						<div class="list-type">
+							<button class="type1 on"><span>text list</span></button>
+							<button class="type2"><span>gallery list</span></button>
+						</div>
+						<div class="list-box-wrap">
+							<div class="list-box type-img"><!-- 이미지 있는 경우 type-img 추가-->
+								<div class="desc-cont">
+									<div class="top">
+										<span class="text-flag2">IONIQ 5</span>
+									</div>
+									<span class="cate">操作性</span>
+									<strong class="tit">
+										左右独立温度コントロールフルオートエアコン(マイクロエアフィルター, オートデフォッガー、PM センサー, 空気清浄モード付)
+									</strong>
+									<p class="detail">
+										量の衝突時の衝撃から自動車の乗客を保護する装置で6つのエアバッグが適用されています。
+										前席アドバンスドエアバッグ：衝突の程度に応じてエアバッグの展開圧力を制御（低圧/高圧）で助手席にチャイルドシート装着後の幼児の搭乗時の安全のためにエア
+									</p>
+									<div class="img-include"></div><!-- 리스트에 이미지 있음 -->
+									<button type="button" class="btn btn-tbl pop-open" data-pop-idx="2"><span>もっと見る</span></button>
+								</div>
+								<div class="img-cont" data-detail="量の衝突時の衝撃から自動車の乗客を保護する装置で6つのエアバッグが適用されています。前席アドバンスドエアバッグ：衝突の程度に応じてエアバッグの展開圧力を制御（低圧/高圧）で助手席にチャイルドシート装着後の幼児の搭乗時の安全のためにエア">
+									<div class="swiper-outer-box gallery-list2">
+										<div class="swiper-container">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<img src="../../assets/images/@img_scroll_sample01.jpg" alt="sample01">
+												</div>
+												<div class="swiper-slide">
+													<img src="../../assets/images/@img_scroll_sample02.jpg" alt="sample02">
+												</div>
+												<div class="swiper-slide">
+													<img src="../../assets/images/@img_scroll_sample03.jpg" alt="sample03">
+												</div>
+												<div class="swiper-slide">
+													<img src="../../assets/images/@img_scroll_sample04.jpg" alt="sample04">
+												</div>
+											</div>
+										</div>
+										<div class="swiper-button-prev"></div>
+										<div class="swiper-button-next"></div>
+										<div class="swiper-pagination"></div>
+									</div>
+								</div>
+							</div>
+							<div class="list-box type-img">
+								<div class="desc-cont">
+									<div class="top">
+										<span class="text-flag2">NEXO</span>
+									</div>
+									<span class="cate">操作性</span>
+									<strong class="tit">
+										左右独立温度コントロールフルオートエアコン(マイクロエアフィルター, オートデフォッガー、PM センサー, 空気清浄モード付)
+									</strong>
+									<p class="detail">
+										量の衝突時の衝撃から自動車の乗客を保護する装置で6つのエアバッグが適用されています。
+										前席アドバンスドエアバッグ：衝突の程度に応じてエアバッグの展開圧力を制御（低圧/高圧）で助手席にチャイルドシート装着後の幼児の搭乗時の安全のためにエア
+									</p>
+									<div class="img-include"></div>
+									<button type="button" class="btn btn-tbl pop-open" data-pop-idx="2"><span>もっと見る</span></button>
+								</div>
+								<div class="img-cont" data-detail="量の衝突時の衝撃から自動車の乗客を保護する装置で6つのエアバッグが適用されています。前席アドバンスドエアバッグ：衝突の程度に応じてエアバッグの展開圧力を制御（低圧/高圧）で助手席にチャイルドシート装着後の幼児の搭乗時の安全のためにエア">
+									<div class="swiper-outer-box gallery-list1">
+										<div class="swiper-container">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<img src="../../assets/images/@img_scroll_sample01.jpg" alt="sample01">
+												</div>
+											</div>
+										</div>
+										<div class="swiper-button-prev"></div>
+										<div class="swiper-button-next"></div>
+										<div class="swiper-pagination"></div>
+									</div>
+								</div>
+							</div>
+							<div class="list-box">
+								<div class="desc-cont">
+									<div class="top">
+										<span class="text-flag2">IONIQ 5</span>
+									</div>
+									<span class="cate">操作性</span>
+									<strong class="tit">
+										左右独立温度コントロールフルオートエアコン(マイクロエアフィルター, オートデフォッガー、PM センサー, 空気清浄モード付)
+									</strong>
+									<p class="detail">
+										量の衝突時の衝撃から自動車の乗客を保護する装置で6つのエアバッグが適用されています。
+										前席アドバンスドエアバッグ：衝突の程度に応じてエアバッグの展開圧力を制御（低圧/高圧）で助手席にチャイルドシート装着後の幼児の搭乗時の安全のためにエア
+									</p>
+									<div class="img-include"></div>
+									<button type="button" class="btn btn-tbl pop-open" data-pop-idx="2"><span>もっと見る</span></button>
+								</div>
+							</div>
+							<div class="list-box">
+								<div class="desc-cont">
+									<div class="top">
+										<span class="text-flag2">NEXO</span>
+									</div>
+									<span class="cate">操作性</span>
+									<strong class="tit">
+										左右独立温度コントロールフルオートエアコン(マイクロエアフィルター, オートデフォッガー、PM センサー, 空気清浄モード付)
+									</strong>
+									<p class="detail">
+										量の衝突時の衝撃から自動車の乗客を保護する装置で6つのエアバッグが適用されています。
+										前席アドバンスドエアバッグ：衝突の程度に応じてエアバッグの展開圧力を制御（低圧/高圧）で助手席にチャイルドシート装着後の幼児の搭乗時の安全のためにエア
+									</p>
+									<div class="img-include"></div>
+									<button type="button" class="btn btn-tbl pop-open" data-pop-idx="2"><span>もっと見る</span></button>
+								</div>
+							</div>
+						</div>
+						<div class="cta-outer full-type">
+							<button class="btn btn-type2"><span>もっと見る<span>(1/5)</span></span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//container -->
+
+	<!-- footer -->
+	<div class="hmj-footer">
+		<img src="../../assets/images/@footer.jpg" alt="footer">
+	</div>
+	<!--//footer -->
+</div>
+<div class="btn-top-box">
+	<a href="#" title="move to top" role="button" class="btn-top">
+		<span class="blind">Top</span>
+	</a>
+</div>
+
+<!-- 초기화 팝업 -->
+<div class="layer-popup-wrap reset" data-pop-idx="1">
+	<div class="layer-popup-body">
+		<div class="layer-popup-cont pop-small">
+			<h1 class="layer-title">타이틀 없음</h1>
+			<div class="layer-cont">
+				<p>リストを初期化しますか？</p>
+				<div class="cta-outer fix-type">
+					<a href="#" class="btn btn-middle btn-close"><span>キャンセル</span></a>
+					<a href="#" class="btn btn-middle btn-type2 btn-close"><span>確認</span></a>
+				</div>
+			</div>
+			<button class="btn-close-popup btn-close">close</button>
+		</div>
+	</div>
+</div>
+
+<!-- pc 더보기 팝업 -->
+<div class="layer-popup-wrap mo-full" data-pop-idx="2">
+    <div class="layer-popup-body">
+        <div class="layer-popup-cont">
+            <h1 class="layer-title">타이틀 없음</h1>
+            <div class="layer-cont">
+				<div class="spec-detail-cont">
+					<div class="top">
+						<span class="text-flag2">IONIQ 5</span>
+						<span>2021</span>
+					</div>
+					<span class="cate">外装</span>
+					<strong class="tit">
+						左右独立温度コントロールフルオートエアコン (マイクロエアフィルター, オートデフォッガー、PM センサー, 空気清浄モード付)
+					</strong>
+					<p class="detail">
+						お好みの温度を設定することで、自動で設定された温度で風量を調節して快適な室内に仕上げます。*車によって空調関連の様々な機能が追加されます。デュアル:デュアルモードを適用して、運転席と同乗席の温度を別々に設定できます。オートデポグ:前面ガラスの曇りを感知し、自ら前面ガラスと前席ガラスの曇りをなくし、運転視野を確保します。クラスターイオナイザー:車両内部の空気を抗菌·脱臭する機能で、エアコンの臭い除去と車両の室内空気を浄化し、運転環境を改善します。空気清浄モード:一定時間外部の空気を遮断し、内部循環モードを稼動して室内で循環する空気を繰り返しフィルタリングして空気の質を改善する機能です。3ゾーン独立制御:運転席や同乗席だけでなく、後席でも個別制御が可能なエアコンです。
+					</p>
+					<div class="img-cont">
+						<div class="swiper-outer-box gallery-list3">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="../../assets/images/@img_scroll_sample01.jpg" alt="sample01">
+									</div>
+									<div class="swiper-slide">
+										<img src="../../assets/images/@img_scroll_sample02.jpg" alt="sample02">
+									</div>
+									<div class="swiper-slide">
+										<img src="../../assets/images/@img_scroll_sample03.jpg" alt="sample03">
+									</div>
+									<div class="swiper-slide">
+										<img src="../../assets/images/@img_scroll_sample04.jpg" alt="sample04">
+									</div>
+								</div>
+							</div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+					<ul class="caution">
+						<li>入力した検索語のスペルが正しいか確認してください。</li>
+						<li>検索ワードの単語数を減らしたり、より一般的な検索ワードを検索してみてください。</li>
+					</ul>
+				</div>
+            </div>
+            <button class="btn-close-popup btn-close">close</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
