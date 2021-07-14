@@ -90,10 +90,12 @@ jQuery.event.add(window, 'load', function () {
 				if (e.originalEvent.wheelDelta > 0) {
 					headerOuter.addClass('header-fixed');
 					headerOuter.css('margin-top', -headerFixHgt);
+					console.log('up');
 				}
 				else if (e.originalEvent.wheelDelta < 0) {
 					headerOuter.removeClass('header-fixed');
 					headerOuter.css('margin-top', '0');
+					console.log('down');
 				}
 			} else {
 				e.stopPropagation();
