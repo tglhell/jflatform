@@ -42,12 +42,12 @@
 				display: none;
 			}
 			.gnb-menu-outer {
-				-webkit-transition: top .35s ease-in-out;
-				transition: top .35s ease-in-out;
+				-webkit-transition: all .35s ease-in-out;
+				transition: all .35s ease-in-out;
 				position: fixed;
 				top: 105px;
 				bottom: 0;
-				left: 0;
+				left: -200px;
 				z-index: 20;
 				overflow: hidden;
 				display: block;
@@ -99,6 +99,15 @@
 					$(this).addClass('active');
 				} else {
 					$(this).closest('li').find('.btn-depth-switch').removeClass('active');
+				}
+			});
+
+			$('.btn-menu').on('click', function () {
+				$(this).toggleClass('active');
+				if ($(this).hasClass('active')) {
+					$('.gnb-menu-outer').css('left', '0');
+				} else {
+					$('.gnb-menu-outer').css('left', '-200px');
 				}
 			});
 		});
