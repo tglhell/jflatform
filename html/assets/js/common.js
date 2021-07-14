@@ -84,11 +84,13 @@ jQuery.event.add(window, 'load', function () {
 				$('.btn-top-box').fadeIn(secVal[2]);
 				headerOuter.addClass('header-fixed');
 				headerOuter.css('margin-top', -headerFixHgt);
+				console.log('up1');
 			}
 			else {
 				$('.btn-top-box').fadeOut(secVal[2]);
 				headerOuter.removeClass('header-fixed');
 				headerOuter.css('margin-top', 0);
+				console.log('down1');
 			}
 			lastScrollTop = st;
 		}/*  else if (e.type == 'wheel') {
