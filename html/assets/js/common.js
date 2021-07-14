@@ -78,7 +78,20 @@ jQuery.event.add(window, 'load', function () {
 				// headerOuter.removeClass('header-fixed');
 				// headerOuter.css('margin-top', 0);
 			}
-		} else if (e.type == 'wheel') {
+			var lastScrollTop = 0;
+			st = $(this).scrollTop();
+			if (st < lastScrollTop) {
+				$('.btn-top-box').fadeIn(secVal[2]);
+				headerOuter.addClass('header-fixed');
+				headerOuter.css('margin-top', -headerFixHgt);
+			}
+			else {
+				$('.btn-top-box').fadeOut(secVal[2]);
+				headerOuter.removeClass('header-fixed');
+				headerOuter.css('margin-top', 0);
+			}
+			lastScrollTop = st;
+		}/*  else if (e.type == 'wheel') {
 			if (!$('html, body').is(':animated')) {
 				// if (e.originalEvent.wheelDelta < 0) {
 				// 	headerOuter.addClass('header-fixed');
@@ -110,7 +123,7 @@ jQuery.event.add(window, 'load', function () {
 				e.stopPropagation();
 				return false;
 			}
-		}
+		} */
 	});
 
 	inpItem.on('keyup', function () {
