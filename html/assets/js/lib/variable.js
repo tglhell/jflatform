@@ -6,7 +6,7 @@ chkSwitch = false;
 tbl = 1119;
 mo = 767;
 
-// initialing value
+// initializing value
 lastY = 0;
 lastScrTopPos = 0;
 
