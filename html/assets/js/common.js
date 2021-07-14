@@ -79,20 +79,19 @@ jQuery.event.add(window, 'load', function () {
 			// 	// headerOuter.removeClass('header-fixed');
 			// 	// headerOuter.css('margin-top', 0);
 			// }
-			st = $(this).scrollTop();
-			if (st > lastScrollTop) {
+			if (scrPos > lastScrollTop) {
 				$('.btn-top-box').fadeIn(secVal[2]);
 				headerOuter.addClass('header-fixed');
 				headerOuter.css('margin-top', -headerFixHgt);
-				console.log('up3');
+				console.log('down4');
 			}
 			else {
 				$('.btn-top-box').fadeOut(secVal[2]);
 				headerOuter.removeClass('header-fixed');
 				headerOuter.css('margin-top', 0);
-				console.log('down3');
+				console.log('up4');
 			}
-			lastScrollTop = st;
+			lastScrollTop = scrPos;
 		}/*  else if (e.type == 'wheel') {
 			if (!$('html, body').is(':animated')) {
 				// if (e.originalEvent.wheelDelta < 0) {
