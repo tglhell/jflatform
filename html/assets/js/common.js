@@ -46,7 +46,7 @@ jQuery.event.add(window, 'load', function () {
 		});
 	});
 
-	$(window).on('scroll mousewheel DOMMouseScroll', function (e) {
+	$(window).on('scroll wheel DOMMouseScroll', function (e) {
 		const chkBtnPos = $('.scr-fix-btn');
 		const headerFixHgt = headerOuter.find('.header-cont').outerHeight(true) + irNum[0];
 		let scrPos = $(this).scrollTop();
@@ -78,7 +78,7 @@ jQuery.event.add(window, 'load', function () {
 				// headerOuter.removeClass('header-fixed');
 				// headerOuter.css('margin-top', 0);
 			}
-		} else if (e.type == 'mousewheel') {
+		} else if (e.type == 'wheel') {
 			if (!$('html, body').is(':animated')) {
 				// if (e.originalEvent.wheelDelta < 0) {
 				// 	headerOuter.addClass('header-fixed');
