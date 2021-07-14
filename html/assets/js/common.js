@@ -71,18 +71,18 @@ jQuery.event.add(window, 'load', function () {
 			}
 			if (scrPos > 0) {
 				$('.btn-top-box').fadeIn(secVal[2]);
-				headerOuter.addClass('header-fixed');
-				headerOuter.css('margin-top', -headerFixHgt);
+				// headerOuter.addClass('header-fixed');
+				// headerOuter.css('margin-top', -headerFixHgt);
 			} else {
 				$('.btn-top-box').fadeOut(secVal[2]);
-				headerOuter.removeClass('header-fixed');
-				headerOuter.css('margin-top', 0);
+				// headerOuter.removeClass('header-fixed');
+				// headerOuter.css('margin-top', 0);
 			}
-		}/*  else {
+		} else {
 			if (!$('html, body').is(':animated')) {
 				if (e.originalEvent.wheelDelta < 0) {
 					headerOuter.addClass('header-fixed');
-					headerOuter.css('margin-top', headerFixHgt);
+					headerOuter.css('margin-top', -headerFixHgt);
 				} else {
 					headerOuter.removeClass('header-fixed');
 					headerOuter.css('margin-top', '0');
@@ -91,7 +91,7 @@ jQuery.event.add(window, 'load', function () {
 				e.stopPropagation();
 				return false;
 			}
-		} */
+		}
 	});
 
 	inpItem.on('keyup', function () {
