@@ -87,15 +87,24 @@ jQuery.event.add(window, 'load', function () {
 				// 	headerOuter.removeClass('header-fixed');
 				// 	headerOuter.css('margin-top', '0');
 				// }
-				if (e.originalEvent.wheelDelta > 0) {
+				// if (e.originalEvent.wheelDelta > 0) {
+				// 	headerOuter.addClass('header-fixed');
+				// 	headerOuter.css('margin-top', -headerFixHgt);
+				// 	console.log('up');
+				// }
+				// else if (e.originalEvent.wheelDelta < 0) {
+				// 	headerOuter.removeClass('header-fixed');
+				// 	headerOuter.css('margin-top', '0');
+				// 	console.log('down');
+				// }
+				if (e.originalEvent.deltaY > 0) {
 					headerOuter.addClass('header-fixed');
 					headerOuter.css('margin-top', -headerFixHgt);
-					console.log('up');
-				}
-				else if (e.originalEvent.wheelDelta < 0) {
+					console.log('up1');
+				} else {
 					headerOuter.removeClass('header-fixed');
 					headerOuter.css('margin-top', '0');
-					console.log('down');
+					console.log('down1');
 				}
 			} else {
 				e.stopPropagation();
