@@ -80,17 +80,17 @@ jQuery.event.add(window, 'load', function () {
 			// 	// headerOuter.css('margin-top', 0);
 			// }
 			st = $(this).scrollTop();
-			if (st < lastScrollTop) {
+			if (st > lastScrollTop) {
 				$('.btn-top-box').fadeIn(secVal[2]);
 				headerOuter.addClass('header-fixed');
 				headerOuter.css('margin-top', -headerFixHgt);
-				console.log('up2');
+				console.log('up3');
 			}
 			else {
 				$('.btn-top-box').fadeOut(secVal[2]);
 				headerOuter.removeClass('header-fixed');
 				headerOuter.css('margin-top', 0);
-				console.log('down2');
+				console.log('down3');
 			}
 			lastScrollTop = st;
 		}/*  else if (e.type == 'wheel') {
