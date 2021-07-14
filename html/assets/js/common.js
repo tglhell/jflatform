@@ -45,7 +45,8 @@ jQuery.event.add(window, 'load', function () {
 			}
 		});
 	});
-
+	
+	var lastScrollTop = 0;
 	$(window).on('scroll wheel DOMMouseScroll', function (e) {
 		const chkBtnPos = $('.scr-fix-btn');
 		const headerFixHgt = headerOuter.find('.header-cont').outerHeight(true) + irNum[0];
@@ -69,28 +70,27 @@ jQuery.event.add(window, 'load', function () {
 					}
 				}
 			}
-			if (scrPos > 0) {
-				$('.btn-top-box').fadeIn(secVal[2]);
-				// headerOuter.addClass('header-fixed');
-				// headerOuter.css('margin-top', -headerFixHgt);
-			} else {
-				$('.btn-top-box').fadeOut(secVal[2]);
-				// headerOuter.removeClass('header-fixed');
-				// headerOuter.css('margin-top', 0);
-			}
-			var lastScrollTop = 0;
+			// if (scrPos > 0) {
+			// 	$('.btn-top-box').fadeIn(secVal[2]);
+			// 	// headerOuter.addClass('header-fixed');
+			// 	// headerOuter.css('margin-top', -headerFixHgt);
+			// } else {
+			// 	$('.btn-top-box').fadeOut(secVal[2]);
+			// 	// headerOuter.removeClass('header-fixed');
+			// 	// headerOuter.css('margin-top', 0);
+			// }
 			st = $(this).scrollTop();
 			if (st < lastScrollTop) {
 				$('.btn-top-box').fadeIn(secVal[2]);
 				headerOuter.addClass('header-fixed');
 				headerOuter.css('margin-top', -headerFixHgt);
-				console.log('up1');
+				console.log('up2');
 			}
 			else {
 				$('.btn-top-box').fadeOut(secVal[2]);
 				headerOuter.removeClass('header-fixed');
 				headerOuter.css('margin-top', 0);
-				console.log('down1');
+				console.log('down2');
 			}
 			lastScrollTop = st;
 		}/*  else if (e.type == 'wheel') {
