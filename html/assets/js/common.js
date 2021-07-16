@@ -29,6 +29,7 @@ jQuery.event.add(window, 'load', function () {
 					if ($('html').hasClass('ios')) {
 						e.preventDefault();
 					}
+					console.log('test');
 				});
 			});
 			setObj(function () {
