@@ -7,6 +7,7 @@ tbl = 1119;
 mo = 767;
 
 // initializing value
+decimalVal = .1;
 lastY = 0;
 lastScrTopPos = 0;
 
