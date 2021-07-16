@@ -26,7 +26,9 @@ jQuery.event.add(window, 'load', function () {
 			gnbMenuBox.parent().fadeIn(secVal[3], function () {
 				gnbMenuBox.css('right', '0');
 				$('body').addClass('scroll-disable').on('scroll touchmove mousewheel', function (e) {
-					// e.preventDefault();
+					if ($('html').hasClass('ios')) {
+						e.preventDefault();
+					}
 				});
 			});
 			setObj(function () {
