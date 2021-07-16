@@ -163,6 +163,15 @@
 				font-size: 16px;
 				color: #000;
 			}
+			body.scroll-disable {
+				overflow: hidden !important;
+				touch-action: none;
+			}
+			@media (orientation: landscape) {
+				.btn-depth-switch.active ~ .menu-inner-depth {
+					min-height: 600px;
+				}
+			}
 		}
 	</style>
 
@@ -195,39 +204,6 @@
 							<div class="menu-inner-depth">
 								<button class="btn-depth-prev"><span>&ll; back</span></button>
 								<ul class="ir-count">
-									<li class="ir-item">
-										<button><span>コンテンツ</span></button>
-									</li>
-									<li class="ir-item">
-										<button><span>コンテンツ</span></button>
-									</li>
-									<li class="ir-item">
-										<button><span>コンテンツ</span></button>
-									</li>
-									<li class="ir-item">
-										<button><span>コンテンツ</span></button>
-									</li>
-									<li class="ir-item">
-										<button><span>コンテンツ</span></button>
-									</li>
-									<li class="ir-item">
-										<button><span>コンテンツ</span></button>
-									</li>
-									<li class="ir-item">
-										<button><span>コンテンツ</span></button>
-									</li>
-									<li class="ir-item">
-										<button><span>コンテンツ</span></button>
-									</li>
-									<li class="ir-item">
-										<button><span>コンテンツ</span></button>
-									</li>
-									<li class="ir-item">
-										<button><span>コンテンツ</span></button>
-									</li>
-									<li class="ir-item">
-										<button><span>コンテンツ</span></button>
-									</li>
 									<li class="ir-item">
 										<button><span>コンテンツ</span></button>
 									</li>

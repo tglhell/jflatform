@@ -13,7 +13,6 @@ jQuery.event.add(window, 'load', function () {
 		if ($(this).hasClass('btn-depth-switch')) {
 			$(this).addClass('active', function () {
 				let menuDepthHgt = $(this).next().outerHeight();
-				console.log(menuDepthHgt);
 				$(this).next().css('height', menuDepthHgt);
 			});
 		} else {
@@ -26,7 +25,9 @@ jQuery.event.add(window, 'load', function () {
 		if ($(this).hasClass('active')) {
 			gnbMenuBox.parent().fadeIn(secVal[3], function () {
 				gnbMenuBox.css('right', '0');
-				$('body').css({'position':'fixed'});
+				$('body').addClass('scroll-disable').on('scroll touchmove mousewheel', function (e) {
+					// e.preventDefault();
+				});
 			});
 			setObj(function () {
 				gnbMenuBox.parent().addClass('active').find('.btn-menu-close').stop().animate({'right':'20px'}, secVal[3]);
@@ -38,7 +39,7 @@ jQuery.event.add(window, 'load', function () {
 			if (!$(e.target).is(tarItem)) {
 				gnbMenuBox.css('right', '-250px');
 				gnbMenuBox.parent().find('.btn-menu-close').stop().animate({'right':'-100px'}, secVal[2]);
-				$('body').css({'position':'static'});
+				$('body').removeClass('scroll-disable').off('scroll touchmove mousewheel');
 				setObj(function () {
 					gnbMenuBox.parent().removeClass('active').fadeOut(secVal[2]);
 					$('.btn-depth-switch').removeClass('active');
