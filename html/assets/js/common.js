@@ -4,9 +4,49 @@ jQuery.event.add(window, 'load', function () {
 	const prxItem = $('.parallax-cont .prx-item > *');
 	const prxItem2 = $('.parallax-cont.prx-val2 .prx-item');
 	const prxItem3 = $('.parallax-cont.prx-val3 .prx-item');
+	const gnbMenuBox = $('.gnb-menu-box');
 	const irCont = $('.ir-count');
 	const inpItem = $('.inp-item');
 	const headerOuter = $('.hmj-header');
+
+	$('.btn-depth-switch, .btn-depth-prev').on('click', function (e) {
+		if ($(this).hasClass('btn-depth-switch')) {
+			$(this).addClass('active', function () {
+				let menuDepthHgt = $(this).next().outerHeight();
+				console.log(menuDepthHgt);
+				$(this).next().css('height', menuDepthHgt);
+			});
+		} else {
+			$(this).closest('li').find('.btn-depth-switch').removeClass('active');
+		}
+	});
+
+	$('.btn-menu').on('click', function () {
+		$(this).toggleClass('active');
+		if ($(this).hasClass('active')) {
+			gnbMenuBox.parent().fadeIn(secVal[3], function () {
+				gnbMenuBox.css('right', '0');
+				$('body').css({'position':'fixed'});
+			});
+			setObj(function () {
+				gnbMenuBox.parent().addClass('active').find('.btn-menu-close').stop().animate({'right':'20px'}, secVal[3]);
+			}, secVal[3]);
+		}
+
+		gnbMenuBox.parent().on('click', function (e) {
+			const tarItem = $('.hmj-wrap:not(.hmj-header), .gnb-menu-outer *:not(.btn-menu-close)');
+			if (!$(e.target).is(tarItem)) {
+				gnbMenuBox.css('right', '-250px');
+				gnbMenuBox.parent().find('.btn-menu-close').stop().animate({'right':'-100px'}, secVal[2]);
+				$('body').css({'position':'static'});
+				setObj(function () {
+					gnbMenuBox.parent().removeClass('active').fadeOut(secVal[2]);
+					$('.btn-depth-switch').removeClass('active');
+				}, secVal[3]);
+				$('.btn-menu').removeClass('active');
+			}
+		});
+	});
 
 	tabTar.each(function () {
 		tabAutoHgt ($(this));
@@ -28,11 +68,11 @@ jQuery.event.add(window, 'load', function () {
 	});
 
 	irCont.each(function () {
-		let irLeng = $(this).find('.ir-item').length;
+		let irLeng = $(this).find('> .ir-item').length;
 		for (let i = 0; i <= irLeng; i++) {
-			$(this).find('.ir-item').eq(i).css('transition-delay', '.' + i + 's');
+			$(this).find('> .ir-item').eq(i).css('transition-delay', '.' + i + 's');
 			if (i > irNum[8]) {
-				$(this).find('.ir-item').eq(i).css('transition-delay', irNum[0] + '.' + i - (irNum[8] + irNum[0]) + 's');
+				$(this).find('> .ir-item').eq(i).css('transition-delay', irNum[0] + '.' + i - (irNum[8] + irNum[0]) + 's');
 			}
 		}
 	});
@@ -44,7 +84,7 @@ jQuery.event.add(window, 'load', function () {
 			}
 		});
 	});
-	
+
 	$(window).on('scroll', function (e) {
 		const chkBtnPos = $('.scr-fix-btn');
 		const headerFixHgt = headerOuter.find('.header-cont').outerHeight(true) + irNum[0];
@@ -70,17 +110,28 @@ jQuery.event.add(window, 'load', function () {
 			}
 			if (scrPos > 0) {
 				$('.btn-top-box').fadeIn(secVal[2]);
+				if ($(window).width() > tbl) {
+					headerOuter.addClass('scr-chk');
+				}
 			} else {
 				$('.btn-top-box').fadeOut(secVal[2]);
+				if ($(window).width() > tbl) {
+					headerOuter.removeClass('scr-chk');
+				}
 			}
 			if (scrPos > lastScrTopPos) {
 				headerOuter.addClass('header-fixed');
-				headerOuter.css('top', -headerFixHgt);
-				$('.gnb-menu-outer').css('top', '52px');
+				if ($(window).width() <= tbl) {
+					headerOuter.css('top', -headerFixHgt);
+					if (scrPos < headerFixHgt) {
+						headerOuter.attr('style', 'top: 0 !important;');
+					}
+				}
 			} else {
 				headerOuter.removeClass('header-fixed');
-				headerOuter.css('top', 0);
-				$('.gnb-menu-outer').css('top', '105px');
+				if ($(window).width() <= tbl) {
+					headerOuter.css('top', 0);
+				}
 			}
 			lastScrTopPos = scrPos;
 		}
@@ -185,11 +236,11 @@ jQuery.event.add(window, 'load', function () {
 		$(".all input").prop("checked", is_checked);
 	});
 
-	$('.layer-cont').on('touchstart', function (e) {
+	$('.layer-cont, .inner-scroll-y').on('touchstart', function (e) {
 		lastY = e.touches[0].clientY;
 	});
 
-	$('.layer-cont').on('touchmove', function (e) {
+	$('.layer-cont, .inner-scroll-y').on('touchmove', function (e) {
 		let top = e.touches[0].clientY;
 		let scrollTop = $(e.currentTarget).scrollTop();
 		let direction = (lastY - top) < 0 ? 'up' : 'down';

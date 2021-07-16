@@ -12,14 +12,15 @@
 		.test .hmj-container .hmj-content .cont-outer.fullcase {
 			background-color: #f4f4f4;
 		}
-		.menu-next-depth {
+		.menu-inner-depth {
 			display: none;
 		}
 
-		@media screen and (max-width: 1119px) {
+		/* @media screen and (max-width: 1119px) { */
+		@media screen and (max-width: 3000px) {
 			.hmj-header {
-				-webkit-transition: top .35s ease-in-out;
-				transition: top .35s ease-in-out;
+				-webkit-transition: top .4s ease-in-out;
+				transition: top .4s ease-in-out;
 				position: fixed;
 				top: 0;
 				left: 0;
@@ -27,9 +28,28 @@
 				z-index: 20;
 				background-color: #fff;
 			}
+			.hmj-header.scr-chk {
+				-webkit-transition: background-color .4s ease-in-out;
+				transition: background-color .4s ease-in-out;
+				background-color: rgba(255, 255, 255, .5);
+				border-bottom-color: transparent;
+			}
+			.hmj-header.scr-chk .header-cont {
+				border-bottom-color: transparent;
+			}
+			.hmj-header .sub-cont {
+				-webkit-transition: height .5s ease-in-out;
+				transition: height .5s ease-in-out;
+				overflow: hidden;
+			}
+			.hmj-header.scr-chk .sub-cont {
+				-webkit-transition: height .5s ease-in-out;
+				transition: height .5s ease-in-out;
+				height: 0;
+			}
 			.hmj-header.header-fixed {
-				-webkit-transition: top .35s ease-in-out;
-				transition: top .35s ease-in-out;
+				-webkit-transition: top .4s ease-in-out;
+				transition: top .4s ease-in-out;
 			}
 			.hmj-wrap.type2 .header-cont {
 				display: -webkit-box;
@@ -42,48 +62,106 @@
 				display: none;
 			}
 			.gnb-menu-outer {
-				-webkit-transition: all .35s ease-in-out;
-				transition: all .35s ease-in-out;
+				-webkit-transition: top .4s ease-in-out;
+				transition: top .4s ease-in-out;
 				position: fixed;
-				top: 105px;
+				top: 0;
 				bottom: 0;
-				left: -200px;
+				left: 0;
+				right: 0;
+				z-index: 15;
+				display: none;
+				background-color: rgba(0, 0, 0, .5);
+			}
+			.gnb-menu-outer .btn-menu-close {
+				position: absolute;
+				top: 20px;
+				right: -100px;
 				z-index: 20;
-				overflow: hidden;
+				width: 33px;
+				height: 33px;
+				font-size: 0;
+				line-height: 0;
+				background: transparent url(../assets/images/common/ico_close.svg) no-repeat center;
+			}
+			.gnb-menu-outer .gnb-menu-list > li {
+				-webkit-transition: all .5s ease-in-out;
+				transition: all .5s ease-in-out;
+				padding-left: 100px;
+				opacity: 0;
+			}
+			.gnb-menu-outer.active .gnb-menu-list > li {
+				-webkit-transition: all .5s ease-in-out;
+				transition: all .5s ease-in-out;
+				padding-left: 0px;
+				opacity: 1;
+			}
+			.gnb-menu-box {
+				-webkit-transition: all .4s ease-in-out;
+				transition: all .4s ease-in-out;
+				position: absolute;
+				top: 0;
+				right: -250px;
+				z-index: 20;
+				overflow-x: hidden;
 				display: block;
-				width: 200px;
-				padding: 20px;
+				width: 250px;
+				height: 100%;
+				padding: 160px 20px 20px;
 				background-color: #fff;
 			}
-			.gnb-menu-outer .gnb-menu-list {
+			.gnb-menu-box .gnb-menu-list {
 				display: block;
-				height: 100%;
+				height: 300px;
+			}
+			.inner-scroll-y {
+				-webkit-overflow-scrolling: touch;
+				overflow-y: auto;
 			}
 			.hmj-header .gnb-menu-list li + li {
 				margin: 20px 0 0;
 			}
-			.gnb-menu-list .menu-next-depth {
-				-webkit-transition: all .5s ease-in-out;
-				transition: all .5s ease-in-out;
+			.gnb-menu-list .menu-inner-depth {
+				-webkit-transition: all .4s ease-in-out;
+				transition: all .4s ease-in-out;
 				position: absolute;
 				top: 0;
 				bottom: 0;
-				right: -200px;
-				z-index: 20;
-				width: 200px;
-				padding: 20px;
+				right: -250px;
+				opacity: 0;
+				z-index: 25;
+				display: block;
+				width: 250px;
+				padding: 160px 20px 20px;
 				background-color: #fff;
 			}
-			.gnb-menu-outer .gnb-menu-list .btn-depth-switch.active ~ .menu-next-depth {
-				-webkit-transition: all .5s ease-in-out;
-				transition: all .5s ease-in-out;
+			.btn-depth-switch.active ~ .menu-inner-depth {
+				-webkit-transition: all .4s ease-in-out;
+				transition: all .4s ease-in-out;
 				right: 0;
+				opacity: 1;
 			}
-			.menu-next-depth {
-				display: block;
+			.btn-depth-switch + .menu-inner-depth > .ir-count > li {
+				-webkit-transition: all .4s ease-in-out;
+				transition: all .4s ease-in-out;
+				opacity: 0;
+				padding-left: 100px;
 			}
-			.btn-depth-back {
-				margin-bottom: 50px;
+			.btn-depth-switch.active + .menu-inner-depth > .ir-count > li {
+				-webkit-transition: all .4s ease-in-out;
+				transition: all .4s ease-in-out;
+				opacity: 1;
+				padding-left: 0;
+			}
+			.btn-depth-prev {
+				position: absolute;
+				top: 20px;
+				left: 20px;
+				z-index: 25;
+			}
+			.btn-depth-prev span {
+				font-size: 16px;
+				color: #000;
 			}
 		}
 	</style>
@@ -91,35 +169,6 @@
 	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
 	<script type="text/javascript" src="../assets/js/common.js"></script>
-
-	<script>
-		$(function () {
-			$('.btn-depth-switch, .btn-depth-back').on('click', function (e) {
-				if ($(this).hasClass('btn-depth-switch')) {
-					$(this).addClass('active');
-				} else {
-					$(this).closest('li').find('.btn-depth-switch').removeClass('active');
-				}
-			});
-
-			$('.btn-menu').on('click', function () {
-				$(this).toggleClass('active');
-				if ($(this).hasClass('active')) {
-					$('.gnb-menu-outer').css('left', '0');
-				} else {
-					$('.gnb-menu-outer').css('left', '-200px');
-				}
-
-				$('.hmj-content').on('click', function (e) {
-					const tarItem = $('.hmj-wrap:not(.hmj-header)');
-					if (!$(e.target).is(tarItem)) {
-						$('.gnb-menu-outer').css('left', '-200px');
-						$('.btn-menu').removeClass('active');
-					}
-				});
-			});
-		});
-	</script>
 </head>
 
 <body>
@@ -136,97 +185,198 @@
 			<h1><a href="hmj_layout.html"><img src="../assets/images/common/img_header_logo.png" alt="Hyundai Logo"></a></h1>
 
 			<div class="gnb-menu-outer">
-				<ul class="gnb-menu-list">
-					<li>
-						<button><span>ブランド</span></button>
-					</li>
-					<li>
-						<button><span>IONIQ5</span></button>
-					</li>
-					<li>
-						<button><span>NEXO</span></button>
-					</li>
-					<li>
-						<button><span>購買</span></button>
-					</li>
-					<li>
-						<button class="btn-depth-switch"><span>サービス &gg;</span></button>
-						<div class="menu-next-depth">
-							<button class="btn-depth-back"><span>&ll; back</span></button>
-							<ul>
-								<li>
-									<button><span>購買</span></button>
-								</li>
-								<li>
-									<button><span>購買</span></button>
-								</li>
-								<li>
-									<button class="btn-depth-switch"><span>サービス &gg;</span></button>
-									<div class="menu-next-depth">
-										<button class="btn-depth-back"><span>&ll; back</span></button>
-										<ul>
-											<li>
-												<button><span>購買</span></button>
-											</li>
-											<li>
-												<button class="btn-depth-switch"><span>サービス &gg;</span></button>
-												<div class="menu-next-depth">
-													<button class="btn-depth-back"><span>&ll; back</span></button>
-													<ul>
-														<li>
-															<button class="btn-depth-switch"><span>サービス &gg;</span></button>
-															<div class="menu-next-depth">
-																<button class="btn-depth-back"><span>&ll; back</span></button>
-																<ul>
-																	<li>
-																		<button><span>購買</span></button>
-																	</li>
-																	<li>
-																		<button><span>購買</span></button>
-																	</li>
-																	<li>
-																		<button><span>購買</span></button>
-																	</li>
-																	<li>
-																		<button><span>購買</span></button>
-																	</li>
-																</ul>
-															</div>
-														</li>
-														<li>
-															<button><span>購買</span></button>
-														</li>
-														<li>
-															<button><span>購買</span></button>
-														</li>
-														<li>
-															<button><span>購買</span></button>
-														</li>
-													</ul>
-												</div>
-											</li>
-											<li>
-												<button><span>購買</span></button>
-											</li>
-											<li>
-												<button><span>購買</span></button>
-											</li>
-										</ul>
-									</div>
-								</li>
-								<li>
-									<button><span>購買</span></button>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<button><span>コンテンツ</span></button>
-					</li>
-					<li>
-						<button><span>ストア</span></button>
-					</li>
-				</ul>
+				<div class="gnb-menu-box inner-scroll-y">
+					<ul class="gnb-menu-list ir-count">
+						<li class="ir-item">
+							<button><span>ブランド</span></button>
+						</li>
+						<li class="ir-item">
+							<button class="btn-depth-switch"><span>IONIQ5 &gg;</span></button>
+							<div class="menu-inner-depth">
+								<button class="btn-depth-prev"><span>&ll; back</span></button>
+								<ul class="ir-count">
+									<li class="ir-item">
+										<button><span>コンテンツ</span></button>
+									</li>
+									<li class="ir-item">
+										<button><span>コンテンツ</span></button>
+									</li>
+									<li class="ir-item">
+										<button><span>コンテンツ</span></button>
+									</li>
+									<li class="ir-item">
+										<button><span>コンテンツ</span></button>
+									</li>
+									<li class="ir-item">
+										<button><span>コンテンツ</span></button>
+									</li>
+									<li class="ir-item">
+										<button><span>コンテンツ</span></button>
+									</li>
+									<li class="ir-item">
+										<button><span>コンテンツ</span></button>
+									</li>
+									<li class="ir-item">
+										<button><span>コンテンツ</span></button>
+									</li>
+									<li class="ir-item">
+										<button><span>コンテンツ</span></button>
+									</li>
+									<li class="ir-item">
+										<button><span>コンテンツ</span></button>
+									</li>
+									<li class="ir-item">
+										<button><span>コンテンツ</span></button>
+									</li>
+									<li class="ir-item">
+										<button><span>コンテンツ</span></button>
+									</li>
+									<li class="ir-item">
+										<button class="btn-depth-switch"><span>サービス &gg;</span></button>
+										<div class="menu-inner-depth">
+											<button class="btn-depth-prev"><span>&ll; back</span></button>
+											<ul class="ir-count">
+												<li class="ir-item">
+													<button><span>コンテンツ</span></button>
+												</li>
+												<li class="ir-item">
+													<button class="btn-depth-switch"><span>サービス &gg;</span></button>
+													<div class="menu-inner-depth">
+														<button class="btn-depth-prev"><span>&ll; back</span></button>
+														<ul class="ir-count">
+															<li class="ir-item">
+																<button class="btn-depth-switch"><span>サービス &gg;</span></button>
+																<div class="menu-inner-depth">
+																	<button class="btn-depth-prev"><span>&ll; back</span></button>
+																	<ul class="ir-count">
+																		<li class="ir-item">
+																			<button><span>コンテンツ</span></button>
+																		</li>
+																		<li class="ir-item">
+																			<button><span>コンテンツ</span></button>
+																		</li>
+																		<li class="ir-item">
+																			<button><span>コンテンツ</span></button>
+																		</li>
+																		<li class="ir-item">
+																			<button><span>コンテンツ</span></button>
+																		</li>
+																	</ul>
+																</div>
+															</li>
+															<li class="ir-item">
+																<button><span>コンテンツ</span></button>
+															</li>
+															<li class="ir-item">
+																<button><span>コンテンツ</span></button>
+															</li>
+															<li class="ir-item">
+																<button><span>コンテンツ</span></button>
+															</li>
+														</ul>
+													</div>
+												</li>
+												<li class="ir-item">
+													<button><span>コンテンツ</span></button>
+												</li>
+												<li class="ir-item">
+													<button><span>コンテンツ</span></button>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="ir-item">
+										<button><span>コンテンツ</span></button>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="ir-item">
+							<button><span>NEXO</span></button>
+						</li>
+						<li class="ir-item">
+							<button><span>購買</span></button>
+						</li>
+						<li class="ir-item">
+							<button class="btn-depth-switch"><span>サービス &gg;</span></button>
+							<div class="menu-inner-depth">
+								<button class="btn-depth-prev"><span>&ll; back</span></button>
+								<ul class="ir-count">
+									<li class="ir-item">
+										<button><span>購買</span></button>
+									</li>
+									<li class="ir-item">
+										<button><span>購買</span></button>
+									</li>
+									<li class="ir-item">
+										<button class="btn-depth-switch"><span>サービス &gg;</span></button>
+										<div class="menu-inner-depth">
+											<button class="btn-depth-prev"><span>&ll; back</span></button>
+											<ul class="ir-count">
+												<li class="ir-item">
+													<button><span>購買</span></button>
+												</li>
+												<li class="ir-item">
+													<button class="btn-depth-switch"><span>サービス &gg;</span></button>
+													<div class="menu-inner-depth">
+														<button class="btn-depth-prev"><span>&ll; back</span></button>
+														<ul class="ir-count">
+															<li class="ir-item">
+																<button class="btn-depth-switch"><span>サービス &gg;</span></button>
+																<div class="menu-inner-depth">
+																	<button class="btn-depth-prev"><span>&ll; back</span></button>
+																	<ul class="ir-count">
+																		<li class="ir-item">
+																			<button><span>購買</span></button>
+																		</li>
+																		<li class="ir-item">
+																			<button><span>購買</span></button>
+																		</li>
+																		<li class="ir-item">
+																			<button><span>購買</span></button>
+																		</li>
+																		<li class="ir-item">
+																			<button><span>購買</span></button>
+																		</li>
+																	</ul>
+																</div>
+															</li>
+															<li class="ir-item">
+																<button><span>購買</span></button>
+															</li>
+															<li class="ir-item">
+																<button><span>購買</span></button>
+															</li>
+															<li class="ir-item">
+																<button><span>購買</span></button>
+															</li>
+														</ul>
+													</div>
+												</li>
+												<li class="ir-item">
+													<button><span>購買</span></button>
+												</li>
+												<li class="ir-item">
+													<button><span>購買</span></button>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="ir-item">
+										<button><span>購買</span></button>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="ir-item">
+							<button><span>コンテンツ</span></button>
+						</li>
+						<li class="ir-item">
+							<button><span>ストア</span></button>
+						</li>
+					</ul>
+				</div>
+				<button class="btn-menu-close"><span>close</span></button>
 			</div>
 
 			<div class="gnb-right-menu">
@@ -275,8 +425,7 @@
 						<div class="test-box">
 							<div class="test1">111</div>
 							<div class="test2">테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다.테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다.테스트 텍스트 입니다.</div>
-							<p class="test-desc">- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트
-							하단 텍스트 입니다. 입니다.</p>
+							<p class="test-desc">- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.</p>
 						</div>
 						<div class="img-outer" data-text="- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다."><img src="../assets/images/@img_scroll_sample02.jpg" alt="test"></div>
 					</div>
@@ -287,15 +436,14 @@
 						<div class="test-box">
 							<div class="test1">111</div>
 							<div class="test2">테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다.테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다.테스트 텍스트 입니다.</div>
-							<p class="test-desc">- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트
-							하단 텍스트 입니다. 입니다.</p>
+							<p class="test-desc">- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.</p>
 						</div>
 						<div class="img-outer" data-text="- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다."><img src="../assets/images/@img_scroll_sample03.jpg" alt="test"></div>
 					</div>
 				</div>
 				<style>
 					.test-wrap {
-						padding-top: 145px;
+						padding-top: 305px;
 					}
 					.type2 .test-wrap {
 						padding-top: 92px;
@@ -320,6 +468,9 @@
 						width: 100%;
 					}
 					@media screen and (max-width: 1119px) {
+						.test-wrap {
+							padding-top: 145px;
+						}
 						.test-outer {
 							display: block;
 						}
