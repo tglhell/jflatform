@@ -21,16 +21,12 @@ jQuery.event.add(window, 'load', function () {
 	});
 
 	$('.btn-menu').on('click', function () {
+		const bodyWid = $('body').width();
 		$(this).toggleClass('active');
 		if ($(this).hasClass('active')) {
+			$('body').css({'position':'fixed', 'width':bodyWid});
 			gnbMenuBox.parent().fadeIn(secVal[3], function () {
 				gnbMenuBox.css('right', '0');
-				$('body').addClass('scroll-disable').on('scroll touchmove mousewheel', function (e) {
-					if ($('html').hasClass('ios')) {
-						e.preventDefault();
-					}
-					console.log('test');
-				});
 			});
 			setObj(function () {
 				gnbMenuBox.parent().addClass('active').find('.btn-menu-close').stop().animate({'right':'20px'}, secVal[3]);
@@ -42,7 +38,7 @@ jQuery.event.add(window, 'load', function () {
 			if (!$(e.target).is(tarItem)) {
 				gnbMenuBox.css('right', '-250px');
 				gnbMenuBox.parent().find('.btn-menu-close').stop().animate({'right':'-100px'}, secVal[2]);
-				$('body').removeClass('scroll-disable').off('scroll touchmove mousewheel');
+				$('body').removeAttr('style');
 				setObj(function () {
 					gnbMenuBox.parent().removeClass('active').fadeOut(secVal[2]);
 					$('.btn-depth-switch').removeClass('active');
