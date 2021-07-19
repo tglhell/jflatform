@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /* ja initializing font */
 @font-face {
     font-family: 'Noto Sans JP';
@@ -356,6 +358,7 @@ body {
 	top: -28px;
 	left: 0;
 	right: 0;
+	z-index: 30;
 	background-color: #000;
 	font-size: 14px;
 	color: #fff;
@@ -670,7 +673,7 @@ body {
 
 /* font color */
 .fc-color { /* Blue */
-	color: #002c5f;
+	color: #002c5f !important;
 }
 .fc-color2 { /* Active Blue */
 	color: #00aad2;
@@ -1139,8 +1142,7 @@ textarea:disabled {
 }
 .check-terms li .chk .link-more {
 	display: inline-block;
-	background: transparent url('../images/common/ico_arrow_24x24.svg') no-repeat center;
-	transform: rotate(-90deg);
+	background: transparent url('../images/common/ico_arrow_right.svg') no-repeat center;
 	width: 20px;
 	height: 20px;
 	line-height: 0;
@@ -1470,17 +1472,66 @@ textarea:disabled {
 	bottom: 15px;
 	right: 15px;
 	z-index: 100;
+}
+.btn-top-box .btn-top {
+	display: block;
 	width: 50px;
 	height: 50px;
 	border-radius: 25px;
 	background-color: #000;
-}
-.btn-top-box .btn-top {
-	display: block;
 	color: #fff;
 	font-weight: 700;
 	line-height: 50px;
 	text-align: center;
+}
+.btn-top-box .btn-side-menu {
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+.btn-top-box .btn-side-menu span {
+	position: relative;
+	display: block;
+	widtH: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background-color: #1d80f0;
+	font-size: 0;
+	color: #fff;
+	line-height: 50px;
+}
+.btn-top-box .btn-side-menu span:before {
+	content: '';
+	position: absolute;
+	top: 15px;
+	bottom: 15px;
+	left: 50%;
+	width: 1px;
+	height: 21px;
+	background-color: #fff;
+}
+.btn-top-box .btn-side-menu span:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 15px;
+	right: 15px;
+	width: 21px;
+	height: 1px;
+	background-color: #fff;
+}
+.btn-top-box .btn-side-menu span {
+	-webkit-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+	-webkit-transition-delay: .5s;
+	transition-delay: .5s;
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+.btn-top-box .btn-side-menu.active span {
+	-webkit-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+	-webkit-transform: rotate(-405deg);
+	transform: rotate(-405deg);
 }
 
 @media screen and (min-width: 1120px) {
@@ -1794,13 +1845,26 @@ textarea:disabled {
 }
 
 /* caution */
+.caution.bg-box {
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+dl.caution.bg-box {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.caution.full {
+	padding-left: 0;
+	padding-right: 0;
+}
 .caution dt {
+	font-size: 18px;
 	margin-bottom: 20px;
 }
 .caution li, .caution dd {
 	font-size: 14px;
 	line-height: 1.5;
-	color: #000;
+	color: #444;
 	padding-left: 14px;
 	position: relative;
 	font-weight: 300;
@@ -1814,14 +1878,15 @@ textarea:disabled {
 	width: 4px;
 	height: 4px;
 	border-radius: 50%;
-	background-color: #000;
+	background-color: #777;
 	position: absolute;
 	top: 9px;
 	left: 0;
 }
 @media screen and (max-width: 1119px) {
-	.caution dt {
-		margin-bottom: 10px;
+	.caution.bg-box {
+		margin-right: -20px;
+		margin-left: -20px;
 	}
 	.caution li, .caution dd {
 		font-size: 12px;
@@ -1940,6 +2005,11 @@ textarea:disabled {
 	font-size: 12px;
 	color: #fff;
 }
+.disabled .text-flag, .text-flag.disabled {
+	border-color: #ccc;
+	background-color: #f2f2f2;
+	color: #999
+}
 
 /* pagination */
 .hmj-pagination {
@@ -1949,6 +2019,7 @@ textarea:disabled {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-top: 20px;
 }
 .hmj-pagination [class*="btn-page"] {
 	width: 36px;
@@ -1956,20 +2027,23 @@ textarea:disabled {
 	margin: 0 5px;
 	font-size: 14px;
 	color: #444;
-	line-height: 0;
+	line-height: 36px;
 	text-align: center;
 }
-.hmj-pagination [class*="btn-page"]:after {
-	content: '';
-	display: inline-block;
-	height: 1.65em;
-}
+.hmj-pagination .btn-page-first,
+.hmj-pagination .btn-page-last,
 .hmj-pagination .btn-page-prev,
 .hmj-pagination .btn-page-next {
 	position: relative;
-	margin: 0 16px;
+	margin: 0 6px;
 	font-size: 0;
 	color: #000;
+}
+.hmj-pagination .btn-page-prev {
+	margin-right: 14px;
+}
+.hmj-pagination .btn-page-next {
+	margin-left: 14px;
 }
 .hmj-pagination .btn-page-num.active {
 	color: #00aad2;
@@ -1977,32 +2051,19 @@ textarea:disabled {
 }
 .hmj-pagination .btn-page-prev.disabled,
 .hmj-pagination .btn-page-next.disabled {
-	pointer-events: none;
+	display: none;
 }
-.hmj-pagination .btn-page-prev:before,
-.hmj-pagination .btn-page-next:before {
-	content: '';
-	-webkit-transform: translateY(-50%) rotate(45deg);
-	transform: translateY(-50%) rotate(45deg);
-	position: absolute;
-	top: 50%;
-	width: 7px;
-	height: 7px;
-	border: 1px solid #000;
-}
-.hmj-pagination .btn-page-prev:before {
-	left: 17px;
-	border-width: 0 0 1px 1px;
-}
-.hmj-pagination .btn-page-next:before {
-	right: 17px;
-	border-width: 1px 1px 0 0;
-}
-.hmj-pagination .btn-page-prev.disabled:before,
-.hmj-pagination .btn-page-next.disabled:before {
-	border-color: #ccc;
+.hmj-pagination a img {
+	padding-top: 1px;
+	vertical-align: middle;
 }
 @media screen and (max-width: 1119px) {
+	.hmj-pagination {
+		margin-top: 10px;
+	}
+	.hmj-pagination a img {
+		display: none;
+	}
 	.hmj-pagination [class*="btn-page"]:not(.btn-page-next) {
 		display: none;
 	}
@@ -2011,16 +2072,26 @@ textarea:disabled {
 	}
 	.hmj-pagination .btn-page-next {
 		width: auto;
-		height: auto;
-		padding-right: 25px;
+		height: 26px;
+		padding-right: 29px;
 		font-size: 12px;
 		line-height: 2.17;
+	}
+	.hmj-pagination .btn-page-next:after {
+		content: '';
+		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg);
+		position: absolute;
+		top: -2px;
+		right: 0;
+		width: 24px;
+		height: 24px;
+		background: url(../images/common/ico_page_next.svg);
 	}
 	.hmj-pagination .btn-page-next:before {
 		-webkit-transform: translateY(-50%) rotate(135deg);
 		transform: translateY(-50%) rotate(135deg);
 		right: 0;
-		margin-top: -3px;
 	}
 }
 
@@ -2247,9 +2318,6 @@ textarea:disabled {
     text-align:center;
     padding:10px 0;
     border-bottom:1px solid #ccc;
-}
-.layer-popup-wrap .postal-code .search-list {
-    margin-bottom:18px;
 }
 .layer-popup-wrap .postal-code .search-list li {
     padding:20px 0;

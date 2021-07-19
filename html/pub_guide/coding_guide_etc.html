@@ -70,8 +70,22 @@
 	<li>カート商品は90日間保管され、販売終了となると自動的に削除されます。</li>
 	<li>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</li>
 </ul>
+<ul class="caution bg-box">
+	<li>カート商品は90日間保管され、販売終了となると自動的に削除されます。</li>
+	<li>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</li>
+</ul>
 
 <dl class="caution">
+	<dt>自動的に削除</dt>
+	<dd>カート商品は90日間保管され、販売終了となると自動的に削除されます。</dd>
+	<dd>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</dd>
+</dl>
+<dl class="caution bg-box">
+	<dt>自動的に削除</dt>
+	<dd>カート商品は90日間保管され、販売終了となると自動的に削除されます。</dd>
+	<dd>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</dd>
+</dl>
+<dl class="caution bg-box full">
 	<dt>自動的に削除</dt>
 	<dd>カート商品は90日間保管され、販売終了となると自動的に削除されます。</dd>
 	<dd>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</dd>
@@ -87,9 +101,23 @@
 				<li>カート商品は90日間保管され、販売終了となると自動的に削除されます。</li>
 				<li>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</li>
 			</ul>
+			<ul class="caution bg-box">
+				<li>カート商品は90日間保管され、販売終了となると自動的に削除されます。</li>
+				<li>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</li>
+			</ul>
 
 			<h4 class="btm-border">- header있는 타입</h4>
 			<dl class="caution">
+				<dt>自動的に削除</dt>
+				<dd>カート商品は90日間保管され、販売終了となると自動的に削除されます。</dd>
+				<dd>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</dd>
+			</dl>
+			<dl class="caution bg-box">
+				<dt>自動的に削除</dt>
+				<dd>カート商品は90日間保管され、販売終了となると自動的に削除されます。</dd>
+				<dd>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</dd>
+			</dl>
+			<dl class="caution bg-box full">
 				<dt>自動的に削除</dt>
 				<dd>カート商品は90日間保管され、販売終了となると自動的に削除されます。</dd>
 				<dd>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</dd>
@@ -101,6 +129,8 @@
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--<span class="text-flag">使用可能</span>
+<div class="disabled"><span class="text-flag">使用可能</span></div>
+<span class="text-flag disabled">使用可能</span>
 --></code></pre>
 <!-- //코드 삽입 -->
 			
@@ -109,6 +139,10 @@
 			</div>
 
 			<span class="text-flag">使用可能</span>
+
+			<h5>- disabled</h5>
+			<div class="disabled"><span class="text-flag">使用可能</span></div>
+			<span class="text-flag disabled">使用可能</span>
 
 			<h4 class="btm-border">- 라운드</h4>
 <!-- 코드 삽입 -->
@@ -151,13 +185,15 @@
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--<div class="hmj-pagination">
-	<a href="#" class="btn-page-prev disabled"></a>
+	<a href="#" class="btn-page-first"><img src="../assets/images/common/ico_page_first.svg" alt="first"></a>
+	<a href="#" class="btn-page-prev"><img src="../assets/images/common/ico_page_prev.svg" alt="prev"></a>
 	<a href="#" class="btn-page-num active">1</a>
 	<a href="#" class="btn-page-num">2</a>
 	<a href="#" class="btn-page-num">3</a>
 	<a href="#" class="btn-page-num">4</a>
 	<a href="#" class="btn-page-num">5</a>
-	<a href="#" class="btn-page-next">もっと見る(<span>1</span>/<span>3</span>)</a>
+	<a href="#" class="btn-page-next"><img src="../assets/images/common/ico_page_next.svg" alt="next">もっと見る(<span>1</span>/<span>3</span>)</a>
+	<a href="#" class="btn-page-last"><img src="../assets/images/common/ico_page_last.svg" alt="last"></a>
 </div>
 --></code></pre>
 <!-- //코드 삽입 -->
@@ -167,13 +203,15 @@
 			</div>
 
 			<div class="hmj-pagination">
-				<a href="#" class="btn-page-prev disabled"></a>
+				<a href="#" class="btn-page-first"><img src="../assets/images/common/ico_page_first.svg" alt="first"></a>
+				<a href="#" class="btn-page-prev"><img src="../assets/images/common/ico_page_prev.svg" alt="prev"></a>
 				<a href="#" class="btn-page-num active">1</a>
 				<a href="#" class="btn-page-num">2</a>
 				<a href="#" class="btn-page-num">3</a>
 				<a href="#" class="btn-page-num">4</a>
 				<a href="#" class="btn-page-num">5</a>
-				<a href="#" class="btn-page-next">もっと見る(<span>1</span>/<span>3</span>)</a>
+				<a href="#" class="btn-page-next"><img src="../assets/images/common/ico_page_next.svg" alt="next">もっと見る(<span>1</span>/<span>3</span>)</a>
+				<a href="#" class="btn-page-last"><img src="../assets/images/common/ico_page_last.svg" alt="last"></a>
 			</div>
 
 		</div>
