@@ -24,7 +24,7 @@ jQuery.event.add(window, 'load', function () {
 		const bodyWid = $('body').width();
 		$(this).toggleClass('active');
 		if ($(this).hasClass('active')) {
-			$('body').css({'width':bodyWid});
+			$('body').css({'overflow':'hidden', 'width':bodyWid});
 			gnbInnerHgt();
 			gnbMenuBox.parent().fadeIn(secVal[3], function () {
 				gnbMenuBox.css('right', '0');
