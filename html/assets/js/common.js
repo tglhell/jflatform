@@ -96,7 +96,7 @@ jQuery.event.add(window, 'load', function () {
 		});
 	});
 
-	$(window).on('scroll resize', function (e) {
+	$(window).on('scroll resize orientationchange', function (e) {
 		const chkBtnPos = $('.scr-fix-btn');
 		const headerFixHgt = headerOuter.find('.header-cont').outerHeight(true) + irNum[0];
 		let scrPos = $(this).scrollTop();
@@ -145,6 +145,12 @@ jQuery.event.add(window, 'load', function () {
 				}
 			}
 			lastScrTopPos = scrPos;
+		} else if (e.type == 'orientationchange') {
+			if (window.orientation == 0) {
+				//portrait
+			} else {
+				//landscape
+			}
 		} else {
 			tabTar.each(function () {
 				tabAutoHgt($(this));
@@ -175,6 +181,7 @@ jQuery.event.add(window, 'load', function () {
 			}
 			containerAutoHgt();
 			resChk();
+			// contAutoPadding();
 		}
 	});
 
@@ -326,6 +333,13 @@ jQuery.event.add(window, 'load', function () {
 	}
 	checkAgent ();
 
+	function contAutoPadding () {
+		let headerHgt = $('.hmj-header').outerHeight(true);
+
+		$('.cont-outer').css('padding-top', headerHgt);
+	}
+	// contAutoPadding();
+
 	function prxHgt (target) {
 		let prxHgt = parseInt(target.height() / irNum[3]);
 		target.css('margin-top', -prxHgt);
@@ -355,6 +369,9 @@ jQuery.event.add(window, 'load', function () {
 		let popBottomHgt = parseInt(popWrap.find('.bottom-fixed').outerHeight(true)) || 0;
 		if (popWrap.hasClass('mo-full') && $(window).width() <= tbl) {
 			popWrap.find('.layer-cont').css('height', $(window).height() - (popHeaderHgt + popBottomHgt));
+			if (popBottomHgt !== 0) {
+				popWrap.find('.layer-cont').css('padding-bottom', '0');
+			}
 		} else {
 			if (popBottomHgt == 0) {
 				popWrap.find('.layer-cont').css('height', '100%');

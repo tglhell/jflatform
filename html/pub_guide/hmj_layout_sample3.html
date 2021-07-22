@@ -78,7 +78,7 @@
 			top: 0;
 			bottom: 0;
 			right: -250px;
-			z-index: 20;
+			z-index: 25;
 			overflow: hidden;
 			display: block;
 			width: 250px;
@@ -92,6 +92,10 @@
 		}
 		.inner-scroll-y {
 			-webkit-overflow-scrolling: touch;
+			-webkit-transform: translateZ(0px);
+			-webkit-transform: translate3d(0,0,0);
+			-webkit-perspective: 1000;
+			overflow-x: hidden;
 			overflow-y: auto;
 		}
 		.hmj-header .gnb-menu-list li + li {
@@ -188,11 +192,10 @@
 
 		.test-slider-outer {
 			position: relative;
-			margin: 0 80px;
+			margin: 40px;
 		}
 		.test-slider {
 			height: 2px;
-			margin-top: 100px;
 			background-color: #e5e5e5;
 		}
 		.test-slider .ui-slider-handle {
@@ -495,7 +498,7 @@
 				</div>
 				<style>
 					.test-wrap {
-						padding-top: 305px;
+						padding-top: 40px;
 					}
 					.type2 .test-wrap {
 						padding-top: 92px;
@@ -520,9 +523,6 @@
 						width: 100%;
 					}
 					@media screen and (max-width: 1119px) {
-						.test-wrap {
-							padding-top: 145px;
-						}
 						.test-outer {
 							display: block;
 						}

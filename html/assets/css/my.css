@@ -8,9 +8,8 @@
 /* S: my Coupon */
 .my-coupon .list-coupon {
 	display:flex;
-	padding-bottom:40px;
-	flex-wrap:wrap;
-	border-bottom:1px solid #cccccc;
+	margin-bottom: 40px;	
+	flex-wrap:wrap;	
 }
 .my-coupon .list-coupon .item {
 	margin-top:40px;
@@ -27,35 +26,31 @@
 .my-coupon .coupon {
 	display:flex;
 	padding:20px 18px 20px 20px;
-	box-sizing: border-box;
 	border:1px solid #ccc;
 }
 .my-coupon .coupon .box-detail {
 	display:flex;
 	flex-direction: column;
 	width:100%;
-	height:116px;
+	height:114px;
 }
-
 .my-coupon .coupon .box-detail .text-flag {
 	width:72px;
 }
-
 .my-coupon .coupon .box-detail .text-num {
 	margin-top: 10px;
-	line-height:46px;
+	height:42px;
 	font-family: 'HyundaiSansHeadOffice';
 	font-size:34px;
 	font-weight:700;
 }
-
 .my-coupon .coupon .box-detail .text-num .text-yen {
 	font-size: 32px;
 	font-family: 'Noto Sans JP';
 }
-
 .my-coupon .coupon .box-detail .text-detail {
 	margin-top:auto;
+	max-height:42px;
 	line-height:21px;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -66,14 +61,16 @@
 
 .my-coupon .coupon .box-day {
 	position:relative;
-	padding:64px 0 0 46px;
+	padding-top:56px;
+	padding-left:47px;
 	min-width:82px;
+	text-align: center;
 }
 .my-coupon .coupon .box-day::before {
 	content:'';
 	position:absolute;
-	top:-21px;
-	left:19px;
+	top:-22px;
+	left:21px;
 	width:16px;
 	height:158px;
 	background:#fff url('../images/common/ico_coupon_border.svg') no-repeat center;
@@ -81,7 +78,7 @@
 .my-coupon .coupon .box-day::after {
 	content:'';
 	position:absolute;
-	top:40px;
+	top:37px;
 	left:55px;
 	width:20px;
 	height:20px;
@@ -91,23 +88,19 @@
 .my-coupon .coupon .box-day .img-calendar {
 	display:inline-block;
 }
-
 .my-coupon .coupon .box-day .text-day {
 	color:#00aad2;
-	line-height:20px;
 	font-size:12px;
 }
 
 .my-coupon .item .info {
 	margin-top:10px;
 }
-
 .my-coupon .item .info li {
 	line-height:20px;
 	font-size:12px;
 	font-weight:300;
 }
-
 .my-coupon .item.disabled  {
 	color:#999;		
 }
@@ -116,7 +109,40 @@
 	background:url('../images/common/ico_coupon_calendar_disalbed.svg');
 }
 
+.my-coupon .item.disabled .coupon .box-day .text-day {
+	display:none;
+}
+
+.my-coupon .hmj-pagination {
+	border-top:1px solid #ccc;
+}
+
+.none-data {
+	width:100%;
+	height:410px;
+	padding-top:145px;
+	padding-bottom:20px;
+	text-align: center;
+}
+.none-data .text-info::before {
+	content:'';
+	display:block;
+	margin: 0 auto 20px;
+	width:80px;
+	height:80px;
+	background:url('../images/common/ico_none-coupon.svg') no-repeat;
+}
+.none-data .text-info {
+	font-weight:300;
+}
+.my-coupon .caution {
+	margin-top:40px;
+}
+
 @media screen and (max-width: 1119px) {
+	.my .cont-center {
+		padding-top:20px;
+	}
 	.my-coupon .list-coupon .item {
 		width:100%;
 	}
@@ -131,13 +157,22 @@
 	}
 	.my-coupon .coupon .box-day {
 		min-width: 68px;
-		padding:64px 0 0 33px;
+		padding-top:58px;
+		padding-left:33px;
 	}
 	.my-coupon .coupon .box-day::before {
-		left:12px;
+		left:13px;
 	}
 	.my-coupon .coupon .box-day::after {
-		left:39px;
+		left:41px;
+	}
+
+	.none-data {
+		padding-top:20px;		
+		height:auto;
+	}
+	.none-data .text-info::before {
+		margin:0 auto 16px;
 	}
 }
 
