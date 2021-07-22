@@ -9,6 +9,7 @@
     <!-- 코딩 가이드용 -->
     <link rel="stylesheet" href="docs/guide.css">
     <link rel="stylesheet" href="docs/prism.css">
+    <link rel="stylesheet" href="../assets/css/lib/jquery-ui.css">
     <link rel="stylesheet" href="../assets/css/common.css">
 	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
 	<script type="text/javascript" src="docs/prism.js"></script>
@@ -24,7 +25,18 @@
 				$(this).next('.code-toolbar').toggleClass('open');
 			});
 		});
-	</script>	
+	</script>
+	<style>
+		@media screen and (max-width: 767px) {
+			div.ui-tooltip {
+				-webkit-transform: translateX(-50%);
+				transform: translateX(-50%);
+				left: 50% !important;
+				min-width: calc(100% - 20px);
+				max-width: calc(100% - 20px);
+			}
+		}
+	</style>
 </head>
 
 <body>
@@ -218,6 +230,32 @@
 				<a href="#" class="btn-page-last"></a>
 			</div>
 
+			<h3 class="title">&#x25CE; Tooltip</h3>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="hmj-pagination">
+	<a href="#" class="btn-page-prev disabled"></a>
+	<a href="#" class="btn-page-num active">1</a>
+	<a href="#" class="btn-page-next disabled">もっと見る(1/1)</a>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				.hmj-pagination<br>.btn-page-prev, .btn-page-next에 클래스 "<strong>disabled</strong>" 추가함.
+			</div>
+
+			<p>
+				<input id="input_box1" />
+				<button id="trigger1" class="trigger" data-tooltip-id="1" title="Some bla bla about field 1 Some bla bla about field 1 Some bla bla about field 1 Some bla bla about field 1 Some bla bla about field 1 Some bla bla about field 1 Some bla bla about field 1 Some bla bla about field 1 Some bla bla about field 1 Some bla bla about field 1 Some bla bla about field 1 Some bla bla about field 1 Some bla bla about field 1 Some bla bla about field 1 Some bla bla about field 1 Some bla bla about field 1 Some bla bla about field 1 Some bla bla about field 1 ">툴팁</button>
+			</p>
+			<br><br><br><br><br><br>
+			<p class="test-one">
+				<input id="input_box2" />
+				<button data-tooltip-id="2" title="bla bla 2 bla bla 2 bla bla 2 bla bla 2 bla bla 2 bla bla 2 ">툴팁2</button>
+			</p>
+			<br><br><br><br><br><br><br>
 		</div>
 		<!-- //contents_infor -->
 	</div>
@@ -227,5 +265,36 @@
 		<span class="blind">Top</span>
 	</a>
 </div>
+<script>
+	$(function () {
+		//show
+		$(document).on('click', '.trigger', function () {
+			$(this).addClass("on");
+			$(this).tooltip({
+				items: '.trigger.on',
+				position: {
+					my: "center top+20",
+					at: "center bottom",
+					collision: "none",
+				},
+			});
+			$(this).trigger('mouseenter');
+		});
+		//hide
+		$(document).on('click', '.trigger.on', function () {
+			$(this).tooltip('close');
+			$('.test-one').tooltip('close');
+			$(this).removeClass('on');
+		});
+		//prevent mouseout and other related events from firing their handlers
+		$(".trigger").on('mouseout', function (e) {
+			e.stopImmediatePropagation();
+		});
+
+		$('.test-one').tooltip({
+			position:{ within: '.test-one'}
+		});
+	});
+</script>
 </body>
 </html>
