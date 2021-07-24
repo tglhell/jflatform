@@ -200,6 +200,10 @@ jQuery.event.add(window, 'load', function () {
 		returnTar.focus();
 	});
 
+	$('.tooltip-box').on('click', '.btn-tooltip', function () {
+		tooltip($(this));
+	});
+
 	$('.pop-open').on('click', (function () {
 		let returnTar;
 		return function (e) {
@@ -402,6 +406,40 @@ jQuery.event.add(window, 'load', function () {
 			tabScrPos = tabTarPos - tabScrBoxHarf;
 		}
 		tabScrBox.stop().animate({scrollLeft:tabScrPos}, secVal[2]);
+	}
+
+	function tooltip(target) {
+		const tooltipCont = target.closest('.tooltip-box').find('.tooltip-cont');
+		const btnTooltipWid = target.outerWidth();
+		if ($(window).width() >= secVal[4]) {
+			tooltipCont.css('margin-left', -(tooltipCont.outerWidth() / 2 - btnTooltipWid / 2));
+		} else {
+			tooltipCont.css('width', $(window).width() - (30));
+		}
+		if (!target.hasClass('active')) {
+			$('.btn-tooltip').removeClass('active');
+			target.addClass('active');
+			const tooltipPos = tooltipCont.offset().left;
+			const tooltipBoxWid = tooltipPos + tooltipCont.outerWidth();
+			const tooltipSum = tooltipBoxWid - $(window).width();
+			if (tooltipPos < 0) {
+				tooltipCont.css({ 'left': -tooltipPos + 15 });
+			}
+			if (tooltipBoxWid > $(window).width()) {
+				tooltipCont.css({ 'left': -(tooltipSum + 15) });
+			}
+		} else {
+			target.removeClass('active');
+		}
+		$(document).on('click', function (e) {
+			const tarItem = $('.tooltip-box, .tooltip-box *')
+			if (!$(e.target).is(tarItem)) {
+				$('.btn-tooltip').removeClass('active');
+				setObj(function () {
+					tooltipCont.removeAttr('style');
+				}, secVal[2]);
+			}
+		});
 	}
 
 	function tblFixRow () {
