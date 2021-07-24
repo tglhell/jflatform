@@ -201,18 +201,21 @@ jQuery.event.add(window, 'load', function () {
 	});
 
 	$('.tooltip-box').on('mouseenter mouseleave click', '.btn-tooltip', function (e) {
-		if (!$(this).hasClass('type-hover')) {
-			if (e.type == 'click') {
-				tooltip($(this));
-			}
-		} else {
-			if (e.type == 'mouseenter') {
-				tooltip($(this));
-			} else if (e.type == 'mouseleave') {
-				$('.btn-tooltip').removeClass('active');
-				setObj(function () {
-					tooltipCont.removeAttr('style');
-				}, secVal[2]);
+		if (!$(this).parent().is(':animated')) {
+			$(this).parent().animate({'overflow':'visible'}, secVal[2]);
+			if (!$(this).hasClass('type-hover')) {
+				if (e.type == 'click') {
+					tooltip($(this));
+				}
+			} else {
+				if (e.type == 'mouseenter') {
+					tooltip($(this));
+				} else if (e.type == 'mouseleave') {
+					$('.btn-tooltip').removeClass('active');
+					setObj(function () {
+						tooltipCont.removeAttr('style');
+					}, secVal[2]);
+				}
 			}
 		}
 	});
@@ -422,7 +425,7 @@ jQuery.event.add(window, 'load', function () {
 	}
 
 	function tooltip(target) {
-		const tooltipCont = target.closest('.tooltip-box').find('.tooltip-cont');
+		tooltipCont = target.closest('.tooltip-box').find('.tooltip-cont');
 		const btnTooltipWid = target.outerWidth();
 		if ($(window).width() >= secVal[4]) {
 			tooltipCont.css('margin-left', -(tooltipCont.outerWidth() / 2 - btnTooltipWid / 2));
