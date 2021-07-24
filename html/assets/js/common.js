@@ -200,8 +200,21 @@ jQuery.event.add(window, 'load', function () {
 		returnTar.focus();
 	});
 
-	$('.tooltip-box').on('click', '.btn-tooltip', function () {
-		tooltip($(this));
+	$('.tooltip-box').on('mouseenter mouseleave click', '.btn-tooltip', function (e) {
+		if (!$(this).hasClass('type-hover')) {
+			if (e.type == 'click') {
+				tooltip($(this));
+			}
+		} else {
+			if (e.type == 'mouseenter') {
+				tooltip($(this));
+			} else if (e.type == 'mouseleave') {
+				$('.btn-tooltip').removeClass('active');
+				setObj(function () {
+					tooltipCont.removeAttr('style');
+				}, secVal[2]);
+			}
+		}
 	});
 
 	$('.pop-open').on('click', (function () {
