@@ -439,10 +439,10 @@ jQuery.event.add(window, 'load', function () {
 			const tooltipBoxWid = tooltipPos + tooltipCont.outerWidth();
 			const tooltipSum = tooltipBoxWid - $(window).width();
 			if (tooltipPos < 0) {
-				tooltipCont.css({ 'left': -tooltipPos + 15 });
+				tooltipCont.css({'left':-tooltipPos + 15});
 			}
 			if (tooltipBoxWid > $(window).width()) {
-				tooltipCont.css({ 'left': -(tooltipSum + 15) });
+				tooltipCont.css({'left':-(tooltipSum + 15)});
 			}
 		} else {
 			target.removeClass('active');
