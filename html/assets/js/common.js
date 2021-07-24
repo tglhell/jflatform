@@ -201,16 +201,16 @@ jQuery.event.add(window, 'load', function () {
 	});
 
 	$('.tooltip-box').on('mouseenter mouseleave click', '.btn-tooltip', function (e) {
-		if (!$(this).hasClass('type-hover')) {
-			if (e.type == 'click') {
-				tooltip($(this));
-			}
-		} else {
-			if (!$(this).parent().is(':animated')) {
+		if (!$(this).parent().is(':animated')) {
+			$(this).parent().stop().animate({ 'overflow': 'visible' }, secVal[2]);
+			if (!$(this).hasClass('type-hover')) {
+				if (e.type == 'click') {
+					tooltip($(this));
+				}
+			} else {
 				if (e.type == 'mouseenter') {
 					tooltip($(this));
 				} else if (e.type == 'mouseleave') {
-					$(this).parent().stop().animate({'overflow':'visible'}, secVal[2]);
 					$('.btn-tooltip').removeClass('active');
 					setObj(function () {
 						tooltipCont.removeAttr('style');
@@ -451,6 +451,7 @@ jQuery.event.add(window, 'load', function () {
 			const tarItem = $('.tooltip-box, .tooltip-box *')
 			if (!$(e.target).is(tarItem)) {
 				$('.btn-tooltip').removeClass('active');
+				target.parent().stop().animate({ 'overflow': 'visible' }, secVal[2]);
 				setObj(function () {
 					tooltipCont.removeAttr('style');
 				}, secVal[2]);
