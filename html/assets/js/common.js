@@ -427,6 +427,7 @@ jQuery.event.add(window, 'load', function () {
 	function tooltip(target) {
 		tooltipCont = target.closest('.tooltip-box').find('.tooltip-cont');
 		const btnTooltipWid = target.outerWidth();
+		tooltipCont.removeAttr('style');
 		if ($(window).width() >= secVal[4]) {
 			tooltipCont.css('margin-left', -(tooltipCont.outerWidth() / 2 - btnTooltipWid / 2));
 		} else {
@@ -446,6 +447,7 @@ jQuery.event.add(window, 'load', function () {
 			}
 		} else {
 			target.removeClass('active');
+			tooltipCont.removeAttr('style');
 		}
 		$(document).on('click', function (e) {
 			const tarItem = $('.tooltip-box, .tooltip-box *')
