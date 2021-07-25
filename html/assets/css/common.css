@@ -1663,8 +1663,8 @@ textarea:disabled {
 	position: relative;
 }
 .btn-tooltip:after {
-	-webkit-transition: opacity .3s, top .3s ease-in-out;
-	transition: opacity .3s, top .3s ease-in-out;
+	-webkit-transition: opacity .2s, top .2s ease-in-out;
+	transition: opacity .2s, top .2s ease-in-out;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 	content: '';
@@ -1680,8 +1680,8 @@ textarea:disabled {
 	border-left: 10px solid  transparent;
 }
 .btn-tooltip.active:after {
-	-webkit-transition: opacity .3s, top .3s ease-in-out;
-	transition: opacity .3s, top .3s ease-in-out;
+	-webkit-transition: opacity .2s, top .2s ease-in-out;
+	transition: opacity .2s, top .2s ease-in-out;
 	top: 30px;
 	z-index: 6;
 	opacity: 1;
@@ -1691,8 +1691,8 @@ textarea:disabled {
 	display: inline-block;
 }
 .tooltip-cont {
-	-webkit-transition: opacity .3s, top .3s ease-in-out;
-	transition: opacity .3s, top .3s ease-in-out;
+	-webkit-transition: opacity .2s, top .2s ease-in-out;
+	transition: opacity .2s, top .2s ease-in-out;
 	position: absolute;
 	top: 30px;
 	left: 0;
@@ -1706,8 +1706,8 @@ textarea:disabled {
 	pointer-events: none;
 }
 .btn-tooltip.active + .tooltip-cont {
-	-webkit-transition: opacity .3s, top .3s ease-in-out;
-	transition: opacity .3s, top .3s ease-in-out;
+	-webkit-transition: opacity .2s, top .2s ease-in-out;
+	transition: opacity .2s, top .2s ease-in-out;
 	top: 40px;
 	opacity: 1;
 	display: inline-block;
