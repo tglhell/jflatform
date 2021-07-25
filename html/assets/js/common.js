@@ -203,7 +203,7 @@ jQuery.event.add(window, 'load', function () {
 	$('.tooltip-box').on('mouseenter mouseleave click', '.btn-tooltip', function (e) {
 		if (!$(this).hasClass('type-hover')) {
 			if (e.type == 'click') {
-				if (!$(this).hasClass('active')) {
+				if (!$(this).hasClass('active') && !$(this).hasClass('type-hover')) {
 					$('.tooltip-cont').removeAttr('style');
 				}
 				tooltip($(this));
