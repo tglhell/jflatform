@@ -201,16 +201,16 @@ jQuery.event.add(window, 'load', function () {
 	});
 
 	$('.tooltip-box').on('mouseenter mouseleave click', '.btn-tooltip', function (e) {
-		if (!$(this).parent().is(':animated')) {
-			$(this).parent().animate({ 'overflow': 'visible' }, secVal[1]);
-			if (!$(this).hasClass('type-hover')) {
-				if (e.type == 'click') {
-					tooltip($(this));
-				}
-			} else {
+		if (!$(this).hasClass('type-hover')) {
+			if (e.type == 'click') {
+				tooltip($(this));
+			}
+		} else {
+			if (!$(this).parent().is(':animated')) {
 				if (e.type == 'mouseenter') {
 					tooltip($(this));
 				} else if (e.type == 'mouseleave') {
+					$(this).parent().animate({ 'overflow': 'visible' }, secVal[1]);
 					$('.btn-tooltip').removeClass('active');
 					setObj(function () {
 						tooltipCont.removeAttr('style');
