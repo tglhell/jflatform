@@ -49,6 +49,7 @@
 	<script>
 		$(function () {
 			const videoItem = $('.main-top-cont video');
+			const BtnMvControl = $('.btn-test');
 			setObj(function(){
 				videoItem.get(0).currentTime = videoTimeArr[0];
 				videoItem.get(0).play();
@@ -57,20 +58,45 @@
 					if (currentPos >= videoTimeArr[1]) {
 						videoItem.get(0).pause();
 						videoItem.off();
-						$('.btn-test').fadeIn(secVal[4]);
+						BtnMvControl.fadeIn(secVal[4]);
 					}
 				});
 			}, secVal[2]);
 
-			$('.btn-test').click(function () {
-				videoItem.get(0).currentTime = videoTimeArr[2];
-				videoItem.get(0).play();
-				videoItem.on('timeupdate', function () {
-					let currentPos = videoItem[0].currentTime;
-					if (currentPos >= videoTimeArr[3]) {
-						videoItem.get(0).pause();
-					}
-				});
+			BtnMvControl.click(function () {
+				const tarText = $(this).find('span').text();
+				videoItem.off();
+				if (tarText == 'Go') {
+					videoItem.get(0).currentTime = videoTimeArr[2];
+					videoItem.get(0).play();
+					BtnMvControl.find('span').text('Go Next');
+					videoItem.on('timeupdate', function () {
+						let currentPos = videoItem[0].currentTime;
+						if (currentPos >= videoTimeArr[3]) {
+							videoItem.get(0).pause();
+						}
+					});
+				} else if (tarText == 'Go Next') {
+					videoItem.get(0).currentTime = videoTimeArr[4];
+					videoItem.get(0).play();
+					BtnMvControl.find('span').text('Go First');
+					videoItem.on('timeupdate', function () {
+						let currentPos = videoItem[0].currentTime;
+						if (currentPos >= videoTimeArr[5]) {
+							videoItem.get(0).pause();
+						}
+					});
+				} else if (tarText == 'Go First') {
+					videoItem.get(0).currentTime = videoTimeArr[0];
+					videoItem.get(0).play();
+					BtnMvControl.find('span').text('Go');
+					videoItem.on('timeupdate', function () {
+						let currentPos = videoItem[0].currentTime;
+						if (currentPos >= videoTimeArr[1]) {
+							videoItem.get(0).pause();
+						}
+					});
+				}
 			});
 		});
 	</script>
