@@ -1898,8 +1898,8 @@ textarea:disabled {
 		-webkit-overflow-scrolling: touch;
 		overflow: auto;
 		display: inline-block;
-		width: calc(100% + 30px);
-		margin: 0 -15px;
+		width: calc(100% + 40px);
+		margin: 0 -20px;
 		vertical-align: top;
 	}
 	.tab-box-wrap.x-scroll .tab-box-outer::-webkit-scrollbar {
@@ -1908,7 +1908,7 @@ textarea:disabled {
 	.tab-box-wrap.x-scroll .tab-box-list {
 		display: inline-block;
 		width: auto;
-		padding: 0 15px;
+		padding: 0 20px;
 		font-size: 0;
 		white-space: nowrap;
 	}
