@@ -40,7 +40,7 @@ br {color:transparent;}
 header.guide_header {border-bottom:1px solid #ccc; color:#fff; height:60px; padding-top:20px; padding-left:20px;}
 header.guide_header h1 {font-size:24px; font-weight:normal; color:#304989; font-weight:700}
 
-.guide_container {padding:15px; }
+.guide_container {padding:15px 10px; }
 .guide_container h2 {color:#333;font-weight: bold;font-size:16px;}
 .guide_container h3.title {color:#000; font-weight: bold;font-size:16px; margin: 60px 0 15px}
 .guide_container .contents_infor {max-width: 1120px; margin: 0 auto;}
@@ -105,13 +105,9 @@ footer {margin-top:100px; text-align:center; padding:30px}
 #topBtn {position:fixed; right:15px; bottom:15px; z-index: 100; width:50px; height:50px; border-radius:25px; background-color:#000;}
 #topBtn a {display: block; line-height: 50px; color:#fff; font-weight: bold; text-align: center;}
 
-
-
-
-
-
-
-
+@media screen and (max-width: 1119px) {
+	.guide_container {padding:20px; }
+}
 
 
 

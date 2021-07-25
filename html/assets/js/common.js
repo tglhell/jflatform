@@ -203,6 +203,9 @@ jQuery.event.add(window, 'load', function () {
 	$('.tooltip-box').on('mouseenter mouseleave click', '.btn-tooltip', function (e) {
 		if (!$(this).hasClass('type-hover')) {
 			if (e.type == 'click') {
+				if (!$(this).hasClass('active')) {
+					$('.tooltip-cont').removeAttr('style');
+				}
 				tooltip($(this));
 			}
 		} else {
@@ -425,13 +428,17 @@ jQuery.event.add(window, 'load', function () {
 	}
 
 	function tooltip(target) {
-		tooltipCont = target.closest('.tooltip-box').find('.tooltip-cont');
 		const btnTooltipWid = target.outerWidth();
-		tooltipCont.removeAttr('style');
-		if ($(window).width() >= secVal[4]) {
-			tooltipCont.css('margin-left', -(tooltipCont.outerWidth() / 2 - btnTooltipWid / 2));
+		tooltipCont = target.closest('.tooltip-box').find('.tooltip-cont');
+		if ($(window).width() > tbl) {
+			tooltipPadding = 10;
 		} else {
-			tooltipCont.css('width', $(window).width() - (30));
+			tooltipPadding = 20;
+		}
+		if ($(window).width() >= secVal[4]) {
+			tooltipCont.css('margin-left', -(tooltipCont.outerWidth() / irNum[1] - btnTooltipWid / irNum[1]));
+		} else {
+			tooltipCont.css('width', $(window).width() - (tooltipPadding * irNum[1]));
 		}
 		if (!target.hasClass('active')) {
 			$('.btn-tooltip').removeClass('active');
@@ -440,17 +447,19 @@ jQuery.event.add(window, 'load', function () {
 			const tooltipBoxWid = tooltipPos + tooltipCont.outerWidth();
 			const tooltipSum = tooltipBoxWid - $(window).width();
 			if (tooltipPos < 0) {
-				tooltipCont.css({'left':-tooltipPos + 15});
+				tooltipCont.css({'left':-tooltipPos + tooltipPadding});
 			}
 			if (tooltipBoxWid > $(window).width()) {
-				tooltipCont.css({'left':-(tooltipSum + 15)});
+				tooltipCont.css({'left':-(tooltipSum + tooltipPadding)});
 			}
 		} else {
 			target.removeClass('active');
-			tooltipCont.removeAttr('style');
+			setObj(function () {
+				tooltipCont.removeAttr('style');
+			}, secVal[1]);
 		}
 		$(document).on('click', function (e) {
-			const tarItem = $('.tooltip-box, .tooltip-box *')
+			const tarItem = $('.tooltip-box, .tooltip-box *');
 			if (!$(e.target).is(tarItem)) {
 				$('.btn-tooltip').removeClass('active');
 				setObj(function () {
