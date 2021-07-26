@@ -449,9 +449,9 @@ h3.title {
     font-weight:700;
 }
 @media screen and (max-width: 1119px) {
-    .order.hmj-container .hmj-content .cont-outer {
+    /* .order.hmj-container .hmj-content .cont-outer {
         padding-bottom:40px;
-    }
+    } */
     .hmj-content .cont-right > .inside-type.mo-toggle {
         padding:0;
     }

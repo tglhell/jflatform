@@ -15,7 +15,7 @@ jQuery.event.add(window, 'load', function () {
         }
     })
 
-    $(window).resize(function() {
+    function autoSize() {
         let winWid =$( window).width();
 
         if(winWid < 1119) {
@@ -23,6 +23,14 @@ jQuery.event.add(window, 'load', function () {
             btnListType.removeClass('on');
             $('.type2').addClass('on');
         } 
+    }
+
+    setTimeout(function(){
+		autoSize();
+	}, 0);
+
+    $(window).resize(function() {
+        autoSize();
     })
     
 })

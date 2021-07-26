@@ -560,6 +560,16 @@ jQuery.event.add(window, 'load', function () {
 		})
 	};
 	accordion();
+
+	// iframe map auto height
+	function mapAutoHeight() {
+		if($(document).width() > tbl) {
+			var bodyH = $(document).height();
+			var topH = $('.hmj-header').height()
+			$('.intro-map').css('height', bodyH - topH);
+		}
+	};
+	mapAutoHeight();
 });
 
 function selectDropdown(data){

@@ -1,38 +1,94 @@
 @charset "utf-8";
 
 /* Test Drive */
-.test-drive .map-wrap {
-	position: relative;
-}
 .test-drive .map {
-	height: 100%;
 	line-height: 0;
 }
-.test-drive .search-form {
+.intro-map {
+	position: relative;
+	margin-bottom: -200px;
+}
+.intro-map .search {
+	padding: 20px;
+	background-color: #fff;
 	position: absolute;
 	top: 40px;
 	left: 40px;
 	width: 360px;
 	background-color: #FFF;
 }
-.test-drive .search-result {
+.intro-map .search .slt-box {
+	margin-bottom: 6px;
+}
+.intro-map .map {
+	height: 100%;
+}
+.intro-map .result {
 	position: absolute;
-	top: 132px;
+	top: 188px;
 	left: 40px;
 	width: 360px;
-	height: calc(100% - 172px);
+	height: calc(100% - 228px);
 	background-color: #FFF;
+	padding: 20px 0;
 }
-.test-drive .search-result .info {
-	height: calc(100% - 56px);
-	overflow-y: scroll;
+.intro-map .result .scroll-area {
+	height: calc(100% - 96px);
+	overflow-y: auto;
 }
-.test-drive .search-result .cta-outer {
-	width: 100%;
-	position: absolute;
-	bottom: 0;
+.intro-map .result .branch-info {
+	padding-left: 20px;
+	width: 340px;
+}
+.intro-map .result .cta-outer {
+	padding: 40px 20px 0;
 }
 
+
+.branch-info .text-flag {
+	margin-bottom: 10px;
+}
+.branch-info .name {
+	font-size: 24px;
+	color: #002c5f;
+	line-height: 1.47;
+	margin-bottom: 20px;
+}
+.branch-info .detail li{
+	line-height: 1.5;
+	padding-left: 28px;
+	background-size: 18px 18px;
+	display: table;
+}
+.branch-info .detail li + li {
+	margin-top: 16px;
+}
+.branch-info .detail li > span{
+	color: #777;
+	display: table-cell;
+	width: 96px;
+	padding-right: 40px;
+}
+.branch-info .detail .address {
+	background: transparent url('../images/common/ico_branch_map.svg') no-repeat left 2px;
+}
+.branch-info .detail .call {
+	background: transparent url('../images/common/ico_branch_call.svg') no-repeat left 2px;
+}
+.branch-info .detail .hour {
+	background: transparent url('../images/common/ico_branch_hour.svg') no-repeat left 2px;
+}
+.branch-info .detail .service {
+	background: transparent url('../images/common/ico_branch_car.svg') no-repeat left 2px;
+}
+.branch-info .detail .date {
+	background: transparent url('../images/common/ico_branch_date.svg') no-repeat left 2px;
+}
+
+/* .intro-map .result .cta-outer {	
+	position: absolute;
+	bottom: 0;
+} */
 
 .test-drive .service-step {
 	text-align: center;
@@ -41,16 +97,24 @@
 	border-bottom: 1px solid #ccc;
 	margin-bottom: 60px;
 }
+.test-drive .request .map {
+	margin: 20px 0;
+	height: 400px;
+}
 .test-drive .request .caution {
 	margin: 40px 0;
 }
 .test-drive .request .cta-outer {
 	margin-top: 40px;
 }
+.test-drive .request .car-select label {
+	display: block;
+	margin-right: 0;
+	margin-bottom: 20px;
+}
 
 .pop-hold-car .layer-cont {
 	padding-top: 0;
-	padding-bottom: 0;
 }
 .pop-hold-car .list li{
 	display: -webkit-box;
@@ -60,8 +124,6 @@
 	padding: 20px 0;
 	border-bottom: 1px dotted #ccc;
 }
-
-
 .pop-hold-car .list li:last-child{
 	border-bottom-style: solid;
 }
@@ -78,14 +140,27 @@
 }
 
 
-@media screen and (max-width: 1119px) { 
-	.test-drive .search-form, .test-drive .search-result {
+@media screen and (max-width: 1119px) {
+	.intro-map {
+		margin-bottom: 0;
+	}
+	.intro-map .search, .intro-map .result {
 		position: relative;
 		top: 0;
 		left: 0;
+		width: 100%;
+	}
+	.intro-map .map {
+		height: 55.56vw;
+	}
+	.intro-map .result {
+		padding-bottom: 0;
 	}
 
 	.test-drive .service-step {
 		margin-bottom: 20px;
+	}
+	.test-drive .request .map {
+		height: 200px;
 	}
 }
