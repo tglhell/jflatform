@@ -100,6 +100,7 @@ jQuery.event.add(window, 'load', function () {
 		const chkBtnPos = $('.scr-fix-btn');
 		const headerFixHgt = headerOuter.find('.header-cont').outerHeight(true) + irNum[0];
 		let scrPos = $(this).scrollTop();
+		scrPos2 = $(this).scrollTop();
 		if (e.type == 'scroll') {
 			if ($('.parallax-cont').length >= irNum[0]) {
 				prxItem.css({'transform':'translateY(' + scrPos / irNum[3] + 'px)'});
@@ -145,6 +146,7 @@ jQuery.event.add(window, 'load', function () {
 				}
 			}
 			lastScrTopPos = scrPos;
+			rnbContFix();
 		} else if (e.type == 'orientationchange') {
 			if (window.orientation == 0) {
 				//portrait
@@ -210,14 +212,23 @@ jQuery.event.add(window, 'load', function () {
 			}
 		} else {
 			if (!$(this).parent().is(':animated')) {
-				if (e.type == 'mouseenter') {
-					tooltip($(this));
-				} else if (e.type == 'mouseleave') {
-					$(this).parent().animate({ 'overflow': 'visible' }, secVal[1]);
-					$('.btn-tooltip').removeClass('active');
-					setObj(function () {
-						tooltipCont.removeAttr('style');
-					}, secVal[1]);
+				if ($(window).width() > tbl) {
+					if (e.type == 'mouseenter') {
+						tooltip($(this));
+					} else if (e.type == 'mouseleave') {
+						$(this).parent().animate({ 'overflow': 'visible' }, secVal[1]);
+						$('.btn-tooltip').removeClass('active');
+						setObj(function () {
+							tooltipCont.removeAttr('style');
+						}, secVal[1]);
+					}
+				} else {
+					if (e.type == 'click') {
+						if (!$(this).hasClass('active')) {
+							$('.tooltip-cont').removeAttr('style');
+						}
+						tooltip($(this));
+					}
 				}
 			}
 		}
@@ -458,15 +469,46 @@ jQuery.event.add(window, 'load', function () {
 				tooltipCont.removeAttr('style');
 			}, secVal[1]);
 		}
-		$(document).on('click', function (e) {
+		if (!$('html').hasClass('ios')) {
 			const tarItem = $('.tooltip-box, .tooltip-box *');
-			if (!$(e.target).is(tarItem)) {
-				$('.btn-tooltip').removeClass('active');
-				setObj(function () {
-					tooltipCont.removeAttr('style');
-				}, secVal[1]);
+			$(document).on('click', function (e) {
+				if (!$(e.target).is(tarItem)) {
+					$('.btn-tooltip').removeClass('active');
+					setObj(function () {
+						tooltipCont.removeAttr('style');
+					}, secVal[1]);
+				}
+			});
+		} else {
+			$(document).on('touchstart', function (e) {
+				const tarItem = $('.tooltip-box, .tooltip-box *');
+				if (!$(e.target).is(tarItem)) {
+					$('.btn-tooltip').removeClass('active');
+				}
+			});
+		}
+	}
+
+	function rnbContFix () {
+		const rnbCont = $('.cont-right');
+		const rnbPos = rnbCont.offset().top;
+		const centerContHgt = $('.cont-center').outerHeight();
+		const rnbContHgt = rnbCont.find('.inside-type').outerHeight();
+		const centerPos = $('.cont-center').offset().top + (centerContHgt - rnbContHgt);
+		let scrPos = $(this).scrollTop();
+		if (scrPos > rnbPos) {
+			rnbCont.addClass('scroll-fix');
+			if (scrPos > centerPos) {
+				rnbCont.removeClass('scroll-fix').addClass('scroll-end').find('.inside-type').css('top', centerPos);
+			} else {
+				rnbCont.addClass('scroll-fix').removeClass('scroll-end').find('.inside-type').removeAttr('style');
 			}
-		});
+		} else {
+			rnbCont.removeClass('scroll-fix');
+		}
+	}
+	if ($('.cont-right').length >= 1) {
+		rnbContFix();
 	}
 
 	function tblFixRow () {

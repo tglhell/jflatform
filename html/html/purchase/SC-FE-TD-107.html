@@ -104,32 +104,59 @@
 			</div>
 
 			<div class="cont-outer mincase request">
-                <div class="inp-outer-box2"><!-- 유효성체크 val-error -->
-                    <label for="inpName01_01" class="label">希望日選択 <span class="required">*</span></label>
-                    
-                    <!-- 달력 -->
-                    <div id="datePicker" class="date-picker"></div>
+                <div class="request-info">
+                    <ul>
+                        <li>
+                            <span class="item">姓名</span>
+                            <span class="txt">木村  拓哉</span>
+                        </li>
+                        <li>
+                            <span class="item">姓名(フリガナ)</span>
+                            <span class="txt">きむら たくや</span>
+                        </li>
+                        <li>
+                            <span class="item">携帯電話</span>
+                            <span class="txt">08019721113</span>
+                        </li>
+                        <li>
+                            <span class="item">E-mail</span>
+                            <span class="txt">kimura@abc.com</span>
+                        </li>
+                        <li>
+                            <span class="item">試乗場所</span>
+                            <span class="txt">横浜試乗センター</span>
+                        </li>
+                        <li>
+                            <span class="item">試乗車種</span>
+                            <span class="txt">IONIQ 5</span>
+                        </li>
+                        <li>
+                            <span class="item">試乗希望日時</span>
+                            <span class="txt">2021-05-29 15:00 ~ 16:00</span>
+                        </li>
+                    </ul>
                 </div>
-                <p class="error-msg">error text</p>
-                
-                <div class="inp-outer-box2"><!-- 유효성체크 val-error -->
-                    <label for="inpName01_01" class="label">希望時間選択 <span class="required">*</span></label>                    
-                    <div class="select-hour">
-                        <label class="btn-select"><input type="radio" name="onlyOne" /><span>09:00 ~ 09:30</span></label>
-                        <label class="btn-select"><input type="radio" name="onlyOne" /><span>09:30 ~ 10:00</span></label>
-                        <label class="btn-select"><input type="radio" name="onlyOne" /><span>10:00 ~ 10:30</span></label>
-                        <label class="btn-select"><input type="radio" name="onlyOne" /><span>10:30 ~ 11:00</span></label>
-                        <label class="btn-select"><input type="radio" name="onlyOne" disabled /><span>12:00 ~ 12:30</span></label>
-                        <label class="btn-select"><input type="radio" name="onlyOne" checked /><span>13:00 ~ 13:30</span></label>
-                        <label class="btn-select"><input type="radio" name="onlyOne" /><span>13:00 ~ 13:30</span></label>
-                        <label class="btn-select"><input type="radio" name="onlyOne" /><span>13:00 ~ 13:30</span></label>
-                    </div>
-                </div>
-                <p class="error-msg">error text</p>
+                <ul class="check-terms">
+                    <li>
+                        <label class="chk"><input type="checkbox"><span><em>(必須)</em>個人情報の収集及び利用目的についての同意</span>
+                            <a href="#" class="link-more">詳細を見る</a>
+                        </label>					
+                        <p class="error-msg">error text</p>
+                    </li>
+                    <li>
+                        <label class="chk"><input type="checkbox"><span><em>(必須)</em>個人情報の処理委託についての同意</span>
+                            <a href="#" class="link-more">詳細を見る</a>
+                        </label>					
+                        <p class="error-msg">error text</p>
+                    </li>
+                    <li>
+                        <label class="chk"><input type="checkbox"><span><em>(必須)</em>登録された携帯電話あてに試乗サービス利用についてご案内させていただきます。</span></label>					
+                    </li>
+                </ul>
 
                 <div class="cta-outer">
                     <button class="btn"><span>戻る</span></button>
-                    <button class="btn btn-type2"><span>次へ</span></button>
+                    <button class="btn btn-type2"><span>試乗予約</span></button>
                 </div>
 			</div>
 		</div>
@@ -147,13 +174,5 @@
 		<span class="blind">Top</span>
 	</a>
 </div>
-
-<script>
-    $(function () {
-        $('.test-drive #datePicker').datepicker({
-            minDate: '0',
-        });
-    });
-</script>
 </body>
 </html>

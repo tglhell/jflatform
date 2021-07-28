@@ -112,8 +112,47 @@
 	margin-right: 0;
 	margin-bottom: 20px;
 }
+.test-drive .request .inp-outer-box2:not(:first-child) {
+	margin-top: 40px;
+}
+.test-drive .request .select-hour {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -8px;
+	margin-bottom: -8px;
+}
+.test-drive .request .select-hour .btn-select {
+	width: 228px;
+	margin-right: 8px;
+	margin-bottom: 8px;
+}
+.request-info {}
+.request-info ul {
+	border-top: 1px solid #000;
+}
+.request-info li {
+	display: flex;
+	padding: 15px 0;
+	align-items: baseline;
+	border-bottom: 1px dotted #ccc;
+}
+.request-info li:last-child {
+	border-bottom-style: solid;
+}
+.request-info .item {
+	color: #666;
+	width: 135px;
+	padding-right: 20px;
+}
+.request-info .txt {
+	flex: 1 0;
+}
+.request-info + .check-terms {
+	margin-top: 20px;
+}
 
-.pop-hold-car .layer-cont {
+.layer-cont.pop-hold-car,
+.layer-cont.pop-location  {
 	padding-top: 0;
 }
 .pop-hold-car .list li{
@@ -139,6 +178,13 @@
 	font-weight: 500;
 }
 
+.pop-location .map {
+	margin: 0 -40px 40px;
+	height: 286px;
+}
+
+
+
 
 @media screen and (max-width: 1119px) {
 	.intro-map {
@@ -162,5 +208,13 @@
 	}
 	.test-drive .request .map {
 		height: 200px;
+	}
+	.test-drive .request .select-hour .btn-select {
+		width: calc(50% - 8px)
+	}
+
+	.pop-location .map {
+		margin: 0 -20px 20px;
+		height: 55.56vw;
 	}
 }
