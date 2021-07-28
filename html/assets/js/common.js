@@ -99,8 +99,7 @@ jQuery.event.add(window, 'load', function () {
 	$(window).on('scroll resize orientationchange', function (e) {
 		const chkBtnPos = $('.scr-fix-btn');
 		const headerFixHgt = headerOuter.find('.header-cont').outerHeight(true) + irNum[0];
-		let scrPos = $(this).scrollTop();
-		scrPos2 = $(this).scrollTop();
+		scrPos = $(this).scrollTop();
 		if (e.type == 'scroll') {
 			if ($('.parallax-cont').length >= irNum[0]) {
 				prxItem.css({'transform':'translateY(' + scrPos / irNum[3] + 'px)'});
@@ -205,7 +204,7 @@ jQuery.event.add(window, 'load', function () {
 	$('.tooltip-box').on('mouseenter mouseleave click', '.btn-tooltip', function (e) {
 		if (!$(this).hasClass('type-hover')) {
 			if (e.type == 'click') {
-				if (!$(this).hasClass('active') && !$(this).hasClass('type-hover')) {
+				if (!$(this).hasClass('active') && !$(this).hasClass('type-hover') && !$('.btn-tooltip.active').length == 1) {
 					$('.tooltip-cont').removeAttr('style');
 				}
 				tooltip($(this));
@@ -490,26 +489,29 @@ jQuery.event.add(window, 'load', function () {
 	}
 
 	function rnbContFix () {
-		const rnbCont = $('.cont-right');
-		const rnbPos = rnbCont.offset().top;
-		const centerContHgt = $('.cont-center').outerHeight();
-		const rnbContHgt = rnbCont.find('.inside-type').outerHeight();
-		const centerPos = $('.cont-center').offset().top + (centerContHgt - rnbContHgt);
-		let scrPos = $(this).scrollTop();
-		if (scrPos > rnbPos) {
-			rnbCont.addClass('scroll-fix');
-			if (scrPos > centerPos) {
-				rnbCont.removeClass('scroll-fix').addClass('scroll-end').find('.inside-type').css('top', centerPos);
+		if ($('.cont-right').length >= 1) {
+			const rnbCont = $('.cont-right');
+			const rnbPos = rnbCont.offset().top;
+			const centerContHgt = $('.cont-center').outerHeight();
+			const rnbContHgt = rnbCont.find('.inside-type').outerHeight();
+			const cautionContHgt = rnbCont.find('.caution').outerHeight();
+			const centerPos = $('.cont-center').offset().top + (centerContHgt - (rnbContHgt + cautionContHgt));
+			let scrPos = $(this).scrollTop();
+			if (scrPos > rnbPos) {
+				rnbCont.addClass('scroll-fix');
+				rnbCont.find('.caution').css('top', rnbContHgt + 20);
+				if (scrPos > centerPos) {
+					rnbCont.removeClass('scroll-fix').addClass('scroll-end').find('.inside-type').css('top', centerPos);
+					rnbCont.find('.caution').css('top', rnbContHgt + 20);
+				} else {
+					rnbCont.addClass('scroll-fix').removeClass('scroll-end').find('.inside-type').removeAttr('style');
+				}
 			} else {
-				rnbCont.addClass('scroll-fix').removeClass('scroll-end').find('.inside-type').removeAttr('style');
+				rnbCont.removeClass('scroll-fix');
 			}
-		} else {
-			rnbCont.removeClass('scroll-fix');
 		}
 	}
-	if ($('.cont-right').length >= 1) {
-		rnbContFix();
-	}
+	rnbContFix();
 
 	function tblFixRow () {
 		if ($(window).width() <= tbl) {

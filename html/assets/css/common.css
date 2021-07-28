@@ -509,9 +509,16 @@ body {
 .hmj-container .hmj-content .cont-right.scroll-fix .inside-type {
 	position: fixed;
 	top: 20px;
+	width: 360px;
 }
 .hmj-container .hmj-content .cont-right.scroll-end .inside-type {
 	position: absolute;
+}
+.hmj-container .hmj-content .cont-right.scroll-fix .caution,
+.hmj-container .hmj-content .cont-right.scroll-end .caution {
+	position: fixed;
+	width: 360px;
+	z-index: 10;
 }
 .cont-left-box {
 	min-height: 550px;
@@ -847,9 +854,9 @@ div.slt-box select {
 	width: 100%;
 	vertical-align: middle;
 }
-.inp-outer-box2 {
+/* .inp-outer-box2 {
 
-}
+} */
 label.label {
 	display: block;
 	padding-bottom: 13px;
