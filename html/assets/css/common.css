@@ -514,9 +514,13 @@ body {
 .hmj-container .hmj-content .cont-right.scroll-end .inside-type {
 	position: absolute;
 }
-.hmj-container .hmj-content .cont-right.scroll-fix .caution,
-.hmj-container .hmj-content .cont-right.scroll-end .caution {
+.hmj-container .hmj-content .cont-right.scroll-fix .caution {
 	position: fixed;
+	width: 360px;
+	z-index: 10;
+}
+.hmj-container .hmj-content .cont-right.scroll-end .caution {
+	position: absolute;
 	width: 360px;
 	z-index: 10;
 }

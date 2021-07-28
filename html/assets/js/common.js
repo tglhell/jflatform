@@ -441,9 +441,9 @@ jQuery.event.add(window, 'load', function () {
 		const btnTooltipWid = target.outerWidth();
 		tooltipCont = target.closest('.tooltip-box').find('.tooltip-cont');
 		if ($(window).width() > tbl) {
-			tooltipPadding = 10;
+			tooltipPadding = twoDig[0];
 		} else {
-			tooltipPadding = 20;
+			tooltipPadding = twoDig[1];
 		}
 		if ($(window).width() >= secVal[4]) {
 			tooltipCont.css('margin-left', -(tooltipCont.outerWidth() / irNum[1] - btnTooltipWid / irNum[1]));
@@ -491,23 +491,30 @@ jQuery.event.add(window, 'load', function () {
 	function rnbContFix () {
 		if ($('.cont-right').length >= 1) {
 			const rnbCont = $('.cont-right');
+			const cautionCont = rnbCont.find('.caution');
 			const rnbPos = rnbCont.offset().top;
 			const centerContHgt = $('.cont-center').outerHeight();
 			const rnbContHgt = rnbCont.find('.inside-type').outerHeight();
-			const cautionContHgt = rnbCont.find('.caution').outerHeight();
-			const centerPos = $('.cont-center').offset().top + (centerContHgt - (rnbContHgt + cautionContHgt));
+			let cautionContHgt = rnbCont.find('.caution').outerHeight() || 0;
+			let centerPos = $('.cont-center').offset().top + (centerContHgt - (rnbContHgt + cautionContHgt));
 			let scrPos = $(this).scrollTop();
 			if (scrPos > rnbPos) {
 				rnbCont.addClass('scroll-fix');
-				rnbCont.find('.caution').css('top', rnbContHgt + 20);
+				cautionCont.css('top', rnbContHgt + twoDig[1]);
 				if (scrPos > centerPos) {
-					rnbCont.removeClass('scroll-fix').addClass('scroll-end').find('.inside-type').css('top', centerPos);
-					rnbCont.find('.caution').css('top', rnbContHgt + 20);
+					if (cautionCont.length == 0) {
+						rnbCont.removeClass('scroll-fix').addClass('scroll-end').find('.inside-type').css('top', centerPos - cautionContHgt);
+						cautionCont.css('top', centerPos + rnbContHgt);
+					} else {
+						rnbCont.removeClass('scroll-fix').addClass('scroll-end').find('.inside-type').css('top', centerPos - twoDig[1]);
+						cautionCont.css('top', (centerPos - twoDig[1]) + rnbContHgt);
+					}
 				} else {
 					rnbCont.addClass('scroll-fix').removeClass('scroll-end').find('.inside-type').removeAttr('style');
 				}
 			} else {
 				rnbCont.removeClass('scroll-fix');
+				cautionCont.removeAttr('style');
 			}
 		}
 	}
