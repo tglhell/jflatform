@@ -495,7 +495,7 @@ jQuery.event.add(window, 'load', function () {
 			const rnbPos = rnbCont.offset().top;
 			const centerContHgt = $('.cont-center').outerHeight();
 			const rnbContHgt = rnbCont.find('.inside-type').outerHeight();
-			let cautionContHgt = rnbCont.find('.caution').outerHeight();
+			let cautionContHgt = rnbCont.find('.caution').outerHeight() || 0;
 			let centerPos = $('.cont-center').offset().top + (centerContHgt - (rnbContHgt + cautionContHgt));
 			let scrPos = $(this).scrollTop();
 			if (scrPos > rnbPos) {
