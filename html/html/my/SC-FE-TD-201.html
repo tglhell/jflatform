@@ -7,6 +7,7 @@
     <title>HMJ 온라인 판매 사이트 구축</title>
 
     <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/my.css">
 	<link rel="stylesheet" href="../../assets/css/purchase.css">
 	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
 	
@@ -92,7 +93,7 @@
 	<div id="hmjContainer" class="hmj-container">
 		<div class="hmj-content">
 			<div class="cont-outer">
-                <button type="button" class="btn pop-open" data-pop-idx="persnalTerms02"><span>SC-FE-TD-114</span></button>
+                <button type="button" class="btn pop-open" data-pop-idx="location"><span>SC-FE-TD-201</span></button>
 			</div>
 		</div>
 	</div>
@@ -109,20 +110,35 @@
 		<span class="blind">Top</span>
 	</a>
 </div>
-<div class="layer-popup-wrap mo-full" data-pop-idx="persnalTerms02">
+<div class="layer-popup-wrap mo-full" data-pop-idx="location">
 	<div class="layer-popup-body">
 		<div class="layer-popup-cont pop-small">
-			<h1 class="layer-title">個人情報の処理委託のご案内</h1>
-			<div class="layer-cont">
-                <div class="terms-cont">
-                    개인정보처리위탁안내
+			<h1 class="layer-title">試乗場所案内</h1>
+			<div class="layer-cont pop-location">
+                <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25321.666663415752!2d127.0507571!3d37.50300425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sko!2skr!4v1626328179535!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+                <div class="branch-info">
+                    <span class="text-flag c2">HYUNDAI</span>
+                    <p class="name">横浜試乗センター</p>
+                    <ul class="detail">
+                        <li class="address">
+                            <span>住所</span>
+                            <p>Minatomirai Center Bldg 16F, 3-6-1, Minatomirai, Nishi-Ku, Yokohama-City, Kanagawa 220-0012</p>
+                        </li>
+                        <li class="call">
+                            <span>電話番号</span>
+                            <p>045-633-9121</p>
+                        </li>
+                        <li class="hour">
+                            <span>営業時間</span>
+                            <p>09:00~18:00</p>
+                        </li>
+                        <li class="service">
+                            <span>保有車両</span>
+                            <p>IONIQ5、NEXO</p>
+                        </li>
+                    </ul>
                 </div>
-			</div>
-            <div class="bottom-fixed">
-				<div class="cta-outer">
-					<button class="btn btn-middle btn-type2"><span>確認</span></button>
-				</div>
-			</div>
+            </div>
 			<button class="btn-close-popup btn-close">close</button>
 		</div>
 	</div>

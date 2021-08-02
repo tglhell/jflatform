@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>거점 Map : 試乗 : Purchase : HMJ</title>
+    <title>予約案内 : 試乗 : Purchase : HMJ</title>
 
     <link rel="stylesheet" href="../../assets/css/common.css">
 	<link rel="stylesheet" href="../../assets/css/purchase.css">
@@ -81,10 +81,10 @@
 				<span>HOME</span>
 				<span>Purchase</span>
 				<span>試乗</span>
-				<span>Map</span>
+				<span>試乗予約</span>
 			</div>
 			<button type="button" class="back-page">Back page</button>
-			<div class="page-title">테스트드라이브신청</div>
+			<div class="page-title">試乗予約</div>
 		</div>
 		<!-- //header -->
 	</div>
@@ -93,70 +93,49 @@
 	<!-- container -->
 	<div id="hmjContainer" class="hmj-container test-drive">
 		<div class="hmj-content">
-			<div class="cont-outer">
-				<div class="service-cate">
-                    <ul class="tab-box-list">
-                        <li class="active"><a href="javascript:void(0)">全体</a></li>
-                        <li><a href="javascript:void(0)">試乗</a></li>
-                        <li><a href="javascript:void(0)">MOCEAN</a></li>
-                        <li><a href="">Anyca</a></li>
-                    </ul>
+
+			<div class="cont-outer fullcase">
+				<div class="service-step">
+                   service-step 디자인미정
                 </div>
 			</div>
-			<div class="cont-outer fullcase">
-                <div class="intro-map">
-					<div class="search">
-						<select title="lacation-select" class="slt-box">
-							<option value="00" disabled hidden>Select All</option>
-							<option value="01" selected>神奈川県</option>
-							<option value="02">Option02</option>
-						</select>
-						<div class="inp-outer-box">
-							<div class="inp-btn-box">
-								<div class="inp-area">
-									<input type="search" class="inp-item" placeholder="地域名、店名 入力">
-									<button class="inp-close">delete</button>
-								</div>
-								<div class="inp-slice-box">
-									<button class="btn btn-middle btn-type2 auto-width"><span>検索</span></button>
-								</div>
-							</div>
-						</div>
-					</div>
-                    <div class="map">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25321.666663415752!2d127.0507571!3d37.50300425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sko!2skr!4v1626328179535!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-					</div>
-                        
-					<div class="result">
-						<div class="scroll-area">
-                            <div class="branch-info">
-								<span class="text-flag c2">HYUNDAI</span>
-								<p class="name">横浜試乗センター</p>
-								<ul class="detail">
-                                    <li class="address">
-                                        <span>住所</span>
-                                        <p>Minatomirai Center Bldg 16F, 3-6-1, Minatomirai, Nishi-Ku, Yokohama-City, Kanagawa 220-0012</p>
-                                    </li>
-                                    <li class="call">
-                                        <span>電話番号</span>
-                                        <p>045-633-9121</p>
-                                    </li>
-                                    <li class="hour">
-                                        <span>営業時間</span>
-                                        <p>09:00~18:00</p>
-                                    </li>
-                                    <li class="service">
-                                        <span>保有車両</span>
-                                        <p>IONIQ5、NEXO</p>
-                                    </li>
-                                </ul>
-							</div>
-						</div>
-						<div class="cta-outer full-type">
-							<button type="button" class="btn btn-type2"><span>試乗予約</span></button>
-						</div>
-					</div>
-				</div>
+
+			<div class="cont-outer mincase apply">
+                <div class="guide">
+                    <p><img src="../../assets/images/@pictogram.gif" alt="img"></p>
+                    <div class="cta-outer">
+                        <button class="btn"><span>非会員予約</span></button>
+                        <button class="btn btn-type2"><span>会員予約</span></button>
+                    </div>
+                    <div class="info">会員登録後、試乗予約サービスをご利用されれば 履歴確認や通知などをより便利にご利用いただけます。</div>
+                    <a class="btn-text" href="javascript:;">会員登録</a>
+                </div>
+                <dl class="caution full">
+                    <dt>試乗予約の際の ご確認項目</dt>
+                    <dd>試乗車にはお客様の安全のためにヒュンダイ自動車 スタッフが同乗いたします。</dd>
+                    <dd>ご同行の方は、後部座席に１名ご同乗できます。</dd>
+                    <dd>規定コースの試乗です。</dd>
+                    <dd>試乗前に試乗同意書にご同意いただいております。</dd>
+                    <dd>試乗拠点訪問の際は、運転免許証をご持参ください。</dd>
+                    <dd>個人情報などは当社の個人情報処理方針によります。</dd>
+                    <dd>試乗希望当日未訪問の際、予約はキャンセルされます。</dd>
+                    <dd>ペットのご登場はお控え願います。</dd>
+                </dl>
+                <dl class="caution full">
+                    <dt>試乗予約の制約事項</dt>
+                    <dd>運転免許取得から１年未満および20歳未満</dd>
+                    <dd>運転免許証の条件を満たしていない方</dd>
+                    <dd>お酒を飲んだ方</dd>
+                    <dd>妊娠中の方</dd>
+                    <dd>サンダル/ハイヒールなど運転にできしてない靴を履いている方</dd>
+                    <dd>同乗スタッフの指示に指示に従えない方</dd>
+                    <dd>スピード、危険運転およびその他の運航が無理であると判断される場合</dd>
+                </dl>
+                <dl class="caution full">
+                    <dt>保険補償内容</dt>
+                    <dd>万が一の事故に備えて試乗車は自動車保険が適用されます。</dd>
+                    <dd>保険内容や補償内容に対する詳細内容は、試乗日当日にご案内いたします。</dd>
+                </dl>
 			</div>
 		</div>
 	</div>
@@ -173,6 +152,5 @@
 		<span class="blind">Top</span>
 	</a>
 </div>
-
 </body>
 </html>

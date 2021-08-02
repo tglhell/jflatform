@@ -873,7 +873,7 @@
 				시승신청, 충전, 정비 등 예약에서 사용
 			</div>
 
-			<div id="datePicker"></div>
+			<div id="sampleDatePicker"></div>
 
 			<!-- //form -->
 
@@ -892,6 +892,11 @@
 		fileTarget.on('change', function(){ 
 			var filename = $(this)[0].files[0].name; 
 			$(this).siblings('.upload-name').val(filename); 
+		});
+
+		
+		$('#sampleDatePicker').datepicker({
+			minDate: '0'
 		});
 	});
 </script>

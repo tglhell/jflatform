@@ -491,7 +491,7 @@ h3.title {
 }
 
 /* complete-area*/
-.order .complete-area {
+/* .order .complete-area {
     text-align:center;
 }
 .order .complete-area .icon {
@@ -542,7 +542,7 @@ h3.title {
 }
 .order .complete-area .order-number dd {
     font-weight:700;   
-}
+} */
 .order .order-info > li:not(:first-child) {
     margin-top:40px;
 }
@@ -605,7 +605,7 @@ h3.title {
         text-align:left;
         margin-top:10px;
     }
-    .order .complete-area .icon {
+    /* .order .complete-area .icon {
         margin-bottom:16px;
     }
     .order .complete-area .order-number {
@@ -619,7 +619,7 @@ h3.title {
     }
     .order .complete-area .order-number dd {
         text-align:right;
-    }
+    } */
 }
 
 

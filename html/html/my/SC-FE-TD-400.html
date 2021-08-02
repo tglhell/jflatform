@@ -4,14 +4,16 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>申込者情報 : 試乗 : Purchase : HMJ</title>
+    <title>顧客満足度アンケート : Mypage : HMJ</title>
 
     <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/my.css">
 	<link rel="stylesheet" href="../../assets/css/purchase.css">
-	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">	
 	
-	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
 	<script type="text/javascript" src="../../assets/js/common.js"></script>
 </head>
 
@@ -78,13 +80,11 @@
 		</div>		
 		<div class="sub-cont">
 			<div class="history">
-				<span>HOME</span>
-				<span>Purchase</span>
-				<span>試乗</span>
-				<span>試乗予約</span>
+				<span>ホーム</span>
+				<span>顧客満足度アンケート</span>
 			</div>
 			<button type="button" class="back-page">Back page</button>
-			<div class="page-title">試乗予約</div>
+			<div class="page-title">顧客満足度アンケート</div>
 		</div>
 		<!-- //header -->
 	</div>
@@ -93,86 +93,56 @@
 	<!-- container -->
 	<div id="hmjContainer" class="hmj-container test-drive">
 		<div class="hmj-content">
+			<div class="cont-outer mincase">
+                <div class="non-members poll">
+					<span class="icon">icon</span>
+					<div class="text-type1">試乗サービスをご利用いただきありがとうございました。</div>
+					<div class="text-type2">
+                        <p>今後のサービス向上のため、簡単なアンケートにご協力をお願いします。</p>
+                    </div>
+				</div>
 
-			<div class="cont-outer fullcase">
-				<div class="service-step">
-                   service-step 디자인미정
-                </div>
-			</div>
-
-			<div class="cont-outer mincase apply">
                 <ul class="form-list ">
                     <li>
                         <div class="inp-outer-box"> <!-- 유효성체크 val-error -->
-                            <label for="inpName01_01">姓名 <span class="required">*</span></label>
-                            <div class="inp-group-box mo-full">
-                                <div class="inp-area">
-                                    <input type="text" id="inpName01_01" class="inp-item" placeholder="姓を入力してください。" value="木村">
-                                    <button class="inp-close"></button>
-                                </div>
-                                <div class="inp-area">
-                                    <input type="text" id="inpName01_02" class="inp-item" placeholder="名を入力してください。" value="拓哉">
-                                    <button class="inp-close"></button>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="error-msg lbl-type">error text</p>
-                    </li>
-                    <li>
-                        <div class="inp-outer-box">
-                            <label for="inpName02_01">姓名 (フリガナ) <span class="required">*</span></label>
-                            <div class="inp-group-box mo-full">
-                                <div class="inp-area">
-                                    <input type="text" id="inpName02_01" class="inp-item" placeholder="姓(フリガナ)を入力してください。" value="きむら">
-                                    <button class="inp-close"></button>
-                                </div>
-                                <div class="inp-area">
-                                    <input type="text" id="inpName02_02" class="inp-item" placeholder="名(フリガナ)を入力してください。" value="たくや">
-                                    <button class="inp-close"></button>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="error-msg lbl-type">error text</p>
-                    </li>
-                    <li>
-                        <div class="inp-outer-box">
-                            <label for="inpNum03_01">携帯電話</label>
+                            <label for="inpName01_01">携帯電話 <span class="required">*</span></label>
                             <div class="inp-slice-box">
                                 <div class="inp-area">
-                                    <input type="number" id="inpNum03_01" class="inp-item" placeholder="数字" value="010" disabled>
+                                    <input type="number" id="inpNum01_01" class="inp-item" placeholder="数字" value="">
                                     <button class="inp-close"></button>
                                 </div>
                                 <span class="inp-hpn">-</span>
                                 <div class="inp-area">
-                                    <input type="number" id="inpNum03_02" class="inp-item" placeholder="数字" value="0000" disabled>
+                                    <input type="number" id="inpNum01_02" class="inp-item" placeholder="数字" value="">
                                     <button class="inp-close"></button>
                                 </div>
                                 <span class="inp-hpn">-</span>
                                 <div class="inp-area">
-                                    <input type="number" id="inpNum03_03" class="inp-item" placeholder="数字" value="0000" disabled>
+                                    <input type="number" id="inpNum01_03" class="inp-item" placeholder="数字" value="">
                                     <button class="inp-close"></button>
                                 </div>
                             </div>
                         </div>
                         <p class="error-msg lbl-type">error text</p>
+                        <p class="noti-msg lbl-type">試乗予約の時に登録した携帯電話番号を入力してください。</p>
                     </li>
                     <li>
                         <div class="inp-outer-box">
-                            <label for="inpTxt01">E-mail</label>
-                            <div class="inp-area">
-                                <input type="text" id="inpTxt01" class="inp-item" placeholder="メールアドレスを入力してください" value="kimura@abc.com" disabled>
-                                <button class="inp-close"></button>
+                            <label for="inpName02_01">試乗予約番号 <span class="required">*</span></label>
+                            <div class="inp-slice-box">
+                                <div class="inp-area">
+                                    <input type="number" id="inpNum02_01" class="inp-item" placeholder="##桁の数字を入力してください。" value="">
+                                    <button class="inp-close"></button>
+                                </div>
                             </div>
                         </div>
                         <p class="error-msg lbl-type">error text</p>
+                        <p class="noti-msg lbl-type">試乗予約番号は確定通知のSMSでもご確認できます。</p>                        
                     </li>
                 </ul>
-                <ul class="caution">
-                    <li>申込者情報のお名前と運転免許証の情報が本人情報と異なる場合、ご試乗が制限される場合がございます。</li>
-                </ul>
+
                 <div class="cta-outer">
-                    <button class="btn"><span>戻る</span></button>
-                    <button class="btn btn-type2"><span>次へ</span></button>
+                    <button type="button" class="btn btn-type2"><span>顧客満足度アンケート</span></button>
                 </div>
 			</div>
 		</div>

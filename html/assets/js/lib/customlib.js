@@ -26,10 +26,6 @@ $(function () {
 	// $('#datepicker').datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
 	//To의 초기값을 내일로 설정
 	// $('#datepicker2').datepicker('setDate', '+1D'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-	$('#datePicker').datepicker({
-		minDate: '0'
-	});
 	
 	if ($('.sample-swiper-num01').length == 1) {
 		let swpOpt = {},
