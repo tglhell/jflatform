@@ -625,6 +625,12 @@
 .poll .data-form {
 	margin-top: 26px;
 }
+.poll .data-form.type2 {
+	margin-bottom: -20px;
+}
+.poll .data-form.type2 label{
+	margin-bottom:20px;
+}
 
 .layer-cont.pop-hold-car,
 .layer-cont.pop-location  {

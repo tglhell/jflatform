@@ -22,9 +22,10 @@ jQuery.event.add(window, 'load', function () {
 
 	$('.btn-menu').on('click', function () {
 		const bodyWid = $('body').width();
+		scrYPos = $(window).scrollTop();
 		$(this).toggleClass('active');
 		if ($(this).hasClass('active')) {
-			$('body').css({'overflow':'hidden', 'width':bodyWid});
+			$('body').css({'overflow':'hidden', 'width':bodyWid, 'position':'fixed', 'top':-scrYPos});
 			gnbInnerHgt();
 			gnbMenuBox.parent().fadeIn(secVal[3], function () {
 				gnbMenuBox.css('right', '0');
@@ -39,10 +40,11 @@ jQuery.event.add(window, 'load', function () {
 			if (!$(e.target).is(tarItem)) {
 				gnbMenuBox.css('right', '-250px');
 				gnbMenuBox.parent().find('.btn-menu-close').stop().animate({'right':'-100px'}, secVal[2]);
-				$('body').removeAttr('style');
 				setObj(function () {
 					gnbMenuBox.parent().removeClass('active').fadeOut(secVal[2]);
 					$('.btn-depth-switch').removeClass('active');
+					$('body').removeAttr('style');
+					$(window).scrollTop(scrYPos);
 				}, secVal[3]);
 				$('.btn-menu').removeClass('active');
 			}
@@ -119,29 +121,31 @@ jQuery.event.add(window, 'load', function () {
 					}
 				}
 			}
-			if (scrPos > 0) {
-				$('.btn-top-box').fadeIn(secVal[2]);
-				if ($(window).width() > tbl) {
-					headerOuter.addClass('scr-chk');
-				}
-			} else {
-				$('.btn-top-box').fadeOut(secVal[2]);
-				if ($(window).width() > tbl) {
-					headerOuter.removeClass('scr-chk');
-				}
-			}
-			if (scrPos > lastScrTopPos) {
-				headerOuter.addClass('header-fixed');
-				if ($(window).width() <= tbl) {
-					headerOuter.css('top', -headerFixHgt);
-					if (scrPos < headerFixHgt) {
-						headerOuter.attr('style', 'top: 0 !important;');
+			if (!$('.gnb-menu-outer').hasClass('active')) {
+				if (scrPos > $('.hmj-header').height()) {
+					$('.btn-top-box').fadeIn(secVal[2]);
+					if ($(window).width() > tbl) {
+						headerOuter.addClass('scr-chk');
+					}
+				} else {
+					$('.btn-top-box').fadeOut(secVal[2]);
+					if ($(window).width() > tbl) {
+						headerOuter.removeClass('scr-chk');
 					}
 				}
-			} else {
-				headerOuter.removeClass('header-fixed');
-				if ($(window).width() <= tbl) {
-					headerOuter.css('top', 0);
+				if (scrPos > lastScrTopPos) {
+					headerOuter.addClass('header-fixed');
+					if ($(window).width() <= tbl) {
+						headerOuter.css('top', -headerFixHgt);
+						if (scrPos < headerFixHgt) {
+							headerOuter.attr('style', 'top: 0 !important;');
+						}
+					}
+				} else {
+					headerOuter.removeClass('header-fixed');
+					if ($(window).width() <= tbl) {
+						headerOuter.css('top', 0);
+					}
 				}
 			}
 			lastScrTopPos = scrPos;
@@ -259,11 +263,11 @@ jQuery.event.add(window, 'load', function () {
 			}, 0);
 			setObj(function () {
 				popIdxHgt = popWrap.find(popCont).outerHeight(true);
-				if (hgtSize < popIdxHgt) {
+				if (hgtSize < popIdxHgt && popBottomHgt == 0) {
 					popCont.parent().css('height', 'auto');
 					popWrap.stop().animate({scrollTop:0}, secVal[2]);
 				}
-			}, secVal[4]);
+			}, secVal[5]);
 
 			$('.layer-popup-wrap').on('click', function (e) {
 				const _this = $(this).closest('.layer-popup-wrap');
@@ -321,7 +325,7 @@ jQuery.event.add(window, 'load', function () {
 	$('.layer-cont').on('touchstart', function (e) {
 		lastY = e.touches[0].clientY;
 	});
-	
+
 	$('.layer-cont').on('touchmove', function (e) {
 		let top = e.touches[0].clientY;
 		let scrollTop = $(e.currentTarget).scrollTop();
@@ -402,19 +406,16 @@ jQuery.event.add(window, 'load', function () {
 
 	function popAutoHgt () {
 		let popHeaderHgt = parseInt(popWrap.find('.layer-title').outerHeight(true));
-		let popBottomHgt = parseInt(popWrap.find('.bottom-fixed').outerHeight(true)) || 0;
-		if (popWrap.hasClass('mo-full') && $(window).width() <= tbl) {
-			popWrap.find('.layer-cont').css('height', $(window).height() - (popHeaderHgt + popBottomHgt));
-			if (popBottomHgt !== 0) { // mo - use bottom-fixed
-				popWrap.find('.layer-cont').css('padding-bottom', '0');
-			}
+		popBottomHgt = parseInt(popWrap.find('.bottom-fixed').outerHeight(true)) || 0;
+		//하단 고정일경우 .mo-full은 필수
+		if($(window).height() < popWrap.find('.layer-popup-cont').height() + 80 && popBottomHgt !== 0) { // PC에서 내용이 window보다 크고 하단고정일때
+			popWrap.addClass('fix-center');
+		}
+		if (popBottomHgt !== 0) { // 하단고정일때
+			popWrap.find('.layer-cont').css('height', popWrap.find('.layer-popup-cont').height() - (popHeaderHgt + popBottomHgt));
+			popWrap.find('.layer-cont').css('padding-bottom', '0');
 		} else {
-			if (popBottomHgt == 0) {
-				popWrap.find('.layer-cont').css('height', '100%');
-			} else { // pc - use bottom-fixed
-				popWrap.find('.layer-cont').css('height', $(window).height() - (popHeaderHgt + popBottomHgt));
-				popWrap.find('.layer-cont').css('padding-bottom', '0');
-			}
+			popWrap.find('.layer-cont').css('height', popWrap.find('.layer-popup-cont').height() - popHeaderHgt); //모든 팝업 기본 높이계산
 		}
 	}
 
