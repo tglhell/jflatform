@@ -57,13 +57,12 @@
 					let currentPos = videoItem[0].currentTime;
 					if (currentPos >= videoTimeArr[1]) {
 						videoItem.get(0).pause();
-						videoItem.off();
 						BtnMvControl.fadeIn(secVal[4]);
 					}
 				});
 			}, secVal[2]);
 
-			BtnMvControl.click(function () {
+			BtnMvControl.on('click', function () {
 				const tarText = $(this).find('span').text();
 				videoItem.off();
 				if (tarText == 'Go') {
