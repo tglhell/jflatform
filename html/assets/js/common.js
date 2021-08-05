@@ -101,6 +101,7 @@ jQuery.event.add(window, 'load', function () {
 	$(window).on('scroll resize orientationchange', function (e) {
 		const chkBtnPos = $('.scr-fix-btn');
 		const headerFixHgt = headerOuter.find('.header-cont').outerHeight(true) + irNum[0];
+		let topVal = parseInt($('body').css('top')) * -1;
 		scrPos = $(this).scrollTop();
 		if (e.type == 'scroll') {
 			if ($('.parallax-cont').length >= irNum[0]) {
@@ -122,7 +123,7 @@ jQuery.event.add(window, 'load', function () {
 				}
 			}
 			if (!$('.gnb-menu-outer').hasClass('active')) {
-				if (scrPos > 0) {
+				if (scrPos > 0 || topVal > 0) {
 					$('.btn-top-box').fadeIn(secVal[2]);
 					if ($(window).width() > tbl) {
 						headerOuter.addClass('scr-chk');

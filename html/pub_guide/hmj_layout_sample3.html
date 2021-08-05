@@ -180,6 +180,11 @@
 				height: 0;
 			}
 		}
+		@media screen and (max-width: 1119px) {
+			.hmj-container {
+				padding-top: 105px;
+			}
+		}
 		@media (orientation: landscape) {
 			.btn-depth-switch.active ~ .menu-inner-depth {
 				min-height: 600px;
@@ -249,6 +254,15 @@
 			<div class="gnb-menu-outer">
 				<div class="gnb-menu-box">
 					<ul class="gnb-menu-list ir-count inner-scroll-y">
+						<li class="ir-item mo-only">
+							<a href="#">IONIQ 5</a>
+						</li>
+						<li class="ir-item mo-only">
+							<a href="#">NEXO</a>
+						</li>
+						<li class="ir-item mo-only">
+							<a href="#">Virtual ShowRoom</a>
+						</li>
 						<li class="ir-item">
 							<button><span>ブランド</span></button>
 						</li>
@@ -429,6 +443,14 @@
 				</div>
 			</div>
 
+			<div class="gnb-mid-menu">
+				<ul class="mid-list">
+					<li><a href="#">IONIQ 5</a></li>
+					<li><a href="#">NEXO</a></li>
+					<li><a href="#">Virtual ShowRoom</a></li>
+				</ul>
+			</div>
+
 			<div class="gnb-right-menu">
 				<ul class="gnb-right-list">
 					<li>
@@ -584,7 +606,7 @@
 				<li><a href="#">MOCEAN</a></li>
 				<li class="mo-toggle">
 					<div class="item">
-						<a href="#" class="tit-btn">Purchase</a>
+						<button class="tit-btn">Purchase</button>
 						<ul class="cont">
 							<li><a href="#">온라인 구매방법 안내</a></li>
 							<li><a href="#">이달의 구매 혜택</a></li>
@@ -600,9 +622,9 @@
 						</ul>
 					</div>
 				</li>
-				<li>
+				<li class="mo-toggle">
 					<div class="item">
-						<a href="#" class="tit-btn">Service</a>
+						<button class="tit-btn">Service</button>
 						<ul class="cont">
 							<li><a href="#">서비스 네트워크</a></li>
 							<li><a href="#">충전소 안내</a></li>
@@ -617,9 +639,9 @@
 						</ul>
 					</div>
 				</li>
-				<li>
+				<li class="mo-toggle">
 					<div class="item">
-						<a href="#" class="tit-btn">Brand Story</a>
+						<button class="tit-btn">Brand Story</button>
 						<ul class="cont">
 							<li><a href="#">IONIQ 5</a></li>
 							<li><a href="#">IONIQ 5 Teasing</a></li>
