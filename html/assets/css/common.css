@@ -390,6 +390,9 @@ body {
 	padding: 0 6.25vw;
 	border-bottom: 1px solid #ccc;
 }
+.hmj-header.none-sub .header-cont {
+	border-bottom: 0;
+}
 .hmj-header h1 {
 	font-size: 14px;
 	line-height: 1;
@@ -693,15 +696,14 @@ body {
 	color: #fff;
 	text-align: left;
 }
-.hmj-footer .footer-top > ul li a:hover,
-.hmj-footer .footer-top > ul li .tit-btn:hover {
-	color: #1d80f0;
-}
 .hmj-footer .footer-top ul li .item .cont li {
 	margin-top: 5px;
 }
 .hmj-footer .footer-top ul li .item .cont a {
 	font-size: 12px;
+}
+.hmj-footer .footer-bottom {
+	min-height: 91px;
 }
 @media screen and (max-width: 1119px) {
 	.hmj-wrap.type2 .hmj-footer {
@@ -2018,18 +2020,10 @@ textarea:disabled {
 .tab-box-list li + li {
 	border-left: 0;
 }
-.tab-box-list li:hover a {
-	-webkit-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out;
-	background-color: rgba(244, 244, 244, .5);
-}
 .tab-box-list li.active a {
-	background-color: rgba(244, 244, 244, .8);
+	background-color: rgba(244, 244, 244, .9);
 	text-shadow: 0 2px 0 rgba(0, 0, 0, .2);
 	pointer-events: none;
-}
-.tab-box-list li.active a:focus {
-	background-color: rgba(244, 244, 244, .8);
 }
 .tab-box-cont {
 	-webkit-transition: all .5s ease-in-out;

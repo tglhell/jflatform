@@ -346,6 +346,15 @@ jQuery.event.add(window, 'load', function () {
 		chkBool = true;
 	});
 
+	function subContChk () {
+		if (headerOuter.find('.sub-cont').length !== 0) {
+			headerOuter.removeClass('none-sub');
+		} else {
+			headerOuter.addClass('none-sub');
+		}
+	}
+	subContChk();
+
 	function resChk () {
 		if ($(window).width() > tbl) {
 			//pc
