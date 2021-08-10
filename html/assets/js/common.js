@@ -125,27 +125,25 @@ jQuery.event.add(window, 'load', function () {
 			if (!$('.gnb-menu-outer').hasClass('active')) {
 				if (scrPos > 0 || topVal > 0) {
 					$('.btn-top-box').fadeIn(secVal[2]);
-					if ($(window).width() > tbl) {
-						headerOuter.addClass('scr-chk');
-					}
 				} else {
 					$('.btn-top-box').fadeOut(secVal[2]);
-					if ($(window).width() > tbl) {
-						headerOuter.removeClass('scr-chk');
-					}
 				}
-				if (scrPos > lastScrTopPos) {
-					headerOuter.addClass('header-fixed');
-					if ($(window).width() <= tbl) {
+				if ($('.sub-cont').length !== 0) {
+					if (scrPos > lastScrTopPos) {
+						headerOuter.addClass('header-fixed');
 						headerOuter.css('top', -headerFixHgt);
 						if (scrPos < headerFixHgt) {
 							headerOuter.attr('style', 'top: 0 !important;');
 						}
+					} else {
+						headerOuter.removeClass('header-fixed');
+						headerOuter.css('top', 0);
 					}
 				} else {
-					headerOuter.removeClass('header-fixed');
-					if ($(window).width() <= tbl) {
-						headerOuter.css('top', 0);
+					if (scrPos > lastScrTopPos) {
+						headerOuter.addClass('scr-chk');
+					} else {
+						headerOuter.removeClass('scr-chk');
 					}
 				}
 			}
@@ -272,7 +270,8 @@ jQuery.event.add(window, 'load', function () {
 
 			$('.layer-popup-wrap').on('click', function (e) {
 				const _this = $(this).closest('.layer-popup-wrap');
-				const tarItem = $('.layer-popup-cont > div, .layer-title, .layer-cont *:not(.btn-close *)');
+				const tarItem = $('.layer-popup-cont > div, .layer-title,'
+				 + '.layer-cont *:not(.btn-close *), .bottom-fixed *');
 				if (!$(e.target).is(tarItem)) {
 					if ($(this).scrollTop() !== 0) {
 						if (hgtSize < popIdxHgt) {
@@ -435,9 +434,9 @@ jQuery.event.add(window, 'load', function () {
 		let tabTarPos = (tabTarLeft + target.outerWidth() / irNum[1] + tabPdValue);
 		if (tabTarPos <= tabScrBoxHarf) {
 			tabScrPos = 0;
-		}else if (tabListWidth - tabTarPos <= tabScrBoxHarf) {
+		} else if (tabListWidth - tabTarPos <= tabScrBoxHarf) {
 			tabScrPos = tabListWidth - tabScrBox.width() + (tabPdValue * irNum[1]);
-		}else {
+		} else {
 			tabScrPos = tabTarPos - tabScrBoxHarf;
 		}
 		tabScrBox.stop().animate({scrollLeft:tabScrPos}, secVal[2]);

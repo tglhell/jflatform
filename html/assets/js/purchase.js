@@ -1,8 +1,8 @@
 jQuery.event.add(window, 'load', function () {
-    let listWrap = $('.list-wrap'),
-        btnListType = listWrap.find('.list-type button');
+    const listWrap = $('.list-wrap');
+    const btnListType = listWrap.find('.list-type button');
         
-    btnListType.on('click',function(){
+    btnListType.on('click', function () {
         btnListType.removeClass('on');
         $(this).addClass('on');
 
@@ -13,24 +13,20 @@ jQuery.event.add(window, 'load', function () {
             listWrap.removeClass('text');
             $(this).closest('.list-wrap').addClass('gallery');
         }
-    })
+    });
 
     function autoSize() {
-        let winWid =$( window).width();
-
-        if(winWid < 1119) {
+        if ($(window).width() <= tbl) {
             listWrap.removeClass('text').addClass('gallery');
             btnListType.removeClass('on');
             $('.type2').addClass('on');
         } 
     }
-
-    setTimeout(function(){
+    setTimeout(function () {
 		autoSize();
 	}, 0);
 
-    $(window).resize(function() {
+    $(window).resize(function () {
         autoSize();
-    })
-    
+    });
 })

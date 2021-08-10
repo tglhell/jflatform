@@ -10,8 +10,8 @@
 	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
 	<style>
 		.hmj-header {
-			-webkit-transition: top .4s ease-in-out;
-			transition: top .4s ease-in-out;
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
 			position: fixed;
 			top: 0;
 			left: 0;
@@ -159,26 +159,10 @@
 		.hmj-container {
 			padding-top: 241px;
 		}
-		@media screen and (min-width: 1120px) {
-			.hmj-header.scr-chk {
-				-webkit-transition: background-color .4s ease-in-out;
-				transition: background-color .4s ease-in-out;
-				background-color: rgba(255, 255, 255, .5);
-				border-bottom-color: transparent;
-			}
-			.hmj-header.scr-chk .header-cont {
-				border-bottom-color: transparent;
-			}
-			.hmj-header .sub-cont {
-				-webkit-transition: height .5s ease-in-out;
-				transition: height .5s ease-in-out;
-				overflow: hidden;
-			}
-			.hmj-header.scr-chk .sub-cont {
-				-webkit-transition: height .5s ease-in-out;
-				transition: height .5s ease-in-out;
-				height: 0;
-			}
+		.hmj-header.scr-chk {
+			-webkit-transition: background-color .4s ease-in-out;
+			transition: background-color .4s ease-in-out;
+			background-color: rgba(255, 255, 255, .5);
 		}
 		@media screen and (max-width: 1119px) {
 			.hmj-container {
@@ -475,7 +459,7 @@
 					</li>
 				</ul>
 			</div>
-		</div>		
+		</div>	
 		<div class="sub-cont">
 			<div class="history">
 				<span>HOME</span>
@@ -483,7 +467,7 @@
 			</div>
 			<button type="button" class="back-page">Back page</button>
 			<div class="page-title">Page Title</div>
-		</div>
+		</div>	
 		<!-- //header -->
 	</div>
 	<!--//header -->
@@ -599,11 +583,15 @@
 	<div class="hmj-footer">
 		<div class="footer-top">
 			<ul>
-				<li><a href="#">Virtual ShowRoom</a></li>
-				<li><a href="#">IONIQ 5</a></li>
-				<li><a href="#">NEXO</a></li>
-				<li><a href="#">브랜드 거점</a></li>
-				<li><a href="#">MOCEAN</a></li>
+				<li>
+					<ul>
+						<li><a href="#">Virtual ShowRoom</a></li>
+						<li><a href="#">IONIQ 5</a></li>
+						<li><a href="#">NEXO</a></li>
+						<li><a href="#">브랜드 거점</a></li>
+						<li><a href="#">MOCEAN</a></li>
+					</ul>
+				</li>
 				<li class="mo-toggle">
 					<div class="item">
 						<button class="tit-btn">Purchase</button>
@@ -653,11 +641,15 @@
 						</ul>
 					</div>
 				</li>
-				<li><a href="#">SHOP</a></li>
-				<li><a href="#">이벤트</a></li>
-				<li><a href="#">공지사항</a></li>
-				<li><a href="#">FAQ</a></li>
-				<li><a href="#">1:1 상담</a></li>
+				<li>
+					<ul>
+						<li><a href="#">SHOP</a></li>
+						<li><a href="#">이벤트</a></li>
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">1:1 상담</a></li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 		<div class="footer-bottom">

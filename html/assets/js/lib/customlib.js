@@ -69,8 +69,8 @@ $(function () {
 
 	//사양백과 리스트
 	if ($('.gallery-list1').length == 1) {
-		let swpOpt = {},
-		slideLength = $('.gallery-list1 .swiper-slide').length;
+		let swpOpt = {};
+		let slideLength = $('.gallery-list1 .swiper-slide').length;
 		if (slideLength == 1) {
 			swpOpt = {
 				allowSlidePrev: false,
@@ -98,18 +98,12 @@ $(function () {
 				observeParents: true,
 			}
 		}
-		let sampleSwp = new Swiper('.gallery-list1 .swiper-container', swpOpt);
-		
-		sampleSwp.on('reachEnd', function(){
-			setObj(function(){
-				$('.btn-close-popup').trigger('click');
-			}, secVal[4]);
-		});
+		let galleryList1 = new Swiper('.gallery-list1 .swiper-container', swpOpt);
 	}
 
 	if ($('.gallery-list2').length == 1) {
-		let swpOpt = {},
-		slideLength = $('.gallery-list2 .swiper-slide').length;
+		let swpOpt = {};
+		let slideLength = $('.gallery-list2 .swiper-slide').length;
 		if (slideLength == 1) {
 			swpOpt = {
 				allowSlidePrev: false,
@@ -137,19 +131,13 @@ $(function () {
 				observeParents: true,
 			}
 		}
-		let sampleSwp = new Swiper('.gallery-list2 .swiper-container', swpOpt);
-		
-		sampleSwp.on('reachEnd', function(){
-			setObj(function(){
-				$('.btn-close-popup').trigger('click');
-			}, secVal[4]);
-		});
+		let galleryList2 = new Swiper('.gallery-list2 .swiper-container', swpOpt);
 	}
 
 	//사양백과 팝업
 	if ($('.gallery-list3').length == 1) {
-		let swpOpt = {},
-		slideLength = $('.gallery-list3 .swiper-slide').length;
+		let swpOpt = {};
+		let slideLength = $('.gallery-list3 .swiper-slide').length;
 		if (slideLength == 1) {
 			swpOpt = {
 				allowSlidePrev: false,
@@ -177,12 +165,6 @@ $(function () {
 				observeParents: true,
 			}
 		}
-		let sampleSwp = new Swiper('.gallery-list3 .swiper-container', swpOpt);
-		
-		sampleSwp.on('reachEnd', function(){
-			setObj(function(){
-				$('.btn-close-popup').trigger('click');
-			}, secVal[4]);
-		});
+		let galleryList3 = new Swiper('.gallery-list3 .swiper-container', swpOpt);		
 	}
 });
