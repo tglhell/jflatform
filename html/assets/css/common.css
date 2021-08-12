@@ -100,6 +100,32 @@
 	unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 }
 
+/* new fonts initializing */
+@font-face {
+    font-family: 'HyundaiSansJP';
+    src: url(../fonts/HyundaiSansTextJP-Regular.eot);
+    src: url(../fonts/HyundaiSansTextJP-Regular.eot?#iefix) format('embedded-opentype'),
+        url(../fonts/HyundaiSansTextJP-Regular.woff2) format('woff2'),
+        url(../fonts/HyundaiSansTextJP-Regular.woff) format('woff');
+    font-weight: 40;
+}
+@font-face {
+    font-family: 'HyundaiSansJP';
+    src: url(../fonts/HyundaiSansHeadJP-Regular.eot);
+    src: url(../fonts/HyundaiSansHeadJP-Regular.eot?#iefix) format('embedded-opentype'),
+        url(../fonts/HyundaiSansHeadJP-Regular.woff2) format('woff2'),
+        url(../fonts/HyundaiSansHeadJP-Regular.woff) format('woff');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'HyundaiSansJP';
+    src: url(../fonts/HyundaiSansHeadJP-Medium.eot);
+    src: url(../fonts/HyundaiSansHeadJP-Medium.eot?#iefix) format('embedded-opentype'),
+        url(../fonts/HyundaiSansHeadJP-Medium.woff2) format('woff2'),
+        url(../fonts/HyundaiSansHeadJP-Medium.woff) format('woff');
+    font-weight: 500;
+}
+
 /* reset */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
 	display: block;
@@ -269,8 +295,9 @@ button, input, select, textarea {
 	font: inherit;
 }
 html, body {
-	font-family: 'HyundaiSansHeadOffice', 'Noto Sans JP', sans-serif;
+	font-family: 'HyundaiSansJP', sans-serif;
 	font-size: 14px;
+	font-weight: 400;
 	line-height: 1.4;
 	color: #000;
 	letter-spacing: normal;
@@ -318,9 +345,9 @@ body {
 	height: 1px;
 	margin-top: -1px;
 }
-.ie11 input, .ie11 select {
+/* .ie11 input, .ie11 select {
 	font-family: 'Noto Sans JP', 'HyundaiSansHeadOffice', sans-serif;
-}
+} */
 @media screen and (min-width: 768px) {
 	body::-webkit-scrollbar,
 	.layer-popup-wrap::-webkit-scrollbar,
@@ -766,9 +793,9 @@ body {
 }
 
 /* font type */
-.font-type2 {
+/* .font-type2 {
 	font-family: 'HyundaiSansTextOffice', 'Noto Sans JP', sans-serif;
-}
+} */
 
 /* font typeface */
 .hmj-subtitle {

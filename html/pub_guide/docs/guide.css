@@ -3,7 +3,7 @@ body{background:#fff;}
 * {list-style:none;padding:0;margin:0;text-decoration: none;}
 table {width:100%;border-spacing: 0;}
 br {color:transparent;}
-.header{position:relative;display:flex;justify-content: space-between;padding:20px;font-size:26px;height:auto; font-family: "wFontKrUL";color:#fff; background:#141414;}
+.header{position:relative;display:flex;justify-content: space-between;padding:20px;font-size:26px;height:auto; color:#fff; background:#141414;}
 .header > div {}
 .header em{color:#b9daff;}
 .header span{display:inline-block;vertical-align:top;float:right;}
@@ -76,7 +76,7 @@ header.guide_header h1 {font-size:24px; font-weight:normal; color:#304989; font-
 .cont_codGuide .coding_type div a.active{background:#888;}
 .cont_codGuide .tab:after{content: '';display: block;clear: both;overflow: hidden;}
 .cont_codGuide .tab{overflow:hidden; margin-bottom:30px;line-height:34px; border-bottom:3px solid #141414; border-top-left-radius:3px; }
-.cont_codGuide .tab a{float:left;padding:5px 25px;color:#fff;font-family: 'malgun gothic';font-size:16px;letter-spacing:-1px;background:#007fa8;}
+.cont_codGuide .tab a{float:left;padding:5px 25px;color:#fff;font-size:16px;letter-spacing:-1px;background:#007fa8;}
 .cont_codGuide .tab a:last-child{border-top-right-radius:3px;}
 .cont_codGuide .tab a.active{background:#141414; color:#fff;}
 .cont_codGuide .tab a + a{margin-left:1px;}
@@ -85,7 +85,7 @@ header.guide_header h1 {font-size:24px; font-weight:normal; color:#304989; font-
 .cont_codGuide .contents_infor .conIn_tip{line-height:20px; margin:20px 0 15px;font-weight:500;background:rgba(0, 170, 210, .1);border:1px dashed #00aad2;border-width:2px;padding:10px 15px;}
 .cont_codGuide .contents_infor .conIn_tip em{font-weight:bold; font-size:13px;}
 .cont_codGuide .contents_infor .step + .step{margin-top:15px;}
-.cont_codGuide .view_code {color:#000;display: block;font-size:12px}
+.cont_codGuide .view_code {color:#FFF;background-color:#111;padding:5px; display: block;font-size:12px}
 
 table.guide_list {border-top:1px solid #bbb;border-left:1px solid #bbb; color:#666;}
 table.guide_list tr:hover td{background:#fffad2!important;}
@@ -154,7 +154,7 @@ footer {margin-top:100px; text-align:center; padding:30px}
 
 
 /* Tree Styles */
-UL.jqueryFileTree {font-family: Verdana, sans-serif;font-size: 11px;line-height: 18px;padding: 0px;margin: 0px;}
+UL.jqueryFileTree {font-size: 11px;line-height: 18px;padding: 0px;margin: 0px;}
 UL.jqueryFileTree LI {list-style: none;padding: 0px;padding-left: 20px;margin: 0px;white-space: nowrap;}
 UL.jqueryFileTree A {color: #333;text-decoration: none;display: block;padding: 0px 2px;}
 UL.jqueryFileTree A:hover {	background: #BDF;}
