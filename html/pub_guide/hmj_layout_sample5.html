@@ -285,10 +285,10 @@
 				progressValue.css({'strokeDashoffset':dashoffset - circumference, 'transition-duration':(value / secVal[0]) * 1.2 + 's',
 				'transition-delay':(120 - value) / secVal[0] * 1.2 + 's'});
 				for (let i = 120; i >= dayCntNum; i--) {
-					$(function (x) {
+					$(function (number) {
 						setObj(function () {
 							progressNum.text((120 + dayCntNum) - i + '일');
-						}, 12 * x);
+						}, 12 * number);
 					}(i));
 				}
 			}
