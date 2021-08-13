@@ -279,7 +279,7 @@
 				let circumference = irNum[1] * Math.PI * radius;
 				let numVal = 40; //소비된 일수
 				let progress = numVal / day;
-				let dashoffset = circumference * (1 - progress) ;
+				let dashoffset = circumference * (irNum[0] - progress) ;
 				let dayCntNum = day - numVal;
 				for (let i = day; i >= dayCntNum; i--) {
 					$(function (count) {
