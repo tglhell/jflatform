@@ -204,10 +204,6 @@
 		.progress-value {
 			stroke-dasharray: 339.292;
 			stroke-dashoffset: 339.292;
-			animation-name:progress;
-			animation-iteration-count: 1;
-			animation-timing-function: linear;
-			animation-fill-mode: forwards;
 		}
 
 		.progress-meter,
@@ -219,19 +215,23 @@
 		}
 		
 		.progress-ing {
+			-webkit-transition: stroke-dashoffset 2.5s ease-in-out;
+			transition: stroke-dashoffset 2.5s ease-in-out;
+			-webkit-transition-delay: .5s;
+			transition-delay: .5s;
 			stroke: #0793ea;
 			stroke-linecap: round;
 		}
 
 		.progress-num {
-		position: absolute;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		top: 0;
-		text-align: center;
-		font-size: 24px;
-		line-height: 120px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			text-align: center;
+			font-size: 24px;
+			line-height: 120px;
 		}
 	</style>
 	<link rel="stylesheet" href="../assets/css/lib/swiper.min.css">
@@ -281,11 +281,11 @@
 			let CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
 			function progress(value) {
-				value = 20; //소비된 일수
+				value = 40; //소비된 일수
 				let progress = value / 120;
 				let dashoffset = CIRCUMFERENCE * (1 - progress) ;
 				progressNum.innerHTML = 120 - value +'일';
-				progressValue.style.strokeDashoffset = dashoffset + CIRCUMFERENCE;
+				progressValue.style.strokeDashoffset = dashoffset - CIRCUMFERENCE;
 			}
 
 			// control.addEventListener('input', function(event) {

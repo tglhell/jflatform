@@ -5,7 +5,7 @@ $(function () {
 		let scrPos = $(this).scrollTop();
 		const AniItem = $('.animate-num');
 		const numberInit = new Intl.NumberFormat();
-		$('.prx-scr').css('background-position-y', scrPos / 5);
+		$('.prx-scr').css('background-position-y', scrPos / 3);
 		if (!valChk) {
 			for (let i = 0; i < AniItem.length; i++ ) {
 				let thisTxt = AniItem.eq(i).text();
