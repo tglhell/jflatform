@@ -168,23 +168,6 @@
 		}
 	</style>
 	<style>
-		.scr-item {
-			-webkit-transition: top .5s ease-in-out;
-			transition: top .5s ease-in-out;
-			position: fixed;
-			top: 100%;
-			left: 0;
-			right: 0;
-			height: 100%;
-		}
-		.scr-item.active {
-			-webkit-transition: top .5s ease-in-out;
-			transition: top .5s ease-in-out;
-			top: 0;
-		}
-
-
-
 		.svg-outer-box {
 			position: relative;
 			width: 120px;
@@ -234,45 +217,7 @@
 	</style>
 	<link rel="stylesheet" href="../assets/css/lib/swiper.min.css">
     <link rel="stylesheet" href="../assets/css/lib/customlib.css">
-	<!-- <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script> -->
 	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
-	<!-- <script type="text/javascript" src="../assets/js/common.js"></script> -->
-	<!-- <script type="text/javascript" src="../assets/js/lib/swiper.min.js"></script> -->
-	<!-- <script>
-		$(function () {
-			function contAutoPadding () {
-				let headerHgt = $('.hmj-header').outerHeight(true);
-
-				$('.cont-outer').css('padding-top', headerHgt + 25);
-			}
-			contAutoPadding();
-
-			const scrItem = $('.scr-item');
-			scrItem.on('mousewheel DOMMouseScroll', function (e) {
-				let tScrIdx = $('.scr-item.active-idx').index();
-				if (!$('html, body').is(':animated')) {
-					if (e.originalEvent.wheelDelta < 0) {
-						$('html, body').stop().animate({'overflow':'visible'}, secVal[6]);
-						if (tScrIdx !== $(this.length)) {
-							scrItem.eq(tScrIdx + 1).addClass('active');
-							scrItem.eq(tScrIdx + 1).addClass('active-idx').siblings().removeClass('active-idx');
-						}
-						return false;
-					} else {
-						$('html, body').stop().animate({'overflow':'visible'}, secVal[6]);
-						if (tScrIdx !== 0) {
-							scrItem.eq(tScrIdx).removeClass('active');
-							scrItem.eq(tScrIdx - 1).addClass('active-idx').siblings().removeClass('active-idx');
-						}
-						return false;
-					}
-				} else {
-					e.stopPropagation();
-					return false;
-				}
-			});
-		});
-	</script> -->
 </head>
 
 <body>
@@ -287,198 +232,6 @@
 		<!-- header -->
 		<div class="header-cont">
 			<h1><a href="hmj_layout.html"><img src="../assets/images/common/img_header_logo.png" alt="Hyundai Logo"></a></h1>
-
-			<div class="gnb-menu-outer">
-				<div class="gnb-menu-box">
-					<ul class="gnb-menu-list ir-count inner-scroll-y">
-						<li class="ir-item mo-only">
-							<a href="#">IONIQ 5</a>
-						</li>
-						<li class="ir-item mo-only">
-							<a href="#">NEXO</a>
-						</li>
-						<li class="ir-item mo-only">
-							<a href="#">Virtual ShowRoom</a>
-						</li>
-						<li class="ir-item">
-							<button><span>ブランド</span></button>
-						</li>
-						<li class="ir-item">
-							<button class="btn-depth-switch"><span>IONIQ5 &gg;</span></button>
-							<div class="menu-inner-depth">
-								<button class="btn-depth-prev"><span>&ll; RETURN</span></button>
-								<ul class="ir-count inner-scroll-y">
-									<li class="ir-item">
-										<button><span>コンテンツ</span></button>
-									</li>
-									<li class="ir-item">
-										<button><span>コンテンツ</span></button>
-									</li>
-									<li class="ir-item">
-										<button class="btn-depth-switch"><span>サービス &gg;</span></button>
-										<div class="menu-inner-depth">
-											<button class="btn-depth-prev"><span>&ll; RETURN</span></button>
-											<ul class="ir-count inner-scroll-y">
-												<li class="ir-item">
-													<button><span>コンテンツ</span></button>
-												</li>
-												<li class="ir-item">
-													<button><span>コンテンツ</span></button>
-												</li>
-												<li class="ir-item">
-													<button><span>コンテンツ</span></button>
-												</li>
-												<li class="ir-item">
-													<button><span>コンテンツ</span></button>
-												</li>
-												<li class="ir-item">
-													<button><span>コンテンツ</span></button>
-												</li>
-												<li class="ir-item">
-													<button><span>コンテンツ</span></button>
-												</li>
-												<li class="ir-item">
-													<button><span>コンテンツ</span></button>
-												</li>
-												<li class="ir-item">
-													<button class="btn-depth-switch"><span>サービス &gg;</span></button>
-													<div class="menu-inner-depth">
-														<button class="btn-depth-prev"><span>&ll; RETURN</span></button>
-														<ul class="ir-count inner-scroll-y">
-															<li class="ir-item">
-																<button class="btn-depth-switch"><span>サービス &gg;</span></button>
-																<div class="menu-inner-depth">
-																	<button class="btn-depth-prev"><span>&ll; RETURN</span></button>
-																	<ul class="ir-count inner-scroll-y">
-																		<li class="ir-item">
-																			<button><span>コンテンツ</span></button>
-																		</li>
-																		<li class="ir-item">
-																			<button><span>コンテンツ</span></button>
-																		</li>
-																		<li class="ir-item">
-																			<button><span>コンテンツ</span></button>
-																		</li>
-																		<li class="ir-item">
-																			<button><span>コンテンツ</span></button>
-																		</li>
-																	</ul>
-																</div>
-															</li>
-															<li class="ir-item">
-																<button><span>コンテンツ</span></button>
-															</li>
-															<li class="ir-item">
-																<button><span>コンテンツ</span></button>
-															</li>
-															<li class="ir-item">
-																<button><span>コンテンツ</span></button>
-															</li>
-														</ul>
-													</div>
-												</li>
-												<li class="ir-item">
-													<button><span>コンテンツ</span></button>
-												</li>
-												<li class="ir-item">
-													<button><span>コンテンツ</span></button>
-												</li>
-											</ul>
-										</div>
-									</li>
-									<li class="ir-item">
-										<button><span>コンテンツ</span></button>
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li class="ir-item">
-							<button><span>NEXO</span></button>
-						</li>
-						<li class="ir-item">
-							<button><span>購買</span></button>
-						</li>
-						<li class="ir-item">
-							<button class="btn-depth-switch"><span>サービス &gg;</span></button>
-							<div class="menu-inner-depth">
-								<button class="btn-depth-prev"><span>&ll; RETURN</span></button>
-								<ul class="ir-count inner-scroll-y">
-									<li class="ir-item">
-										<button><span>購買</span></button>
-									</li>
-									<li class="ir-item">
-										<button><span>購買</span></button>
-									</li>
-									<li class="ir-item">
-										<button class="btn-depth-switch"><span>サービス &gg;</span></button>
-										<div class="menu-inner-depth">
-											<button class="btn-depth-prev"><span>&ll; RETURN</span></button>
-											<ul class="ir-count inner-scroll-y">
-												<li class="ir-item">
-													<button><span>購買</span></button>
-												</li>
-												<li class="ir-item">
-													<button class="btn-depth-switch"><span>サービス &gg;</span></button>
-													<div class="menu-inner-depth">
-														<button class="btn-depth-prev"><span>&ll; RETURN</span></button>
-														<ul class="ir-count inner-scroll-y">
-															<li class="ir-item">
-																<button class="btn-depth-switch"><span>サービス &gg;</span></button>
-																<div class="menu-inner-depth">
-																	<button class="btn-depth-prev"><span>&ll; RETURN</span></button>
-																	<ul class="ir-count inner-scroll-y">
-																		<li class="ir-item">
-																			<button><span>購買</span></button>
-																		</li>
-																		<li class="ir-item">
-																			<button><span>購買</span></button>
-																		</li>
-																		<li class="ir-item">
-																			<button><span>購買</span></button>
-																		</li>
-																		<li class="ir-item">
-																			<button><span>購買</span></button>
-																		</li>
-																	</ul>
-																</div>
-															</li>
-															<li class="ir-item">
-																<button><span>購買</span></button>
-															</li>
-															<li class="ir-item">
-																<button><span>購買</span></button>
-															</li>
-															<li class="ir-item">
-																<button><span>購買</span></button>
-															</li>
-														</ul>
-													</div>
-												</li>
-												<li class="ir-item">
-													<button><span>購買</span></button>
-												</li>
-												<li class="ir-item">
-													<button><span>購買</span></button>
-												</li>
-											</ul>
-										</div>
-									</li>
-									<li class="ir-item">
-										<button><span>購買</span></button>
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li class="ir-item">
-							<button><span>コンテンツ</span></button>
-						</li>
-						<li class="ir-item">
-							<button><span>ストア</span></button>
-						</li>
-					</ul>
-					<button class="btn-menu-close"><span>close</span></button>
-				</div>
-			</div>
 
 			<div class="gnb-mid-menu">
 				<ul class="mid-list">
@@ -520,7 +273,7 @@
 	<!-- container -->
 	<div id="hmjContainer" class="hmj-container"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
 		<div class="hmj-content">
-			<div class="cont-outer fullcase scr-item active active-idx" style="padding-top: 126px;">
+			<div class="cont-outer fullcase" style="padding-top: 126px;">
 				<div class="main-outer">
 					<div class="svg-outer-box">
 						<svg class="progress" width="120" height="120" viewbox="0 0 120 120">
@@ -532,104 +285,12 @@
 					</div>
 				</div>
 			</div>
-
-			<div class="scr-item">
-				<div class="swiper-outer-box sample-swiper-num01">
-					<div class="swiper-container">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<img src="../assets/images/@img_scroll_sample01.jpg" alt="sample01">
-							</div>
-							<div class="swiper-slide">
-								<img src="../assets/images/@img_scroll_sample02.jpg" alt="sample02">
-							</div>
-							<div class="swiper-slide">
-								<img src="../assets/images/@img_scroll_sample03.jpg" alt="sample03">
-							</div>
-							<div class="swiper-slide">
-								<img src="../assets/images/@img_scroll_sample04.jpg" alt="sample04">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 	<!--//container -->
 
 	<!-- footer -->
-	<div class="hmj-footer" style="display: none;">
-		<div class="footer-top">
-			<ul>
-				<li>
-					<ul>
-						<li><a href="#">Virtual ShowRoom</a></li>
-						<li><a href="#">IONIQ 5</a></li>
-						<li><a href="#">NEXO</a></li>
-						<li><a href="#">브랜드 거점</a></li>
-						<li><a href="#">MOCEAN</a></li>
-					</ul>
-				</li>
-				<li class="mo-toggle">
-					<div class="item">
-						<button class="tit-btn">Purchase</button>
-						<ul class="cont">
-							<li><a href="#">온라인 구매방법 안내</a></li>
-							<li><a href="#">이달의 구매 혜택</a></li>
-							<li><a href="#">정부보조금 정책</a></li>
-							<li><a href="#">온라인 계약</a></li>
-							<li><a href="#">견적내기</a></li>
-							<li><a href="#">테스트 드라이브</a></li>
-							<li><a href="#">구매상담 신청</a></li>
-							<li><a href="#">사양백과</a></li>
-							<li><a href="#">카탈로그 다운로드</a></li>
-							<li><a href="#">가격표 다운로드</a></li>
-							<li><a href="#">Referral code 이용안내</a></li>
-						</ul>
-					</div>
-				</li>
-				<li class="mo-toggle">
-					<div class="item">
-						<button class="tit-btn">Service</button>
-						<ul class="cont">
-							<li><a href="#">서비스 네트워크</a></li>
-							<li><a href="#">충전소 안내</a></li>
-							<li><a href="#">긴급출동서비스</a></li>
-							<li><a href="#">정비예약</a></li>
-							<li><a href="#">리콜정보</a></li>
-							<li><a href="#">BLUELINK</a></li>
-							<li><a href="#">빌트인캠</a></li>
-							<li><a href="#">네비게이션/빌트인캠 업데이트</a></li>
-							<li><a href="#">제휴 서비스</a></li>
-							<li><a href="#">앱 설치 안내</a></li>
-						</ul>
-					</div>
-				</li>
-				<li class="mo-toggle">
-					<div class="item">
-						<button class="tit-btn">Brand Story</button>
-						<ul class="cont">
-							<li><a href="#">IONIQ 5</a></li>
-							<li><a href="#">IONIQ 5 Teasing</a></li>
-							<li><a href="#">Mini 45EV</a></li>
-							<li><a href="#">IONIQ</a></li>
-							<li><a href="#">Hyundai X BTS</a></li>
-							<li><a href="#">#Thisisus</a></li>
-							<li><a href="#">Hyundai X BBC</a></li>
-						</ul>
-					</div>
-				</li>
-				<li>
-					<ul>
-						<li><a href="#">SHOP</a></li>
-						<li><a href="#">이벤트</a></li>
-						<li><a href="#">공지사항</a></li>
-						<li><a href="#">FAQ</a></li>
-						<li><a href="#">1:1 상담</a></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
+	<div class="hmj-footer" style="display:none;">
 		<div class="footer-bottom">
 			<img src="../assets/images/@footer.jpg" alt="footer">
 		</div>
@@ -650,47 +311,11 @@
 </div>
 
 <div class="btn-top-box">
-	<button title="active side menu" role="button" class="btn-side-menu">
-		<span>Side</span>
-	</button>
 	<button title="move to top" role="button" class="btn-top">
 		<span class="blind">Top</span>
 	</button>
 </div>
 </body>
-<!-- <script>
-	$(function(){
-		if ($('.sample-swiper-num01').length == 1) {
-			let swpOpt = {},
-			slideLength = $('.sample-swiper-num01 .swiper-slide').length;
-			if (slideLength == 1) {
-				swpOpt = {
-					allowSlidePrev: false,
-					allowSlideNext: false,
-					simulateTouch: false
-				}
-			} else {
-				swpOpt = {
-					navigation: {
-						nextEl: '.sample-swiper-num01 .swiper-button-next',
-						prevEl: '.sample-swiper-num01 .swiper-button-prev',
-					},
-					freeMode: true,
-					mousewheel: {
-						releaseOnEdges: true,
-					},
-					simulateTouch: true,
-					speed: 300,
-					loop: false,
-					spaceBetween: 0,
-					observer: true,
-					observeParents: true,
-				}
-			}
-			let sampleSwp = new Swiper('.sample-swiper-num01 .swiper-container', swpOpt);
-		}
-	});
-</script> -->
 <script>
 	let value = 75; //소비된 일수
 	function progress() {
