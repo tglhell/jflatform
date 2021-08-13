@@ -169,8 +169,8 @@
 	</style>
 	<style>
 		.scr-item {
-			-webkit-transition: all .5s ease-in-out;
-			transition: all .5s ease-in-out;
+			-webkit-transition: top .5s ease-in-out;
+			transition: top .5s ease-in-out;
 			position: fixed;
 			top: 100%;
 			left: 0;
@@ -178,8 +178,8 @@
 			height: 100%;
 		}
 		.scr-item.active {
-			-webkit-transition: all .5s ease-in-out;
-			transition: all .5s ease-in-out;
+			-webkit-transition: top .5s ease-in-out;
+			transition: top .5s ease-in-out;
 			top: 0;
 		}
 
@@ -234,11 +234,11 @@
 	</style>
 	<link rel="stylesheet" href="../assets/css/lib/swiper.min.css">
     <link rel="stylesheet" href="../assets/css/lib/customlib.css">
-	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+	<!-- <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script> -->
 	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
-	<script type="text/javascript" src="../assets/js/common.js"></script>
-	<script type="text/javascript" src="../assets/js/lib/swiper.min.js"></script>
-	<script>
+	<!-- <script type="text/javascript" src="../assets/js/common.js"></script> -->
+	<!-- <script type="text/javascript" src="../assets/js/lib/swiper.min.js"></script> -->
+	<!-- <script>
 		$(function () {
 			function contAutoPadding () {
 				let headerHgt = $('.hmj-header').outerHeight(true);
@@ -271,37 +271,8 @@
 					return false;
 				}
 			});
-
-			// const control = document.querySelector('.control');
-			const progressValue = $('.progress-ing');
-			const progressNum = $('.progress-num');
-			let radius = 54;
-			let circumference = 2 * Math.PI * radius;
-
-			function progress(value) {
-				value = 40; //소비된 일수
-				let progress = value / 120;
-				let dashoffset = circumference * (1 - progress) ;
-				let dayCountNum = 120 - value;
-				// progressValue.style.strokeDashoffset = dashoffset - circumference;
-				progressValue.css('strokeDashoffset', dashoffset - circumference);
-				
-				progressNum.css('transition-delay', 120 - value * .1)
-				for (let i = 120; i >= dayCountNum; i--) {
-					$(function (x) {
-						setObj(function () {
-							progressNum.text((120 + dayCountNum) - i + '일');
-						}, 22 * x);
-						console.log(x);
-					}(i));
-				}
-			}
-
-			// progressValue.style.strokeDasharray = circumference;
-			progressValue.css('strokeDasharray', circumference);
-			progress();
 		});
-	</script>
+	</script> -->
 </head>
 
 <body>
@@ -549,7 +520,7 @@
 	<!-- container -->
 	<div id="hmjContainer" class="hmj-container"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
 		<div class="hmj-content">
-			<div class="cont-outer fullcase scr-item active active-idx">
+			<div class="cont-outer fullcase scr-item active active-idx" style="padding-top: 126px;">
 				<div class="main-outer">
 					<div class="svg-outer-box">
 						<svg class="progress" width="120" height="120" viewbox="0 0 120 120">
@@ -687,7 +658,7 @@
 	</button>
 </div>
 </body>
-<script>
+<!-- <script>
 	$(function(){
 		if ($('.sample-swiper-num01').length == 1) {
 			let swpOpt = {},
@@ -719,5 +690,35 @@
 			let sampleSwp = new Swiper('.sample-swiper-num01 .swiper-container', swpOpt);
 		}
 	});
+</script> -->
+<script>
+	let value = 75; //소비된 일수
+	function progress() {
+		const control = document.querySelector('.control');
+		const progressValue = document.querySelector('.progress-ing');
+		const progressNum = document.querySelector('.progress-num');
+		let circumference = irNum[1] * Math.PI * radius;
+		let progress = value / day;
+		let dashoffset = circumference * (irNum[0] - progress) ;
+		let dayCntNum = day - value;
+		for (let i = day; i >= dayCntNum; i--) {
+			let count = function (count) {
+				setTimeout(function () {
+					progressNum.innerHTML = ((day + dayCntNum) - i + '일');
+				}, (decimalVal * twoDig[0]) * count);
+			}(i);
+		}
+		progressValue.style.strokeDasharray = circumference;
+		progressValue.style.strokeDashoffset = dashoffset - circumference;
+		progressValue.style.transitionDuration = (value / secVal[0]) * decimalVal + 's';
+		progressValue.style.transitionDelay = (day - value) / secVal[0] * decimalVal + 's';
+	}
+	if (value > twoDig[5]) {
+		setTimeout(function () {
+			progress();
+		}, secVal[4]);
+	} else {
+		progress();
+	}
 </script>
 </html>
