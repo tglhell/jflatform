@@ -169,8 +169,8 @@
 	</style>
 	<style>
 		.scr-item {
-			-webkit-transition: top .5s ease-in-out;
-			transition: top .5s ease-in-out;
+			-webkit-transition: all .5s ease-in-out;
+			transition: all .5s ease-in-out;
 			position: fixed;
 			top: 100%;
 			left: 0;
@@ -178,8 +178,8 @@
 			height: 100%;
 		}
 		.scr-item.active {
-			-webkit-transition: top .5s ease-in-out;
-			transition: top .5s ease-in-out;
+			-webkit-transition: all .5s ease-in-out;
+			transition: all .5s ease-in-out;
 			top: 0;
 		}
 
@@ -272,6 +272,7 @@
 				}
 			});
 
+			// const control = document.querySelector('.control');
 			const progressValue = $('.progress-ing');
 			const progressNum = $('.progress-num');
 			let radius = 54;
@@ -281,17 +282,22 @@
 				value = 40; //소비된 일수
 				let progress = value / 120;
 				let dashoffset = circumference * (1 - progress) ;
-				let dayCntNum = 120 - value;
-				progressValue.css({'strokeDashoffset':dashoffset - circumference, 'transition-duration':(value / secVal[0]) * 1.2 + 's',
-				'transition-delay':(120 - value) / secVal[0] * 1.2 + 's'});
-				for (let i = 120; i >= dayCntNum; i--) {
+				let dayCountNum = 120 - value;
+				// progressValue.style.strokeDashoffset = dashoffset - circumference;
+				progressValue.css('strokeDashoffset', dashoffset - circumference);
+				
+				progressNum.css('transition-delay', 120 - value * .1)
+				for (let i = 120; i >= dayCountNum; i--) {
 					$(function (x) {
 						setObj(function () {
-							progressNum.text((120 + dayCntNum) - i + '일');
-						}, 12 * x);
+							progressNum.text((120 + dayCountNum) - i + '일');
+						}, 22 * x);
+						console.log(x);
 					}(i));
 				}
 			}
+
+			// progressValue.style.strokeDasharray = circumference;
 			progressValue.css('strokeDasharray', circumference);
 			progress();
 		});
