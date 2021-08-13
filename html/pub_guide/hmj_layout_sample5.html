@@ -272,26 +272,25 @@
 				}
 			});
 
-			const progressValue = $('.progress-ing');
-			const progressNum = $('.progress-num');
-			let circumference = 2 * Math.PI * radius;
-
-			function progress(value) {
-				value = 40; //소비된 일수
-				let progress = value / day;
+			
+			function progress() {
+				const progressIng = $('.progress-ing');
+				const progressNum = $('.progress-num');
+				let circumference = irNum[1] * Math.PI * radius;
+				let numVal = 40; //소비된 일수
+				let progress = numVal / day;
 				let dashoffset = circumference * (1 - progress) ;
-				let dayCntNum = day - value;
-				progressValue.css({'strokeDashoffset':dashoffset - circumference, 'transition-duration':(value / secVal[0]) * 1.2 + 's',
-				'transition-delay':(day - value) / secVal[0] * 1.2 + 's'});
+				let dayCntNum = day - numVal;
 				for (let i = day; i >= dayCntNum; i--) {
 					$(function (count) {
 						setObj(function () {
 							progressNum.text((day + dayCntNum) - i + '일');
-						}, 12 * count);
+						}, (decimalVal * twoDig[0]) * count);
 					}(i));
 				}
+				progressIng.css({'strokeDashoffset':dashoffset - circumference, 'strokeDasharray':circumference,
+				'transition-duration':(numVal / secVal[0]) * decimalVal + 's', 'transition-delay':(day - numVal) / secVal[0] * decimalVal + 's'});
 			}
-			progressValue.css('strokeDasharray', circumference);
 			progress();
 		});
 	</script>

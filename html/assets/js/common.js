@@ -85,7 +85,7 @@ jQuery.event.add(window, 'load', function () {
 		for (let i = 0; i <= irLeng; i++) {
 			$(this).find('> .ir-item').eq(i).css('transition-delay', '.' + i + 's');
 			if (i > irNum[8]) {
-				$(this).find('> .ir-item').eq(i).css('transition-delay', i * decimalVal + 's');
+				$(this).find('> .ir-item').eq(i).css('transition-delay', i / twoDig[0] + 's');
 			}
 		}
 	});

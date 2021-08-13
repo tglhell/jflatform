@@ -7,7 +7,7 @@ tbl = 1119;
 mo = 767;
 
 // initializing value
-decimalVal = .1;
+decimalVal = 1.2;
 lastY = 0;
 lastScrTopPos = 0;
 radius = 54;
