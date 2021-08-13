@@ -274,21 +274,20 @@
 
 			const progressValue = $('.progress-ing');
 			const progressNum = $('.progress-num');
-			let radius = 54;
 			let circumference = 2 * Math.PI * radius;
 
 			function progress(value) {
 				value = 40; //소비된 일수
-				let progress = value / 120;
+				let progress = value / day;
 				let dashoffset = circumference * (1 - progress) ;
-				let dayCntNum = 120 - value;
+				let dayCntNum = day - value;
 				progressValue.css({'strokeDashoffset':dashoffset - circumference, 'transition-duration':(value / secVal[0]) * 1.2 + 's',
-				'transition-delay':(120 - value) / secVal[0] * 1.2 + 's'});
-				for (let i = 120; i >= dayCntNum; i--) {
-					$(function (number) {
+				'transition-delay':(day - value) / secVal[0] * 1.2 + 's'});
+				for (let i = day; i >= dayCntNum; i--) {
+					$(function (count) {
 						setObj(function () {
-							progressNum.text((120 + dayCntNum) - i + '일');
-						}, 12 * number);
+							progressNum.text((day + dayCntNum) - i + '일');
+						}, 12 * count);
 					}(i));
 				}
 			}

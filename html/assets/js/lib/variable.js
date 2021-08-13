@@ -10,6 +10,8 @@ mo = 767;
 decimalVal = .1;
 lastY = 0;
 lastScrTopPos = 0;
+radius = 54;
+day = 120;
 
 // number value
 secVal = [100, 200, 300, 400, 500, 600, 700, 800, 900];
