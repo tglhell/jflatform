@@ -324,7 +324,7 @@
 		const progressNum = document.querySelector('.progress-num');
 		let circumference = irNum[1] * Math.PI * radius;
 		let progress = value / day;
-		let dashoffset = circumference * (irNum[0] - progress) ;
+		let dashoffset = circumference * (irNum[0] - progress);
 		let dayCntNum = day - value;
 		for (let i = day; i >= dayCntNum; i--) {
 			let count = function (count) {
