@@ -12,6 +12,7 @@ lastY = 0;
 lastScrTopPos = 0;
 radius = 140;
 day = 120;
+mSecond = 1000;
 
 // number value
 secVal = [100, 200, 300, 400, 500, 600, 700, 800, 900];

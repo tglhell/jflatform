@@ -187,8 +187,8 @@
 
 		.svg-outer-box {
 			position: relative;
-			width: 300px;
-			height: 300px;
+			width: 320px;
+			height: 320px;
 			margin: 0 120px;
 		}
 
@@ -209,14 +209,14 @@
 		.progress-meter,
 		.progress-ing {
 			fill: none;
+			-webkit-filter: drop-shadow( 1px 3px 2px rgba(0, 0, 0, .7));
+			filter: drop-shadow( 1px 3px 2px rgba(0, 0, 0, .7));
 		}
 		.progress-meter {
 			stroke: #e9e9e9;
 		}
 		
 		.progress-ing {
-			-webkit-transition: stroke-dashoffset 2s linear;
-			transition: stroke-dashoffset 2s linear;
 			stroke: #0793ea;
 			stroke-linecap: round;
 		}
@@ -229,7 +229,7 @@
 			top: 0;
 			text-align: center;
 			font-size: 40px;
-			line-height: 300px;
+			line-height: 320px;
 		}
 		/* https://snippet-generator.app/ */
 	</style>
@@ -282,14 +282,16 @@
 				let dashoffset = circumference * (irNum[0] - progress);
 				let dayCntNum = day - numVal;
 				for (let i = day; i >= dayCntNum; i--) {
-					$(function (count) {
+					$(function (i) {
 						setObj(function () {
 							progressNum.text((day + dayCntNum) - i + '일');
-						}, (decimalVal * twoDig[0]) * count);
+						}, (decimalVal * twoDig[0]) * i);
 					}(i));
 				}
-				progressIng.css({'strokeDashoffset':dashoffset - circumference, 'strokeDasharray':circumference,
-				'transition-duration':(numVal / secVal[0]) * decimalVal + 's', 'transition-delay':(day - numVal) / secVal[0] * decimalVal + 's'});
+				progressIng.css({'strokeDasharray':circumference});
+				setObj(function () {
+					progressIng.animate({'stroke-dashoffset':dashoffset - circumference}, ((numVal / secVal[0]) * decimalVal) * mSecond);
+				}, ((day - numVal) / secVal[0] * decimalVal) * mSecond);
 			}
 			if (numVal > twoDig[5]) {
 				setObj(function () {
@@ -550,9 +552,9 @@
 			<div class="cont-outer fullcase scr-item active active-idx">
 				<div class="main-outer">
 					<div class="svg-outer-box">
-						<svg class="progress" width="300" height="300" viewbox="0 0 300 300">
-							<circle class="progress-meter" cx="150" cy="150" r="140" stroke-width="13" />
-							<circle class="progress-ing" cx="150" cy="150" r="140" stroke-width="14" />
+						<svg class="progress" width="320" height="320" viewbox="0 0 320 320">
+							<circle class="progress-meter" cx="160" cy="160" r="140" stroke-width="13" />
+							<circle class="progress-ing" cx="160" cy="160" r="140" stroke-width="14" />
 						</svg>
 						<!-- <input id="control" type="range" value="0" min="0" max="120" /> -->
 						<strong class="progress-num">120일</strong>
