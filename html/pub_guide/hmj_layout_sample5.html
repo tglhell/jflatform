@@ -281,7 +281,7 @@
 						}, (decimalVal * twoDig[0]) * i);
 					}(i));
 				}
-				progressIng.css({'strokeDasharray':circumference});
+				progressIng.css({'stroke-dasharray':circumference});
 				setObj(function () {
 					progressIng.animate({'stroke-dashoffset':dashoffset - circumference}, ((numVal / secVal[0]) * decimalVal) * mSecond);
 				}, ((day - numVal) / secVal[0] * decimalVal) * mSecond);
