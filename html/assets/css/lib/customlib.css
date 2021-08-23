@@ -234,3 +234,28 @@ a.ui-button:active,
 .sample-swiper-num02 img {
     width: 100%;
 }
+
+
+/* Shop Main */
+.shop-visual {
+    width: 100%;
+    max-width: 1920px;
+    min-width: 1120px;
+}
+.shop-visual .swiper-slide {
+    text-align: center;
+    height: 700px;
+    width: 100%;
+}
+.shop-visual .swiper-slide img {
+    -o-object-fit: cover;
+    object-fit: cover;    
+    max-width: 100%;
+    height: 100%;
+}
+.shop-visual .swiper-button-prev {
+	left: 0;
+}
+.shop-visual .swiper-button-next {
+	right: 0;
+}

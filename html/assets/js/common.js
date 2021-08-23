@@ -581,6 +581,7 @@ jQuery.event.add(window, 'load', function () {
 	function toggle(){
 		$('.toggle').off()
 		$('.toggle .cont').slideUp(0);
+		$('.toggle .active .cont').slideDown(0);
 		$('.toggle').on('click', '.tit-btn' ,function(){
 			var toggleItem = $(this).parent('.item');
 			if(toggleItem.hasClass('active')) {
@@ -597,7 +598,6 @@ jQuery.event.add(window, 'load', function () {
 	//moToggle 
 	function moToggle(){
 		$('.mo-toggle').off()
-		// $('.mo-toggle .cont').slideUp(0);
 		$('.mo-toggle').on('click', '.tit-btn' ,function(){
 			var toggleItem = $(this).parent('.item');
 			if(toggleItem.hasClass('active')) {

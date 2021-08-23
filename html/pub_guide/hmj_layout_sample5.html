@@ -187,13 +187,17 @@
 
 		.svg-outer-box {
 			position: relative;
-			width: 320px;
-			height: 320px;
-			margin: 0 120px;
+			width: 300px;
+			height: 300px;
+			margin: 0 40px;
 		}
 		.progress {
 			-webkit-transform: rotate(-90deg);
 			transform: rotate(-90deg);
+		}
+		.ios .progress {
+			-webkit-transform: rotate(-90deg) scaleY(-1);
+			transform: rotate(-90deg) scaleY(-1);
 		}
 		.ie11 .progress {
 			-webkit-transform: rotate(90deg);
@@ -202,16 +206,19 @@
 		.progress-meter,
 		.progress-ing {
 			fill: none;
-			/* -webkit-filter: drop-shadow( 1px 3px 2px rgba(0, 0, 0, .7));
-			filter: drop-shadow( 1px 3px 2px rgba(0, 0, 0, .7)); */
 		}
 		.progress-meter {
 			stroke: #e9e9e9;
 		}
-		
 		.progress-ing {
 			stroke: #0793ea;
 			stroke-linecap: round;
+			-webkit-filter: drop-shadow( 1px 3px 2px rgba(255, 255, 255, 1));
+			filter: drop-shadow( 1px 3px 2px rgba(255, 255, 255, 1));
+		}
+		.ios .progress-ing {
+			stroke-dasharray: 879.646px;
+			stroke-dashoffset: 0px;
 		}
 
 		.progress-num {
@@ -222,7 +229,7 @@
 			top: 0;
 			text-align: center;
 			font-size: 40px;
-			line-height: 320px;
+			line-height: 300px;
 		}
 		/* https://snippet-generator.app/ */
 	</style>
@@ -277,13 +284,17 @@
 				for (let i = day; i >= dayCntNum; i--) {
 					$(function (i) {
 						setObj(function () {
-							progressNum.text((day + dayCntNum) - i + '일');
+							progressNum.text((day + dayCntNum) - i + '日');
 						}, (decimalVal * twoDig[0]) * i);
 					}(i));
 				}
 				progressIng.css({'strokeDasharray':circumference});
 				setObj(function () {
-					progressIng.animate({'stroke-dashoffset':dashoffset - circumference}, ((numVal / secVal[0]) * decimalVal) * mSecond);
+					if (!$('html').hasClass('ios')) {
+						progressIng.animate({'stroke-dashoffset':dashoffset - circumference}, ((numVal / secVal[0]) * decimalVal) * mSecond);
+					} else {
+						progressIng.animate({'stroke-dashoffset':circumference - dashoffset}, ((numVal / secVal[0]) * decimalVal) * mSecond);
+					}
 				}, ((day - numVal) / secVal[0] * decimalVal) * mSecond);
 			}
 			if (numVal > twoDig[5]) {
@@ -545,12 +556,12 @@
 			<div class="cont-outer fullcase scr-item active active-idx">
 				<div class="main-outer">
 					<div class="svg-outer-box">
-						<svg class="progress" width="320" height="320" viewbox="0 0 320 320">
-							<circle class="progress-meter" cx="160" cy="160" r="140" stroke-width="13" />
-							<circle class="progress-ing" cx="160" cy="160" r="140" stroke-width="14" />
+						<svg class="progress" width="300" height="300" viewbox="0 0 300 300">
+							<circle class="progress-meter" cx="150" cy="150" r="140" stroke-width="13" />
+							<circle class="progress-ing" cx="150" cy="150" r="140" stroke-width="14" />
 						</svg>
 						<!-- <input id="control" type="range" value="0" min="0" max="120" /> -->
-						<strong class="progress-num">120일</strong>
+						<strong class="progress-num">120日</strong>
 					</div>
 				</div>
 			</div>
