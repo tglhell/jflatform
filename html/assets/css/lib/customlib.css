@@ -1,4 +1,7 @@
 /** datepicker **/
+.ui-datepicker {
+	width: 370px;
+}
 .ui-datepicker .ui-datepicker-header {
 	padding: 0;
 }
@@ -107,14 +110,14 @@
 .ui-state-default, .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default, .ui-button,
 .ui-button.ui-state-disabled:hover, .ui-button.ui-state-disabled:active {
-	width: 54px;
-	height: 54px;
+	width: 40px;
+	height: 40px;
 	margin: 0 auto;
 	border: 0;
 	background-color: #fff;
 	font-size: 16px;
 	text-align: center;
-	line-height: 54px;
+	line-height: 40px;
 	color: #000;
 }
 .ui-datepicker-unselectable .ui-state-default {
@@ -164,6 +167,18 @@ a.ui-button:active,
 	height: 46px;
 	margin-left: 10px;
 }
+
+#sampleDatePicker .ui-state-default,
+#sampleDatePicker .ui-widget-content .ui-state-default,
+#sampleDatePicker .ui-widget-header .ui-state-default,
+#sampleDatePicker .ui-button,
+#sampleDatePicker .ui-button.ui-state-disabled:hover,
+#sampleDatePicker .ui-button.ui-state-disabled:active {
+	width: 54px;
+	height: 54px;
+	line-height: 54px;
+}
+
 
 @media screen and (max-width: 700px) {
 	.ui-datepicker th {

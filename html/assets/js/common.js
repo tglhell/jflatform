@@ -580,16 +580,16 @@ jQuery.event.add(window, 'load', function () {
 	//toggle common
 	function toggle(){
 		$('.toggle').off()
-		$('.toggle .cont').slideUp(0);
-		$('.toggle .active .cont').slideDown(0);
+		// $('.toggle .cont').slideUp(0);
+		// $('.toggle .active .cont').slideDown(0);
 		$('.toggle').on('click', '.tit-btn' ,function(){
 			var toggleItem = $(this).parent('.item');
 			if(toggleItem.hasClass('active')) {
 				toggleItem.removeClass('active');
-				toggleItem.find('.cont').slideUp(300);
+				// toggleItem.find('.cont').slideUp(300);
 			} else {
 				toggleItem.addClass('active');
-				toggleItem.find('.cont').slideDown(300);
+				// toggleItem.find('.cont').slideDown(300);
 			}
 		});
 	};
@@ -598,6 +598,8 @@ jQuery.event.add(window, 'load', function () {
 	//moToggle 
 	function moToggle(){
 		$('.mo-toggle').off()
+		$('.mo-toggle .cont').slideUp(0);
+		$('.mo-toggle .active .cont').slideDown(0);
 		$('.mo-toggle').on('click', '.tit-btn' ,function(){
 			var toggleItem = $(this).parent('.item');
 			if(toggleItem.hasClass('active')) {

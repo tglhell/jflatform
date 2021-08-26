@@ -68,35 +68,25 @@
 			<h4 class="btm-border">- 기본 (header없는타입)</h4>
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<ul class="caution">
-	<li>販売終了となると自動的に削除されます。</li>
-	<li>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</li>
-</ul>
-<div class="caution-wrap">
-	<ul class="caution">
+<pre class="language-html"><code><!--<div class="caution">
+	<p class="tit">自動的に削除</p>
+	<ul>
+		<li>カート商品は90日間保管され、販売終了となると自動的に削除されます。</li>
+		<li>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</li>
+	</ul>
+	<p class="tit">自動的に削除</p>
+	<ul>
 		<li>カート商品は90日間保管され、販売終了となると自動的に削除されます。</li>
 		<li>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</li>
 	</ul>
 </div>
 
-<dl class="caution">
-	<dt>自動的に削除</dt>
-	<dd>カート商品は90日間保管され、販売終了となると自動的に削除されます。</dd>
-	<dd>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</dd>
-</dl>
-<div class="caution-wrap">
-	<dl class="caution">
-		<dt>自動的に削除</dt>
-		<dd>カート商品は90日間保管され、販売終了となると自動的に削除されます。</dd>
-		<dd>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</dd>
-	</dl>
-</div>
-<div class="caution-wrap full">
-	<dl class="caution">
-		<dt>自動的に削除</dt>
-		<dd>カート商品は90日間保管され、販売終了となると自動的に削除されます。</dd>
-		<dd>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</dd>
-	</dl>
+<div class="caution type2">
+	<p class="tit">自動的に削除</p>
+	<ul>
+		<li>カート商品は90日間保管され、販売終了となると自動的に削除されます。</li>
+		<li>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</li>
+	</ul>
 </div>
 --></code></pre>
 <!-- //코드 삽입 -->
@@ -105,29 +95,32 @@
 				텍스트 일부 컬러 구분은 클래스 fc-color 시리즈 활용
 			</div>
 
-			<ul class="caution">
-				<li>販売終了となると自動的に削除されます。</li>
-				<li>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</li>
-			</ul>
-			
+			<h4 class="btm-border">- .caution</h4>
+			<div class="caution">
+				<p class="tit">自動的に削除</p>
+				<ul>
+					<li>カート商品は90日間保管され、販売終了となると自動的に削除されます。</li>
+					<li>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</li>
+				</ul>
+				<p class="tit">自動的に削除</p>
+				<ul>
+					<li>カート商品は90日間保管され、販売終了となると自動的に削除されます。</li>
+					<li>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</li>
+				</ul>
+			</div>
 
-			<h4 class="btm-border">- header있는 타입</h4>
-			<dl class="caution">
-				<dt>自動的に削除</dt>
-				<dd>カート商品は90日間保管され、販売終了となると自動的に削除されます。</dd>
-				<dd>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</dd>
-			</dl>
-			<ul class="caution">
-				<li>販売終了となると自動的に削除されます。</li>
-				<li>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</li>
-			</ul>
+			<h4 class="btm-border">- <strong>Line 타입: </strong> .caution + .type2</h4>
+			<div class="caution type2">
+				<p class="tit">自動的に削除</p>
+				<ul>
+					<li>カート商品は90日間保管され、販売終了となると自動的に削除されます。</li>
+					<li>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</li>
+				</ul>
+			</div>
 
-			<h4 class="btm-border">- full size 타입</h4>
-			<dl class="caution full">
-				<dt>自動的に削除</dt>
-				<dd>カート商品は90日間保管され、販売終了となると自動的に削除されます。</dd>
-				<dd>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</dd>
-			</dl>
+			<h4 class="btm-border">- .noti</h4>
+			<p class="noti">Rewardの内容は、当社の規定と時期により変動する場合がございます。</p>
+
 
 			<h3 class="title">&#x25CE; 텍스트 플래그</h3>
 
@@ -184,7 +177,7 @@
 			<div class="hmj-pagination">
 				<a href="#" class="btn-page-prev disabled"></a>
 				<a href="#" class="btn-page-num active">1</a>
-				<a href="#" class="btn-page-next disabled">もっと見る(1/1)</a>
+				<a href="#" class="btn-page-next disabled">もっと見る (1/1)</a>
 			</div>
 
 			<h4 class="btm-border">- 페이지가 여러개</h4>
@@ -217,8 +210,42 @@
 				<a href="#" class="btn-page-num">3</a>
 				<a href="#" class="btn-page-num">4</a>
 				<a href="#" class="btn-page-num">5</a>
-				<a href="#" class="btn-page-next">もっと見る(<span>1</span>/<span>3</span>)</a>
+				<a href="#" class="btn-page-next">もっと見る (<span>1</span>/<span>3</span>)</a>
 				<a href="#" class="btn-page-last"></a>
+			</div>
+
+			<h4 class="btm-border">- 페이지 Disabled</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="hmj-pagination">
+	<a href="#" class="btn-page-first"></a>
+	<a href="#" class="btn-page-prev"></a>
+	<a href="#" class="btn-page-num active">1</a>
+	<a href="#" class="btn-page-num">2</a>
+	<a href="#" class="btn-page-num">3</a>
+	<a href="#" class="btn-page-num">4</a>
+	<a href="#" class="btn-page-num">5</a>
+	<a href="#" class="btn-page-next">もっと見る(<span>1</span>/<span>3</span>)</a>
+	<a href="#" class="btn-page-last"></a>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				.hmj-pagination
+			</div>
+
+			<div class="hmj-pagination">
+				<a href="#" class="btn-page-first disabled"></a>
+				<a href="#" class="btn-page-prev disabled"></a>
+				<a href="#" class="btn-page-num active">1</a>
+				<a href="#" class="btn-page-num">2</a>
+				<a href="#" class="btn-page-num">3</a>
+				<a href="#" class="btn-page-num">4</a>
+				<a href="#" class="btn-page-num">5</a>
+				<a href="#" class="btn-page-next disabled">もっと見る (<span>1</span>/<span>3</span>)</a>
+				<a href="#" class="btn-page-last disabled"></a>
 			</div>
 
 			<h3 class="title">&#x25CE; Tooltip</h3>

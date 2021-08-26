@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>CE351FED-AF31-4782-A0EC-CF1931AE4D0B</title>
-    <g id="pc_쿠폰함_v01" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Pc_쿠폰함_SC-FE-MP0301" transform="translate(-904.000000, -2577.000000)" fill="#000000">
-            <g id="Pagination-/-Select-/Case02" transform="translate(898.000000, 2571.000000)">
-                <g id="Icon-/-Forms-/-Double-left" transform="translate(6.000000, 6.000000)">
-                    <path d="M19.6568542,7.65685425 L19.6558542,14.6558542 L19.6568542,14.6568542 L19.6568542,15.6568542 L19.6558542,15.6558542 L19.6568542,15.6568542 L18.6568542,15.6568542 L18.6558542,15.6558542 L11.6568542,15.6568542 L11.6568542,14.6568542 L18.6558542,14.6558542 L18.6568542,7.65685425 L19.6568542,7.65685425 Z" id="Combined-Shape" transform="translate(15.656854, 11.656854) rotate(-225.000000) translate(-15.656854, -11.656854) "></path>
-                    <path d="M15.6568542,7.65685425 L15.6558542,14.6558542 L15.6568542,14.6568542 L15.6568542,15.6568542 L15.6558542,15.6558542 L15.6568542,15.6568542 L14.6568542,15.6568542 L14.6558542,15.6558542 L7.65685425,15.6568542 L7.65685425,14.6568542 L14.6558542,14.6558542 L14.6568542,7.65685425 L15.6568542,7.65685425 Z" id="Combined-Shape" transform="translate(11.656854, 11.656854) rotate(-225.000000) translate(-11.656854, -11.656854) "></path>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>8458F531-5D0F-4E42-A2D1-21EA4C28A3B3</title>
+    <defs>
+        <filter color-interpolation-filters="auto" id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.400000 0 0 0 0 0.400000 0 0 0 0 0.400000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="공통가이드-정리_김지연" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="[PC]-Pagination" transform="translate(-407.000000, -454.000000)">
+            <g id="&lt;&lt;" transform="translate(407.000000, 454.000000)">
+                <rect id="Boundary" x="0" y="0" width="32" height="32"></rect>
+                <g filter="url(#filter-1)" id="Icon-/-Forms-/-Next+Double">
+                    <g transform="translate(16.000000, 16.000000) scale(-1, 1) translate(-16.000000, -16.000000) translate(4.000000, 4.000000)">
+                        <rect id="Bounding-box" x="0" y="0" width="24" height="24"></rect>
+                        <path d="M17.9085428,10 L19,11.0665937 L12,19 L5,11.0665937 L6.09145724,10 L11.999007,16.6955845 L17.9085428,10 Z M17.9085428,5 L19,6.06659371 L12,14 L5,6.06659371 L6.09145724,5 L11.999007,11.6955845 L17.9085428,5 Z" id="Path-4" fill="#191919" fill-rule="nonzero" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) "></path>
+                    </g>
                 </g>
             </g>
         </g>

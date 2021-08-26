@@ -25,10 +25,13 @@
 # git-flow 테스트
 
 ## 디자이너 
-- 김혜경 차장	hkkim@anchors-biz.com
-- 박종숙 과장	jspark23@anchors-biz.com
-- 이경은 과장	lky6145@anchors-biz.com
-- 나주연 대리	jb227@anchors-biz.com
-- 정다운 대리	danie@anchors-biz.com
-- 김지연 대리	kjykim2343@anchors-biz.com
-- 정혜령 대리	hr.jeong@anchors-biz.com
+- 김혜경	차장	hkkim@anchors-biz.com
+- 김유현	차장	yyoo2@anchors-biz.com
+- 박종숙	과장	jspark23@anchors-biz.com
+- 이경은	과장	lky6145@anchors-biz.com
+- 이샛별	과장	byeol@anchors-biz.com 
+- 나주연	대리	jb227@anchors-biz.com
+- 김지연	대리	kjykim2343@anchors-biz.com
+- 정혜령	대리	hr.jeong@anchors-biz.com
+- 김혜리	대리	hhhrkk@anchors-biz.com
+

@@ -9,38 +9,9 @@
     <link rel="stylesheet" href="../assets/css/common.css">
 	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
 	<style>
-		.test .hmj-container .hmj-content .cont-outer.fullcase {
-			background-color: #f4f4f4;
-		}
 
-		@media screen and (max-width: 1119px) {
-			.hmj-header {
-				-webkit-transition: margin-top .35s ease-in-out;
-				transition: margin-top .35s ease-in-out;
-				position: fixed;
-				top: 0;
-				left: 0;
-				right: 0;
-				z-index: 20;
-				background-color: #fff;
-			}
-			.hmj-header.header-fixed {
-				-webkit-transition: margin-top .35s ease-in-out;
-				transition: margin-top .35s ease-in-out;
-			}
-			.hmj-wrap.type2 .header-cont {
-				display: -webkit-box;
-				display: -webkit-flex;
-				display: -ms-flexbox;
-				display: flex;
-				border-bottom: 0;
-			}
-			.hmj-wrap.type2 .sub-cont {
-				display: none;
-			}
-		}
 	</style>
-	
+
 	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
 	<script type="text/javascript" src="../assets/js/common.js"></script>
@@ -59,32 +30,6 @@
 		<div class="header-cont">
 			<h1><a href="hmj_layout.html"><img src="../assets/images/common/img_header_logo.png" alt="Hyundai Logo"></a></h1>
 
-			<div class="gnb-menu-outer">
-				<ul class="gnb-menu-list">
-					<li>
-						<button><span>ブランド</span></button>
-					</li>
-					<li>
-						<button><span>IONIQ5</span></button>
-					</li>
-					<li>
-						<button><span>NEXO</span></button>
-					</li>
-					<li>
-						<button><span>購買</span></button>
-					</li>
-					<li>
-						<button><span>サービス</span></button>
-					</li>
-					<li>
-						<button><span>コンテンツ</span></button>
-					</li>
-					<li>
-						<button><span>ストア</span></button>
-					</li>
-				</ul>
-			</div>
-
 			<div class="gnb-right-menu">
 				<ul class="gnb-right-list">
 					<li>
@@ -100,6 +45,9 @@
 								</picture>
 							</span>
 						</button>
+					</li>
+					<li>
+						<button class="btn-menu"><span>Menu</span></button>
 					</li>
 					<li>
 						<button class="btn-mypage"><span><img src="../assets/images/common/ico_mypage.png" alt="마이페이지"></span></button>
@@ -123,81 +71,7 @@
 	<div id="hmjContainer" class="hmj-container"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
 		<div class="hmj-content">
 			<div class="cont-outer">
-				<div class="test-wrap">
-					<div class="test-outer">
-						<div class="test-box">
-							<div class="test1">111</div>
-							<div class="test2">테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다.테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다.테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다.</div>
-							<p class="test-desc">- 테스트 하단 텍스트 입니다. 입니다.</p>
-						</div>
-						<div class="img-outer" data-text="- 테스트 하단 텍스트 입니다. 입니다."></div>
-					</div>
-
-					<br><br><br><br>
-
-					<div class="test-outer">
-						<div class="test-box">
-							<div class="test1">111</div>
-							<div class="test2">테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다.테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다.테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다.</div>
-							<p class="test-desc">- 테스트 하단 텍스트 입니다. 입니다.</p>
-						</div>
-						<div class="img-outer" data-text="- 테스트 하단 텍스트 입니다. 입니다."></div>
-					</div>
-				</div>
-				<style>
-					.test-wrap {
-						padding-top: 145px;
-					}
-					.type2 .test-wrap {
-						padding-top: 92px;
-					}
-					.test-outer {
-						display: flex;
-						flex-direction: row-reverse;
-						align-items: center;
-						width: 100%;
-					}
-					.test2 {
-						margin-top: 20px;
-					}
-					.test-box {
-						width: 70%;
-						padding: 0 30px;
-					}
-					.test-desc {
-						margin-top: 20px;
-					}
-					.img-outer {
-						width: 400px;
-						height: 400px;
-						background-color: #ccc;
-					}
-					@media screen and (max-width: 1119px) {
-						.test-outer {
-							display: block;
-						}
-						.test-box {
-							width: 100%;
-							padding: 0;
-						}
-						.test-desc {
-							display: none;
-						}
-						.img-outer {
-							position: relative;
-							width: 100%;
-							margin-top: 20px;
-						}
-						.img-outer:after {
-							content: attr(data-text);
-							position: relative;
-							top: 100%;
-							display: inline-block;
-							margin-top: 20px;
-							font-size: 14px;
-						}
-					}
-				</style>
+				<p class="mt20">test content</p>
 			</div>
 		</div>
 	</div>
@@ -209,10 +83,26 @@
 	</div>
 	<!--//footer -->
 </div>
+
+<!-- popShippingList -->
+<div class="layer-popup-wrap mo-full fix-center" data-pop-idx="findPostalCode">
+    <div class="layer-popup-body">
+        <div class="layer-popup-cont postal-code">
+            <div class="layer-cont">
+				
+			</div>
+            <button class="btn-close-popup btn-close">close</button>
+        </div>
+    </div>
+</div>
+
 <div class="btn-top-box">
-	<a href="#" title="move to top" role="button" class="btn-top">
+	<button title="active side menu" role="button" class="btn-side-menu">
+		<span>Side</span>
+	</button>
+	<button title="move to top" role="button" class="btn-top">
 		<span class="blind">Top</span>
-	</a>
+	</button>
 </div>
 </body>
 </html>

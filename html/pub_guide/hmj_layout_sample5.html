@@ -204,7 +204,9 @@
 			transform: rotate(90deg);
 		}
 		.progress-meter,
-		.progress-ing {
+		.progress-ing,
+		.progress-bottom,
+		.progress-top {
 			fill: none;
 		}
 		.progress-meter {
@@ -213,8 +215,20 @@
 		.progress-ing {
 			stroke: #0793ea;
 			stroke-linecap: round;
-			-webkit-filter: drop-shadow( 1px 3px 2px rgba(255, 255, 255, 1));
-			filter: drop-shadow( 1px 3px 2px rgba(255, 255, 255, 1));
+		}
+		.progress-bottom,
+		.progress-top {
+			stroke: #fff;
+			stroke-linecap: round;
+		}
+		.progress-top {
+			stroke-dashoffset: 874.646px;
+		}
+		.progress-bottom {
+			stroke-dashoffset: -727.646px;
+		}
+		.ios .progress-bottom {
+			stroke-dashoffset: 885px;
 		}
 		.ios .progress-ing {
 			stroke-dasharray: 879.646px;
@@ -248,32 +262,32 @@
 			}
 			contAutoPadding();
 
-			const scrItem = $('.scr-item');
-			scrItem.on('mousewheel DOMMouseScroll', function (e) {
-				let tScrIdx = $('.scr-item.active-idx').index();
-				if (!$('html, body').is(':animated')) {
-					if (e.originalEvent.wheelDelta < 0) {
-						$('html, body').stop().animate({'overflow':'visible'}, secVal[6]);
-						if (tScrIdx !== $(this.length)) {
-							scrItem.eq(tScrIdx + 1).addClass('active');
-							scrItem.eq(tScrIdx + 1).addClass('active-idx').siblings().removeClass('active-idx');
-						}
-						return false;
-					} else {
-						$('html, body').stop().animate({'overflow':'visible'}, secVal[6]);
-						if (tScrIdx !== 0) {
-							scrItem.eq(tScrIdx).removeClass('active');
-							scrItem.eq(tScrIdx - 1).addClass('active-idx').siblings().removeClass('active-idx');
-						}
-						return false;
-					}
-				} else {
-					e.stopPropagation();
-					return false;
-				}
-			});
+			// const scrItem = $('.scr-item');
+			// scrItem.on('mousewheel DOMMouseScroll', function (e) {
+			// 	let tScrIdx = $('.scr-item.active-idx').index();
+			// 	if (!$('html, body').is(':animated')) {
+			// 		if (e.originalEvent.wheelDelta < 0) {
+			// 			$('html, body').stop().animate({'overflow':'visible'}, secVal[6]);
+			// 			if (tScrIdx !== $(this.length)) {
+			// 				scrItem.eq(tScrIdx + 1).addClass('active');
+			// 				scrItem.eq(tScrIdx + 1).addClass('active-idx').siblings().removeClass('active-idx');
+			// 			}
+			// 			return false;
+			// 		} else {
+			// 			$('html, body').stop().animate({'overflow':'visible'}, secVal[6]);
+			// 			if (tScrIdx !== 0) {
+			// 				scrItem.eq(tScrIdx).removeClass('active');
+			// 				scrItem.eq(tScrIdx - 1).addClass('active-idx').siblings().removeClass('active-idx');
+			// 			}
+			// 			return false;
+			// 		}
+			// 	} else {
+			// 		e.stopPropagation();
+			// 		return false;
+			// 	}
+			// });
 
-			let numVal = 100; //소비된 일수
+			let numVal = 84; //소비된 일수
 			function progress() {
 				const progressIng = $('.progress-ing');
 				const progressNum = $('.progress-num');
@@ -288,11 +302,16 @@
 						}, (decimalVal * twoDig[0]) * i);
 					}(i));
 				}
-				progressIng.css({'stroke-dasharray':circumference});
+				progressIng.css({'strokeDasharray':circumference});
+				$('.progress-bottom').css({'strokeDasharray':circumference});
 				setObj(function () {
 					if (!$('html').hasClass('ios')) {
+						$('.progress-bottom').css({'stroke-dashoffset':(dashoffset - circumference) + 5});
 						progressIng.animate({'stroke-dashoffset':dashoffset - circumference}, ((numVal / secVal[0]) * decimalVal) * mSecond);
+						$('.progress-top').css({'strokeDasharray':circumference});
 					} else {
+						$('.progress-top').css({'strokeDasharray':circumference - 5});
+						$('.progress-bottom').css({'stroke-dashoffset':(circumference - dashoffset) - 5});
 						progressIng.animate({'stroke-dashoffset':circumference - dashoffset}, ((numVal / secVal[0]) * decimalVal) * mSecond);
 					}
 				}, ((day - numVal) / secVal[0] * decimalVal) * mSecond);
@@ -558,6 +577,8 @@
 					<div class="svg-outer-box">
 						<svg class="progress" width="300" height="300" viewbox="0 0 300 300">
 							<circle class="progress-meter" cx="150" cy="150" r="140" stroke-width="13" />
+							<circle class="progress-bottom" cx="150" cy="150" r="140" stroke-width="14" />
+							<circle class="progress-top" cx="150" cy="150" r="140" stroke-width="14" />
 							<circle class="progress-ing" cx="150" cy="150" r="140" stroke-width="14" />
 						</svg>
 						<!-- <input id="control" type="range" value="0" min="0" max="120" /> -->
