@@ -289,7 +289,10 @@
 
 			let numVal = 84; //소비된 일수
 			function progress() {
+				const ProgressItem = [".progress-ing", ".progress-ing", ".progress-ing"];
 				const progressIng = $('.progress-ing');
+				const progressSdwTop = $('.progress-top');
+				const progressSdwBtm = $('.progress-bottom');
 				const progressNum = $('.progress-num');
 				let circumference = irNum[1] * Math.PI * radius;
 				let progress = numVal / day;
@@ -303,15 +306,15 @@
 					}(i));
 				}
 				progressIng.css({'strokeDasharray':circumference});
-				$('.progress-bottom').css({'strokeDasharray':circumference});
+				progressSdwBtm.css({'strokeDasharray':circumference});
 				setObj(function () {
 					if (!$('html').hasClass('ios')) {
-						$('.progress-bottom').css({'stroke-dashoffset':(dashoffset - circumference) + 5});
+						progressSdwTop.css({'strokeDasharray':circumference});
+						progressSdwBtm.css({'stroke-dashoffset':(dashoffset - circumference) + 5});
 						progressIng.animate({'stroke-dashoffset':dashoffset - circumference}, ((numVal / secVal[0]) * decimalVal) * mSecond);
-						$('.progress-top').css({'strokeDasharray':circumference});
 					} else {
-						$('.progress-top').css({'strokeDasharray':circumference - 5});
-						$('.progress-bottom').css({'stroke-dashoffset':(circumference - dashoffset) - 5});
+						progressSdwTop.css({'strokeDasharray':circumference - 5});
+						progressSdwBtm.css({'stroke-dashoffset':(circumference - dashoffset) - 5});
 						progressIng.animate({'stroke-dashoffset':circumference - dashoffset}, ((numVal / secVal[0]) * decimalVal) * mSecond);
 					}
 				}, ((day - numVal) / secVal[0] * decimalVal) * mSecond);

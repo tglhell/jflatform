@@ -61,11 +61,7 @@ jQuery.event.add(window, 'load', function () {
 		});
 	});
 
-	tabTar.each(function () {
-		tabAutoHgt ($(this));
-	});
-
-	$('.js-tab li').on('click', function (e) {
+	$('.js-tab .tab-box-list > li').on('click', function (e) {
 		const tabRoot = $(this).closest('.js-tab');
 		const tabBoxItem = $('.js-tab-cont > div');
 		let tabIdx = $(this).index();
@@ -73,9 +69,6 @@ jQuery.event.add(window, 'load', function () {
 		e.preventDefault();
 		$(this).addClass('active').siblings().removeClass('active');
 		tabRoot.find(tabBoxItem).removeClass('active').eq(tabIdx).addClass('active');
-
-		let tabBoxItemHgt = tabRoot.find('.js-tab-cont .active').height() + tabPdtVal;
-		tabRoot.find(tabBoxItem).parent().css({'height':tabBoxItemHgt});
 
 		tabScrCenter($(this));
 	});
@@ -156,9 +149,6 @@ jQuery.event.add(window, 'load', function () {
 				//landscape
 			}
 		} else {
-			tabTar.each(function () {
-				tabAutoHgt($(this));
-			});
 			prxItem.ready(function () {
 				prxItem.each(function () {
 					prxHgt($(this));
@@ -392,12 +382,6 @@ jQuery.event.add(window, 'load', function () {
 	function prxHgt (target) {
 		let prxHgt = parseInt(target.height() / irNum[3]);
 		target.css('margin-top', -prxHgt);
-	}
-
-	function tabAutoHgt (target) {
-		let tabCntHgt = target.find('.js-tab-cont .active').height();
-		tabPdtVal = parseInt(target.find('.js-tab-cont').css('padding-top')) * irNum[1];
-		target.find('.js-tab-cont').css('height', tabCntHgt + tabPdtVal);
 	}
 
 	function containerAutoHgt () {
