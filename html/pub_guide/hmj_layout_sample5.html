@@ -301,16 +301,16 @@
 						}, (decimalVal * twoDig[0]) * i);
 					}(i));
 				}
-				progressItem[1].css(progressStyle[0], circumference);
-				progressItem[2].css(progressStyle[0], circumference);
+				progressItem[1].css('stroke-dasharray', circumference);
+				progressItem[2].css('stroke-dasharray', circumference);
 				setObj(function () {
 					if (!$('html').hasClass('ios')) {
-						progressItem[0].css(progressStyle[0], circumference);
-						progressItem[1].css(progressStyle[1], (dashoffset - circumference) + irNum[4]);
+						progressItem[0].css('stroke-dasharray', circumference);
+						progressItem[1].css('stroke-dashoffset', (dashoffset - circumference) + irNum[4]);
 						progressItem[2].animate({strokeDashoffset:dashoffset - circumference}, ((numVal / secVal[0]) * decimalVal) * mSecond);
 					} else {
-						progressItem[0].css(progressStyle[0], circumference - irNum[4]);
-						progressItem[1].css(progressStyle[1], (circumference - dashoffset) - irNum[4]);
+						progressItem[0].css('stroke-dasharray', circumference - irNum[4]);
+						progressItem[1].css('stroke-dashoffset', (circumference - dashoffset) - irNum[4]);
 						progressItem[2].animate({strokeDashoffset:circumference - dashoffset}, ((numVal / secVal[0]) * decimalVal) * mSecond);
 					}
 				}, ((day - numVal) / secVal[0] * decimalVal) * mSecond);

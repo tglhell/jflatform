@@ -14,9 +14,6 @@ radius = 140;
 day = 120;
 mSecond = 1000;
 
-// css style value
-progressStyle = ['stroke-dasharray', 'stroke-dashoffset'];
-
 // number value
 secVal = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 irNum = [1, 2, 3, 4, 5, 6, 7, 8, 9];
