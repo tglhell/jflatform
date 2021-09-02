@@ -932,8 +932,7 @@
 .my-rc .my-code .my-rc-code .img-box {
 	margin-bottom:8px;
 }
-.my-rc .my-code .my-rc-code .text-code01,
-.my-rc .my-code .my-rc-code .text-code02 {
+.my-rc .my-code .my-rc-code .text-code {
 	display:inline-block;
 	font-weight:500;
 }
@@ -1126,15 +1125,13 @@
 	.my-rc .recommend-code .period-box .info-box {
 		margin-top: 24px;
 		padding:0;
+		width:100%;
 	}
 	.my-rc .recommend-code .cta-outer {
 		margin-top:32px;
 	}
 	.my-rc .my-code .no-data .title {
 		padding-top:80px;
-	}
-	.my-rc .my-code .my-rc-code .text-code02 {
-		display:block;
 	}
 	.my-rc .my-code .my-rc-code .text {
 		font-size:12px;

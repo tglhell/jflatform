@@ -61,7 +61,7 @@ jQuery.event.add(window, 'load', function () {
 		});
 	});
 
-	$('.js-tab .tab-box-list > li').on('click', function (e) {
+	$('.js-tab .tab-box-list > li, .js-tab .tab-box-list2 > li').on('click', function (e) {
 		const tabRoot = $(this).closest('.js-tab');
 		const tabBoxItem = $('.js-tab-cont > div');
 		let tabIdx = $(this).index();
@@ -569,6 +569,9 @@ jQuery.event.add(window, 'load', function () {
 				toggleItem.removeClass('active');
 			} else {
 				toggleItem.addClass('active');
+				if ($(this).parent().find('svg').hasClass('progress') == true) {
+					$('.ie11 .progress').css('transform', 'rotate(-90deg)');
+				};
 			}
 		});
 	};

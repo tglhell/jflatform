@@ -753,6 +753,8 @@ body {
 
 .hmj-footer {
 	background-color: #000;
+	font-size: 0;
+	line-height: 0;
 }
 .hmj-footer .footer-top {
 	text-align: center;
@@ -2208,6 +2210,28 @@ textarea:-ms-input-placeholder {
 	height: 3px;
 	background-color: #1c6bba;
 }
+.tab-box-list2 {
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+}
+.tab-box-list2 li + li {
+	padding-left: 24px;
+}
+.tab-box-list2 li a {
+	display: block;
+	width: auto;
+	height: 48px;
+	font-size: 14px;
+	font-weight: 500;
+	color: #666;
+	line-height: 48px;
+}
+.tab-box-list2 li.active a  {
+	border-bottom: 3px solid #1c6bba;
+	color: #1c6bba;
+}
 .tab-box-cont {
 	-webkit-transition: all .5s ease-in-out;
 	transition: all .5s ease-in-out;
@@ -2241,19 +2265,19 @@ textarea:-ms-input-placeholder {
 	.tab-box-wrap.x-scroll .tab-box-outer::-webkit-scrollbar {
 		display: none;
 	}
-	.tab-box-wrap.x-scroll .tab-box-list {
+	.tab-box-wrap.x-scroll .tab-box-list2 {
 		display: block;
 		width: auto;
-		padding: 0 20px;
-		border-bottom: 1px solid #ccc;
 		font-size: 0;
 		white-space: nowrap;
+		padding-left: 24px;
 	}
-	.tab-box-wrap.x-scroll .tab-box-list li {
+	.tab-box-wrap.x-scroll .tab-box-list2 li {
 		display: inline-block;
-		min-width: 74px;
 		width: auto;
-		padding: 0 15px;
+	}
+	.tab-box-list2 li:last-child {
+		margin-right: 20px;
 	}
 	.tab-box-cont {
 		padding-top: 24px;

@@ -184,7 +184,8 @@
 												<div class="img-box">
 													<img src="../../assets/images/@img_rc_car.png" alt="">
 												</div>
-												<p class="text-code01 cont-tit">お客様のリファラルコード は、</p><p class="text-code02 cont-tit"><span class="fc-color3">hyun1574</span>です。</p>
+												<p class="text-code cont-tit">お客様のリファラルコード は、<br>
+												<span class="fc-color3">hyun1574</span>です。</p>
 												<p class="text cont-text2">下記のURLを利用してお客様のリファラルコードをご友人に共有してください。</p>
 												<div class="box-code-share">
 													<input type="url" title="referral code url form" class="inp-url" value="https://www.Hyundai.jp/RC=hyun1574">
@@ -333,13 +334,6 @@
 <!-- chart script -->
 <script>
 	$(function () {
-		function contAutoPadding () {
-			let headerHgt = $('.hmj-header').outerHeight(true);
-
-			$('.cont-outer').css('padding-top', headerHgt + 25);
-		}
-		contAutoPadding();
-
 		let numVal = 85; //소비된 일수
 		function progress() {
 			const progressItem = [$('.progress-top') , $('.progress-bottom'), $('.progress-ing'), $('.progress-num')];
