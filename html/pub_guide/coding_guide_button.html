@@ -71,15 +71,13 @@
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--<div class="cta-outer">
 	<button class="btn"><span>商品 見る</span></button>
-	<button class="btn disabled"><span>Disabled</span></button>
-	<button class="btn" disabled="disabled"><span>Disabled</span></button>
-</div>
-<div class="cta-outer">
 	<button class="btn btn-type2"><span>商品 見る</span></button>
-	<button class="btn btn-type2" disabled="disabled"><span>Disabled</span></button>
+	<button class="btn btn-type3"><span>商品 見る</span></button>	
 </div>
+
 <div class="cta-outer">
-	<button class="btn btn-type3"><span>商品 見る</span></button>
+	<button class="btn disabled"><span>Disabled</span></button>
+	<button class="btn btn-type2" disabled="disabled"><span>Disabled</span></button>
 	<button class="btn btn-type3" disabled="disabled"><span>Disabled</span></button>
 </div>
 
@@ -95,48 +93,54 @@
 <button class="btn btn-type2 btn-extra-small"><span>商品 見る</span></button>
 <button class="btn btn-type3 btn-extra-small"><span>商品 見る</span></button>
 
+<button class="btn rd"><span>商品 見る</span></button>
+<button class="btn btn-middle rd"><span>商品 見る</span></button>
+<button class="btn btn-small rd"><span>商品 見る</span></button>
+<button class="btn btn-extra-small rd"><span>商品 見る</span></button>
 --></code></pre>
 <!-- //코드 삽입 -->
 
-			<h3 class="title">&#x25CE; Big Button</h3>		
+			<h3 class="title">&#x25CE; Button </h3>		
 			<h4 class="btm-border">- .btn / .btn-type2 / .btn-type3</h4>
 			<div class="cta-outer">
 				<button class="btn"><span>商品 見る</span></button>
-				<button class="btn disabled"><span>Disabled</span></button>
-				<button class="btn" disabled="disabled"><span>Disabled</span></button>
-			</div>
-			<div class="cta-outer">
 				<button class="btn btn-type2"><span>商品 見る</span></button>
-				<button class="btn btn-type2" disabled="disabled"><span>Disabled</span></button>
+				<button class="btn btn-type3"><span>商品 見る</span></button>
+				
 			</div>
 			<div class="cta-outer">
-				<button class="btn btn-type3"><span>商品 見る</span></button>
+				<button class="btn disabled"><span>Disabled</span></button>
+				<button class="btn btn-type2" disabled="disabled"><span>Disabled</span></button>
 				<button class="btn btn-type3" disabled="disabled"><span>Disabled</span></button>
 			</div>
 
-			<h3 class="title">&#x25CE; Middle Button</h3>
-			<h4 class="btm-border">- .btn / .btn-middle</h4>
+			<h4 class="btm-border">- .btn-middle</h4>
 			<button class="btn btn-middle"><span>商品 見る</span></button>
 			<button class="btn btn-type2 btn-middle"><span>商品 見る</span></button>
 			<button class="btn btn-type3 btn-middle"><span>商品 見る</span></button>
 
-			<!-- <h3 class="title">&#x25CE; Small Button</h3>
-			<h4 class="btm-border">- .btn / .btn+.btn-small</h4>
+			<h4 class="btm-border">- .btn-small</h4>
 			<button class="btn btn-small"><span>商品 見る</span></button>
 			<button class="btn btn-type2 btn-small"><span>商品 見る</span></button>
 			<button class="btn btn-type3 btn-small"><span>商品 見る</span></button>
 
-			<h3 class="title">&#x25CE; Extra Small Button</h3>
-			<h4 class="btm-border">- .btn / .btn+.btn-extra-small</h4>
+			<h4 class="btm-border">- .btn-extra-small</h4>
 			<button class="btn btn-extra-small"><span>商品 見る</span></button>
 			<button class="btn btn-type2 btn-extra-small"><span>商品 見る</span></button>
-			<button class="btn btn-type3 btn-extra-small"><span>商品 見る</span></button> -->
+			<button class="btn btn-type3 btn-extra-small"><span>商品 見る</span></button>
+
+			<h4 class="btm-border">- .btn + .rd</h4>
+			<button class="btn rd"><span>商品 見る</span></button>
+			<button class="btn btn-middle rd"><span>商品 見る</span></button>
+			<button class="btn btn-small rd"><span>商品 見る</span></button>
+			<button class="btn btn-extra-small rd"><span>商品 見る</span></button>
 			
 			<h3 class="title">&#x25CE; cta-outer</h3>
 			<div class="conIn_tip">
 				PC: Default / MO: Full or 1n  = <strong>.cta-outer</strong> <br> 
 				PC: Default / MO: Default = <strong>.cta-outer + .fix-type</strong> <br>
 				PC/MO: Full or 1n = <strong>.cta-outer + .full-type</strong><br>
+				PC: Default / MO: 위아래 = <strong>.cta-outer + .row-type</strong><br>
 			</div>
 			<!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
@@ -144,27 +148,20 @@
 	<button class="btn"><span>商品 見る</span></button>
 	<button class="btn btn-type2"><span>商品 見る</span></button>
 </div>
-<div class="cta-outer">
-	<button class="btn btn-middle"><span>商品 見る</span></button>
-	<button class="btn btn-type2 btn-middle"><span>商品 見る</span></button>
-</div>
 
 <div class="cta-outer fix-type">
 	<button class="btn"><span>商品 見る</span></button>
 	<button class="btn btn-type2"><span>商品 見る</span></button>
-</div>
-<div class="cta-outer fix-type">
-	<button class="btn btn-middle"><span>商品 見る</span></button>
-	<button class="btn btn-type2 btn-middle"><span>商品 見る</span></button>
 </div>
 
 <div class="cta-outer full-type">
 	<button class="btn"><span>商品 見る</span></button>
 	<button class="btn btn-type2"><span>商品 見る</span></button>
 </div>
-<div class="cta-outer full-type">
-	<button class="btn btn-middle"><span>商品 見る</span></button>
-	<button class="btn btn-type2 btn-middle"><span>商品 見る</span></button>
+
+<div class="cta-outer row-type">
+	<button class="btn"><span>商品 見る</span></button>
+	<button class="btn btn-type2"><span>商品 見る</span></button>
 </div>
 --></code></pre>
 <!-- //코드 삽입 -->
@@ -174,19 +171,11 @@
 				<button class="btn"><span>商品 見る</span></button>
 				<button class="btn btn-type2"><span>商品 見る</span></button>
 			</div>
-			<div class="cta-outer">
-				<button class="btn btn-middle"><span>商品 見る</span></button>
-				<button class="btn btn-type2 btn-middle"><span>商品 見る</span></button>
-			</div>
 
 			<h4 class="btm-border">- .cta-outer + .fix-type</h4>
 			<div class="cta-outer fix-type">
 				<button class="btn"><span>商品 見る</span></button>
 				<button class="btn btn-type2"><span>商品 見る</span></button>
-			</div>
-			<div class="cta-outer fix-type">
-				<button class="btn btn-middle"><span>商品 見る</span></button>
-				<button class="btn btn-type2 btn-middle"><span>商品 見る</span></button>
 			</div>
 
 			<h4 class="btm-border">- .cta-outer + .full-type</h4>
@@ -194,67 +183,41 @@
 				<button class="btn"><span>商品 見る</span></button>
 				<button class="btn btn-type2"><span>商品 見る</span></button>
 			</div>
-			<div class="cta-outer full-type">
-				<button class="btn btn-middle"><span>商品 見る</span></button>
-				<button class="btn btn-type2 btn-middle"><span>商品 見る</span></button>
-			</div>
 
 			<h4 class="btm-border">- .cta-outer + .row-type</h4>
 			<div class="cta-outer row-type">
 				<button class="btn"><span>商品 見る</span></button>
 				<button class="btn btn-type2"><span>商品 見る</span></button>
 			</div>
-			<div class="cta-outer row-type">
-				<button class="btn btn-middle"><span>商品 見る</span></button>
-				<button class="btn btn-type2 btn-middle"><span>商品 見る</span></button>
-			</div>
 
-
-
-			<h4 class="btm-border">- width auto</h4>
+			<h3 class="title">&#x25CE; 텍스트 버튼</h3>
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<a href="#" class="btn btn-middle auto-width"><span>Auto Width</span></a>
-<button type="button" class="btn btn-middle btn-type2 auto-width"><span>商品 見る</span></button>
---></code></pre>
-<!-- //코드 삽입 -->			
-			<div class="conIn_tip">
-				<strong>.auto-width</strong> 글자수에 따라 버튼의 길이가 달라짐 / min-width 없음 <br>
-			</div>
-
-			<!-- <a href="#" class="btn btn-middle auto-width"><span>Auto Width</span></a>
-			<button type="button" class="btn btn-middle btn-type2 auto-width"><span>商品 見る</span></button> -->
-
-			<h3 class="title">&#x25CE; Table Button</h3>
-
-<!-- 코드 삽입 -->
-<button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<button class="btn btn-tbl"><span>text</span></button>
-<button class="btn btn-tbl type2"><span>+ 新しい配送先を追加</span></button>
+<pre class="language-html"><code><!--<button class="btn-text">オプション変更</button>
+<a class="btn-text">オプション変更</a>
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
-				클래스 "<strong>btn + btn-tbl</strong>" <br>
-				height 36인경우 "<strong>btn + btn-tbl + type2 </strong>" / PC: max-width: 420px, mo: max-width: 320px; 
+				.btn-text / 텍스트 형태의 버튼
 			</div>
-			<!-- <p>btn-tbl
-			<button class="btn btn-tbl"><span>テキスト</span></button></p>
-			<br><br>
-			<p>btn-tbl.type2
-			<button class="btn btn-tbl type2"><span>+ 新しい配送先を追加</span></button></p> -->
+			<button class="btn-text">紹介者変更</button> <br>
+			<a class="btn-text">紹介者変更</a>
+
 
 			<h3 class="title">&#x25CE; Icon Button</h3>
-
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<button class="btn btn-icon"><span>新しい配送先を追加</span></button>
+<pre class="language-html"><code><!--<button class="btn-icon"><span>詳細を見る</span></button>
+<a class="btn-icon"><span>詳細を見る</span></a>
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
-				기본 클래스인 "<strong>btn</strong>"에 클래스 "<strong>btn-icon</strong>"추가하여 사용하고, 아이콘은 css의 "<strong>.btn-icon span:before</strong>"부분을 수정함.
+				<strong>btn-icon</strong>", 아이콘은 css의 "<strong>.btn-icon span:before</strong>"부분을 수정함.
 			</div>
-<!-- 
-			<button class="btn btn-icon"><span>新しい配送先を追加</span></button> -->
+
+			<button class="btn-icon"><span>詳細を見る</span></button>
+			<a class="btn-icon"><span>詳細を見る</span></a>
+
 
 			<h3 class="title">&#x25CE; 삭제 버튼</h3>
 
@@ -268,55 +231,6 @@
 			</div>
 
 			<!-- <button class="btn-del"><span>삭제</span></button> -->
-
-			<h3 class="title">&#x25CE; 팝업 내 닫기 버튼</h3>
-
-<!-- 코드 삽입 -->
-<button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<div class="cta-outer full-type">
-	<button class="btn btn-type2 btn-close"><span>CANCEL</span></button>
-	<button class="btn pop-open" data-pop-idx="n"><span>Inner popup</span></button>
-</div>
---></code></pre>
-<!-- //코드 삽입 -->
-			<div class="conIn_tip">
-				.btn-close
-			</div>
-
-			<!-- <div class="cta-outer full-type">
-				<button class="btn btn-type2 btn-close"><span>CANCEL</span></button>
-				<button class="btn pop-open" data-pop-idx="n"><span>Inner popup</span></button>
-			</div> -->
-
-			
-			<h3 class="title">&#x25CE; 하이퍼 링크</h3>
-<!-- 코드 삽입 -->
-<button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!-- <a href="" class="text-link">個人情報保護政策</a>
---></code></pre>
-<!-- //코드 삽입 -->
-			<div class="conIn_tip">
-				.text-link / 하이퍼링크일경우 사용
-			</div>
-
-			<!-- <p><a href="" class="text-link">個人情報保護政策</a> および <a href="" class="text-link">利用約款</a>に 同意して注文</p> -->
-			
-			
-			<h3 class="title">&#x25CE; 텍스트 버튼</h3>
-<!-- 코드 삽입 -->
-<button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!-- <button class="btn-text">オプション変更</button>
-<a class="btn-text">オプション変更</a>
---></code></pre>
-<!-- //코드 삽입 -->
-			<div class="conIn_tip">
-				.btn-text / 텍스트 형태의 버튼
-			</div>
-
-			<button class="btn-text">紹介者変更</button> <br>
-			<a class="btn-text">紹介者変更</a>
-
-
 			
 			
 			<h3 class="title">&#x25CE; 박스 버튼</h3>

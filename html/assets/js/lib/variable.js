@@ -10,7 +10,7 @@ mo = 767;
 decimalVal = 1.2;
 lastY = 0;
 lastScrTopPos = 0;
-radius = 140;
+radius = 44;
 day = 120;
 mSecond = 1000;
 

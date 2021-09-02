@@ -157,7 +157,7 @@
 			right: 0px;
 		}
 		.hmj-container {
-			padding-top: 241px;
+			padding-top: 155px;
 		}
 		.hmj-header.scr-chk {
 			-webkit-transition: background-color .4s ease-in-out;
@@ -462,12 +462,13 @@
 		</div>	
 		<div class="sub-cont">
 			<div class="history">
-				<span>HOME</span>
-				<span>Page Title</span>
+				<a href="#">HOME</a>
+				<a href="#">MY</a>
+				<a href="#">クーポン</a>
+				<span class="page-title">マイリファラルコード </span>
 			</div>
 			<button type="button" class="back-page">Back page</button>
-			<div class="page-title">Page Title</div>
-		</div>	
+		</div>
 		<!-- //header -->
 	</div>
 	<!--//header -->
@@ -475,6 +476,13 @@
 	<!-- container -->
 	<div id="hmjContainer" class="hmj-container"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
 		<div class="hmj-content">
+			<div class="top-visual">
+				<picture>
+					<source srcset="../assets/images/common/@img_visual_01_pc.jpg" media="(min-width: 1120px)">
+					<source srcset="../assets/images/common/@img_visual_01_mo.jpg" media="(max-width: 1119px)">
+					<img src="../assets/images/common/@img_visual_01_pc.jpg" alt="top visual">
+				</picture>
+			</div>
 			<div class="cont-outer">
 				<div class="test-wrap">
 					<div class="test-outer">
@@ -595,50 +603,56 @@
 				<li class="mo-toggle">
 					<div class="item">
 						<button class="tit-btn">Purchase</button>
-						<ul class="cont">
-							<li><a href="#">온라인 구매방법 안내</a></li>
-							<li><a href="#">이달의 구매 혜택</a></li>
-							<li><a href="#">정부보조금 정책</a></li>
-							<li><a href="#">온라인 계약</a></li>
-							<li><a href="#">견적내기</a></li>
-							<li><a href="#">테스트 드라이브</a></li>
-							<li><a href="#">구매상담 신청</a></li>
-							<li><a href="#">사양백과</a></li>
-							<li><a href="#">카탈로그 다운로드</a></li>
-							<li><a href="#">가격표 다운로드</a></li>
-							<li><a href="#">Referral code 이용안내</a></li>
-						</ul>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">온라인 구매방법 안내</a></li>
+								<li><a href="#">이달의 구매 혜택</a></li>
+								<li><a href="#">정부보조금 정책</a></li>
+								<li><a href="#">온라인 계약</a></li>
+								<li><a href="#">견적내기</a></li>
+								<li><a href="#">테스트 드라이브</a></li>
+								<li><a href="#">구매상담 신청</a></li>
+								<li><a href="#">사양백과</a></li>
+								<li><a href="#">카탈로그 다운로드</a></li>
+								<li><a href="#">가격표 다운로드</a></li>
+								<li><a href="#">Referral code 이용안내</a></li>
+							</ul>
+						</div>
 					</div>
 				</li>
 				<li class="mo-toggle">
 					<div class="item">
 						<button class="tit-btn">Service</button>
-						<ul class="cont">
-							<li><a href="#">서비스 네트워크</a></li>
-							<li><a href="#">충전소 안내</a></li>
-							<li><a href="#">긴급출동서비스</a></li>
-							<li><a href="#">정비예약</a></li>
-							<li><a href="#">리콜정보</a></li>
-							<li><a href="#">BLUELINK</a></li>
-							<li><a href="#">빌트인캠</a></li>
-							<li><a href="#">네비게이션/빌트인캠 업데이트</a></li>
-							<li><a href="#">제휴 서비스</a></li>
-							<li><a href="#">앱 설치 안내</a></li>
-						</ul>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">서비스 네트워크</a></li>
+								<li><a href="#">충전소 안내</a></li>
+								<li><a href="#">긴급출동서비스</a></li>
+								<li><a href="#">정비예약</a></li>
+								<li><a href="#">리콜정보</a></li>
+								<li><a href="#">BLUELINK</a></li>
+								<li><a href="#">빌트인캠</a></li>
+								<li><a href="#">네비게이션/빌트인캠 업데이트</a></li>
+								<li><a href="#">제휴 서비스</a></li>
+								<li><a href="#">앱 설치 안내</a></li>
+							</ul>
+						</div>
 					</div>
 				</li>
 				<li class="mo-toggle">
 					<div class="item">
 						<button class="tit-btn">Brand Story</button>
-						<ul class="cont">
-							<li><a href="#">IONIQ 5</a></li>
-							<li><a href="#">IONIQ 5 Teasing</a></li>
-							<li><a href="#">Mini 45EV</a></li>
-							<li><a href="#">IONIQ</a></li>
-							<li><a href="#">Hyundai X BTS</a></li>
-							<li><a href="#">#Thisisus</a></li>
-							<li><a href="#">Hyundai X BBC</a></li>
-						</ul>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">IONIQ 5</a></li>
+								<li><a href="#">IONIQ 5 Teasing</a></li>
+								<li><a href="#">Mini 45EV</a></li>
+								<li><a href="#">IONIQ</a></li>
+								<li><a href="#">Hyundai X BTS</a></li>
+								<li><a href="#">#Thisisus</a></li>
+								<li><a href="#">Hyundai X BBC</a></li>
+							</ul>
+						</div>
 					</div>
 				</li>
 				<li>

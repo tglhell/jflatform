@@ -563,17 +563,12 @@ jQuery.event.add(window, 'load', function () {
 
 	//toggle common
 	function toggle(){
-		$('.toggle').off()
-		// $('.toggle .cont').slideUp(0);
-		// $('.toggle .active .cont').slideDown(0);
 		$('.toggle').on('click', '.tit-btn' ,function(){
 			var toggleItem = $(this).parent('.item');
 			if(toggleItem.hasClass('active')) {
 				toggleItem.removeClass('active');
-				// toggleItem.find('.cont').slideUp(300);
 			} else {
 				toggleItem.addClass('active');
-				// toggleItem.find('.cont').slideDown(300);
 			}
 		});
 	};
@@ -667,6 +662,20 @@ function customSelect() {
 			$('.select-items').hide();
 		}
 	})
+
+	$('.inp-textarea').on('focusin focusout keyup', 'textarea', function (e) {
+		if (e.type == 'focusin') {
+			$(this).parent().addClass('focus');
+		} else if (e.type == "focusout") {
+			$(this).parent().removeClass('focus');
+		} else {
+			if ($(this).val() == 0) {
+				$(this).parent().removeClass('active');
+			} else {
+				$(this).parent().addClass('active');
+			}
+		}
+	});
 };
 
 

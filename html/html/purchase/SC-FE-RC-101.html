@@ -12,7 +12,7 @@
 	
 	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
-	<script type="text/javascript" src="../../assets/js/common.js"></script>
+	<script type="text/javascript" src="../../assets/js/common.js"></script>	
 </head>
 
 <body>
@@ -78,12 +78,12 @@
 		</div>		
 		<div class="sub-cont">
 			<div class="history">
-				<span>MY</span>
-				<span>クーポン</span>
-				<span>Referral Code</span>
+				<a href="#">HOME</a>
+				<a href="#">MY</a>
+				<a href="#">クーポン</a>
+				<span class="page-title">マイリファラルコード </span>
 			</div>
 			<button type="button" class="back-page">Back page</button>
-			<div class="page-title">referral Code</div>
 		</div>
 		<!-- //header -->
 	</div>
@@ -96,165 +96,197 @@
 				<div class="cont-left">
                     <div class="cont-left-box">My Left Menu</div>
                 </div>
-                <div class="cont-center"> 
-					<!-- tab section 임시 -->
+                <div class="cont-center my-rc"> 
+					<div class="tit-area">
+						<h4>マイリファラルコード </h4>
+						<p class="cont-text2">Hyundai自動車ならではのスペシャルなリワードサービスです。</p>
+					</div>
 					<div class="tab-box-wrap js-tab">
 						<div class="tab-box-outer">
 							<ul class="tab-box-list">
-								<li><a href="#">リファラルコード</a></li>
-								<li class="active"><a href="#">リワード</a></li>
+								<li class="active"><a href="#">リファラルコード</a></li>
+								<li><a href="#">リワード</a></li>
 							</ul>
 						</div>
 					
 						<div class="tab-box-cont js-tab-cont">
 							<!-- referral code -->
-							<div class="tab-box-item">
-								<div>
-									<div class="img-cont">
-										<a href="#a">
-											<p class="text">自分だけのコードを作成して共有してください。</p>
-										</a>
-									</div>
-									<div class="ex-wrap toggle">
-										<!-- 나의 RC 있는 경우 -->
-										<div class="item active">
-											<p class="tit-btn">ご紹介者のReferral Code</p>
-											<p>紹介者のリファラルコード</p>
-											<div class="cont" style="">
-												<!-- 추천인의 RC -->
-												<div class="referral-data">
-													<p>お客様の紹介者は<span class="text-name">奈*****</span>様で、
-														ご登録のReferral Codeは<span class="text-code">leeh1234</span>です。</p>
-												</div>
-												<div class="period-box">
-													<div class="graph"></div>
-													<ul class="detail">
-														<li class="date"></li>
-														<li class="time"></li>
-													</ul>
-													<p class="description">Referral Code の有効期限内に車両を購入すると、当社の規定による特典を提供いたします。​</p>
-												</div>
-												<ul class="caution"> 
-													<li>特典は、規定と時期により変動する場合がございます。​</li>
-													<li>紹介者が異なる場合、紹介者変更で変更していただけます。<a href="" class="text-link">紹介者変更</a></li>
-												</ul>
-												<div class="cta-outer">
-													<button class="btn"><span>購入相談申込</span></button>
-													<button class="btn btn-type2"><span>見積履歴</span></button>
-												</div>
-												<!-- // 추천인의 RC -->												
+							<div class="tab-box-item active">
+								<!-- 배너 영역 -->
+								<div class="banner-cont">
+									<a href="SC-FE-RC-001.html">
+										<img src="../../assets/images/@img_referral_banner01.jpg" alt="banner img">
+										<p class="text">リファラルコードのご案内</p>
+									</a>
+								</div>
+								<!-- // 배너 영역 -->
+								<div class="ex-wrap toggle">
+									<!-- 추천인의 리퍼럴 코드 -->
+									<div class="item recommend-code active">
+										<p class="tit-btn">紹介者のリファラルコード</p>
+										<div class="cont">
+											<div class="referral-data cont-tit">
+												お客様の紹介者は<span class="fc-color">奈*****</span>様で、<br>
+												ご登録のリファラルコード は、<span class="fc-color3">leeh1234</span>です。
 											</div>
-										</div>
-										<div class="item">
-											<p class="tit-btn">マイReferral Code</p>
-											<div class="cont">
-												<!-- 나의 RC 없는 경우 -->
-												<div class="no-data">
-													<p class="title">Referral Codeは生成されませんでした。</p>
-													<p class="text">お客様の車両購入および納車が完了されますと当社の規定により
-														​Referral Codeが生成されます。</p>
-													<div class="box-info">
-														<p class="text">追加のお問合せは<br>
-															<span>統合顧客相センター(+81-45-000-0000)​</span>にご連絡ください。</p>
+											<div class="period-box">
+												<div>
+													<div class="svg-outer-box pc-only">
+														<svg class="progress" width="104" height="104" viewbox="0 0 104 104">
+															<circle class="progress-meter" cx="52" cy="52" r="44" stroke-width="9" />
+															<circle class="progress-bottom" cx="52" cy="52" r="44" stroke-width="10" />
+															<circle class="progress-top" cx="52" cy="52" r="44" stroke-width="10" />
+															<circle class="progress-ing" cx="52" cy="52" r="44" stroke-width="10" />
+														</svg>
+														<!-- <input id="control" type="range" value="0" min="0" max="120" /> -->
+														<strong class="progress-num">120日</strong>
+													</div>
+													<div class="svg-outer-box mo-only">
+														<svg class="progress" width="120" height="120" viewbox="0 0 120 120">
+															<circle class="progress-meter" cx="60" cy="60" r="50" stroke-width="9" />
+															<circle class="progress-bottom" cx="60" cy="60" r="50" stroke-width="10" />
+															<circle class="progress-top" cx="60" cy="60" r="50" stroke-width="10" />
+															<circle class="progress-ing" cx="60" cy="60" r="50" stroke-width="10" />
+														</svg>
+														<!-- <input id="control" type="range" value="0" min="0" max="120" /> -->
+														<strong class="progress-num">120日</strong>
 													</div>
 												</div>
-												<!-- // 나의 RC 없는 경우 -->
-												<!-- 나의 RC -->
-												<div class="my-rc">
-													<img src="" alt="">
-													<p class="text-code">Referral Codeは、<span>hyun1574</span>です。</p>
-													<p class="description">URLを活用してお客様のReferral Codeをご友人に共有してください。</p>													
+												<div class="info-box cont-text2">
+													<ul class="detail">
+														<li class="date">有効期限<span>2021-08-28 </span></li>
+														<li class="time">残り時間<span>105日23時59分59秒​</span></li>
+													</ul>
+													<p class="text-info">有効期限内に車両を購入し、納車がが完了されますと、当社規定による特典を提供いたします。</p>
 												</div>
-												<!-- // 나의 RC -->
 											</div>
-										</div>
-										<!-- // 나의 RC 있는 경우 -->
-										<!-- 나의 RC 없는 경우 -->
-										<div class="item">
-											<p class="tit-btn">マイReferral Code</p>
-											<div class="cont">
-											</div>											
-										</div>
-										<div class="item">											
-											<p class="tit-btn">ご紹介者のReferral Code</p>
-											<div class="cont">
+											<div class="caution">
+												<ul>
+													<li>特典は、規定と時期により変動する場合がございます。</li>
+													<li>紹介者が異なる場合、紹介者変更で変更していただけます。<a href="" class="btn-text">紹介者変更</a></li>
+												</ul>													
 											</div>
+											<div class="cta-outer row-type">
+												<button class="btn btn-middle"><span>購入相談申込</span></button>
+												<button class="btn btn-type2 btn-middle"><span>見積シミュレーション</span></button>
+											</div>
+											<!-- 추천인 없는 경우 -->
+
+											<!-- // 추천인 없는 경우 -->
 										</div>
-										<!-- // 나의 RC 없는 경우 -->
 									</div>
+									<!-- // 추천인의 리퍼럴 코드 -->
+									<!-- 나의 리퍼럴 코드 -->
+									<div class="item my-code">
+										<p class="tit-btn">マイリファラルコード</p>
+										<div class="cont">											
+											<div class="my-rc-code">
+												<div class="img-box">
+													<img src="../../assets/images/@img_rc_car.png" alt="">
+												</div>
+												<p class="text-code01 cont-tit">お客様のリファラルコード は、</p><p class="text-code02 cont-tit"><span class="fc-color3">hyun1574</span>です。</p>
+												<p class="text cont-text2">下記のURLを利用してお客様のリファラルコードをご友人に共有してください。</p>
+												<div class="box-code-share">
+													<input type="url" title="referral code url form" class="inp-url" value="https://www.Hyundai.jp/RC=hyun1574">
+													<button type="button" class="btn-copy">コピー</button>
+													<div class="btn-share">
+														<button type="button" class="htr">共有する</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- // 나의 리퍼럴 코드 -->
+									<!-- 나의 리퍼럴 코드 :: 나의 RC 없는 경우 -->
+									<div class="item my-code">
+										<p class="tit-btn">マイリファラルコード </p>
+										<div class="cont">
+											<div class="no-data">
+												<p class="title cont-text">お客様のリファラルコードは 生成されませんでした。</p>
+												<p class="text1 cont-text htr">
+													車両の購入および納車が完了されますと、<br>
+													当社の規定によりリファラルコードが生成されます。<br>
+													生成および反映時期は、規定により変動する場合があります。</p>
+												<div class="box-info">
+													<p class="text2 cont-text htr">追加のお問い合わせは<br><span>統合顧客相センター(+81-45-000-0000)​</span>にご連絡ください。</p>
+												</div>
+											</div>									
+										</div>
+									</div>
+									<!-- // 나의 리퍼럴 코드 :: 나의 RC 없는 경우 -->
 								</div>
 							</div>
 							<!-- // referral code -->
 							<!-- reward -->
-							<div class="tab-box-item active">
+							<div class="tab-box-item">
 								<div class="reward-status">
-									<p class="sub-tit">マイリファラルコード</p>
-									<p class="text-date">2021-05-31基準、累積</p>
+									<p class="sub-tit cont-tit">マイリファラルコード</p>
+									<p class="text-date htr">2021-05-31基準、累積</p>
 									<ul class="reward-data">
 										<li>
-											<p>推薦人に登録した人</p>
-											<p><span>10</span>人</p>
+											<p class="tit cont-text2 htr">マイコードで登録した会員</p>
+											<p class="data"><span class="num">10</span><span class="htr">人</span></p>
 										</li>
 										<li>
-											<p>提供されたリワード</p>
-											<p><span>40</span>件</p>
+											<p class="tit cont-text2 htr">提供されたリワード</p>
+											<p class="data"><span class="num fc-color3">40</span><span class="htr">件</span></p>
 										</li>
 									</ul>
 								</div>
 								<div class="my-reward">
-									<p class="sub-tit">マイリワード<span>40</span></p>
-									<ul class="list-reward">
-										<li>
-											<span class="tit">電気充電券  ￥ 10,000 ​</span>
-											<span class="name">石*****</span>
-											<span class="date">2021-01-12​</span>
-										</li>
-										<li>
-											<span class="tit">KUMHOタイヤ18インチ交換件(4本セット)​​</span>
-											<span class="name">石*****</span>
-											<span class="date">2021-01-12​</span>
-										</li>
-										<li>
-											<span class="tit">沖縄ホテル２泊宿泊券​​</span>
-											<span class="name">石*****</span>
-											<span class="date">2021-01-12​</span>
-										</li>
-										<li>
-											<span class="tit">水素車両充填権 ￥ 35,000 ​</span>
-											<span class="name">石*****</span>
-											<span class="date">2021-01-12​</span>
-										</li>
-										<li>
-											<span class="tit">KUMHOタイヤ18インチ交換件(4本セット)​</span>
-											<span class="name">石*****</span>
-											<span class="date">2021-01-12​</span>
-										</li>
-										<li>
-											<span class="tit">電気充電券  ￥ 10,000 ​</span>
-											<span class="name">石*****</span>
-											<span class="date">2021-01-12​</span>
-										</li>
-										<li>
-											<span class="tit">KUMHOタイヤ18インチ交換件(4本セット)​​</span>
-											<span class="name">石*****</span>
-											<span class="date">2021-01-12​</span>
-										</li>
-										<li>
-											<span class="tit">沖縄ホテル２泊宿泊券​​</span>
-											<span class="name">石*****</span>
-											<span class="date">2021-01-12​</span>
-										</li>
-										<li>
-											<span class="tit">水素車両充填権 ￥ 35,000 ​</span>
-											<span class="name">石*****</span>
-											<span class="date">2021-01-12​</span>
-										</li>
-										<li>
-											<span class="tit">KUMHOタイヤ18インチ交換件(4本セット)​</span>
-											<span class="name">石*****</span>
-											<span class="date">2021-01-12​</span>
-										</li>
-									</ul>
+									<p class="sub-tit cont-tit">マイリワード<span class="fc-color3 num">40</span></p>
+										<ul class="list-reward">
+											<li>
+												<p class="product-name cont-text">電気充電券  ￥ 10,000 ​</p>
+												<p class="name htr">石*****</p>
+												<p class="date htr">2021-01-12​</p>
+											</li>
+											<li>
+												<p class="product-name cont-text">KUMHOタイヤ18インチ交換件(4本セット)​​</p>
+												<p class="name htr">石*****</p>
+												<p class="date htr">2021-01-12​</p>
+											</li>
+											<li>
+												<p class="product-name cont-text">沖縄ホテル２泊宿泊券​​</p>
+												<p class="name htr">石*****</p>
+												<p class="date htr">2021-01-12​</p>
+											</li>
+											<li>
+												<p class="product-name cont-text">水素車両充填権 ￥ 35,000 ​</p>
+												<p class="name htr">石*****</p>
+												<p class="date htr">2021-01-12​</p>
+											</li>
+											<li>
+												<p class="product-name cont-text">KUMHOタイヤ18インチ交換件(4本セット)​</p>
+												<p class="name htr">石*****</p>
+												<p class="date htr">2021-01-12​</p>
+											</li>
+											<li>
+												<p class="product-name cont-text">電気充電券  ￥ 10,000 ​</p>
+												<p class="name htr">石*****</p>
+												<p class="date htr">2021-01-12​</p>
+											</li>
+											<li>
+												<p class="product-name cont-text">KUMHOタイヤ18インチ交換件(4本セット)​​</p>
+												<p class="name htr">石*****</p>
+												<p class="date htr">2021-01-12​</p>
+											</li>
+											<li>
+												<p class="product-name cont-text">沖縄ホテル２泊宿泊券​​</p>
+												<p class="name htr">石*****</p>
+												<p class="date htr">2021-01-12​</p>
+											</li>
+											<li>
+												<p class="product-name cont-text">水素車両充填権 ￥ 35,000 ​</p>
+												<p class="name htr">石*****</p>
+												<p class="date htr">2021-01-12​</p>
+											</li>
+											<li>
+												<p class="product-name cont-text">KUMHOタイヤ18インチ交換件(4本セット)​</p>
+												<p class="name htr">石*****</p>
+												<p class="date htr">2021-01-12​</p>
+											</li>
+										</ul>
 									<div class="hmj-pagination">
 										<a href="#" class="btn-page-first"></a>
 										<a href="#" class="btn-page-prev"></a>
@@ -266,12 +298,20 @@
 										<a href="#" class="btn-page-next">もっと見る(<span>1</span>/<span>3</span>)</a>
 										<a href="#" class="btn-page-last"></a>
 									</div>
+									<!-- 나의 Reward 없는 경우 -->
+
+									<!-- // 나의 Reward 없는 경우 -->
+									<div class="caution type2">
+										<ul>
+											<li>リワードの支給が確定された件は、翌月の最終営業日に一括支給されます。</li>
+											<li>リワードの内容と支給方法は、当社の規定により変動する場合がございます。 </li>
+										</ul>
+									</div>
 								</div>
 							</div>
 							<!-- // reward -->				
 						</div>
 					</div>
-					<!-- // tab section 임시 -->
                 </div>			
 			</div>
 		</div>
@@ -289,6 +329,66 @@
 		<span class="blind">Top</span>
 	</a>
 </div>
+
+<!-- chart script -->
+<script>
+	$(function () {
+		function contAutoPadding () {
+			let headerHgt = $('.hmj-header').outerHeight(true);
+
+			$('.cont-outer').css('padding-top', headerHgt + 25);
+		}
+		contAutoPadding();
+
+		let numVal = 85; //소비된 일수
+		function progress() {
+			const progressItem = [$('.progress-top') , $('.progress-bottom'), $('.progress-ing'), $('.progress-num')];
+			if ($(window).width() <= tbl) {
+				radius = 50;
+			} else {
+				radius = 44;
+			}
+			let circumference = irNum[1] * Math.PI * radius;
+			let progress = numVal / day;
+			let dashoffset = circumference * (irNum[0] - progress);
+			let dayCntNum = day - numVal;
+			for (let i = day; i >= dayCntNum; i--) {
+				$(function (i) {
+					setObj(function () {
+						progressItem[3].text((day + dayCntNum) - i + '日');
+					}, (decimalVal * twoDig[0]) * i);
+				}(i));
+			}
+			for (let i = 1; i <= 2; i++ ) progressItem[i].css('stroke-dasharray', circumference);
+			setObj(function () {
+				if (!$('html').hasClass('ios')) {
+					progressItem[0].css('stroke-dasharray', circumference + 16);
+					progressItem[1].css('stroke-dashoffset', (dashoffset - circumference) + irNum[1]);
+					progressItem[2].animate({strokeDashoffset:dashoffset - circumference}, ((numVal / secVal[0]) * decimalVal) * mSecond);
+				} else {
+					progressItem[0].css('stroke-dasharray', circumference + 11);
+					progressItem[1].css('stroke-dashoffset', (circumference - dashoffset) - irNum[1]);
+					progressItem[2].animate({strokeDashoffset:circumference - dashoffset}, ((numVal / secVal[0]) * decimalVal) * mSecond);
+				}
+			}, ((day - numVal) / secVal[0] * decimalVal) * mSecond);
+			setObj(function () {
+				switch(numVal) {
+					case day:
+						for (let i = 0; i <= 1; i++ ) progressItem[i].fadeOut(secVal[1]);
+					break;
+				}
+			}, ((numVal / secVal[0]) * decimalVal) * mSecond);
+		}
+		if (numVal > twoDig[5]) {
+			setObj(function () {
+				progress();
+			}, secVal[4]);
+		} else {
+			progress();
+		}
+	});
+</script>
+<!-- // chart script -->
 
 </body>
 </html>

@@ -187,8 +187,8 @@
 
 		.svg-outer-box {
 			position: relative;
-			width: 300px;
-			height: 300px;
+			width: 104px;
+			height: 104px;
 			margin: 0 40px;
 		}
 		.progress {
@@ -242,8 +242,8 @@
 			bottom: 0;
 			top: 0;
 			text-align: center;
-			font-size: 40px;
-			line-height: 300px;
+			font-size: 20px;
+			line-height: 104px;
 		}
 		/* https://snippet-generator.app/ */
 	</style>
@@ -287,7 +287,7 @@
 			// 	}
 			// });
 
-			let numVal = 67; //소비된 일수
+			let numVal = 105; //소비된 일수
 			function progress() {
 				const progressItem = [$('.progress-top') , $('.progress-bottom'), $('.progress-ing'), $('.progress-num')];
 				let circumference = irNum[1] * Math.PI * radius;
@@ -301,25 +301,23 @@
 						}, (decimalVal * twoDig[0]) * i);
 					}(i));
 				}
-				progressItem[1].css('stroke-dasharray', circumference);
-				progressItem[2].css('stroke-dasharray', circumference);
+				for (let i = 1; i <= 2; i++ ) progressItem[i].css('stroke-dasharray', circumference);
 				setObj(function () {
 					if (!$('html').hasClass('ios')) {
-						progressItem[0].css('stroke-dasharray', circumference);
-						progressItem[1].css('stroke-dashoffset', (dashoffset - circumference) + irNum[4]);
+						progressItem[0].css('stroke-dasharray', circumference + 16);
+						progressItem[1].css('stroke-dashoffset', (dashoffset - circumference) + irNum[1]);
 						progressItem[2].animate({strokeDashoffset:dashoffset - circumference}, ((numVal / secVal[0]) * decimalVal) * mSecond);
 					} else {
-						progressItem[0].css('stroke-dasharray', circumference - irNum[4]);
-						progressItem[1].css('stroke-dashoffset', (circumference - dashoffset) - irNum[4]);
+						progressItem[0].css('stroke-dasharray', circumference + 11);
+						progressItem[1].css('stroke-dashoffset', (circumference - dashoffset) - irNum[1]);
 						progressItem[2].animate({strokeDashoffset:circumference - dashoffset}, ((numVal / secVal[0]) * decimalVal) * mSecond);
 					}
 				}, ((day - numVal) / secVal[0] * decimalVal) * mSecond);
 				setObj(function () {
 					switch(numVal) {
 						case day:
-							progressItem[0].fadeOut(secVal[1]);
-							progressItem[1].fadeOut(secVal[1]);
-						break;	
+							for (let i = 0; i <= 1; i++ ) progressItem[i].fadeOut(secVal[1]);
+						break;
 					}
 				}, ((numVal / secVal[0]) * decimalVal) * mSecond);
 			}
@@ -582,11 +580,11 @@
 			<div class="cont-outer fullcase scr-item active active-idx">
 				<div class="main-outer">
 					<div class="svg-outer-box">
-						<svg class="progress" width="300" height="300" viewbox="0 0 300 300">
-							<circle class="progress-meter" cx="150" cy="150" r="140" stroke-width="13" />
-							<circle class="progress-bottom" cx="150" cy="150" r="140" stroke-width="14" />
-							<circle class="progress-top" cx="150" cy="150" r="140" stroke-width="14" />
-							<circle class="progress-ing" cx="150" cy="150" r="140" stroke-width="14" />
+						<svg class="progress" width="104" height="104" viewbox="0 0 104 104">
+							<circle class="progress-meter" cx="52" cy="52" r="44" stroke-width="9" />
+							<circle class="progress-bottom" cx="52" cy="52" r="44" stroke-width="10" />
+							<circle class="progress-top" cx="52" cy="52" r="44" stroke-width="10" />
+							<circle class="progress-ing" cx="52" cy="52" r="44" stroke-width="10" />
 						</svg>
 						<!-- <input id="control" type="range" value="0" min="0" max="120" /> -->
 						<strong class="progress-num">120日</strong>

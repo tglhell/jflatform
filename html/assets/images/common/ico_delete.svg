@@ -1,13 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-    <g fill="none" fill-rule="evenodd">
-        <g>
-            <g>
-                <g transform="translate(-316.000000, -194.000000) translate(20.000000, 194.000000) translate(296.000000, 0.000000)">
-                    <circle cx="12" cy="12" r="12" fill="#F2F2F2"/>
-                    <g fill="#444" fill-rule="nonzero">
-                        <path d="M8.485 0L9.546 1.061 1.061 9.546 0 8.485z" transform="translate(7.469670, 7.469670)"/>
-                        <path d="M1.061 0L9.546 8.485 8.485 9.546 0 1.061z" transform="translate(7.469670, 7.469670)"/>
-                    </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>4ED014F4-464A-4D6F-BEBE-77CD96E8F81F</title>
+    <g id="02_Component-Guideline" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Input-Field" transform="translate(-804.000000, -700.000000)">
+            <g id="Input-/-Line-/-Common-/-Typing" transform="translate(500.000000, 684.000000)">
+                <g id="Icon-/-Form-/-Cross" transform="translate(304.000000, 16.000000)">
+                    <rect id="Bounding-box" fill="#D8D8D8" opacity="0" x="0" y="0" width="16" height="16"></rect>
+                    <path d="M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M10.4,4.4 L8,6.8 L5.6,4.4 L4.4,5.6 L6.8,8 L4.4,10.4 L5.6,11.6 L8,9.2 L10.4,11.6 L11.6,10.4 L9.2,8 L11.6,5.6 L10.4,4.4 Z" id="Combined-Shape" fill="#E9E9E9"></path>
                 </g>
             </g>
         </g>
