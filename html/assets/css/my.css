@@ -291,13 +291,6 @@
 .my-rc .progress-bottom {
 	stroke-dashoffset: -727.646px;
 }
-.ios .progress-bottom {
-	stroke-dashoffset: 885px;
-}
-.ios .progress-ing {
-	stroke-dasharray: 879.646px;
-	stroke-dashoffset: 0px;
-}
 
 .my-rc .progress-num {
 	position: absolute;
@@ -735,8 +728,5 @@
 	}
 	.my-rc .svg-outer-box.mo-only {
 		display:block;
-	}
-	.my-rc .progress-top {
-		stroke-dashoffset: 988.159px;
 	}
 }

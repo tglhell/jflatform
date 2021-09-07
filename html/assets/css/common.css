@@ -1347,6 +1347,7 @@ textarea:-ms-input-placeholder {
 	height: 148px;
 	padding: 16px;
 	border: 1px solid #e9e9e9;
+	border-radius: 8px;
 	background-color: #fff;
 }
 .inp-textarea.focus,
@@ -1636,6 +1637,7 @@ textarea:-ms-input-placeholder {
 	padding: 0 40px;
 	text-align: center;
 	transition: all 0.2s ease-in-out;
+	border-radius: 4px;
 }
 .btn span {
 	display: inline-block;
@@ -1661,9 +1663,9 @@ textarea:-ms-input-placeholder {
 .btn:disabled span, .btn.disabled span {
 	opacity: 0.4;
 }
-.btn.rd {
+/* .btn.rd {
 	border-radius: 4px;
-}
+} */
 
 /* button color */
 .btn-type2 {
@@ -2984,14 +2986,17 @@ p.noti::before {
 }
 .layer-popup-cont {
 	position: relative;
+	overflow: hidden;
 	display: inline-block;
-	width: 700px;
+	width: 736px;
+	border-radius: 8px;
 	background: #fff;
 	text-align: left;
 	vertical-align: middle;
 }
 .layer-popup-cont.pop-small {
-	width: 500px;
+	width: 544px;
+	max-height: 864px;
 }
 .layer-popup-cont .cta-outer {
 	margin-top: 40px;
@@ -3000,9 +3005,14 @@ p.noti::before {
 	outline: 1px solid #ccc;
 } */
 .layer-popup-body .layer-title {
-	padding: 13px 80px 13px 40px;
-	border-bottom: 1px solid #ccc;
-	background-color: rgba(255, 255, 255, .9);
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+	min-height: 72px;
+	padding: 16px 80px 16px 32px;
+	background-color: #f5f5f5;
 	font-size: 18px;
 	line-height: 1.5;
 }
@@ -3011,12 +3021,12 @@ p.noti::before {
 	overflow-y: auto;
 	height: auto;
 	min-height: 180px;
-	padding: 20px 40px 40px;
+	padding: 56px 48px 40px;
 }
 .layer-popup-body .btn-close-popup {
 	position: absolute;
-	top: 10px;
-	right: 35px;
+	top: 17px;
+	right: 12px;
 	z-index: 10;
 	width: 33px;
 	height: 33px;
