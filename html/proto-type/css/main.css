@@ -1,0 +1,95 @@
+html,
+body {
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#renderCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  touch-action: none;
+  z-index: 10;
+  outline-width: 0;
+  pointer-events: none;
+  /* background-color: #808080 */
+}
+
+#buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+}
+
+#htmlLayer {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #dbd6d6;
+}
+
+#loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  color: black;
+  font-size: 50px;
+  background-color: white;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+}
+
+.template-box {
+  width: 300px;
+  height: 150px;
+  margin: 20px;
+  background-color: #ccc;
+}
+
+.screen {
+  height: 100vh;
+  display: flex;
+}
+
+.screen > .content {
+  margin-top: auto;
+  margin-bottom: 30px;
+}
+
+.section-one {
+  background-color: white;
+}
+
+.section-two {
+  color: white;
+  background-color: steelblue;
+}
+
+.section-three {
+  color: white;
+  background-color: crimson;
+}
+
+.section-four {
+  color: white;
+  background-color: lime;
+}
+
+.section-five {
+  color: white;
+  background-color: grey;
+}
+
+.content-one {
+  display: flex;
+}

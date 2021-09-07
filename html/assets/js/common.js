@@ -561,22 +561,6 @@ jQuery.event.add(window, 'load', function () {
 		innerDepthTar.css('height', $(window).height() - 180);
 	}
 
-	//toggle common
-	function toggle(){
-		$('.toggle').on('click', '.tit-btn' ,function(){
-			var toggleItem = $(this).parent('.item');
-			if(toggleItem.hasClass('active')) {
-				toggleItem.removeClass('active');
-			} else {
-				toggleItem.addClass('active');
-				if ($(this).parent().find('svg').hasClass('progress') == true) {
-					$('.ie11 .progress').css('transform', 'rotate(-90deg)');
-				};
-			}
-		});
-	};
-	toggle();
-
 	//moToggle 
 	function moToggle(){
 		$('.mo-toggle').off()
@@ -619,6 +603,24 @@ jQuery.event.add(window, 'load', function () {
 		}
 	};
 	mapAutoHeight();
+});
+
+$(function () {
+	//toggle common
+	function toggle(){
+		$('.toggle').on('click', '.tit-btn' ,function(){
+			var toggleItem = $(this).parent('.item');
+			if(toggleItem.hasClass('active')) {
+				toggleItem.removeClass('active');
+			} else {
+				toggleItem.addClass('active');
+				if ($(this).parent().find('svg').hasClass('progress') == true) {
+					$('.ie11 .progress').css('transform', 'rotate(-90deg)');
+				};
+			}
+		});
+	};
+	toggle();
 });
 
 function selectDropdown(data){
@@ -680,7 +682,6 @@ function customSelect() {
 		}
 	});
 };
-
 
 // $('.layer-popup-wrap.fix-center').ready(function() {
 // 	var i = [
