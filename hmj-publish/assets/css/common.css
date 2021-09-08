@@ -3022,6 +3022,9 @@ p.noti::before {
 .layer-popup-cont .cta-outer {
 	margin-top: 40px;
 }
+.layer-popup-cont.pop-small .cta-outer {
+	margin-top: 32px;
+}
 /* .layer-popup-cont:focus {
 	outline: 1px solid #ccc;
 } */
@@ -3042,7 +3045,10 @@ p.noti::before {
 	overflow-y: auto;
 	height: auto;
 	min-height: 180px;
-	padding: 56px 48px 40px;
+	padding: 56px 48px 56px;
+}
+.layer-popup-body .pop-small .layer-cont {
+	padding-bottom: 40px;
 }
 .layer-popup-body .btn-close-popup {
 	position: absolute;
@@ -3055,6 +3061,9 @@ p.noti::before {
 	line-height: 0;
 	background: transparent url('../images/common/ico_close.svg') no-repeat center;
 }
+.layer-popup-wrap .cta-outer .btn + .btn {
+	margin-left: 8px;
+}
 .layer-popup-wrap .bottom-fixed {
 	position: absolute;
 	bottom: 0;
@@ -3064,7 +3073,17 @@ p.noti::before {
 	background-color: #fff;
 }
 .layer-popup-wrap .bottom-fixed .cta-outer {
-	margin-bottom: 40px;
+	margin: 56px -20px 0;
+}
+.layer-popup-wrap .bottom-fixed .btn {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 72px;
 }
 
 @media (max-width: 1119px) {
