@@ -1,0 +1,1104 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>HMJ 온라인 판매 사이트 구축 CODING GUIDE</title>
+
+    <!-- 코딩 가이드용 -->
+    <link rel="stylesheet" href="docs/guide.css">
+    <link rel="stylesheet" href="docs/prism.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+	<script type="text/javascript" src="docs/prism.js"></script>
+	<script type="text/javascript" src="docs/plugin.js"></script>
+	<!-- //코딩 가이드용 -->
+	
+	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../assets/js/common.js"></script>
+
+	<script>
+		$(function(){
+			$('.view_code').on('click', function(){
+				$(this).next('.code-toolbar').toggleClass('open');
+			});
+		});
+		$(window).scroll(function() {
+			if($(this).scrollTop() > 440 ){
+				$('#listHead').addClass('fixed')
+			} else if ($(this).scrollTop() <= 440) {
+				$('#listHead').removeClass('fixed')
+			}
+		})
+	</script>	
+</head>
+
+<body>
+<div class="wrap">
+	<div class="header">
+		<div><em>HMJ 온라인 판매 사이트 구축</em> project coding guide</div>
+		<span>
+			<i class="iconfont iconxinlogopc hidden-xs"></i>
+            <i class="iconfont iconxinlogopc hidden-lg hidden-md hidden-sm"></i>
+		</span>
+	</div>
+	<div class="content" id="codingGiuide">
+		<h1>LIST PAGE</h1>
+		<div class="coding_type">
+			<!--<a href="coding_guide_step_mob.html" title="mobile" class="active">mobile</a>-->
+			<a href="coding_guide_type.html" title="coding list">CODING GUIDE PAGE</a>
+		</div>
+		<div class="ver_view">
+			<p>Version : <b>0.0.01</b></p>
+			<p>Start Day : <b>2021.05.07</b></p>
+			<p>Coding : <b>JQuery&amp;HTML5&amp;CSS3</b></p>
+		</div>
+
+		<div class="box">
+			<h2>이슈사항</h2>
+			<ol class="atten" reversed>
+				<li>이슈타이틀 - <span class="font_color01">강조부분</span> 이슈내용</li>
+				<!-- <li><span class="font_color01">강조부분</span>내용부분</li> -->
+			</ol>
+		</div>
+		<ul class="guide_menu">
+			<li><a href="#HOME">Main/공통 Layout</a></li>
+			<li><a href="#Model">Model</a></li>			
+			<li><a href="#Purchase">Purchase</a></li>	
+			<li><a href="#Service">Service</a></li>
+			<li><a href="#Store">Store</a></li>
+			<li><a href="#Contents">Contents</a></li>
+			<li><a href="#Brand">Brand</a></li>
+			<li><a href="#My">My</a></li>
+			<li><a href="#Members">Members</a></li>
+			<li><a href="#Order">Order</a></li>
+			<li><a href="#Email">Email</a></li>
+			<li><a href="#Common">Common</a></li>
+		</ul>
+		<table class="guide_list" id="listHead">
+			<colgroup>
+				<col style="width:10%;">
+				<col style="width:12%;">
+				<col style="width:25%;">
+				<col style="width:7%;">
+				<col style="width:7%;">
+				<col style="width:8%;">
+				<col>
+			</colgroup>
+			<thead>
+			<tr>
+				<th>2Depth</th>
+				<th>3Depth</th>
+				<th>ID or Page name</th>
+				<th>State</th>
+				<th>View</th>
+				<th>Name</th>
+				<th>Descriptions</th>
+			</tr>
+			</thead>
+		</table>
+
+		<table class="guide_list">
+		<colgroup>
+			<col style="width:10%;">
+			<col style="width:12%;">
+			<col style="width:25%;">
+			<col style="width:7%;">
+			<col style="width:7%;">
+			<col style="width:8%;">
+			<col>
+		</colgroup>
+		<tbody>	
+		<!-- <tr>
+			<th colspan="7">공통</th>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr> -->
+		<tr>
+			<th colspan="7" id="HOME">Main/공통 Layout</th>
+		</tr>	
+		<tr>
+			<td class="txtLeft">HOME</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<th colspan="7" id="Model">model (IONIQ5, NEXO)</th>
+		</tr>
+		<tr>
+			<td class="txtLeft">IONIQ 5</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">NEXO</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<th colspan="7" id="Purchase">purchase (차량검색, 견적/시승, 구매안내)</th>
+		</tr>
+		<tr>
+			<td class="txtLeft">차량검색</td>
+			<td class="txtLeft">내차추천받기</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">사양백과</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/purchase/SC-FE-CN-408.html" target="_blank">View</a></td>
+			<td>김정승</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">견적/시승</td>
+			<td class="txtLeft">거점Map</td>
+			<td class="txtLeft">SC-FE-TD-001</td>
+			<td class="end">완료</td>
+			<td><a href="../html/purchase/SC-FE-TD-001.html" target="_blank">View</a></td>
+			<td>신예진</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">거점Map Anycar</td>
+			<td class="txtLeft">SC-FE-TD-002</td>
+			<td class="end">완료</td>
+			<td><a href="../html/purchase/SC-FE-TD-002.html" target="_blank">View</a></td>
+			<td>신예진</td>
+			<td class="txtLeft">SC-FE-TD-116 포함</td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">신청안내</td>
+			<td class="txtLeft">SC-FE-TD-110</td>
+			<td class="end">완료</td>
+			<td><a href="../html/purchase/SC-FE-TD-110.html" target="_blank">View</a></td>
+			<td>신예진</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">신청자정보</td>
+			<td class="txtLeft">SC-FE-TD-102</td>
+			<td class="end">완료</td>
+			<td><a href="../html/purchase/SC-FE-TD-102.html" target="_blank">View</a></td>
+			<td>신예진</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">신청자정보(비회원)</td>
+			<td class="txtLeft">SC-FE-TD-103</td>
+			<td class="end">완료</td>
+			<td><a href="../html/purchase/SC-FE-TD-103.html" target="_blank">View</a></td>
+			<td>신예진</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">시승장소및모델선택</td>
+			<td class="txtLeft">SC-FE-TD-104</td>
+			<td class="end">완료</td>
+			<td><a href="../html/purchase/SC-FE-TD-104.html" target="_blank">View</a></td>
+			<td>신예진</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">희망일시선택</td>
+			<td class="txtLeft">SC-FE-TD-105</td>
+			<td class="end">완료</td>
+			<td><a href="../html/purchase/SC-FE-TD-105.html" target="_blank">View</a></td>
+			<td>신예진</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">신청정보확인</td>
+			<td class="txtLeft">SC-FE-TD-107</td>
+			<td class="end">완료</td>
+			<td><a href="../html/purchase/SC-FE-TD-107.html" target="_blank">View</a></td>
+			<td>신예진</td>
+			<td class="txtLeft">SC-FE-TD-112, SC-FE-TD-114 포함</td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">시승신청접수완료</td>
+			<td class="txtLeft">SC-FE-TD-108</td>
+			<td class="end">완료</td>
+			<td><a href="../html/purchase/SC-FE-TD-108.html" target="_blank">View</a></td>
+			<td>신예진</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">구매안내</td>
+			<td class="txtLeft">구매방법안내</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">구매상담신청</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">referral Code</td>
+			<td class="txtLeft">브릿지 페이지</td>
+			<td class="txtLeft">SC-FE-RC-001</td>
+			<td class="end"></td>
+			<td><a href="../html/purchase/SC-FE-RC-001.html" target="_blank">View</a></td>
+			<td>이송</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">Referral Code  : 나의 RC</td>
+			<td class="txtLeft">SC-FE-RC-101</td>
+			<td class="end"></td>
+			<td><a href="../html/purchase/SC-FE-RC-101.html" target="_blank">View</a></td>
+			<td>이송</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">Referral Code  : 소개코드</td>
+			<td class="txtLeft">SC-FE-RC-100</td>
+			<td class="end"></td>
+			<td><a href="../html/purchase/SC-FE-RC-100.html" target="_blank">View</a></td>
+			<td>이송</td>
+			<td class="txtLeft"></td>
+		</tr>		
+		<tr>
+			<th colspan="7" id="Service">services (Mocean, Bluelink, 빌트인캠, 충전서비스)</th>
+		</tr>
+		<tr>
+			<td class="txtLeft">MOCEAN</td>
+			<td class="txtLeft">MOCEAN소개</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">이용안내</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">서비스안내</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">Bluelink</td>
+			<td class="txtLeft">Bluelink소개</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">이용안내</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">서비스안내</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">원격제어</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">안전보안</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">차량관리</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">길안내</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">빌트인캠</td>
+			<td class="txtLeft">빌트인캠 소개</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">이용안내</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">서비스안내</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">충전 서비스</td>
+			<td class="txtLeft">충전소</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">EMP 카드안내</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">찾아가는 충전 서비스</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+
+		<tr>
+			<th colspan="7" id="Store">Store</th>
+		</tr>
+		<tr>
+			<td class="txtLeft">카테고리</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+
+		<tr>
+			<th colspan="7" id="Contents">contents (Curation, 이벤트)</th>
+		</tr>
+		
+		<tr>
+			<td class="txtLeft">Curation</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">이벤트</td>
+			<td class="txtLeft">진행중인</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">종료된</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		
+		<tr>
+			<th colspan="7" id="Brand">brand (브랜드스토리, 라이프스타일, 브랜드거점)</th>
+		</tr>
+		<tr>
+			<td class="txtLeft">브랜드 스토리</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">라이프스타일</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">브랜드 거점</td>
+			<td class="txtLeft">직영</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">제휴</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<th colspan="7" id="My">My</th>
+		</tr>
+		<tr>
+			<td class="txtLeft">index</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">My Car</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">My Pick</td>
+			<td class="txtLeft">즐겨찾기</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">최근본히스토리</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">My Service</td>
+			<td class="txtLeft">시승신청조회(회원)</td>
+			<td class="txtLeft">SC-FE-TD-200</td>
+			<td class="end"></td>
+			<td><a href="../html/my/SC-FE-TD-200.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft">SC-FE-TD-201 포함</td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">시승 신청 조회 입력(비회원)</td>
+			<td class="txtLeft">SC-FE-TD-202</td>
+			<td class="end"></td>
+			<td><a href="../html/my/SC-FE-TD-202.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">시승 신청 조회(비회원)</td>
+			<td class="txtLeft">SC-FE-TD-203</td>
+			<td class="end"></td>
+			<td><a href="../html/my/SC-FE-TD-203.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">고객 만족도 조사</td>
+			<td class="txtLeft">비회원  정보 확인</td>
+			<td class="txtLeft">SC-FE-TD-400</td>
+			<td class="end"></td>
+			<td><a href="../html/my/SC-FE-TD-400.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">시승 고객 만족도 조사</td>
+			<td class="txtLeft">SC-FE-TD-401</td>
+			<td class="end"></td>
+			<td><a href="../html/my/SC-FE-TD-401.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">충전서비스 내역관리</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">EMP 카드관리</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">My Contract</td>
+			<td class="txtLeft">견적내역조회</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">차량계약관리</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">Referral Code관리</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">My store</td>
+			<td class="txtLeft">주문/배송조회</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">취소/반품조회</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">쿠폰함</td>
+			<td class="txtLeft">내 쿠폰 조회</td>
+			<td class="txtLeft">SC-FE-MP-500</td>
+			<td class="end"></td>
+			<td><a href="../html/my/SC-FE-MP-500.html" target="_blank">View</a></td>
+			<td>이송</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">보유 쿠폰 없음</td>
+			<td class="txtLeft">SC-FE-MP-nodata</td>
+			<td class="end"></td>
+			<td><a href="../html/my/SC-FE-MP-nodata.html" target="_blank">View</a></td>
+			<td>이송</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">회원정보관리</td>
+			<td class="txtLeft">회원정보수정</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">서비스가입관리</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">회원탈퇴</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">고객센터</td>
+			<td class="txtLeft">1:1 상담</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">상담내역</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">자주묻는질문</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">공지사항</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">설정</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+
+		<tr>
+			<th colspan="7" id="Members">members (회원가입, 휴면계정, 로그인)</th>
+		</tr>
+		<tr>
+			<td class="txtLeft">회원가입</td>
+			<td class="txtLeft">1) 이용약관동의</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">2) 회원정보입력</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">3) 이메일 인증</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">4) 휴대전화 점유인증</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">5) PIN입력</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">6) 서비스가입안내</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">7) 회원가입완료</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">휴면계정</td>
+			<td class="txtLeft">휴면계정 실명인증</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">휴면계정 해제완료</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">로그인</td>
+			<td class="txtLeft">로그인</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">아이디 찾기</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">비밀번호 초기화</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<th colspan="7" id="Email">Email</th>
+		</tr>
+		<tr>
+			<th colspan="7" id="Order">Order (장바구니/결제)</th>
+		</tr>
+		<tr>
+			<td class="txtLeft">장바구니</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">SC-FE-SB-001</td>
+			<td class="end">완료</td>
+			<td><a href="../html/order/SC-FE-SB-001.html" target="_blank">View</a></td>
+			<td>황선희</td>
+			<td class="txtLeft">옵션변경 레이어팝업 (SC-FE-SB002) 포함</td>
+		</tr>
+		<tr>
+			<td class="txtLeft">장바구니 상품없음</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">SC-FE-SB-003</td>
+			<td class="end">완료</td>
+			<td><a href="../html/order/SC-FE-SB-003.html" target="_blank">View</a></td>
+			<td>황선희</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">주문서</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">SC-FE-SB-004</td>
+			<td class="end">완료</td>
+			<td><a href="../html/order/SC-FE-SB-004.html" target="_blank">View</a></td>
+			<td>황선희</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">배송지 목록 [레이어팝업]</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">SC-FE-SB-005</td>
+			<td class="end">완료</td>
+			<td><a href="../html/order/SC-FE-SB-005.html" target="_blank">View</a></td>
+			<td>황선희</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">배송지 등록/수정 [레이어팝업]</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">SC-FE-SB-006</td>
+			<td class="end">완료</td>
+			<td><a href="../html/order/SC-FE-SB-006.html" target="_blank">View</a></td>
+			<td>황선희</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">주문 완료</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">SC-FE-SB-007</td>
+			<td class="end">완료</td>
+			<td><a href="../html/order/SC-FE-SB-007.html" target="_blank">View</a></td>
+			<td>황선희</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">주문 실패</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">SC-FE-SB-008</td>
+			<td class="end">완료</td>
+			<td><a href="../html/order/SC-FE-SB-008.html" target="_blank">View</a></td>
+			<td>황선희</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<th colspan="7" id="Common">common (알림, 검색, 공유, 약관/방침, 쿠키사용동의, 에러)</th>
+		</tr>
+		<tr>
+			<td class="txtLeft">우편번호 검색</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">SC-FE-CO-001</td>
+			<td class="end">완료</td>
+			<td><a href="../html/common/SC-FE-CO-001.html" target="_blank">View</a></td>
+			<td>황선희</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">우편번호 검색결과 있음</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">SC-FE-CO-002</td>
+			<td class="end">완료</td>
+			<td><a href="../html/common/SC-FE-CO-002.html" target="_blank">View</a></td>
+			<td>황선희</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">우편번호 검색결과 없음</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">SC-FE-CO-003</td>
+			<td class="end">완료</td>
+			<td><a href="../html/common/SC-FE-CO-003.html" target="_blank">View</a></td>
+			<td>황선희</td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">알림</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">검색</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">공유</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">약관/방침</td>
+			<td class="txtLeft">이용약관</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">개인정보처리방침</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">저작권안내</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">쿠키사용동의</td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft">에러</td>
+			<td class="txtLeft">403에러</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">404에러</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">500에러</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft">501에러</td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr>
+		<!-- <tr>
+			<td class="txtLeft"></td>
+			<td class="txtLeft"></td>
+			<td class="txtLeft"></td>
+			<td class="end"></td>
+			<td><a href="../html/.html" target="_blank">View</a></td>
+			<td></td>
+			<td class="txtLeft"></td>
+		</tr> -->
+		</tbody>
+		</table>
+	</div>
+</div>
+<div class="btn-top-box">
+	<a href="#" title="move to top" role="button" class="btn-top">
+		<span class="blind">Top</span>
+	</a>
+</div>
+</body>
+</html>

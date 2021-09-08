@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>HMJ 온라인 판매 사이트 구축 CODING GUIDE</title>
+
+    <!-- 코딩 가이드용 -->
+    <link rel="stylesheet" href="docs/guide.css">
+    <link rel="stylesheet" href="docs/prism.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+	<script type="text/javascript" src="docs/prism.js"></script>
+	<script type="text/javascript" src="docs/plugin.js"></script>
+	<!-- //코딩 가이드용 -->
+	
+	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../assets/js/common.js"></script>
+
+	<script>
+		$(function(){
+			$('.view_code').on('click', function(){
+				$(this).next('.code-toolbar').toggleClass('open');
+			});
+		});
+	</script>
+	<style>
+		.sample-text {
+			font-size: 20px;
+		}
+	</style>
+</head>
+
+<body>
+<div class="wrap" id="codingGiuide">
+	<div class="header">
+		<div><em>HMJ 온라인 판매 사이트 구축</em> project coding guide</div>
+		<h1><img src="images/logo_header.png" alt="로고"></h1>
+	</div>
+
+	<div class="cont_codGuide guide_container type-font">
+		<div class="coding_type">
+			<div>
+				<!--<a href="coding_guide_step_mob.html" title="mobile" class="active">mobile</a>-->
+				<a href="list_page.html" title="coding list">LIST PAGE</a>
+			</div>
+		</div>
+
+		<div class="tab">
+			<a href="coding_guide_type.html" title="TYPE">기본 GUIDE 정의</a>
+			<a href="coding_guide_naming.html" title="NAMING">네이밍 정의</a>
+			<a href="coding_guide_box.html" title="BOX">BOX</a>
+			<a href="coding_guide_button.html" title="BUTTON">BUTTON</a>
+			<a href="coding_guide_form.html" title="FORM">FORM</a>
+			<a href="javascript:void(0);" title="FONT" class="active">FONT</a>
+			<a href="coding_guide_table.html" title="TABLE">TABLE</a>
+			<a href="coding_guide_tab.html" title="TAB">TAB</a>
+			<a href="coding_guide_parallax.html" title="PARALLAX">PARALLAX</a>
+			<a href="coding_guide_scroll.html" title="SCROLL">SCROLL</a>
+			<a href="coding_guide_swiper.html" title="SWIPER">SWIPER</a>
+			<a href="coding_guide_popup.html" title="POPUP">POPUP</a>
+			<a href="coding_guide_etc.html" title="ETC">ETC</a>
+		</div>
+
+		<div class="contents_infor">
+
+			<h2 class="title">FONT</h2>
+
+			<!-- font -->
+			<h3 class="title">&#x25CE; 폰트 정의</h3>
+			<h4 class="btm-border">- 언어별 폰트 정의</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<p class="sample-text">[HyundaiSansHeadJP - Regular] このテキストは、サンプルのテキストです。</p>
+<p class="sample-text" style="font-weight: 500">[HyundaiSansHeadJP - Medium] This text is sample text.</p>
+<p class="sample-text htr">[HyundaiSansTextJP - Regular] このテキストは、123456 This text is sample text. サンプルのテキストです。</p>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				font-weight: 400 - "<strong>HyundaiSansHeadJP - Regular</strong>",<br>font-weight: 500 - "<strong>HyundaiSansHeadJP - Medium</strong>",<br>
+				font-weight: 400 - "<strong>HyundaiSansTextJP - Regular</strong>",<br>HyundaiSansTextJP는 클래스 "<strong>htr</strong>"를 추가한 후 font-weight를 조절함.
+			</div>
+
+			<p class="sample-text">[HyundaiSansHeadJP - Regular] このテキストは、サンプルのテキストです。</p>
+			<p class="sample-text" style="font-weight: 500">[HyundaiSansHeadJP - Medium] This text is sample text.</p>
+			<p class="sample-text htr">[HyundaiSansTextJP - Regular] このテキストは、123456 This text is sample text. サンプルのテキストです。</p>
+
+			<h3 class="title">&#x25CE; 폰트 타입별</h3>
+			<h4 class="btm-border">- Page Title 1</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<h1>Hyundaiブランド1234567890</h1>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				HyundaiSansHeadJP / Regular - H1 - P: 56px, M: 32px
+			</div>
+
+			<h1>Hyundaiブランド1234567890</h1>
+
+			<h4 class="btm-border">- Page Title 2</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<h2>Hyundaiブランド1234567890</h2>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				HyundaiSansHeadJP / Regular - H2 - P: 40px, M: 24px
+			</div>
+
+			<h2>Hyundaiブランド1234567890</h2>
+
+			<h4 class="btm-border">- Group Title</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<h3>Hyundaiブランド1234567890</h3>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				HyundaiSansHeadJP / Regular - H3 - P: 32px, M: 20px
+			</div>
+
+			<h3>Hyundaiブランド1234567890</h3>
+
+			<h4 class="btm-border">- Group Sub / Popup Title</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<h4>Hyundaiブランド1234567890</h4>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				HyundaiSansHeadJP / Regular - H4 - P: 24px, M: 18px
+			</div>
+
+			<h4>Hyundaiブランド1234567890</h4>
+
+			<h4 class="btm-border">- Content Title</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="cont-tit">Hyundaiブランド1234567890</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				HyundaiSansHeadJP / Regular - P: 20px, M: 16px
+			</div>
+
+			<div class="cont-tit">Hyundaiブランド1234567890</div>
+
+			<h4 class="btm-border">- Content Title2</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="cont-tit2">Hyundaiブランド1234567890</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				HyundaiSansHeadJP / Regular - P: 18px, M: 18px
+			</div>
+
+			<div class="cont-tit2">Hyundaiブランド1234567890</div>
+
+			<h4 class="btm-border">- Content Text</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<p class="cont-text">Hyundaiブランド1234567890</p>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				HyundaiSansHeadJP / Regular - P: 16px, M: 14px
+			</div>
+
+			<p class="cont-text">Hyundaiブランド1234567890</p>
+
+			<h4 class="btm-border">- Content Text2</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<p class="cont-text2">Hyundaiブランド1234567890</p>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				HyundaiSansHeadJP / Regular - P, M: 14px
+			</div>
+
+			<p class="cont-text2">Hyundaiブランド1234567890</p>
+
+			<h4 class="btm-border">- Caption</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="caption htr">Hyundaiブランド1234567890</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				HyundaiSansTextJP / Regular - P, M: 12px
+			</div>
+
+			<div class="caption htr">Hyundaiブランド1234567890</div>
+
+			<h3 class="title">&#x25CE; 폰트 컬러</h3>
+
+			<h4 class="btm-border">- Font Color Class</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<p class="sample-text">[ Class Name : .fc-color, Color Code : <span class="fc-color">#002c5f</span> ] <span class="fc-color">このテキストは</span>、サンプルのテキストです。</p>
+	<p class="sample-text">[ Class Name : .fc-color2, Color Code : <span class="fc-color2">#00aad2</span> ] <span class="fc-color2">このテキストは</span>、サンプルのテキストです。</p>
+	<p class="sample-text htr">[ Class Name : .fc-color3, Color Code : <span class="fc-color3">#0793ea</span> ] <span class="fc-color3">このテキストは</span>、サンプルのテキストです。</p>
+	<p class="sample-text">[ Class Name : .fc-color4, Color Code : <span class="fc-color4">#1c6bba</span> ] <span class="fc-color4">このテキストは</span>、サンプルのテキストです。</p>
+	<p class="sample-text">[ Class Name : .fc-color5, Color Code : <span class="fc-color5">#e4dcd3</span> ] <span class="fc-color5">このテキストは</span>、サンプルのテキストです。</p>
+	<p class="sample-text htr">[ Class Name : .fc-color6, Color Code : <span class="fc-color6">#f6f3f2</span> ] <span class="fc-color6">このテキストは</span>、サンプルのテキストです。</p>
+	<p class="sample-text">[ Class Name : .fc-color7, Color Code : <span class="fc-color7">#e63312</span> ] <span class="fc-color7">このテキストは</span>、サンプルのテキストです。</p>
+	<p class="sample-text">- Grayscale Color : <span style="color: #000;">[ #000 ]</span>, <span style="color: #191919;">[ #191919 ]</span>, <span style="color: #333;">[ #333 ]</span>, <span style="color: #666;">[ #666 ]</span>, <span style="color: #999;">[ #999 ]</span>, <span style="color: #ccc;">[ #ccc ]</span>, <span style="color: #e9e9e9;">[ #e9e9e9 ]</span>, <span style="color: #f5f5f5;">[ #f5f5f5 ]</span>, <span style="color: #fafafa;">[ #fafafa ]</span>, <span style="background-color: #ccc; color: #fff;">[ #fff ]</span></p>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				폰트 컬러 클래스는 <strong>.fc-color ~ n</strong>으로 되어있음.
+			</div>
+
+			<p class="sample-text">[ Class Name : .fc-color, Color Code : <span class="fc-color">#002c5f</span> ] <span class="fc-color">このテキストは</span>、サンプルのテキストです。</p><br>
+			<p class="sample-text">[ Class Name : .fc-color2, Color Code : <span class="fc-color2">#00aad2</span> ] <span class="fc-color2">このテキストは</span>、サンプルのテキストです。</p><br>
+			<p class="sample-text htr">[ Class Name : .fc-color3, Color Code : <span class="fc-color3">#0793ea</span> ] <span class="fc-color3">このテキストは</span>、サンプルのテキストです。</p><br>
+			<p class="sample-text">[ Class Name : .fc-color4, Color Code : <span class="fc-color4">#1c6bba</span> ] <span class="fc-color4">このテキストは</span>、サンプルのテキストです。</p><br>
+			<p class="sample-text">[ Class Name : .fc-color5, Color Code : <span class="fc-color5">#e4dcd3</span> ] <span class="fc-color5">このテキストは</span>、サンプルのテキストです。</p><br>
+			<p class="sample-text htr">[ Class Name : .fc-color6, Color Code : <span class="fc-color6">#f6f3f2</span> ] <span class="fc-color6">このテキストは</span>、サンプルのテキストです。</p><br>
+			<p class="sample-text">[ Class Name : .fc-color7, Color Code : <span class="fc-color7">#e63312</span> ] <span class="fc-color7">このテキストは</span>、サンプルのテキストです。</p><br><br><br>
+			<p class="sample-text">- Grayscale Color : <span style="color: #000;">[ #000 ]</span>, <span style="color: #191919;">[ #191919 ]</span>, <span style="color: #333;">[ #333 ]</span>, <span style="color: #666;">[ #666 ]</span>, <span style="color: #999;">[ #999 ]</span>, <span style="color: #ccc;">[ #ccc ]</span>, <span style="color: #e9e9e9;">[ #e9e9e9 ]</span>, <span style="color: #f5f5f5;">[ #f5f5f5 ]</span>, <span style="color: #fafafa;">[ #fafafa ]</span>, <span style="background-color: #ccc; color: #fff;">[ #fff ]</span></p>
+
+			<!--//font -->
+
+		</div>
+		<!-- //contents_infor -->
+	</div>
+</div>
+<div class="btn-top-box">
+	<a href="#" title="move to top" role="button" class="btn-top">
+		<span class="blind">Top</span>
+	</a>
+</div>
+</body>
+</html>

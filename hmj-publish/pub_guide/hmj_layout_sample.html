@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>HMJ 온라인 판매 사이트 구축</title>
+
+    <link rel="stylesheet" href="../assets/css/common.css">
+	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+	<style>
+
+	</style>
+
+	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../assets/js/common.js"></script>
+</head>
+
+<body>
+
+<div class="hmj-wrap"><!-- mo header가 2단이고, 풋터가 있는 타입 : 기본 / mo header가 1단이고, 풋터가 없는 타입: type2 -->
+	<div class="skip-nav">
+		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
+	</div>
+
+	<!-- header -->
+	<div class="hmj-header">
+		<!-- header -->
+		<div class="header-cont">
+			<h1><a href="hmj_layout.html"><img src="../assets/images/common/img_header_logo.png" alt="Hyundai Logo"></a></h1>
+
+			<div class="gnb-right-menu">
+				<ul class="gnb-right-list">
+					<li>
+						<button class="btn-cart"><span><img src="../assets/images/common/ico_cart.png" alt="장바구니"></span></button>
+					</li>
+					<li>
+						<button class="btn-search">
+							<span>
+								<picture>
+									<source srcset="../assets/images/common/ico_search.png" media="(min-width: 1120px)">
+									<source srcset="../assets/images/common/ico_search_mo.png" media="(max-width: 1119px)">
+									<img src="../assets/images/common/ico_search.png" alt="검색">
+								</picture>
+							</span>
+						</button>
+					</li>
+					<li>
+						<button class="btn-menu"><span>Menu</span></button>
+					</li>
+					<li>
+						<button class="btn-mypage"><span><img src="../assets/images/common/ico_mypage.png" alt="마이페이지"></span></button>
+					</li>
+				</ul>
+			</div>
+		</div>		
+		<div class="sub-cont">
+			<div class="history">
+				<span>HOME</span>
+				<span>Page Title</span>
+			</div>
+			<button type="button" class="back-page">Back page</button>
+			<div class="page-title">Page Title</div>
+		</div>
+		<!-- //header -->
+	</div>
+	<!--//header -->
+
+	<!-- container -->
+	<div id="hmjContainer" class="hmj-container"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+		<div class="hmj-content">
+			<div class="cont-outer">
+				<p class="mt20">test content</p>
+			</div>
+		</div>
+	</div>
+	<!--//container -->
+
+	<!-- footer -->
+	<div class="hmj-footer">
+		<img src="../assets/images/@footer.jpg" alt="footer">
+	</div>
+	<!--//footer -->
+</div>
+
+<!-- popShippingList -->
+<div class="layer-popup-wrap mo-full fix-center" data-pop-idx="findPostalCode">
+    <div class="layer-popup-body">
+        <div class="layer-popup-cont postal-code">
+            <div class="layer-cont">
+				
+			</div>
+            <button class="btn-close-popup btn-close">close</button>
+        </div>
+    </div>
+</div>
+
+<div class="btn-top-box">
+	<button title="active side menu" role="button" class="btn-side-menu">
+		<span>Side</span>
+	</button>
+	<button title="move to top" role="button" class="btn-top">
+		<span class="blind">Top</span>
+	</button>
+</div>
+</body>
+</html>

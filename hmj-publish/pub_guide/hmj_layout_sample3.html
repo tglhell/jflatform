@@ -1,0 +1,697 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>HMJ 온라인 판매 사이트 구축</title>
+
+    <link rel="stylesheet" href="../assets/css/common.css">
+	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+	<style>
+		.hmj-header {
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 20;
+			background-color: #fff;
+		}
+		.hmj-header.header-fixed {
+			-webkit-transition: top .4s ease-in-out;
+			transition: top .4s ease-in-out;
+		}
+		.hmj-wrap.type2 .header-cont {
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			border-bottom: 0;
+		}
+		.hmj-wrap.type2 .sub-cont {
+			display: none;
+		}
+		.gnb-menu-outer {
+			-webkit-transition: top .4s ease-in-out;
+			transition: top .4s ease-in-out;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 15;
+			display: none;
+			background-color: rgba(0, 0, 0, .5);
+		}
+		.btn-menu-close {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			z-index: 20;
+			width: 33px;
+			height: 33px;
+			font-size: 0;
+			line-height: 0;
+			background: transparent url(../assets/images/common/ico_close.svg) no-repeat center;
+		}
+		.gnb-menu-outer .btn-menu-close {
+			right: -100px;
+		}
+		.gnb-menu-outer .gnb-menu-list > li {
+			-webkit-transition: all .5s ease-in-out;
+			transition: all .5s ease-in-out;
+			padding-left: 100px;
+			opacity: 0;
+		}
+		.gnb-menu-outer.active .gnb-menu-list > li {
+			-webkit-transition: all .5s ease-in-out;
+			transition: all .5s ease-in-out;
+			padding-left: 0px;
+			opacity: 1;
+		}
+		.gnb-menu-box {
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: -250px;
+			z-index: 25;
+			overflow: hidden;
+			display: block;
+			width: 250px;
+			height: 100%;
+			padding: 160px 20px 20px;
+			background-color: #fff;
+		}
+		.gnb-menu-box .gnb-menu-list {
+			display: block;
+			height: 100%;
+		}
+		.inner-scroll-y {
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+		.hmj-header .gnb-menu-list li + li {
+			margin: 20px 0 0;
+		}
+		.gnb-menu-list .menu-inner-depth {
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: -250px;
+			opacity: 0;
+			z-index: 25;
+			display: block;
+			width: 250px;
+			padding: 160px 20px 20px;
+			background-color: #fff;
+		}
+		.btn-depth-switch.active ~ .menu-inner-depth {
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+			right: 0;
+			opacity: 1;
+		}
+		.btn-depth-switch + .menu-inner-depth > .ir-count > li {
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+			opacity: 0;
+			padding-left: 100px;
+		}
+		.btn-depth-switch.active + .menu-inner-depth > .ir-count > li {
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+			opacity: 1;
+			padding-left: 0;
+		}
+		.btn-depth-prev {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+		}
+		.hmj-header .gnb-menu-list .btn-depth-prev span {
+			font-size: 14px;
+			color: #000;
+		}
+		.side-menu-wrap {
+			-webkit-transition: right .5s ease-in-out;
+			transition: right .5s ease-in-out;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			right: -250px;
+			z-index: 101;
+			width: 250px;
+			background-color: #208ee9;
+		}
+		.side-menu-wrap.active {
+			-webkit-transition: right .5s ease-in-out;
+			transition: right .5s ease-in-out;
+			-webkit-transition-delay: .6s;
+			transition-delay: .6s;
+			right: 0px;
+		}
+		.hmj-container {
+			padding-top: 151px;
+		}
+		.hmj-header.scr-chk {
+			-webkit-transition: background-color .4s ease-in-out;
+			transition: background-color .4s ease-in-out;
+			background-color: rgba(255, 255, 255, .24);
+		}
+		@media screen and (max-width: 1119px) {
+			.hmj-container {
+				padding-top: 105px;
+			}
+		}
+		@media (orientation: landscape) {
+			.btn-depth-switch.active ~ .menu-inner-depth {
+				min-height: 600px;
+			}
+		}
+
+
+
+
+		.test-slider-outer {
+			position: relative;
+			margin: 40px;
+		}
+		.test-slider {
+			height: 2px;
+			background-color: #e5e5e5;
+		}
+		.test-slider .ui-slider-handle {
+			-webkit-transition: box-shadow .2s ease-out;
+			transition: box-shadow .2s ease-out;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-indeX: 5;
+			width: 30px;
+			height: 30px;
+			margin: -14px 0 0 -14px;
+			border-radius: 50%;
+			box-shadow: 0 0 1px 2px transparent;
+			background-color: #ad7b62;
+		}
+		.test-slider-outer .test-slider .ui-slider-range-min {
+			height: 2px;
+			background-color: #ad7b62;
+		}
+	</style>
+
+	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../assets/js/common.js"></script>
+
+	<script>
+		$(function(){
+			$('.test-slide-01').slider({
+					range : 'min',
+					min : 1,
+					max : 4,
+					value : 1,
+			});
+		})
+	</script>
+</head>
+
+<body>
+
+<div class="hmj-wrap"><!-- mo header가 2단이고, 풋터가 있는 타입 : 기본 / mo header가 1단이고, 풋터가 없는 타입: type2 -->
+	<div class="skip-nav">
+		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
+	</div>
+
+	<!-- header -->
+	<div class="hmj-header">
+		<!-- header -->
+		<div class="header-cont">
+			<h1><a href="hmj_layout.html"><img src="../assets/images/common/img_header_logo.png" alt="Hyundai Logo"></a></h1>
+
+			<div class="gnb-menu-outer">
+				<div class="gnb-menu-box">
+					<ul class="gnb-menu-list ir-count inner-scroll-y">
+						<li class="ir-item mo-only">
+							<a href="#">IONIQ 5</a>
+						</li>
+						<li class="ir-item mo-only">
+							<a href="#">NEXO</a>
+						</li>
+						<li class="ir-item mo-only">
+							<a href="#">Virtual ShowRoom</a>
+						</li>
+						<li class="ir-item">
+							<button><span>ブランド</span></button>
+						</li>
+						<li class="ir-item">
+							<button class="btn-depth-switch"><span>IONIQ5 &gg;</span></button>
+							<div class="menu-inner-depth">
+								<button class="btn-depth-prev"><span>&ll; RETURN</span></button>
+								<ul class="ir-count inner-scroll-y">
+									<li class="ir-item">
+										<button><span>コンテンツ</span></button>
+									</li>
+									<li class="ir-item">
+										<button><span>コンテンツ</span></button>
+									</li>
+									<li class="ir-item">
+										<button class="btn-depth-switch"><span>サービス &gg;</span></button>
+										<div class="menu-inner-depth">
+											<button class="btn-depth-prev"><span>&ll; RETURN</span></button>
+											<ul class="ir-count inner-scroll-y">
+												<li class="ir-item">
+													<button><span>コンテンツ</span></button>
+												</li>
+												<li class="ir-item">
+													<button><span>コンテンツ</span></button>
+												</li>
+												<li class="ir-item">
+													<button><span>コンテンツ</span></button>
+												</li>
+												<li class="ir-item">
+													<button><span>コンテンツ</span></button>
+												</li>
+												<li class="ir-item">
+													<button><span>コンテンツ</span></button>
+												</li>
+												<li class="ir-item">
+													<button><span>コンテンツ</span></button>
+												</li>
+												<li class="ir-item">
+													<button><span>コンテンツ</span></button>
+												</li>
+												<li class="ir-item">
+													<button class="btn-depth-switch"><span>サービス &gg;</span></button>
+													<div class="menu-inner-depth">
+														<button class="btn-depth-prev"><span>&ll; RETURN</span></button>
+														<ul class="ir-count inner-scroll-y">
+															<li class="ir-item">
+																<button class="btn-depth-switch"><span>サービス &gg;</span></button>
+																<div class="menu-inner-depth">
+																	<button class="btn-depth-prev"><span>&ll; RETURN</span></button>
+																	<ul class="ir-count inner-scroll-y">
+																		<li class="ir-item">
+																			<button><span>コンテンツ</span></button>
+																		</li>
+																		<li class="ir-item">
+																			<button><span>コンテンツ</span></button>
+																		</li>
+																		<li class="ir-item">
+																			<button><span>コンテンツ</span></button>
+																		</li>
+																		<li class="ir-item">
+																			<button><span>コンテンツ</span></button>
+																		</li>
+																	</ul>
+																</div>
+															</li>
+															<li class="ir-item">
+																<button><span>コンテンツ</span></button>
+															</li>
+															<li class="ir-item">
+																<button><span>コンテンツ</span></button>
+															</li>
+															<li class="ir-item">
+																<button><span>コンテンツ</span></button>
+															</li>
+														</ul>
+													</div>
+												</li>
+												<li class="ir-item">
+													<button><span>コンテンツ</span></button>
+												</li>
+												<li class="ir-item">
+													<button><span>コンテンツ</span></button>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="ir-item">
+										<button><span>コンテンツ</span></button>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="ir-item">
+							<button><span>NEXO</span></button>
+						</li>
+						<li class="ir-item">
+							<button><span>購買</span></button>
+						</li>
+						<li class="ir-item">
+							<button class="btn-depth-switch"><span>サービス &gg;</span></button>
+							<div class="menu-inner-depth">
+								<button class="btn-depth-prev"><span>&ll; RETURN</span></button>
+								<ul class="ir-count inner-scroll-y">
+									<li class="ir-item">
+										<button><span>購買</span></button>
+									</li>
+									<li class="ir-item">
+										<button><span>購買</span></button>
+									</li>
+									<li class="ir-item">
+										<button class="btn-depth-switch"><span>サービス &gg;</span></button>
+										<div class="menu-inner-depth">
+											<button class="btn-depth-prev"><span>&ll; RETURN</span></button>
+											<ul class="ir-count inner-scroll-y">
+												<li class="ir-item">
+													<button><span>購買</span></button>
+												</li>
+												<li class="ir-item">
+													<button class="btn-depth-switch"><span>サービス &gg;</span></button>
+													<div class="menu-inner-depth">
+														<button class="btn-depth-prev"><span>&ll; RETURN</span></button>
+														<ul class="ir-count inner-scroll-y">
+															<li class="ir-item">
+																<button class="btn-depth-switch"><span>サービス &gg;</span></button>
+																<div class="menu-inner-depth">
+																	<button class="btn-depth-prev"><span>&ll; RETURN</span></button>
+																	<ul class="ir-count inner-scroll-y">
+																		<li class="ir-item">
+																			<button><span>購買</span></button>
+																		</li>
+																		<li class="ir-item">
+																			<button><span>購買</span></button>
+																		</li>
+																		<li class="ir-item">
+																			<button><span>購買</span></button>
+																		</li>
+																		<li class="ir-item">
+																			<button><span>購買</span></button>
+																		</li>
+																	</ul>
+																</div>
+															</li>
+															<li class="ir-item">
+																<button><span>購買</span></button>
+															</li>
+															<li class="ir-item">
+																<button><span>購買</span></button>
+															</li>
+															<li class="ir-item">
+																<button><span>購買</span></button>
+															</li>
+														</ul>
+													</div>
+												</li>
+												<li class="ir-item">
+													<button><span>購買</span></button>
+												</li>
+												<li class="ir-item">
+													<button><span>購買</span></button>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="ir-item">
+										<button><span>購買</span></button>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="ir-item">
+							<button><span>コンテンツ</span></button>
+						</li>
+						<li class="ir-item">
+							<button><span>ストア</span></button>
+						</li>
+					</ul>
+					<button class="btn-menu-close"><span>close</span></button>
+				</div>
+			</div>
+
+			<div class="gnb-mid-menu">
+				<ul class="mid-list">
+					<li><a href="#"><span>IONIQ 5</span></a></li>
+					<li><a href="#"><span>NEXO</span></a></li>
+					<li><a href="#"><span>Virtual ShowRoom</span></a></li>
+				</ul>
+			</div>
+
+			<div class="gnb-right-menu">
+				<ul class="gnb-right-list">
+					<li>
+						<button class="btn-cart"><span><img src="../assets/images/common/ico_cart.png" alt="장바구니"></span></button>
+					</li>
+					<li>
+						<button class="btn-search">
+							<span>
+								<picture>
+									<source srcset="../assets/images/common/ico_search.png" media="(min-width: 1120px)">
+									<source srcset="../assets/images/common/ico_search_mo.png" media="(max-width: 1119px)">
+									<img src="../assets/images/common/ico_search.png" alt="검색">
+								</picture>
+							</span>
+						</button>
+					</li>
+					<li>
+						<button class="btn-menu"><span>Menu</span></button>
+					</li>
+					<li>
+						<button class="btn-mypage"><span><img src="../assets/images/common/ico_mypage.png" alt="마이페이지"></span></button>
+					</li>
+				</ul>
+			</div>
+		</div>	
+		<div class="sub-cont">
+			<div class="history">
+				<a href="#">HOME</a>
+				<a href="#">MY</a>
+				<a href="#">クーポン</a>
+				<span class="page-title">マイリファラルコード </span>
+			</div>
+			<button type="button" class="back-page">Back page</button>
+		</div>
+		<!-- //header -->
+	</div>
+	<!--//header -->
+
+	<!-- container -->
+	<div id="hmjContainer" class="hmj-container"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+		<div class="hmj-content">
+			<div class="top-visual">
+				<picture>
+					<source srcset="../assets/images/common/@img_visual_01_pc.jpg" media="(min-width: 1120px)">
+					<source srcset="../assets/images/common/@img_visual_01_mo.jpg" media="(max-width: 1119px)">
+					<img src="../assets/images/common/@img_visual_01_pc.jpg" alt="top visual">
+				</picture>
+			</div>
+			<div class="cont-outer">
+				<div class="test-wrap">
+					<div class="test-outer">
+						<div class="test-box">
+							<div class="test1">111</div>
+							<div class="test2">테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다.테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다.테스트 텍스트 입니다.</div>
+							<p class="test-desc">- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.</p>
+						</div>
+						<div class="img-outer" data-text="- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다."><img src="../assets/images/@img_scroll_sample02.jpg" alt="test"></div>
+					</div>
+
+					<br><br><br><br>
+
+					<div class="test-outer">
+						<div class="test-box">
+							<div class="test1">111</div>
+							<div class="test2">테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다.테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다.테스트 텍스트 입니다.</div>
+							<p class="test-desc">- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.</p>
+						</div>
+						<div class="img-outer" data-text="- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다."><img src="../assets/images/@img_scroll_sample03.jpg" alt="test"></div>
+					</div>
+
+					<br><br><br><br>
+
+					<div class="test-outer">
+						<div class="test-box">
+							<div class="test1">111</div>
+							<div class="test2">테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다.테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다.테스트 텍스트 입니다.</div>
+							<p class="test-desc">- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.</p>
+						</div>
+						<div class="img-outer" data-text="- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다."><img src="../assets/images/@img_scroll_sample02.jpg" alt="test"></div>
+					</div>
+
+					<br><br><br><br>
+
+					<div class="test-outer">
+						<div class="test-box">
+							<div class="test1">111</div>
+							<div class="test2">테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다.테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다. 테스트 텍스트 입니다.테스트 텍스트 입니다.</div>
+							<p class="test-desc">- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.</p>
+						</div>
+						<div class="img-outer" data-text="- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다.- 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다. 테스트 하단 텍스트 입니다. 입니다."><img src="../assets/images/@img_scroll_sample03.jpg" alt="test"></div>
+					</div>
+
+					<div class="test-slider-outer">
+						<div class="test-slider test-slide-01"></div>
+					</div>
+				</div>
+				<style>
+					.test-wrap {
+						padding-top: 40px;
+					}
+					.type2 .test-wrap {
+						padding-top: 92px;
+					}
+					.test-outer {
+						display: flex;
+						flex-direction: row-reverse;
+						align-items: center;
+						width: 100%;
+					}
+					.test2 {
+						margin-top: 20px;
+					}
+					.test-box {
+						width: 70%;
+						padding: 0 30px;
+					}
+					.test-desc {
+						margin-top: 20px;
+					}
+					.img-outer img {
+						width: 100%;
+					}
+					@media screen and (max-width: 1119px) {
+						.test-outer {
+							display: block;
+						}
+						.test-box {
+							width: 100%;
+							padding: 0;
+						}
+						.test-desc {
+							display: none;
+						}
+						.img-outer {
+							position: relative;
+							width: 100%;
+							margin-top: 20px;
+						}
+						.img-outer:after {
+							content: attr(data-text);
+							top: 100%;
+							display: inline-block;
+							margin-top: 20px;
+							font-size: 14px;
+						}
+					}
+				</style>
+			</div>
+		</div>
+	</div>
+	<!--//container -->
+
+	<!-- footer -->
+	<div class="hmj-footer">
+		<div class="footer-top">
+			<ul>
+				<li>
+					<ul>
+						<li><a href="#">Virtual ShowRoom</a></li>
+						<li><a href="#">IONIQ 5</a></li>
+						<li><a href="#">NEXO</a></li>
+						<li><a href="#">브랜드 거점</a></li>
+						<li><a href="#">MOCEAN</a></li>
+					</ul>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Purchase</button>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">온라인 구매방법 안내</a></li>
+								<li><a href="#">이달의 구매 혜택</a></li>
+								<li><a href="#">정부보조금 정책</a></li>
+								<li><a href="#">온라인 계약</a></li>
+								<li><a href="#">견적내기</a></li>
+								<li><a href="#">테스트 드라이브</a></li>
+								<li><a href="#">구매상담 신청</a></li>
+								<li><a href="#">사양백과</a></li>
+								<li><a href="#">카탈로그 다운로드</a></li>
+								<li><a href="#">가격표 다운로드</a></li>
+								<li><a href="#">Referral code 이용안내</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Service</button>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">서비스 네트워크</a></li>
+								<li><a href="#">충전소 안내</a></li>
+								<li><a href="#">긴급출동서비스</a></li>
+								<li><a href="#">정비예약</a></li>
+								<li><a href="#">리콜정보</a></li>
+								<li><a href="#">BLUELINK</a></li>
+								<li><a href="#">빌트인캠</a></li>
+								<li><a href="#">네비게이션/빌트인캠 업데이트</a></li>
+								<li><a href="#">제휴 서비스</a></li>
+								<li><a href="#">앱 설치 안내</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Brand Story</button>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">IONIQ 5</a></li>
+								<li><a href="#">IONIQ 5 Teasing</a></li>
+								<li><a href="#">Mini 45EV</a></li>
+								<li><a href="#">IONIQ</a></li>
+								<li><a href="#">Hyundai X BTS</a></li>
+								<li><a href="#">#Thisisus</a></li>
+								<li><a href="#">Hyundai X BBC</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">SHOP</a></li>
+						<li><a href="#">이벤트</a></li>
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">1:1 상담</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<img src="../assets/images/@footer.jpg" alt="footer">
+		</div>
+	</div>
+	<!--//footer -->
+</div>
+
+<div class="side-menu-wrap">
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul>
+	<button class="btn-menu-close"><span>close</span></button>
+</div>
+
+<div class="btn-top-box">
+	<button title="active side menu" role="button" class="btn-side-menu">
+		<span>Side</span>
+	</button>
+	<button title="move to top" role="button" class="btn-top">
+		<span class="blind">Top</span>
+	</button>
+</div>
+</body>
+</html>

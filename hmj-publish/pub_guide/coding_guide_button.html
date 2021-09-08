@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>HMJ 온라인 판매 사이트 구축 CODING GUIDE</title>
+
+    <!-- 코딩 가이드용 -->
+    <link rel="stylesheet" href="docs/guide.css">
+    <link rel="stylesheet" href="docs/prism.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+	<script type="text/javascript" src="docs/prism.js"></script>
+	<script type="text/javascript" src="docs/plugin.js"></script>
+	<!-- //코딩 가이드용 -->
+	
+	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../assets/js/common.js"></script>
+	<script>
+		$(function(){
+			$('.view_code').on('click', function(){
+				$(this).next('.code-toolbar').toggleClass('open');
+			});
+		});
+	</script>	
+</head>
+
+<body>
+<div class="wrap" id="codingGiuide">
+	<div class="header">
+		<div><em>HMJ 온라인 판매 사이트 구축</em> project coding guide</div>
+		<h1><img src="images/logo_header.png" alt="로고"></h1>
+	</div>
+
+	<div class="cont_codGuide guide_container">
+		<div class="coding_type">
+			<div>
+				<!--<a href="coding_guide_step_mob.html" title="mobile" class="active">mobile</a>-->
+				<a href="list_page.html" title="coding list">LIST PAGE</a>
+			</div>
+		</div>
+
+		<div class="tab">
+			<a href="coding_guide_type.html" title="TYPE">기본 GUIDE 정의</a>
+			<a href="coding_guide_naming.html" title="NAMING">네이밍 정의</a>
+			<a href="coding_guide_box.html" title="BOX">BOX</a>
+			<a href="javascript:void(0);" title="BUTTON" class="active">BUTTON</a>
+			<a href="coding_guide_form.html" title="FORM">FORM</a>
+			<a href="coding_guide_font.html" title="FONT">FONT</a>
+			<a href="coding_guide_table.html" title="TABLE">TABLE</a>
+			<a href="coding_guide_tab.html" title="TAB">TAB</a>
+			<a href="coding_guide_parallax.html" title="PARALLAX">PARALLAX</a>
+			<a href="coding_guide_scroll.html" title="SCROLL">SCROLL</a>
+			<a href="coding_guide_swiper.html" title="SWIPER">SWIPER</a>
+			<a href="coding_guide_popup.html" title="POPUP">POPUP</a>
+			<a href="coding_guide_etc.html" title="ETC">ETC</a>
+		</div>
+
+		<div class="contents_infor">
+
+			<h2 class="title">BUTTON</h2>
+			<div class="conIn_tip">
+				기본 클래스인 "<strong>btn</strong>"에 클래스 추가하여 사용" <br>
+				컬러 구분- "<strong>btn-type2, btn-type3</strong>"<br>사이즈 구분- "<strong>btn-middle, btn-small, btn-extra-small</strong>"<br>
+				비활성- "<strong>.disabled 또는 disabled="disabled"</strong>"
+			</div>
+
+			<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="cta-outer">
+	<button class="btn"><span>商品 見る</span></button>
+	<button class="btn btn-type2"><span>商品 見る</span></button>
+	<button class="btn btn-type3"><span>商品 見る</span></button>	
+</div>
+
+<div class="cta-outer">
+	<button class="btn disabled"><span>Disabled</span></button>
+	<button class="btn btn-type2" disabled="disabled"><span>Disabled</span></button>
+	<button class="btn btn-type3" disabled="disabled"><span>Disabled</span></button>
+</div>
+
+<button class="btn btn-middle"><span>商品 見る</span></button>
+<button class="btn btn-type2 btn-middle"><span>商品 見る</span></button>
+<button class="btn btn-type3 btn-middle"><span>商品 見る</span></button>
+
+<button class="btn btn-small"><span>商品 見る</span></button>
+<button class="btn btn-type2 btn-small"><span>商品 見る</span></button>
+<button class="btn btn-type3 btn-small"><span>商品 見る</span></button>
+
+<button class="btn btn-extra-small"><span>商品 見る</span></button>
+<button class="btn btn-type2 btn-extra-small"><span>商品 見る</span></button>
+<button class="btn btn-type3 btn-extra-small"><span>商品 見る</span></button>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<h3 class="title">&#x25CE; Button </h3>		
+			<h4 class="btm-border">- .btn / .btn-type2 / .btn-type3</h4>
+			<div class="cta-outer">
+				<button class="btn"><span>商品 見る</span></button>
+				<button class="btn btn-type2"><span>商品 見る</span></button>
+				<button class="btn btn-type3"><span>商品 見る</span></button>
+				
+			</div>
+			<div class="cta-outer">
+				<button class="btn disabled"><span>Disabled</span></button>
+				<button class="btn btn-type2" disabled="disabled"><span>Disabled</span></button>
+				<button class="btn btn-type3" disabled="disabled"><span>Disabled</span></button>
+			</div>
+
+			<h4 class="btm-border">- .btn-middle</h4>
+			<button class="btn btn-middle"><span>商品 見る</span></button>
+			<button class="btn btn-type2 btn-middle"><span>商品 見る</span></button>
+			<button class="btn btn-type3 btn-middle"><span>商品 見る</span></button>
+
+			<h4 class="btm-border">- .btn-small</h4>
+			<button class="btn btn-small"><span>商品 見る</span></button>
+			<button class="btn btn-type2 btn-small"><span>商品 見る</span></button>
+			<button class="btn btn-type3 btn-small"><span>商品 見る</span></button>
+
+			<h4 class="btm-border">- .btn-extra-small</h4>
+			<button class="btn btn-extra-small"><span>商品 見る</span></button>
+			<button class="btn btn-type2 btn-extra-small"><span>商品 見る</span></button>
+			<button class="btn btn-type3 btn-extra-small"><span>商品 見る</span></button>
+
+			<!-- <h4 class="btm-border">- .btn + .rd</h4>
+			<button class="btn rd"><span>商品 見る</span></button>
+			<button class="btn btn-middle rd"><span>商品 見る</span></button>
+			<button class="btn btn-small rd"><span>商品 見る</span></button>
+			<button class="btn btn-extra-small rd"><span>商品 見る</span></button> -->
+			
+			<h3 class="title">&#x25CE; cta-outer</h3>
+			<div class="conIn_tip">
+				PC: Default / MO: Full or 1n  = <strong>.cta-outer</strong> <br> 
+				PC: Default / MO: Default = <strong>.cta-outer + .fix-type</strong> <br>
+				PC/MO: Full or 1n = <strong>.cta-outer + .full-type</strong><br>
+				PC: Default / MO: 위아래 = <strong>.cta-outer + .row-type</strong><br>
+			</div>
+			<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="cta-outer">
+	<button class="btn"><span>商品 見る</span></button>
+	<button class="btn btn-type2"><span>商品 見る</span></button>
+</div>
+
+<div class="cta-outer fix-type">
+	<button class="btn"><span>商品 見る</span></button>
+	<button class="btn btn-type2"><span>商品 見る</span></button>
+</div>
+
+<div class="cta-outer full-type">
+	<button class="btn"><span>商品 見る</span></button>
+	<button class="btn btn-type2"><span>商品 見る</span></button>
+</div>
+
+<div class="cta-outer row-type">
+	<button class="btn"><span>商品 見る</span></button>
+	<button class="btn btn-type2"><span>商品 見る</span></button>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<h4 class="btm-border">- .cta-outer</h4>
+			<div class="cta-outer">
+				<button class="btn"><span>商品 見る</span></button>
+				<button class="btn btn-type2"><span>商品 見る</span></button>
+			</div>
+
+			<h4 class="btm-border">- .cta-outer + .fix-type</h4>
+			<div class="cta-outer fix-type">
+				<button class="btn"><span>商品 見る</span></button>
+				<button class="btn btn-type2"><span>商品 見る</span></button>
+			</div>
+
+			<h4 class="btm-border">- .cta-outer + .full-type</h4>
+			<div class="cta-outer full-type">
+				<button class="btn"><span>商品 見る</span></button>
+				<button class="btn btn-type2"><span>商品 見る</span></button>
+			</div>
+
+			<h4 class="btm-border">- .cta-outer + .row-type</h4>
+			<div class="cta-outer row-type">
+				<button class="btn"><span>商品 見る</span></button>
+				<button class="btn btn-type2"><span>商品 見る</span></button>
+			</div>
+
+			<h3 class="title">&#x25CE; 텍스트 버튼</h3>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<button class="btn-text">オプション変更</button>
+<a class="btn-text">オプション変更</a>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				.btn-text / 텍스트 형태의 버튼
+			</div>
+			<button class="btn-text">紹介者変更</button> <br>
+			<a class="btn-text">紹介者変更</a>
+
+
+			<h3 class="title">&#x25CE; Icon Button</h3>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<button class="btn-icon"><span>詳細を見る</span></button>
+<a class="btn-icon"><span>詳細を見る</span></a>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				<strong>btn-icon</strong>", 아이콘은 css의 "<strong>.btn-icon span:before</strong>"부분을 수정함.
+			</div>
+
+			<button class="btn-icon"><span>詳細を見る</span></button>
+			<a class="btn-icon"><span>詳細を見る</span></a>
+
+
+			<h3 class="title">&#x25CE; 삭제 버튼</h3>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<button class="btn-del"><span>삭제</span></button>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				.btn-del
+			</div>
+
+			<!-- <button class="btn-del"><span>삭제</span></button> -->
+			
+			
+			<h3 class="title">&#x25CE; 박스 버튼</h3>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!-- <div class="">
+	<label class="btn-select"><input type="radio" name="onlyOne" /><span>10:00 ~ 10:30</span></label>
+	<label class="btn-select"><input type="radio" name="onlyOne" /><span>10:30 ~ 11:00</span></label>
+	<label class="btn-select"><input type="radio" name="onlyOne" /><span>11:00 ~ 11:30</span></label>
+	<label class="btn-select"><input type="radio" name="onlyOne" /><span>11:00 ~ 11:30</span></label>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				.btn-select / 라디오 기능의 박스형 선택버튼 / 겉에 감싸는 div와 .btn-select width는 각 모듈별로 각자
+			</div>
+			<!-- <div class="">
+				<label class="btn-select"><input type="radio" name="onlyOne" /><span>10:00 ~ 10:30</span></label>
+				<label class="btn-select"><input type="radio" name="onlyOne" checked /><span>10:30 ~ 11:00</span></label>
+				<label class="btn-select"><input type="radio" name="onlyOne" disabled /><span>11:00 ~ 11:30</span></label>
+			</div> -->
+			
+			<!-- //button -->
+
+		</div>
+		<!-- //contents_infor -->
+	</div>
+</div>
+<div class="btn-top-box">
+	<a href="#" title="move to top" role="button" class="btn-top">
+		<span class="blind">Top</span>
+	</a>
+</div>
+</body>
+</html>

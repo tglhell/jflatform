@@ -1,0 +1,450 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>HMJ 온라인 판매 사이트 구축</title>
+
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/order.css">
+	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../../assets/js/common.js"></script>
+</head>
+
+<body>
+
+<div class="hmj-wrap type2">
+	<div class="skip-nav">
+		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
+	</div>
+
+	<!-- header -->
+	<div class="hmj-header">
+		<!-- header -->
+		<div class="header-cont">
+			<h1><a href="hmj_layout.html"><img src="../../assets/images/common/img_header_logo.png" alt="Hyundai Logo"></a></h1>
+
+			<div class="gnb-menu-outer">
+				<ul class="gnb-menu-list">
+					<li>
+						<button><span>ブランド</span></button>
+					</li>
+					<li>
+						<button><span>IONIQ5</span></button>
+					</li>
+					<li>
+						<button><span>NEXO</span></button>
+					</li>
+					<li>
+						<button><span>購買</span></button>
+					</li>
+					<li>
+						<button><span>サービス</span></button>
+					</li>
+					<li>
+						<button><span>コンテンツ</span></button>
+					</li>
+					<li>
+						<button><span>ストア</span></button>
+					</li>
+					<li>
+						<button><span>カスタマーセンター</span></button>
+					</li>
+				</ul>
+			</div>
+
+			<div class="gnb-right-menu">
+				<ul class="gnb-right-list">
+					<li>
+						<button class="btn-cart"><span><img src="../../assets/images/common/ico_cart.png" alt="장바구니"></span></button>
+					</li>
+					<li>
+						<button class="btn-search"><span><img src="../../assets/images/common/ico_search.png" alt="검색"></span></button>
+					</li>
+					<li>
+						<button class="btn-mypage"><span><img src="../../assets/images/common/ico_mypage.png" alt="마이페이지"></span></button>
+					</li>
+				</ul>
+			</div>
+		</div>
+        <div class="sub-cont">
+			<div class="history">
+				<a href="javascript:;">HOME</a>
+				<span class="page-title">ご注文</span>
+			</div>
+			<button type="button" class="back-page">Back page</button>
+		</div>
+		<!-- //sub-cont -->
+	</div>
+	<!--//header -->
+
+	<!-- container -->
+	<div id="hmjContainer" class="hmj-container order">
+		<div class="hmj-content">
+			<div class="cont-outer">
+                <div class="cont-center">
+                    <div class="mo-toggle">
+                        <div class="item">
+                            <h3 class="title tit-btn">購入者</h3>
+                            <div class="cont">
+                                <!-- modify 0713 -->
+                                <ul class="delivery-info">
+                                    <li>木村 拓哉 (きむらたくや) </li>
+                                    <li>080-123-4567</li>
+                                    <li>hmk@hyundai.co.jp</li>
+                                </ul>
+                                <!-- // modify 0713 -->
+                            </div>
+                        </div>
+                        <div class="item active">
+                            <h3 class="title tit-btn">お届け先</h3>
+                            <div class="cont">
+                                <ul class="delivery-info" style="display: none;">
+                                    <li class="default">
+                                        <em>[家] 我が家</em>
+                                        <span class="text-flag">基本お届け先</span>
+                                        <button class="btn btn-tbl"><span>お届け先の変更</span></button>
+                                    </li>
+                                    <li>木村 拓哉 (きむらたくや) </li>
+                                    <li>080-123-4567</li>
+                                    <li class="address">〒220-0012  Minatomirai Center Bldg. 16F, 3-6-1, Minatomirai, Nishi-ku, Yokohama City, Kanagawa</li>
+                                </ul> 
+                                
+                                <!-- NO delivery modify 0713 -->
+                                <div class="shipping-list">
+                                    <div class="inp-slice-flex">
+                                        <label class="radio"><input type="radio" name="newShipping" checked=""><span class="tit">自宅</span></label>
+                                        <label class="radio"><input type="radio" name="newShipping"><span class="tit">その他</span></label>
+                                    </div>
+                
+                                    <ul class="form-list">
+                                        <li>
+                                            <div class="inp-outer-box">
+                                                <label for="inpTxt01">住所名(選択)</label>
+                                                <div class="inp-area">
+                                                    <input type="text" id="inpTxt01" class="inp-item" placeholder="住所名を入力">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                            </div>
+                                            <p class="error-msg lbl-type">error text</p>
+                                        </li>
+                                        <li>
+                                            <div class="inp-outer-box">
+                                                <label for="inpName01_01">姓名 <span class="required">*</span></label>
+                                                <div class="inp-group-box mo-full">
+                                                    <div class="inp-area">
+                                                        <input type="text" id="inpName01_01" class="inp-item" placeholder="木村">
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                    <div class="inp-area">
+                                                        <input type="text" id="inpName01_02" class="inp-item" placeholder="拓哉">
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="error-msg lbl-type">error text</p>
+                                        </li>
+                                        <li>
+                                            <div class="inp-outer-box mo-full">
+                                                <label for="inpName01_01">姓名 (フリガナ) <span class="required">*</span></label>
+                                                <div class="inp-group-box">
+                                                    <div class="inp-area">
+                                                        <input type="text" id="inpName02_01" class="inp-item" placeholder="きむら">
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                    <div class="inp-area">
+                                                        <input type="text" id="inpName02_02" class="inp-item" placeholder="たくや">
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="error-msg lbl-type">error text</p>
+                                        </li>
+                                        <li>
+                                            <div class="inp-outer-box">
+                                                <label for="inpNum01_01">携帯電話 <span class="required">*</span></label>
+                                                <div class="inp-slice-box">
+                                                    <div class="inp-area">
+                                                        <input type="number" id="inpNum01_01" class="inp-item" placeholder="数字">
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                    <span class="inp-hpn">-</span>
+                                                    <div class="inp-area">
+                                                        <input type="number" id="inpNum01_02" class="inp-item" placeholder="数字">
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                    <span class="inp-hpn">-</span>
+                                                    <div class="inp-area">
+                                                        <input type="number" id="inpNum01_03" class="inp-item" placeholder="数字">
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="error-msg lbl-type">error text</p>
+                                        </li>
+                                        <li>
+                                            <div class="inp-outer-box post-type">
+                                                <label for="inpNum01_01">住所 <span class="required">*</span></label>
+                                                <div class="inp-group-box">
+                                                    <div class="inp-btn-box">
+                                                        <div class="inp-area">
+                                                            <input type="text" class="inp-item" placeholder="〒" readonly>
+                                                            <button class="inp-close"></button>
+                                                        </div>
+                                                        <button class="btn btn-middle btn-type2 pop-open" data-pop-idx="findPostalCode"><span>郵便番号検索</span></button>
+                                                    </div>
+                                                    <div class="inp-area">
+                                                        <input type="text" class="inp-item" placeholder="都道府県" readonly>
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                    <div class="inp-area">
+                                                        <input type="text" class="inp-item" placeholder="市区町村" readonly>
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                    <div class="inp-area">
+                                                        <input type="text" class="inp-item" placeholder="番地" readonly>
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                    <div class="inp-area">
+                                                        <input type="text" class="inp-item" placeholder="ビル・マンション名(選択)">
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="error-msg lbl-type">error text</p>
+                                        </li>
+                                    </ul>
+                
+                                    <div class="save-check">
+                                        <label class="chk"><input type="checkbox"><span>基本お届け先として登録</span></label><!-- modify 0713 -->
+                                    </div>
+                                </div>
+                                
+                                <!-- //NO delivery modify 0713-->
+                            </div>
+                        </div>
+                        <div class="item active">
+                            <h3 class="title tit-btn">ご注文内容</h3>
+                            <div class="cont prod-area">
+                                <ul class="prod-info">
+                                    <li>
+                                        <h4 class="title">H Geunine  <em class="fc-color2">[2]</em></h4>
+                                        <ul class="item">
+                                            <li>
+                                                <div class="thumb"><img src="../../assets/images/@img_96_96.jpg" alt="상품명 이미지"></div>
+                                                <div class="name">充電器 SET アイオニック5(NE)一般用 緩速 充電器 SET 一般用 緩速 充電器 SET一般用 緩速 充電</div>
+                                                <!-- modify 옵션,수량 위치 변경 -->
+                                                <div class="option">white</div>
+                                                <div class="amount">1</div>
+                                                <div class="price">¥ 31,000</div>
+                                            </li>
+                                            <li>
+                                                <div class="thumb"><img src="../../assets/images/@img_96_96.jpg" alt="상품명 이미지"></div>
+                                                <div class="name">充電器 SET アイオニック5(NE)一般用 緩速 充電器 SET 一般用 緩速 充電器 SET一般用 緩速 充電</div>
+                                                <div class="option">white</div>
+                                                <div class="amount">1</div>
+                                                <div class="price">¥ 31,000</div>
+                                            </li>
+                                        </ul>
+                                        <div class="delivery-price">
+                                            <ul>
+                                                <li>
+                                                    <div class="name">商品販売価格(税込)</div>
+                                                    <div class="price">¥ 36,000</div>
+                                                </li>
+                                                <li>
+                                                    <div class="name">送料</div>
+                                                    <div class="price">¥ 500</div>
+                                                </li>
+                                                <li class="total">
+                                                    <div class="name">合計金額<span>(税込)</span></div>
+                                                    <div class="price">¥ 36,000</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h4 class="title">H Geunine  <em class="fc-color2">[2]</em></h4>
+                                        <ul class="item">
+                                            <li>
+                                                <div class="thumb"><img src="../../assets/images/@img_96_96.jpg" alt="상품명 이미지"></div>
+                                                <div class="name">充電器 SET アイオニック5(NE)一般用 緩速 充電器 SET 一般用 緩速 充電器 SET一般用 緩速 充電</div>
+                                                <div class="option">white</div>
+                                                <div class="amount">1</div>
+                                                <div class="price">¥ 31,000</div>
+                                            </li>
+                                            <li>
+                                                <div class="thumb"><img src="../../assets/images/@img_96_96.jpg" alt="상품명 이미지"></div>
+                                                <div class="name">充電器 SET アイオニック5(NE)一般用 緩速 充電器 SET 一般用 緩速 充電器 SET一般用 緩速 充電</div>
+                                                <div class="option">white</div>
+                                                <div class="amount">1</div>
+                                                <div class="price">¥ 31,000</div>
+                                            </li>
+                                        </ul>
+                                        <div class="delivery-price">
+                                            <ul>
+                                                <li>
+                                                    <div class="name">商品販売価格(税込)</div>
+                                                    <div class="price">¥ 36,000</div>
+                                                </li>
+                                                <li>
+                                                    <div class="name">送料</div>
+                                                    <div class="price">¥ 500</div>
+                                                </li>
+                                                <li class="total">
+                                                    <div class="name">合計金額<span>(税込)</span></div>
+                                                    <div class="price">¥ 36,000</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+
+                <div class="cont-right">
+                    <div class="inside-type mo-toggle">
+                        <div class="item active">
+                            <h3 class="title tit-btn">割引</h3>
+                            <div class="cont coupon">
+                                <label class="chk"><input type="checkbox"><span>割引適用</span></label>
+                                <select title="selectBox" class="slt-box">
+                                    <option value="00" selected="" disabled="" hidden="">新規登録クーポン 10%</option>
+                                    <option value="02">新規登録クーポン 10%</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="item active">
+                            <h3 class="title tit-btn">合計金額</h3>
+                            <div class="cont price-area">
+                                <ul class="total-price">
+                                    <li>
+                                        <span class="name">商品販売価格(税込)</span>
+                                        <span class="price">¥ 36,000</span>
+                                    </li>
+                                    <li class="text-small">
+                                        <span class="name">割引</span>
+                                        <span class="price fc-color2">- ¥ 3,850</span>
+                                    </li>
+                                    <li class="text-small">
+                                        <span class="name">送料</span>
+                                        <span class="price">¥ 500</span>
+                                    </li>
+                                    <li class="total">
+                                        <span class="name"><strong>合計金額</strong>(税込)</span>
+                                        <span class="price fc-color2">¥ 35,150</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item active">
+                            <h3 class="title tit-btn">支払い方法</h3>
+                            <div class="cont payment">
+                                <ul class="radio-group">
+                                    <li><label class="radio"><input type="radio" name="radioGroup" id="radioPyChk01" checked="checked"><span>クレジットカード</span></label></li>
+                                    <li><label class="radio"><input type="radio" name="radioGroup" id="radioPyChk02"><span>LINEPAY</span></label></li>
+                                </ul>
+                                <!-- modify 0713 -->
+                                <ul class="check-terms">
+                                    <li>
+                                        <label class="chk"><input type="checkbox"><!-- error class="chk val-error"-->
+                                            <span><em>(必須)</em>購入利用約款にすべて同意します。</span>
+                                            <a href="javascript:void(0);" class="link-more">詳細を見る</a>
+                                        </label>
+                                        <p class="error-msg">error text</p>
+                                    </li>
+                                    
+                                </ul>
+                                <!-- // modify 0713 -->
+                                <div class="cta-outer full-type">
+                                    <button class="btn btn-type2"><span>ご注文</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+	<!--//container -->
+
+	<!-- footer -->
+	<div class="hmj-footer">
+		<img src="../../assets/images/@footer.jpg" alt="footer">
+	</div>
+	<!--//footer -->
+
+	<!-- findPostalCode -->
+    <div class="layer-popup-wrap mo-full fix-center" data-pop-idx="findPostalCode">
+        <div class="layer-popup-body">
+            <div class="layer-popup-cont postal-code">
+                <h1 class="layer-title">郵便番号検索</h1>
+                <div class="layer-cont">
+                    <p class="top-text">都道府県、市区町村・町名、または詳細住所を入力してください。</p>
+                    <div class="inp-outer-box">
+                        <div class="inp-btn-box">
+                            <div class="inp-area">
+                                <input type="search" class="inp-item" placeholder="住所情報を入力してください。">
+                                <button class="inp-close"></button>
+                            </div>
+                            <button class="btn btn-middle btn-type2 auto-width"><span>検索</span></button>
+                        </div>
+                    </div>
+                    <!-- search after -->
+                    <div class="search-cont">
+                        <div class="search-result">
+                            <span class="text"><em class="fc-color2">Tokyo</em> 検索結果です。</span>
+                            <span class="count"><em class="fc-color2">000</em>個</span>
+                        </div>
+                        <p class="info-text">住所を選択し[適用]ボタンをクリックして。</p>
+                        
+                        <ul class="search-list">
+                            <li><label class="radio"><input type="radio" name="radioGroup" id="radioChk01" checked="checked"><span class="num">1256870</span><span class="text">北海道 札幌市北海道 札幌市 北海道 札幌市北海道 札幌市北海道 札幌市 北海道 札幌市  北海道 札幌市北海道 札幌市 北海道 札幌市</span></label></li>
+                            <li><label class="radio"><input type="radio" name="radioGroup" id="radioChk02"><span class="num">1256870</span><span class="text">北海道 札幌市北海道 札幌市 北海道 札幌市北海道 札幌市北海道 札幌市 北海道 札幌市  北海道 札幌市北海道 札幌市 北海道 札幌市</span></label></li>
+                            <li><label class="radio"><input type="radio" name="radioGroup" id="radioChk03"><span class="num">1256870</span><span class="text">北海道 札幌市北海道 札幌市 北海道 札幌市北海道 札幌市北海</span></label></li>
+                            <li><label class="radio"><input type="radio" name="radioGroup" id="radioChk04"><span class="num">1256870</span><span class="text">北海道 札幌市北海道 札幌市 北海道 札幌市北海道 札幌市北海</span></label></li>
+                            <li><label class="radio"><input type="radio" name="radioGroup" id="radioChk05"><span class="num">1256870</span><span class="text">北海道 札幌市北海道 札幌市 北海道 札幌市北海道 札幌市北海</span></label></li>
+                            <li><label class="radio"><input type="radio" name="radioGroup" id="radioChk06"><span class="num">1256870</span><span class="text">北海道 札幌市北海道 札幌市 北海道 札幌市北海道 札幌市北海</span></label></li>
+                            <li><label class="radio"><input type="radio" name="radioGroup" id="radioChk07"><span class="num">1256870</span><span class="text">北海道 札幌市北海道 札幌市 北海道 札幌市北海道 札幌市北海</span></label></li>
+                            <li><label class="radio"><input type="radio" name="radioGroup" id="radioChk08"><span class="num">1256870</span><span class="text">北海道 札幌市北海道 札幌市 北海道 札幌市北海道 札幌市北海</span></label></li>
+                            <li><label class="radio"><input type="radio" name="radioGroup" id="radioChk09"><span class="num">1256870</span><span class="text">北海道 札幌市北海道 札幌市 北海道 札幌市北海道 札幌市北海</span></label></li>
+                            <li><label class="radio"><input type="radio" name="radioGroup" id="radioChk10"><span class="num">1256870</span><span class="text">北海道 札幌市北海道 札幌市 北海道 札幌市北海道 札幌市北海</span></label></li>
+                            <li><label class="radio"><input type="radio" name="radioGroup" id="radioChk11"><span class="num">1256870</span><span class="text">北海道 札幌市北海道 札幌市 北海道 札幌市北海道 札幌市北海</span></label></li>
+                        </ul>
+                        <div class="hmj-pagination">
+                            <a href="#" class="btn-page-prev disabled"></a>
+                            <a href="#" class="btn-page-num active">1</a>
+                            <a href="#" class="btn-page-num">2</a>
+                            <a href="#" class="btn-page-num">3</a>
+                            <a href="#" class="btn-page-num">4</a>
+                            <a href="#" class="btn-page-num">5</a>
+                            <a href="#" class="btn-page-next">もっと見る(1/3)</a>
+                        </div>
+                    </div>
+                    <!-- no search -->
+                    <div class="no-search" style="display:none;">
+                        <span class="icon fail">검색실패</span>
+                        <div class="error-text">該当する地名を特定できませんでした。</div>
+                    </div>
+                    <!-- no search -->
+                    <!-- //search after -->
+                </div>
+                <!-- search after -->
+                <div class="bottom-fixed">
+                    <div class="cta-outer">
+                        <button class="btn btn-middle btn-type2"><span>適用</span></button>
+                    </div>
+                </div>
+                <!-- //search after -->
+                <button class="btn-close-popup btn-close">close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

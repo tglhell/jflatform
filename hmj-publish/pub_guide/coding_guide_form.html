@@ -1,0 +1,916 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>HMJ 온라인 판매 사이트 구축 CODING GUIDE</title>
+
+    <!-- 코딩 가이드용 -->
+    <link rel="stylesheet" href="docs/guide.css">
+    <link rel="stylesheet" href="docs/prism.css">
+	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+	<script type="text/javascript" src="docs/prism.js"></script>
+	<script type="text/javascript" src="docs/plugin.js"></script>
+	<!-- //코딩 가이드용 -->
+
+	<link rel="stylesheet" href="../assets/css/lib/jquery-ui.css">
+	<link rel="stylesheet" href="../assets/css/lib/customlib.css">
+	<link rel="stylesheet" href="../assets/css/common.css">
+	
+	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/customlib.js"></script>
+	<script type="text/javascript" src="../assets/js/common.js"></script>
+	<script>
+		$(function(){
+			$('.view_code').on('click', function(){
+				$(this).next('.code-toolbar').toggleClass('open');
+			});
+		});
+	</script>
+</head>
+
+<body>
+<div class="wrap" id="codingGiuide">
+	<div class="header">
+		<div><em>HMJ 온라인 판매 사이트 구축</em> project coding guide</div>
+		<h1><img src="images/logo_header.png" alt="로고"></h1>
+	</div>
+
+	<div class="cont_codGuide guide_container">
+		<div class="coding_type">
+			<div>
+				<!--<a href="coding_guide_step_mob.html" title="mobile" class="active">mobile</a>-->
+				<a href="list_page.html" title="coding list">LIST PAGE</a>
+			</div>
+		</div>
+
+		<div class="tab">
+			<a href="coding_guide_type.html" title="TYPE">기본 GUIDE 정의</a>
+			<a href="coding_guide_naming.html" title="NAMING">네이밍 정의</a>
+			<a href="coding_guide_box.html" title="BOX">BOX</a>
+			<a href="coding_guide_button.html" title="BUTTON">BUTTON</a>
+			<a href="javascript:void(0);" title="FORM" class="active">FORM</a>
+			<a href="coding_guide_font.html" title="FONT">FONT</a>
+			<a href="coding_guide_table.html" title="TABLE">TABLE</a>
+			<a href="coding_guide_tab.html" title="TAB">TAB</a>
+			<a href="coding_guide_parallax.html" title="PARALLAX">PARALLAX</a>
+			<a href="coding_guide_scroll.html" title="SCROLL">SCROLL</a>
+			<a href="coding_guide_swiper.html" title="SWIPER">SWIPER</a>
+			<a href="coding_guide_popup.html" title="POPUP">POPUP</a>
+			<a href="coding_guide_etc.html" title="ETC">ETC</a>
+		</div>
+
+		<div class="contents_infor">
+
+			<h2 class="title">FORM</h2>
+
+			<!-- form -->
+			<h3 class="title">&#x25CE; INPUT</h3>
+			<h4 class="btm-border">- 텍스트 타입</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="inp-outer-box val-error">
+	<label for="inpTxt01">お名前 <span class="required">*</span></label>
+	<div class="inp-area">
+		<input type="text" id="inpTxt01" class="inp-item" placeholder="이름을 입력해 주세요.">
+		<button class="inp-close"></button>
+	</div>
+</div>
+<p class="error-msg lbl-type">error text</p>
+
+<div class="inp-outer-box">
+	<label for="inpName01_01">お名前(フリガナ) <span class="required">*</span></label>
+	<div class="inp-group-box mo-full">
+		<div class="inp-area">
+			<input type="text" id="inpName01_02" class="inp-item" placeholder="이름">
+			<button class="inp-close"></button>
+		</div>
+		<div class="inp-area">
+			<input type="text" id="inpName01_01" class="inp-item" placeholder="성">
+			<button class="inp-close"></button>
+		</div>
+	</div>
+</div>
+<p class="error-msg lbl-type">error text</p>
+
+<div class="inp-outer-box val-error">
+	<label for="inpName01_01">이름</label>
+	<div class="inp-group-box mo-full">
+		<div class="inp-area">
+			<input type="text" id="inpName01_03" class="inp-item" placeholder="성">
+			<button class="inp-close"></button>
+		</div>
+		<div class="inp-area">
+			<input type="text" id="inpName01_04" class="inp-item" placeholder="이름">
+			<button class="inp-close"></button>
+		</div>
+	</div>
+</div>
+<p class="error-msg lbl-type">error text</p>
+
+<div class="inp-outer-box">
+	<label for="inpNum01_01">電話番号 <span class="required">*</span></label>
+	<div class="inp-slice-box">
+		<div class="inp-area">
+			<input type="text" id="inpNum01_01" class="inp-item" placeholder="080">
+			<button class="inp-close"></button>
+		</div>
+		<span class="inp-hpn">-</span>
+		<div class="inp-area">
+			<input type="text" id="inpNum01_02" class="inp-item" placeholder="1234">
+			<button class="inp-close"></button>
+		</div>
+		<span class="inp-hpn">-</span>
+		<div class="inp-area">
+			<input type="text" id="inpNum01_03" class="inp-item" placeholder="5678">
+			<button class="inp-close"></button>
+		</div>
+	</div>
+</div>
+<p class="error-msg lbl-type">error text</p>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				클래스 "<strong>inp-outer-box</strong>"안에 label과 input부분을 넣어서 사용함.<br>validation check error 메세지는 .inp-outer-box에 클래스 "<strong>val-error</strong>"를 추가.<br>input box 좌측에 label이 있는 경우는 .error-msg에 클래스 "<strong>lbl-type</strong>"를 추가함.<br>모바일 이름 width: 100% 타입은 .inp-group-box에 클래스 "<strong>mo-full</strong>"를 추가함.
+			</div>
+
+			<div class="inp-outer-box val-error">
+				<label for="inpTxt01">お名前 <span class="required">*</span></label>
+				<div class="inp-area">
+					<input type="text" id="inpTxt01" class="inp-item" placeholder="이름을 입력해 주세요.">
+					<button class="inp-close"></button>
+				</div>
+			</div>
+			<p class="error-msg lbl-type">error text</p>
+
+			<br>
+
+			<div class="inp-outer-box">
+				<label for="inpName01_01">お名前(フリガナ) <span class="required">*</span></label>
+				<div class="inp-group-box mo-full">
+					<div class="inp-area">
+						<input type="text" id="inpName01_02" class="inp-item" placeholder="이름">
+						<button class="inp-close"></button>
+					</div>
+					<div class="inp-area">
+						<input type="text" id="inpName01_01" class="inp-item" placeholder="성">
+						<button class="inp-close"></button>
+					</div>
+				</div>
+			</div>
+			<p class="error-msg lbl-type">error text</p>
+
+			<br>
+
+			<div class="inp-outer-box val-error">
+				<label for="inpName01_01">이름</label>
+				<div class="inp-group-box mo-full">
+					<div class="inp-area">
+						<input type="text" id="inpName01_03" class="inp-item" placeholder="성">
+						<button class="inp-close"></button>
+					</div>
+					<div class="inp-area">
+						<input type="text" id="inpName01_04" class="inp-item" placeholder="이름">
+						<button class="inp-close"></button>
+					</div>
+				</div>
+			</div>
+			<p class="error-msg lbl-type">error text</p>
+
+			<br>
+
+			<div class="inp-outer-box">
+				<label for="inpNum01_01">電話番号 <span class="required">*</span></label>
+				<div class="inp-slice-box">
+					<div class="inp-area">
+						<input type="text" id="inpNum01_01" class="inp-item" placeholder="080">
+						<button class="inp-close"></button>
+					</div>
+					<span class="inp-hpn">-</span>
+					<div class="inp-area">
+						<input type="text" id="inpNum01_02" class="inp-item" placeholder="1234">
+						<button class="inp-close"></button>
+					</div>
+					<span class="inp-hpn">-</span>
+					<div class="inp-area">
+						<input type="text" id="inpNum01_03" class="inp-item" placeholder="5678">
+						<button class="inp-close"></button>
+					</div>
+				</div>
+			</div>
+			<p class="error-msg lbl-type">error text</p>
+
+			<h4 class="btm-border">- 버튼 타입</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="inp-outer-box">
+	<div class="inp-slice-box">
+		<div class="inp-area">
+			<input type="search" class="inp-item" placeholder="입력해 주세요.">
+			<button class="inp-close"></button>
+		</div>
+		<button class="btn btn-middle btn-type2"><span>확인</span></button>
+	</div>
+</div>
+<p class="error-msg">error text</p>
+
+<div class="inp-outer-box val-error">
+	<div class="inp-slice-box">
+		<div class="inp-area">
+			<input type="text" class="inp-item" placeholder="입력해 주세요.">
+			<button class="inp-close"></button>
+		</div>
+		<button class="btn btn-middle btn-type2"><span>郵便番号検索</span></button>
+	</div>
+</div>
+<p class="error-msg">error text</p>
+
+<div class="inp-outer-box post-type">
+	<label for="inpNum01_01">住所 <span class="required">*</span></label>
+	<div class="inp-group-box">
+		<div class="inp-slice-box">
+			<div class="inp-area">
+				<input type="text" id="inpNum02_01" class="inp-item" placeholder="〒">
+				<button class="inp-close"></button>
+			</div>
+			<span class="inp-hpn">-</span>
+			<div class="inp-area">
+				<input type="text" id="inpNum02_02" class="inp-item" placeholder="">
+				<button class="inp-close"></button>
+			</div>
+			<button class="btn btn-middle btn-type2"><span>郵便番号検索</span></button>
+		</div>
+		<div class="inp-area">
+			<input type="text" class="inp-item" placeholder="都道府県" readonly>
+			<button class="inp-close"></button>
+		</div>
+		<div class="inp-area">
+			<input type="text" class="inp-item" placeholder="市区町村" readonly>
+			<button class="inp-close"></button>
+		</div>
+		<div class="inp-area">
+			<input type="text" class="inp-item" placeholder="番地" readonly>
+			<button class="inp-close"></button>
+		</div>
+		<div class="inp-area">
+			<input type="text" class="inp-item" placeholder="ビル・マンション名(選択)">
+			<button class="inp-close"></button>
+		</div>
+	</div>
+</div>
+<p class="error-msg lbl-type">error text</p>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				클래스 "<strong>inp-outer-box</strong>"안에 label과 input부분을 넣어서 사용함.<br>주소 부분은 .inp-outer-box에 클래스 "<strong>post-type</strong>"를 추가하여 스타일 분리.
+			</div>
+
+			<div class="inp-outer-box">
+				<div class="inp-btn-box">
+					<div class="inp-area">
+						<input type="search" class="inp-item" placeholder="입력해 주세요.">
+						<button class="inp-close"></button>
+					</div>
+					<button class="btn btn-middle btn-type2"><span>확인</span></button>
+				</div>
+			</div>
+			<p class="error-msg">error text</p>
+
+			<br>
+
+			<div class="inp-outer-box">
+				<div class="inp-btn-box">
+					<div class="inp-area">
+						<input type="search" class="inp-item" placeholder="ご希望の仕様を探してみてください">
+						<button class="inp-close"></button>
+					</div>
+					<div class="inp-slice-box">
+						<button class="btn btn-middle btn-type2 auto-width"><span>検索</span></button>
+						<button class="btn-reset"><span><img src="../assets/images/common/btn_reset.svg" alt="리셋"></span></button>
+					</div>
+				</div>
+			</div>
+			<p class="error-msg">error text</p>
+
+			<br>
+
+			<div class="inp-outer-box val-error">
+				<div class="inp-btn-box">
+					<div class="inp-area">
+						<input type="text" class="inp-item" placeholder="입력해 주세요.">
+						<button class="inp-close"></button>
+					</div>
+					<button class="btn btn-middle btn-type2"><span>郵便番号検索</span></button>
+				</div>
+			</div>
+			<p class="error-msg">error text</p>
+
+			<br>
+
+			<div class="inp-outer-box post-type">
+				<label for="inpNum01_01">住所 <span class="required">*</span></label>
+				<div class="inp-group-box">
+					<div class="inp-btn-box">
+						<div class="inp-area">
+							<input type="text" class="inp-item" placeholder="〒" readonly>
+							<button class="inp-close"></button>
+						</div>
+						<button class="btn btn-middle btn-type2"><span>郵便番号検索</span></button>
+					</div>
+					<div class="inp-area">
+						<input type="text" class="inp-item" placeholder="都道府県" readonly>
+						<button class="inp-close"></button>
+					</div>
+					<div class="inp-area">
+						<input type="text" class="inp-item" placeholder="市区町村" readonly>
+						<button class="inp-close"></button>
+					</div>
+					<div class="inp-area">
+						<input type="text" class="inp-item" placeholder="番地" readonly>
+						<button class="inp-close"></button>
+					</div>
+					<div class="inp-area">
+						<input type="text" class="inp-item" placeholder="ビル・マンション名(選択)">
+						<button class="inp-close"></button>
+					</div>
+				</div>
+			</div>
+			<p class="error-msg lbl-type">error text</p>
+
+			<h4 class="btm-border">- 노멀 타입</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="inp-outer-box val-error">
+	<div class="inp-area">
+		<input type="text" class="inp-item" placeholder="텍스트를 입력해 주세요.">
+		<button class="inp-close"></button>
+	</div>
+</div>
+<p class="error-msg">error text</p>
+
+<div class="inp-outer-box">
+	<div class="inp-area">
+		<input type="text" class="inp-item" placeholder="Disabled" disabled>
+		<button class="inp-close"></button>
+	</div>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				단일 input만 사용함.<br>
+				<strong>disabled/class="disabled"</strong> 둘다 사용가능
+			</div>
+
+			<div class="inp-outer-box val-error">
+				<div class="inp-area">
+					<input type="text" class="inp-item" placeholder="텍스트를 입력해 주세요.">
+					<button class="inp-close"></button>
+				</div>
+			</div>
+			<p class="error-msg">error text</p>
+
+			<br>
+
+			<div class="inp-outer-box">
+				<div class="inp-area">
+					<input type="text" class="inp-item" placeholder="Disabled" disabled>
+					<button class="inp-close"></button>
+				</div>
+			</div>
+
+			<hr>
+			<h3 class="title">&#x25CE; Select</h3>
+			<h4 class="btm-border">- Select 기본</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<select title="selectBox" class="slt-box">
+	<option value="00" selected disabled hidden>Select All</option>
+	<option value="01">Option01</option>
+	<option value="02">Option02</option>
+</select>
+<select title="selectBox" class="slt-box" disabled>
+	<option value="00" selected disabled hidden>Select All</option>
+	<option value="01">Option01</option>
+	<option value="02">Option02</option>
+</select>
+
+<div class="slt-box">
+	<p class="selected-value">Custom Select Text</p>
+	<ul class="select-items">
+		<li>option1</li>
+		<li>option2</li>
+		<li>option3</li>
+	</ul>
+</div>
+
+<div class="slt-box disabled">
+	<p class="selected-value">Custom Select Text</p>
+	<ul class="select-items">
+		<li>option1</li>
+		<li>option2</li>
+		<li>option3</li>
+	</ul>
+</div>
+
+<div class="inp-outer-box">
+	<div class="inp-slice-box">
+		<select title="selectBox" class="slt-box">
+			<option value="00" selected disabled hidden>Select All</option>
+			<option value="01">Option01</option>
+			<option value="02">Option02</option>
+		</select>
+		<span class="inp-hpn">-</span>
+		<select title="selectBox" class="slt-box">
+			<option value="00" selected disabled hidden>Select All</option>
+			<option value="01">Option01</option>
+			<option value="02">Option02</option>
+		</select>
+		<span class="inp-hpn">-</span>
+		<select title="selectBox" class="slt-box">
+			<option value="00" selected disabled hidden>Select All</option>
+			<option value="01">Option01</option>
+			<option value="02">Option02</option>
+		</select>
+	</div>
+</div>
+
+<div class="inp-outer-box">
+	<div class="inp-slice-box none-hyphen">
+		<select title="selectBox" class="slt-box">
+			<option value="00" selected disabled hidden>全車両</option>
+			<option value="01">Option01</option>
+			<option value="02">Option02</option>
+		</select>
+		<span class="inp-hpn">-</span>
+		<select title="selectBox" class="slt-box">
+			<option value="00" selected disabled hidden>全車両</option>
+			<option value="01">Option01</option>
+			<option value="02">Option02</option>
+		</select>
+		<span class="inp-hpn">-</span>
+		<select title="selectBox" class="slt-box">
+			<option value="00" selected disabled hidden>全車両</option>
+			<option value="01">Option01</option>
+			<option value="02">Option02</option>
+		</select>
+	</div>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				.slt-box
+			</div>
+			<br><br>
+			<h4 class="btm-border">- Custom Select</h4>
+			
+			<div class="slt-box">
+				<p class="selected-value">テキスト</p>
+				<ul class="select-items">
+					<li>option1</li>
+					<li>option2</li>
+					<li>option3</li>
+				</ul>
+			</div>
+			<div class="slt-box disabled">
+				<p class="selected-value">テキスト</p>
+				<ul class="select-items">
+					<li>option1</li>
+					<li>option2</li>
+					<li>option3</li>
+				</ul>
+			</div>
+
+			<h3 class="title">&#x25CE; Checkbox</h3>
+			<h4 class="btm-border">- 체크박스 기본스타일 / 타이틀타입</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<label class="chk"><input type="checkbox"><span>Default</span></label>
+<label class="chk"><input type="checkbox" checked="checked"><span>Checked</span></label>			
+<label class="chk"><input type="checkbox" disabled="disabled"><span>Disabled</span></label>
+<label class="chk"><input type="checkbox" checked="checked" disabled="disabled"><span>Checked+Disabled</span></label>
+<label class="chk type2"><input type="checkbox"><span>Bold Text Type</span></label>
+<label class="chk type3"><input type="checkbox"><span>light Text Type</span></label>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				.chk &gt; input + span <br>
+			</div>		
+			<label class="chk"><input type="checkbox"><span>Default</span></label>
+			<label class="chk"><input type="checkbox" checked="checked"><span>Checked</span></label>			
+			<label class="chk"><input type="checkbox" disabled="disabled"><span>Disabled</span></label>
+			<label class="chk"><input type="checkbox" checked="checked" disabled="disabled"><span>Checked+Disabled</span></label>
+			
+			
+			<div class="conIn_tip">
+				.chk.type2 &gt; input + span <br>
+				Text Bold & Display Block
+			</div>
+			<label class="chk type2"><input type="checkbox"><span>Bold Text Type</span></label>
+			<h4 class="btm-border">- 체크박스 그룹</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="check-group">
+	<label class="chk"><input type="checkbox"><span>선택1</span></label>
+	<label class="chk"><input type="checkbox" checked="checked"><span>선택2</span></label>
+</div>
+<p class="error-msg">error text</p>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				div.check-group &gt; .chk + .chk
+			</div>
+			<div class="check-group"><!-- 에러시 + val-error -->
+				<label class="chk"><input type="checkbox"><span>선택1</span></label>
+				<label class="chk"><input type="checkbox" checked="checked"><span>선택2</span></label>				
+				<label class="chk"><input type="checkbox"><span>クレジットカード クレジットカードクレジットカードクレジットカード</span></label>
+			</div>
+			<p class="error-msg">error text</p>
+
+			<h4 class="btm-border">- 약관</h4>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<ul class="check-terms">
+	<li>
+		<label class="chk"><input type="checkbox"><span><em>(必須)</em>個人情報の収集及び利用目的につい
+			ての同意</span>
+			<a href="#" class="link-more">詳細を見る</a>
+		</label>					
+		<p class="error-msg">error text</p>
+	</li>
+	<li>
+		<label class="chk val-error"><input type="checkbox"><span><em>(必須)</em>個人情報の収集及び利用目的につい
+			ての同意</span>
+			<a href="#" class="link-more">詳細を見る</a>
+		</label>					
+		<p class="error-msg">error text</p>
+	</li>
+	<li>
+		<label class="chk val-error"><input type="checkbox"><span><em>(必須)</em>登録された携帯電話あてに試乗サービ
+		ス利用についてご案内させていただきます。</span></label>
+		<p class="error-msg">error text</p>
+	</li>
+</ul>
+
+<ul class="check-terms">
+	<li class="all"><label class="chk"><input type="checkbox"><span>전체동의</span></label></li>
+	<li class="normal"><label class="chk"><input type="checkbox"><span>동의1</span></label></li>
+	<li class="normal"><label class="chk"><input type="checkbox"><span>동의2</span></label></li>
+</ul>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				ul.check-terms &gt; li + li<br>
+			</div>
+
+			<ul class="check-terms">
+				<li>
+					<label class="chk"><input type="checkbox"><span><em>(必須)</em>個人情報の収集及び利用目的につい
+						ての同意</span>
+						<a href="#" class="link-more">詳細を見る</a>
+					</label>					
+					<p class="error-msg">error text</p>
+				</li>
+				<li>
+					<label class="chk val-error"><input type="checkbox"><span><em>(必須)</em>個人情報の収集及び利用目的につい
+						ての同意</span>
+						<a href="#" class="link-more">詳細を見る</a>
+					</label>					
+					<p class="error-msg">error text</p>
+				</li>
+				<li>
+					<label class="chk val-error"><input type="checkbox"><span><em>(必須)</em>登録された携帯電話あてに試乗サービ
+					ス利用についてご案内させていただきます。</span></label>
+					<p class="error-msg">error text</p>
+				</li>
+			</ul>
+
+
+			<div class="conIn_tip">
+				전체동의가 있는경우 <strong>class="all, class="normal"</strong> 추가
+			</div>
+
+			<ul class="check-terms">
+				<li class="all"><label class="chk"><input type="checkbox"><span>전체동의</span></label></li>
+				<li class="normal"><label class="chk"><input type="checkbox"><span>동의1</span></label></li>
+				<li class="normal"><label class="chk"><input type="checkbox"><span>동의2</span></label></li>
+			</ul>
+
+
+			<hr>
+			<h3 class="title">&#x25CE; Radio</h3>
+			<h4 class="btm-border">- 라디오박스 기본스타일</h4>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<label class="radio"><input type="radio" name="radio" id="radioChk01"><span>Default</span></label>
+	<label class="radio"><input type="radio" checked="checked" name="radio" id="radioChk02"><span>Checked</span></label>
+	<label class="radio"><input type="radio" disabled="disabled" name="radio" id="radioChk03"><span>Disabled</span></label>
+	<label class="radio"><input type="radio" checked="checked" disabled="disabled"><span>Checked+Disabled</span></label>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				.radio &gt; input+span
+			</div>
+			
+			<label class="radio"><input type="radio" name="radio" id="radioChk01"><span>Default</span></label>
+			<label class="radio"><input type="radio" checked="checked" name="radio" id="radioChk02"><span>Checked</span></label>
+			<label class="radio"><input type="radio" disabled="disabled" name="radio" id="radioChk03"><span>Disabled</span></label>
+			<label class="radio"><input type="radio" checked="checked" disabled="disabled"><span>Checked+Disabled</span></label>
+
+			<h4 class="btm-border">- 라디오 그룹</h4>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="radio-group">
+	<label class="radio"><input type="radio" name="radio" id="radioChk01"><span>ブランド拠点に配送</span></label>
+	<label class="radio"><input type="radio" checked="checked" name="radio" id="radioChk02"><span>自宅へ配送</span></label>
+	<label class="radio"><input type="radio" name="radio" id="radioChk02"><span>自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 </span></label>
+</div>
+<p class="error-msg">error text</p>
+
+<ul class="radio-group">
+	<li><label class="radio "><input type="radio" name="radioGroup" id="radioChk01" checked="checked"><span>LINE PAY</span></label></li>
+	<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk02"><span>Card</span></label></li>
+	<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk03"><span>Bank Transfer</span></label></li>
+</ul>
+<p class="error-msg ">error text</p>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				div.radio-group &gt; .radio + .radio
+			</div>
+			<div class="radio-group"><!-- 에러시 val-error -->
+				<label class="radio"><input type="radio" name="radio1" id="radioChk04"><span>ブランド拠点に配送</span></label>
+				<label class="radio"><input type="radio" checked="checked" name="radio1" id="radioChk05"><span>自宅へ配送</span></label>
+				<label class="radio"><input type="radio" name="radio1" id="radioChk06"><span>自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 自宅へ配送 </span></label>
+			</div>
+			<p class="error-msg">error text</p>
+
+			<div class="conIn_tip">
+				ul.radio-group &gt; li + li
+			</div>
+			<ul class="radio-group">
+				<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk07" checked="checked"><span>LINE PAY</span></label></li>
+				<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk08"><span>Card</span></label></li>
+				<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk09"><span>Bank Transfer</span></label></li>
+			</ul>
+			<p class="error-msg">error text</p>
+
+			<h4 class="btm-border">- 디자인 스타일 / .btn-select / .btn-select2</h4>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<label class="btn-select"><input type="radio" name="rdSelect" id="rdSelect1" checked="checked"><span>Checked</span></label>
+<label class="btn-select"><input type="radio" name="rdSelect" id="rdSelect2"><span>Default</span></label></li>
+<label class="btn-select2"><input type="radio" name="rdSelect3" id="rdSelect1" checked="checked"><span>Checked</span></label>
+<label class="btn-select2"><input type="radio" name="rdSelect3" id="rdSelect2"><span>Default</span></label></li>
+
+<div class="select-group">
+	<label class="btn-select"><input type="radio" name="rdSelect2" id="rdSelect3" checked="checked"><span>心変わり</span></label></li>
+	<label class="btn-select"><input type="radio" name="rdSelect2" id="rdSelect4"><span>その他</span></label></li>
+	<label class="btn-select"><input type="radio" name="rdSelect2" id="rdSelect5"><span>発送遅延</span></label></li>
+	<label class="btn-select"><input type="radio" name="rdSelect2" id="rdSelect6"><span>商品不具合/破損</span></label></li>
+</div>
+
+<div class="select-group">
+	<label class="btn-select2"><input type="radio" name="rdSelect4" id="rdSelect3" checked="checked"><span>心変わり</span></label></li>
+	<label class="btn-select2"><input type="radio" name="rdSelect4" id="rdSelect4"><span>その他</span></label></li>
+	<label class="btn-select2"><input type="radio" name="rdSelect4" id="rdSelect5"><span>発送遅延</span></label></li>
+	<label class="btn-select2"><input type="radio" name="rdSelect4" id="rdSelect6"><span>商品不具合/破損</span></label></li>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				.btn-select / .btn-select2
+			</div>
+
+			<label class="btn-select"><input type="radio" name="rdSelect" id="rdSelect1" checked="checked"><span>Btn Select Checked</span></label>
+			<label class="btn-select"><input type="radio" name="rdSelect" id="rdSelect2"><span>Btn Select</span></label>
+			<label class="btn-select2"><input type="radio" name="rdSelect3" id="rdSelect1_1" checked="checked"><span>Btn Select2 Checked</span></label>
+			<label class="btn-select2"><input type="radio" name="rdSelect3" id="rdSelect2_1"><span>Btn Select2</span></label>
+			
+			<div class="select-group">
+				<label class="btn-select"><input type="radio" name="rdSelect2" id="rdSelect3" checked="checked"><span>心変わり</span></label>
+				<label class="btn-select"><input type="radio" name="rdSelect2" id="rdSelect4"><span>その他</span></label>
+				<label class="btn-select"><input type="radio" name="rdSelect2" id="rdSelect5"><span>発送遅延</span></label>
+				<label class="btn-select"><input type="radio" name="rdSelect2" id="rdSelect6"><span>商品不具合/破損</span></label>
+			</div>
+
+			<div class="select-group">
+				<label class="btn-select2"><input type="radio" name="rdSelect4" id="rdSelect3_1" checked="checked"><span>心変わり</span></label>
+				<label class="btn-select2"><input type="radio" name="rdSelect4" id="rdSelect4_1"><span>その他</span></label>
+				<label class="btn-select2"><input type="radio" name="rdSelect4" id="rdSelect5_1"><span>発送遅延</span></label>
+				<label class="btn-select2"><input type="radio" name="rdSelect4" id="rdSelect6_1"><span>商品不具合/破損</span></label>
+			</div>
+
+
+			<h3 class="title">&#x25CE; Date Picker</h3>
+			<h4 class="btm-border">- 기본</h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="inp-outer-box">
+	<input type="text" class="inp-item date-picker" placeholder="Press the right icon !!" />
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+			
+			<div class="conIn_tip">
+				.inp-item에 클래스 "<strong>date-picker</strong>"를 추가함.
+			</div>
+			
+			<div class="inp-outer-box">
+				<div class="inp-slice-box">
+					<input type="text" class="inp-item date-picker" placeholder="Press the right icon !!">
+				</div>
+			</div>
+
+			<h4 class="btm-border">- 2개</h4>
+
+			<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="inp-outer-box">
+	<div class="inp-slice-box">
+		<input type="text" class="inp-item date-picker" placeholder="Press the right icon !!">
+		<span class="inp-hpn">-</span>
+		<input type="text" class="inp-item date-picker" placeholder="Press the right icon !!">
+	</div>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+			
+			<div class="conIn_tip">
+				.inp-slice-box안에 input + span + input
+			</div>
+			
+			<div class="inp-outer-box">
+				<div class="inp-slice-box">
+					<input type="text" class="inp-item date-picker" placeholder="Press the right icon !!">
+					<span class="inp-hpn">-</span>
+					<input type="text" class="inp-item date-picker" placeholder="Press the right icon !!">
+				</div>
+			</div>
+
+			<h3 class="title">&#x25CE; Textarea</h3>
+			<h4 class="btm-border">- 텍스트입력</h4>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="inp-textarea">
+	<textarea name="name" rows="8" placeholder="Please enter content of your inquiry."></textarea>
+	<span class="bite"><em>0</em>/100</span>
+</div>
+<p class="error-msg">error text</p>
+
+<div class="inp-textarea val-error">
+	<textarea name="name" rows="8" placeholder="Please enter content of your inquiry."></textarea>
+	<span class="bite"><em>89</em>/100</span>
+</div>
+<p class="error-msg">error text</p>
+
+<div class="inp-textarea disabled">
+	<textarea name="name" rows="8" placeholder="Please enter content of your inquiry."></textarea>
+	<span class="bite"><em>17</em>/100</span>
+</div>
+
+<div class="inp-outer-box ">
+	<label for="inpTxt01">반품사유 <span class="required">*</span></label>
+	<div class="inp-textarea">
+		<textarea name="name" rows="8" placeholder="Please enter content of your inquiry."></textarea>	
+		<span class="bite"><em>0</em>/100</span>
+	</div>
+	<p class="error-msg">error text</p>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->	
+
+			<div class="conIn_tip">
+				.inp-textarea &lt; textarea <br>
+				row조절가능 / error-msg
+			</div>
+
+			<div class="inp-textarea">
+				<textarea name="name" rows="8" placeholder="Please enter content of your inquiry."></textarea>
+				<span class="bite"><em>0</em>/100</span>
+			</div>
+			<p class="error-msg">error text</p>
+
+			<br>
+			
+			<div class="inp-textarea val-error">
+				<textarea name="name" rows="8" placeholder="Please enter content of your inquiry."></textarea>
+				<span class="bite"><em>89</em>/100</span>
+			</div>
+			<p class="error-msg">error text</p>
+
+			<br>
+
+			<div class="inp-textarea disabled">
+				<textarea name="name" rows="8" placeholder="Please enter content of your inquiry."></textarea>
+				<span class="bite"><em>17</em>/100</span>
+			</div>
+
+			<br>
+
+			<div class="inp-outer-box ">
+				<label for="inpTxt01">반품사유 <span class="required">*</span></label>
+				<div class="inp-textarea">
+					<textarea name="name" rows="8" placeholder="Please enter content of your inquiry."></textarea>	
+					<span class="bite"><em>0</em>/100</span>
+				</div>
+				<p class="error-msg">error text</p>
+			</div>
+			<h3 class="title">&#x25CE; Etc</h3>
+			<h4 class="btm-border">- 상품수량</h4>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="amount-calc">
+	<button class="down">decrease</button>
+	<input type="text" value="1" />
+	<button class="up">increase</button>
+</div>
+<div class="amount-calc disabled">
+	<button class="down">decrease</button>
+	<input type="text" value="1" />
+	<button class="up">increase</button>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				- .amount-calc 상품수량 변경하기에 사용 / 품절일 경우
+			</div>
+			<div class="amount-calc">
+				<button class="down">decrease</button>
+				<input type="text" value="1" />
+				<button class="up">increase</button>
+			</div>
+
+			<div class="amount-calc disabled">
+				<button class="down">decrease</button>
+				<input type="text" value="1" />
+				<button class="up">increase</button>
+			</div>
+
+
+			<h4 class="btm-border">- 파일찾기 (작업중)</h4>
+			<div class="conIn_tip">
+				추후 디자인 여부에 따라 수정예정
+			</div>
+
+			<div class="filebox">
+				<input class="upload-name" value="파일선택" disabled="disabled">
+				<label for="ex_filename">업로드</label>
+				<input type="file" id="ex_filename" class="upload-hidden">
+			</div>
+
+
+			<h4 class="btm-border">- 달력 (작업중)</h4>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div id="datePicker" class="date-picker"></div>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				시승신청, 충전, 정비 등 예약에서 사용
+			</div>
+
+			<div id="sampleDatePicker"></div>
+
+			<!-- //form -->
+
+		</div>
+		<!-- //contents_infor -->
+	</div>
+</div>
+<div class="btn-top-box">
+	<a href="#" title="move to top" role="button" class="btn-top">
+		<span class="blind">Top</span>
+	</a>
+</div>
+
+<script>
+	$(document).ready(function(){ var fileTarget = $('.filebox .upload-hidden'); 
+		fileTarget.on('change', function(){ 
+			var filename = $(this)[0].files[0].name; 
+			$(this).siblings('.upload-name').val(filename); 
+		});
+
+		
+		$('#sampleDatePicker').datepicker({
+			minDate: '0'
+		});
+
+		customSelect();
+	});
+</script>
+</body>	
+</html>

@@ -1,0 +1,276 @@
+/** datepicker **/
+.ui-datepicker {
+	width: 370px;
+}
+.ui-datepicker .ui-datepicker-header {
+	padding: 0;
+}
+.ui-datepicker.ui-datepicker-inline {
+	margin: 0;
+	border: none;
+	padding: 0;
+	width: 100%;
+	max-width: 700px;
+}
+.ui-widget-header {
+	border: 0;
+	background: none;
+}
+.ui-datepicker .ui-datepicker-title {
+	height: 35px;
+	margin: 0 24px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.ui-datepicker .ui-datepicker-title select::-ms-expand {
+	display: none;
+}
+.ui-datepicker .ui-datepicker-title select {
+	border: 0;
+	font-size: 18px;
+	padding: 0 34px 0 0;
+	width: auto;
+    background: url(../../images/common/ico_slt_box.svg) no-repeat right center;
+}
+.ui-datepicker select.ui-datepicker-year {
+	margin-right: 20px;
+}
+.ui-datepicker .ui-datepicker-prev, 
+.ui-datepicker .ui-datepicker-next {
+	top: 0;
+	width: 34px;
+	height: 34px;
+}
+.ui-datepicker .ui-datepicker-prev span, 
+.ui-datepicker .ui-datepicker-next span {
+	position: relative;
+	top: 0;
+	left: 0;
+	margin: 0;
+}
+.ui-datepicker .ui-datepicker-prev span:before, 
+.ui-datepicker .ui-datepicker-next span:before {
+	display: none;
+}
+.ui-datepicker .ui-datepicker-prev span {
+	width: 34px;
+	height: 34px;
+	background: url(../../images/common/ico_arrow_left34x34.svg) no-repeat center;
+}
+.ui-datepicker .ui-datepicker-next span {
+	width: 34px;
+	height: 34px;
+	background: url(../../images/common/ico_arrow_right_34x34.svg) no-repeat center;
+}
+.ui-datepicker .ui-datepicker-prev-hover {
+	left: 2px;
+}
+.ui-datepicker .ui-datepicker-next-hover {
+	right: 2px;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus {
+	border: none;
+	background: none;
+	font-weight: normal;
+	color: #000;
+	cursor: pointer;
+}
+.ui-datepicker table {
+	border-top: 1px solid #f5f5f5;
+	border-bottom: 1px solid #f5f5f5;
+	margin-bottom: 0;
+}
+.ui-datepicker th {
+	color: #000;
+	background-color: rgba(245, 245, 245, 0.4);
+	border-bottom: 1px solid #f5f5f5;
+	font-size: 1rem;
+	height: 46px;
+}
+.ui-datepicker tbody tr:first-child td {
+	padding-top: 10px;
+	height: 74px;
+}
+.ui-datepicker tbody tr:last-child td {
+	padding-bottom: 10px;
+	height: 74px;
+}
+.ui-datepicker tbody td {
+	height: 64px;
+	padding: 0;
+}
+.ui-state-default, .ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default, .ui-button,
+.ui-button.ui-state-disabled:hover, .ui-button.ui-state-disabled:active {
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+	border: 0;
+	background-color: #fff;
+	font-size: 16px;
+	text-align: center;
+	line-height: 40px;
+	color: #000;
+}
+.ui-datepicker-unselectable .ui-state-default {
+	color: #999;
+}
+.ui-datepicker-other-month .ui-state-default {
+	color: #dedede;
+}
+.ui-state-disabled, 
+.ui-widget-content .ui-state-disabled, 
+.ui-widget-header .ui-state-disabled {
+	opacity: 1;
+    filter: Alpha(Opacity=100);
+}
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+	color: #00aad2;
+	font-weight: 700;
+	position: relative;
+}
+.ui-state-highlight::after,
+.ui-widget-content .ui-state-highlight::after,
+.ui-widget-header .ui-state-highlight::after {
+	content: '';
+	width: 20px;
+	display: block;
+	margin: -17px auto 0;
+	border-bottom: 2px solid #00aad2;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active, 
+.ui-widget-header .ui-state-active, 
+a.ui-button:active, 
+.ui-button:active, 
+.ui-button.ui-state-active:hover {
+	border-radius: 50%;
+	background-color: #00aad2;
+	color: #FFF;
+	font-weight: 700;
+}
+.ui-datepicker td span, .ui-datepicker td a {
+	padding: 0;
+}
+.ui-datepicker-trigger {
+	min-width: 46px;
+	height: 46px;
+	margin-left: 10px;
+}
+
+#sampleDatePicker .ui-state-default,
+#sampleDatePicker .ui-widget-content .ui-state-default,
+#sampleDatePicker .ui-widget-header .ui-state-default,
+#sampleDatePicker .ui-button,
+#sampleDatePicker .ui-button.ui-state-disabled:hover,
+#sampleDatePicker .ui-button.ui-state-disabled:active {
+	width: 54px;
+	height: 54px;
+	line-height: 54px;
+}
+
+
+@media screen and (max-width: 700px) {
+	.ui-datepicker th {
+		height: 30px;
+		padding: 0;
+	}
+	.ui-datepicker tbody td {
+		height: 42px;
+		
+	}
+	.ui-state-default, .ui-widget-content .ui-state-default,
+	.ui-widget-header .ui-state-default, .ui-button,
+	.ui-button.ui-state-disabled:hover, .ui-button.ui-state-disabled:active {
+		width: 36px;
+		height: 36px;
+		font-size: 14px;
+		line-height: 36px;
+	}
+	.ui-datepicker tbody tr:first-child td, 
+	.ui-datepicker tbody tr:last-child td {
+		height: 52px;
+	}
+	.ui-state-highlight::after, 
+	.ui-widget-content .ui-state-highlight::after, 
+	.ui-widget-header .ui-state-highlight::after {
+		margin-top: -8px;
+	}
+}
+
+/** swiper **/
+.swiper-outer-box {
+	position: relative;
+}
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+	left: -50px;
+}
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+	right: -50px;
+}
+
+/* sample swiper */
+.sample-swiper-num01 .swiper-container .swiper-slide {
+    width: 100%;
+    border: 1px solid #000;
+    background: rgba(0, 0, 0, .03);
+    box-sizing: border-box;
+}
+.sample-swiper-num01 .swiper-container .swiper-slide:hover {
+    background: rgba(0, 0, 0, .08);
+    text-shadow: 1px 2px 0 rgba(0, 0, 0, .1);
+}
+.sample-swiper-num01 img {
+    width: 100%;
+}
+
+.sample-swiper-num02 .swiper-container .swiper-slide {
+    width: 100%;
+    border: 1px solid #000;
+    background: rgba(0, 0, 0, .03);
+    box-sizing: border-box;
+}
+.sample-swiper-num02 .swiper-container .swiper-slide:hover {
+    background: rgba(0, 0, 0, .08);
+    text-shadow: 1px 2px 0 rgba(0, 0, 0, .1);
+}
+.sample-swiper-num02 img {
+    width: 100%;
+}
+
+
+/* Shop Main */
+.shop-visual {
+    width: 100%;
+    max-width: 1920px;
+    min-width: 1120px;
+}
+.shop-visual .swiper-slide {
+    text-align: center;
+    height: 700px;
+    width: 100%;
+}
+.shop-visual .swiper-slide img {
+    -o-object-fit: cover;
+    object-fit: cover;    
+    max-width: 100%;
+    height: 100%;
+}
+.shop-visual .swiper-button-prev {
+	left: 0;
+}
+.shop-visual .swiper-button-next {
+	right: 0;
+}

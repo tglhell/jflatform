@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>HMJ 온라인 판매 사이트 구축</title>
+
+    <link rel="stylesheet" href="../../assets/css/common.css">
+	<link rel="stylesheet" href="../../assets/css/member.css">
+	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+	<style>
+		.test .hmj-container .hmj-content .cont-outer.fullcase {
+			background-color: #f4f4f4;
+		}
+	</style>
+	
+	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../../assets/js/common.js"></script>
+</head>
+
+<body>
+
+<div class="hmj-wrap type2"><!-- mo header가 2단이고, 풋터가 있는 타입 : 기본 / mo header가 1단이고, 풋터가 없는 타입: type2 -->
+	<div class="skip-nav">
+		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
+	</div>
+
+	<!-- header -->
+	<div class="hmj-header">
+		<!-- header -->
+		<div class="header-cont">
+			<h1><a href="hmj_layout.html"><img src="../../assets/images/common/img_header_logo.png" alt="Hyundai Logo"></a></h1>
+
+			<div class="gnb-menu-outer">
+				<ul class="gnb-menu-list">
+					<li>
+						<button><span>ブランド</span></button>
+					</li>
+					<li>
+						<button><span>IONIQ5</span></button>
+					</li>
+					<li>
+						<button><span>NEXO</span></button>
+					</li>
+					<li>
+						<button><span>購買</span></button>
+					</li>
+					<li>
+						<button><span>サービス</span></button>
+					</li>
+					<li>
+						<button><span>コンテンツ</span></button>
+					</li>
+					<li>
+						<button><span>ストア</span></button>
+					</li>
+				</ul>
+			</div>
+
+			<div class="gnb-right-menu">
+				<ul class="gnb-right-list">
+					<li>
+						<button class="btn-cart"><span><img src="../../assets/images/common/ico_cart.png" alt="장바구니"></span></button>
+					</li>
+					<li>
+						<button class="btn-search">
+							<span>
+								<picture>
+									<source srcset="../../assets/images/common/ico_search.png" media="(min-width: 1120px)">
+									<source srcset="../../assets/images/common/ico_search_mo.png" media="(max-width: 1119px)">
+									<img src="../../assets/images/common/ico_search.png" alt="검색">
+								</picture>
+							</span>
+						</button>
+					</li>
+					<li>
+						<button class="btn-mypage"><span><img src="../../assets/images/common/ico_mypage.png" alt="마이페이지"></span></button>
+					</li>
+				</ul>
+			</div>
+		</div>		
+		<div class="sub-cont">
+			<div class="history">
+				<a href="javascript:;">HOME</a>
+				<span>Page Title</span>
+			</div>
+			<button type="button" class="back-page">Back page</button>
+			<div class="page-title">가입 여부 확인</div>
+		</div>
+		<!-- //header -->
+	</div>
+	<!--//header -->
+
+	<!-- container -->
+	<div id="hmjContainer" class="hmj-container"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+		<div class="hmj-content">
+			<div class="cont-outer">
+				<div class="join-cont">
+					<div class="inp-outer-box val-error"><!-- 에러시 val-error -->
+						<label for="inpName01_01">성명 (한자)</label>
+						<div class="inp-group-box mo-full">
+							<div class="inp-area">
+								<input type="text" id="inpName01_01" class="inp-item" placeholder="성을 입력해주세요.">
+								<button class="inp-close"></button>
+							</div>
+							<div class="inp-area">
+								<input type="text" id="" class="inp-item" placeholder="명을 입력해주세요.">
+								<button class="inp-close"></button>
+							</div>
+						</div>
+					</div>
+					<p class="error-msg lbl-type">성명을 입력해주세요.</p>
+					<div class="inp-outer-box"><!-- 에러시 val-error -->
+						<label for="inpName01_02">성명 (후리가나)</label>
+						<div class="inp-group-box mo-full">
+							<div class="inp-area">
+								<input type="text" id="inpName01_02" class="inp-item" placeholder="성(후리가나)을 입력해주세요.">
+								<button class="inp-close"></button>
+							</div>
+							<div class="inp-area">
+								<input type="text" id="" class="inp-item" placeholder="명(후리가나)을 입력해주세요.">
+								<button class="inp-close"></button>
+							</div>
+						</div>
+					</div>
+					<p class="error-msg lbl-type">성명(후리가나)을 입력해주세요.</p>
+					<div class="inp-outer-box"><!-- 에러시 val-error -->
+						<label for="inpNum01_03">생년월일</label>
+						<div class="inp-slice-box">
+							<select title="selectBox" class="slt-box" id="inpNum01_03">
+								<option value="00" selected disabled hidden>선택하세요</option>
+								<option value="01">Option01</option>
+								<option value="02">Option02</option>
+							</select>
+							<span class="inp-opt">년</span>
+							<select title="selectBox" class="slt-box">
+								<option value="00" selected disabled hidden>선택하세요</option>
+								<option value="01">Option01</option>
+								<option value="02">Option02</option>
+							</select>
+							<span class="inp-opt">월</span>
+							<select title="selectBox" class="slt-box">
+								<option value="00" selected disabled hidden>선택하세요</option>
+								<option value="01">Option01</option>
+								<option value="02">Option02</option>
+							</select>
+							<span class="inp-opt">일</span>
+						</div>
+					</div>
+					<p class="error-msg lbl-type">생년월일을 선택해주세요.</p>
+					<div class="inp-outer-box"><!-- 에러시 val-error -->
+						<label for="inpNum01_04">인증요청</label>
+						<div class="inp-btn-box">
+							<div class="inp-area">
+								<input type="number" id="inpNum01_04" class="inp-item" placeholder="휴대폰번호를 입력해주세요.">
+								<button class="inp-close"></button>
+							</div>
+							<button class="btn btn-middle btn-type1"><span>발송</span></button>
+						</div>
+					</div>
+					<p class="error-msg lbl-type">휴대폰 번호를 입력해주세요.</p>
+					<div class="inp-outer-box"><!-- 에러시 val-error -->
+						<label for="inpNum01_05">인증확인</label>
+						<div class="inp-btn-box ver-cont">
+							<p class="code-txt">휴대전화로 전송된 인증코드를 입력해주세요.</p>
+							<div class="ver-code">
+								<div class="inp-area">
+									<input type="number" id="inpNum01_05" class="inp-item" placeholder="6자리 숫자만 입력해주세요.">
+									<button class="inp-close"></button>
+									<span class="time">03:00</span>
+								</div>
+								<button class="btn btn-middle btn-type2"><span>인증</span></button>
+							</div>
+						</div>
+					</div>
+					<p class="error-msg lbl-type">인증번호가 일치하지 않습니다.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//container -->
+
+	<!-- footer -->
+	<div class="hmj-footer">
+		<img src="../../assets/images/@footer.jpg" alt="footer">
+	</div>
+	<!--//footer -->
+</div>
+
+</body>
+</html>

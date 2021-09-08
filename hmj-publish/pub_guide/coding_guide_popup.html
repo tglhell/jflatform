@@ -1,0 +1,414 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>HMJ 온라인 판매 사이트 구축 CODING GUIDE</title>
+
+    <!-- 코딩 가이드용 -->
+    <link rel="stylesheet" href="docs/guide.css">
+    <link rel="stylesheet" href="docs/prism.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+	<script type="text/javascript" src="docs/prism.js"></script>
+	<script type="text/javascript" src="docs/plugin.js"></script>
+	<!-- //코딩 가이드용 -->
+	
+	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../assets/js/common.js"></script>
+
+	<style>
+		.layer-popup-body .layer-cont p + p{
+			padding-top: 40px;
+		}
+	</style>
+	<script>
+		$(function(){
+			$('.view_code').on('click', function(){
+				$(this).next('.code-toolbar').toggleClass('open');
+			});
+		});
+	</script>	
+</head>
+<body>
+<div class="wrap" id="codingGiuide">
+	<div class="header">
+		<div><em>HMJ 온라인 판매 사이트 구축</em> project coding guide</div>
+		<h1><img src="images/logo_header.png" alt="로고"></h1>
+	</div>
+
+	<div class="cont_codGuide guide_container">
+		<div class="coding_type">
+			<div>
+				<!--<a href="coding_guide_step_mob.html" title="mobile" class="active">mobile</a>-->
+				<a href="list_page.html" title="coding list">LIST PAGE</a>
+			</div>
+		</div>
+
+		<div class="tab">
+			<a href="coding_guide_type.html" title="TYPE">기본 GUIDE 정의</a>
+			<a href="coding_guide_naming.html" title="NAMING">네이밍 정의</a>
+			<a href="coding_guide_box.html" title="BOX">BOX</a>
+			<a href="coding_guide_button.html" title="BUTTON">BUTTON</a>
+			<a href="coding_guide_form.html" title="FORM">FORM</a>
+			<a href="coding_guide_font.html" title="FONT">FONT</a>
+			<a href="coding_guide_table.html" title="TABLE">TABLE</a>
+			<a href="coding_guide_tab.html" title="TAB">TAB</a>
+			<a href="coding_guide_parallax.html" title="PARALLAX">PARALLAX</a>
+			<a href="coding_guide_scroll.html" title="SCROLL">SCROLL</a>
+			<a href="coding_guide_swiper.html" title="SWIPER">SWIPER</a>
+			<a href="javascript:void(0);" title="POPUP" class="active">POPUP</a>
+			<a href="coding_guide_etc.html" title="ETC">ETC</a>
+		</div>
+
+		<div class="contents_infor">
+
+			<h2 class="title">POPUP</h2>
+
+			<!-- layer popup -->
+			<h3 class="title">&#x25CE; layer-popup (팝업 높이값 계산 스크립트는 mo-full에서만 작동)</h3>
+			<h4 class="btm-border">- 사이즈별 (736px, 544px)</h4>
+
+			<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="cta-outer">
+	<button class="btn pop-open" data-pop-idx="1"><span>544px</span></button>
+	<button class="btn pop-open" data-pop-idx="2"><span>736px</span></button>
+</div>
+
+<div class="layer-popup-wrap" data-pop-idx="1">
+	<div class="layer-popup-body">
+		<div class="layer-popup-cont pop-small">
+			<h1 class="layer-title">Ppopup Size 544px</h1>
+			<div class="layer-cont">
+				<p>layerCont Text1</p>
+				<p>layerCont Text2</p>
+				<p>layerCont Text3</p>
+				<p>layerCont Text4</p>
+				<p>layerCont Text5</p>
+				<p>layerCont Text6</p>
+				<p>layerCont Text7</p>
+				<p>layerCont Text8</p>
+			</div>
+			<button class="btn-close-popup btn-close">close</button>
+		</div>
+	</div>
+</div>
+
+<div class="layer-popup-wrap" data-pop-idx="2">
+	<div class="layer-popup-body">
+		<div class="layer-popup-cont">
+			<h1 class="layer-title">Popup Size 736px</h1>
+			<div class="layer-cont">
+				<p>layerCont Text1</p>
+				<p>layerCont Text2</p>
+				<p>layerCont Text3</p>
+				<p>layerCont Text4</p>
+				<p>layerCont Text5</p>
+				<p>layerCont Text6</p>
+				<p>layerCont Text7</p>
+				<p>layerCont Text8</p>
+			</div>
+			<button class="btn-close-popup btn-close">close</button>
+		</div>
+	</div>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				팝업 띄울 버튼에 클래스 "<strong>pop-open</strong>"을 붙이고, 클래스 "<strong>layer-popup-wrap</strong>"과의 <strong>data-pop-idx</strong>값이 같아야 함.<br>기본 사이즈는 700px, 500px은 .layer-popup-cont에 클래스 "<strong>pop-small</strong>"을 추가함.
+			</div>
+
+			<div class="cta-outer">
+				<a href="#" class="btn pop-open" data-pop-idx="1"><span>544px</span></a>
+				<button class="btn pop-open" data-pop-idx="2"><span>736px</span></button>
+			</div>
+
+			<div class="layer-popup-wrap" data-pop-idx="1">
+				<div class="layer-popup-body">
+					<div class="layer-popup-cont pop-small">
+						<h1 class="layer-title">Popup Size 544px</h1>
+						<div class="layer-cont">
+							<p>layerCont Text1</p>
+							<p>layerCont Text2</p>
+							<p>layerCont Text3</p>
+							<p>layerCont Text4</p>
+							<p>layerCont Text5</p>
+							<p>layerCont Text6</p>
+							<p>layerCont Text7</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text1</p>
+							<p>layerCont Text2</p>
+							<p>layerCont Text3</p>
+							<p>layerCont Text4</p>
+							<p>layerCont Text5</p>
+							<p>layerCont Text6</p>
+							<p>layerCont Text7</p>
+							<p>layerCont Text8</p>
+						</div>
+						<button class="btn-close-popup btn-close">close</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="layer-popup-wrap" data-pop-idx="2">
+				<div class="layer-popup-body">
+					<div class="layer-popup-cont">
+						<h1 class="layer-title">Popup Size 736px</h1>
+						<div class="layer-cont">
+							<p>layerCont Text1</p>
+							<p>layerCont Text2</p>
+							<p>layerCont Text3</p>
+							<p>layerCont Text4</p>
+							<p>layerCont Text5</p>
+							<p>layerCont Text6</p>
+							<p>layerCont Text7</p>
+							<p>layerCont Text8</p>
+						</div>
+						<button class="btn-close-popup btn-close">close</button>
+					</div>
+				</div>
+			</div>
+
+			<h4 class="btm-border">- 모바일만 풀사이즈</h4>
+
+			<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="cta-outer">
+	<button class="btn pop-open" data-pop-idx="3"><span>Popup Mobile Full</span></button>
+</div>
+
+<div class="layer-popup-wrap mo-full" data-pop-idx="3">
+	<div class="layer-popup-body">
+		<div class="layer-popup-cont">
+			<h1 class="layer-title">Layer Title 1</h1>
+			<div class="layer-cont">
+				<p>layerCont Text1</p>
+				<p>layerCont Text2</p>
+				<p>layerCont Text3</p>
+				<p>layerCont Text4</p>
+				<p>layerCont Text5</p>
+				<p>layerCont Text6</p>
+				<p>layerCont Text7</p>
+				<p>layerCont Text8</p>
+				<p>layerCont Text8</p>
+				<p>layerCont Text8</p>
+				<p>layerCont Text8</p>
+				<p>layerCont Text8</p>
+				<p>layerCont Text8</p>
+				<p>layerCont Text8</p>
+				<p>layerCont Text8</p>
+				<p>layerCont Text8</p>
+			</div>
+			<button class="btn-close-popup btn-close">close</button>
+		</div>
+	</div>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				.layer-popup-wrap에 클래스 "<strong>mo-full</strong>"를 추가함.
+			</div>
+
+			<div class="cta-outer">
+				<button class="btn pop-open" data-pop-idx="3"><span>Popup Mobile Full</span></button>
+			</div>
+
+			<div class="layer-popup-wrap mo-full" data-pop-idx="3">
+				<div class="layer-popup-body">
+					<div class="layer-popup-cont">
+						<h1 class="layer-title">Layer Title 2</h1>
+						<div class="layer-cont">
+							<p>layerCont Text1</p>
+							<p>layerCont Text2</p>
+							<p>layerCont Text3</p>
+							<p>layerCont Text4</p>
+							<p>layerCont Text5</p>
+							<p>layerCont Text6</p>
+							<p>layerCont Text7</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text8</p>
+							<p>layerCont Text8</p>
+						</div>
+						<button class="btn-close-popup btn-close">close</button>
+					</div>
+				</div>
+			</div>
+
+			<h4 class="btm-border">- 이중 팝업</h4>
+
+			<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="cta-outer">
+	<button class="btn pop-open" data-pop-idx="4"><span>Double Popup</span></button>
+</div>
+
+<div class="layer-popup-wrap" data-pop-idx="4">
+	<div class="layer-popup-body">
+		<div class="layer-popup-cont">
+			<h1 class="layer-title">Layer Title 3</h1>
+			<div class="layer-cont">
+				<p>layerCont Text1</p>
+				<p>layerCont Text2</p>
+				<p>layerCont Text3</p>
+				<p>layerCont Text4</p>
+				<p>layerCont Text5</p>
+				<p>layerCont Text6</p>
+				<p>layerCont Text7</p>
+				<p>layerCont Text8</p>
+				<div class="cta-outer full-type">
+					<button class="btn pop-open" data-pop-idx="5"><span>Inner popup</span></button>
+					<button class="btn btn-type2 btn-close"><span>CANCEL</span></button>
+				</div>
+			</div>
+			<button class="btn-close-popup">close</button>
+		</div>
+	</div>
+</div>
+
+<div class="layer-popup-wrap mo-full inner-pop" data-pop-idx="5">
+	<div class="layer-popup-body">
+		<div class="layer-popup-cont">
+			<h1 class="layer-title">Inner Layer Title 1</h1>
+			<div class="layer-cont">
+				<p>layerCont Text1</p>
+				<p>layerCont Text2</p>
+				<p>layerCont Text3</p>
+				<p>layerCont Text4</p>
+				<p>layerCont Text5</p>
+				<p>layerCont Text6</p>
+				<p>layerCont Text7</p>
+				<p>layerCont Text8</p>
+			</div>
+			<button class="btn-close-popup btn-close">close</button>
+		</div>
+	</div>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				내부 버튼의 data-pop-idx와 popup의 인덱스가 같아야하며, 내부 팝업은 .layer-popup-wrap에 클래스 "<strong>inner-pop</strong>"을 추가함.
+			</div>
+
+			<div class="cta-outer">
+				<button class="btn pop-open" data-pop-idx="4"><span>Double Popup</span></button>
+			</div>
+
+			<div class="layer-popup-wrap" data-pop-idx="4">
+				<div class="layer-popup-body">
+					<div class="layer-popup-cont">
+						<h1 class="layer-title">Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3</h1>
+						<div class="layer-cont">
+							<p>layerCont Text1</p>
+							<p>layerCont Text2</p>
+							<p>layerCont Text3</p>
+							<p>layerCont Text4</p>
+							<p>layerCont Text5</p>
+							<p>layerCont Text6</p>
+							<p>layerCont Text7</p>
+							<p>layerCont Text8</p>
+							<div class="cta-outer full-type">
+								<button class="btn btn-type2 btn-close"><span>Cancel</span></button>
+								<button class="btn pop-open" data-pop-idx="5"><span>Inner popup</span></button>
+							</div>
+						</div>
+						<button class="btn-close-popup btn-close">close</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="layer-popup-wrap mo-full inner-pop" data-pop-idx="5">
+				<div class="layer-popup-body">
+					<div class="layer-popup-cont">
+						<h1 class="layer-title">Inner Layer Title 1</h1>
+						<div class="layer-cont">
+							<p>layerCont Text1</p>
+							<p>layerCont Text2</p>
+							<p>layerCont Text3</p>
+							<p>layerCont Text4</p>
+							<p>layerCont Text5</p>
+							<p>layerCont Text6</p>
+							<p>layerCont Text7</p>
+							<p>layerCont Text8</p>
+						</div>
+						<button class="btn-close-popup btn-close">close</button>
+					</div>
+				</div>
+			</div>
+
+			<h4 class="btm-border">- 센터 고정 타입</h4>
+
+			<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="cta-outer">
+	<button class="btn pop-open" data-pop-idx="6"><span>Fix Center Popup</span></button>
+</div>
+
+<div class="layer-popup-wrap fix-center mo-full" data-pop-idx="6">
+	<div class="layer-popup-body">
+		<div class="layer-popup-cont">
+			<h1 class="layer-title">Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3</h1>
+			<div class="layer-cont">
+				<p>layerCont Text1</p>
+				<p>layerCont Text2</p>
+				<p>layerCont Text3</p>
+				<p>layerCont Text4</p>
+				<p>layerCont Text5</p>
+				<p>layerCont Text6</p>
+				<p>layerCont Text7</p>
+				<p>layerCont Text8</p>
+			</div>
+			<button class="btn-close-popup btn-close">close</button>
+		</div>
+	</div>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				.layer-popup-wrap에 클래스 "<strong>fix-center</strong>" 추가함.
+			</div>
+
+			<div class="cta-outer">
+				<button class="btn pop-open" data-pop-idx="6"><span>Fix Center Popup</span></button>
+			</div>
+
+			<div class="layer-popup-wrap fix-center mo-full" data-pop-idx="6">
+				<div class="layer-popup-body">
+					<div class="layer-popup-cont">
+						<h1 class="layer-title">Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3</h1>
+						<div class="layer-cont">
+							<p>layerCont Text1</p>
+							<p>layerCont Text2</p>
+							<p>layerCont Text3</p>
+							<p>layerCont Text4</p>
+							<p>layerCont Text5</p>
+							<p>layerCont Text6</p>
+							<p>layerCont Text7</p>
+							<p>layerCont Text8</p>
+						</div>
+						<button class="btn-close-popup btn-close">close</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- //layer popup -->
+
+		</div>
+		<!-- //contents_infor -->
+	</div>
+</div>
+<div class="btn-top-box">
+	<a href="#" title="move to top" role="button" class="btn-top">
+		<span class="blind">Top</span>
+	</a>
+</div>
+</body>
+</html>
