@@ -261,7 +261,7 @@ jQuery.event.add(window, 'load', function () {
 			$('.layer-popup-wrap').on('click', function (e) {
 				const _this = $(this).closest('.layer-popup-wrap');
 				const tarItem = $('.layer-popup-cont > div, .layer-title,'
-				 + '.layer-cont *:not(.btn-close *), .bottom-fixed *');
+				 + '.layer-cont *:not(.cta-outer *), .bottom-fixed *');
 				if (!$(e.target).is(tarItem)) {
 					if ($(this).scrollTop() !== 0) {
 						if (hgtSize < popIdxHgt) {
