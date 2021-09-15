@@ -178,7 +178,7 @@ $(function () {
 				allowSlideNext: false,
 				simulateTouch: false
 			}
-			$('.shop-visual [class*="swiper-button"]').hide();
+			$('.shop-visual .control-area').hide();
 		} else {
 			swpOpt = {
 				navigation: {
@@ -188,17 +188,44 @@ $(function () {
 				pagination: {
 					el: '.shop-visual .swiper-pagination',
 					clickable: true,
+					type: 'custom',
+					renderCustom : function(t,e,a){ function n(t) {
+						return t<10?"0" + t.toString():t.toString()
+					}
+						return'<span class="swiper-page-current">'+ n(e) + 
+						'</span><div class="bar-progress"><span class="bar-ing"></span></div><span class="swiper-page-total">' + n(a) + 
+						'</span>'
+					}
 				},
 				simulateTouch: true,
 				speed: 300,
-				loop: false,
+				loop: true,
 				spaceBetween: 0,
 				observer: true,
 				observeParents: true,
+				autoplay: {
+					delay: 3000,
+				},
+				paginationClickable: true,
+				autoplayDisableOnInteraction: true,
 			}
 		}
 		let shopMainSlide = new Swiper('.shop-visual .swiper-container', swpOpt);
+
+		$(".shop-visual .swiper-control").on('click', function(){
+			if ($('.swiper-control').hasClass('stop')) {
+				shopMainSlide.autoplay.start();
+				$(this).removeClass('stop').text('Play');
+				$('.bar-ing').show();
+			} else {
+				shopMainSlide.autoplay.stop()
+				$(this).addClass('stop').text('Stop');
+				$('.bar-ing').hide();
+			}
+		});
 	};
+		
+
 
 	
 
@@ -284,4 +311,56 @@ $(function () {
 		let selectedThumb = new Swiper('.select-thumb .swiper-container', swpOpt);
 	};
 
+	// my Main 
+	function listCarSwp () {
+		let ww = $(window).width();
+		chkSwpBool = false;
+		if (!chkSwpBool) {
+			if (ww <= tbl) {
+				$('.list-my-car').removeClass('mo-slide');
+				if ($('.list-my-car').length == 1) {
+					let swpOpt = {},
+					slideLength = $('.list-my-car .swiper-slide').length;
+					if (slideLength == 1) {
+						swpOpt = {
+							allowSlidePrev: false,
+							allowSlideNext: false,
+							simulateTouch: false
+						}
+						$('.list-my-car [class*="swiper-button"]').hide();
+					} else {
+						swpOpt = {
+							navigation: {
+								nextEl: '.list-my-car .swiper-button-next',
+								prevEl: '.list-my-car .swiper-button-prev',
+							},
+							pagination: {
+								el: '.list-my-car .swiper-pagination',
+								clickable: true,
+							},
+							slidesPerView: 'auto',
+							// centeredSlides: true,
+							simulateTouch: true,
+							speed: 300,
+							loop: false,
+							spaceBetween: 0,
+							observer: true,
+							observeParents: true,
+						}
+					}
+					let listMyCar = new Swiper('.list-my-car .swiper-container', swpOpt);
+					chkSwpBool = true;
+				}
+			} else {
+				$('.list-my-car').addClass('mo-slide');
+			}
+		}
+	}
+	listCarSwp ();
+
+	$(window).on('resize', function() {
+		if (!chkSwpBool) {
+			listCarSwp ();
+		}
+	});
 });

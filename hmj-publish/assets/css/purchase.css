@@ -1168,3 +1168,233 @@
 		display: block;
 	}
 }
+
+
+/* download */
+.download .top-tit-box { 
+	padding: 75px 0;
+	border-bottom: 1px solid #e9e9e9;
+	text-align: center;
+}
+.download .top-tit-box h2 {
+	font-weight: 500;
+}
+.download .top-tit-box .cont-tit2 {
+	margin-top: 16px;
+}
+.download .cont-outer .cont-top {
+	position: relative;
+	padding: 73px 0 25px;
+}
+.download .cont-outer .cont-top h4 {
+	font-weight: 500;
+	line-height: 1.58;
+}
+.download .cont-outer .cont-top .slt-box-cont {
+	position: absolute;
+	top: 73px;
+	right: 0;
+}
+.download .cont-outer .cont-top .slt-box {
+	display: inline-block;
+	width: 256px;
+	vertical-align: top;
+}
+.download .cont-outer .cont-top .slt-box + .slt-box {
+	margin: 0 0 0 12px;
+}
+.download .cont-outer .cont-top .slt-box .select-items li {
+	background: #fff;
+}
+.download .cont-outer .cont-list {
+	padding-top: 40px;
+	border-top: 1px solid #999;
+}
+.download .cont-outer .cont-list li {
+	height: 332px;
+	padding: 48px;
+	border-radius: 8px;
+	border: 1px solid #e9e9e9;
+}
+.download .cont-outer .cont-list li+li {
+	margin-top: 16px;
+}
+.download .cont-outer .cont-list .info-cont {
+	display: flex;
+	justify-content: space-between;
+}
+.download .cont-outer .cont-list .info-cont .info > * {
+	display: block;
+}
+.download .cont-outer .cont-list .info-cont .info .txt {
+	font-size: 16px;
+	line-height: 26px;
+}
+.download .cont-outer .cont-list .info-cont .info .tit {
+	font-size: 40px;
+    font-weight: 500;
+	line-height: 1.6;
+}
+.download .cont-outer .cont-list .info-cont .info .price {
+	margin-top: 8px;
+	font-size: 20px;
+    font-weight: 500;
+	line-height: 1.6;
+	color: #0793ea;
+}
+.download .cont-outer .cont-list .img-cont {
+	width: 360px;
+	margin-top: 30px;
+}
+.download .cont-outer .cont-list .noti {
+	margin-top: -46px;
+}
+.download .cont-outer .cont-list .btn .ico {
+	width: 16px;
+}
+.download .cont-outer .cont-list .cta-outer {
+	margin-top: 8px;
+	text-align: left;
+}
+.download .cont-outer .caution {
+	margin-top: 40px;
+} 
+.download .cont-outer .tbl-box.pdf {
+	margin-top: 0;
+}
+.download .cont-outer .tbl-box.pdf td {
+	height: 54px;
+}
+.download .cont-outer .tbl-box.pdf .flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.download .cont-outer .tbl-box.pdf .flex .tit {
+	width: calc(100% - 128px);
+	font-weight: 400;
+	text-align: left;
+}
+.download .cont-outer .tbl-box.pdf .flex .date {
+	width: 128px;
+	color: #999;
+}
+.download .cont-outer .tbl-box.pdf .auto-width {
+	width:160px;
+}
+.download .cont-outer .tbl-box.pdf .auto-width button {
+	padding-left:24px;
+	background:url('../../assets/images/common/ico_down_g.png') no-repeat;
+	background-size: 16px;
+	color: #191919;
+}
+
+@media screen and (max-width: 1119px) {
+	.download .hmj-content .cont-outer {
+		padding: 0 20px;
+	}
+	.download .top-tit-box {
+		display: none;
+	}
+	.download .cont-outer .cont-top {
+		padding: 24px 0 16px;
+	}
+	.download .cont-outer .cont-top h4 {
+		font-size: 16px;
+	}
+	.download .cont-outer .cont-top .slt-box-cont {
+		position: relative;
+		top:0;
+		left: 0;
+		width: 100%;
+		margin-top: 16px;
+	}
+	.download .cont-outer .cont-top .slt-box-cont .slt-box {
+		width: 100%;
+	}
+	.download .cont-outer .cont-top .slt-box-cont .slt-box + .slt-box {
+		margin: 8px 0 0 0;
+	}
+	.download .cont-outer .cont-list {
+		padding-top: 24px;
+	}
+	.download .cont-outer .cont-list li {
+		height: auto;
+		padding: 24px;
+	}
+	.download .cont-outer .cont-list .info-cont {
+		display: block;
+	}
+	.download .cont-outer .cont-list .info-cont .info .txt {
+		font-size: 12px;
+		line-height: 1.67;
+	}
+	.download .cont-outer .cont-list .info-cont .info .tit {
+		font-size: 32px;
+		line-height: 1.63;
+	}
+	.download .cont-outer .cont-list .info-cont .info .price {
+		font-size: 16px;
+		line-height: 1.63;
+	}
+	.download .cont-outer .cont-list .img-cont {
+		width: 100%;
+		margin-top: 24px;
+	}
+	.download .cont-outer .cont-list .noti {
+		margin-top: 24px;
+	}
+	.download .cont-outer .cont-list .cta-outer {
+		margin-top: 16px;
+	}
+	.download .cont-outer .caution {
+		margin: 32px -20px 0;
+		padding: 24px 20px;
+	}
+	.download .cont-outer .tbl-box.pdf {
+		margin: 0 0 32px 0;
+	}
+	.download .cont-outer .tbl-box.pdf table {
+		width: 100%;
+	}
+	.download .cont-outer .tbl-box.pdf thead {
+		display: none;
+	}
+	.download .cont-outer .tbl-box.pdf .flex {
+		display: table-cell;
+		text-align: left;
+	}
+	.download .cont-outer .tbl-box.pdf .flex > * {
+		display: block;
+	}
+	.download .cont-outer .tbl-box.pdf .flex .tit {
+		width: 100%;
+		font-size: 12px;
+		line-height: 1.67;
+	}
+	.download .cont-outer .tbl-box.pdf .flex .date {
+		width: auto;
+		margin-top: 8px;
+		font-size: 12px;
+		line-height: 1.67;
+	}
+	.download .cont-outer .tbl-box.pdf .auto-width {
+		width:64px;
+	}
+	.download .cont-outer .tbl-box.pdf .auto-width button {
+		display: block;
+		width: 100%;
+		padding-left: 0;
+		background: url('../../assets/images/common/ico_down_g_mo.png') no-repeat center;
+		background-size: 32px;
+	}
+	.download .cont-outer .tbl-box.pdf .auto-width span {
+		color: transparent;
+	}
+	.download .hmj-pagination {
+		margin: 0 -20px;
+	}
+	.ie11 .download .cont-outer .tbl-box.pdf .auto-width {
+		padding: 0;
+	}
+}

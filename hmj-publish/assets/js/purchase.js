@@ -22,9 +22,7 @@ jQuery.event.add(window, 'load', function () {
             $('.type2').addClass('on');
         } 
     }
-    setTimeout(function () {
-		autoSize();
-	}, 0);
+    autoSize();
 
     $(window).resize(function () {
         autoSize();
