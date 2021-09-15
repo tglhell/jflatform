@@ -467,66 +467,11 @@
 			<div class="conIn_tip">
 				.slt-box
 			</div>
-			<select title="selectBox" class="slt-box">
-				<option value="00" selected disabled hidden>Select All</option>
-				<option value="01">Option01</option>
-				<option value="02">Option02</option>
-			</select>
-			<select title="selectBox" class="slt-box" disabled>
-				<option value="00" selected disabled hidden>Select All</option>
-				<option value="01">Option01</option>
-				<option value="02">Option02</option>
-			</select>
-			<br><br>
-			<div class="inp-outer-box">
-				<div class="inp-slice-box">
-					<select title="selectBox" class="slt-box">
-						<option value="00" selected disabled hidden>Select All</option>
-						<option value="01">Option01</option>
-						<option value="02">Option02</option>
-					</select>
-					<span class="inp-hpn">-</span>
-					<select title="selectBox" class="slt-box">
-						<option value="00" selected disabled hidden>Select All</option>
-						<option value="01">Option01</option>
-						<option value="02">Option02</option>
-					</select>
-					<span class="inp-hpn">-</span>
-					<select title="selectBox" class="slt-box">
-						<option value="00" selected disabled hidden>Select All</option>
-						<option value="01">Option01</option>
-						<option value="02">Option02</option>
-					</select>
-				</div>
-			</div>
-			<br><br>
-			<div class="inp-outer-box">
-				<div class="inp-slice-box none-hyphen">
-					<select title="selectBox" class="slt-box">
-						<option value="00" selected disabled hidden>全車両</option>
-						<option value="01">Option01</option>
-						<option value="02">Option02</option>
-					</select>
-					<span class="inp-hpn">-</span>
-					<select title="selectBox" class="slt-box">
-						<option value="00" selected disabled hidden>全車両</option>
-						<option value="01">Option01</option>
-						<option value="02">Option02</option>
-					</select>
-					<span class="inp-hpn">-</span>
-					<select title="selectBox" class="slt-box">
-						<option value="00" selected disabled hidden>全車両</option>
-						<option value="01">Option01</option>
-						<option value="02">Option02</option>
-						<option value="03">Option03</option>
-					</select>
-				</div>
-			</div>
 			<br><br>
 			<h4 class="btm-border">- Custom Select</h4>
 			
 			<div class="slt-box">
-				<p class="selected-value">Custom Select Text</p>
+				<p class="selected-value">テキスト</p>
 				<ul class="select-items">
 					<li>option1</li>
 					<li>option2</li>
@@ -534,7 +479,7 @@
 				</ul>
 			</div>
 			<div class="slt-box disabled">
-				<p class="selected-value">Custom Select Text</p>
+				<p class="selected-value">テキスト</p>
 				<ul class="select-items">
 					<li>option1</li>
 					<li>option2</li>
@@ -625,25 +570,34 @@
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
 				ul.check-terms &gt; li + li<br>
+				div.check-terms &gt; .chk
 			</div>
 
+			단독사용
+			<div class="check-terms align-c"> 
+				<label class="chk"><input type="checkbox"><span>(必須) 個人情報の収集及び利用目的につい
+					ての同意</span>
+				</label>
+			</div>
+
+			리스트 형
 			<ul class="check-terms">
 				<li>
-					<label class="chk"><input type="checkbox"><span><em>(必須)</em>個人情報の収集及び利用目的につい
+					<label class="chk"><input type="checkbox"><span>(必須)個人情報の収集及び利用目的につい
 						ての同意</span>
 						<a href="#" class="link-more">詳細を見る</a>
-					</label>					
+					</label>
 					<p class="error-msg">error text</p>
 				</li>
 				<li>
-					<label class="chk val-error"><input type="checkbox"><span><em>(必須)</em>個人情報の収集及び利用目的につい
+					<label class="chk val-error"><input type="checkbox"><span>(必須) 個人情報の収集及び利用目的につい
 						ての同意</span>
 						<a href="#" class="link-more">詳細を見る</a>
-					</label>					
+					</label>
 					<p class="error-msg">error text</p>
 				</li>
 				<li>
-					<label class="chk val-error"><input type="checkbox"><span><em>(必須)</em>登録された携帯電話あてに試乗サービ
+					<label class="chk val-error"><input type="checkbox"><span>(必須) 登録された携帯電話あてに試乗サービ
 					ス利用についてご案内させていただきます。</span></label>
 					<p class="error-msg">error text</p>
 				</li>
@@ -783,7 +737,7 @@
 				.inp-item에 클래스 "<strong>date-picker</strong>"를 추가함.
 			</div>
 			
-			<div class="inp-outer-box">
+			<div class="inp-outer-box calendar">
 				<div class="inp-slice-box">
 					<input type="text" class="inp-item date-picker" placeholder="Press the right icon !!">
 				</div>
@@ -793,25 +747,27 @@
 
 			<!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<div class="inp-outer-box">
+<pre class="language-html"><code><!--<div class="inp-outer-box calendar">
 	<div class="inp-slice-box">
-		<input type="text" class="inp-item date-picker" placeholder="Press the right icon !!">
-		<span class="inp-hpn">-</span>
-		<input type="text" class="inp-item date-picker" placeholder="Press the right icon !!">
+		<div class="inp-area"><input type="text" class="inp-item date-picker" placeholder="Press the right icon !!"></div>
+		<span class="inp-hpn">~</span>
+		<div class="inp-area"><input type="text" class="inp-item date-picker" placeholder="Press the right icon !!"></div>
+		<button class="btn-search"><span>検索</span></button>
 	</div>
 </div>
 --></code></pre>
 <!-- //코드 삽입 -->
 			
 			<div class="conIn_tip">
-				.inp-slice-box안에 input + span + input
+				.inp-slice-box안에 .inp-area + span + .inp-area
 			</div>
 			
-			<div class="inp-outer-box">
+			<div class="inp-outer-box calendar">
 				<div class="inp-slice-box">
-					<input type="text" class="inp-item date-picker" placeholder="Press the right icon !!">
-					<span class="inp-hpn">-</span>
-					<input type="text" class="inp-item date-picker" placeholder="Press the right icon !!">
+					<div class="inp-area"><input type="text" class="inp-item date-picker" placeholder="Press the right icon !!"></div>
+					<span class="inp-hpn">~</span>
+					<div class="inp-area"><input type="text" class="inp-item date-picker" placeholder="Press the right icon !!"></div>
+					<button class="btn-search"><span>検索</span></button>
 				</div>
 			</div>
 

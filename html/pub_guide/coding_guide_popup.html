@@ -69,28 +69,29 @@
 
 			<!-- layer popup -->
 			<h3 class="title">&#x25CE; layer-popup (팝업 높이값 계산 스크립트는 mo-full에서만 작동)</h3>
-			<h4 class="btm-border">- 사이즈별 (736px, 544px)</h4>
+			<h4 class="btm-border">- 사이즈별 (544px, 736px)</h4>
 
 			<!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--<div class="cta-outer">
-	<button class="btn pop-open" data-pop-idx="1"><span>544px</span></button>
-	<button class="btn pop-open" data-pop-idx="2"><span>736px</span></button>
+	<a href="#" class="btn pop-open" data-pop-idx="1"><span>464px</span></a>
+	<button class="btn pop-open" data-pop-idx="2"><span>544px</span></button>
+	<button class="btn pop-open" data-pop-idx="3"><span>736px</span></button>
 </div>
 
 <div class="layer-popup-wrap" data-pop-idx="1">
 	<div class="layer-popup-body">
 		<div class="layer-popup-cont pop-small">
-			<h1 class="layer-title">Ppopup Size 544px</h1>
+			<h1 class="layer-title">Popup Size 464px</h1>
 			<div class="layer-cont">
 				<p>layerCont Text1</p>
 				<p>layerCont Text2</p>
 				<p>layerCont Text3</p>
 				<p>layerCont Text4</p>
-				<p>layerCont Text5</p>
-				<p>layerCont Text6</p>
-				<p>layerCont Text7</p>
-				<p>layerCont Text8</p>
+				<div class="cta-outer full-type">
+					<button class="btn btn-middle btn-type2"><span>適用</span></button>
+					<button class="btn btn-middle"><span>適用</span></button>
+				</div>
 			</div>
 			<button class="btn-close-popup btn-close">close</button>
 		</div>
@@ -99,8 +100,8 @@
 
 <div class="layer-popup-wrap" data-pop-idx="2">
 	<div class="layer-popup-body">
-		<div class="layer-popup-cont">
-			<h1 class="layer-title">Popup Size 736px</h1>
+		<div class="layer-popup-cont pop-medium">
+			<h1 class="layer-title">Popup Size 544px</h1>
 			<div class="layer-cont">
 				<p>layerCont Text1</p>
 				<p>layerCont Text2</p>
@@ -110,6 +111,41 @@
 				<p>layerCont Text6</p>
 				<p>layerCont Text7</p>
 				<p>layerCont Text8</p>
+				<div class="cta-outer full-type">
+					<button class="btn btn-middle btn-type2"><span>適用</span></button>
+					<button class="btn btn-middle"><span>適用</span></button>
+				</div>
+			</div>
+			<button class="btn-close-popup btn-close">close</button>
+		</div>
+	</div>
+</div>
+
+<div class="layer-popup-wrap" data-pop-idx="3">
+	<div class="layer-popup-body">
+		<div class="layer-popup-cont">
+			<h1 class="layer-title">Popup Size 736px<br>Popup Size 736px</h1>
+			<div class="layer-cont">
+				<p>layerCont Text1</p>
+				<p>layerCont Text2</p>
+				<p>layerCont Text3</p>
+				<p>layerCont Text4</p>
+				<p>layerCont Text5</p>
+				<p>layerCont Text6</p>
+				<p>layerCont Text7</p>
+				<p>layerCont Text8</p>
+				<p>layerCont Text1</p>
+				<p>layerCont Text2</p>
+				<p>layerCont Text3</p>
+				<p>layerCont Text4</p>
+				<p>layerCont Text5</p>
+				<p>layerCont Text6</p>
+				<p>layerCont Text7</p>
+				<p>layerCont Text8</p>
+				<div class="cta-outer full-type">
+					<button class="btn btn-middle btn-type2"><span>適用</span></button>
+					<button class="btn btn-middle"><span>適用</span></button>
+				</div>
 			</div>
 			<button class="btn-close-popup btn-close">close</button>
 		</div>
@@ -118,17 +154,37 @@
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
-				팝업 띄울 버튼에 클래스 "<strong>pop-open</strong>"을 붙이고, 클래스 "<strong>layer-popup-wrap</strong>"과의 <strong>data-pop-idx</strong>값이 같아야 함.<br>기본 사이즈는 700px, 500px은 .layer-popup-cont에 클래스 "<strong>pop-small</strong>"을 추가함.
+				팝업 띄울 버튼에 클래스 "<strong>pop-open</strong>"을 붙이고, 클래스 "<strong>layer-popup-wrap</strong>"과의 <strong>data-pop-idx</strong>값이 같아야 함.<br>기본 사이즈는 736px, 544px은 .layer-popup-cont에 클래스 "<strong>pop-medium</strong>"을 464px은 .layer-popup-cont에 클래스 "<strong>pop-small</strong>"을 추가함.
 			</div>
 
 			<div class="cta-outer">
-				<a href="#" class="btn pop-open" data-pop-idx="1"><span>544px</span></a>
-				<button class="btn pop-open" data-pop-idx="2"><span>736px</span></button>
+				<a href="#" class="btn pop-open" data-pop-idx="1"><span>464px</span></a>
+				<button class="btn pop-open" data-pop-idx="2"><span>544px</span></button>
+				<button class="btn pop-open" data-pop-idx="3"><span>736px</span></button>
 			</div>
 
 			<div class="layer-popup-wrap" data-pop-idx="1">
 				<div class="layer-popup-body">
 					<div class="layer-popup-cont pop-small">
+						<h1 class="layer-title">Popup Size 464px</h1>
+						<div class="layer-cont">
+							<p>layerCont Text1</p>
+							<p>layerCont Text2</p>
+							<p>layerCont Text3</p>
+							<p>layerCont Text4</p>
+							<div class="cta-outer full-type">
+								<button class="btn btn-middle btn-type2"><span>適用</span></button>
+								<button class="btn btn-middle"><span>適用</span></button>
+							</div>
+						</div>
+						<button class="btn-close-popup btn-close">close</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="layer-popup-wrap" data-pop-idx="2">
+				<div class="layer-popup-body">
+					<div class="layer-popup-cont pop-medium">
 						<h1 class="layer-title">Popup Size 544px</h1>
 						<div class="layer-cont">
 							<p>layerCont Text1</p>
@@ -139,24 +195,20 @@
 							<p>layerCont Text6</p>
 							<p>layerCont Text7</p>
 							<p>layerCont Text8</p>
-							<p>layerCont Text1</p>
-							<p>layerCont Text2</p>
-							<p>layerCont Text3</p>
-							<p>layerCont Text4</p>
-							<p>layerCont Text5</p>
-							<p>layerCont Text6</p>
-							<p>layerCont Text7</p>
-							<p>layerCont Text8</p>
+							<div class="cta-outer full-type">
+								<button class="btn btn-middle btn-type2"><span>適用</span></button>
+								<button class="btn btn-middle"><span>適用</span></button>
+							</div>
 						</div>
 						<button class="btn-close-popup btn-close">close</button>
 					</div>
 				</div>
 			</div>
 
-			<div class="layer-popup-wrap" data-pop-idx="2">
+			<div class="layer-popup-wrap" data-pop-idx="3">
 				<div class="layer-popup-body">
 					<div class="layer-popup-cont">
-						<h1 class="layer-title">Popup Size 736px</h1>
+						<h1 class="layer-title">Popup Size 736px<br>Popup Size 736px</h1>
 						<div class="layer-cont">
 							<p>layerCont Text1</p>
 							<p>layerCont Text2</p>
@@ -166,6 +218,18 @@
 							<p>layerCont Text6</p>
 							<p>layerCont Text7</p>
 							<p>layerCont Text8</p>
+							<p>layerCont Text1</p>
+							<p>layerCont Text2</p>
+							<p>layerCont Text3</p>
+							<p>layerCont Text4</p>
+							<p>layerCont Text5</p>
+							<p>layerCont Text6</p>
+							<p>layerCont Text7</p>
+							<p>layerCont Text8</p>
+							<div class="cta-outer full-type">
+								<button class="btn btn-middle btn-type2"><span>適用</span></button>
+								<button class="btn btn-middle"><span>適用</span></button>
+							</div>
 						</div>
 						<button class="btn-close-popup btn-close">close</button>
 					</div>
@@ -177,10 +241,10 @@
 			<!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--<div class="cta-outer">
-	<button class="btn pop-open" data-pop-idx="3"><span>Popup Mobile Full</span></button>
+	<button class="btn pop-open" data-pop-idx="4"><span>Popup Mobile Full</span></button>
 </div>
 
-<div class="layer-popup-wrap mo-full" data-pop-idx="3">
+<div class="layer-popup-wrap mo-full" data-pop-idx="4">
 	<div class="layer-popup-body">
 		<div class="layer-popup-cont">
 			<h1 class="layer-title">Layer Title 1</h1>
@@ -213,10 +277,10 @@
 			</div>
 
 			<div class="cta-outer">
-				<button class="btn pop-open" data-pop-idx="3"><span>Popup Mobile Full</span></button>
+				<button class="btn pop-open" data-pop-idx="4"><span>Popup Mobile Full</span></button>
 			</div>
 
-			<div class="layer-popup-wrap mo-full" data-pop-idx="3">
+			<div class="layer-popup-wrap mo-full" data-pop-idx="4">
 				<div class="layer-popup-body">
 					<div class="layer-popup-cont">
 						<h1 class="layer-title">Layer Title 2</h1>
@@ -248,10 +312,10 @@
 			<!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--<div class="cta-outer">
-	<button class="btn pop-open" data-pop-idx="4"><span>Double Popup</span></button>
+	<button class="btn pop-open" data-pop-idx="5"><span>Double Popup</span></button>
 </div>
 
-<div class="layer-popup-wrap" data-pop-idx="4">
+<div class="layer-popup-wrap" data-pop-idx="5">
 	<div class="layer-popup-body">
 		<div class="layer-popup-cont">
 			<h1 class="layer-title">Layer Title 3</h1>
@@ -265,7 +329,7 @@
 				<p>layerCont Text7</p>
 				<p>layerCont Text8</p>
 				<div class="cta-outer full-type">
-					<button class="btn pop-open" data-pop-idx="5"><span>Inner popup</span></button>
+					<button class="btn pop-open" data-pop-idx="6"><span>Inner popup</span></button>
 					<button class="btn btn-type2 btn-close"><span>CANCEL</span></button>
 				</div>
 			</div>
@@ -274,7 +338,7 @@
 	</div>
 </div>
 
-<div class="layer-popup-wrap mo-full inner-pop" data-pop-idx="5">
+<div class="layer-popup-wrap mo-full inner-pop" data-pop-idx="6">
 	<div class="layer-popup-body">
 		<div class="layer-popup-cont">
 			<h1 class="layer-title">Inner Layer Title 1</h1>
@@ -299,10 +363,10 @@
 			</div>
 
 			<div class="cta-outer">
-				<button class="btn pop-open" data-pop-idx="4"><span>Double Popup</span></button>
+				<button class="btn pop-open" data-pop-idx="5"><span>Double Popup</span></button>
 			</div>
 
-			<div class="layer-popup-wrap" data-pop-idx="4">
+			<div class="layer-popup-wrap" data-pop-idx="5">
 				<div class="layer-popup-body">
 					<div class="layer-popup-cont">
 						<h1 class="layer-title">Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3</h1>
@@ -317,7 +381,7 @@
 							<p>layerCont Text8</p>
 							<div class="cta-outer full-type">
 								<button class="btn btn-type2 btn-close"><span>Cancel</span></button>
-								<button class="btn pop-open" data-pop-idx="5"><span>Inner popup</span></button>
+								<button class="btn pop-open" data-pop-idx="6"><span>Inner popup</span></button>
 							</div>
 						</div>
 						<button class="btn-close-popup btn-close">close</button>
@@ -325,7 +389,7 @@
 				</div>
 			</div>
 
-			<div class="layer-popup-wrap mo-full inner-pop" data-pop-idx="5">
+			<div class="layer-popup-wrap mo-full inner-pop" data-pop-idx="6">
 				<div class="layer-popup-body">
 					<div class="layer-popup-cont">
 						<h1 class="layer-title">Inner Layer Title 1</h1>
@@ -344,15 +408,89 @@
 				</div>
 			</div>
 
-			<h4 class="btm-border">- 센터 고정 타입</h4>
+			<h4 class="btm-border">- 경고 팝업</h4>
+
+			<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="layer-popup-wrap" data-pop-idx="7">
+	<div class="layer-popup-body">
+		<div class="layer-popup-cont pop-small">
+			<div class="layer-cont">
+				<p class="alert-desc">カートに追加しました。<br>カートへ移動しますか？</p>
+				<div class="cta-outer full-type">
+					<button class="btn btn-close"><span>テキスト</span></button>
+					<button class="btn btn-type2"><span>テキスト</span></button>
+				</div>
+			</div>
+			<button class="btn-close-popup btn-close">close</button>
+		</div>
+	</div>
+</div>
+
+<div class="layer-popup-wrap" data-pop-idx="8">
+	<div class="layer-popup-body">
+		<div class="layer-popup-cont pop-small none-close">
+			<div class="layer-cont">
+				<p class="alert-desc">カートに追加しました。<br>カートへ移動しますか？</p>
+				<div class="cta-outer full-type">
+					<button class="btn btn-close"><span>テキスト</span></button>
+					<button class="btn btn-type2"><span>テキスト</span></button>
+				</div>
+			</div>
+			<button class="btn-close-popup btn-close">close</button>
+		</div>
+	</div>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				
+			</div>
+
+			<div class="cta-outer">
+				<button class="btn pop-open" data-pop-idx="7"><span>Alert Popup</span></button>
+				<button class="btn pop-open" data-pop-idx="8"><span>Alert Popup (X버튼 없음)</span></button>
+			</div>
+
+			<div class="layer-popup-wrap" data-pop-idx="7">
+				<div class="layer-popup-body">
+					<div class="layer-popup-cont pop-small">
+						<div class="layer-cont">
+							<p class="alert-desc">カートに追加しました。<br>カートへ移動しますか？</p>
+							<div class="cta-outer full-type">
+								<button class="btn btn-close"><span>テキスト</span></button>
+								<button class="btn btn-type2"><span>テキスト</span></button>
+							</div>
+						</div>
+						<button class="btn-close-popup btn-close">close</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="layer-popup-wrap" data-pop-idx="8">
+				<div class="layer-popup-body">
+					<div class="layer-popup-cont pop-small none-close">
+						<div class="layer-cont">
+							<p class="alert-desc">カートに追加しました。<br>カートへ移動しますか？</p>
+							<div class="cta-outer full-type">
+								<button class="btn btn-close"><span>テキスト</span></button>
+								<button class="btn btn-type2"><span>テキスト</span></button>
+							</div>
+						</div>
+						<button class="btn-close-popup btn-close">close</button>
+					</div>
+				</div>
+			</div>
+
+			<h4 class="btm-border">- 센터 고정 타입 (버튼 하단 고정 케이스 포함)</h4>
 
 			<!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--<div class="cta-outer">
-	<button class="btn pop-open" data-pop-idx="6"><span>Fix Center Popup</span></button>
+	<button class="btn pop-open" data-pop-idx="9"><span>Fix Center Popup</span></button>
 </div>
 
-<div class="layer-popup-wrap fix-center mo-full" data-pop-idx="6">
+<div class="layer-popup-wrap fix-center mo-full" data-pop-idx="9">
 	<div class="layer-popup-body">
 		<div class="layer-popup-cont">
 			<h1 class="layer-title">Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3</h1>
@@ -365,6 +503,19 @@
 				<p>layerCont Text6</p>
 				<p>layerCont Text7</p>
 				<p>layerCont Text8</p>
+				<p>layerCont Text1</p>
+				<p>layerCont Text2</p>
+				<p>layerCont Text3</p>
+				<p>layerCont Text4</p>
+				<p>layerCont Text5</p>
+				<p>layerCont Text6</p>
+				<p>layerCont Text7</p>
+				<p>layerCont Text8</p>
+			</div>
+			<div class="bottom-fixed">
+				<div class="cta-outer">
+					<button class="btn btn-type2"><span>適用</span></button>
+				</div>
 			</div>
 			<button class="btn-close-popup btn-close">close</button>
 		</div>
@@ -377,10 +528,10 @@
 			</div>
 
 			<div class="cta-outer">
-				<button class="btn pop-open" data-pop-idx="6"><span>Fix Center Popup</span></button>
+				<button class="btn pop-open" data-pop-idx="9"><span>Fix Center Popup</span></button>
 			</div>
 
-			<div class="layer-popup-wrap fix-center mo-full" data-pop-idx="6">
+			<div class="layer-popup-wrap fix-center mo-full" data-pop-idx="9">
 				<div class="layer-popup-body">
 					<div class="layer-popup-cont">
 						<h1 class="layer-title">Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3</h1>
@@ -393,6 +544,20 @@
 							<p>layerCont Text6</p>
 							<p>layerCont Text7</p>
 							<p>layerCont Text8</p>
+							<p>layerCont Text1</p>
+							<p>layerCont Text2</p>
+							<p>layerCont Text3</p>
+							<p>layerCont Text4</p>
+							<p>layerCont Text5</p>
+							<p>layerCont Text6</p>
+							<p>layerCont Text7</p>
+							<p>layerCont Text8</p>
+						</div>
+						<div class="bottom-fixed">
+							<div class="cta-outer">
+								<button class="btn btn-close"><span>適用</span></button>
+								<button class="btn btn-type2"><span>適用</span></button>
+							</div>
 						</div>
 						<button class="btn-close-popup btn-close">close</button>
 					</div>

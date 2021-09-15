@@ -1,4 +1,15 @@
 /** datepicker **/
+.inp-item.date-picker {
+	border: 1px solid #e9e9e9;
+	border-radius: 4px;
+	height: 40px;
+	font-size: 12px;
+	line-height: 20px;
+	padding: 10px 40px 10px 12px;
+}
+.inp-item.date-picker::placeholder {
+	font-size: 12px;
+}
 .ui-datepicker {
 	width: 370px;
 }
@@ -163,9 +174,12 @@ a.ui-button:active,
 	padding: 0;
 }
 .ui-datepicker-trigger {
-	min-width: 46px;
-	height: 46px;
+	min-width: 24px;
+	height: 24px;
 	margin-left: 10px;
+	position: absolute;
+	right: 8px;
+	top: 8px;
 }
 
 #sampleDatePicker .ui-state-default,
@@ -248,29 +262,4 @@ a.ui-button:active,
 }
 .sample-swiper-num02 img {
     width: 100%;
-}
-
-
-/* Shop Main */
-.shop-visual {
-    width: 100%;
-    max-width: 1920px;
-    min-width: 1120px;
-}
-.shop-visual .swiper-slide {
-    text-align: center;
-    height: 700px;
-    width: 100%;
-}
-.shop-visual .swiper-slide img {
-    -o-object-fit: cover;
-    object-fit: cover;    
-    max-width: 100%;
-    height: 100%;
-}
-.shop-visual .swiper-button-prev {
-	left: 0;
-}
-.shop-visual .swiper-button-next {
-	right: 0;
 }

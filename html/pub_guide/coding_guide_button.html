@@ -92,6 +92,8 @@
 <button class="btn btn-extra-small"><span>商品 見る</span></button>
 <button class="btn btn-type2 btn-extra-small"><span>商品 見る</span></button>
 <button class="btn btn-type3 btn-extra-small"><span>商品 見る</span></button>
+
+<button class="btn btn-type2 btn-tbl"><span>商品 見る</span></button>
 --></code></pre>
 <!-- //코드 삽입 -->
 
@@ -109,10 +111,15 @@
 				<button class="btn btn-type3" disabled="disabled"><span>Disabled</span></button>
 			</div>
 
-			<h4 class="btm-border">- .btn-middle</h4>
+			<h4 class="btm-border">- .btn-middle / 아이콘조합형</h4>
 			<button class="btn btn-middle"><span>商品 見る</span></button>
 			<button class="btn btn-type2 btn-middle"><span>商品 見る</span></button>
 			<button class="btn btn-type3 btn-middle"><span>商品 見る</span></button>
+			<br>
+			<button class="btn btn-type2 btn-middle">
+				<span class="ico"><img src="../assets/images/common/ico_down_w.png" alt="down"></span>
+				<span>商品 見る</span>
+			</button>
 
 			<h4 class="btm-border">- .btn-small</h4>
 			<button class="btn btn-small"><span>商品 見る</span></button>
@@ -120,22 +127,22 @@
 			<button class="btn btn-type3 btn-small"><span>商品 見る</span></button>
 
 			<h4 class="btm-border">- .btn-extra-small</h4>
-			<button class="btn btn-extra-small"><span>商品 見る</span></button>
-			<button class="btn btn-type2 btn-extra-small"><span>商品 見る</span></button>
-			<button class="btn btn-type3 btn-extra-small"><span>商品 見る</span></button>
+			<button class="btn btn-extra-small"><span>商品</span></button>
+			<button class="btn btn-type2 btn-extra-small"><span>商品</span></button>
+			<button class="btn btn-type3 btn-extra-small"><span>商品</span></button>
 
-			<!-- <h4 class="btm-border">- .btn + .rd</h4>
-			<button class="btn rd"><span>商品 見る</span></button>
-			<button class="btn btn-middle rd"><span>商品 見る</span></button>
-			<button class="btn btn-small rd"><span>商品 見る</span></button>
-			<button class="btn btn-extra-small rd"><span>商品 見る</span></button> -->
+			<h4 class="btm-border">- .btn-tbl</h4>
+			<button class="btn btn-type btn-tbl"><span>商品 見る</span></button>
+			<button class="btn btn-type2 btn-tbl"><span>商品 見る</span></button>
+			<button class="btn btn-type3 btn-tbl"><span>商品 見る</span></button>
 			
 			<h3 class="title">&#x25CE; cta-outer</h3>
 			<div class="conIn_tip">
 				PC: Default / MO: Full or 1n  = <strong>.cta-outer</strong> <br> 
 				PC: Default / MO: Default = <strong>.cta-outer + .fix-type</strong> <br>
-				PC/MO: Full or 1n = <strong>.cta-outer + .full-type</strong><br>
+				PC: Full or 1n / MO: Full or 1n = <strong>.cta-outer + .full-type</strong><br>
 				PC: Default / MO: 위아래 = <strong>.cta-outer + .row-type</strong><br>
+				PC: 위아래 / MO: 위아래 = <strong>.cta-outer + .col-type</strong><br>
 			</div>
 			<!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
@@ -145,7 +152,6 @@
 </div>
 
 <div class="cta-outer fix-type">
-	<button class="btn"><span>商品 見る</span></button>
 	<button class="btn btn-type2"><span>商品 見る</span></button>
 </div>
 
@@ -155,6 +161,11 @@
 </div>
 
 <div class="cta-outer row-type">
+	<button class="btn"><span>商品 見る</span></button>
+	<button class="btn btn-type2"><span>商品 見る</span></button>
+</div>
+
+<div class="cta-outer col-type">
 	<button class="btn"><span>商品 見る</span></button>
 	<button class="btn btn-type2"><span>商品 見る</span></button>
 </div>
@@ -169,7 +180,6 @@
 
 			<h4 class="btm-border">- .cta-outer + .fix-type</h4>
 			<div class="cta-outer fix-type">
-				<button class="btn"><span>商品 見る</span></button>
 				<button class="btn btn-type2"><span>商品 見る</span></button>
 			</div>
 
@@ -183,6 +193,12 @@
 			<div class="cta-outer row-type">
 				<button class="btn"><span>商品 見る</span></button>
 				<button class="btn btn-type2"><span>商品 見る</span></button>
+			</div>
+
+			<h4 class="btm-border">- .cta-outer + .col-type</h4>
+			<div class="cta-outer col-type">
+				<button class="btn btn-small btn-type3"><span>商品 見る</span></button>
+				<button class="btn btn-small btn-type3"><span>商品 見る</span></button>
 			</div>
 
 			<h3 class="title">&#x25CE; 텍스트 버튼</h3>

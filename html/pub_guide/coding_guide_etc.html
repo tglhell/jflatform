@@ -68,7 +68,9 @@
 			<h4 class="btm-border">- 기본 (header없는타입)</h4>
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<div class="caution">
+<pre class="language-html"><code><!--<p class="caution">유의사항 단독사용</p>
+	
+<div class="caution">
 	<p class="tit">自動的に削除</p>
 	<ul>
 		<li>カート商品は90日間保管され、販売終了となると自動的に削除されます。</li>
@@ -88,6 +90,10 @@
 		<li>実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</li>
 	</ul>
 </div>
+
+<p class="noti">Rewardの内容は、当社の規定と時期により変動する場合がございます。</p>
+<p class="noti center">Rewardの内容は、当社の規定と時期により変動する場合がございます。</p>
+
 --></code></pre>
 <!-- //코드 삽입 -->
 			
@@ -96,6 +102,9 @@
 			</div>
 
 			<h4 class="btm-border">- .caution</h4>
+
+			<p class="caution">유의사항 단독사용</p>
+			<br>
 			<div class="caution">
 				<p class="tit">自動的に削除</p>
 				<ul>
@@ -127,9 +136,9 @@
 				</ul>
 			</div>
 
-			<h4 class="btm-border">- .noti</h4>
+			<h4 class="btm-border">- .noti / .noti + .center</h4>
 			<p class="noti">Rewardの内容は、当社の規定と時期により変動する場合がございます。</p>
-
+			<p class="noti center">Rewardの内容は、当社の規定と時期により変動する場合がございます。</p>
 
 			<h3 class="title">&#x25CE; 텍스트 플래그</h3>
 
@@ -205,6 +214,26 @@
 				<a href="#" class="btn-page-last"></a>
 			</div>
 
+			<h3 class="title">&#x25CE; no-data</h3>
+			<h4 class="btm-border">- no-data </h4>
+
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--
+--></code></pre>
+<!-- //코드 삽입 -->
+
+			<div class="conIn_tip">
+				.no-data / .no-data::before에 icon추가
+			</div>
+
+			<div class="no-data">
+				<p class="tit">所有しているクーポンがありません。</p>
+				<div class="cta-outer">
+					<button class="btn btn-middle btn-type2"><span>Button</span></button>
+				</div>
+			</div>
+
 			<h3 class="title">&#x25CE; Tooltip</h3>
 
 <!-- 코드 삽입 -->
@@ -230,44 +259,14 @@
 			<div class="conIn_tip">
 				.btn-tooltip<br>hover 타입은 .btn-tooltip에 클래스 "<strong>type-hover</strong>" 추가함.
 			</div>
-
-			<div class="tooltip-outer">
-				<div class="tooltip-box">
-					<button class="btn-tooltip type-hover"><span>툴팁 hover</span></button>
-					<div class="tooltip-cont">
-						테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다.
-						테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다.
-					</div>
-				</div>
-			</div>
-			<br><br><br><br><br><br>
+			
 			<div class="tooltip-outer">
 				<p style="display: inline-block;">그러하다 그러하다 그러하다 그러하다 그러하다 그러하다 그러하다 그러하다 그러하다</p>
 				<div class="tooltip-box">
-					<button class="btn-tooltip type-hover"><span>툴팁 hover</span></button>
+					<button class="btn-tooltip type-hover"><span><img src="../assets/images/common/btn_tooltip.svg" alt="tooltip"></span></button>
 					<div class="tooltip-cont">
 						테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다.
 						테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다.
-					</div>
-				</div>
-			</div>
-			<br><br><br><br><br><br>
-			<div class="tooltip-outer">
-				<div class="tooltip-box">
-					<button class="btn-tooltip"><span>툴팁</span></button>
-					<div class="tooltip-cont">
-						테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다.
-						테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다.
-					</div>
-				</div>
-			</div>
-			<br><br><br><br><br><br>
-			<div class="tooltip-outer">
-				<p style="display: inline-block;">그러하다</p>
-				<div class="tooltip-box">
-					<button class="btn-tooltip"><span>툴팁</span></button>
-					<div class="tooltip-cont">
-						테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다.
 					</div>
 				</div>
 			</div>
@@ -275,48 +274,15 @@
 			<div class="tooltip-outer">
 				<p style="display: inline-block;">그러하다 그러하다 그러하다</p>
 				<div class="tooltip-box">
-					<button class="btn-tooltip"><span>툴팁</span></button>
+					<button class="btn-tooltip"><span><img src="../assets/images/common/btn_tooltip.svg" alt="tooltip"></span></button>
 					<div class="tooltip-cont">
-						테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다.
+						<p class="tit">Popover Title</p>
+						<div class="cont">contents</div>
+						<button type="button" class="close">Popover Close</button>
 					</div>
 				</div>
 			</div>
-			<br><br><br><br><br><br>
-			<div class="tooltip-outer">
-				<p style="display: inline-block;">그러하다 그러하다 그러하다 그러하다 그러하다</p>
-				<div class="tooltip-box">
-					<button class="btn-tooltip"><span>툴팁</span></button>
-					<div class="tooltip-cont">
-						테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다.
-					</div>
-				</div>
-			</div>
-			<br><br><br><br><br><br>
-			<div class="tooltip-outer">
-				<p style="display: inline-block;">그러하다 그러하다 그러하다 그러하다 그러하다 그러하다 그러하다 그러하다 그러하다</p>
-				<div class="tooltip-box">
-					<button class="btn-tooltip"><span>툴팁</span></button>
-					<div class="tooltip-cont">
-						테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다.
-					</div>
-				</div>
-			</div>
-			<br><br><br><br><br><br>
-			<div class="tooltip-outer">
-				<p style="display: inline-block;">그러하다 그러하다 그러하다 그러하다 그러하다 그러하다 그러하다 그러하다 그러하다 그러하다</p>
-				<div class="tooltip-box">
-					<button class="btn-tooltip"><span>툴팁</span></button>
-					<div class="tooltip-cont">
-						테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다. 테스트용 박스의 텍스트 입니다.
-					</div>
-				</div>
-			</div>
-			<br><br><br><br><br><br>
-			<style>
-				
-			</style>
-
-			<br><br><br><br><br><br>
+			
 		</div>
 		<!-- //contents_infor -->
 	</div>

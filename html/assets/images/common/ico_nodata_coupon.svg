@@ -6,7 +6,7 @@
         <g transform="translate(2.5 34)">
             <circle stroke="#FAFAFA" stroke-width="2" fill="#0793EA" cx="12" cy="12" r="13"/>
             <g transform="translate(11 6)" stroke="#FFF">
-                <circle stroke-width="4" fill="#FFF" cx="1.364" cy="11.364" r="1"/>
+                <circle stroke-width="1" fill="#FFF" cx="1.364" cy="11.364" r="1"/>
                 <path stroke-width="2" stroke-linecap="square" d="M1.364 6.752V0"/>
             </g>
         </g>

@@ -180,7 +180,7 @@
 
 		.test-slider-outer {
 			position: relative;
-			margin: 40px;
+			margin: 40px 0;
 		}
 		.test-slider {
 			height: 2px;
@@ -198,28 +198,17 @@
 			margin: -14px 0 0 -14px;
 			border-radius: 50%;
 			box-shadow: 0 0 1px 2px transparent;
-			background-color: #ad7b62;
+			background-color: #00aad2;
 		}
 		.test-slider-outer .test-slider .ui-slider-range-min {
 			height: 2px;
-			background-color: #ad7b62;
+			background-color: #00aad2;
 		}
 	</style>
 
 	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
 	<script type="text/javascript" src="../assets/js/common.js"></script>
-
-	<script>
-		$(function(){
-			$('.test-slide-01').slider({
-					range : 'min',
-					min : 1,
-					max : 4,
-					value : 1,
-			});
-		})
-	</script>
 </head>
 
 <body>
@@ -529,6 +518,20 @@
 
 					<div class="test-slider-outer">
 						<div class="test-slider test-slide-01"></div>
+						<ul class="test-slide-paging">
+							<li><span>0</span></li>
+							<li><span>1</span></li>
+							<li><span>2</span></li>
+							<li><span>3</span></li>
+							<li><span>4</span></li>
+							<li><span>5</span></li>
+							<li><span>6</span></li>
+							<li><span>7</span></li>
+							<li><span>8</span></li>
+							<li><span>9</span></li>
+							<li><span>10</span></li>
+						</ul>
+						<!-- <p class="num" style="margin-top: 30px;">0</p> -->
 					</div>
 				</div>
 				<style>
@@ -557,6 +560,39 @@
 					.img-outer img {
 						width: 100%;
 					}
+					.test-slide-paging {
+						margin: 30px 0 0 0px;
+						font-size: 0;
+					}
+					.test-slide-paging li {
+						position: relative;
+						display: inline-block;
+						width: 10%;
+						padding-left: 8px;
+						text-align: right;
+					}
+					.test-slide-paging li:first-child {
+						width: 0%;
+						padding-left: 0;
+					}
+					.test-slide-paging li:before {
+						content: '';
+						position: absolute;
+						top: -50px;
+						right: 0;
+						width: 1px;
+						height: 20px;
+						background-color: #ccc;
+					}
+					.test-slide-paging li span {
+						position: absolute;
+						top: 50%;
+						right: -4px;
+						font-size: 14px;
+					}
+					.test-slide-paging li:nth-child(2) span {
+						right: -2px;
+					}
 					@media screen and (max-width: 1119px) {
 						.test-outer {
 							display: block;
@@ -579,6 +615,9 @@
 							display: inline-block;
 							margin-top: 20px;
 							font-size: 14px;
+						}
+						.test-slider-outer {
+							margin: 50px 20px 0;
 						}
 					}
 				</style>
@@ -694,4 +733,22 @@
 	</button>
 </div>
 </body>
+
+<script>
+	$(function(){
+		const slideOuter = $('.test-slider-outer')
+		const slideTestNum = $('.test-slider-outer .num');
+		const numberInit = new Intl.NumberFormat();
+		$('.test-slide-01').slider({
+			range : 'min',
+			min : 0,
+			max : 10,
+			value : 0,
+			slide : function(event, ui){
+				$(this).closest(slideOuter).find(slideTestNum).text(ui.value);
+			}
+		});
+	})
+</script>
+
 </html>
