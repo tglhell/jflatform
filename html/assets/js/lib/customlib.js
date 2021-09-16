@@ -342,7 +342,8 @@ $(function () {
 		let ww = $(window).width();
 		chkSwpBool = false;
 		if (!chkSwpBool) {
-			if (ww <= tbl) {				
+			if (ww <= tbl) {		
+						
 				if ($('.list-my-car').length == 1) {
 					let swpOpt = {},
 					slideLength = $('.list-my-car .swiper-slide').length;
@@ -363,7 +364,6 @@ $(function () {
 								el: '.list-my-car .swiper-pagination',
 								clickable: true,
 							},
-							autoHeight: true,
 							slidesPerView: 'auto',
 							// centeredSlides: true,
 							simulateTouch: true,
@@ -375,6 +375,74 @@ $(function () {
 						}
 					}
 					let listMyCar = new Swiper('.list-my-car .swiper-container', swpOpt);
+					chkSwpBool = true;
+				}
+
+				if($('.main-banner.type01').length ==1) {
+					let swpOpt = {},
+					slideLength = $('.main-banner.type01 .swiper-slide').length;
+					if (slideLength == 1) {
+						swpOpt = {
+							allowSlidePrev: false,
+							allowSlideNext: false,
+							simulateTouch: false
+						}
+						$('.main-banner.type01 [class*="swiper-button"]').hide();
+					} else {
+						swpOpt = {
+							navigation: {
+								nextEl: '.main-banner.type01 .swiper-button-next',
+								prevEl: '.main-banner.type01 .swiper-button-prev',
+							},
+							pagination: {
+								el: '.main-banner.type01 .swiper-pagination',
+								clickable: true,
+							},
+							slidesPerView: 'auto',
+							// centeredSlides: true,
+							simulateTouch: true,
+							speed: 300,
+							loop: false,
+							spaceBetween: 8,
+							observer: true,
+							observeParents: true,
+						}
+					}
+					let listBanner01 = new Swiper('.main-banner.type01 .swiper-container', swpOpt);
+					chkSwpBool = true;
+				}
+
+				if($('.main-banner.type02').length == 1) {
+					let swpOpt = {},
+					slideLength = $('.main-banner.type02 .swiper-slide').length;
+					if (slideLength == 1) {
+						swpOpt = {
+							allowSlidePrev: false,
+							allowSlideNext: false,
+							simulateTouch: false
+						}
+						$('.main-banner.type02 [class*="swiper-button"]').hide();
+					} else {
+						swpOpt = {
+							navigation: {
+								nextEl: '.main-banner.type02 .swiper-button-next',
+								prevEl: '.main-banner.type02 .swiper-button-prev',
+							},
+							pagination: {
+								el: '.main-banner.type02 .swiper-pagination',
+								clickable: true,
+							},
+							slidesPerView: 'auto',
+							// centeredSlides: true,
+							simulateTouch: true,
+							speed: 300,
+							loop: false,
+							spaceBetween: 8,
+							observer: true,
+							observeParents: true,
+						}
+					}
+					let listBanner01 = new Swiper('.main-banner.type02 .swiper-container', swpOpt);
 					chkSwpBool = true;
 				}
 			} else {

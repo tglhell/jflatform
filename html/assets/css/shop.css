@@ -307,6 +307,9 @@
 .curation-list .cta-outer {
     margin-top: 32px;
 }
+.curation-list .swiper-pagination {
+    visibility: hidden;
+}
 
 .goods-list .info .tit {
     height: 52px;
@@ -353,6 +356,9 @@
 @media screen and (max-width: 1119px) {
     .curation {
         padding: 0 20px !important;
+    }
+    .curation-list {
+        margin-bottom: 40px;
     }
     .curation-list .swiper-wrapper {
         flex-direction: row;
@@ -408,5 +414,97 @@
     }
     .curation-list .cta-outer {
         margin-top: 24px;
+    }
+    .curation-list .swiper-pagination {
+        margin-top: 26px;
+        position: static;
+    }
+    .curation-list .swiper-pagination-bullet {
+        margin: 0 4px;
+    }
+}
+
+/* Main shop-cate */
+.cont-outer.shop-cate {
+    background-color: #f6f3f2;
+}
+.cont-outer.shop-cate h3 {
+    padding-top: 56px;
+}
+.cont-outer.shop-cate .cont-inner {
+    padding-bottom: 32px;
+}   
+.shop-cate .cate-list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.shop-cate .cate-list li {
+    margin-bottom: 24px;
+}
+.shop-cate .cate-list li + li {
+    margin-left: 24px;
+}
+.shop-cate .cate-list li a {
+    display: block;
+    width: 204px;
+    height: 128px;
+    background: #FFF;
+    border-radius: 4px;
+    padding:16px;
+    position: relative;
+}
+.shop-cate .cate-list li a::after {
+    content: '';
+    display: block;
+    width: 62px;
+    height:32px;
+    background: url('../images/common/ico_arrow_right_gray.svg') no-repeat right bottom;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    opacity: .45;
+}
+.shop-cate .cate-list li a:hover {
+    box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.08);
+}
+.shop-cate .cate-list li a:hover::after {
+    background: url('../images/common/ico_shop_cate1.svg') no-repeat right bottom;
+    opacity: 1;
+}
+.shop-cate .cate-list li a span {
+    display: inline-block;
+    width: 140px;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+@media screen and (max-width: 1119px) {
+    .cont-outer.shop-cate {
+        padding: 0 20px !important;
+    }
+    .cont-outer.shop-cate h3 {
+        padding-top: 32px;
+        margin-top: 0;
+    }
+    .shop-cate .cate-list {
+        flex-direction: column;
+    }
+    .shop-cate .cate-list li {
+        margin-bottom: 0;
+    }
+    .shop-cate .cate-list li + li {
+        margin-left: 0;
+        margin-top: 8px;
+    }
+    .shop-cate .cate-list li a {
+        width: 100%;
+        height: 64px;
+        padding: 0 16px;
+    }
+    .shop-cate .cate-list li a span {
+        font-size: 14px;
+        line-height: 64px;
     }
 }

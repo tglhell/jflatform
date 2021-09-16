@@ -94,6 +94,15 @@ jQuery.event.add(window, 'load', function () {
 			}
 		}
 	});
+	// irCont.each(function () {
+	// 	let irLeng = $(this).find('> .ir-item').length;
+	// 	for (let i = 0; i <= irLeng; i++) {
+	// 		$(this).find('> .ir-item').eq(i).css('transition-delay', '.' + i + 's');
+	// 		if (i > irNum[8]) {
+	// 			$(this).find('> .ir-item').eq(i).css('transition-delay', i / twoDig[0] + 's');
+	// 		}
+	// 	}
+	// });
 
 	prxImg.ready(function () {
 		prxItem.each(function () {

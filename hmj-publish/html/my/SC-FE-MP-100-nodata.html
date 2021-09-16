@@ -1,0 +1,309 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>Main : My : HMJ</title>
+
+	<link rel="stylesheet" href="../../assets/css/common.css">
+	<link rel="stylesheet" href="../../assets/css/lib/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/lib/customlib.css">
+	<link rel="stylesheet" href="../../assets/css/my.css">
+	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+
+	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
+	<script type="text/javascript" src="../../assets/js/common.js"></script>
+</head>
+
+<body>
+
+<div class="hmj-wrap">
+	<div class="skip-nav">
+		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
+	</div>
+
+	<!-- header -->
+	<div class="hmj-header">
+		<!-- header -->
+		<div class="header-cont">
+			<h1><a href="hmj_layout.html"><img src="../../assets/images/common/img_header_logo.png" alt="Hyundai Logo"></a></h1>
+
+			<div class="gnb-menu-outer">
+				<ul class="gnb-menu-list">
+					<li>
+						<button><span>ブランド</span></button>
+					</li>
+					<li>
+						<button><span>IONIQ5</span></button>
+					</li>
+					<li>
+						<button><span>NEXO</span></button>
+					</li>
+					<li>
+						<button><span>購買</span></button>
+					</li>
+					<li>
+						<button><span>サービス</span></button>
+					</li>
+					<li>
+						<button><span>コンテンツ</span></button>
+					</li>
+					<li>
+						<button><span>ストア</span></button>
+					</li>
+					<li>
+						<button><span>カスタマーセンター</span></button>
+					</li>
+				</ul>
+			</div>
+
+			<div class="gnb-right-menu">
+				<ul class="gnb-right-list">
+					<li>
+						<button class="btn-cart"><span><img src="../../assets/images/common/ico_cart.png" alt="장바구니"></span></button>
+					</li>
+					<li>
+						<button class="btn-search"><span><img src="../../assets/images/common/ico_search.png" alt="검색"></span></button>
+					</li>
+					<li>
+						<button class="btn-mypage"><span><img src="../../assets/images/common/ico_mypage.png" alt="마이페이지"></span></button>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="sub-cont">
+			<div class="history">
+				<a href="javascript:;">HOME</a>
+				<span class="page-title">My</span>
+			</div>
+			<button type="button" class="back-page">Back page</button>
+		</div>
+		<!-- //sub-cont -->
+	</div>
+	<!--//header -->
+
+	<!-- container -->
+	<div id="hmjContainer" class="hmj-container my-main">
+		<div class="hmj-content">
+			<div class="main-visual">
+				<picture>
+					<source srcset="../../assets/images/@mm_pc_visual01.jpg" media="(min-width: 1120px)">
+					<source srcset="../../assets/images/@mm_mo_visual01.jpg" media="(max-width: 1119px)">
+					<img src="../../assets/images/@mm_pc_visual01.jpg" alt="top visual">
+				</picture>
+			</div>
+			<div class="cont-outer dashboard">
+				<div class="intro">
+					<h3>Welcome</h3>
+					<div class="name">
+						<a href="#a"><span>木村 拓哉</span> 様</a>
+					</div>
+					<a href="#a" class="btn-alarm">
+						<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
+						<div class="num"><span>2</span></div>
+					</a>
+				</div>
+				<ul class="box-dashboard">
+					<li class="dash-item">
+						<a href="#a">
+							<span class="title config">私の見積</span>
+							<span class="num">1</span>
+						</a>
+					</li>
+					<li>
+						<a href="#a">
+							<span class="title test">試乗予約</span>
+							<span class="num">3</span>
+						</a>
+					</li>
+					<li>
+						<a href="#a">
+							<span class="title consult">1:1お問合せ</span>
+							<span class="num">11</span>
+						</a>
+					</li>
+					<li>
+						<a href="#a">
+							<span class="title wish">お気に入り</span>
+							<span class="num">0</span>
+						</a>
+					</li>
+					<li>
+						<a href="#a">
+							<span class="title coupon">クーポン</span>
+							<span class="num">0</span>
+						</a>
+					</li>
+					<li>
+						<a href="#a">
+							<span class="title service">登録サービス</span>
+							<span class="num">2</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="cont-outer">
+				<div class="cont-left">
+					<div class="cont-left-box">
+						<p>My Left Menu</p>					
+					</div>
+				</div>
+				<div class="cont-center cont-main">
+					<!-- 내 정보 & 내 차량 정보 데이터 없을 시-->
+					<div class="my-car">
+						<div class="top">
+							<h4>マイカー情報<span class="num">0台</span></h4>
+							<a class="btn-icon" href="#"><span>もっと見る</span></a>
+						</div>
+						<section class="box-no-data">
+							<div class="no-data">
+								<p class="tit">登録車両がありません。</p>
+								<div class="cta-outer">
+									<button class="btn btn-type3 btn-small"><span>車両登録方法</span></button>
+									<button class="btn btn-type2 btn-small"><span>保有車両登録</span></button>
+								</div>
+								<div class="box-caution">
+									<div class="tooltip-outer">
+										<span class="htr">車両が確認できない場合や登録した情報と異なりますか。</span>
+										<div class="tooltip-box">
+											<button class="btn-tooltip"><span><img src="../../assets/images/common/btn_tooltip.svg" alt="tooltip"></span></button>
+											<div class="tooltip-cont" style="">
+												<p class="tit">Popover Title</p>
+												<div class="cont">
+													<div class="caution">
+														<ul>
+															<li>내 차량정보 숫자(대수) 옆 새로고침 버튼으로 차량 및 서비스 정보를 새로고침 하실 수 있습니다.
+															</li>
+															<li>신차 구매 시 자동으로 표시됩니다. (약 1주일 소요)</li>
+															<li>리스/렌트/법인 이용 고객님의 차량 정보는 보유차량 등록으로 증빙서류를 첨부하여 담당자 확인이 완료되어야 차량 정보를 확인하실 수 있습니다.</li>
+														</ul>
+													</div>
+												</div>
+												<button type="button" class="close">Popover Close</button>
+											</div>
+										</div>										
+									</div>
+								</div>
+							</div>							
+							<div class="box-banner">
+								<!-- 타입 A -->
+								<div class="swiper-couter-box main-banner type01">
+									<div class="swiper-container">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">												
+												<div class="img">
+													<img src="../../assets/images/@mm_banner01.jpg" alt="banner img">
+												</div>				
+												<div class="text">
+													<p class="tit">電気自動車でドライブ！</p>
+													<p class="desc">ご希望のお時間にエコカーを直接
+														ドライブしてみたらいかがですか。</p>
+												</div>								
+											</div>
+											<div class="swiper-slide">												
+												<div class="img">
+													<img src="../../assets/images/@rc_banner.jpg" alt="banner img">
+												</div>
+												<div class="text">
+													<p class="tit">電気自動車でドライブ！</p>
+													<p class="desc">ご希望のお時間にエコカーを直接
+														ドライブしてみたらいかがですか。</p>
+												</div>								
+											</div>
+										</div>
+										<div class="swiper-pagination"></div>
+									</div>
+								</div>
+								<!-- // 타입 A -->								
+							</div>
+							<div class="box-banner">								
+								<!-- 타입 B -->
+								<div class="swiper-couter-box main-banner type02">
+									<div class="swiper-container">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">												
+												<div class="img">
+													<img src="../../assets/images/@mm_banner02.jpg" alt="banner img">
+												</div>
+												<div class="text">
+													<p class="tit">電気自動車でドライブ！</p>
+													<p class="desc">ご希望のお時間にエコカーを直接
+														ドライブしてみたらいかがですか。</p>
+												</div>								
+											</div>
+											<div class="swiper-slide">												
+												<div class="img">
+													<img src="../../assets/images/@mm_banner03.jpg" alt="banner img">
+												</div>
+												<div class="text">
+													<p class="tit">不可能はない</p>
+													<p class="desc">地球環境を考慮した未来型モビリティを
+														私のクルマに!</p>
+												</div>								
+											</div>											
+										</div>
+										<div class="swiper-pagination"></div>
+									</div>
+								</div>
+								<!-- // 타입 B -->
+							</div>
+						</section>						
+					</div>
+					<!-- // 내 정보 & 내 차량 정보 데이터 없을 시 -->
+					
+					<!-- 고객센터 -->
+					<div class="info-box">
+						<!-- PC only -->
+						<h4 class="pc-title">顧客センター</h4>
+						<!-- // PC only -->
+						<section>
+							<div class="box-tel">
+								<!-- mobile only -->
+								<h4 class="mo-title">顧客センター</h4>
+								<!-- // mobile only -->
+								<!-- PC only -->
+								<p class="pc-tel">0120-1111-5555</p>
+								<!-- // PC only -->
+								<!-- mobile only -->
+								<div class="cta-outer full-type mo-btn">
+									<button type="button" class="btn btn-middle btn-type3">
+										<span class="ico"><img src="../../assets/images/common/ico_tel.svg" alt="call"></span>
+										<span>0120-1111-5555</span>
+									</button>
+								</div>								
+								<!-- // mobile only -->
+								<p class="htr">平日 09:00 ~ 18:00 (土/日、祝日お休み)</p>
+							</div>
+							<div class="box-consult">
+								<!-- mobile only -->
+								<h4 class="mo-text">1:1お問合せ</h4>
+								<!-- mobile only -->
+								<div class="cta-outer full-type">
+									<button class="btn btn-type2 btn-middle"><span>1:1お問合せ</span></button>
+								</div>
+							</div>
+							<div class="box-caution">
+								<p class="caution">セキュリティ業務時間サービスは24時間提供されます。</p>
+							</div>
+						</section>
+					</div>
+					<!-- // 고객센터 -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//container -->
+
+	<!-- footer -->
+	<div class="hmj-footer">
+		<img src="../../assets/images/@footer.jpg" alt="footer">
+	</div>
+	<!--//footer -->
+</div>
+
+</body>
+</html>
