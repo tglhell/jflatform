@@ -90,16 +90,19 @@
 	<div id="hmjContainer" class="hmj-container my-main">
 		<div class="hmj-content">
 			<div class="main-visual">
-				<img src="../" alt="main image">
+				<img src="../../assets/images/@mm_visual01.jpg" alt="main image">
 			</div>
 			<div class="cont-outer">
 				<div class="cont-dashboard">
 					<div class="intro">
 						<h3>Welcome</h3>
 						<div class="name">
-							<a href="#a"><span>木村 拓哉</span>様 ></a>
+							<a href="#a"><span>木村 拓哉</span> 様</a>
 						</div>
-						<a href="#a" class="btn-alarm">알림버튼</a>
+						<a href="#a" class="btn-alarm">
+							<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
+							<div class="num"><span>2</span></div>
+						</a>
 					</div>
 					<ul class="box-dashboard">
 						<li class="dash-item">
@@ -148,6 +151,7 @@
 					</div>
 				</div>
 				<div class="cont-center cont-main">
+					<!-- 내 정보 & 내 차량 정보 -->
 					<div class="my-car">
 						<div class="top">
 							<h4>マイカー情報<span class="num">5台</span></h4>
@@ -156,87 +160,101 @@
 						<section class="swiper-outer-box list-my-car">
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide item">
-										<!-- 블루링크 가입일 때 -->
-										<p class="item-tit">IONIQ 5 Long Range 4WD プレステージ</p>
-										<div class="detail">
-											<p class="item-text2">足 立 500 き 21-41</p>
-											<dl class="info">
-												<dt>最終点検日</dt>
-												<dd>2021-07-02</dd>
-												<dt>Bluelink基本点検</dt>
-												<dd>3年目点検対象</dd>
-												<dt>総走行距離</dt>
-												<dd class="fc-color4">12,000km</dd>
-											</dl>
+									<!-- 블루링크 가입일 때 -->
+									<div class="swiper-slide slide-item">
+										<div class="cont-box">
+											<div class="detail-box">
+												<p class="item-tit">IONIQ 5 Long Range 4WD プレステージ</p>
+												<div class="car-detail">
+													<p class="num">足 立 500 き 21-41</p>
+													<dl class="info">
+														<dt>最終点検日</dt>
+														<dd>2021-07-02</dd>
+														<dt>Bluelink基本点検</dt>
+														<dd>3年目点検対象</dd>
+														<dt>総走行距離</dt>
+														<dd class="fc-color4">12,000km</dd>
+													</dl>
+												</div>
+											</div>
+											<div class="img-box">
+												<img src="../../assets/images/@img_mm_car.jpg" alt="car">
+											</div>
+											<div class="cta-outer full-type row-type">
+												<button class="btn btn-middle btn-type3"><span>整備所検索</span></button>
+												<button class="btn btn-middle btn-type3"><span>整備予約</span></button>
+												<button class="btn btn-middle btn-type3"><span>充電スポット検索</span></button>
+												<button class="btn btn-middle btn-type2"><span>Bluelink</span></button>
+											</div>
 										</div>
-										<div class="img-box">
-											<img src="../../assets/images/@img_mm_car.jpg" alt="car">
-										</div>
-										<div class="cta-outer full-type row-type">
-											<button class="btn btn-middle btn-type3"><span>整備所検索</span></button>
-											<button class="btn btn-middle btn-type3"><span>整備予約</span></button>
-											<button class="btn btn-middle btn-type3"><span>充電スポット検索</span></button>
-											<button class="btn btn-middle btn-type2"><span>Bluelink</span></button>
-										</div>
-										<!-- // 블루링크 가입일 때 -->
 									</div>
-									<div class="swiper-slide item">
-										<!-- 블루링크 미 가입일 때 -->
-										<p class="item-tit">NEXO 水素電気オートプレミアム</p>
-										<div class="detail">
-											<p class="item-text2">足 立 500 き 21-41</p>
-											<dl class="info">
-												<dt>出庫日</dt>
-												<dd>2021-07-02</dd>
-												<dt>総走行距離</dt>
-												<dd class="fc-color4">12,000km</dd>
-											</dl>
-										</div>
-										<div class="img-box">
-											<img src="../../assets/images/@img_mm_car.jpg" alt="car">
-										</div>
-										<div class="cta-outer full-type">
-											<button class="btn btn-middle btn-type3"><span>Bluelinkのご案内</span></button>
-											<button class="btn btn-middle btn-type2"><span>Bluelink登録</span></button>
+									<!-- // 블루링크 가입일 때 -->
+									<!-- 블루링크 미 가입일 때 -->
+									<div class="swiper-slide slide-item">
+										<div class="cont-box">
+											<div class="detail-box">
+												<p class="item-tit">NEXO 水素電気オートプレミアム</p>
+												<div class="car-detail">
+													<p class="num">足 立 500 き 21-42</p>
+													<dl class="info">
+														<dt>出庫日</dt>
+														<dd>2021-07-02</dd>
+														<dt>総走行距離</dt>
+														<dd class="fc-color4">12,000km</dd>
+													</dl>
+												</div>
+											</div>
+											<div class="img-box">
+												<img src="../../assets/images/@img_mm_car.jpg" alt="car">
+											</div>
+											<div class="cta-outer full-type row-type">
+												<button class="btn btn-middle btn-type3"><span>Bluelinkのご案内</span></button>
+												<button class="btn btn-middle btn-type2"><span>Bluelink登録</span></button>
+											</div>
 										</div>
 										<div class="box-caution">
 											<p class="caution">Bluelinkサービスに登録すると、車両リモート制御および車両管理ができ、総走行距離/整備/定期点検などの内容を常時確認できます。</p>										
 										</div>
-										<!-- // 블루링크 미 가입일 때 -->
 									</div>	
-									<div class="swiper-slide item">
-										<!-- 블루링크 미 가입일 때 -->
-										<p class="item-tit">NEXO 水素電気オートプレミアム</p>
-										<div class="detail">
-											<p class="item-text2">足 立 500 き 21-41</p>
-											<dl class="info">
-												<dt>出庫日</dt>
-												<dd>2021-07-02</dd>
-												<dt>総走行距離</dt>
-												<dd class="fc-color4">12,000km</dd>
-											</dl>
-										</div>
-										<div class="img-box">
-											<img src="../../assets/images/@img_mm_car.jpg" alt="car">
-										</div>
-										<div class="cta-outer full-type">
-											<button class="btn btn-middle btn-type3"><span>Bluelinkのご案内</span></button>
-											<button class="btn btn-middle btn-type2"><span>Bluelink登録</span></button>
+									<!-- // 블루링크 미 가입일 때 -->
+									<!-- 블루링크 미 가입일 때 -->
+									<div class="swiper-slide slide-item">
+										<div class="cont-box">
+											<div class="detail-box">
+												<p class="item-tit">NEXO 水素電気オートプレミアム</p>
+												<div class="car-detail">
+													<p class="num">足 立 500 き 21-41</p>
+													<dl class="info">
+														<dt>出庫日</dt>
+														<dd>2021-07-02</dd>
+														<dt>総走行距離</dt>
+														<dd class="fc-color4">12,000km</dd>
+													</dl>
+												</div>
+											</div>
+											<div class="img-box">
+												<img src="../../assets/images/@img_mm_car.jpg" alt="car">
+											</div>
+											<div class="cta-outer full-type row-type">
+												<button class="btn btn-middle btn-type3"><span>Bluelinkのご案内</span></button>
+												<button class="btn btn-middle btn-type2"><span>Bluelink登録</span></button>
+											</div>
 										</div>
 										<div class="box-caution">
 											<p class="caution">Bluelinkサービスに登録すると、車両リモート制御および車両管理ができ、総走行距離/整備/定期点検などの内容を常時確認できます。</p>										
 										</div>
-										<!-- // 블루링크 미 가입일 때 -->
 									</div>										
+									<!-- // 블루링크 미 가입일 때 -->
 								</div>
 							</div>
 							<div class="swiper-pagination"></div>
 						</section>
 					</div>
+					<!-- // 내 정보 & 내 차량 정보 -->
+					<!-- 차량 주문 / 배송 -->
 					<div class="car-order">
 						<div class="top">
-							<h4>車両契約</h4>
+							<h4>車両注文/配送</h4>
 							<a class="btn-icon" href="#"><span>もっと見る</span></a>
 						</div>
 						<section>
@@ -259,8 +277,8 @@
 											<div class="tooltip-outer">
 												<p class="htr">注文状態</p>
 												<div class="tooltip-box">
-													<button class="btn-tooltip"><span>Popover</span></button>
-													<div class="tooltip-cont">
+													<button class="btn-tooltip"><span><img src="../../assets/images/common/btn_tooltip.svg" alt="tooltip"></span></button>
+													<div class="tooltip-cont" style="">
 														<p class="tit">Popover Title</p>
 														<div class="cont">contents</div>
 														<button type="button" class="close">Popover Close</button>
@@ -273,8 +291,8 @@
 											<div class="tooltip-outer">
 												<p class="htr">車両状態</p>
 												<div class="tooltip-box">
-													<button class="btn-tooltip"><span>Popover</span></button>
-													<div class="tooltip-cont">
+													<button class="btn-tooltip"><span><img src="../../assets/images/common/btn_tooltip.svg" alt="tooltip"></span></button>
+													<div class="tooltip-cont" style="">
 														<p class="tit">Popover Title</p>
 														<div class="cont">contents</div>
 														<button type="button" class="close">Popover Close</button>
@@ -289,6 +307,8 @@
 							</ul>
 						</section>						
 					</div>
+					<!-- // 차량 주문 / 배송 -->
+					<!-- 상품 주문 / 배송 -->
 					<div class="shop-order">
 						<div class="top">
 							<h4>SHOP 注文<span class="htr">過去6カ月以内</span></h4>
@@ -313,7 +333,7 @@
 										<div class="status">
 											<span class="fc-color4">商品準備中</span>
 										</div>
-										<div class="btn-box">
+										<div class="cta-outer col-type btn-box">
 											<button type="button" class="btn btn-type3 btn-small"><span>注文キャンセル</span></button>
 										</div>
 									</div>
@@ -328,14 +348,14 @@
 											<img src="../../assets/images/@img_mm_thum02.jpg" alt="">
 										</div>
 										<div class="detail">
-											<span class="name">[JE International] IONIQ5(NE)キャンプチェアONIQ5(NE)キャンプチェアONIQ5(NE)キャンプチェアONIQ5(NE)キャンプチェ</span>
+											<span class="name">[H Geunine]IONIQ5(NE)キャンプ</span>
 											<p class="count"><span>数量 1</span></p>
 											<p class="cont-text">¥ 32,000</p>
-										</div>
+										</div> 
 										<div class="status">
 											<span class="fc-color4">配送中</span>
 										</div>
-										<div class="btn-box">
+										<div class="cta-outer col-type btn-box">
 											<button type="button" class="btn btn-type3 btn-small"><span>返品受付</span></button>
 											<button type="button" class="btn btn-type3 btn-small"><span>交換受付</span></button>
 										</div>
@@ -344,34 +364,44 @@
 							</ul>
 						</section>						
 					</div>
+					<!-- // 상품 주문 / 배송 -->
+					<!-- 고객센터 -->
 					<div class="info-box">
 						<!-- PC only -->
-						<h4 class="pc-only">顧客センター</h4>
+						<h4 class="pc-title">顧客センター</h4>
 						<!-- // PC only -->
 						<section>
 							<div class="box-tel">
 								<!-- mobile only -->
-								<h4 class="mo-only">顧客センター</h4>
+								<h4 class="mo-title">顧客センター</h4>
 								<!-- // mobile only -->
 								<!-- PC only -->
-								<p class="tel pc-only"><span>0120-1111-5555</span></p>
+								<p class="pc-tel">0120-1111-5555</p>
 								<!-- // PC only -->
 								<!-- mobile only -->
-								<button type="button" class="tel mo-only btn btn-middle btn-type3"><span>0120-1111-5555</span></button>
+								<div class="cta-outer full-type mo-btn">
+									<button type="button" class="btn btn-middle btn-type3">
+										<span class="ico"><img src="../../assets/images/common/ico_tel.svg" alt="call"></span>
+										<span>0120-1111-5555</span>
+									</button>
+								</div>								
 								<!-- // mobile only -->
 								<p class="htr">平日 09:00 ~ 18:00 (土/日、祝日お休み)</p>
 							</div>
-							<div class="box-consulting">
+							<div class="box-consult">
 								<!-- mobile only -->
-								<h4 class="mo-only">1:1お問合せ</h4>
+								<h4 class="mo-text">1:1お問合せ</h4>
 								<!-- mobile only -->
-								<button class="btn btn-type2 btn-middle"><span>1:1お問合せ</span></button>
+								<div class="cta-outer full-type">
+									<button class="btn btn-type2 btn-middle"><span>1:1お問合せ</span></button>
+								</div>
 							</div>
 							<div class="box-caution">
 								<p class="caution">セキュリティサービスは24時間提供されます。</p>
 							</div>
 						</section>
 					</div>
+					<!-- // 고객센터 -->
 				</div>
 			</div>
 		</div>

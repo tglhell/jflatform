@@ -74,11 +74,23 @@ jQuery.event.add(window, 'load', function () {
 	});
 
 	irCont.each(function () {
-		let irLeng = $(this).find('> .ir-item').length;
+		if ($(window).width() > tbl) {
+			irLeng = $(this).find('> .ir-item:not(.mo-only)').length;
+		} else {
+			irLeng = $(this).find('> .ir-item').length;
+		}
 		for (let i = 0; i <= irLeng; i++) {
-			$(this).find('> .ir-item').eq(i).css('transition-delay', '.' + i + 's');
+			if ($(window).width() > tbl) {
+				$(this).find('> .ir-item:not(.mo-only)').eq(i).css('transition-delay', '.' + i + 's');
+			} else {
+				$(this).find('> .ir-item').eq(i).css('transition-delay', '.' + i + 's');
+			}
 			if (i > irNum[8]) {
-				$(this).find('> .ir-item').eq(i).css('transition-delay', i / twoDig[0] + 's');
+				if ($(window).width() > tbl) {
+					$(this).find('> .ir-item:not(.mo-only)').eq(i).css('transition-delay', i / twoDig[0] + 's');
+				} else {
+					$(this).find('> .ir-item').eq(i).css('transition-delay', i / twoDig[0] + 's');
+				}
 			}
 		}
 	});
@@ -121,22 +133,42 @@ jQuery.event.add(window, 'load', function () {
 				} else {
 					$('.btn-top-box').fadeOut(secVal[2]);
 				}
-				if ($('.sub-cont').length !== 0) {
-					if (scrPos > lastScrTopPos) {
-						headerOuter.addClass('header-fixed');
-						headerOuter.css('top', -headerFixHgt);
-						if (scrPos < headerFixHgt) {
-							headerOuter.attr('style', 'top: 0 !important;');
+				if ($('html').hasClass('ie11')) {
+					$('.hmj-wrap').on('mousewheel DOMMouseScroll', function (e) {
+						if ($('.sub-cont').length !== 0) {
+							if (e.originalEvent.wheelDelta < 0) {
+								headerOuter.addClass('header-fixed');
+								headerOuter.css('top', -headerFixHgt);
+							} else {
+								headerOuter.removeClass('header-fixed');
+								headerOuter.css('top', 0);
+							}
+						} else {
+							if (e.originalEvent.wheelDelta < 0) {
+								headerOuter.addClass('scr-chk');
+							} else {
+								headerOuter.removeClass('scr-chk');
+							}
+						}
+					});
+				} else {
+					if ($('.sub-cont').length !== 0) {
+						if (scrPos > lastScrTopPos) {
+							headerOuter.addClass('header-fixed');
+							headerOuter.css('top', -headerFixHgt);
+							if (scrPos < headerFixHgt) {
+								headerOuter.attr('style', 'top: 0 !important;');
+							}
+						} else {
+							headerOuter.removeClass('header-fixed');
+							headerOuter.css('top', 0);
 						}
 					} else {
-						headerOuter.removeClass('header-fixed');
-						headerOuter.css('top', 0);
-					}
-				} else {
-					if (scrPos > lastScrTopPos) {
-						headerOuter.addClass('scr-chk');
-					} else {
-						headerOuter.removeClass('scr-chk');
+						if (scrPos > lastScrTopPos) {
+							headerOuter.addClass('scr-chk');
+						} else {
+							headerOuter.removeClass('scr-chk');
+						}
 					}
 				}
 			}
@@ -641,8 +673,8 @@ function selectDropdown(data){
 	});
 };
 
-function customSelect() {
-	$('div.slt-box').on('click', '.selected-value', function(e) {
+function customSelect () {
+	$('div.slt-box').on('click', '.selected-value', function (e) {
 		if($(this).parent().hasClass('active')) {
 			$(this).parent().removeClass('active');
 		} else {
@@ -652,25 +684,26 @@ function customSelect() {
 		$(this).parent().removeClass('on');
 
 		//select option text 
-		$('.select-items').on('click', 'li', function() {
+		$('.select-items').on('click', 'li', function () {
 			var selectItem = $(this).text();
 			$(this).addClass('selected').siblings('li').removeClass('selected');
 			$(this).parent().siblings('.selected-value').text(selectItem);
 			$(this).parents('div.slt-box').removeClass('active').addClass('on');
-		})
-	});
+		});
 
+	});
+	
+	//outside click
+	$('.hmj-wrap').on('click', function (e) {
+		if(!$('div.slt-box').has(e.target).length) {
+			$('div.slt-box').removeClass('active');
+		}
+	});
+	
 	//status desabled 
 	if($('div.slt-box.disabled')) {
 		$('div.slt-box.disabled').off();
 	};
-
-	//outside click
-	$('.hmj-wrap').click(function(e) {
-		if(!$('div.slt-box').has(e.target).length) {
-			$('div.slt-box').removeClass('active');
-		}
-	})
 
 	$('.inp-textarea').on('focusin focusout keyup', 'textarea', function (e) {
 		if (e.type == 'focusin') {

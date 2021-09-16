@@ -1203,9 +1203,6 @@
 .download .cont-outer .cont-top .slt-box + .slt-box {
 	margin: 0 0 0 12px;
 }
-.download .cont-outer .cont-top .slt-box .select-items li {
-	background: #fff;
-}
 .download .cont-outer .cont-list {
 	padding-top: 40px;
 	border-top: 1px solid #999;
@@ -1246,8 +1243,11 @@
 	width: 360px;
 	margin-top: 30px;
 }
-.download .cont-outer .cont-list .noti {
+.download .cont-outer .cont-list .info-txt {
 	margin-top: -46px;
+	font-size: 12px;
+	line-height: 1.67;
+  	color: #999;
 }
 .download .cont-outer .cont-list .btn .ico {
 	width: 16px;
@@ -1284,7 +1284,7 @@
 }
 .download .cont-outer .tbl-box.pdf .auto-width button {
 	padding-left:24px;
-	background:url('../../assets/images/common/ico_down_g.png') no-repeat;
+	background:url('../../assets/images/common/ico_down_g.svg') no-repeat;
 	background-size: 16px;
 	color: #191919;
 }
@@ -1341,7 +1341,7 @@
 		width: 100%;
 		margin-top: 24px;
 	}
-	.download .cont-outer .cont-list .noti {
+	.download .cont-outer .cont-list .info-txt {
 		margin-top: 24px;
 	}
 	.download .cont-outer .cont-list .cta-outer {
@@ -1385,7 +1385,7 @@
 		display: block;
 		width: 100%;
 		padding-left: 0;
-		background: url('../../assets/images/common/ico_down_g_mo.png') no-repeat center;
+		background: url('../../assets/images/common/ico_down_g_mo.svg') no-repeat center;
 		background-size: 32px;
 	}
 	.download .cont-outer .tbl-box.pdf .auto-width span {

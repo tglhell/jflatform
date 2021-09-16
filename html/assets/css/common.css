@@ -1025,7 +1025,7 @@ select.slt-box {
 	cursor: default;
 }
 select.slt-box:focus {
-	border-color: #000;
+	border-color: #191919;
 }
 
 div.slt-box {
@@ -1136,7 +1136,7 @@ div.slt-box select {
 .inp-outer-box label {
 	min-width: 124px;
 	margin-right: 10px;
-	color: #000;
+	color: #191919;
 }
 .inp-outer-box .inp-item {
 	display: table-cell;
@@ -2019,7 +2019,7 @@ textarea:-ms-input-placeholder {
 	width: 50px;
 	height: 50px;
 	border-radius: 25px;
-	background-color: #000;
+	background-color: #191919;
 	color: #fff;
 	font-weight: 700;
 	line-height: 50px;
@@ -2916,7 +2916,7 @@ p.noti.center::before {
 		margin-left: 8px;
 		width: 24px;
 		height: 24px;
-		background: url('../../assets/images/common/ico_plus_g.png') no-repeat;
+		background: url('../../assets/images/common/ico_plus_g.svg') no-repeat;
 		vertical-align: middle;
 		content:'';
 	}

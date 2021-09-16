@@ -224,10 +224,36 @@ $(function () {
 			}
 		});
 	};
-		
 
-
-	
+	//curation-list
+	if ($(window).width() < tbl) {
+		let swpOpt = {},
+		slideLength = $('.shop-visual .swiper-slide').length;
+		if (slideLength == 1) {
+			swpOpt = {
+				allowSlidePrev: false,
+				allowSlideNext: false,
+				simulateTouch: false
+			}
+			$('.curation-list [class*="swiper-button"]').hide();
+		} else {
+			swpOpt = {
+				pagination: {
+					el: '.curation-list .swiper-pagination',
+					clickable: true,
+				},
+				// slidesPerView: 'auto',
+				// centeredSlides: true,
+				simulateTouch: true,
+				speed: 300,
+				loop: false,
+				spaceBetween: 20,
+				observer: true,
+				observeParents: true,
+			}
+		}
+		let curationSlide = new Swiper('.curation-list .swiper-container', swpOpt);
+	};
 
 	//Shop Detail Thumb
 	if ($('.thumb-slide').length == 1) {
@@ -279,45 +305,44 @@ $(function () {
 		var goodsThumb = new Swiper('.thumb-slide .swiper-container', swpOpt);
 	};
 
-	//Shop Main
-	if ($('.select-thumb').length == 1) {
-		let swpOpt = {},
-		slideLength = $('.select-thumb .swiper-slide').length;
-		if (slideLength == 1) {
-			swpOpt = {
-				allowSlidePrev: false,
-				allowSlideNext: false,
-				simulateTouch: false
-			}
-			$('.select-thumb [class*="swiper-button"]').hide();
-		} else {
-			if ($(window).width() > tbl) {
-				//pc
-				swpOpt = {
-					thumbs: {
-						swiper: goodsThumb
-					},
-					speed: 100,
-					cssMode: true,
-					mousewheel: true,
-					keyboard: true,
-					observer: true,
-					observeParents: true,
-				}
-			} else {
-				$('.select-thumb').hide();
-			}
-		}
-		let selectedThumb = new Swiper('.select-thumb .swiper-container', swpOpt);
-	};
+	//Shop Sub Main
+	// if ($('.select-thumb').length == 1) {
+	// 	let swpOpt = {},
+	// 	slideLength = $('.select-thumb .swiper-slide').length;
+	// 	if (slideLength == 1) {
+	// 		swpOpt = {
+	// 			allowSlidePrev: false,
+	// 			allowSlideNext: false,
+	// 			simulateTouch: false
+	// 		}
+	// 		$('.select-thumb [class*="swiper-button"]').hide();
+	// 	} else {
+	// 		if ($(window).width() > tbl) {
+	// 			//pc
+	// 			swpOpt = {
+	// 				thumbs: {
+	// 					swiper: goodsThumb
+	// 				},
+	// 				speed: 100,
+	// 				cssMode: true,
+	// 				mousewheel: true,
+	// 				keyboard: true,
+	// 				observer: true,
+	// 				observeParents: true,
+	// 			}
+	// 		} else {
+	// 			$('.select-thumb').hide();
+	// 		}
+	// 	}
+	// 	let selectedThumb = new Swiper('.select-thumb .swiper-container', swpOpt);
+	// };
 
 	// my Main 
 	function listCarSwp () {
 		let ww = $(window).width();
 		chkSwpBool = false;
 		if (!chkSwpBool) {
-			if (ww <= tbl) {
-				$('.list-my-car').removeClass('mo-slide');
+			if (ww <= tbl) {				
 				if ($('.list-my-car').length == 1) {
 					let swpOpt = {},
 					slideLength = $('.list-my-car .swiper-slide').length;
@@ -338,6 +363,7 @@ $(function () {
 								el: '.list-my-car .swiper-pagination',
 								clickable: true,
 							},
+							autoHeight: true,
 							slidesPerView: 'auto',
 							// centeredSlides: true,
 							simulateTouch: true,
@@ -352,7 +378,7 @@ $(function () {
 					chkSwpBool = true;
 				}
 			} else {
-				$('.list-my-car').addClass('mo-slide');
+				
 			}
 		}
 	}

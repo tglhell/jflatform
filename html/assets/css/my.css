@@ -731,9 +731,21 @@
 
 /* S : My main MP-100 */
 .my-main .main-visual {
+	z-index: -1;
+	position:relative;
 	width:100%;
-	height:320px;
-	background:#000;
+	height:320px;	
+	overflow: hidden;
+}
+.my-main .main-visual img {
+	position:absolute;
+	top:50%;
+	left:50%;
+	min-width: 1920px;
+	width: auto;
+	max-width: 100%;
+	height: 100%;
+	transform: translate(-50%, -50%);
 }
 .my-main .cont-dashboard {
 	margin-top:-162px;
@@ -765,17 +777,20 @@
 	font-weight:500;
 }
 .my-main .cont-dashboard .intro .btn-alarm {
-	position:absolute;
+	position:absolute;	
 	top:10px;
 	right:0;
+	width: 40px;
+	height: 40px;
+	padding-top:4px;
+	text-align: center;
 }
 .my-main .cont-dashboard .intro .btn-alarm img {
-	display:block;
-	padding:1px 4px 0 0;
+	display:inline-block;	
 }
 .my-main .cont-dashboard .intro .btn-alarm .num {
 	position:absolute;
-	top:0;
+	top:5px;
 	right:0;
 	padding-top:2px;
 	width:20px;
@@ -879,49 +894,50 @@
 }
 
 .my-main .box-caution {
-	margin: 0 -40px;
-	padding:12px 15px 12px 33px;
-	flex:1 1 auto;
+	padding:12px 15px 12px 33px;	
 	background:#f5f5f5;
-	box-sizing: border-box;
 }
-
-.my-main .list-my-car.mo-slide .swiper-wrapper {
+.my-main .list-my-car .swiper-container {
+	border:1px solid #e9e9e9;
+	border-radius: 8px;		
+}
+.pc .swiper-wrapper {
 	display:block;
 }
 
-.my-main .list-my-car .item {
+
+.my-main .list-my-car .slide-item {			
+	color:#000;
+}
+.my-main .list-my-car .slide-item + .slide-item {
+	border-top:1px solid #e9e9e9;
+}
+.my-main .list-my-car .cont-box {
+	position:relative;
+	padding:32px;
 	display:flex;
 	flex-wrap: wrap;
 	flex-direction: row;
-	justify-content: space-between;
-	padding:32px;
-	border:1px solid #e9e9e9;
-	border-bottom:none;
-	color:#000;
+	align-content: space-between;
+	width: 100%;
+	min-height:340px;
 }
-.my-main .list-my-car .item:first-child {
-	border-radius:8px 8px 0 0;
-}
-.my-main .list-my-car .item:last-child {
-	border-radius:0 0 8px 8px;
-}
-.my-main .list-my-car .item + .item {
-	border-top:1px solid #e9e9e9;
-}
+
 .my-main .list-my-car .item-tit {
 	width: 100%;
 	line-height:32px;
 	font-size:20px;
 	font-weight:500;
 }
-.my-main .list-my-car .item-text2 {
+.my-main .list-my-car .car-detail .num {
 	margin-top:8px;
 	line-height:22px;
 	font-size:14px;
 }
 .my-main .list-my-car .img-box {
-	margin-right: 32px;
+	position:absolute;	
+	top:64px;
+	right:64px;
 	width:320px;
 	height:180px;
 }
@@ -931,10 +947,12 @@
 	height: 100%;
 }
 .my-main .list-my-car .info {
-	display: flex;
+	display: flex;	
 	flex-wrap: wrap;
+	align-content: flex-start;
 	margin-top: 24px;
 	width: 260px;	
+	height:82px;
 	line-height:22px;
 	font-size:14px;
 }
@@ -953,28 +971,27 @@
 .my-main .list-my-car .info dd.fc-color4 {
 	font-weight:500;
 }
-.my-main .list-my-car .item .full-type {
-	margin-top: 16px;
+.my-main .list-my-car .full-type {
+	margin-top: auto;
+	justify-content: flex-end;
 	width: 100%;
 }
-.my-main .list-my-car .item .box-caution {
-	margin:32px -32px -32px;
-}
+
 
 .my-main .car-order .list-order {
 	border:1px solid #e9e9e9;
-	border-top:2px solid #000;
-	border-radius:0 0 8px 8px;
+	border-radius:8px;
 	color:#000;
 }
 .my-main .car-order .list-order .item {
-	display:flex;
-	flex-wrap:wrap;
-	justify-content:space-between;
+	position:relative;
 	padding:32px;
 }
 .my-main .car-order .list-order .item + .item {
 	border-top:1px solid #e9e9e9;
+}
+.my-main .car-order .list-order .detail {
+	width: 100%;
 }
 
 .my-main .car-order .item-tit {
@@ -986,10 +1003,11 @@
 	padding-left:8px;
 	line-height:22px;
 	font-size:14px;
-	font-weight:400;
 }
 .my-main .car-order .img-box {
-	margin-right: 32px;
+	position:absolute;
+	top:32px;
+	right:64px;
 	width:320px;
 	height:180px;
 }
@@ -1014,14 +1032,13 @@
 	margin-top: 8px;
 	min-width: 160px;
 	color:#999;
-
 }
 .my-main .car-order .info dd {
 	margin-top: 8px;
 }
 .my-main .car-order .box-status {
 	display:flex;
-	margin-top:16px;
+	margin-top:88px;
 	width: 100%;
 }
 .my-main .car-order .box-status li {
@@ -1039,10 +1056,14 @@
 	display:inline-block;
 	color:#000;
 	line-height:22px;
+	font-size:14px;
 }
 .my-main .car-order .box-status .fc-color4 {
 	line-height:22px;
 }
+
+
+
 .my-main .shop-order h4 .htr {
 	padding-left:8px;
 	color:#333;
@@ -1051,9 +1072,7 @@
 	font-size:14px;
 	font-weight:400;
 }
-.my-main .shop-order .list-order li {
-	border-top:2px solid #000;	
-}
+
 .my-main .shop-order .list-order li:last-child {
 	border-bottom:1px solid #e9e9e9;
 }
@@ -1064,6 +1083,7 @@
 	align-items: center;
 	height:58px;
 	background:#fafafa;
+	border-top:1px solid #999;	
 	border-bottom:1px solid #e9e9e9;
 }
 .my-main .shop-order .top-area .cont-text {
@@ -1072,12 +1092,14 @@
 .my-main .shop-order .top-area .htr {
 	color:#666;
 	line-height:22px;
+	font-size:14px;
 }
 .my-main .shop-order .bottom-area {
 	display:flex;
 	align-items: center;
 	justify-content: space-between;
 	padding:24px 0 32px;
+	line-height:0;
 }
 .my-main .shop-order .thumbnail {
 	width: 160px;
@@ -1096,12 +1118,14 @@
 .my-main .shop-order .detail .name {
 	line-height:22px;
 	font-weight:500;
+	font-size:14px;
 }
 .my-main .shop-order .detail .count {
 	margin-top:8px;
 	color:#999;
 	line-height:22px;
 	font-family: 'HyundaiSansTextJP', sans-serif;
+	font-size:14px;
 }
 .my-main .shop-order .detail .count span + span::before {
 	content:'';
@@ -1119,10 +1143,12 @@
 .my-main .shop-order .status {
 	width: 144px;
 	text-align: center;
+	line-height:26px;
+	font-size:16px;
 }
 
 .my-main .shop-order .btn-box {
-	width: auto;
+	margin:0;
 }
 .my-main .shop-order .btn-box button {
 	display: block;
@@ -1131,46 +1157,63 @@
 .my-main .shop-order .btn-box button:first-child {
 	margin-top:0;
 }
+
+
 .my-main .info-box section {
 	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
+	flex-flow:row wrap;
 	justify-content: space-between;
-	align-items: center;
 	margin-top:24px;
 	padding:40px 64px 0 40px;
 	border:1px solid #e9e9e9;
 	border-radius:8px;
 }
+.pc .mo-btn,
+.pc .mo-title,
+.pc .mo-text {
+	display:none;
+}
+.mo .mo-btn,
+.mo .mo-title,
+.mo .mo-text {
+	display:block;
+}
+.mo .pc-title,
+.mo .pc-tel {
+	display:none;
+}
+
 .my-main .info-box .box-tel {
 	min-width: 300px;
 	margin-right:auto;
 }
-.my-main .info-box .box-tel .tel {	
+
+.my-main .info-box .box-tel .pc-tel {
+	padding-left:20px;
+	background:url('../images/common/ico_tel.svg') no-repeat left center;
+	background-size:16px 16px;
 	color:#000;
 	line-height:32px;
 	font-size:18px;
 	font-weight:500;
 }
-.my-main .info-box .box-tel .tel.pc-only {
-	padding-left:20px;
-	background:url('../images/common/ico_tel.svg') no-repeat left center;
-	background-size:16px 16px;
+.my-main .info-box .mo-btn .ico img {
+	vertical-align: middle;
 }
-.my-main .info-box .box-tel .tel.mo-only {
-	display:none;
-}
+
+
 .my-main .info-box .box-tel .htr {
 	margin-top:4px;
 	color:#666;
 	line-height:20px;
 	font-size:12px;
 }
-.my-main .info-box .box-consulting {
+.my-main .info-box .box-consult {
 	width:240px;
 }
 .my-main .info-box .box-caution {
 	margin:40px -64px 0 -40px;
+	flex:1 1 auto;
 }
 
 
@@ -1237,36 +1280,60 @@
 	}
 	.my-main .cont-main h4 .num {
 		padding-left:7px;
+	}	
+	.my-main .cont-main > div.my-car {
+		padding:0;
 	}
-	.my-main .list-my-car .item {
-		padding:24px;
-		border-bottom:1px solid #e9e9e9;
-		border-right:none;
+	.my-main .cont-main .my-car .top {
+		padding:0 20px;		
 	}
-	.my-main .list-my-car .item:first-child {
+	.my-main .box-caution {
+		padding:12px 32px 12px 24px;
+	}
+
+
+	.my-main .list-my-car .slide-item {	
+		border-top:none;
+		border:1px solid #e9e9e9;
+		position:relative;
+		flex-direction: column;
+		min-height:572px;
+	}
+	.my-main .list-my-car .slide-item + .slide-item {
+		border-left:none;
+	}
+	.my-main .list-my-car .slide-item:first-child {
 		border-radius:8px 0 0 8px;
 	}
-	.my-main .list-my-car .item:last-child {
-		border-radius:0 8px 8px 0;
-		border-right:1px solid #e9e9e9;
+	.my-main .list-my-car .slide-item:last-child {
+		border-radius: 0 8px 8px 0 ;
+	}
+	
+	.my-main .list-my-car .cont-box {
+		padding:24px;
 	}
 	.my-main .list-my-car .item-tit {
 		line-height:26px;
 		font-size:16px;
 	}
-	.my-main .list-my-car .detail {
+	.my-main .list-my-car .detail-box {
+		min-height:166px;
+		width: 100%;
+	}
+	.my-main .list-my-car .car-detail {
 		width:100%;
 	}
 	.my-main .list-my-car .info {
 		margin-top:16px;
 		justify-content: space-between;
 		width: 100%;
+		height:68px;
 		line-height:20px;
 		font-size:12px;
 	}
 	.my-main .list-my-car .info dt {
 		margin-top:4px;
-		width:50%;
+		min-width:50%;
 	}
 	.my-main .list-my-car .info dd {
 		margin-top:4px;
@@ -1274,22 +1341,32 @@
 		text-align: right;
 	}
 	.my-main .list-my-car .img-box {
-		margin:24px auto 0;
+		position:relative;
+		top:0;
+		left: 0;
+		margin:0 auto;
 		width:100%;
 		padding:0 40px;
 		height:auto;
 	}
-	.my-main .list-my-car .item.no-join .img-box {
-		margin-top:48px;
-	}
-
-	.my-main .list-my-car .item .full-type {
+	.my-main .list-my-car .full-type {
 		margin-top:24px;
+		display:flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		height:216px;
 	}
-	.my-main .list-my-car .item .box-caution {
-		margin:32px -24px -24px;
-		padding:0 32px 0 24px;
+	
+	.my-main .list-my-car .box-caution {
+		position:absolute;
+		bottom:0;
+		margin:0;		
 	}
+	.my-main .list-my-car .swiper-container {
+		border:none;
+		padding:0 20px;
+	}
+	
 	.my-main .list-my-car .swiper-pagination {
 		margin-top:16px;
 		position:static;
@@ -1298,6 +1375,8 @@
 	.my-main .list-my-car .swiper-pagination-clickable .swiper-pagination-bullet {		
 		margin:0 4px;
 	}	
+
+
 	.my-main .car-order .list-order .item {
 		padding:24px;
 	}
@@ -1311,6 +1390,7 @@
 		margin-top:4px;
 		line-height:22px;
 		font-size:13px;
+		font-weight:500;
 	}
 	.my-main .car-order .info {
 		margin-top:12px;
@@ -1319,8 +1399,8 @@
 		font-size:12px;
 	}
 	.my-main .car-order .info dt {
-		width: 50%;
 		margin-top: 4px;
+		min-width: 50%;
 	}
 	.my-main .car-order .info dd {
 		margin-top: 4px;
@@ -1328,6 +1408,7 @@
 		text-align: right;
 	}
 	.my-main .car-order .img-box {
+		position:static;
 		margin:32px auto 0;
 		padding:0 40px;
 		width: auto;
@@ -1352,8 +1433,89 @@
 		line-height:20px;
 	}
 
-	.my-main .info-box .box-tel .tel.mo-only {
-		display:block;
+	.my-main .shop-order .list-order li:last-child {
+		border-bottom:none;
+	}
+	.my-main .shop-order .top-area {
+		margin:0 -20px;
+		padding:0 20px;
+	}
+	.my-main .shop-order .top-area .htr {
+		line-height:20px;
+		font-size:12px;
+	}
+	.my-main .shop-order .bottom-area {
+		position:relative;
+		padding:58px 0 48px;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	.my-main .shop-order .status {
+		position:absolute;
+		top:24px;
+		left:0;
+		width: auto;
+	}
+	.my-main .shop-order .thumbnail {
+		width: 96px;
+		height: 96px;
+	}	
+	.my-main .shop-order .detail {
+		width: calc(100% - 112px);
+		padding-left:16px;
+	}
+	.my-main .shop-order .detail .name {
+		line-height:20px;
+		font-size:13px;
+	}
+	.my-main .shop-order .detail .count {
+		margin-top:5px;
+		line-height:20px;
+		font-size:12px;
+	}
+	.my-main .shop-order .detail .cont-text {
+		margin-top: 8px;
+		line-height:22px;
+		font-size:14px;
+	}
+	.my-main .shop-order .btn-box {
+		margin-top: 24px;
+		width: 100%;
+	}
+	.my-main .shop-order .btn-box span {
+		line-height:20px;
+	}
+	
+	
+	.my-main .cont-main > div.info-box {
+		margin-top:32px;
+	}
+	.my-main .info-box section {
+		padding:0;
+		flex-flow: column wrap;
+	}
+	.my-main .info-box .box-tel {
+		padding:32px 24px;
+		min-width: 100%;
+	}
+	.mo .mo-btn {
+		display:flex;
+	}
+	.my-main .info-box .box-tel .htr {
+		margin-top: 12px;
+		text-align: center;
+	}
+	.my-main .info-box .box-consult {
+		padding:32px 24px;
+		width: 100%;
+		border-top:1px solid #e9e9e9;
+	}
+	.my-main .info-box .cta-outer {
+		margin-top:16px;
+	}
+	.my-main .info-box .box-caution {
+		margin:0;
 	}
 }
 
