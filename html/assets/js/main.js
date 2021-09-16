@@ -4,7 +4,7 @@ $(function () {
 	const ftrCnt = $('.hmj-footer');
 	let startY, endY;
 
-	if (!$('html').hasClass('ios') && $(window).width() > tbl) {
+	if ($(window).width() > tbl) {
 		scrItem.on('mousewheel DOMMouseScroll', function (e) {
 			tScrIdx = $('.scr-item.active-idx').index();
 			if (!$('html, body').is(':animated')) {
@@ -20,11 +20,9 @@ $(function () {
 		});
 	} else {
 		scrItem.on('touchstart',function (e) {
-			startX = e.originalEvent.changedTouches[0].screenX;
 			startY = e.originalEvent.changedTouches[0].screenY;
 		});
 		scrItem.on('touchend',function (e) {
-			endX = e.originalEvent.changedTouches[0].screenX;
 			endY = e.originalEvent.changedTouches[0].screenY;
 			tScrIdx = $('.scr-item.active-idx').index();
 			if (!$('html, body').is(':animated')) {
