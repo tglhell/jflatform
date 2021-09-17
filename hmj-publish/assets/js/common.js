@@ -8,6 +8,12 @@ jQuery.event.add(window, 'load', function () {
 	const irCont = $('.ir-count');
 	const inpItem = $('.inp-item');
 	const headerOuter = $('.hmj-header');
+	const innerCont = $('.drop-down-outer .inner-cont');
+	const innerContLineHgt = $('.drop-down-outer .inner-cont').css('line-height');
+	const boxHgt = innerCont.css('height', 'auto').height();
+	
+	// initializing style value
+	innerCont.css('height', innerContLineHgt);
 
 	$('.btn-depth-switch, .btn-depth-prev').on('click', function (e) {
 		if ($(this).hasClass('btn-depth-switch')) {
@@ -375,6 +381,16 @@ jQuery.event.add(window, 'load', function () {
 		$('html, body').animate({scrollTop:'0'}, '0');
 		$(this).blur();
 		chkBool = true;
+	});
+
+	$('.btn-drop-down').on('click', function () {
+		if (!$(this).parent().hasClass('active')) {
+			$(this).parent().addClass('active');
+			innerCont.css('height', boxHgt);
+		} else {
+			$(this).parent().removeClass('active');
+			innerCont.css('height', innerContLineHgt);
+		}
 	});
 
 	function subContChk () {
