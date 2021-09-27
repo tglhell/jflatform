@@ -7,11 +7,15 @@
     <title>Category : SHOP : HMJ</title>
 
     <link rel="stylesheet" href="../../assets/css/common.css">
+	<link rel="stylesheet" href="../../assets/css/lib/swiper.min.css">
 	<link rel="stylesheet" href="../../assets/css/shop.css">
 	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
 	
 	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/swiper.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/masonry.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
 	<script type="text/javascript" src="../../assets/js/common.js"></script>
 </head>
 
@@ -79,7 +83,8 @@
 		<div class="sub-cont">
 			<div class="history">
 				<a href="javascript:;">HOME</a>
-				<span class="page-title">SHOP</span>
+                <a href="javascript:;">SHOP</a>
+				<span class="page-title">Accessories</span>
 			</div>
 			<button type="button" class="back-page">Back page</button>
 		</div>
@@ -90,106 +95,180 @@
 	<!-- container -->
 	<div id="hmjContainer" class="hmj-container">
 		<div class="hmj-content">
-            <div class="cont-outer">
-                <div class="service-cate">
-                    <ul class="tab-box-list">
-
-                    </ul>
+            <div class="top-visual">
+				<picture>
+					<img src="../../assets/images/@shop_banner.jpg" alt="top visual">
+				</picture>
+			</div>
+            <div class="cont-outer sub-cate">
+                <div class="swiper-outer-box cate-list">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-container">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href='javascript:void(0);'><span>全体</span></a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href='javascript:void(0);'><span>アクセサリー</span></a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href='javascript:void(0);'><span>EV</span></a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href='javascript:void(0);'><span>ワーク＆ライフ</span></a>
+                            </li>
+                            <li class="swiper-slide on">
+                                <a href='javascript:void(0);'><span>アウトドア</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swiper-button-next"></div>
                 </div>
-                
-                
-                <div class="sort-area">
-                    <p class="total">全体 <span>0</span>つ</p>
-                    <div class="filter">
-                        <select class="slt-box2" title="listFilter">
-                            <option>A</option>
-                            <option>B</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="goods-list">
-                    <div class="item">
-                        <a href="javascript:void(0);">
-                            <div class="thumb">
-                                <img src="../../assets/images/@goods_img01.jpg" alt="">
-                            </div>
-                            <div class="goods-info">
-                                <div class="flag-area">
-                                    flag
-                                </div>
-                                <p class="tit">プレミアムフロアマット</p>
-                                <div class="price">
-                                    <span class="sale">10%</span>
-                                    <span class="real">40,000</span>
-                                    <p class="final">¥ 40,000 <span>(税込)</span></p>
-                                </div>
-                                <div class="util">
-                                    <button type="button" class="like"><span>Like</span></button>
-                                    <button type="button" class="cart"><span>Add Cart</span></button>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="javascript:void(0);">
-                            <div class="thumb">
-                                <img src="../../assets/images/@goods_img02.jpg" alt="">
-                            </div>
-                            <div class="goods-info">
-                                <div class="flag-area"></div>
-                                <p class="tit">プレミアムフロアマット</p>
-                                <div class="price">
-                                    <span class="sale">10%</span>
-                                    <span class="real">40,000</span>
-                                    <p class="final">¥ 40,000 <span>(税込)</span></p>
-                                </div>
-                                <div class="util">
-                                    <button type="button" class="like"><span>Like</span></button>
-                                    <button type="button" class="cart"><span>Add Cart</span></button>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="javascript:void(0);">
-                            <div class="thumb">
-                                <img src="../../assets/images/@goods_img01.jpg" alt="">
-                            </div>
-                            <div class="goods-info">
-                                <div class="flag-area"></div>
-                                <p class="tit">プレミアムフロアマット</p>
-                                <div class="price">
-                                    <span class="sale">10%</span>
-                                    <span class="real">40,000</span>
-                                    <p class="final">¥ 40,000 <span>(税込)</span></p>
-                                </div>
-                                <div class="util">
-                                    <button type="button" class="like"><span>Like</span></button>
-                                    <button type="button" class="cart"><span>Add Cart</span></button>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="nodata">
-                        No Data
-                    </div>
-                </div>
-                <!-- //goods-list -->
-
-                <div class="hmj-pagination">
-                    <a href="#" class="btn-page-first"></a>
-                    <a href="#" class="btn-page-prev"></a>
-                    <a href="#" class="btn-page-num active">1</a>
-                    <a href="#" class="btn-page-num">2</a>
-                    <a href="#" class="btn-page-num">3</a>
-                    <a href="#" class="btn-page-num">4</a>
-                    <a href="#" class="btn-page-num">5</a>
-                    <a href="#" class="btn-page-next">もっと見る(<span>1</span>/<span>3</span>)</a>
-                    <a href="#" class="btn-page-last"></a>
-                </div>
-                <!-- //hmj-pagination -->
             </div>
+            <!-- //shop-cate -->
+
+            <div class="cont-outer display">
+                <div class="list-sort">
+                    <div class="result">
+                        全体 <span>6</span>個
+                    </div>
+                    <div class="slt-box hgt-type2">
+                        <p class="selected-value">最新登録基準</p>
+                        <ul class="select-items">
+                            <li>option1</li>
+                            <li>option2</li>
+                            <li>option3</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid goods-list">
+                    <div class="grid-item item">
+                        <a href="javascript:void(0);">
+                            <div class="thumb"><img src="../../assets/images/@goods5.jpg" alt="goods-thumb"></div>
+                            <div class="info">
+                                <div class="flag-area">
+                                    <span class="text-flag c4">HOT</span>
+                                    <span class="text-flag c4">Reorder</span>
+                                    <span class="text-flag c4">Hyundai ONLY</span>
+                                </div>
+                                <p class="tit">[リファイナー] ロイヤルスペード・デュオ自動車量芳香剤のリフィルエッセンスストーン(2個セット)</p>
+                                <div class="price">
+                                    <div class="sale">
+                                        <span class="final">¥ 40,000 </span>
+                                        <span class="tax">(税込)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="util">
+                            <button type="button" class="like on"><span>Like</span></button>
+                            <button type="button" class="cart"><span>Add Cart</span></button>
+                        </div>
+                    </div>
+                    <!-- //flag -->
+                    
+                    <div class="grid-item item">
+                        <a href="javascript:void(0);">
+                            <div class="thumb"><img src="../../assets/images/@goods1.jpg" alt="goods-thumb"></div>
+                            <div class="info">
+                                <p class="tit">[リファイナー] ロイヤルスペード・デュオ自動車量芳香剤のリフィルエッセンスストーン(2個セット)</p>
+                                <div class="price">
+                                    <div class="sale">
+                                        <span class="final">¥ 40,000 </span>
+                                        <span class="tax">(税込)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="util">
+                            <button type="button" class="like on"><span>Like</span></button>
+                            <button type="button" class="cart"><span>Add Cart</span></button>
+                        </div>
+                    </div>
+                    <!-- //type1 -->
+                    
+                    <div class="grid-item item">
+                        <a href="javascript:void(0);">
+                            <div class="thumb"><img src="../../assets/images/@goods2.jpg" alt="goods-thumb"></div>
+                            <div class="info">
+                                <p class="tit">プレミアムフロアマット</p>
+                                <div class="price">
+                                    <span class="real">40,000</span>
+                                    <div class="sale">
+                                        <span class="rate">10%</span>
+                                        <span class="final">¥ 40,000 </span>
+                                        <span class="tax">(税込)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="util">
+                            <button type="button" class="like"><span>Like</span></button>
+                            <button type="button" class="cart"><span>Add Cart</span></button>
+                        </div>
+                    </div>
+                    <!-- type2 -->
+    
+                    <div class="grid-item item" data-type="undelivery">
+                        <a href="javascript:void(0);">
+                            <div class="thumb"><img src="../../assets/images/@goods3.jpg" alt="goods-thumb"></div>
+                            <div class="info">
+                                <p class="tit">プレミアムフロアマット</p>
+                                <div class="price">
+                                    <span class="real">相談受付商品</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="util">
+                            <button type="button" class="like"><span>Like</span></button>
+                            <button type="button" class="cart"><span>Add Cart</span></button>
+                        </div>
+                    </div>
+                    <!-- type3 상담형 상품 -->
+                    
+                    <div class="grid-item item" data-type="soldout">
+                        <a href="javascript:void(0);">
+                            <div class="thumb"><img src="../../assets/images/@goods4.jpg" alt="goods-thumb"></div>
+                            <div class="info">
+                                <p class="tit">1PcsスマートカーLCDデジタル温度計ア</p>
+                                <div class="price">
+                                    <span class="real">40,000</span>
+                                    <div class="sale">
+                                        <span class="rate">10%</span>
+                                        <span class="final">¥ 40,000 </span>
+                                        <span class="tax">(税込)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="util">
+                            <button type="button" class="like"><span>Like</span></button>
+                            <button type="button" class="cart"><span>Add Cart</span></button>
+                        </div>
+                    </div>
+                    <!-- soldout -->
+
+                    <div class="grid-item item">
+                        <a href="javascript:void(0);">
+                            <div class="thumb"><img src="../../assets/images/@goods6.jpg" alt="goods-thumb"></div>
+                            <div class="info">
+                                <p class="tit">[リファイナー] ロイヤルスペード・デュオ自動車量芳香剤のリフィルエッセンスストーン(2個セット)</p>
+                                <div class="price">
+                                    <div class="sale">
+                                        <span class="final">¥ 40,000 </span>
+                                        <span class="tax">(税込)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="util">
+                            <button type="button" class="like on"><span>Like</span></button>
+                            <button type="button" class="cart"><span>Add Cart</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //goods-list -->
 		</div>
 	</div>
 	<!--//container -->
@@ -205,6 +284,15 @@
 		<span class="blind">Top</span>
 	</a>
 </div>
+
+<script>
+	jQuery.event.add(window, 'load', function () {
+		let msnry = new Masonry( '.grid', {
+			itemSelector: '.grid-item'
+		});
+	});
+	customSelect();
+</script>
 
 </body>
 </html>

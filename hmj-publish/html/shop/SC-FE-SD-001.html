@@ -243,7 +243,7 @@
 			</div>
 			<!-- //curation -->
 
-			<div class="cont-outer fullcase shop-cate">
+			<div class="cont-outer fullcase main-cate">
 				<h3>SHOP カテゴリー</h3>
 				<div class="cont-inner">
 					<ul class="cate-list">
@@ -265,7 +265,7 @@
 					</ul>
 				</div>
 			</div>
-			<!-- //shop-cate -->
+			<!-- //main-cate -->
 
 			<div class="cont-outer display">
 				<h3>注目のアイテム</h3>
@@ -290,7 +290,7 @@
 						</a>
 						<div class="util">
 							<button type="button" class="like on"><span>Like</span></button>
-							<button type="button" class="cart"><span>Add Cart</span></button>
+							<button type="button" class="cart pop-open" data-pop-idx="selectOption"><span>Add Cart</span></button>
 						</div>
 					</div>
 					<!-- //flag -->
@@ -414,12 +414,159 @@
 	</a>
 </div>
 
+<!-- selectOption -->
+<div class="layer-popup-wrap fix-center mo-full cart-select" data-pop-idx="selectOption">
+	<div class="layer-popup-body">
+		<div class="layer-popup-cont pop-medium">
+			<h1 class="layer-title">カートに追加</h1>
+			<div class="layer-cont">
+				<div class="slt-box hgt-type2 shop-option">
+					<p class="selected-value">カラー/サイズ</p>
+					<ul class="select-items">
+						<li>
+							<p class="tit"><span>レッド</span> / <span>2人乗り</span></p>
+							<div class="info">
+								<p class="price">￥ 30,000</p>
+								<p class="quantity">在庫 : <span>100</span>個</p>
+							</div>
+						</li>
+						<li class="soldout">
+							<p class="tit"><span>カラー</span> / <span>サイズ</span></p>
+							<div class="info">
+								<p class="price">￥ 30,000</p>
+								<p class="quantity">在庫切れ</p>
+							</div>
+						</li>
+						<li>
+							<p class="tit"><span>ブラック</span> / <span>4人乗り</span></p>
+							<div class="info">
+								<p class="price">￥ 30,000</p>
+								<p class="quantity">在庫 : <span>100</span>個</p>
+							</div>
+						</li>
+						<li>
+							<p class="tit"><span>レッド</span> / <span>2人乗り</span></p>
+							<div class="info">
+								<p class="price">￥ 30,000</p>
+								<p class="quantity">在庫 : <span>100</span>個</p>
+							</div>
+						</li>
+						<li class="soldout">
+							<p class="tit"><span>カラー</span> / <span>サイズ</span></p>
+							<div class="info">
+								<p class="price">￥ 30,000</p>
+								<p class="quantity">在庫切れ</p>
+							</div>
+						</li>
+						<li>
+							<p class="tit"><span>ブラック</span> / <span>4人乗り</span></p>
+							<div class="info">
+								<p class="price">￥ 30,000</p>
+								<p class="quantity">在庫 : <span>100</span>個</p>
+							</div>
+						</li>
+						<li>
+							<p class="tit"><span>レッド</span> / <span>2人乗り</span></p>
+							<div class="info">
+								<p class="price">￥ 30,000</p>
+								<p class="quantity">在庫 : <span>100</span>個</p>
+							</div>
+						</li>
+						<li class="soldout">
+							<p class="tit"><span>カラー</span> / <span>サイズ</span></p>
+							<div class="info">
+								<p class="price">￥ 30,000</p>
+								<p class="quantity">在庫切れ</p>
+							</div>
+						</li>
+						<li>
+							<p class="tit"><span>ブラック</span> / <span>4人乗り</span></p>
+							<div class="info">
+								<p class="price">￥ 30,000</p>
+								<p class="quantity">在庫 : <span>100</span>個</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- //slt-box -->
+
+				<div class="selected">
+					<div class="option">
+						<p class="tit"><span>ブラック</span> / <span>4人乗り</span></p>
+						<div class="info">
+							<div class="amount-calc">
+								<button class="down">decrease</button>
+								<input type="text" value="1" />
+								<button class="up">increase</button>
+							</div>
+							<div class="price">￥ 30,000 </div>
+							<button class="btn-del"><span>삭제</span></button>
+						</div>
+						<p class="quantity">商品購入可能数量 : <span>5</span>個</p>					
+					</div>
+					<div class="option">
+						<p class="tit"><span>ブラック</span> / <span>4人乗り</span></p>
+						<div class="info">
+							<div class="amount-calc">
+								<button class="down">decrease</button>
+								<input type="text" value="1" />
+								<button class="up">increase</button>
+							</div>
+							<div class="price">￥ 30,000 </div>
+							<button class="btn-del"><span>삭제</span></button>
+						</div>
+						<p class="quantity">商品購入可能数量 : <span>5</span>個</p>					
+					</div>
+					<div class="option">
+						<p class="tit"><span>ブラック</span> / <span>4人乗り</span></p>
+						<div class="info">
+							<div class="amount-calc">
+								<button class="down">decrease</button>
+								<input type="text" value="1" />
+								<button class="up">increase</button>
+							</div>
+							<div class="price">￥ 30,000 </div>
+							<button class="btn-del"><span>삭제</span></button>
+						</div>
+						<p class="quantity">商品購入可能数量 : <span>5</span>個</p>					
+					</div>
+					<div class="option">
+						<p class="tit"><span>ブラック</span> / <span>4人乗り</span></p>
+						<div class="info">
+							<div class="amount-calc">
+								<button class="down">decrease</button>
+								<input type="text" value="1" />
+								<button class="up">increase</button>
+							</div>
+							<div class="price">￥ 30,000 </div>
+							<button class="btn-del"><span>삭제</span></button>
+						</div>
+						<p class="quantity">商品購入可能数量 : <span>5</span>個</p>					
+					</div>
+				</div>
+			</div>
+			<div class="bottom-fixed">
+				<div class="total">
+					<div class="tit">商品販売価格(税込) <span class="s-txt">(税込)</span></div>
+					<div class="price">¥ 31,850</div>
+				</div>
+				<div class="cta-outer full-type">
+					<button class="btn btn-type"><span>詳細を見る</span></button>
+					<button class="btn btn-type2"><span>カート</span></button>
+				</div>
+			</div>
+			<button class="btn-close-popup btn-close">close</button>
+		</div>
+	</div>
+</div>
+
 <script>
 	jQuery.event.add(window, 'load', function () {
 		let msnry = new Masonry( '.grid', {
 			itemSelector: '.grid-item'
 		});
 	});
+	customSelect();
 </script>
 
 </body>

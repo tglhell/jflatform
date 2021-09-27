@@ -764,12 +764,12 @@
 	margin-right:auto;
 	padding-left:16px;
 	line-height:38px;
-	font-size:16px;	
+	font-size:24px;
 }
 .my-main .dashboard .intro .name::after {
 	content:'';
 	display:inline-block;
-	margin-top:-3px;
+	margin-top:-4px;
 	width:16px;
 	height:16px;
 	background:url('../images/common/ico_mm_arrow.svg') no-repeat center;
@@ -1117,6 +1117,7 @@
 	line-height:0;
 }
 .my-main .shop-order .thumbnail {
+	margin-bottom: auto;
 	width: 160px;
 	height: 160px;
 	border:1px solid #e9e9e9;
@@ -1277,8 +1278,7 @@
 	position:absolute;
 	top:50%;
 	left:50%;	
-	min-width: 832px;
-	height: 100%;
+	width: 100%;	
 	transform: translate(-50% , -50%);
 }
 .my-main .box-no-data .swiper-slide .text {
@@ -1316,9 +1316,7 @@
 	width:calc((100% - 8px) / 2);
 	margin-top:8px;
 }
-.my-main .box-no-data .type02 .swiper-slide img {
-	min-width: 640px;
-}
+
 .my-main .box-no-data .type02 .swiper-slide:nth-child(even) {
 	margin-left:8px;
 }
@@ -1385,6 +1383,9 @@
 
 	.my-main .cont-main .top + section {
 		margin-top:16px;
+	}
+	.my-main .cont-main .top {
+		align-items: center;
 	}
 	.my-main .cont-main h4 {
 		line-height:26px;
@@ -1580,6 +1581,7 @@
 		width: auto;
 	}
 	.my-main .shop-order .thumbnail {
+		margin-bottom:0;
 		width: 96px;
 		height: 96px;
 	}	
@@ -1666,10 +1668,13 @@
 	}
 	.my-main .box-no-data .type02 .swiper-slide:nth-child(even) {
 		margin-left:0;
-	}
+	}	
 	.my-main .box-no-data .swiper-slide .img img {
-		width: 100%;
+		min-width: 832px;
 		height: auto;
+	}
+	.my-main .box-no-data .type02 .swiper-slide img {
+		min-width:640px;
 	}
 	.my-main .box-no-data .swiper-slide .text {
 		top:21px;
@@ -1691,8 +1696,6 @@
 
 /* E : My main MP-100 */
 
-
-@charset "utf-8";
 
 /* S: my order */
 .my-order .ask {
@@ -1822,7 +1825,7 @@
     color: #666;
 }
 .my-order .order-list .item li .status .btn-text {
-    display: block;
+	margin-top: 2px;
 }
 .my-order .order-list .item li .cta-outer {
     width: 132px;
@@ -1867,13 +1870,21 @@
     padding-right:16px;
     color: #999;
 }
+.my-order .order-list .store .tooltip-cont .info dt:nth-of-type(n+2),
+.my-order .order-list .store .tooltip-cont .info dd:nth-of-type(n+2) {
+    margin-top: 4px;
+}
 .my-order .order-list .delivery-price {
     padding-top: 8px;
     text-align: right;
 }
-.my-order .order-list .delivery-price .s-text {
+.my-order .order-list .delivery-price p {
+	line-height: 22px;
+}
+.my-order .order-list .delivery-price .s-txt {
     color: #999;
     font-size: 12px;
+	line-height: 20px;
 }
 
 .my-order .order-list .mo-toggle .tit-btn {
@@ -1890,9 +1901,7 @@
 .my-order .order-list .mo-toggle .cont .item {
     overflow: hidden;
     padding: 24px 0;
-}
-.my-order .order-list .mo-toggle .cont .item:not(:first-child) {
-    border-top: 1px solid #e9e9e9;
+	border-bottom: 1px solid #e9e9e9;
 }
 .my-order .order-list .mo-toggle .cont .item ul {
     display: flex;
@@ -1903,6 +1912,7 @@
 }
 .my-order .order-list .mo-toggle .cont .item li {
     display: flex;
+	line-height: 22px;
 }
 .my-order .order-list .mo-toggle .cont .item .cont-text {
     font-weight: 500;
@@ -1910,9 +1920,6 @@
 }
 .my-order .order-list .mo-toggle .cont .item > li{
     margin-bottom: 16px;
-}
-.my-order .order-list .mo-toggle .cont .item li .tit {
-    /* float: left; */
 }
 .my-order .order-list .mo-toggle .cont .item li.full {
     width: 100%;
@@ -1924,13 +1931,15 @@
 .my-order .order-list .mo-toggle .cont .item li.full span.s-tit {
     font-weight: 500;
 }
+.my-order .item .list-type1 li {
+	line-height: 22px;
+}
 .my-order .item .list-type1 .tit {
     color: #999;
 }
 .my-order .item .list-type1 .cont {
     flex: 1;
     color: #333;
-    line-height: 22px;
 }
 .my-order .order-list .mo-toggle .cont .item li:not(.payment) .tit {
     width: 96px;
@@ -1954,9 +1963,8 @@
     font-size: 12px;
     color:#999;
 }
-.my-order .order-list .mo-toggle .cont .caution.type2 {
-    margin-top: 0;
-    padding: 24px 16px;  
+.my-order .order-list .mo-toggle .cont .caution {
+    margin: 24px 16px 24px 0;  
 }
 .my-order .item .title {
     font-size: 18px;
@@ -1999,6 +2007,9 @@
 .my-order .order-detail .list-payment > li:last-child {
     background-color: #fafafa;
 }
+.my-order .order-detail .list-payment > li:last-child > ul > li:nth-child(3) {
+	padding-top: 24px;
+}
 .my-order .order-detail .list-payment li:first-child > .tit {
     margin-bottom: 8px;
     font-size: 16px;
@@ -2012,14 +2023,35 @@
 .my-order .order-detail .list-payment li:first-child .tit .s-text {
     font-size: 14px;
     font-weight: 400;
+	vertical-align: middle;
+}
+.my-order .order-detail .list-payment > li:nth-child(2) > ul > li:first-child::before,
+.my-order .order-detail .list-payment > li:nth-child(2) > ul > li:first-child::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	width: 24px;
+    height: 24px;
+    margin: -12px;
+}
+.my-order .order-detail .list-payment > li:nth-child(2) > ul > li:first-child::before {
+	left: 0;
+	background: url(../images/common/icon_forms_puls.svg) no-repeat center;
+}
+.my-order .order-detail .list-payment > li:nth-child(2) > ul > li:first-child::after {
+	right: 0;
+	background: url(../images/common/icon_forms_minus.svg) no-repeat center;
 }
 .my-order .order-detail .list-payment ul li:first-child {
+	max-height: 112px;
     border-bottom:1px solid #e9e9e9;
 }
 .my-order .order-detail .list-payment ul li:last-child {
-    padding-bottom: 34px;
+	padding-top: 16px;
+    padding-bottom: 32px;
 }
 .my-order .order-detail .list-payment ul li {
+	position: relative;
     padding: 24px;
     color: #333;
     line-height: 22px;
@@ -2038,11 +2070,9 @@
     font-size: 12px;
     color: #999;
 }
-.my-order .order-detail .item .caution-txt {
+.my-order .order-detail .item .caption {
     text-align: right;
     margin-top: 8px;
-    font-size: 12px;
-    line-height: 20px;
     color: #666;
 }
 
@@ -2167,15 +2197,22 @@
         position: absolute;
         top: 0;
         right: 0;
+		margin-top: 0;
     }
     .my-order .order-list .delivery-price {
         border-top: 1px solid #e9e9e9;
-        font-size: 11px;
     }
-    .my-order .order-list .delivery-price .s-text {
+	.my-order .order-list .delivery-price p {
+		font-size: 11px;
+		line-height: 18px
+	}
+    .my-order .order-list .delivery-price .s-txt {
+		margin-top: 4px;
         font-size: 10px;
+		line-height: 16px;
     }
     .my-order .order-list .mo-toggle {
+		overflow: hidden;
         margin: 24px -20px -25px;
         padding: 0;
     }
@@ -2187,10 +2224,14 @@
     }
     .my-order .order-list .mo-toggle .cont .item li:not(.payment) {
         width: 100%;
+		line-height: 20px;
     }
     .my-order .order-list .mo-toggle .cont .item li:not(:first-child) {
         padding-top: 16px;
     }
+	.my-order .item .list-type1 li {
+		line-height: 20px;
+	}
     .my-order .order-detail .item .list-type1 .tit {
         width: 96px;
         padding-right: 24px;
@@ -2237,7 +2278,7 @@
         border-bottom: 1px solid #e9e9e9;
     }
     .my-order .order-list .mo-toggle .tit-btn::before {
-        content: unset;
+        display: none;
     }
     .my-order .order-list .mo-toggle .tit-btn:after {
 		content: '';
@@ -2281,6 +2322,10 @@
         height: 12px;
         background-color: #f5f5f5;
     }
+	.my-order .order-detail .list-payment > li:nth-child(2) > ul > li:first-child::after,
+	.my-order .order-detail .list-payment > li:nth-child(2) > ul > li:first-child::before {
+		display: none;
+	}
     .my-order .order-detail .list-payment {
         display: block;
     }
@@ -2352,7 +2397,7 @@
     .my-order .order-detail .list-payment  > li:last-child ul li:nth-child(3) {
         margin-top: 16px;
     }
-    .my-order .order-detail .item .caution-txt {
+    .my-order .order-detail .item .caption {
         margin-top: 16px;
         font-size: 11px;
         line-height: 18px;
@@ -2367,7 +2412,6 @@
 .pop-my-order .title {
     font-size: 18px;
     line-height: 30px;
-    font-weight: 500;
 }
 .pop-my-order .title,
 .pop-my-order .order-num {
@@ -2381,7 +2425,6 @@
 }
 .pop-my-order .layer-cont > div:not(.prod-list) .title {
     margin-top: 48px;
-    margin-bottom: 0;
 }
 .pop-my-order .all-chk {
     padding: 24px 0 16px;
@@ -2395,6 +2438,7 @@
     padding: 16px 0;
 }
 .pop-my-order .prod-list .item > li:not(:first-child) {
+	margin-top: 8px;
     border-top: 1px solid #e9e9e9;
 }
 .pop-my-order .prod-list .item li .goods {
@@ -2448,7 +2492,7 @@
 .pop-my-order .list-payment .title {
     margin-bottom: 8px;
 }
-.pop-my-order .list-payment .s-txt {
+.pop-my-order .s-txt {
     font-size: 14px;
     font-weight: 400;
 }
@@ -2488,15 +2532,11 @@
     font-size: 20px;
 }
 .pop-my-order .prod-list + .total {
-    margin-bottom: 32px;
     border-top: 1px dotted #ccc;
 }
 .pop-my-order .check-terms {
-    padding: 32px 0 16px;
+    padding: 0 0 16px;
     text-align: center;
-}
-.layer-popup-wrap .pop-my-order .bottom-fixed .cta-outer {
-    margin-top: 0;
 }
 .pop-my-order .info-list {
     margin-top: 16px;
@@ -2572,6 +2612,7 @@
     }
     .pop-my-order .layer-cont > div:not(.prod-list) .title {
         margin-top: 40px;
+		margin-bottom: 0;
     }
     .pop-my-order .all-chk .chk input + span {
         font-size: 12px;
@@ -2631,7 +2672,7 @@
     .pop-my-order .list-payment {
         margin-bottom: 40px;
     }
-    .pop-my-order .list-payment .s-txt {
+    .pop-my-order .s-txt {
         font-size: 12px;
     }
     .pop-my-order .list-payment li:first-child {
@@ -2648,7 +2689,7 @@
         font-size: 16px;
     }
     .pop-my-order .check-terms {
-        padding: 16px 0;
+        /* padding: 16px 0; */
         font-size: 12px;
         text-align: left;
     }

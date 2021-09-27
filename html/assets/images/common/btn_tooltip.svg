@@ -1,9 +1,9 @@
-<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
     <g fill="none" fill-rule="evenodd">
-        <path d="M0 0h24v24H0z"/>
-        <g transform="translate(3 3)">
-            <circle stroke="#979797" cx="9" cy="9" r="8.5"/>
-            <path d="M8 8.73c0-.415.448-.75 1-.75s1 .335 1 .75v4.5c0 .414-.448.75-1 .75s-1-.336-1-.75v-4.5zM9 4.051a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" fill="#999" fill-rule="nonzero"/>
-        </g>
+        <path d="M8 .5c2.071 0 3.946.84 5.303 2.197A7.477 7.477 0 0 1 15.5 8c0 2.071-.84 3.946-2.197 5.303A7.477 7.477 0 0 1 8 15.5a7.477 7.477 0 0 1-5.303-2.197A7.477 7.477 0 0 1 .5 8c0-2.071.84-3.946 2.197-5.303A7.477 7.477 0 0 1 8 .5z" stroke="#999"/>
+        <text font-family="HyundaiSansTextJP-Regular, Hyundai Sans Text JP" font-size="12" fill="#999">
+                            <tspan x="5" y="13">?</tspan>
+                        </text>
+        <path d="M0 0h16v16H0z"/>
     </g>
 </svg>

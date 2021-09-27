@@ -258,13 +258,15 @@ jQuery.event.add(window, 'load', function () {
 						$(this).parent().animate({ 'overflow': 'visible' }, secVal[1]);
 						$('.btn-tooltip').removeClass('active');
 						setObj(function () {
-							tooltipCont.removeAttr('style');
+							$('.tooltip-cont').removeAttr('style');
+							$('.tooltip-cont').removeClass('t-fix');
 						}, secVal[1]);
 					}
 				} else {
 					if (e.type == 'click') {
 						if (!$(this).hasClass('active')) {
 							$('.tooltip-cont').removeAttr('style');
+							$('.tooltip-cont').removeClass('t-fix');
 						}
 						tooltip($(this));
 					}
@@ -492,9 +494,15 @@ jQuery.event.add(window, 'load', function () {
 		tabScrBox.stop().animate({scrollLeft:tabScrPos}, secVal[2]);
 	}
 
-	function tooltip(target) {
+	function tooltip (target) {
 		const btnTooltipWid = target.outerWidth();
 		tooltipCont = target.closest('.tooltip-box').find('.tooltip-cont');
+		tooltipContWid = target.closest('.tooltip-box').find('.tooltip-cont').width();
+		if (tooltipContWid > secVal[4]) {
+			tooltipCont.addClass('t-fix');
+		} else {
+			tooltipCont.removeClass('t-fix');
+		}
 		if ($(window).width() > tbl) {
 			tooltipPadding = twoDig[0];
 		} else {
@@ -521,6 +529,7 @@ jQuery.event.add(window, 'load', function () {
 			target.removeClass('active');
 			setObj(function () {
 				tooltipCont.removeAttr('style');
+				tooltipCont.removeClass('t-fix');
 			}, secVal[1]);
 		}
 		if (!$('html').hasClass('ios')) {
@@ -530,6 +539,7 @@ jQuery.event.add(window, 'load', function () {
 					$('.btn-tooltip').removeClass('active');
 					setObj(function () {
 						tooltipCont.removeAttr('style');
+						tooltipCont.removeClass('t-fix');
 					}, secVal[1]);
 				}
 			});
@@ -545,6 +555,7 @@ jQuery.event.add(window, 'load', function () {
 			$('.btn-tooltip').removeClass('active');
 			setObj(function () {
 				tooltipCont.removeAttr('style');
+				tooltipCont.removeClass('t-fix');
 			}, secVal[1]);
 		})
 	}
@@ -700,22 +711,38 @@ function selectDropdown(data){
 
 function customSelect () {
 	$('div.slt-box').on('click', '.selected-value', function (e) {
-		if($(this).parent().hasClass('active')) {
-			$(this).parent().removeClass('active');
+		if ($(this).parents().hasClass('shop-option') == false) {
+			//default selectbox
+			if($(this).parent().hasClass('active')) {
+				$(this).parent().removeClass('active');
+			} else {
+				$('div.slt-box').removeClass('active');
+				$(this).parent().addClass('active');
+			};
+			$(this).parent().removeClass('on');
+
+			$('.select-items').on('click', 'li', function () {
+				var selectItem = $(this).text()
+				$(this).addClass('selected').siblings('li').removeClass('selected');
+				$(this).parent().siblings('.selected-value').text(selectItem);
+				$(this).parents('div.slt-box').removeClass('active').addClass('on');
+			});
 		} else {
-			$('div.slt-box').removeClass('active');
-			$(this).parent().addClass('active');
-		};
-		$(this).parent().removeClass('on');
+			//shop-option selectbox
+			if($(this).parent().hasClass('active')) {
+				$(this).parent().removeClass('active');
+				$(this).parent().next('.selected').show();
+			} else {
+				$('div.slt-box').removeClass('active');
+				$(this).parent().addClass('active');
+				$(this).parent().next('.selected').hide();
+			};
 
-		//select option text 
-		$('.select-items').on('click', 'li', function () {
-			var selectItem = $(this).text();
-			$(this).addClass('selected').siblings('li').removeClass('selected');
-			$(this).parent().siblings('.selected-value').text(selectItem);
-			$(this).parents('div.slt-box').removeClass('active').addClass('on');
-		});
-
+			$('.select-items').on('click', 'li', function () {
+				$(this).parents('div.slt-box').removeClass('active');
+				$(this).parent().next('.selected').show();
+			});
+		}
 	});
 	
 	//outside click
