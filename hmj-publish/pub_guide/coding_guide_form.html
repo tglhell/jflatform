@@ -304,23 +304,36 @@
 			</div>
 			<p class="error-msg lbl-type">error text</p>
 
-			<div class="inp-outer-box tel-type">
+			<div class="inp-outer-box inp-type">
 				<label for="inpNum01_011">リファラルコード</label>
 				<div class="inp-btn-box">
 					<div class="inp-area">
 						<input type="text" id="inpNum01_011" class="inp-item" placeholder="きむら">
 						<button class="inp-close"></button>
 					</div>
-					<button class="btn btn-type3 btn-tbl"><span>確認</span></button>
+					<button class="btn btn-type3 btn-tbl"><span>確認確認確認</span></button>
 				</div>
 			</div>
 			<p class="error-msg lbl-type">error text</p>
 
-			<div class="inp-outer-box tel-type val-error">
+			<div class="inp-outer-box inp-type">
 				<label for="inpNum01_011">リファラルコード</label>
 				<div class="inp-btn-box">
 					<div class="inp-area">
 						<input type="text" id="inpNum01_0111" class="inp-item" placeholder="きむら">
+						<button class="inp-close"></button>
+					</div>
+					<span class="time-num">03:00</span>
+					<button class="btn btn-type3 btn-tbl"><span>認証</span></button>
+				</div>
+			</div>
+			<p class="error-msg lbl-type">error text</p>
+
+			<div class="inp-outer-box inp-type val-error">
+				<label for="inpNum01_011">リファラルコード</label>
+				<div class="inp-btn-box">
+					<div class="inp-area">
+						<input type="text" id="inpNum01_01111" class="inp-item" placeholder="きむら">
 						<button class="inp-close"></button>
 					</div>
 					<button class="btn btn-type3 btn-tbl"><span>確認</span></button>
@@ -596,8 +609,20 @@
 
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--
-
+<pre class="language-html"><code><!--<div class="drop-down-outer">
+	<div class="inner-cont">
+		<p>text <strong>text2 text2 text2 text2 text2 text2 text2 text2 text2 text2 text2</strong></p>
+		<p>text <strong>text2 text2 text2 text2 text2 text2 text2 text2 text2 text2 text2</strong></p>
+		<p>text <strong>text2 text2 text2 text2 text2 text2 text2 text2 text2 text2 text2</strong></p>
+		<p>text <strong>text2 text2 text2 text2 text2 text2 text2 text2 text2 text2 text2</strong></p>
+		<p>text <strong>text2 text2 text2 text2 text2 text2 text2 text2 text2 text2 text2</strong> text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</p>
+		<p>text <strong>text2 text2 text2 text2 text2 text2 text2 text2 text2 text2 text2</strong></p>
+		<p>text <strong>text2 text2 text2 text2 text2 text2 text2 text2 text2 text2 text2</strong></p>
+		<p>text <strong>text2 text2 text2 text2 text2 text2 text2 text2 text2 text2 text2</strong></p>
+		<p>text <strong>text2 text2 text2 text2 text2 text2 text2 text2 text2 text2 text2</strong></p>
+	</div>
+	<button class="btn-drop-down"><span><img src="../assets/images/common/ico_drop_down.svg" alt="drop down"></span></button>
+</div>
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
@@ -677,14 +702,14 @@
 	<li>
 		<label class="chk"><input type="checkbox"><span><em>(必須)</em>個人情報の収集及び利用目的につい
 			ての同意</span>
-			<a href="#" class="link-more">詳細を見る</a>
+			<a href="#" class="btn-text2">詳細</a>
 		</label>					
 		<p class="error-msg">error text</p>
 	</li>
 	<li>
 		<label class="chk val-error"><input type="checkbox"><span><em>(必須)</em>個人情報の収集及び利用目的につい
 			ての同意</span>
-			<a href="#" class="link-more">詳細を見る</a>
+			<a href="#" class="btn-text2">詳細</a>
 		</label>					
 		<p class="error-msg">error text</p>
 	</li>
@@ -708,32 +733,33 @@
 			</div>
 
 			단독사용
-			<div class="check-terms align-c"> 
-				<label class="chk"><input type="checkbox"><span>(必須) 個人情報の収集及び利用目的につい
+			<div class="check-terms"> 
+				<label class="chk"><input type="checkbox"><span><em>[必須]</em> 個人情報の収集及び利用目的につい
 					ての同意</span>
+					<a href="#" class="btn-text2">詳細</a>
 				</label>
+				<p class="error-msg">error text</p>
 			</div>
 
 			리스트 형
 			<ul class="check-terms">
 				<li>
-					<label class="chk"><input type="checkbox"><span>(必須)個人情報の収集及び利用目的につい
+					<label class="chk"><input type="checkbox"><span><em>[必須]</em> 個人情報の収集及び利用目的につい
 						ての同意</span>
-						<a href="#" class="link-more">詳細を見る</a>
+						<a href="#" class="btn-text2">詳細</a>
 					</label>
 					<p class="error-msg">error text</p>
 				</li>
 				<li>
-					<label class="chk val-error"><input type="checkbox"><span>(必須) 個人情報の収集及び利用目的につい
+					<label class="chk val-error"><input type="checkbox"><span><em>[必須]</em> 個人情報の収集及び利用目的につい
 						ての同意</span>
-						<a href="#" class="link-more">詳細を見る</a>
+						<a href="#" class="btn-text2">詳細</a>
 					</label>
 					<p class="error-msg">error text</p>
 				</li>
 				<li>
-					<label class="chk val-error"><input type="checkbox"><span>(必須) 登録された携帯電話あてに試乗サービ
+					<label class="chk"><input type="checkbox"><span>[선택] 登録された携帯電話あてに試乗サービ
 					ス利用についてご案内させていただきます。</span></label>
-					<p class="error-msg">error text</p>
 				</li>
 			</ul>
 

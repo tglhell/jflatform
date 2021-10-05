@@ -226,7 +226,7 @@ $(function () {
 	};
 
 	//curation-list
-	if ($(window).width() < tbl) { //only mo
+	if ($(window).width() <= tbl) { //only mo
 		let swpOpt = {},
 		slideLength = $('.shop-visual .swiper-slide').length;
 		if (slideLength == 1) {
@@ -242,8 +242,6 @@ $(function () {
 					el: '.curation-list .swiper-pagination',
 					clickable: true,
 				},
-				// slidesPerView: 'auto',
-				// centeredSlides: true,
 				simulateTouch: true,
 				speed: 300,
 				loop: false,
@@ -253,80 +251,26 @@ $(function () {
 				autoHeight: true
 			}
 		}
-		let curationSlide = new Swiper('.curation-list .swiper-container', swpOpt);
-
-		
+		let curationSlide = new Swiper('.curation-list .swiper-container', swpOpt);		
 	};
-	
-	//cate-list
-	if ($('.cate-list').length == 1) {
-		let swpOpt = {};
-		let slideLength = $('.cate-list .swiper-slide').length;
-		if (slideLength == 1) {
-			swpOpt = {
-				allowSlidePrev: false,
-				allowSlideNext: false,
-				simulateTouch: false
-			}
-			$('.cate-list [class*="swiper-button"]').hide();
-		} else if (slideLength <= 5 && $(window).width() > tbl) {
-			swpOpt = {
-				slidesPerView: 5,
-				simulateTouch: true,
-				speed: 300,
-				loop: false,
-				spaceBetween: 24,
-				observer: true,
-				observeParents: true
-			}
-			$('.cate-list [class*="swiper-button"]').hide();
-		} else {
-			swpOpt = {
-				// cssMode: true,
-				slidesPerView: 'auto',
-				simulateTouch: true,
-				speed: 300,
-				loop: false,
-				spaceBetween: 8,
-				observer: true,
-				observeParents: true,
-				breakpoints: {
-					1120: {
-						slidesPerView: 5,
-						spaceBetween: 24,
-						navigation: {
-							nextEl: '.cate-list .swiper-button-next',
-							prevEl: '.cate-list .swiper-button-prev',
-						},
-					}
-				}
-			}
-		}
-		let cateSlide = new Swiper('.cate-list .swiper-container', swpOpt);	
-	}; 
 
-	//Shop Detail Thumb
-	if ($('.thumb-slide').length == 1) {
+	//Shop thumb-list
+	if ($('.thumb-list').length == 1) {
 		let swpOpt = {},
-		slideLength = $('.thumb-slide .swiper-slide').length;
+		slideLength = $('.thumb-list .swiper-slide').length;
 		if (slideLength == 1) {
 			swpOpt = {
 				allowSlidePrev: false,
 				allowSlideNext: false,
 				simulateTouch: false
 			}
-			$('.thumb-slide [class*="swiper-button"]').hide();
+			$('.thumb-list [class*="swiper-button"]').hide();
 		} else {
 			if ($(window).width() > tbl) {
 				//pc
 				swpOpt = {
-					spaceBetween: 8,
-					slidesPerView: 4,
-					navigation: {
-						nextEl: '.thumb-slide .swiper-button-next',
-						prevEl: '.thumb-slide .swiper-button-prev',
-					},
-					
+					spaceBetween: 16,
+					slidesPerView: 5,
 					simulateTouch: true,
 					speed: 300,
 					loop: false,
@@ -334,15 +278,13 @@ $(function () {
 					observeParents: true
 				}
 			} else {
+				//mo
 				swpOpt = {
 					spaceBetween: 0,
-					navigation: {
-						nextEl: '.thumb-slide .swiper-button-next',
-						prevEl: '.thumb-slide .swiper-button-prev',
-					},
 					pagination: {
-						el: '.thumb-slide .swiper-pagination',
+						el: '.thumb-list .swiper-pagination',
 						clickable: true,
+						type: 'progressbar'
 					},
 					simulateTouch: true,
 					speed: 300,
@@ -352,40 +294,88 @@ $(function () {
 				}
 			}
 		}
-		var goodsThumb = new Swiper('.thumb-slide .swiper-container', swpOpt);
+		var thumbList = new Swiper('.thumb-list .swiper-container', swpOpt);
 	};
 
-	//Shop Sub Main
-	// if ($('.select-thumb').length == 1) {
-	// 	let swpOpt = {},
-	// 	slideLength = $('.select-thumb .swiper-slide').length;
-	// 	if (slideLength == 1) {
-	// 		swpOpt = {
-	// 			allowSlidePrev: false,
-	// 			allowSlideNext: false,
-	// 			simulateTouch: false
-	// 		}
-	// 		$('.select-thumb [class*="swiper-button"]').hide();
-	// 	} else {
-	// 		if ($(window).width() > tbl) {
-	// 			//pc
-	// 			swpOpt = {
-	// 				thumbs: {
-	// 					swiper: goodsThumb
-	// 				},
-	// 				speed: 100,
-	// 				cssMode: true,
-	// 				mousewheel: true,
-	// 				keyboard: true,
-	// 				observer: true,
-	// 				observeParents: true,
-	// 			}
-	// 		} else {
-	// 			$('.select-thumb').hide();
-	// 		}
-	// 	}
-	// 	let selectedThumb = new Swiper('.select-thumb .swiper-container', swpOpt);
-	// };
+	//Shop detail-thumb
+	if ($('.detail-thumb').length == 1) {
+		let swpOpt = {},
+		slideLength = $('.detail-thumb .swiper-slide').length;
+		if (slideLength == 1) {
+			swpOpt = {
+				allowSlidePrev: false,
+				allowSlideNext: false,
+				simulateTouch: false
+			}
+			$('.detail-thumb [class*="swiper-button"]').hide();
+		} else {
+			if ($(window).width() > tbl) {
+				//pc
+				swpOpt = {
+					thumbs: {
+						swiper: thumbList
+					},
+					pagination: {
+						el: '.detail-thumb .swiper-pagination',
+						clickable: true,
+						type: 'progressbar'
+					},
+					speed: 100,
+					cssMode: true,
+					mousewheel: true,
+					keyboard: true,
+					observer: true,
+					observeParents: true,
+				}
+			} else {
+				$('.detail-thumb').hide();
+			}
+		}
+		let detailThumb = new Swiper('.detail-thumb .swiper-container', swpOpt);
+	};
+
+	//Shop recommend
+	if ($('.recommend').length == 1) {
+		let swpOpt = {};
+		let slideLength = $('.recommend .swiper-slide').length;
+		if (slideLength == 1) {
+			swpOpt = {
+				allowSlidePrev: false,
+				allowSlideNext: false,
+				simulateTouch: false
+			}
+			$('.recommend [class*="swiper-button"]').hide();
+		} else {
+			if ($(window).width() > tbl) {
+				//pc
+				swpOpt = {
+					spaceBetween: 40,
+					slidesPerView: 5,
+					simulateTouch: true,
+					speed: 300,
+					loop: false,
+					observer: true,
+					observeParents: true,
+					navigation: {
+						nextEl: '.recommend .swiper-button-next',
+						prevEl: '.recommend .swiper-button-prev',
+					},
+				}
+			} else {
+				//mo
+				swpOpt = {
+					spaceBetween: 16,
+					slidesPerView: 'auto',
+					simulateTouch: true,
+					speed: 300,
+					loop: false,
+					observer: true,
+					observeParents: true
+				}
+			}
+		}
+		let recommend = new Swiper('.recommend .swiper-container', swpOpt);		
+	};
 
 	// my Main 
 	function listCarSwp () {

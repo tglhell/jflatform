@@ -21,7 +21,7 @@
 
 <body>
 
-<div class="hmj-wrap shop-sub">
+<div class="hmj-wrap">
 	<div class="skip-nav">
 		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
 	</div>
@@ -83,7 +83,8 @@
 		<div class="sub-cont">
 			<div class="history">
 				<a href="javascript:;">HOME</a>
-				<span class="page-title">SHOP</span>
+                <a href="javascript:;">SHOP</a>
+				<span class="page-title">Accessories</span>
 			</div>
 			<button type="button" class="back-page">Back page</button>
 		</div>
@@ -92,13 +93,12 @@
 	<!--//header -->
 
 	<!-- container -->
-	<div id="hmjContainer" class="hmj-container">
+	<div id="hmjContainer" class="hmj-container shop-detail">
 		<div class="hmj-content">
             <div class="cont-outer">
-
-                <div class="detail-top">
+                <section class="detail-top">
                     <div class="visual-wrap">
-                        <div class="swiper-outer-box select-thumb">
+                        <div class="swiper-outer-box detail-thumb">
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
@@ -118,122 +118,314 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- //select-thumb -->
-
-                        <div class="swiper-outer-box thumb-slide">
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="../../assets/images/@goods_img01.jpg" alt="sample01">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="../../assets/images/@goods_img02.jpg" alt="sample02">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="../../assets/images/@goods_img03.jpg" alt="sample02">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="../../assets/images/@goods_img04.jpg" alt="sample02">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="../../assets/images/@goods_img05.jpg" alt="sample02">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
                             <div class="swiper-pagination"></div>
                         </div>
-                        <!-- //thumb-slide -->
+                        <!-- //detail-thumb -->
+
+                        <div class="swiper-outer-box thumb-list">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../../assets/images/@goods_img01.jpg" alt="sample01">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../../assets/images/@goods_img02.jpg" alt="sample02">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../../assets/images/@goods_img03.jpg" alt="sample02">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../../assets/images/@goods_img04.jpg" alt="sample02">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../../assets/images/@goods_img05.jpg" alt="sample02">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <!-- //thumb-list -->
                     </div>
                     <!-- //visual-wrap -->
-                    
+
+                    <div class="util">
+                        <button type="button" class="like"><span>Like</span></button>
+                        <button type="button" class="share"><span>Share</span></button>
+                    </div>
+
                     <div class="goods-info">
                         <div class="flag-area">
-                            flag
+                            <span class="text-flag c4">HOT</span>
+                            <span class="text-flag c4">Reorder</span>
+                            <span class="text-flag c4">Hyundai ONLY</span>
                         </div>
                         <p class="tit">プレミアムフロアマット</p>
                         <div class="price">
-                            <span class="sale">10%</span>
                             <span class="real">40,000</span>
-                            <p class="final">¥ 40,000 <span>(税込)</span></p>
+                            <div class="sale">
+                                <span class="rate">10%</span>
+                                <span class="final">¥ 40,000 </span>
+                                <span class="tax">(税込)</span>
+                            </div>
                         </div>
-                        <p class="rethink">재고 <span class="count">00</span>개</p>
-                        <div class="util">
-                            <button type="button" class="like"><span>Like</span></button>
-                            <button type="button" class="cart"><span>Add Cart</span></button>
+                        <div class="add-info delivery">
+                            <div class="tit-line">
+                                <span class="ico"><img src="../../assets//images/common/ico_delivery.svg" alt="icon"></span>
+                                <div class="tit">送料<span class="fee">￥650</span></div>
+                            </div>
+                            <div class="info">
+                                沖縄 :  ￥750、離島 : ￥750、北海道 : ￥750<br>
+                                (離島・一部地域で別途送料が必要な場合があります。)
+                            </div>
                         </div>
-                        <div class="delivery"></div>
-                        <div class="customer"></div>
-                        <div class="seller"></div>
-
-                        <!-- mo bottom fixed -->
-                        <div class="fixed-area">
-                            <div class="option-box">
-                                <div class="slt-box">
-                                    <p class="selected-value">Custom Select Text</p>
-                                    <ul class="select-items">
-                                        <li>option1</li>
-                                        <li>option2</li>
-                                        <li>option3</li>
+                        <div class="add-info cs">
+                            <div class="tit-line">
+                                <span class="ico"><img src="../../assets//images/common/ico_cs.svg" alt="icon"></span>
+                                <div class="tit">この商品に関するお問合せは、</div>
+                                <button class="btn-icon2"><span>1:1お問合せ</span></button>
+                            </div>
+                            <div class="drop-down-outer">
+                                <div class="inner-cont">
+                                    <ul class="seller">
+                                        <li>
+                                            <p class="tit">販売者情報</p>
+                                            <p class="txt">MARUBENI</p>
+                                        </li>
+                                        <li>
+                                            <p class="tit">電話相談</p>
+                                            <p class="txt pc-only">0000-0000</p>
+                                            <p class="txt mo-only"><a href="tel:0000-0000">0000-0000</a></p>
+                                        </li>
+                                        <li>
+                                            <p class="tit">受付時間</p>
+                                            <p class="txt">月-金 9:00~17:00 (休憩12:00-13:00)</p>
+                                        </li>
                                     </ul>
                                 </div>
+                                <button class="btn-drop-down"><span><img src="../../assets/images/common/ico_drop_down.svg" alt="drop down"></span></button>
+                            </div>
+                        </div>
 
-                                <div class="selected">
-                                    <dl>
-                                        <dt>option name</dt>
-                                        <dd class="quantity">
-                                            <div class="amount-calc">
-                                                <button class="down">decrease</button>
-                                                <input type="text" value="1" />
-                                                <button class="up">increase</button>
+                        <!-- mo bottom fixed -->
+                        <div class="mo-bottom-fixed">
+                            <button class="btn-down" onclick="javascript:floatClose()">close</button>
+                            <div class="scroll-area">
+                                <p class="label">オプション</p>
+                                <div class="slt-box hgt-type2 shop-option">
+                                    <p class="selected-value">カラー/サイズ</p>
+                                    <ul class="select-items scroll-area">
+                                        <li>
+                                            <p class="tit"><span>レッド</span> / <span>2人乗り</span></p>
+                                            <div class="info">
+                                                <p class="price">￥ 30,000</p>
+                                                <p class="quantity">在庫 : <span>100</span>個</p>
                                             </div>
-                                        </dd>
-                                        <dd class="price">2000</dd>
-                                    </dl>
-                                    <button class="delete">delete</button>
+                                        </li>
+                                        <li class="soldout">
+                                            <p class="tit"><span>カラー</span> / <span>サイズ</span></p>
+                                            <div class="info">
+                                                <p class="price">￥ 30,000</p>
+                                                <p class="quantity">在庫切れ</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="tit"><span>レッド</span> / <span>2人乗り</span></p>
+                                            <div class="info">
+                                                <p class="price">￥ 30,000</p>
+                                                <p class="quantity">在庫 : <span>100</span>個</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="tit"><span>レッド</span> / <span>2人乗り</span></p>
+                                            <div class="info">
+                                                <p class="price">￥ 30,000</p>
+                                                <p class="quantity">在庫 : <span>100</span>個</p>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
+                                <!-- //slt-box -->
+                                
                                 <div class="selected">
-                                    <dl>
-                                        <dt>option name</dt>
-                                        <dd class="quantity">
+                                    <div class="option">
+                                        <p class="tit"><span>ブラック</span> / <span>4人乗り</span></p>
+                                        <div class="info">
                                             <div class="amount-calc">
                                                 <button class="down">decrease</button>
                                                 <input type="text" value="1" />
                                                 <button class="up">increase</button>
                                             </div>
-                                        </dd>
-                                        <dd class="price">2000</dd>
-                                    </dl>
-                                    <button class="delete">delete</button>
+                                            <div class="price">￥ 30,000 </div>
+                                            <button class="btn-del"><span>delete</span></button>
+                                        </div>
+                                        <p class="quantity">商品購入可能数量 : <span>5</span>個</p>
+                                    </div>
                                 </div>
                             </div>
-                            
-                            <dl class="total">
-                                <dt>商品販売価格 <span>(税込み)</span></dt>
-                                <dd>￥ 60,650</dd>
-                            </dl>
-                            <div class="cta-outer">
-                                <button class="btn"><span>button</span></button>
-                                <button class="btn btn-type2"><span>button</span></button>
+                            <!-- //scroll-area -->
+
+                            <div class="bottom-fixed">
+                                <div class="total-price">
+                                    <div class="tit">商品販売価格 <span class="s-txt">(税込)</span></div>
+                                    <div class="price">¥ 0</div>
+                                </div>
+
+                                <div class="cta-outer full-type">
+                                    <button class="btn" onclick="javascript:floatOpen()"><span>カート</span></button>
+                                    <button class="btn btn-type2"><span>ご購入手続きへ</span></button>
+                                </div>
                             </div>
                         </div>
                         
-                    </div>                    
-                </div>
+                    </div>
+                </section>
                 <!-- //detail-top -->
 
+                <section class="detail-body">
+                    <div class="tab-box-wrap js-tab">
+                        <div class="tab-box-outer mo-only">
+                            <ul class="tab-box-list">
+                                <li class="active"><a href="#">商品詳細説明</a></li>
+                                <li><a href="#">配送 · キャンセル · 返品</a></li>
+                            </ul>
+                        </div>
+                    
+                        <div class="tab-box-cont js-tab-cont">
+                            <div class="tab-box-item active">
+                                <h4 class="pc-only">商品詳細説明</h4>
+                                <div class="good-detail-img">
+                                    <img src="../../assets/images/@goods_detail.jpg" alt="商品詳細説明" >
+                                </div>
+                            </div>
+                            <div class="tab-box-item">
+                                <h4 class="pc-only">配送 · キャンセル · 返品</h4>
+                                <div class="good-detail-info">
+                                    <dl>
+                                        <dt>[配送のご案内]</dt>
+                                        <dd>繫忙期やお届け先の誤入力により多少の遅れが生じる可能性があります。</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>[キャンセルのご案内]</dt>
+                                        <dd>注文完了後、「商品準備中」の状態でのみキャンセルが可能です。</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>[交換/返品のご案内]</dt>
+                                        <dd>商品到着後、14日以内の場合に交換/返品の申込ができます。<br>
+                                            ただし、商品案内ページに返品不可となっている商品の場合、商品の破損以外に心変わりなどによる交換/返品はできません。</dd>
+                                        <dd>次の場合は、返品できない場合があります。
+                                            <ul>
+                                                <li>- 開封により商品が毀損され、価値が著しく減少した場合</li>
+                                                <li>- 顧客の注文後、商品を制作するカスタムオーダー、受注生産商品の場合</li>
+                                                <li>- 消費者の理由で商品が滅失、あるいは毀損した場合</li>
+                                            </ul>
+                                        </dd>
+                                        <dd>交換/返品の理由により追加で送料を負担していただく場合があります。</dd>
+                                        <dd>交換/返品不可の商品または到着後の交換/返品に関するお問合せは、ショップの顧客センターにお願いいたします。</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- //detail-body -->
+
+                <section class="detail-bottom">
+                    <h4>この商品はいかがでしょうか。</h4>
+                    <div class="swiper-outer-box recommend">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper goods-list">
+                                <div class="swiper-slide">
+                                    <div class="thumb"><img src="../../assets/images/@goods_img01.jpg" alt="sample01"></div>
+                                    <div class="info">
+                                        <p class="tit">[リファイナー] ロイヤルスペード・デュオ自動車量芳香剤のリフィルエッセンスストーン(2個セット)</p>
+                                        <div class="price">
+                                            <span class="real">40,000</span>
+                                            <div class="sale">
+                                                <span class="rate">10%</span>
+                                                <span class="final">¥ 40,000 </span>
+                                                <span class="tax">(税込)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thumb"><img src="../../assets/images/@goods_img02.jpg" alt="sample02"></div>
+                                    <div class="info">
+                                        <p class="tit">[リファイナー] ロイヤルスペード</p>
+                                        <div class="price">
+                                            <span class="real">40,000</span>
+                                            <div class="sale">
+                                                <span class="rate">10%</span>
+                                                <span class="final">¥ 40,000 </span>
+                                                <span class="tax">(税込)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thumb"><img src="../../assets/images/@goods_img03.jpg" alt="sample03"></div>
+                                    <div class="info">
+                                        <p class="tit">ロイヤルスペード (2個セット)</p>
+                                        <div class="price">
+                                            <div class="sale">
+                                                <span class="final">¥ 40,000 </span>
+                                                <span class="tax">(税込)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thumb"><img src="../../assets/images/@goods_img04.jpg" alt="sample04"></div>
+                                    <div class="info">
+                                        <p class="tit">[リファイナー] ロイヤルスペード・デュオ自動車量芳香剤のリフィルエッセンスストーン(2個セット)</p>
+                                        <div class="price">
+                                            <div class="sale">
+                                                <span class="final">¥ 40,000 </span>
+                                                <span class="tax">(税込)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thumb"><img src="../../assets/images/@goods_img05.jpg" alt="sample05"></div>
+                                    <div class="info">
+                                        <p class="tit">[リファイナー] ロイヤルスペード・デュオ自動車量芳香剤のリフィルエッセンスストーン(2個セット)</p>
+                                        <div class="price">
+                                            <div class="sale">
+                                                <span class="final">¥ 40,000 </span>
+                                                <span class="tax">(税込)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thumb"><img src="../../assets/images/@goods_img01.jpg" alt="sample01"></div>
+                                    <div class="info">
+                                        <p class="tit">[リファイナー] ロイヤルスペード・デュオ自動車量芳香剤のリフィルエッセンスストーン(2個セット)</p>
+                                        <div class="price">
+                                            <span class="real">40,000</span>
+                                            <div class="sale">
+                                                <span class="rate">10%</span>
+                                                <span class="final">¥ 40,000 </span>
+                                                <span class="tax">(税込)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-control">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                    <!-- //recommend -->
+                </section>
+                <!-- //detail-bottom -->
             </div>
 		</div>
 	</div>
 	<!--//container -->
-
-	<!-- footer -->
-	<div class="hmj-footer">
-		<img src="../../assets/images/@footer.jpg" alt="footer">
-	</div>
-	<!--//footer -->
 </div>
 <div class="btn-top-box">
 	<a href="#" title="move to top" role="button" class="btn-top">
@@ -241,8 +433,52 @@
 	</a>
 </div>
 
+<!-- like toggle -->
+<div class="dim-wrap dim-like-on">
+    <div class="toggle-dim">
+        <div class="icon"><img src="../../assets/images/common/ico_check_on.svg" alt="Wish on"></div>
+        <p class="txt">ブックマークに
+            追加しました。</p>
+    </div>
+</div>
+<div class="dim-wrap dim-like-off">
+    <div class="toggle-dim">
+        <div class="icon"><img src="../../assets/images/common/ico_check_off.svg" alt="Wish off"></div>
+        <p class="txt">ブックマークから
+            削除しました。</p>
+    </div>
+</div>
+<!-- //like toggle -->
+
+<!-- add cart dim -->
+<div class="dim-wrap dim-add-cart">
+    <div class="toggle-dim">
+        <div class="icon"><img src="../../assets/images/common/ico_add_cart.svg" alt="Add cart"></div>
+        <p class="txt">カートに商品が追加されました。</p>
+        <div class="cta-outer row-type">
+            <button class="btn btn-middle" onclick="javascript:cartDimOff('.dim-add-cart')"><span>カートへ移動</span></button>
+            <button class="btn btn-middle btn-type2" onclick="javascript:cartDimOff('.dim-add-cart')"><span>商品をもっと見る</span></button>
+        </div>
+    </div>
+</div>
+<!-- //add cart dim -->
+
 <script>
     customSelect();
+    cartDimOn();
+    
+    //like toggle-dim 
+    $('button.like').on('click', function(){
+        if(!$('button.like').hasClass('on')) {
+            $(this).addClass('on');
+            $('.dim-like-off').hide();
+            $('.dim-like-on').fadeIn(100).delay(3000).fadeOut(100);
+        } else {
+            $(this).removeClass('on');
+            $('.dim-like-on').hide();
+            $('.dim-like-off').fadeIn(100).delay(3000).fadeOut(100);
+        }
+    });
 </script>
 
 </body>
