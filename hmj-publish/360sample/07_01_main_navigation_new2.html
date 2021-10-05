@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>GENESIS BUSINESS | GENESIS</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="icon" href="/etc/designs/genesis/gro/redesign/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="/etc/designs/genesis/gro/redesign/asset/common.css">
+	<script src="/etc/designs/genesis/gro/redesign/asset/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+<div id="app">
+	<div class="vehicle-item ugd-fix">
+		<div class="car-visual-wrapper">
+			<div class="car-visual">
+				<img src="/content/dam/genesis/gro/images/renew/gnb/img_model_menu_hover.png" class="visual">
+			</div>
+		</div>
+	</div>
+	<script>
+		$(function(){
+			$('.vehicle-item.ugd-fix').on('mouseenter mouseleave', function(e){
+				let iNum = 5;
+				let _this = $(this);
+				if (e.type == 'mouseenter') {
+					for (i = 1; i <= iNum ; i++) {
+						$(function(i){
+							setTimeout(function(){
+								_this.find('.car-visual').removeAttr('ir').attr('ir', i);
+							}, 21 * i);
+						}(i));
+					}
+				} else {
+					for (i = iNum; i >= 0 ; i--) {
+						$(function(i){
+							setTimeout(function(){
+								_this.find('.car-visual').removeAttr('ir').attr('ir', iNum - i);
+							}, 21 * i);
+						}(i));
+					}
+					setTimeout(function(){
+						_this.find('.car-visual').removeAttr('ir');
+					}, 21 * iNum);
+				}
+			})
+		});
+	</script>
+	<style>
+		.vehicle-item.ugd-fix {
+			display: inline-block;
+		}
+		.vehicle-item.ugd-fix .car-visual {
+			overflow: hidden;
+			width: 630px;
+			width: 32.8125vw;
+			height: 380px;
+			height: 19.79167vw;
+		}
+		.vehicle-item.ugd-fix .car-visual img {
+			max-width: none;
+		}
+		@media (min-width: 1921px) {
+			.vehicle-item.ugd-fix .car-visual img {width:1890px;}
+			.vehicle-item.ugd-fix .car-visual[ir='1'] img {transform: translate3d(-630px, 0, 0);}
+			.vehicle-item.ugd-fix .car-visual[ir='2'] img {transform: translate3d(-1260px, 0, 0);}
+			.vehicle-item.ugd-fix .car-visual[ir='3'] img {transform: translate3d(-1890px, 0, 0);}
+			.vehicle-item.ugd-fix .car-visual[ir='4'] img {transform: translate3d(-2520px, 0, 0);}
+			.vehicle-item.ugd-fix .car-visual[ir='5'] img {transform: translate3d(-3150px, 0, 0);}
+		}
+
+		@media (min-width: 768px) and (max-width: 1920px) {
+			.vehicle-item.ugd-fix .car-visual img {transform:translate3d(0, 0, 0);width:3780px;width:196.875vw;}
+			.vehicle-item.ugd-fix .car-visual[ir='1'] img {transform: translate3d(-33.333vw, 0, 0);}
+			.vehicle-item.ugd-fix .car-visual[ir='2'] img {transform: translate3d(-66.667vw, 0, 0);}
+			.vehicle-item.ugd-fix .car-visual[ir='3'] img {transform: translate3d(-100vw, 0, 0);}
+			.vehicle-item.ugd-fix .car-visual[ir='4'] img {transform: translate3d(-133.333vw, 0, 0);}
+			.vehicle-item.ugd-fix .car-visual[ir='5'] img {transform: translate3d(-166.667vw, 0, 0);}
+		}
+
+		/* @media (max-width: 1023px) and (min-width: 768px) {
+			.vehicle-item.ugd-fix .car-visual {width:auto;height:auto;}
+			.vehicle-item.ugd-fix .car-visual img {width:2860px;width:279.569892vw;}
+		} */
+	</style>
+</div>
+</body>
+
+</html>
