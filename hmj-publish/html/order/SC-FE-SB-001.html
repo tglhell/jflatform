@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>HMJ 온라인 판매 사이트 구축</title>
+    <title>カート : HMJ</title>
 
     <link rel="stylesheet" href="../../assets/css/common.css">
     <link rel="stylesheet" href="../../assets/css/order.css">
@@ -84,208 +84,154 @@
 	<!-- container -->
 	<div id="hmjContainer" class="hmj-container cart">
 		<div class="hmj-content">
-			<div class="cont-outer">
+			<div class="top-tit-box thin">
+				<h2>カート</h2>
+			</div>
+            <div class="cont-outer">
                 <div class="cont-center">
-                    <button class="btn btn-tbl all-del"><span>削除</span></button>
-                    <!-- goods -->
-                    <ul class="prod-list">
-                        <li>
-                            <label class="chk type2"><input type="checkbox"><span>ストア名 A  <em class="fc-color2">[2]</em></span></label>
-                            <ul class="item">
-                                <li>
-                                    <div class="name"><label class="chk"><input type="checkbox"><span>[ブランド] 商品名</span></label></div>
-                                    <div class="info">
-                                        <div class="thumb">
-                                            <a href="javascript:void(0);"><img src="../../assets/images/@img_mm_thum01" alt="상품명 이미지"></a>
-                                        </div>
-                                        <!-- modify 0713 -->
-                                        <div class="price">¥ 20,000</div>
-                                        <div class="option">オプション名</div>
-                                        <div class="price-info">
-                                            <div class="amount-calc">
-                                                <button class="down">decrease</button>
-                                                <input type="number" value="1">
-                                                <button class="up">increase</button>
-                                            </div>
-                                            <span class="price">¥ 31,000</span>
-                                        </div>
-                                    </div>
-                                    <div class="cta-outer align-right">
-                                        <button class="btn btn-small pop-open" data-pop-idx="1"><span>オプション変更</span></button>
-                                        <button class="btn btn-small btn-type2"><span>ご購入手続き</span></button>
-                                    </div>
-                                        <!-- <div class="option">
-                                            <span>オプション名</span>
-                                            <button class="pop-open btn-text" data-pop-idx="1">オプション変更</button>
-                                        </div>
-                                        <div class="price-info">
-                                            <span class="price">¥ 31,000</span>
-                                            <div class="amount-calc">
-                                                <button class="down">decrease</button>
-                                                <input type="number" value="1">
-                                                <button class="up">increase</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="price-btn">
-                                        <div class="price">¥ 31,000</div>
-                                        <div class="cta-outer">
-                                            <button class="btn btn-small"><span>ご購入手続き</span></button>
-                                        </div>
-                                    </div> -->
-                                    <!-- // modify 0713 -->
-                                    <button class="btn-del"><span>삭제</span></button>
-                                </li>
-                                <li>
-                                    <div class="name"><label class="chk"><input type="checkbox"><span>[ブランド] 商品名</span></label></div>
-                                    <div class="info">
-                                        <div class="thumb">
-                                            <a href="javascript:void(0);"><img src="../../assets/images/@img_mm_thum01" alt="상품명 이미지"></a>
-                                        </div>
-                                        <div class="price">¥ 20,000</div>
-                                        <!-- <div class="option">オプション名</div> -->
-                                        <div class="price-info">
-                                            <div class="amount-calc">
-                                                <button class="down">decrease</button>
-                                                <input type="number" value="1">
-                                                <button class="up">increase</button>
-                                            </div>
-                                            <span class="price">¥ 31,000</span>
-                                        </div>
-                                    </div>
-                                    <div class="cta-outer align-right">
-                                        <!-- <button class="btn btn-small pop-open" data-pop-idx="1"><span>オプション変更</span></button> -->
-                                        <button class="btn btn-small btn-type2"><span>ご購入手続き</span></button>
-                                    </div>
-                                    <button class="btn-del"><span>삭제</span></button>
-                                </li>
-                            </ul>
-                            <div class="delivery-price">
-                                <ul>
-                                    <li>
-                                        <div class="name">商品販売価格(税込)</div>
-                                        <div class="price">¥ 36,000</div>
-                                    </li>
-                                    <li>
-                                        <div class="name">送料</div>
-                                        <div class="price">¥ 500</div>
-                                    </li>
-                                    <li class="total">
-                                        <div class="name">合計金額<span>(税込)</span></div>
-                                        <div class="price">¥ 36,000</div>
-                                    </li>
-                                </ul>
-                                <div class="msg"><strong>¥50,000</strong> 以上 お買い上げの場合</div>
-                            </div>
-                        </li>
-                        <li>
-                            <label class="chk type2"><input type="checkbox"><span>H Geunine  <em class="fc-color2">[2]</em></span></label>
-                            <ul class="item">
-                                <li>
-                                    <div class="name"><label class="chk"><input type="checkbox"><span>[H Geunine] IONIQ(NE)一般用普通充電器SET</span></label></div>
-                                    <div class="info">
-                                        <div class="thumb">
-                                            <a href="javascript:void(0);"><img src="../../assets/images/@img_mm_thum01" alt="상품명 이미지"></a>
-                                        </div>
-                                        <div class="price">¥ 20,000</div>
-                                        <div class="option">オプション名</div>
-                                        <div class="price-info">
-                                            <div class="amount-calc">
-                                                <button class="down">decrease</button>
-                                                <input type="number" value="1">
-                                                <button class="up">increase</button>
-                                            </div>
-                                            <span class="price">¥ 31,000</span>
-                                        </div>
-                                    </div>
-                                    <div class="cta-outer align-right">
-                                        <button class="btn btn-small pop-open" data-pop-idx="1"><span>オプション変更</span></button>
-                                        <button class="btn btn-small btn-type2"><span>ご購入手続き</span></button>
-                                    </div>
-                                    <button class="btn-del"><span>삭제</span></button>
-                                </li>
-                                <li class="soldout">
-                                    <div class="name"><label class="chk"><input type="checkbox" disabled="disabled"><span>[H Geunine] IONIQ(NE)一般用普通充電器SET</span></label></div>
-                                    <div class="info">
-                                        <div class="thumb">
-                                            <a href="javascript:void(0);">
-                                                <img src="../../assets/images/@img_mm_thum01" alt="상품명 이미지">
-                                                <span class="soldout">Sold out</span>
-                                            </a>
-                                        </div>
-                                        <div class="price">¥ 20,000</div>
-                                        <div class="option">オプション名オプション名オプション名オプション名オプション名オプション名オプション名オプション名オプション名オプション名</div>
-                                        <div class="price-info">
-                                            <div class="amount-calc disabled">
-                                                <button class="down">decrease</button>
-                                                <input type="number" value="1">
-                                                <button class="up">increase</button>
-                                            </div>
-                                            <span class="price">¥ 31,000</span>
-                                        </div>
-                                    </div>
-                                    <div class="cta-outer align-right">
-                                        <button class="btn btn-small pop-open" data-pop-idx="1"><span>オプション変更</span></button>
-                                        <button class="btn btn-small btn-type2" disabled="disabled"><span>ご購入手続き</span></button>
-                                    </div>
-                                    <button class="btn-del"><span>삭제</span></button>
-                                </li>
-                            </ul>
-                            <div class="delivery-price">
-                                <ul>
-                                    <li>
-                                        <div class="name">商品販売価格(税込)</div>
-                                        <div class="price">¥ 36,000</div>
-                                    </li>
-                                    <li>
-                                        <div class="name">送料</div>
-                                        <div class="price">¥ 500</div>
-                                    </li>
-                                    <li class="total">
-                                        <div class="name">合計金額<span>(税込)</span></div>
-                                        <div class="price">¥ 36,000</div>
-                                    </li>
-                                </ul>
-                                <!-- <div class="msg"><strong>¥50,000</strong> 以上 お買い上げの場合</div> -->
-                            </div>
-                        </li>
-                    </ul>
-                    <!-- // goods -->
-                    
-				</div>
 
-                <div class="cont-right">
-                    <div class="scr-fix-box">
-						<div class="inside-type price-area">
-							<ul class="total-price">
-								<li class="amount">
-									<span class="name">全商品</span>
-									<span class="price">全 4個</span>
-								</li>
-								<li>
-									<span class="name">商品販売価格(税込)</span>
-									<span class="price">¥ 36,000</span>
-								</li>
-								<li class="text-small">
-									<span class="name">送料</span>
-									<span class="price">¥ 500</span>
-								</li>
-								<li class="total">
-									<span class="name"><strong>合計金額</strong>(税込)</span>
-									<span class="price fc-color2">¥ 35,150</span>
-								</li>
-							</ul>
-							<div class="cta-outer full-type">
-								<a href="#" class="btn"><span>SHOPメイン</span></a>
-								<button class="btn btn-type2"><span>ご注文手</span></button>
-							</div>
-						</div>
-						<ul class="caution mt20">
-							<li>カート商品は<em class="fc-color">90日間</em>保管され、販売終了となると自動的に削除されます。</li>
-							<li class="fc-color">実際の決済金額は注文書内のクーポン割引適用などによって異なる場合があります。</li>
-						</ul>
+                    <div class="prod-list">
+                        <div class="store">
+                            <label class="chk type2"><input type="checkbox"><span class="name">ストア名 A  <em class="fc-color3">[2]</em></span></label>
+                            <button class="btn btn-type3 btn-extra-small"><span>削除</span></button>
+                        </div>
+
+                        <ul class="item">
+                            <li>
+                                <div class="goods">
+									<div class="thumb">
+                                        <label class="chk"><input type="checkbox"><span><img src="../../assets/images/@img_mm_thum01.jpg" alt="상품명 이미지"></span></label>
+                                    </div>
+									<div class="name"><a href='javascript:void(0);'>[H Geunine] IONIQ5(NE) 一般用普通充電器SET</a></div>
+									<div class="option">オプション名</div>
+                                    <div class="price-info">
+                                        <div class="amount-calc">
+                                            <button class="down">decrease</button>
+                                            <input type="number" value="1">
+                                            <button class="up">increase</button>
+                                        </div>
+                                        <div class="price">¥ 20,000</div>
+                                    </div>
+								</div>
+								<div class="cta-outer col-type">
+									<button class="btn btn-type3 btn-small"><span>オプション変更</span></button>
+									<button class="btn btn-small"><span>ご購入手続き</span></button>
+								</div>
+                                <button class="btn-del"><span>삭제</span></button>
+                            </li>
+
+                            <li>
+                                <div class="goods">
+									<div class="thumb">
+                                        <label class="chk"><input type="checkbox"><span><img src="../../assets/images/@img_mm_thum01.jpg" alt="상품명 이미지"></span></label>
+                                    </div>
+									<div class="name"><a href='javascript:void(0);'>[H Geunine] IONIQ5(NE) 一般用普通充電器SET</a></div>
+									<div class="option">オプション名</div>
+                                    <div class="price-info">
+                                        <div class="amount-calc">
+                                            <button class="down">decrease</button>
+                                            <input type="number" value="1">
+                                            <button class="up">increase</button>
+                                        </div>
+                                        <div class="price">¥ 20,000</div>
+                                    </div>
+								</div>
+								<div class="cta-outer col-type">
+									<button class="btn btn-type3 btn-small"><span>オプション変更</span></button>
+									<button class="btn btn-small"><span>ご購入手続き</span></button>
+								</div>                                
+                                <button class="btn-del"><span>삭제</span></button>
+                            </li>
+                            <!-- //list-->
+                        </ul>
+                        <div class="delivery-price">
+                            <p>商品販売価格(税込) ¥ 50,000  +  送料 ¥ 500 = <span class="fc-color3">¥ 50,500</span></p>
+                            <p class="s-txt htr">「追加送料 ： 北海道 ￥７５０」</p>
+                        </div>
                     </div>
-                </div>
+                    <!-- //prod-list -->
+
+                    <div class="prod-list">
+                        <div class="store">
+                            <label class="chk type2"><input type="checkbox"><span class="name">ストア名 A  <em class="fc-color3">[2]</em></span></label>
+                            <button class="btn btn-type3 btn-extra-small all-del"><span>削除</span></button>
+                        </div>
+
+                        <ul class="item">
+                            <li class="soldout">
+                                <div class="goods">
+									<div class="thumb">
+                                        <label class="chk"><input type="checkbox" disabled="disabled"><span><img src="../../assets/images/@img_mm_thum01.jpg" alt="상품명 이미지"></span></label>
+                                    </div>
+									<div class="name"><a href='javascript:void(0);'>[H Geunine] IONIQ5(NE) 一般用普通充電器SET</a></div>
+									<div class="option">オプション名</div>
+                                    <div class="price-info">
+                                        <div class="amount-calc disabled">
+                                            <button class="down">decrease</button>
+                                            <input type="number" value="1">
+                                            <button class="up">increase</button>
+                                        </div>
+                                        <div class="price">¥ 20,000</div>
+                                    </div>
+								</div>
+								<div class="cta-outer col-type">
+									<button class="btn btn-type3 btn-small disabled"><span>オプション変更</span></button>
+									<button class="btn btn-small disabled"><span>ご購入手続き</span></button>
+								</div>
+                                <button class="btn-del"><span>삭제</span></button>
+                            </li>
+                            <!-- //soldout -->
+                        </ul>
+                    </div>
+                    <!-- //prod-list -->
+				</div>
+                <!-- //cont-center -->
+
+                <div class="cont-right scroll-fix">
+                    <div class="info-list">
+                        <div class="item">
+                            <div class="title">お支払額 <em>2件</em></div>                        
+                            <ul class="list-type1 flex-both">
+                                <li class="midterm">
+                                    <div class="tit">商品販売価格 <em>(税込)</em></div>
+                                    <div class="price">¥ 40,000</div>
+                                </li>
+                                <li class="midterm">
+                                    <div class="name">送料</div>
+                                    <div class="price">¥ 500</div>
+                                </li>
+                            </ul>
+                            <ul class="list-type1 flex-both">
+                                <li class="total">
+                                    <div class="name">合計金額 <em>(税込)</em></div>
+                                    <div class="price">¥ 40,500</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 모바일 고정영역 -->
+                    <div class="mo-bottom-fixed">
+                        <div class="total-price mo-only">
+                            <div class="tit">1 件</div>
+                            <div class="price">¥ 0</div>
+                        </div>
+                        <div class="cta-outer col-type full-type">
+                            <button class="btn"><span>SHOPメイン</span></button>
+                            <button class="btn btn-type2"><span>ご注文</span></button>
+                        </div>
+                    </div>
+                    <!-- // 모바일 고정영역 -->
+
+                    <div class="caution type2">
+                        <p class="tit">ご確認事項</p>
+                        <ul>
+                            <li>カートの商品は90日間保存でき、販売終了の場合は、自動で削除されます。</li>
+                            <li>実際のお支払い額は、注文書確認の際、クーポン/割引適用などにより変更される場合があります。</li>
+                        </ul>
+                    </div>
+				</div>
+                <!-- //cont-right -->
             </div>
 		</div>
 	</div>

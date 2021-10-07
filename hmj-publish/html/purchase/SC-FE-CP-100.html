@@ -8,7 +8,7 @@
 
 	<link rel="stylesheet" href="../../assets/css/common.css">
 	<link rel="stylesheet" href="../../assets/css/purchase.css">
-	<link rel="stylesheet" href="../../assets/css/sunny.css">
+	
 	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
 	
 	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
@@ -28,7 +28,7 @@
 		<div class="bto-cont">
 			<div class="cont-center">
 				<p class="bto-title">詳細見積</p>
-				<button class="btn-bto-close pop-open" data-pop-idx="btnClose">닫기</button>
+				<button class="btn-bto-close" data-pop-idx="btnClose">닫기</button>
 			</div>
 		</div>
 	</div>
@@ -44,7 +44,7 @@
                         <span>Prestige 4WD ストーングレー</span>
                     </p>
                     <p class="img"><img src="../../assets/images/@img_ioniq.jpg" alt="car img"></p>
-                    <p class="s-text">画像はイメージです。実際とは異なる場合があります。</p>
+                    <p class="s-text">車両のイメージは、実際と異なる場合があります。</p>
                 </div>
             </div>
 			<div class="cont-outer">
@@ -154,13 +154,16 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="slt-box hgt-type2">
-                                            <p class="selected-value">選択</p>
-                                            <ul class="select-items">
-                                                <li>在庫車両、2018年8月生産<em>- ￥3,000</em></li>
-                                                <li>在庫車両、2018年8月生産<em>- ￥3,000</em></li>
-                                                <li>在庫車両、2018年8月生産<em>- ￥3,000</em></li>
-                                            </ul>
+                                        <div class="select-area">
+                                            <div class="slt-box hgt-type2"><!-- error  class="val-error" 추가 -->
+                                                <p class="selected-value ">選択</p>
+                                                <ul class="select-items">
+                                                    <li>在庫車両、2018年8月生産<em>- ￥3,000</em></li>
+                                                    <li>在庫車両、2018年8月生産<em>- ￥3,000</em></li>
+                                                    <li>在庫車両、2018年8月生産<em>- ￥3,000</em></li>
+                                                </ul>
+                                            </div>
+                                            <p class="error-msg">error text</p>
                                         </div>
                                         <div class="price">- ￥1,000</div>
                                     </li>
@@ -270,21 +273,22 @@
                         <div class="item active">
                             <p class="tit-btn">
                                 契約情報
-                                <span class="price"></span>
+                                <span class="price">￥35,000</span>
                             </p>
                             <div class="cont">
                                 <ul class="inp-list type1">
                                     <li>
-                                        <div class="inp-outer-box tel-type post-type">
+                                        <div class="inp-outer-box inp-type post-type">
                                             <label for="inpNum01_01">居住地 <span class="required">*</span></label>
                                             <div class="inp-group-box">
-                                                <div class="inp-btn-box">
+                                                <div class="inp-btn-box"><!-- error class="val-error"-->
                                                     <div class="inp-area">
                                                         <input type="text" class="inp-item" placeholder="〒" readonly="">
                                                         <button class="inp-close"></button>
                                                     </div>
                                                     <button class="btn btn-type3 btn-tbl"><span>郵便番号検索</span></button>
                                                 </div>
+                                                <p class="error-msg">郵便番号を入力してください。</p>
                                                 <div class="inp-area">
                                                     <input type="text" class="inp-item" placeholder="都道府県" readonly="">
                                                     <button class="inp-close"></button>
@@ -303,20 +307,21 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <P class="caution">車庫証明書取得に必要な申込書類をご住所へお送りしますので、マンションやアパートの場合は、ビル名と部屋番号までを必ず入力してください。</P>
+                                        <P class="noti-msg lbl-type">車庫証明書取得に必要な申込書類をご住所へお送りしますので、マンションやアパートの場合は、ビル名と部屋番号までを必ず入力してください。</P>
                                     </li>
                                     <li>
-                                        <div class="inp-outer-box tel-type post-type">
-                                            <label for="inpNum01_01">車庫地</label>
+                                        <div class="inp-outer-box inp-type post-type">
+                                            <label for="inpNum01_01" class="top">車庫地</label>
                                             <div class="inp-group-box">
                                                 <label class="chk"><input type="checkbox"><span>居住地と同じ</span></label>
-                                                <div class="inp-btn-box">
+                                                <div class="inp-btn-box"><!-- error class="val-error"-->
                                                     <div class="inp-area">
                                                         <input type="text" class="inp-item" placeholder="〒" readonly="">
                                                         <button class="inp-close"></button>
                                                     </div>
                                                     <button class="btn btn-type3 btn-tbl"><span>郵便番号検索</span></button>
                                                 </div>
+                                                <p class="error-msg">郵便番号を入力してください。</p>
                                                 <div class="inp-area">
                                                     <input type="text" class="inp-item" placeholder="都道府県" readonly="">
                                                     <button class="inp-close"></button>
@@ -335,18 +340,19 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <P class="caution">指定の車庫地がある場合に限って登録して下さい。</P>
+                                        <P class="noti-msg lbl-type">指定の車庫地がある場合に限って登録して下さい。</P>
                                     </li>
                                     <!-- 딜리버리 방식 -->
                                     <li class="js-radio-tab">
-                                        <div class="inp-outer-box">
-                                            <label for="radio01">デリバリーサービス </label>
+                                        <div class="inp-outer-box"><!-- error class="val-error" -->
+                                            <label for="radio01" class="top">デリバリーサービス <span class="required">*</span></label>
                                             <ul class="radio-group">
                                                 <li><label class="radio"><input type="radio" name="radio01" id="radioChk01"><span>営業拠点<em class="fc-color3"> ￥0 (無料)</em></span></label></li>
-                                                <li><label class="radio"><input type="radio" name="radio01" id="radioChk02"><span>ご希望の場所 <em class="fc-color3">￥10,000 (無料)</em></span></label></li>
+                                                <li><label class="radio"><input type="radio" name="radio01" id="radioChk02"><span>ご希望の場所 <em class="fc-color3">￥10,000</em></span></label></li>
                                             </ul>
                                         </div>
-                                        
+                                        <p class="error-msg lbl-type">デリバリーサービスを選択してください。</p>
+
                                         <div class="js-radio-cont">
                                             <!-- 매장으로 배송 -->
                                             <div class="item">
@@ -376,7 +382,7 @@
                                              <!-- // 매장으로 배송 -->
                                              <div class="item">
                                                 <!-- 원하는 곳으로 배송 -->
-                                                <div class="inp-outer-box tel-type post-type">
+                                                <div class="inp-outer-box inp-type post-type">
                                                     <div class="inp-group-box">
                                                         <div class="inp-btn-box">
                                                             <div class="inp-area">
@@ -410,25 +416,26 @@
                                     <!-- //딜리버리 방식 -->
                                     <!-- 잔금 지불 방식 -->
                                     <li>
-                                        <div class="inp-outer-box">
-                                            <label for="inpNum01_01">お支払方法 <span class="required">*</span></label>
-                                            <ul class="radio-group">
-                                                <li><label class="radio"><input type="radio" checked="checked" name="radio2" id="radio2_1"><span>現金/クレジットカード</span></label></li>
-                                                <li><label class="radio"><input type="radio" name="radio2" id="radio2_2"><span>分割払い</span></label></li>
-                                            </ul>
+                                        <div class="inp-outer-box"><!-- error class="val-error" -->
+                                            <label for="inpNum01_01" class="top">お支払方法 <span class="required">*</span></label>
+                                            <div class="radio-group">
+                                                <label class="radio"><input type="radio" checked="checked" name="radio2" id="radio2_1"><span>現金/クレジットカード</span></label>
+                                                <label class="radio"><input type="radio" name="radio2" id="radio2_2"><span>分割払い</span></label>
+                                            </div>
                                         </div>
+                                        <p class="error-msg lbl-type">残代金支払方法を選択してください。</p>
                                     </li>
                                     <!-- //잔금 지불 방식 -->
                                     <!-- 희망번호 신청 -->
                                     <li>
                                         <div class="inp-outer-box">
-                                            <label for="inpNum01_01">希望番号申込サービス</label>
+                                            <label for="inpNum01_01" class="top">希望番号申込サービス</label>
                                             <div class="radio-group">
                                                 <label class="radio"><input type="radio" name="radio3" id="radio3_1"><span>申込を行う</span></label>
                                                 <label class="radio"><input type="radio" checked="checked" name="radio3" id="radio3_2"><span>申込を行わない</span></label>
                                             </div>
                                         </div>
-                                        <p class="caution">希望番号申込の際、ナンバープレート費用は行政書士が別途請求します。</p>
+                                        <p class="noti-msg lbl-type">希望番号申込の際、ナンバープレート費用は行政書士が別途請求します。</p>
                                     </li>
                                     <!-- //희망번호 신청 -->
                                 </ul>
@@ -457,7 +464,7 @@
                                             </div>
                                         </div>
                                         <p class="error-msg lbl-type">内容をご記入ください。</p>
-                                        <p class="caution">車両契約者の情報を正確に入力してください。</p>
+                                        <p class="noti-msg lbl-type">車両契約者の情報を正確に入力してください。</p>
                                     </li>
                                     <li>
                                         <div class="inp-outer-box">
@@ -474,7 +481,7 @@
                                             </div>
                                         </div>
                                         <p class="error-msg lbl-type">内容をご記入ください。</p>
-                                        <p class="caution">車両契約者の情報を正確に入力してください。</p>
+                                        <p class="noti-msg lbl-type">車両契約者の情報を正確に入力してください。</p>
                                     </li>
                                     <li>
                                         <div class="inp-outer-box tel-type">
@@ -496,19 +503,16 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="inp-outer-box tel-type">
+                                        <div class="inp-outer-box inp-type">
                                             <label for="inpNum01_011">E-mail</label>
-                                            <div class="inp-btn-box">
-                                                <div class="inp-area">
-                                                    <input type="text" id="inpNum01_011" class="inp-item" placeholder="my@hyundai.com" disabled>
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                                <button class="btn btn-type3 btn-tbl"><span>確認</span></button>
+                                            <div class="inp-area">
+                                                <input type="text" id="inpNum01_011" class="inp-item" placeholder="my@hyundai.com" disabled>
+                                                <button class="inp-close"></button>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="inp-outer-box tel-type">
+                                        <div class="inp-outer-box inp-type">
                                             <label for="inpNum01_011">リファラルコード</label>
                                             <div class="inp-btn-box">
                                                 <div class="inp-area">
@@ -522,7 +526,7 @@
                                             顧客のコードが入力されました。リファラルコードを入力してください。
                                             入力したリファラルコードは有効ではありません。もう一度確認してください
                                         </p>
-                                        <p class="caution">リファラルコードは、頭金の支払い後には変更できません。</p>
+                                        <p class="noti-msg lbl-type">リファラルコードは、頭金の支払い後には変更できません。</p>
                                     </li>
                                 </ul>
                             </div>
@@ -541,14 +545,14 @@
                                 <li>
                                     <label class="chk"><input type="checkbox"><span>
                                         <em>[必須]</em> 充電所利用規約について同意</span>
-                                        <a href="#" class="link-more">詳細</a>
+                                        <a href="#" class="btn-text2">詳細</a>
                                     </label>
                                     <p class="error-msg">error text</p>
                                 </li>
                                 <li>
                                     <label class="chk"><input type="checkbox"><span>
                                         <em>[必須]</em> プライバシーポリシーに同意    </span>
-                                        <a href="#" class="link-more">詳細</a>
+                                        <a href="#" class="btn-text2">詳細</a>
                                     </label>
                                     <p class="error-msg">error text</p>
                                 </li>
@@ -592,7 +596,7 @@
                             </div>
                         </div>
                         <div class="total">
-                            <span>本日決済する手付金</span>
+                            <span>本日必要な支払額(申込金)</span>
                             <strong class="fc-color4">￥ 50,000</strong>
                         </div>
                         <div class="cta-outer col-type full-type">
@@ -616,7 +620,7 @@
                     <!-- 견적 결과 이메일 전송 -->
                     <div class="email-area">
                         <p class="cont-text">見積結果をメールに送信</p>
-                        <div class="inp-outer-box tel-type">
+                        <div class="inp-outer-box inp-type"><!-- val-error -->
                             <div class="inp-btn-box">
                                 <div class="inp-area">
                                     <input type="text" id="inpNum01_0111" class="inp-item" placeholder="admin@email.com">

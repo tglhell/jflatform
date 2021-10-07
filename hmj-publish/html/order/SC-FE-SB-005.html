@@ -4,10 +4,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>HMJ 온라인 판매 사이트 구축</title>
+    <title>お届け先一覧 : HMJ</title>
 
     <link rel="stylesheet" href="../../assets/css/common.css">
-    <link rel="stylesheet" href="../../assets/css/order.css">
+    <link rel="stylesheet" href="../../assets/css/contents.css">
 	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
 	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
@@ -99,44 +99,61 @@
 </div>
 
 <!-- popShippingList -->
-<div class="layer-popup-wrap mo-full" data-pop-idx="popShippingList">
+<div class="layer-popup-wrap fix-center mo-full" data-pop-idx="popShippingList">
     <div class="layer-popup-body">
-        <div class="layer-popup-cont pop-small">
+        <div class="layer-popup-cont">
             <h1 class="layer-title">お届け先の変更</h1>
             <div class="layer-cont">
-                <ul class="shipping-list">
-                    <li class="default"><!-- 기본 배송지일경우 class="default" 추가-->
-                        <label class="radio"><input type="radio" name="radio" id="shipping" checked><span class="tit">自宅</span></label>
-                        <span class="text-flag">基本お届け先</span>
-                        <div class="detail">
-                            <p class="name">木村 拓哉 (きむらたくや) </p>
-                            <p class="phone">080-123-4567</p>
-                            <p class="address">〒220-0012  Minatomirai Center Bldg. 16F, 3-6-1, Minatomirai, Nishi-ku, Yokohama City, Kanagawa</p>
-                        </div>
-                        <div class="cta-outer">
-                            <button class="btn btn-tbl"><span>修正</span></button>
-                        </div>
-                    </li>
-                    <li>
-                        <label class="radio"><input type="radio" name="radio" id="shipping2"><span class="tit">会社</span></label>
-                        <span class="text-flag">基本お届け先</span>
-                        <div class="detail">
-                            <p class="name">木村 拓哉 (きむらたくや) </p>
-                            <p class="phone">080-123-4567</p>
-                            <p class="address">〒220-0012  Minatomirai Center Bldg. 16F, 3-6-1, Minatomirai, Nishi-ku, Yokohama City, Kanagawa</p>
-                        </div>
-                        <div class="cta-outer">
-                            <button class="btn btn-tbl"><span>修正</span></button>
-                            <button class="btn btn-tbl"><span>削除</span></button>
-                        </div>
-                    </li>
-                </ul>
-                <button type="button" class="btn btn-tbl type2"><span>+ 新しいお届け先を追加</span></button>
-                <div class="cta-outer">
-                    <button class="btn btn-middle btn-close"><span>キャンセル</span></button>
-                    <button class="btn btn-type2 btn-middle"><span>変更</span></button>
-                </div>
+				<div class="shipping">
+					<div class="cta-outer fix-type new-address">
+						<button type="button" class="btn btn-tbl2 btn-type"><span>新しいお届け先を追加</span></button>
+					</div>
+					
+					<ul class="list">
+						<li class="default"><!-- 기본 배송지일경우 class="default" 추가-->
+							<label class="radio"><input type="radio" name="radio" id="shipping" checked><span class="tit"><span class="text-flag">基本お届け先</span>自宅</span></label>
+							<div class="detail">
+								<p class="name">木村 拓哉 (きむらたくや) </p>
+								<p class="phone">080-123-4567</p>
+								<p class="address">〒220-0012  Minatomirai Center Bldg. 16F, 3-6-1, Minatomirai, Nishi-ku, Yokohama City, Kanagawa</p>
+							</div>
+							<div class="cta-outer">
+								<button class="btn btn-extra-small btn-type3"><span>修正</span></button>
+							</div>
+						</li>
+						<li>
+							<label class="radio"><input type="radio" name="radio" id="shipping2"><span class="tit">会社</span></label>
+							<div class="detail">
+								<p class="name">木村 拓哉 (きむらたくや) </p>
+								<p class="phone">080-123-4567</p>
+								<p class="address">〒220-0012  Minatomirai Center Bldg. 16F, 3-6-1, Minatomirai, Nishi-ku, Yokohama City, Kanagawa</p>
+							</div>
+							<div class="cta-outer">
+								<button class="btn btn-extra-small btn-type3"><span>修正</span></button>
+								<button class="btn btn-extra-small btn-type3"><span>削除</span></button>
+							</div>
+						</li>
+						<li>
+							<label class="radio"><input type="radio" name="radio" id="shipping2"><span class="tit"><span class="text-flag">基本お届け先</span>その他</span></label>
+							<div class="detail">
+								<p class="name">木村 拓哉 (きむらたくや) </p>
+								<p class="phone">080-123-4567</p>
+								<p class="address">〒220-0012  Minatomirai Center Bldg. 16F, 3-6-1, Minatomirai, Nishi-ku, Yokohama City, Kanagawa</p>
+							</div>
+							<div class="cta-outer">
+								<button class="btn btn-extra-small btn-type3"><span>修正</span></button>
+								<button class="btn btn-extra-small btn-type3"><span>削除</span></button>
+							</div>
+						</li>
+					</ul>
+				</div>
             </div>
+			<div class="bottom-fixed">
+				<div class="cta-outer full-type">
+					<button class="btn btn-close"><span>適用</span></button>
+					<button class="btn btn-type2"><span>適用</span></button>
+				</div>
+			</div>
             <button class="btn-close-popup btn-close">close</button>
         </div>
     </div>

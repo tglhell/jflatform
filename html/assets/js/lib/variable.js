@@ -3,6 +3,7 @@ chkBool = false;
 chkSwitch = false;
 
 // responsive
+pc = 1920;
 tbl = 1119;
 mo = 767;
 

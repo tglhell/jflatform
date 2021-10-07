@@ -79,6 +79,8 @@
 		<button class="inp-close"></button>
 	</div>
 </div>
+<p class="noti-msg lbl-type"><span><em>0</em>/50</span></p>
+<p class="noti-msg lbl-type">info text</p>
 <p class="error-msg lbl-type">error text</p>
 
 <div class="inp-outer-box">
@@ -200,16 +202,15 @@
 				클래스 "<strong>inp-outer-box</strong>"안에 label과 input부분을 넣어서 사용함.<br>validation check error 메세지는 .inp-outer-box에 클래스 "<strong>val-error</strong>"를 추가.<br>input box 좌측에 label이 있는 경우는 .error-msg에 클래스 "<strong>lbl-type</strong>"를 추가함.<br>모바일 이름 width: 100% 타입은 .inp-group-box에 클래스 "<strong>mo-full</strong>"를 추가함.
 			</div>
 
-			<div class="inp-outer-box val-error">
+			<div class="inp-outer-box">
 				<label for="inpTxt01">お名前 <span class="required">*</span></label>
 				<div class="inp-area">
 					<input type="text" id="inpTxt01" class="inp-item" placeholder="이름을 입력해 주세요.">
 					<button class="inp-close"></button>
 				</div>
 			</div>
+			<p class="noti-msg lbl-type">info text</p>
 			<p class="error-msg lbl-type">error text</p>
-
-			<br>
 
 			<div class="inp-outer-box">
 				<label for="inpName01_01">お名前(フリガナ) <span class="required">*</span></label>
@@ -224,9 +225,8 @@
 					</div>
 				</div>
 			</div>
+			<p class="noti-msg lbl-type"><span><em>0</em>/50</span></p>
 			<p class="error-msg lbl-type">error text</p>
-
-			<br>
 
 			<div class="inp-outer-box val-error">
 				<label for="inpName01_01">이름</label>
@@ -242,9 +242,6 @@
 				</div>
 			</div>
 			<p class="error-msg lbl-type">error text</p>
-
-			<br>
-
 			<div class="inp-outer-box">
 				<label for="inpNum01_01">電話番号 <span class="required">*</span></label>
 				<div class="inp-slice-box">
@@ -285,24 +282,36 @@
 			</div>
 			<p class="error-msg lbl-type">error text</p>
 
-			<div class="inp-outer-box tel-type val-error">
-				<label for="inpNum01_01">携帯電話 <span class="required">*</span></label>
+			<div class="inp-outer-box">
+				<label for="inpBirth01_01">生年月日 <span class="required">*</span></label>
 				<div class="inp-slice-box">
-					<div class="inp-area">
-						<input type="text" id="inpNum01_04_1" class="inp-item" placeholder="010">
+					<div class="slt-box">
+						<p class="selected-value">1980</p>
+						<ul class="select-items">
+							<li>option1</li>
+							<li>option2</li>
+							<li>option3</li>
+						</ul>
 					</div>
-					<span class="inp-hpn">-</span>
-					<div class="inp-area">
-						<input type="text" id="inpNum01_05_1" class="inp-item" placeholder="9876">
+					<div class="slt-box">
+						<p class="selected-value">Month</p>
+						<ul class="select-items">
+							<li>option1</li>
+							<li>option2</li>
+							<li>option3</li>
+						</ul>
 					</div>
-					<span class="inp-hpn">-</span>
-					<div class="inp-area">
-						<input type="text" id="inpNum01_06_1" class="inp-item" placeholder="5432">
+					<div class="slt-box">
+						<p class="selected-value">Day</p>
+						<ul class="select-items">
+							<li>option1</li>
+							<li>option2</li>
+							<li>option3</li>
+						</ul>
 					</div>
-					<button class="btn btn-type3 btn-tbl"><span>変更</span></button>
 				</div>
 			</div>
-			<p class="error-msg lbl-type">error text</p>
+			<p class="error-msg lbl-type">生年月日を選択してください。</p>
 
 			<div class="inp-outer-box inp-type">
 				<label for="inpNum01_011">リファラルコード</label>
@@ -317,7 +326,7 @@
 			<p class="error-msg lbl-type">error text</p>
 
 			<div class="inp-outer-box inp-type">
-				<label for="inpNum01_011">リファラルコード</label>
+				<label for="inpNum01_0111">リファラルコード</label>
 				<div class="inp-btn-box">
 					<div class="inp-area">
 						<input type="text" id="inpNum01_0111" class="inp-item" placeholder="きむら">
@@ -329,11 +338,24 @@
 			</div>
 			<p class="error-msg lbl-type">error text</p>
 
-			<div class="inp-outer-box inp-type val-error">
-				<label for="inpNum01_011">リファラルコード</label>
+			<div class="inp-outer-box inp-type">
+				<label for="inpNum01_01111">リファラルコード</label>
 				<div class="inp-btn-box">
 					<div class="inp-area">
 						<input type="text" id="inpNum01_01111" class="inp-item" placeholder="きむら">
+						<button class="inp-close"></button>
+					</div>
+					<span class="time-num">03:00</span>
+					<button class="btn btn-type2 btn-tbl"><span>認証</span></button>
+				</div>
+			</div>
+			<p class="error-msg lbl-type">error text</p>
+
+			<div class="inp-outer-box inp-type val-error">
+				<label for="inpNum01_01111_1">リファラルコード</label>
+				<div class="inp-btn-box">
+					<div class="inp-area">
+						<input type="text" id="inpNum01_01111_1" class="inp-item" placeholder="きむら">
 						<button class="inp-close"></button>
 					</div>
 					<button class="btn btn-type3 btn-tbl"><span>確認</span></button>
@@ -367,20 +389,15 @@
 </div>
 <p class="error-msg">error text</p>
 
-<div class="inp-outer-box post-type">
+<div class="inp-outer-box inp-type post-type">
 	<label for="inpNum01_01">住所 <span class="required">*</span></label>
 	<div class="inp-group-box">
-		<div class="inp-slice-box">
+		<div class="inp-btn-box">
 			<div class="inp-area">
-				<input type="text" id="inpNum02_01" class="inp-item" placeholder="〒">
+				<input type="text" class="inp-item" placeholder="〒" readonly>
 				<button class="inp-close"></button>
 			</div>
-			<span class="inp-hpn">-</span>
-			<div class="inp-area">
-				<input type="text" id="inpNum02_02" class="inp-item" placeholder="">
-				<button class="inp-close"></button>
-			</div>
-			<button class="btn btn-middle btn-type2"><span>郵便番号検索</span></button>
+			<button class="btn btn-tbl btn-type3"><span>郵便番号検索</span></button>
 		</div>
 		<div class="inp-area">
 			<input type="text" class="inp-item" placeholder="都道府県" readonly>
@@ -407,7 +424,7 @@
 				클래스 "<strong>inp-outer-box</strong>"안에 label과 input부분을 넣어서 사용함.<br>주소 부분은 .inp-outer-box에 클래스 "<strong>post-type</strong>"를 추가하여 스타일 분리.
 			</div>
 
-			<div class="inp-outer-box">
+			<!-- <div class="inp-outer-box">
 				<div class="inp-btn-box">
 					<div class="inp-area">
 						<input type="search" class="inp-item" placeholder="입력해 주세요.">
@@ -417,9 +434,6 @@
 				</div>
 			</div>
 			<p class="error-msg">error text</p>
-
-			<br>
-
 			<div class="inp-outer-box">
 				<div class="inp-btn-box">
 					<div class="inp-area">
@@ -433,9 +447,6 @@
 				</div>
 			</div>
 			<p class="error-msg">error text</p>
-
-			<br>
-
 			<div class="inp-outer-box val-error">
 				<div class="inp-btn-box">
 					<div class="inp-area">
@@ -445,11 +456,8 @@
 					<button class="btn btn-middle btn-type2"><span>郵便番号検索</span></button>
 				</div>
 			</div>
-			<p class="error-msg">error text</p>
-
-			<br>
-
-			<div class="inp-outer-box post-type">
+			<p class="error-msg">error text</p> -->
+			<div class="inp-outer-box inp-type post-type">
 				<label for="inpNum01_01">住所 <span class="required">*</span></label>
 				<div class="inp-group-box">
 					<div class="inp-btn-box">
@@ -457,7 +465,7 @@
 							<input type="text" class="inp-item" placeholder="〒" readonly>
 							<button class="inp-close"></button>
 						</div>
-						<button class="btn btn-middle btn-type2"><span>郵便番号検索</span></button>
+						<button class="btn btn-tbl btn-type3"><span>郵便番号検索</span></button>
 					</div>
 					<div class="inp-area">
 						<input type="text" class="inp-item" placeholder="都道府県" readonly>
@@ -511,9 +519,6 @@
 				</div>
 			</div>
 			<p class="error-msg">error text</p>
-
-			<br>
-
 			<div class="inp-outer-box">
 				<div class="inp-area">
 					<input type="text" class="inp-item" placeholder="Disabled" disabled>
@@ -565,9 +570,9 @@
 			<div class="conIn_tip">
 				.slt-box
 			</div>
-			<br><br>
+
 			<h4 class="btm-border">- Custom Select H40</h4>
-			
+
 			<div class="slt-box">
 				<p class="selected-value">テキスト</p>
 				<ul class="select-items">
@@ -576,6 +581,7 @@
 					<li>option3</li>
 				</ul>
 			</div>
+
 			<div class="slt-box disabled">
 				<p class="selected-value">テキスト</p>
 				<ul class="select-items">
@@ -583,6 +589,28 @@
 					<li>option2</li>
 					<li>option3</li>
 				</ul>
+			</div>
+
+			<div class="slt-box val-error">
+				<p class="selected-value">テキスト</p>
+				<ul class="select-items">
+					<li>option1</li>
+					<li>option2</li>
+					<li>option3</li>
+				</ul>
+			</div>
+			<p class="error-msg">error</p>
+
+			<div class="val-error">
+				<div class="slt-box ">
+					<p class="selected-value">テキスト</p>
+					<ul class="select-items">
+						<li>option1</li>
+						<li>option2</li>
+						<li>option3</li>
+					</ul>
+				</div>
+				<p class="error-msg">error</p>
 			</div>
 
 			<h4 class="btm-border">- Custom Select H48</h4>
@@ -628,7 +656,7 @@
 			<div class="conIn_tip">
 				.drop-down-outer
 			</div>
-			<br><br>
+
 			<h4 class="btm-border">- 일반 타입</h4>
 			
 			<div class="drop-down-outer">
@@ -769,7 +797,7 @@
 			</div>
 
 			<ul class="check-terms">
-				<li class="all"><label class="chk"><input type="checkbox"><span>전체동의</span></label></li>
+				<li class="all"><label class="chk"><input type="checkbox"><span>すべて同意する。</span></label></li>
 				<li class="normal"><label class="chk"><input type="checkbox"><span>동의1</span></label></li>
 				<li class="normal"><label class="chk"><input type="checkbox"><span>동의2</span></label></li>
 			</ul>
@@ -1032,16 +1060,66 @@
 			</div>
 
 
-			<h4 class="btm-border">- 파일찾기 (작업중)</h4>
+			<h4 class="btm-border">- 파일찾기 </h4>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="inp-outer-box add-file">
+	<label>add-file</label>
+	<div class="inp-group-box">
+		<div class="filebox">
+			<div class="inp-area">
+				<input class="upload-name" value="" disabled="disabled">
+				<button class="inp-close"></button>
+			</div>				
+			<label for="ex_filename">添付</label>
+			<input type="file" id="ex_filename" class="upload-hidden">
+		</div>
+		<ul class="file-list">
+			<li>
+				<span class="item">file name1</span>
+				<button class="btn-del"><span>삭제</span></button>
+			</li>
+			<li>
+				<span class="item">file name2</span>
+				<button class="btn-del"><span>삭제</span></button>
+			</li>
+		</ul>
+		<p class="caution">添付可能なファイルは最大で10MBのJPG、PNG、GIF、 PDF形式のファイルです。</p>
+		<p class="caution">添付可能なファイルは最大で5つです。</p>
+	</div>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
 			<div class="conIn_tip">
-				추후 디자인 여부에 따라 수정예정
+				
 			</div>
 
-			<div class="filebox">
-				<input class="upload-name" value="파일선택" disabled="disabled">
-				<label for="ex_filename">업로드</label>
-				<input type="file" id="ex_filename" class="upload-hidden">
+			<div class="inp-outer-box add-file">
+				<label>add-file</label>
+				<div class="inp-group-box">
+					<div class="filebox">
+						<div class="inp-area">
+							<input class="upload-name" value="" disabled="disabled">
+							<button class="inp-close"></button>
+						</div>				
+						<label for="ex_filename">添付</label>
+						<input type="file" id="ex_filename" class="upload-hidden">
+					</div>
+					<ul class="file-list">
+						<li>
+							<span class="item">file name1</span>
+							<button class="btn-del"><span>삭제</span></button>
+						</li>
+						<li>
+							<span class="item">file name2</span>
+							<button class="btn-del"><span>삭제</span></button>
+						</li>
+					</ul>
+					<p class="caution">添付可能なファイルは最大で10MBのJPG、PNG、GIF、 PDF形式のファイルです。</p>
+					<p class="caution">添付可能なファイルは最大で5つです。</p>
+				</div>
 			</div>
+
 
 
 			<h4 class="btm-border">- 달력 (작업중)</h4>
@@ -1069,19 +1147,12 @@
 </div>
 
 <script>
-	$(document).ready(function(){ var fileTarget = $('.filebox .upload-hidden'); 
-		fileTarget.on('change', function(){ 
-			var filename = $(this)[0].files[0].name; 
-			$(this).siblings('.upload-name').val(filename); 
-		});
-
-		
-		$('#sampleDatePicker').datepicker({
-			minDate: '0'
-		});
-
-		customSelect();
+	$('#sampleDatePicker').datepicker({
+		minDate: '0'
 	});
+
+	customSelect();
+	
 </script>
 </body>	
 </html>

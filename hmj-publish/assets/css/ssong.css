@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+/* S : 상담 내역 */
+.my-contact .month-list {
+	margin-bottom: 24px;
+    font-size:0;
+}
+.my-contact .month-list button  {
+	padding-right:16px;
+    line-height: 40px;
+    color:#666;
+	line-height: 20px;
+	font-size:12px; 
+}
+.my-contact .month-list button.on {
+    color: #1c6bba;
+    font-weight:500;
+}
+.my-contact .month-list button:not(:first-child)::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    margin-right: 16px;
+    background-color: #e9e9e9;
+}
+
+.my-contact .toggle .tit-btn {
+	display:flex;
+	padding:27px 32px 27px 0;
+	justify-content: space-between;
+	align-items: center;
+	font-weight:300;
+}
+.my-contact .toggle .tit-box {
+	margin-right:auto;
+}
+.my-contact .toggle .tit-btn .category {	
+	color:#999;
+	line-height:20px;
+	font-family: 'HyundaiSansTextJP', sans-serif;
+	font-size:12px; 
+}
+.my-contact .toggle .tit-btn .tit {
+	line-height:26px;
+	font-size:16px;
+}
+.my-contact .toggle .tit-btn .status {
+	min-width: 145px;
+	text-align:center;
+	font-size:12px;
+}
+.my-contact .toggle .tit-btn .status.end {
+	color:#1c6bba;
+}
+.my-contact .toggle .tit-btn .date {
+	color:#999;
+	line-height:20px;
+	font-family: 'HyundaiSansTextJP', sans-serif;
+	font-size:12px; 
+}
+.my-contact .toggle .cont {
+	padding:48px;
+	background:#fafafa;
+	color:#666;
+}
+.my-contact .toggle .cont > div {
+	position:relative;
+}
+.my-contact .toggle .question {
+	position:relative;
+	padding:5px 0 0 56px;
+}
+.my-contact .toggle .answer {	
+	margin-top:32px;
+	padding-top:37px;
+	padding-left:56px;
+	border-top:1px solid #e9e9e9;
+}
+.my-contact .toggle .cont .ico {
+	content:'';
+	position:absolute;
+	left:0;
+	top:0;
+	width: 32px;
+	border-radius: 50%;
+	color:#fff;
+	text-align: center;
+	line-height:32px;
+	font-weight:500;
+	font-size:14px;
+}
+.my-contact .toggle .cont .question .ico {
+	background:#0793ea;
+}
+.my-contact .toggle .cont .answer .ico {
+	top:32px;
+	background:#666;
+}
+.my-contact .toggle .answer .answer-date {
+	margin-top: 8px;
+	color:#999;
+	line-height:20px;
+	font-family: 'HyundaiSansTextJP', sans-serif;
+	font-size:12px; 
+}
+
+
+@media screen and (max-width: 1119px) {
+	.my-contact .month-list {
+		padding:0 20px;
+	}
+	.my-contact .toggle .tit-btn {
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		padding:15px 60px 15px 20px;
+	}
+	.my-contact .toggle .tit-box {
+		margin-bottom: 8px;
+		width: 100%;
+	}
+	.my-contact .toggle .tit-btn .tit {
+		margin-bottom:auto;
+		min-height:44px;
+	}
+	.my-contact .toggle .tit-btn .status {
+		min-width:auto;		
+	}
+	.my-contact .toggle .tit-btn .date::before {
+		content:'';
+		display:inline-block;
+		margin-right:16px;
+		width: 1px;
+		height: 12px;
+		background: #e9e9e9;
+		vertical-align: middle;
+	}
+	.my-contact .toggle .tit-btn .date {
+		padding-left:16px;
+	}
+}
+
+/* E : 상담 내역 */

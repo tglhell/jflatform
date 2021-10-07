@@ -730,16 +730,17 @@
 }
 
 /* S : My main MP-100 */
+/* 추후 삭제 */
 .my-main .main-visual {
-	z-index: -1;
+	z-index:-1;
 	position:relative;
-	width:100%;
-	height:320px;	
+	width: 100%;
+	height: 320px;
 	overflow: hidden;
 }
 .my-main .main-visual img {
 	display: block;
-	width: 100%;	
+	width: 100%;
 }
 .pc .my-main .main-visual img {
 	min-width: 1920px;
@@ -747,6 +748,14 @@
 .mo .my-main .main-visual img {
 	max-height: 960px;
 	min-height: 320px;
+}
+/* 추후 삭제 */
+
+.my-main .top-visual {
+	z-index: -1;	
+}
+.my-main .hmj-content .top-visual + .cont-outer {
+	padding-top:0;
 }
 .my-main .dashboard {
 	margin-top:-162px !important;
@@ -2711,3 +2720,382 @@
 }
 
 /* E: my order */
+
+
+/* S: 회원정보 관리 */
+.check-pw {
+	width: 100%;
+	height: 240px;
+	padding: 40px 0;
+	border: 1px solid #e9e9e9;
+	border-radius: 8px;
+	text-align: center;
+}
+.check-pw .tit {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.67;
+	color: #191919;
+}
+.check-pw .inp-outer-box {
+	width: 400px;
+	margin: 8px auto 0;
+}
+.check-pw .error-msg {
+	width: 400px;
+	margin: 4px auto 0;
+	text-align: left;
+}
+.check-pw .cta-outer {
+	margin-top: 24px;
+}
+
+@media screen and (max-width: 1119px) {
+	.check-pw {
+		padding: 40px 20px;
+		border: none;
+		border-radius: 0;
+		text-align: left;
+	}
+	.check-pw .inp-outer-box {
+		width: 100%;
+		margin-top: 16px;
+	}
+	.check-pw .error-msg {
+		width: 100%;
+	}
+	.check-pw .cta-outer {
+		margin-top: 16px;
+	}
+}
+
+.check-my-info .tbl-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.check-my-info .tbl-top .cont-tit2 {
+	margin-top: 0;
+}
+.check-my-info .cont-tit2 {
+	display: block;
+	margin-top: 80px;
+}
+.check-my-info .tbl-top + .tbl-box {
+	margin-top: 16px;
+}
+.check-my-info .address-info {
+	margin-top: 16px;
+	border-radius: 8px;
+	border: 1px solid #e9e9e9;
+	overflow: hidden;
+}
+.check-my-info .address-info .top {
+	display: flex;
+	justify-content: space-between;
+	height: 64px;
+	padding: 16px;
+	background-color: #fafafa;
+	border-bottom: 1px solid #e9e9e9;
+}
+.check-my-info .address-info .top .tit {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 32px;
+}
+.check-my-info .address-info .cont {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 24px 16px;
+}
+.check-my-info .address-info .cont .address {
+	font-size: 14px;
+	line-height: 1.57;
+}
+.check-my-info .address-info .cont .address p + p {
+	margin-top: 8px;
+}
+.check-my-info .address-info .cont .btn-cont {
+	margin:0;
+}
+.check-my-info .address-info .cont .btn-cont .btn  {
+	width: 40px;
+}
+.check-my-info .address-info .cont .btn-cont .btn span {
+	font-size: 12px;
+}
+.check-my-info .address-info .cont .btn-cont .btn + .btn {
+	margin-left: 4px;
+}
+.check-my-info .address-info .no-info {
+	display: block;
+	text-align: center;
+}
+.check-my-info .address-info .no-info .txt {
+	color: #999;
+	font-size: 14px;
+	line-height: 1.57;
+}
+.check-my-info .address-info .cont {
+	align-items: flex-start;
+}
+.check-my-info .address-info ul.cont {
+	display: block;
+}
+.check-my-info .address-info ul.cont li {
+	display: flex;
+	justify-content: space-between;
+}
+.check-my-info .address-info ul.cont li+li {
+	padding-top: 24px;
+	margin-top: 24px;
+	border-top: 1px solid #e9e9e9;
+}
+.check-my-info .address-info ul .info .tit-cont {
+	margin-bottom: 16px;
+}
+.check-my-info .address-info ul .info .text-flag {
+	margin-right: 4px;
+}
+.check-my-info .address-info ul .info .tit {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 26px;
+}
+
+@media screen and (max-width: 1119px) {
+	.hmj-container .hmj-content .check-my-info {
+		padding: 40px 20px;
+	}
+	.check-my-info .tbl-top .cont-tit2  {
+		font-size: 16px;
+	}
+	.check-my-info .cont-tit2 {
+		font-size: 16px;
+		line-height: 1.63;
+	}
+	.check-my-info .tbl-box + .cont-tit2 {
+		margin-top: 48px;
+	}
+	.check-my-info .address-info .top .tit {
+		font-size: 14px;
+	}
+	.check-my-info .address-info .no-info .txt {
+		font-size: 13px;
+		line-height: 20px;
+	}
+	.check-my-info .address-info .cont .address {
+		font-size: 13px;
+		line-height: 1.54;
+	}
+	.check-my-info .address-info .cont .btn-cont {
+		margin-left: 24px;
+	}
+	.check-my-info .address-info .cont .btn-cont .btn {
+		display: block;
+	}
+	.check-my-info .address-info .cont .btn-cont .btn + .btn {
+		margin: 8px 0 0 0;
+	}
+	.check-my-info .address-info ul .info .tit {
+		display: block;
+		margin-top: 8px;
+		font-size: 13px;
+		line-height: 20px;
+	}
+}
+
+.shipping .inp-outer-box.post-type .check-terms {
+    margin-top: 16px;
+}
+
+.my-svc .cont-tit2 {
+	display: block;
+	margin: 80px 0 16px 0;
+	font-weight: 500;
+}
+.my-svc .cont-tit2:first-of-type {
+	margin-top: 0;
+}
+.my-svc .toggle .tit-btn {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+.my-svc .toggle .tit-btn .tit strong{
+	font-weight: 400;
+}
+.my-svc .toggle .item.active .tit-btn {
+	font-weight: 400;
+}
+.my-svc .toggle .item.active .tit-btn .tit strong {
+	font-weight: 500;
+}
+.my-svc .toggle .tit-btn .text-flag2 {
+	margin-right: 16px;
+}
+.my-svc .toggle .tit-btn .btn-text {
+	margin-right: 32px;
+}
+.my-svc .partner-bn a {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 120px;
+	padding: 24px 38px 24px 184px;
+	border: 1px solid #e9e9e9;
+	border-radius: 8px;
+	background: url('../../assets/images/@img_mysvc_bn01.jpg') no-repeat;
+	background-size: 108px auto;
+	background-position: 38px center
+}
+.my-svc .partner-bn a:after {
+	position: absolute;
+	top:48px;
+	right: 32px;
+	width: 24px;
+	height: 24px;
+	background: url('../../assets/images/ico_mysvc_bn_arrow.svg') no-repeat;
+	content: '';
+}
+.my-svc .partner-bn .tit {
+	display: block;
+	margin-bottom: 8px;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.63;
+}
+.my-svc .partner-bn .txt {
+	font-size: 12px;
+	line-height: 1.67;
+	color: #666;	
+}
+.my-svc .partner-bn .txt span {
+	display: block;
+}
+
+.svc-subsc {
+	padding: 48px;
+	background:#fafafa;
+}
+.svc-subsc .desc {
+	margin-bottom: 40px;
+	font-size: 16px;
+	line-height: 26px;
+}
+.svc-subsc .date-cont {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.svc-subsc .date-cont .tit {
+	font-size: 18px;
+	line-height: 30px;
+}
+.svc-subsc .date-cont .date {
+	font-size: 16px;
+	line-height: 26px;
+	margin-left: 16px;
+}
+.svc-subsc .terms-cont {
+	margin-top: 24px;
+	padding-top: 24px;
+	border-top: 1px solid #e9e9e9;
+}
+.svc-subsc .terms-cont .tit {
+	display: block;
+	margin-bottom: 16px;
+	font-size: 18px;
+	line-height: 30px;
+}
+.svc-subsc .terms-cont .check-cont {
+	padding: 40px 32px;
+	background: #fff;
+	border: 1px solid #e9e9e9;
+	border-radius: 8px;
+}
+.svc-subsc .cta-outer {
+	margin-top: 40px;
+}
+.svc-subsc.unsubsc .date-cont .date{
+	color: #666;
+}
+
+@media screen and (max-width: 1119px) {
+	.my-svc .cont-tit2 {
+		padding: 0 20px;
+	}
+	.my-svc .cont-tit2:first-of-type {
+		margin-top: 40px;
+	}
+	.my-svc .toggle .tit-btn .text-flag2 {
+		margin: 0 0 8px 0;
+	}
+	.my-svc .toggle .tit-btn .btn-text {
+		margin-right: 28px;
+	}
+	.my-svc .toggle .tit-btn .tit strong {
+		display: block;
+	}
+	.my-svc .cont-tit2 {
+		margin-top: 47px;
+	}
+	.my-svc .partner-bn {
+		padding: 0 20px;
+	}
+	.my-svc .partner-bn a {
+		height: auto;
+		min-height: 104px;
+		padding: 17px 16px 17px 128px;
+		background-size: 96px 64px;
+		background-position: 16px center;
+	}
+	.my-svc .partner-bn a:after {
+		top: 17px;
+    	left: 192px;
+		right: auto;
+	}
+	.my-svc .partner-bn .tit {
+		font-size: 16px;
+		margin-bottom: 4px;
+		line-height: 26px;
+	}
+	.my-svc .partner-bn .txt span {
+		display: inline;
+	}
+
+	.svc-subsc {
+		padding: 40px 20px;
+	}
+	.svc-subsc .desc {
+		margin-bottom: 24px;
+		font-size: 13px;
+		line-height: 20px;
+	}
+	.svc-subsc .date-cont .tit {
+		font-size: 14px;
+		line-height: 22px;
+	}
+	.svc-subsc .date-cont .date {
+		font-size: 13px;
+		line-height: 16px;
+	}
+	.svc-subsc .terms-cont .tit {
+		font-size: 14px;
+		line-height: 22px;
+	}
+	.svc-subsc .terms-cont .check-cont {
+		padding: 24px 16px;
+	}
+	.svc-subsc .cta-outer {
+		margin-top: 32px;
+	}
+}
+
+@media screen and (max-width: 1119px) {
+	
+}
+
+/* E: 회원정보 관리 */

@@ -497,4 +497,46 @@ $(function () {
 			listCarSwp ();
 		}
 	});
+
+	// 이벤트
+	if ($('.event-banner-swiper').length == 1) {
+        let swpOpt = {},
+        slideLength = $('.event-banner-swiper .swiper-slide').length;
+        if (slideLength == 1) {
+            swpOpt = {
+                allowSlidePrev: false,
+                allowSlideNext: false,
+                simulateTouch: false
+            }
+            $('.event-banner-swiper [class*="swiper-button"]').hide();
+        } else {
+            let _gap ;
+            if ($(window).width() > tbl) {
+                _gap = 80;
+            } else{
+                _gap = 0;
+            }
+            swpOpt = {
+                navigation: {
+                    nextEl: '.event-banner-swiper .swiper-button-next',
+                    prevEl: '.event-banner-swiper .swiper-button-prev',
+                },
+                pagination: {
+                    el: '.event-banner-swiper .swiper-pagination',
+                    clickable: true,
+                },
+                // slidesPerView: 'auto',
+                // centeredSlides: true,
+                simulateTouch: true,
+                speed: 300,
+                loop: true,
+                spaceBetween: _gap,
+                observer: true,
+                observeParents: true,
+                autoplay: true,
+                delay: 5000,
+            }
+        }
+        let eventBannerSwiper = new Swiper('.event-banner-swiper .swiper-container', swpOpt);
+    }
 });

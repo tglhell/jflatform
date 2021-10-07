@@ -27,7 +27,7 @@
     padding-top: 40px;
 }
 .estimate .car-area {
-    margin-bottom: 88px;
+    margin-bottom: 72px;
     text-align: center;
 }
 .estimate .car-area .name strong {
@@ -43,7 +43,6 @@
     padding: 40px 0 86px;
     background: url(../images/common/car_bottom_bg.png) no-repeat bottom center; 
     background-size: 584px 120px;
-    margin-bottom: 24px;
 }
 .estimate .car-area .img img {
     width: 336px;
@@ -130,9 +129,16 @@
     vertical-align: middle;
     background-size: cover;
 }
-.estimate .list-type .slt-box.hgt-type2 {
+.estimate .list-type .slt-box-area .select-area {
     flex:1;
     margin: -12px 0;
+}
+.estimate .list-type .slt-box-area .tooltip-box .tit {
+    color: #191919;
+}
+.estimate .list-type .slt-box-area .tooltip-box .cont {
+    color: #333;
+    font-size: 12px;
 }
 .estimate .toggle .active > .cont {
     margin-bottom: 72px;
@@ -263,7 +269,7 @@
 .estimate .cont-right .mo-bottom-fixed .total {
     display: flex;
     justify-content: space-between;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 30px;
 }
 .estimate .cont-right .mo-bottom-fixed .mo-toggle .mo-btn {
@@ -294,6 +300,9 @@
 }
 .estimate .cont-right .email-area {
     margin-top: -32px;
+}
+.estimate .cont-right .email-area .inp-outer-box {
+    margin-top: 0;
 }
 .estimate .cont-right .banner-area button {
     width: 100%;
@@ -531,11 +540,11 @@
         padding-bottom: 215px;
     }
     .estimate .car-area {
-        margin:40px 0 56px;
+        margin-bottom: 56px;
     }
     .estimate .car-area .name strong {
         font-size: 24px;
-        line-height: 38px;
+        line-height: 28px;
         margin-bottom: 8px;
     }
     .estimate .car-area .name span {
@@ -545,7 +554,6 @@
     .estimate .car-area .img  {
         padding: 32px 56px 60px;
         background-size: 100% auto;
-        margin-bottom: 16px;
     }
     .estimate .car-area .img img {
         width: 100%;
@@ -578,12 +586,15 @@
         margin: -2px 8px -2px 0;
     }
     .estimate .list-type .slt-box-area {
-        padding-bottom: 56px;
+        flex-flow: column;
     }
-    .estimate .list-type .slt-box-area .slt-box.hgt-type2 {
+    .estimate .list-type .slt-box-area .select-area {
+        margin: 8px 0 0 0;
+    }
+    .estimate .list-type .slt-box-area .price {
         position: absolute;
-        bottom: 0;
-        width: 100%;
+        top: 0;
+        right: 0;
         margin: 0;
     }
     .estimate .toggle .active > .cont {
@@ -660,14 +671,35 @@
     .estimate .cont-right .mo-bottom-fixed .mo-toggle .mo-btn {
         border-top: none;
         position: absolute;
-        top: -23px;
+        top: -24px;
         left: 0;
         right: 0;
         display: block;
-        height: 23px;
+        height: 24px;
         font-size: 0;
         width: 100%;
-        background: transparent url(../images/common/bg_floating.svg) no-repeat center top;
+        background: transparent url(../images/mo/bg_floating_shape.png) no-repeat center top;
+    }
+
+    .estimate .cont-right .mo-bottom-fixed .mo-toggle .mo-btn::before {
+        content: '';
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        transition: all .3s ease-in;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: .4;
+        width: 24px;
+        height: 24px;
+        margin: -8px 0 0 -12px;
+        background: url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h16v16H0z'/%3E%3Cpath stroke='%23191919' stroke-width='2' d='M1 11l6.998-7 7 7'/%3E%3C/g%3E%3C/svg%3E") no-repeat center center;
+    }
+    .estimate .cont-right .mo-bottom-fixed .mo-toggle .item.active .mo-btn::before {
+        transition: all .3s ease-in;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        opacity: 1;
     }
     .estimate .cont-right .mo-bottom-fixed .total {
         font-size: 16px;
@@ -677,6 +709,11 @@
     }
     .estimate .cont-right .mo-bottom-fixed .mo-toggle .cont {
         margin-bottom: 0;
+        border-top:1px solid #e9e9e9;
+        font-size: 13px;
+    }
+    .estimate .cont-right .mo-bottom-fixed .mo-toggle .cont li:not(:first-child) {
+        margin-top: 16px;
     }
     .cp-complete {
         padding-left:20px;

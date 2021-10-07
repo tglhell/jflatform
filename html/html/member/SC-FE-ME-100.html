@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>HMJ 온라인 판매 사이트 구축</title>
+	<link rel="stylesheet" href="../../assets/css/common.css">
+	<link rel="stylesheet" href="../../assets/css/member.css">
+	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../../assets/js/common.js"></script>
+</head>
+
+<body>
+
+<div class="hmj-wrap ">
+	<div class="skip-nav">
+		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
+	</div>
+
+	<!-- header -->
+	<!--//header -->
+
+	<!-- container -->
+	<div id="hmjContainer" class="hmj-container login">
+		<div class="hmj-content">
+			<div class="cont-outer">
+				<div class="tit-cont">
+					<strong class="tit">会員登録情報確認</strong>
+					<p class="tit-txt">会員登録されているかを確認します。</p>
+				</div>
+				<div class="form-cont">
+					<div class="inp-outer-box val-error">
+						<label for="inpName01_01">姓名 <span class="required">*</span></label>
+						<div class="inp-group-box mo-full">
+							<div class="inp-area">
+								<input type="text" id="inpName01_01" class="inp-item" placeholder="姓を入力してください。">
+								<button class="inp-close"></button>
+							</div>
+							<div class="inp-area">
+								<input type="text" id="" class="inp-item" placeholder="名を入力してください">
+								<button class="inp-close"></button>
+							</div>
+						</div>
+					</div>
+					<p class="error-msg lbl-type">姓名を入力してください。</p>
+					<div class="inp-outer-box val-error">
+						<label for="inpName01_02">姓名(フリガナ) <span class="required">*</span></label>
+						<div class="inp-group-box mo-full">
+							<div class="inp-area">
+								<input type="text" id="inpName01_02" class="inp-item" placeholder="姓(フリガナ)を入力してください。">
+								<button class="inp-close"></button>
+							</div>
+							<div class="inp-area">
+								<input type="text" id="" class="inp-item" placeholder="名(フリガナ)を入力してください。">
+								<button class="inp-close"></button>
+							</div>
+						</div>
+					</div>
+					<p class="error-msg lbl-type">姓名(フリガナ)を入力してください。</p>
+					<div class="inp-outer-box val-error">
+						<label for="inpBirth01_01">生年月日 <span class="required">*</span></label>
+						<div class="inp-slice-box">
+							<div class="slt-box">
+								<p class="selected-value">1980</p>
+								<ul class="select-items">
+									<li>option1</li>
+									<li>option2</li>
+									<li>option3</li>
+								</ul>
+							</div>
+							<div class="slt-box">
+								<p class="selected-value">Month</p>
+								<ul class="select-items">
+									<li>option1</li>
+									<li>option2</li>
+									<li>option3</li>
+								</ul>
+							</div>
+							<div class="slt-box">
+								<p class="selected-value">Day</p>
+								<ul class="select-items">
+									<li>option1</li>
+									<li>option2</li>
+									<li>option3</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<p class="error-msg lbl-type">生年月日を選択してください。</p>
+					<div class="inp-outer-box tel-type val-error">
+						<label for="inpTel01_01">携帯電話 <span class="required">*</span></label>
+						<div class="inp-slice-box">
+							<div class="slt-box type2">
+								<p class="selected-value">070</p>
+								<ul class="select-items">
+									<li>080</li>
+									<li>090</li>
+								</ul>
+							</div>
+							<span class="inp-hpn">-</span>
+							<div class="inp-area">
+								<input type="text" id="inpNum01_05_1" class="inp-item" placeholder="1234">
+							</div>
+							<span class="inp-hpn">-</span>
+							<div class="inp-area">
+								<input type="text" id="inpNum01_06_1" class="inp-item" placeholder="5678">
+							</div>
+							<button class="btn btn-type btn-tbl" disabled><span>送信</span></button><!-- 입력전 disabled -->
+						</div>
+					</div>
+					<p class="error-msg lbl-type">電話番号を入力してください。</p>
+					<!-- 재전송 시 -->
+					<div class="inp-outer-box tel-type val-error">
+						<label for="inpTel01_01">携帯電話 <span class="required">*</span></label>
+						<div class="inp-slice-box">
+							<div class="slt-box type2">
+								<p class="selected-value">070</p>
+								<ul class="select-items">
+									<li>080</li>
+									<li>090</li>
+								</ul>
+							</div>
+							<span class="inp-hpn">-</span>
+							<div class="inp-area">
+								<input type="text" id="inpNum01_05_1" class="inp-item" placeholder="1234">
+							</div>
+							<span class="inp-hpn">-</span>
+							<div class="inp-area">
+								<input type="text" id="inpNum01_06_1" class="inp-item" placeholder="5678">
+							</div>
+							<button class="btn btn-type btn-tbl"><span>再送信</span></button>
+						</div>
+					</div>
+					<p class="error-msg lbl-type">認証コードが送信されました。</p>
+					<!-- //재전송 시 -->
+					<div class="inp-outer-box inp-type val-error">
+						<label for="inpNum01_011">認証確認 <span class="required">*</span></label>
+						<div class="inp-btn-box">
+							<div class="inp-area">
+								<input type="text" id="inpNum01_011" class="inp-item" placeholder="６ケタ数字" style="padding-right: 146px;">
+								<button class="inp-close" style="right: 120px;"></button>
+							</div>
+							<span class="time-num">03:00</span>
+							<button class="btn btn-type2 btn-tbl" disabled><span>認証</span></button><!-- 입력전 disabled -->
+						</div>
+					</div>
+					<p class="error-msg lbl-type">認証コードをお確かめください。</p>
+					<p class="noti-msg lbl-type">受け取ったコードを入力してください。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//container -->
+
+	<!-- footer -->
+	<!--//footer -->
+</div>
+
+<div class="btn-top-box">
+	<a href="#" tit="move to top" role="button" class="btn-top">
+		<span class="blind">Top</span>
+	</a>
+</div>
+
+<script>
+	customSelect();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+@charset "utf-8";
+.form-qa .slt-box {
+	flex:1;
+}
+.form-qa .item-cont {
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+.form-qa .item-cont .inp-textarea {
+	max-width: 928px;
+	height:216px;
+}
+
+.form-qa .error-msg + .caution {
+	margin-top:8px;
+}
+.contact .form-qa + .cta-outer {
+	margin-top:64px;
+}
+.mo .contact .complete-area {
+	padding:0 20px;
+}
+.pop-contact .layer-cont .form-qa:first-child {
+	margin-top:0;
+}
+.pop-contact .form-qa .inp-outer-box:first-child {
+	margin-top:0;
+}
+.pop-contact .box-product {
+	display:flex;
+	align-items: center;
+}
+.pop-contact .box-product .box-img {
+	min-width: 160px;
+	height:160px;
+	border: solid 1px #e9e9e9;
+	overflow: hidden;
+}
+.pop-contact .box-product .box-img img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.pop-contact .box-product .name {
+	padding-left:32px;
+	width: auto;
+	font-size:16px;
+	font-weight:500;
+	line-height:26px;
+}
+.pop-contact .form-qa {
+	margin-top:40px;
+}
+.pop-contact .caution-box {
+	padding-right:88px;
+}
+
+.pop-contact .order-num {
+	display:flex;
+	flex-wrap: wrap;
+	padding-bottom: 8px;
+	border-bottom:1px solid #999;
+	line-height:22px;
+	font-size:14px;
+	font-weight:500;
+}
+.pop-contact .order-num dd {
+	padding-left:8px;
+	color:#1c6bba;
+	font-weight:500;
+}
+.pop-contact .item-product .inp-area {
+	max-width:444px;
+}
+.pop-contact .item-product li {
+	position:relative;
+	display:flex;
+	flex-wrap: nowrap;
+	padding:16px; 
+	align-items: center;		
+}
+.pop-contact .item-product li + li {
+	border-top:none;
+}
+.pop-contact .item-product li:not(:first-child)::before {
+	content:'';
+	position:absolute;
+	top:0;
+	left:16px;
+	right:16px;
+	height: 1px;
+	background:#e9e9e9;
+}
+.pop-contact .item-product li:hover::before,
+.pop-contact .item-product li:hover + li::before {
+	display:none;
+}
+
+.pop-contact .item-product .box-img {
+	min-width:80px;
+	height:80px;
+	border:1px solid #e9e9e9;
+}
+.pop-contact .item-product .box-img img {
+	display:block;
+	width: 100%;
+	height: 100%;
+}
+.pop-contact .item-product .tit {
+	padding-left:8px;
+}
+.pop-contact .item-cont .inp-textarea {
+	max-width: 443px;
+	height:184px;
+}
+.pop-contact .inp-textarea textarea {
+	height:132px;
+}
+.pc .pop-contact-end .btn-tel::after {
+	display:none;	
+}
+.pc .pop-contact-end .btn-tel {
+	pointer-events: none;
+	color:#666;
+}
+.pop-contact-end .no-data::before  {
+	background-image:url('../images/common/ico_contact_end.svg');
+	background-size:96px;
+	background-repeat: no-repeat;
+}
+.pop-contact-end .caution {
+	margin-top:16px;
+}
+
+
+@media screen and (max-width:1119px) {	
+	.contact .form-qa {
+		margin-top:0;
+		padding:40px 20px 0;
+	}
+	.contact .form-qa + .cta-outer {
+		padding:0 20px;
+	}
+	.pop-contact .form-qa {
+		margin-top:40px;
+	}
+	.form-qa .inp-outer-box:first-child {
+		margin-top:0;
+	}
+	.form-qa .item-cont .inp-textarea {
+		height:148px;
+	}
+	.form-qa .caution {
+		margin-left:0;
+	}
+	.pop-contact .item-product .tit {
+		padding-left:16px;
+	}
+	.pop-contact .caution-box {
+		padding-right:0;
+	}
+	.pop-contact .box-product .box-img {
+		min-width: 96px;
+		height: 96px;
+	}
+	.pop-contact .box-product .name {
+		padding-left:16px;
+	}
+	.pop-contact .item-cont .inp-textarea {
+		height:184px;
+	}
+}
+
+/* popShippingList */
+.shipping .new-address {
+	text-align: right;
+	margin-bottom: 8px;
+	margin-top: 0;
+}
+.shipping .list {
+	border-top: 1px solid #999;
+}
+.shipping .list li {
+	padding: 24px 0;
+	position: relative;
+}
+.shipping .list li + li {
+	border-top: 1px solid #e9e9e9;
+}
+.shipping .list li .radio span.tit {
+	font-weight: 500;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+}
+.shipping .list li .radio .text-flag {
+	margin-right: 8px;
+	font-weight: normal;
+}
+.shipping .list li .detail {
+	margin-top: 16px;
+	padding-left: 32px;
+}
+.shipping .list li .detail p + p {
+	margin-top: 8px;
+}
+.shipping .list li .cta-outer {
+	position: absolute;
+	top: 24px;
+	right: 0;
+}
+
+@media screen and (max-width: 1119px) {
+	.shipping .new-address {
+		justify-content: right;
+	}
+	.shipping .list {
+		border-bottom: 1px solid #e9e9e9;
+	}
+}
+
+/* popShippingRegist */
+.shipping > .radio-group {
+	margin-bottom: 16px;
+}
+.shipping > .list-type1 {
+	border-top: 1px solid #999;
+}
+.shipping > .list-type1 .inp-outer-box:first-of-type {
+	margin-top: 24px;
+}
+.shipping .inp-outer-box.post-type .check-terms {
+    margin-top: 16px;
+}
