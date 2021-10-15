@@ -1,9 +1,18 @@
-<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-    <g fill="none" fill-rule="evenodd">
-        <circle stroke="#666" stroke-width="2" cx="32" cy="32" r="24"/>
-        <g transform="translate(31 21)" fill="#0793EA">
-            <path fill-rule="nonzero" d="M2.5 0v16h-2V0z"/>
-            <circle cx="1.5" cy="20.5" r="1.5"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>920919A0-0E29-4A0A-B04B-32E29875FB6F</title>
+    <g id="03_Template" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="[PC]-Empty-State" transform="translate(-876.000000, -326.000000)">
+            <g id="case_02" transform="translate(772.000000, 326.000000)">
+                <g id="common-/-alerts-/-ic_nodata_80" transform="translate(104.000000, 0.000000)">
+                    <g id="Group" transform="translate(1.000000, 1.000000)">
+                        <circle id="Oval" fill="#0793EA" cx="39.5" cy="50.5" r="1.5"></circle>
+                        <line x1="39.5" y1="25" x2="39.5" y2="45" id="Path-2" stroke="#0793EA" stroke-width="2"></line>
+                        <circle id="Oval" stroke="#666666" stroke-width="2" cx="39" cy="39" r="38"></circle>
+                        <path d="M39.5,8 C22.1030304,8 8,22.1030304 8,39.5 M39.5,71 C56.8969696,71 71,56.8969696 71,39.5" id="Shape" stroke="#666666" stroke-width="2"></path>
+                    </g>
+                </g>
+            </g>
         </g>
     </g>
 </svg>

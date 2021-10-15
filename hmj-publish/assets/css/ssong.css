@@ -27,13 +27,21 @@
 
 .my-contact .toggle .tit-btn {
 	display:flex;
-	padding:27px 32px 27px 0;
+	padding:15px 32px 15px 0;
 	justify-content: space-between;
 	align-items: center;
-	font-weight:300;
+	font-weight:400;
 }
 .my-contact .toggle .tit-box {
+	display:flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
 	margin-right:auto;
+	min-height:72px;
+}
+.my-contact .toggle .item.active .tit-btn {
+	font-weight:400;
 }
 .my-contact .toggle .tit-btn .category {	
 	color:#999;
@@ -48,6 +56,7 @@
 .my-contact .toggle .tit-btn .status {
 	min-width: 145px;
 	text-align:center;
+	line-height:20px;
 	font-size:12px;
 }
 .my-contact .toggle .tit-btn .status.end {
@@ -66,23 +75,27 @@
 }
 .my-contact .toggle .cont > div {
 	position:relative;
+	display:flex;
+	align-items: flex-start;
 }
 .my-contact .toggle .question {
 	position:relative;
-	padding:5px 0 0 56px;
 }
 .my-contact .toggle .answer {	
 	margin-top:32px;
-	padding-top:37px;
-	padding-left:56px;
-	border-top:1px solid #e9e9e9;
+	padding-top:32px;
 }
-.my-contact .toggle .cont .ico {
+.my-contact .toggle .answer::before {
 	content:'';
 	position:absolute;
 	left:0;
+	right:0;
 	top:0;
-	width: 32px;
+	height:1px;
+	background:#e9e9e9;
+}
+.my-contact .toggle .cont .ico {
+	min-width: 32px;
 	border-radius: 50%;
 	color:#fff;
 	text-align: center;
@@ -94,10 +107,18 @@
 	background:#0793ea;
 }
 .my-contact .toggle .cont .answer .ico {
-	top:32px;
 	background:#666;
 }
-.my-contact .toggle .answer .answer-date {
+.my-contact .toggle .qa-cont {
+	padding:3px 0 0 24px;
+	width: auto;
+}
+.my-contact .toggle .txt {
+	color:#666;
+	line-height:22px;
+	font-size:14px;
+}
+.my-contact .toggle .answer-date {
 	margin-top: 8px;
 	color:#999;
 	line-height:20px;
@@ -109,11 +130,17 @@
 @media screen and (max-width: 1119px) {
 	.my-contact .month-list {
 		padding:0 20px;
+	}	
+	.my-contact .toggle {
+		border-bottom:none;
 	}
 	.my-contact .toggle .tit-btn {
 		justify-content: flex-start;
 		flex-wrap: wrap;
 		padding:15px 60px 15px 20px;
+	}
+	.my-contact .toggle .tit-btn .category {
+		margin-bottom:8px;
 	}
 	.my-contact .toggle .tit-box {
 		margin-bottom: 8px;
@@ -122,6 +149,8 @@
 	.my-contact .toggle .tit-btn .tit {
 		margin-bottom:auto;
 		min-height:44px;
+		line-height:22px; 
+		font-size:14px;
 	}
 	.my-contact .toggle .tit-btn .status {
 		min-width:auto;		
@@ -129,15 +158,34 @@
 	.my-contact .toggle .tit-btn .date::before {
 		content:'';
 		display:inline-block;
-		margin-right:16px;
+		margin:0 16px;
 		width: 1px;
 		height: 12px;
 		background: #e9e9e9;
 		vertical-align: middle;
 	}
-	.my-contact .toggle .tit-btn .date {
-		padding-left:16px;
+	.my-contact .toggle .cont {
+		padding:24px 20px;
+	}
+	.my-contact .toggle .qa-cont {
+		padding:2px 0 0 8px;
+	}
+	.my-contact .toggle .cont .ico {
+		min-width:24px;
+		line-height:24px;
+		height:24px;
+		font-size:12px;
+	}
+	.my-contact .toggle .answer {
+		margin-top:24px;
+		padding-top:24px;
+	}
+	.my-contact .toggle .txt {
+		line-height:20px;
+		font-size:13px;
 	}
 }
 
 /* E : 상담 내역 */
+
+

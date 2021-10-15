@@ -270,82 +270,17 @@
                                 </ul>    
                             </div>
                         </div>
+                        <!-- 딜리버리 방식 -->
                         <div class="item active">
                             <p class="tit-btn">
-                                契約情報
+                                デリバリーサービス
                                 <span class="price">￥35,000</span>
                             </p>
                             <div class="cont">
-                                <ul class="inp-list type1">
-                                    <li>
-                                        <div class="inp-outer-box inp-type post-type">
-                                            <label for="inpNum01_01">居住地 <span class="required">*</span></label>
-                                            <div class="inp-group-box">
-                                                <div class="inp-btn-box"><!-- error class="val-error"-->
-                                                    <div class="inp-area">
-                                                        <input type="text" class="inp-item" placeholder="〒" readonly="">
-                                                        <button class="inp-close"></button>
-                                                    </div>
-                                                    <button class="btn btn-type3 btn-tbl"><span>郵便番号検索</span></button>
-                                                </div>
-                                                <p class="error-msg">郵便番号を入力してください。</p>
-                                                <div class="inp-area">
-                                                    <input type="text" class="inp-item" placeholder="都道府県" readonly="">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                                <div class="inp-area">
-                                                    <input type="text" class="inp-item" placeholder="市区町村" readonly="">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                                <div class="inp-area">
-                                                    <input type="text" class="inp-item" placeholder="詳細住所1" readonly="">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                                <div class="inp-area">
-                                                    <input type="text" class="inp-item" placeholder="番地またはビル名">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <P class="noti-msg lbl-type">車庫証明書取得に必要な申込書類をご住所へお送りしますので、マンションやアパートの場合は、ビル名と部屋番号までを必ず入力してください。</P>
-                                    </li>
-                                    <li>
-                                        <div class="inp-outer-box inp-type post-type">
-                                            <label for="inpNum01_01" class="top">車庫地</label>
-                                            <div class="inp-group-box">
-                                                <label class="chk"><input type="checkbox"><span>居住地と同じ</span></label>
-                                                <div class="inp-btn-box"><!-- error class="val-error"-->
-                                                    <div class="inp-area">
-                                                        <input type="text" class="inp-item" placeholder="〒" readonly="">
-                                                        <button class="inp-close"></button>
-                                                    </div>
-                                                    <button class="btn btn-type3 btn-tbl"><span>郵便番号検索</span></button>
-                                                </div>
-                                                <p class="error-msg">郵便番号を入力してください。</p>
-                                                <div class="inp-area">
-                                                    <input type="text" class="inp-item" placeholder="都道府県" readonly="">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                                <div class="inp-area">
-                                                    <input type="text" class="inp-item" placeholder="市区町村" readonly="">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                                <div class="inp-area">
-                                                    <input type="text" class="inp-item" placeholder="詳細住所1" readonly="">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                                <div class="inp-area">
-                                                    <input type="text" class="inp-item" placeholder="番地またはビル名">
-                                                    <button class="inp-close"></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <P class="noti-msg lbl-type">指定の車庫地がある場合に限って登録して下さい。</P>
-                                    </li>
-                                    <!-- 딜리버리 방식 -->
+                                <ul class="inp-list">
                                     <li class="js-radio-tab">
                                         <div class="inp-outer-box"><!-- error class="val-error" -->
-                                            <label for="radio01" class="top">デリバリーサービス <span class="required">*</span></label>
+                                            <label for="radio01" class="top">デリバリー <span class="required">*</span></label>
                                             <ul class="radio-group">
                                                 <li><label class="radio"><input type="radio" name="radio01" id="radioChk01"><span>営業拠点<em class="fc-color3"> ￥0 (無料)</em></span></label></li>
                                                 <li><label class="radio"><input type="radio" name="radio01" id="radioChk02"><span>ご希望の場所 <em class="fc-color3">￥10,000</em></span></label></li>
@@ -413,11 +348,20 @@
                                              </div>
                                         </div>
                                     </li>
-                                    <!-- //딜리버리 방식 -->
-                                    <!-- 잔금 지불 방식 -->
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //딜리버리 방식 -->
+                        <!-- 지불 방식 -->
+                        <div class="item active">
+                            <p class="tit-btn">
+                                お支払方法
+                            </p>
+                            <div class="cont">
+                                <ul class="inp-list">
                                     <li>
                                         <div class="inp-outer-box"><!-- error class="val-error" -->
-                                            <label for="inpNum01_01" class="top">お支払方法 <span class="required">*</span></label>
+                                            <label for="inpNum01_01" class="top">お支払 <span class="required">*</span></label>
                                             <div class="radio-group">
                                                 <label class="radio"><input type="radio" checked="checked" name="radio2" id="radio2_1"><span>現金/クレジットカード</span></label>
                                                 <label class="radio"><input type="radio" name="radio2" id="radio2_2"><span>分割払い</span></label>
@@ -425,22 +369,10 @@
                                         </div>
                                         <p class="error-msg lbl-type">残代金支払方法を選択してください。</p>
                                     </li>
-                                    <!-- //잔금 지불 방식 -->
-                                    <!-- 희망번호 신청 -->
-                                    <li>
-                                        <div class="inp-outer-box">
-                                            <label for="inpNum01_01" class="top">希望番号申込サービス</label>
-                                            <div class="radio-group">
-                                                <label class="radio"><input type="radio" name="radio3" id="radio3_1"><span>申込を行う</span></label>
-                                                <label class="radio"><input type="radio" checked="checked" name="radio3" id="radio3_2"><span>申込を行わない</span></label>
-                                            </div>
-                                        </div>
-                                        <p class="noti-msg lbl-type">希望番号申込の際、ナンバープレート費用は行政書士が別途請求します。</p>
-                                    </li>
-                                    <!-- //희망번호 신청 -->
                                 </ul>
                             </div>
                         </div>
+                        <!-- //지불 방식 -->
                         <!-- 구매자 정보 -->
                         <div class="item active">
                             <p class="tit-btn">
@@ -448,7 +380,7 @@
                                 <span class="price"></span>
                             </p>
                             <div class="cont">
-                                <ul class="inp-list type2">
+                                <ul class="inp-list type1">
                                     <li>
                                         <div class="inp-outer-box">
                                             <label for="inpName01_01">姓名 <span class="required">*</span></label>
@@ -482,6 +414,71 @@
                                         </div>
                                         <p class="error-msg lbl-type">内容をご記入ください。</p>
                                         <p class="noti-msg lbl-type">車両契約者の情報を正確に入力してください。</p>
+                                    </li>
+                                    <li>
+                                        <div class="inp-outer-box inp-type post-type">
+                                            <label for="inpNum01_01">居住地 <span class="required">*</span></label>
+                                            <div class="inp-group-box">
+                                                <div class="inp-btn-box"><!-- error class="val-error"-->
+                                                    <div class="inp-area">
+                                                        <input type="text" class="inp-item" placeholder="〒" readonly="">
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                    <button class="btn btn-type3 btn-tbl"><span>郵便番号検索</span></button>
+                                                </div>
+                                                <p class="error-msg">郵便番号を入力してください。</p>
+                                                <div class="inp-area">
+                                                    <input type="text" class="inp-item" placeholder="都道府県" readonly="">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <input type="text" class="inp-item" placeholder="市区町村" readonly="">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <input type="text" class="inp-item" placeholder="詳細住所1" readonly="">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <input type="text" class="inp-item" placeholder="番地またはビル名">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="noti-msg lbl-type">車庫証明書取得に必要な申込書類をご住所へお送りしますので、マンションやアパートの場合は、ビル名と部屋番号までを必ず入力してください。</p>
+                                    </li>
+                                    <li>
+                                        <div class="inp-outer-box inp-type post-type">
+                                            <label for="inpNum01_01" class="top">車庫地</label>
+                                            <div class="inp-group-box">
+                                                <label class="chk"><input type="checkbox"><span>居住地と同じ</span></label>
+                                                <div class="inp-btn-box"><!-- error class="val-error"-->
+                                                    <div class="inp-area">
+                                                        <input type="text" class="inp-item" placeholder="〒" readonly="">
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                    <button class="btn btn-type3 btn-tbl"><span>郵便番号検索</span></button>
+                                                </div>
+                                                <p class="error-msg">郵便番号を入力してください。</p>
+                                                <div class="inp-area">
+                                                    <input type="text" class="inp-item" placeholder="都道府県" readonly="">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <input type="text" class="inp-item" placeholder="市区町村" readonly="">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <input type="text" class="inp-item" placeholder="詳細住所1" readonly="">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <input type="text" class="inp-item" placeholder="番地またはビル名">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="noti-msg lbl-type">指定の車庫地がある場合に限って登録して下さい。</p>
                                     </li>
                                     <li>
                                         <div class="inp-outer-box tel-type">
@@ -532,6 +529,143 @@
                             </div>
                         </div>
                         <!-- //구매자 정보 -->
+                        <!-- 사용자 정보-->
+                        <div class="item active">
+                            <p class="tit-btn">
+                                ユーザー情報
+                            </p>
+                            <div class="cont">
+                                <p class="agree"><label class="chk"><input type="checkbox"><span>購入者情報と同じ</span></label></p>
+                                <ul class="inp-list type1">
+                                    <li>
+                                        <div class="inp-outer-box">
+                                            <label for="inpName01_01">姓名 <span class="required">*</span></label>
+                                            <div class="inp-group-box mo-full">
+                                                <div class="inp-area">
+                                                    <input type="text" id="inpName01_02" class="inp-item" placeholder="木村">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <input type="text" id="inpName01_01" class="inp-item" placeholder="拓哉">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="error-msg lbl-type">内容をご記入ください。</p>
+                                        <p class="noti-msg lbl-type">車両契約者の情報を正確に入力してください。</p>
+                                    </li>
+                                    <li>
+                                        <div class="inp-outer-box">
+                                            <label for="inpName01_01">お名前(フリガナ) <span class="required">*</span></label>
+                                            <div class="inp-group-box mo-full">
+                                                <div class="inp-area">
+                                                    <input type="text" id="inpName01_02" class="inp-item" placeholder="拓哉">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <input type="text" id="inpName01_01" class="inp-item" placeholder="たくや">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="error-msg lbl-type">内容をご記入ください。</p>
+                                        <p class="noti-msg lbl-type">車両契約者の情報を正確に入力してください。</p>
+                                    </li>
+                                    <li>
+                                        <div class="inp-outer-box inp-type post-type">
+                                            <label for="inpNum01_01">居住地 <span class="required">*</span></label>
+                                            <div class="inp-group-box">
+                                                <div class="inp-btn-box"><!-- error class="val-error"-->
+                                                    <div class="inp-area">
+                                                        <input type="text" class="inp-item" placeholder="〒" readonly="">
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                    <button class="btn btn-type3 btn-tbl"><span>郵便番号検索</span></button>
+                                                </div>
+                                                <p class="error-msg">郵便番号を入力してください。</p>
+                                                <div class="inp-area">
+                                                    <input type="text" class="inp-item" placeholder="都道府県" readonly="">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <input type="text" class="inp-item" placeholder="市区町村" readonly="">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <input type="text" class="inp-item" placeholder="詳細住所1" readonly="">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <input type="text" class="inp-item" placeholder="番地またはビル名">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="noti-msg lbl-type">車庫証明書取得に必要な申込書類をご住所へお送りしますので、マンションやアパートの場合は、ビル名と部屋番号までを必ず入力してください。</p>
+                                    </li>
+                                    <li>
+                                        <div class="inp-outer-box inp-type post-type">
+                                            <label for="inpNum01_01" class="top">車庫地</label>
+                                            <div class="inp-group-box">
+                                                <label class="chk"><input type="checkbox"><span>居住地と同じ</span></label>
+                                                <div class="inp-btn-box"><!-- error class="val-error"-->
+                                                    <div class="inp-area">
+                                                        <input type="text" class="inp-item" placeholder="〒" readonly="">
+                                                        <button class="inp-close"></button>
+                                                    </div>
+                                                    <button class="btn btn-type3 btn-tbl"><span>郵便番号検索</span></button>
+                                                </div>
+                                                <p class="error-msg">郵便番号を入力してください。</p>
+                                                <div class="inp-area">
+                                                    <input type="text" class="inp-item" placeholder="都道府県" readonly="">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <input type="text" class="inp-item" placeholder="市区町村" readonly="">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <input type="text" class="inp-item" placeholder="詳細住所1" readonly="">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                                <div class="inp-area">
+                                                    <input type="text" class="inp-item" placeholder="番地またはビル名">
+                                                    <button class="inp-close"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="noti-msg lbl-type">指定の車庫地がある場合に限って登録して下さい。</p>
+                                    </li>
+                                    <li>
+                                        <div class="inp-outer-box tel-type">
+                                            <label for="inpNum01_01">携帯電話 <span class="required">*</span></label>
+                                            <div class="inp-slice-box">
+                                                <div class="inp-area">
+                                                    <input type="text" id="inpNum01_04" class="inp-item" placeholder="010" disabled>
+                                                </div>
+                                                <span class="inp-hpn">-</span>
+                                                <div class="inp-area">
+                                                    <input type="text" id="inpNum01_05" class="inp-item" placeholder="9876" disabled>
+                                                </div>
+                                                <span class="inp-hpn">-</span>
+                                                <div class="inp-area">
+                                                    <input type="text" id="inpNum01_06" class="inp-item" placeholder="5432" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inp-outer-box">
+                                            <label for="inpNum01_011">E-mail</label>
+                                            <div class="inp-area">
+                                                <input type="text" id="inpNum01_011" class="inp-item" placeholder="my@hyundai.com" disabled>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //사용자 정보 -->
                         <!-- 계약금 결제수단 선택 -->
                         <div class="payment-area">
                             <p class="cont-text">契約金のお支払い方法</p>
@@ -651,7 +785,102 @@
 
 	<!-- footer -->
 	<div class="hmj-footer">
-		<img src="../../assets/images/@footer.jpg" alt="footer">
+		<div class="footer-top">
+			<ul>
+				<li>
+					<ul>
+						<li><a href="#">SHOW ROOM</a></li>
+						<li><a href="#">IONIQ 5</a></li>
+						<li><a href="#">NEXO</a></li>
+						<li><a href="#">ブランド拠点</a></li>
+						<li><a href="#">MOCEAN</a></li>
+					</ul>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Purchase</button>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">オンライン購入のご案内</a></li>
+								<li><a href="#">今月の購入特典</a></li>
+								<li><a href="#">政府補助金</a></li>
+								<li><a href="#">オンライン契約</a></li>
+								<li><a href="#">見積シミュレーション</a></li>
+								<li><a href="#">試乗</a></li>
+								<li><a href="#">購入相談申込</a></li>
+								<li><a href="#">仕様百科</a></li>
+								<li><a href="#">カタログダウンロード</a></li>
+								<li><a href="#">価格表ダウンロード</a></li>
+								<li><a href="#">Referral code</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Service</button>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">サービスネットワーク</a></li>
+								<li><a href="#">充電スポット</a></li>
+								<li><a href="#">RSAサービス</a></li>
+								<li><a href="#">整備予約</a></li>
+								<li><a href="#">リコール情報</a></li>
+								<li><a href="#">BLUELINK</a></li>
+								<li><a href="#">ビルトインカメラ</a></li>
+								<li><a href="#">ナビ/カメラアップデート</a></li>
+								<li><a href="#">提携サービス</a></li>
+								<li><a href="#">アプリ設置</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Brand Story</button>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">IONIQ 5</a></li>
+								<li><a href="#">IONIQ 5 Teasing</a></li>
+								<li><a href="#">Mini 45EV</a></li>
+								<li><a href="#">IONIQ</a></li>
+								<li><a href="#">Hyundai X BTS</a></li>
+								<li><a href="#">#Thisisus</a></li>
+								<li><a href="#">Hyundai X BBC</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">SHOP</a></li>
+						<li><a href="#">イベント</a></li>
+						<li><a href="#">お知らせ</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">1:1お問合せ</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<div class="left-logo"><img src="../../assets/images/common/ico_footer_logo.svg" alt="Hyundai Logo"></div>
+			<div class="center-text">
+				<ul>
+					<li><a href="#">プライバシーポリシー</a></li>
+					<li><a href="#">利用規約</a></li>
+					<li><a href="#">Cookieポリシー </a></li>
+					<li><a href="#"><span class="ico"><img src="../../assets/images/common/ico_country_jp.png" alt="japan"></span>日本語</a></li>
+				</ul>
+				<p class="copyright">COPYRIGHT &#x24D2; HYUNDAI. ALL RIGHTS RESERVED.</p>
+			</div>
+			<div class="right-sns">
+				<ul>
+					<li><a href="#"><img src="../../assets/images/common/ico_youtube.svg" alt="youtube"></a></li>
+					<li><a href="#"><img src="../../assets/images/common/ico_twitter.svg" alt="twitter"></a></li>
+					<li><a href="#"><img src="../../assets/images/common/ico_instagram.svg" alt="instagram"></a></li>
+				</ul>
+			</div>
+		</div>
 	</div>
 	<!--//footer -->
 </div>

@@ -4,17 +4,16 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>顧客満足度アンケート : Mypage : HMJ</title>
+    <title>試乗予約/変更 : Purchase : HMJ</title>
 
     <link rel="stylesheet" href="../../assets/css/common.css">
-    <link rel="stylesheet" href="../../assets/css/my.css">
-	<link rel="stylesheet" href="../../assets/css/purchase.css">
-	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">	
+	<link rel="stylesheet" href="../../assets/css/my.css">
+    <link rel="stylesheet" href="../../assets/css/sunny.css">
+	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
 	
-    <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
-    <script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
-	<script type="text/javascript" src="../../assets/js/common.js"></script>
+	<script type="text/javascript" src="../../assets/js/common.js"></script>	
 </head>
 
 <body>
@@ -27,131 +26,284 @@
 	<!-- header -->
 	<div class="hmj-header">
 		<!-- header -->
-		<div class="header-cont">
-			<h1><a href="hmj_layout.html"><img src="../../assets/images/common/img_header_logo.png" alt="Hyundai Logo"></a></h1>
-
-			<div class="gnb-menu-outer">
-				<ul class="gnb-menu-list">
-					<li>
-						<button><span>ブランド</span></button>
-					</li>
-					<li>
-						<button><span>IONIQ5</span></button>
-					</li>
-					<li>
-						<button><span>NEXO</span></button>
-					</li>
-					<li>
-						<button><span>購買</span></button>
-					</li>
-					<li>
-						<button><span>サービス</span></button>
-					</li>
-					<li>
-						<button><span>コンテンツ</span></button>
-					</li>
-					<li>
-						<button><span>ストア</span></button>
-					</li>
-				</ul>
+		<div class="header-outer">
+			<div class="header-cont">
+				<h1><a href="hmj_layout.html"><img src="../../assets/images/common/ico_header_logo.svg" alt="Hyundai Logo"></a></h1>
+	
+				<div class="gnb-menu-outer">
+					<div class="gnb-menu-box blur">
+						<!-- 로그인 전 -->
+						<div class="account-box">
+							<button class="btn-account">Account</button>
+							<button class="btn-sign-in">Sign in</button>
+						</div>
+						<!-- // 로그인 전 -->
+						<!-- 로그인 후 -->
+						<!-- <div class="account-box login" style="display: none;">
+							<button class="btn-account">Account</button>
+							<button class="btn-sign-in">木村 拓哉 様</button>
+							<a href="#a" class="btn-alarm">
+								<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
+								<div class="num"><span>2</span></div>
+							</a>
+						</div> -->
+						<!-- // 로그인 후 -->
+						<ul class="gnb-menu-list ir-count inner-scroll-y">
+							<li class="ir-item">
+								<a href="#">IONIQ 5</a>
+							</li>
+							<li class="ir-item">
+								<a href="#">NEXO</a>
+							</li>
+							<li class="ir-item">
+								<a href="#">SHOW ROOM</a>
+							</li>
+							<li class="ir-item">
+								<button class="btn-depth-switch inner-depth"><span>PURCHASE</span></button>
+								<div class="menu-inner-depth">
+									<button class="btn-depth-prev"><span>Back</span></button>
+									<p class="inner-depth-tit">PURCHASE</p>
+									<ul class="ir-count inner-scroll-y">
+										<li class="ir-item">
+											<button class="btn-depth-switch toggle-menu"><span>購入ガイド</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">オンライン購入のご案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">今月の購入特典</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">政府補助金</a>
+												</li>
+											</ul>
+										</li>
+										<li class="ir-item">
+											<button class="btn-depth-switch toggle-menu"><span>見積/試乗</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">オンライン購入のご案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">今月の購入特典</a>
+												</li>
+											</ul>
+										</li>
+										<li class="ir-item">
+											<a href="#">購入相談申込</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">仕様百科</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">ダウンロード</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">My Referralプログラム</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">ブランド拠点</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="ir-item">
+								<button class="btn-depth-switch inner-depth"><span>SERVICE</span></button>
+								<div class="menu-inner-depth">
+									<button class="btn-depth-prev"><span>Back</span></button>
+									<p class="inner-depth-tit">SERVICE</p>
+									<ul class="ir-count inner-scroll-y">
+										<li class="ir-item">
+											<a href="#">Hyundaiサービス</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">充電サービス</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">Hyundaiロードサイド・アシスタンス</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">整備予約</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">リコール情報</a>
+										</li>
+										<li class="ir-item">
+											<button class="btn-depth-switch toggle-menu"><span>BLUELINK</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">ご利用案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+											</ul>
+										</li>
+										<li class="ir-item">
+											<button class="btn-depth-switch toggle-menu"><span>ビルトインカメラ</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">ご利用案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+											</ul>
+										</li>
+										<li class="ir-item">
+											<a href="#">ナビ/カメラアップデート</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">提携サービス</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">アプリ設置</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="ir-item">
+								<button class="btn-depth-switch inner-depth"><span>BRAND</span></button>
+								<div class="menu-inner-depth">
+									<button class="btn-depth-prev"><span>Back</span></button>
+									<p class="inner-depth-tit">BRAND</p>
+									<ul class="ir-count inner-scroll-y">
+										<li class="ir-item">
+											<a href="#">購入ガイド</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">見積/試乗</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">購入相談申込</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="ir-item">
+								<a href="#">MOCEAN</a>
+							</li>
+							<li class="ir-item">
+								<a href="#">SHOP</a>
+							</li>
+						</ul>
+						<button class="btn-menu-close"><span>close</span></button>
+					</div>
+				</div>
+	
+				<div class="gnb-mid-menu">
+					<ul class="mid-list">
+						<li><a href="#"><span>IONIQ 5</span></a></li>
+						<li><a href="#"><span>NEXO</span></a></li>
+						<li><a href="#"><span>SHOW ROOM</span></a></li>
+					</ul>
+				</div>
+	
+				<div class="gnb-right-menu">
+					<ul class="gnb-right-list">
+						<li>
+							<button class="btn-cart pc-only"><span><img src="../../assets/images/common/ico_cart.svg" alt="cart"></span></button>
+						</li>
+						<li>
+							<button class="btn-search"><span><img src="../../assets/images/common/ico_search.svg" alt="search"></span></button>
+						</li>
+						<li>
+							<button class="btn-menu"><span><img src="../../assets/images/common/ico_menu.svg" alt="menu"></span></button>
+						</li>
+					</ul>
+				</div>
 			</div>
-
-			<div class="gnb-right-menu">
-				<ul class="gnb-right-list">
-					<li>
-						<button class="btn-cart"><span><img src="../../assets/images/common/ico_cart.png" alt="장바구니"></span></button>
-					</li>
-					<li>
-						<button class="btn-search">
-							<span>
-								<picture>
-									<source srcset="../../assets/images/common/ico_search.png" media="(min-width: 1120px)">
-									<source srcset="../../assets/images/common/ico_search_mo.png" media="(max-width: 1119px)">
-									<img src="../../assets/images/common/ico_search.png" alt="검색">
-								</picture>
-							</span>
-						</button>
-					</li>
-					<li>
-						<button class="btn-mypage"><span><img src="../../assets/images/common/ico_mypage.png" alt="마이페이지"></span></button>
-					</li>
-				</ul>
-			</div>
-		</div>		
-		<div class="sub-cont">
-			<div class="history">
-				<a href="javascript:;">HOME</a>
-				<span class="page-title">顧客満足度アンケート</span>
-			</div>
-			<button type="button" class="back-page">Back page</button>
 		</div>
-		<!-- //sub-cont -->
+		<!-- //header -->
 	</div>
 	<!--//header -->
 
 	<!-- container -->
 	<div id="hmjContainer" class="hmj-container test-drive">
 		<div class="hmj-content">
-			<div class="cont-outer mincase">
-                <div class=" my-confirm">
-                    <dl class="order-number">
-                        <dt>試乗予約番号</dt>
-                        <dd>2021051800000001</dd>
-                    </dl>
-                </div>
-                <div class="poll">
-                    <div class="head-area">
-                        <p class="tit">顧客満足度アンケートにご協力いただきありがとうございます。</p>
-                        <p class="txt">所要時間は<span class="fc-color">５分</span>程度であります。</p>
-                        <p class="txt">お客様の貴重なご意見は、より良いサービスを提供するための内部資料として活用されます。</p>
+			<div class="top-visual pc-only">
+				<picture>
+					<img src="../../assets/images/common/img_poll.jpg" alt="top visual">
+				</picture>
+				<div class="top-visual-text">
+					<h2 class="top-title">顧客満足度アンケート</h2>
+					<p class="top-desc">
+						お客様の貴重なご意見を<br>
+						もとにより良いサービスを提供いたします
+					</p>
+				</div>
+			</div>
+			<div class="cont-outer">
+                <div class="cont-center"> 
+					<div class="complete-area poll">
+                        <div class="tit">試乗の顧客満足度調査</div>
+                        <div class="desc">
+                            現代自動車の試乗サービスはいかかでしたか？<br>
+                            お客様の貴重なご意見はより良いサービス提供のため、内部使用目的でのみ活用されます
+                        </div>
                     </div>
-                    <div class="cont-area">
+
+                    <div class="form-area poll">
                         <ul>
                             <li>
-                                <p class="question"><em>Q1.</em>ご購入の意向はごさいますでしょうか。点数でチェックしてください。</p>
-                                <div class="data-form type1">
-                                    Type1 디자인검토중..
+                                <p class="question">ご購入の意向はごさいますでしょうか。</p>
+								<div class="data-form type2">
+                                    <div class="select-group"><!-- 유효성체크 val-error -->
+                                        <label class="btn-select-poll"><input type="radio" checked="checked" name="radioChk01" id="radioChk01_1"><span>大変満足</span></label>
+                                    	<label class="btn-select-poll"><input type="radio" name="radioChk01" id="radioChk01_2"><span>満足</span></label>
+                                    	<label class="btn-select-poll"><input type="radio" name="radioChk01" id="radioChk01_3"><span>普通</span></label>
+                                    </div>
+                                    <p class="error-msg">error text</p>
                                 </div>
                                 <!-- //type1 -->
                             </li>
                             <li>
-                                <p class="question"><em>Q2.</em>試乗車両は清潔な状態だったでしょうか。</p>
+                                <p class="question">試乗車両は清潔な状態だったでしょうか。</p>
                                 <div class="data-form type2">
-                                    <div class="radio-group"><!-- 유효성체크 val-error -->
-                                        <label class="radio"><input type="radio" name="radio" id="radioChk01"><span>大変満足</span></label>
-                                        <label class="radio"><input type="radio" checked="checked" name="radio" id="radioChk02"><span>満足</span></label>
-                                        <label class="radio"><input type="radio" name="radio" id="radioChk02"><span>普通</span></label>
-                                        <label class="radio"><input type="radio" name="radio" id="radioChk02"><span>不満</span></label>
-                                        <label class="radio"><input type="radio" name="radio" id="radioChk02"><span>大変不満</span></label>
+                                    <div class="select-group">
+                                        <label class="btn-select-poll"><input type="radio" checked="checked" name="radioChk02" id="radioChk02_1"><span>大変満足</span></label>
+                                        <label class="btn-select-poll"><input type="radio" name="radio" id="radioChk02_2"><span>満足</span></label>
+                                        <label class="btn-select-poll"><input type="radio" name="radioChk02" id="radioChk02_3"><span>普通</span></label>
+                                        <label class="btn-select-poll"><input type="radio" name="radioChk02" id="radioChk02_4"><span>不満</span></label>
+                                        <label class="btn-select-poll"><input type="radio" name="radioChk02" id="radioChk02_5"><span>大変不満</span></label>
                                     </div>
                                     <p class="error-msg">error text</p>
                                 </div>
                                 <!-- //type2 -->
                             </li>
                             <li>
-                                <p class="question"><em>Q3.</em>試乗サービスに対するご要望やコメントをご自由にご記入ください。(選択) </p>
+                                <p class="question">[選択] 試乗サービスに対するご要望やコメントをご自由にご記入ください。</p>
                                 <div class="data-form type3">
-                                    <div class="inp-textarea"><!-- 유효성체크 val-error -->
+                                    <div class="inp-textarea">
                                         <textarea name="name" rows="8" placeholder="内容をご記入ください。"></textarea>
-                                        <p class="error-msg">error text</p>
+                                        <span class="bite"><em>0</em>/100</span>
                                     </div>
+                                    <p class="error-msg">error text</p>
                                 </div>
                                 <!-- //type3 -->
                             </li>
                         </ul>
-                            
-
-                            
-
-                        
-                            
+        
+                        <div class="cta-outer">
+                            <button type="button" class="btn btn-type2"><span>保存</span></button>
+                        </div>
                     </div>
-                </div>
-
-
-                <div class="cta-outer">
-                    <button type="button" class="btn btn-type2"><span>顧客満足度アンケート</span></button>
-                </div>
+                </div>			
 			</div>
 		</div>
 	</div>
@@ -159,7 +311,102 @@
 
 	<!-- footer -->
 	<div class="hmj-footer">
-		<img src="../../assets/images/@footer.jpg" alt="footer">
+		<div class="footer-top">
+			<ul>
+				<li>
+					<ul>
+						<li><a href="#">SHOW ROOM</a></li>
+						<li><a href="#">IONIQ 5</a></li>
+						<li><a href="#">NEXO</a></li>
+						<li><a href="#">ブランド拠点</a></li>
+						<li><a href="#">MOCEAN</a></li>
+					</ul>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Purchase</button>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">オンライン購入のご案内</a></li>
+								<li><a href="#">今月の購入特典</a></li>
+								<li><a href="#">政府補助金</a></li>
+								<li><a href="#">オンライン契約</a></li>
+								<li><a href="#">見積シミュレーション</a></li>
+								<li><a href="#">試乗</a></li>
+								<li><a href="#">購入相談申込</a></li>
+								<li><a href="#">仕様百科</a></li>
+								<li><a href="#">カタログダウンロード</a></li>
+								<li><a href="#">価格表ダウンロード</a></li>
+								<li><a href="#">Referral code</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Service</button>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">サービスネットワーク</a></li>
+								<li><a href="#">充電スポット</a></li>
+								<li><a href="#">RSAサービス</a></li>
+								<li><a href="#">整備予約</a></li>
+								<li><a href="#">リコール情報</a></li>
+								<li><a href="#">BLUELINK</a></li>
+								<li><a href="#">ビルトインカメラ</a></li>
+								<li><a href="#">ナビ/カメラアップデート</a></li>
+								<li><a href="#">提携サービス</a></li>
+								<li><a href="#">アプリ設置</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Brand Story</button>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">IONIQ 5</a></li>
+								<li><a href="#">IONIQ 5 Teasing</a></li>
+								<li><a href="#">Mini 45EV</a></li>
+								<li><a href="#">IONIQ</a></li>
+								<li><a href="#">Hyundai X BTS</a></li>
+								<li><a href="#">#Thisisus</a></li>
+								<li><a href="#">Hyundai X BBC</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">SHOP</a></li>
+						<li><a href="#">イベント</a></li>
+						<li><a href="#">お知らせ</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">1:1お問合せ</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<div class="left-logo"><img src="../../assets/images/common/ico_footer_logo.svg" alt="Hyundai Logo"></div>
+			<div class="center-text">
+				<ul>
+					<li><a href="#">プライバシーポリシー</a></li>
+					<li><a href="#">利用規約</a></li>
+					<li><a href="#">Cookieポリシー </a></li>
+					<li><a href="#"><span class="ico"><img src="../../assets/images/common/ico_country_jp.png" alt="japan"></span>日本語</a></li>
+				</ul>
+				<p class="copyright">COPYRIGHT &#x24D2; HYUNDAI. ALL RIGHTS RESERVED.</p>
+			</div>
+			<div class="right-sns">
+				<ul>
+					<li><a href="#"><img src="../../assets/images/common/ico_youtube.svg" alt="youtube"></a></li>
+					<li><a href="#"><img src="../../assets/images/common/ico_twitter.svg" alt="twitter"></a></li>
+					<li><a href="#"><img src="../../assets/images/common/ico_instagram.svg" alt="instagram"></a></li>
+				</ul>
+			</div>
+		</div>
 	</div>
 	<!--//footer -->
 </div>

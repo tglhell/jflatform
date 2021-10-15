@@ -72,14 +72,13 @@
 
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<div class="inp-outer-box val-error">
+<pre class="language-html"><code><!--<div class="inp-outer-box">
 	<label for="inpTxt01">お名前 <span class="required">*</span></label>
 	<div class="inp-area">
 		<input type="text" id="inpTxt01" class="inp-item" placeholder="이름을 입력해 주세요.">
 		<button class="inp-close"></button>
 	</div>
 </div>
-<p class="noti-msg lbl-type"><span><em>0</em>/50</span></p>
 <p class="noti-msg lbl-type">info text</p>
 <p class="error-msg lbl-type">error text</p>
 
@@ -96,6 +95,7 @@
 		</div>
 	</div>
 </div>
+<p class="noti-msg lbl-type"><span><em>0</em>/50</span></p>
 <p class="error-msg lbl-type">error text</p>
 
 <div class="inp-outer-box val-error">
@@ -113,12 +113,15 @@
 </div>
 <p class="error-msg lbl-type">error text</p>
 
-<div class="inp-outer-box">
+<div class="inp-outer-box tel-type">
 	<label for="inpNum01_01">電話番号 <span class="required">*</span></label>
 	<div class="inp-slice-box">
-		<div class="inp-area">
-			<input type="text" id="inpNum01_01" class="inp-item" placeholder="080">
-			<button class="inp-close"></button>
+		<div class="slt-box type2">
+			<p class="selected-value">070</p>
+			<ul class="select-items">
+				<li>070</li>
+				<li>080</li>
+			</ul>
 		</div>
 		<span class="inp-hpn">-</span>
 		<div class="inp-area">
@@ -137,58 +140,100 @@
 <div class="inp-outer-box tel-type">
 	<label for="inpNum01_01">携帯電話 <span class="required">*</span></label>
 	<div class="inp-slice-box">
-		<div class="inp-area">
-			<input type="text" id="inpNum01_04" class="inp-item" placeholder="010">
+		<div class="slt-box type2">
+			<p class="selected-value">070</p>
+			<ul class="select-items">
+				<li>070</li>
+				<li>080</li>
+			</ul>
 		</div>
 		<span class="inp-hpn">-</span>
 		<div class="inp-area">
-			<input type="text" id="inpNum01_05" class="inp-item" placeholder="9876">
+			<input type="number" id="inpNum01_05" class="inp-item" placeholder="9876">
 		</div>
 		<span class="inp-hpn">-</span>
 		<div class="inp-area">
-			<input type="text" id="inpNum01_06" class="inp-item" placeholder="5432">
+			<input type="number" id="inpNum01_06" class="inp-item" placeholder="5432">
 		</div>
 		<button class="btn btn-type3 btn-tbl"><span>変更</span></button>
 	</div>
 </div>
 <p class="error-msg lbl-type">error text</p>
 
-<div class="inp-outer-box tel-type val-error">
-	<label for="inpNum01_01">携帯電話 <span class="required">*</span></label>
+<div class="inp-outer-box">
+	<label for="inpBirth01_01">生年月日 <span class="required">*</span></label>
 	<div class="inp-slice-box">
-		<div class="inp-area">
-			<input type="text" id="inpNum01_04_1" class="inp-item" placeholder="010">
+		<div class="slt-box type2">
+			<p class="selected-value">1980</p>
+			<ul class="select-items">
+				<li>option1</li>
+				<li>option2</li>
+				<li>option3</li>
+			</ul>
 		</div>
-		<span class="inp-hpn">-</span>
-		<div class="inp-area">
-			<input type="text" id="inpNum01_05_1" class="inp-item" placeholder="9876">
+		<div class="slt-box type2">
+			<p class="selected-value">Month</p>
+			<ul class="select-items">
+				<li>option1</li>
+				<li>option2</li>
+				<li>option3</li>
+			</ul>
 		</div>
-		<span class="inp-hpn">-</span>
-		<div class="inp-area">
-			<input type="text" id="inpNum01_06_1" class="inp-item" placeholder="5432">
+		<div class="slt-box type2">
+			<p class="selected-value">Day</p>
+			<ul class="select-items">
+				<li>option1</li>
+				<li>option2</li>
+				<li>option3</li>
+			</ul>
 		</div>
-		<button class="btn btn-type3 btn-tbl"><span>変更</span></button>
 	</div>
 </div>
-<p class="error-msg lbl-type">error text</p>
+<p class="error-msg lbl-type">生年月日を選択してください。</p>
 
-<div class="inp-outer-box tel-type">
+<div class="inp-outer-box inp-type">
 	<label for="inpNum01_011">リファラルコード</label>
 	<div class="inp-btn-box">
 		<div class="inp-area">
 			<input type="text" id="inpNum01_011" class="inp-item" placeholder="きむら">
 			<button class="inp-close"></button>
 		</div>
-		<button class="btn btn-type3 btn-tbl"><span>確認</span></button>
+		<button class="btn btn-type3 btn-tbl"><span>確認確認確認</span></button>
 	</div>
 </div>
 <p class="error-msg lbl-type">error text</p>
 
-<div class="inp-outer-box tel-type val-error">
-	<label for="inpNum01_011">リファラルコード</label>
+<div class="inp-outer-box inp-type">
+	<label for="inpNum01_0111">リファラルコード</label>
 	<div class="inp-btn-box">
 		<div class="inp-area">
 			<input type="text" id="inpNum01_0111" class="inp-item" placeholder="きむら">
+			<button class="inp-close"></button>
+		</div>
+		<span class="time-num">03:00</span>
+		<button class="btn btn-type3 btn-tbl"><span>認証</span></button>
+	</div>
+</div>
+<p class="error-msg lbl-type">error text</p>
+
+<div class="inp-outer-box inp-type">
+	<label for="inpNum01_01111">リファラルコード</label>
+	<div class="inp-btn-box">
+		<div class="inp-area">
+			<input type="text" id="inpNum01_01111" class="inp-item" placeholder="きむら">
+			<button class="inp-close"></button>
+		</div>
+		<span class="time-num">03:00</span>
+		<button class="btn btn-type2 btn-tbl"><span>認証</span></button>
+	</div>
+</div>
+<p class="error-msg lbl-type">error text</p>
+
+<div class="inp-outer-box inp-type val-error">
+	<label for="inpNum01_01111_1">リファラルコード</label>
+	<div class="inp-btn-box">
+		<div class="inp-area">
+			<input type="text" id="inpNum01_01111_1" class="inp-item" placeholder="きむら">
 			<button class="inp-close"></button>
 		</div>
 		<button class="btn btn-type3 btn-tbl"><span>確認</span></button>
@@ -242,12 +287,16 @@
 				</div>
 			</div>
 			<p class="error-msg lbl-type">error text</p>
-			<div class="inp-outer-box">
+			
+			<div class="inp-outer-box tel-type">
 				<label for="inpNum01_01">電話番号 <span class="required">*</span></label>
 				<div class="inp-slice-box">
-					<div class="inp-area">
-						<input type="text" id="inpNum01_01" class="inp-item" placeholder="080">
-						<button class="inp-close"></button>
+					<div class="slt-box type2">
+						<p class="selected-value">070</p>
+						<ul class="select-items">
+							<li>070</li>
+							<li>080</li>
+						</ul>
 					</div>
 					<span class="inp-hpn">-</span>
 					<div class="inp-area">
@@ -266,16 +315,20 @@
 			<div class="inp-outer-box tel-type">
 				<label for="inpNum01_01">携帯電話 <span class="required">*</span></label>
 				<div class="inp-slice-box">
-					<div class="inp-area">
-						<input type="text" id="inpNum01_04" class="inp-item" placeholder="010">
+					<div class="slt-box type2">
+						<p class="selected-value">070</p>
+						<ul class="select-items">
+							<li>070</li>
+							<li>080</li>
+						</ul>
 					</div>
 					<span class="inp-hpn">-</span>
 					<div class="inp-area">
-						<input type="text" id="inpNum01_05" class="inp-item" placeholder="9876">
+						<input type="number" id="inpNum01_05" class="inp-item" placeholder="9876">
 					</div>
 					<span class="inp-hpn">-</span>
 					<div class="inp-area">
-						<input type="text" id="inpNum01_06" class="inp-item" placeholder="5432">
+						<input type="number" id="inpNum01_06" class="inp-item" placeholder="5432">
 					</div>
 					<button class="btn btn-type3 btn-tbl"><span>変更</span></button>
 				</div>
@@ -285,15 +338,15 @@
 			<div class="inp-outer-box">
 				<label for="inpBirth01_01">生年月日 <span class="required">*</span></label>
 				<div class="inp-slice-box">
-					<div class="slt-box">
-						<p class="selected-value">1980</p>
+					<div class="slt-box type2">
+						<p class="selected-value">Year</p>
 						<ul class="select-items">
 							<li>option1</li>
 							<li>option2</li>
 							<li>option3</li>
 						</ul>
 					</div>
-					<div class="slt-box">
+					<div class="slt-box type2">
 						<p class="selected-value">Month</p>
 						<ul class="select-items">
 							<li>option1</li>
@@ -301,7 +354,7 @@
 							<li>option3</li>
 						</ul>
 					</div>
-					<div class="slt-box">
+					<div class="slt-box type2">
 						<p class="selected-value">Day</p>
 						<ul class="select-items">
 							<li>option1</li>
@@ -465,7 +518,7 @@
 							<input type="text" class="inp-item" placeholder="〒" readonly>
 							<button class="inp-close"></button>
 						</div>
-						<button class="btn btn-tbl btn-type3"><span>郵便番号検索</span></button>
+						<button class="btn btn-tbl btn-type3"><span>郵便番号検索郵便番号検索</span></button>
 					</div>
 					<div class="inp-area">
 						<input type="text" class="inp-item" placeholder="都道府県" readonly>
@@ -824,6 +877,14 @@
 			<label class="radio"><input type="radio" disabled="disabled" name="radio" id="radioChk03"><span>Disabled</span></label>
 			<label class="radio"><input type="radio" checked="checked" disabled="disabled"><span>Checked+Disabled</span></label>
 
+			<div class="conIn_tip">
+				.chk.type2 &gt; input + span<br>Text Bold & Display Block
+			</div>
+			
+			<label class="radio type2"><input type="radio" name="radio" id="radioChk01_1"><span>Default</span></label>
+
+
+
 			<h4 class="btm-border">- 라디오 그룹</h4>
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
@@ -887,7 +948,7 @@
 <!-- //코드 삽입 -->
 
 			<div class="conIn_tip">
-				.btn-select / .btn-select2
+				.btn-select / .btn-select2 / .btn-select3
 			</div>
 
 			<label class="btn-select"><input type="radio" name="rdSelect" id="rdSelect1" checked="checked"><span>Btn Select Checked</span></label>
@@ -907,6 +968,13 @@
 				<label class="btn-select2"><input type="radio" name="rdSelect4" id="rdSelect4_1"><span>その他</span></label>
 				<label class="btn-select2"><input type="radio" name="rdSelect4" id="rdSelect5_1"><span>発送遅延</span></label>
 				<label class="btn-select2"><input type="radio" name="rdSelect4" id="rdSelect6_1"><span>商品不具合/破損</span></label>
+			</div>
+
+			<div class="select-group">
+				<label class="btn-select3"><input type="radio" name="rdSelect4" id="rdSelect7_1" checked="checked"><span>心変わり</span></label>
+				<label class="btn-select3"><input type="radio" name="rdSelect4" id="rdSelect8_1"><span>その他</span></label>
+				<label class="btn-select3"><input type="radio" name="rdSelect4" id="rdSelect9_1"><span>発送遅延</span></label>
+				<label class="btn-select3"><input type="radio" name="rdSelect4" id="rdSelect10_1"><span>商品不具合/破損</span></label>
 			</div>
 
 

@@ -1,805 +1,230 @@
 @charset "utf-8";
 
-/* toggle */
-.toggle.bg-type .tit-btn {
-    padding-left: 16px;
+/* 시승 */
+.test-drive .toggle.reserve-info .cont {
+    padding: 48px;
     background-color: #fafafa;
-    border-top: 1px solid #999;
-    font-size: 16px;
 }
-.toggle.bg-type .tit-btn:before {
-    right: 16px;    
+.test-drive .reserve-info .tit-btn {
+    display: flex;
+    justify-content: space-between;
 }
-.toggle.bg-type .tit-btn .price {
-    float: right;
-    padding-right: 48px;  
-}
-
-/* 상세견적 */
-/* .hmj-container.estimate .hmj-content .cont-center {
-    width: 736px;
-}
-.hmj-container.estimate .hmj-content .cont-right {
-    width: 320px;
-    padding-left: 64px;
-} */
-.hmj-container.estimate .hmj-content .cont-outer:first-child {
-    padding-top: 40px;
-}
-.estimate .car-area {
-    margin-bottom: 72px;
-    text-align: center;
-}
-.estimate .car-area .name strong {
-    display: block;
-    font-size: 40px;
-    line-height: 64px;
-}
-.estimate .car-area .name span {
-    font-size: 20px;
-    line-height: 32px;
-}
-.estimate .car-area .img  {
-    padding: 40px 0 86px;
-    background: url(../images/common/car_bottom_bg.png) no-repeat bottom center; 
-    background-size: 584px 120px;
-}
-.estimate .car-area .img img {
-    width: 336px;
-    height: 132px;
-}
-.estimate .car-area .s-text {
-    color: #666;
-    font-size: 11px;
-    line-height: 20px;
+.test-drive .reserve-info .tit-btn .date {
+    font-size: 12px;
+    color: #999;
+    margin-right: 32px;
     font-family: 'HyundaiSansTextJP';
 }
-.estimate .toggle {
-    border-bottom: none;
-}
-.estimate .toggle .thum-type {
-    margin: 0 48px 0 16px;    
-}
-.estimate .toggle .thum-type li {
-    position: relative;
-    min-height: 120px;
-    padding: 24px 136px 0;
-}
-.estimate .toggle .thum-type .thumb {
-    position: absolute;
-    top: 24px;
-    left: 0;
-}
-.estimate .toggle .thum-type .thumb .chk input + span {
-    padding-left: 0;
-}
-.estimate .toggle .thum-type .thumb img {
-    width: 120px;
-    height: 120px;
-}
-.estimate .toggle .thum-type .name {
-    max-height: 40px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    word-break: break-all;
-}
-.estimate .toggle .thum-type .btn-text2 {
-    margin-top: 16px;
-}
-.estimate .toggle .thum-type .amount-calc {
-    margin-top: 16px;
-}
-.estimate .toggle .thum-type .price {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    margin-top: -12px;
-    line-height: 22px;
-}
-.estimate .list-type > li {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 24px 48px 0 16px;
-}
-.estimate .list-type li > .tit {
-    width: 176px;
-    margin-right: 16px;
-    color: #666;
-    line-height: 22px;
-}
-.estimate .list-type .price {
-    width: 128px;
-    text-align: right;
-}
-.estimate .list-type .text-cont {
-    flex: 1;    
-}
-.estimate .list-type .text-cont .chip {
-    width: 32px;
-    height: 32px;
-    margin: -5px 16px -5px 0;
-    box-sizing: border-box;
-    border: none;
-    background-position: center;
-    display: inline-block;
-    vertical-align: middle;
-    background-size: cover;
-}
-.estimate .list-type .slt-box-area .select-area {
-    flex:1;
-    margin: -12px 0;
-}
-.estimate .list-type .slt-box-area .tooltip-box .tit {
-    color: #191919;
-}
-.estimate .list-type .slt-box-area .tooltip-box .cont {
-    color: #333;
-    font-size: 12px;
-}
-.estimate .toggle .active > .cont {
-    margin-bottom: 72px;
-}
-.estimate .toggle .inp-list {
-    margin:16px 96px 0 16px;
-}
-.estimate .toggle .inp-list.type1 > li:not(:first-child)  {
-    margin-top: 56px;
-}
-.estimate .toggle .inp-list.type2 > li:not(:first-child) {
-    margin-top: 40px;
-}
-.estimate .toggle .inp-list .caution {
-    margin: 8px 0 0 192px;
-}
-.estimate .toggle .inp-list .radio-group {
-    flex: 1;
-}
-.estimate .js-radio-cont {
-    display: none;
-    margin: 24px 0 0 208px;
-}
-.estimate .js-radio-cont .custom-radio li {
-    position: relative;
-}
-.estimate .js-radio-cont .custom-radio li:not(:first-child) {
-    margin-top: 16px;
-}
-.estimate .js-radio-cont .custom-radio input {
-    display: none;
-}
-.estimate .js-radio-cont .custom-radio .btn-radio {
-    display: block;
-    width: 100%;
-    height: 84px;
-    padding: 16px;
-    border-radius: 4px;
-    background-color: #fafafa;
-    border:1px solid #fafafa;
-}
-.estimate .js-radio-cont .custom-radio input:checked + .btn-radio {
-    border-color: #0793ea;
-    background-color: #fff;
-}
-.estimate .js-radio-cont .custom-radio .store {
-    display: block;
-    font-weight: 500;
-    margin-bottom: 8px;
-}
-.estimate .js-radio-cont .custom-radio .btn-icon{
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    margin-top: -10px;
-}
-.estimate .payment-area .cont-text {
-    padding: 18px 0 16px 16px;
-    border-top: 1px solid #999;
-    border-bottom: 1px solid #e9e9e9;
-    background-color: #fafafa;
-    font-weight: 500;
-}
-.estimate .mo-bottom-fixed .btn-down {
-    display: none;    
-}
-.estimate .payment-area .payment {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 24px -4px 32px;
-}
-.estimate .payment-area .payment label {
-    width: 25%;
-    padding: 0 4px;
-}
-.estimate .payment-area .payment input {
-    display: none;
-}
-.estimate .payment-area .payment span {
-    cursor: pointer;
-    display: block;
-    text-align: center;
-    width: 100%;
-    height: 97px;
-    border:1px solid #ccc;
-    border-radius: 4px;
-    color: #666;
-    padding-top: 58px;
-    
-}
-.estimate .payment-area .payment .card span {
-    background: url(../images/common/ico_card.svg) no-repeat center 12px;
-    background-size: 48px 48px;
-}
-.estimate .payment-area .payment .cash span {
-    background: url(../images/common/ico_cash.svg) no-repeat center 12px;
-    background-size: 48px 48px;
-}
-.estimate .payment-area .payment .linepay span {
-    background: url(../images/common/ico_linepay.svg) no-repeat center 24px;
-    background-size: 68px 20px;
-}
-.estimate .payment-area .payment .paypay span {
-    background: url(../images/common/ico_paypay.svg) no-repeat center 24px;
-    background-size: 80px 20px;
-}
-.estimate .payment-area .payment input[type=radio]:checked + span {
-    border-color: #0793ea;
-    color: #191919;
-}
-.estimate .payment-area .payment .card input[type=radio]:checked + span {
-    background-image: url(../images/common/ico_card_on.svg);
-}
-.estimate .payment-area .payment .cash input[type=radio]:checked + span {
-    background-image: url(../images/common/ico_cash_on.svg);
-}
-.estimate .payment-area .payment .linepay input[type=radio]:checked + span {
-    background-image: url(../images/common/ico_linepay_on.svg);
-}
-.estimate .payment-area .payment .paypay input[type=radio]:checked + span {
-    background-image: url(../images/common/ico_paypay_on.svg);
-}
-.estimate .cont-right .cont-text {
-    margin: 72px 0 8px;
-    font-weight: 500;
-}
-.estimate .cont-right .mo-bottom-fixed .total {
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    line-height: 30px;
-}
-.estimate .cont-right .mo-bottom-fixed .mo-toggle .mo-btn {
-    display: none;
-}
-.estimate .cont-right .mo-bottom-fixed .mo-toggle .total {
-    padding: 16px 0;
-    border-top: 1px solid #999;
-}
-.estimate .cont-right .mo-bottom-fixed .mo-toggle .cont {
-    margin-bottom: 24px;
-    padding: 16px;
-    background-color: #fafafa;
-}
-.estimate .cont-right .mo-bottom-fixed .mo-toggle .cont li {
-    display: flex;
-    justify-content: space-between;
-}
-.estimate .cont-right .mo-bottom-fixed .mo-toggle .cont li span {
-    color: #666;
-}
-.estimate .cont-right .mo-bottom-fixed .mo-toggle .cont li:not(:first-child) {
-    margin-top: 24px;
-}
-.estimate .cont-right .mo-bottom-fixed .mo-toggle + .total {
-    margin-bottom: 32px;
-    font-weight: 500;
-}
-.estimate .cont-right .email-area {
-    margin-top: -32px;
-}
-.estimate .cont-right .email-area .inp-outer-box {
-    margin-top: 0;
-}
-.estimate .cont-right .banner-area button {
-    width: 100%;
-    margin-bottom: 16px;
-}
-.cp-complete .complete-area {
-    font-size: 24px;
-    line-height: 38px;
-    font-weight: 500;
-    text-align: center;
-}
-.cp-complete .complete-area::before {
-    content: '';
-    display: block;
-    width: 56px;
-    height: 56px;
-    margin: 0 auto 24px;
-    background: url(../images/common/ico_estimate.svg) no-repeat center; 
-}
-.cp-complete .order-num {
-    width: 432px;
-    height: 72px;
-    margin: 32px auto 0;
-    line-height: 72px;
-    text-align: center;
-    border-radius: 36px;
-    border: 1px solid #e9e9e9;
-    font-size: 16px;
-}
-.cp-complete .order-num::before {
-    content: '';
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    margin-top: -4px;
-    background: url(../images/common/ico_estimate_car.svg) no-repeat center;  
-}
-.cp-complete .order-num strong {
-    padding-left: 8px;
-    color: #1c6bba;
-}
-.cp-complete .info-area {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 64px 0;
-    padding: 56px 96px 32px;
-    border: 1px solid #e9e9e9;
-    border-radius: 8px;
-}
-.cp-complete .info-area .car-area {
-    width: calc(100% - 464px);
-}
-.cp-complete .info-area .car-area .img {
-    width: 240px;
-    height: 95px;
-    margin: 32px 194px 24px 30px;
-}
-.cp-complete .info-area .car-area .name {
-    font-size: 16px;
-    line-height: 30px;
-    font-weight: 500;
-}
-.cp-complete .info-area .car-area .s-text {
-    color: #666;
-    font-size: 12px;
-    line-height: 20px;
-    font-family: 'HyundaiSansTextJP';
-}
-.cp-complete .info-area .order-state {
-    width: 464px;
-    height: 205px;
-    line-height: 205px;
-    border-radius: 8px;
-    background-color: #fafafa;
-    text-align: center;
-    font-size: 18px;
-}
-.cp-complete .info-area .order-state strong {
-    margin: 0 16px 0 8px;
-}
-.cp-complete .info-area .order-state .btn-text2 {
-    vertical-align: middle;
-}
-.cp-complete .info-area .info-caution {
-    width: 100%;
-    margin-top: 48px;
-    padding-top: 32px;
-    border-top: 1px solid #e9e9e9;
-}
-.cp-complete .info-area .info-caution p.caution {
-    font-size: 14px;
-    line-height: 22px;
-    margin-bottom: 16px;
-}
-.cp-complete .payment-info {
-    margin-bottom: 64px;
-}
-.cp-complete .payment-info p.title {
-    margin-bottom: 8px;
-    font-size: 18px;
-    font-weight: 500;
-}
-.cp-complete .payment-info ul {
-    border-top: 1px solid #999;
-    border-bottom: 1px solid #e9e9e9;
-}
-.cp-complete .payment-info li {
-    display: flex;
-}
-.cp-complete .payment-info li > span {
-    padding-left: 16px;
-}
-.cp-complete .payment-info li:first-child > span {
-    padding: 24px 0 16px 16px;
-}
-.cp-complete .payment-info li:last-child > span {
-    padding-bottom: 24px;
-}
-.cp-complete .payment-info li .tit {
-    width: 252px;
-    color: #666;
-    background-color: #fafafa;
-}
-.cp-complete .payment-info li .cont strong {
-    color: #1c6bba;
-    font-weight: 500;
-}
-.pop-estimate .info-text {
-    line-height: 22px;
-}
-.pop-estimate .info-text .tit {
-    margin-bottom: 8px;
+.test-drive .reserve-info .tit {
     font-size: 16px;
     line-height: 26px;
     font-weight: 500;
 }
-.pop-estimate .info-text .s-text {
-    color: #333;
-    font-size: 12px;
-    line-height: 20px;
-    font-family: 'HyundaiSansTextJP';
-}
-.pop-estimate .map {
-    height: 100%;
-}
-.pop-estimate .order-step li {
-    position: relative;
-    padding-left: 78px;
-    font-size: 12px;
-    line-height: 20px;
-    color: #666;
-}
-.pop-estimate .order-step li:not(:nth-child(7)) {
-    padding-bottom: 48px;
-}
-.pop-estimate .order-step li strong {
-    display: block;
-    margin-bottom: 2px;
-    font-size: 14px;
+.test-drive .reserve-info .tbl-list li {
+    display: flex;
+    padding-top: 16px;
+    align-items: baseline;
     line-height: 22px;
+}
+.test-drive .reserve-info .tbl-list .item {
+    color: #999;
+    width: 136px;
+    padding-right: 16px;
+}
+.test-drive .reserve-info .tbl-list .txt {
+    flex: 1 0;
+}
+.test-drive .reserve-info .cta-outer {
+    margin-top: 40px;
+}
+.test-drive .form-area {
+    margin-top: 64px;
+}
+.test-drive .form-area .cta-outer {
+    margin-top: 40px;
+}
+.test-drive .form-area ul {
+    width: 100%;
+    padding: 55px;
+    border: 1px solid #e9e9e9;
+    border-radius: 8px;
+}
+.test-drive .form-area li:not(:first-child) {
+    margin-top: 40px;
+}
+.test-drive .form-area.non-login ul {
+    padding-left: 247px;
+    padding-right: 247px;
+}
+.test-drive .top-visual-text {
+    color: #fff;
+}
+.test-drive .form-area.poll .question {
+    line-height: 22px;
+    margin-bottom: 16px;
+}
+.test-drive .form-area.poll .btn-select-poll {
+    height: 48px;
+}
+.test-drive .form-area.poll .select-group .btn-select-poll:last-child {
+    margin: 0;
+}
+.test-drive .form-area.poll .btn-select-poll span {
+    width: 195px;
+    height: 48px;
+    border-radius: 4px;
+}
+.test-drive .form-area.poll .btn-select-poll input:checked + span {
+    color: #0793ea;
+    border-color: #0793ea;
+}
+.test-drive .complete-area.non-login::before {
+    background-image: url(../images/common/ico_non_login.svg);
+}
+.test-drive .complete-area.poll::before {
+    background-image: url(../images/common/ico_poll.svg);
+}
+.test-drive .poll-complete {
+    margin-top: 96px;
+    text-align: center;
+}
+.test-drive .poll-complete h2 {
     font-weight: 500;
-    color: #333;
 }
-.pop-estimate .order-step li:not(:nth-child(7)):before {
-    content: '';
-    display: block;
+.test-drive .poll-complete .s-text {
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 30px;
+}
+.test-drive .poll-complete .images-html {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1920px;
+    margin: 80px auto 0;
+}
+.test-drive .poll-complete .images-html .html {
+    position: relative;
+    width: 480px;
+    color: #fff;
+}
+.test-drive .poll-complete .images-html .html .text-area {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
     position: absolute;
+    width: 312px;
+    left: 50%;
     top: 0;
-    left: 31px;
-    z-index: 1;
-    width: 4px;
-    height: 100%;
-    background: #f5f5f5;
+    bottom: 0;
+    transform: translate(-50%, 0);
 }
-.pop-estimate .order-step li i {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    display: block;
-    overflow: hidden;
-    width: 62px;
-    height: 62px;
-    text-indent: -99999em;
-    background-color: #fafafa;
-    border-radius: 50%;
-    background-repeat: no-repeat;
-    background-size: 40px;
-    background-position: 11px;
+.test-drive .poll-complete .images-html .html .text-area .type1 {
+    font-size: 16px;
+    line-height: 26px;
 }
-.pop-estimate .order-step li i.step1 {
-    background-image: url(../images/common/ico_order_step1.svg);
+.test-drive .poll-complete .images-html .html .text-area .type2 {
+    margin-top: 16px;
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: 500;
 }
-.pop-estimate .order-step li i.step2 {
-    background-image: url(../images/common/ico_order_step2.svg);
+.test-drive .poll-complete .btn-img {
+    margin-top: 40px;
 }
-.pop-estimate .order-step li i.step3 {
-    background-image: url(../images/common/ico_order_step3.svg);
+.test-drive .poll-complete .images-html .html .text-area .cta-outer {
+    margin-top: 64px;
 }
-.pop-estimate .order-step li i.step4 {
-    background-image: url(../images/common/ico_order_step4.svg);
+.layer-popup-cont.test-drive .reserve-info .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #999;
 }
-.pop-estimate .order-step li i.step5 {
-    background-image: url(../images/common/ico_order_step5.svg);
+.layer-popup-cont.test-drive .reserve-info .title .txt {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
 }
-.pop-estimate .order-step li i.step6 {
-    background-image: url(../images/common/ico_order_step6.svg);
+.layer-popup-cont.test-drive .reserve-info .title .date {
+    color: #999;
+    font-size: 12px;
+    line-height: 20px;
 }
-.pop-estimate .order-step li i.step7 {
-    background-image: url(../images/common/ico_order_step7.svg);
+.layer-popup-cont.test-drive .reserve-info .tbl-list {
+    padding-top: 8px;
 }
-.pop-estimate .order-step li i.step8 {
-    background-image: url(../images/common/ico_order_step8.svg);
-}
-.pop-estimate .order-step li:last-child {
-    margin-top: 32px;
-    padding-top: 32px;
-    padding-bottom: 0;
-    border-top: 8px solid #f5f5f5;
-}
-.pop-estimate .order-step li:last-child::before {
-    content: none;
-}
-.pop-estimate .order-step  li:last-child i {
-    top: 32px;
-}
-.pop-estimate .order-step li .text {
-    display: table-cell;
-    height: 62px;
-    vertical-align: middle;
-}    
+
 @media screen and (max-width: 1119px) {
-    .hmj-container.estimate {
-        padding-bottom: 215px;
-    }
-    .estimate .car-area {
-        margin-bottom: 56px;
-    }
-    .estimate .car-area .name strong {
-        font-size: 24px;
-        line-height: 28px;
-        margin-bottom: 8px;
-    }
-    .estimate .car-area .name span {
-        font-size: 16px;
-        line-height: 26px;
-    }
-    .estimate .car-area .img  {
-        padding: 32px 56px 60px;
-        background-size: 100% auto;
-    }
-    .estimate .car-area .img img {
-        width: 100%;
-        height: 100%;
-    }
-    .toggle.bg-type .tit-btn {
-        font-size: 13px;
-    }
-    .toggle.bg-type .tit-btn .price {
-        padding-right: 24px
-    }
-    .estimate .toggle .inp-list {
-        margin: 16px 16px 0 16px;
-    }
-    .estimate .toggle .inp-list .caution {
-        margin-left: 0;
-    }
-    .estimate .list-type > li {
-        position: relative;
-        margin: 24px 20px 0;
-        padding: 0;
-    }
-    .estimate .list-type.type1 .tit {
-        width: 100%;
-        margin-bottom: 8px;
-    }
-    .estimate .list-type .text-cont .chip {
-        width: 24px;
-        height: 24px;
-        margin: -2px 8px -2px 0;
-    }
-    .estimate .list-type .slt-box-area {
+    .test-drive .reserve-info .tit-btn {
         flex-flow: column;
     }
-    .estimate .list-type .slt-box-area .select-area {
-        margin: 8px 0 0 0;
-    }
-    .estimate .list-type .slt-box-area .price {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin: 0;
-    }
-    .estimate .toggle .active > .cont {
-        margin-bottom: 56px;
-    }
-    .estimate .toggle .thum-type {
-        margin: 0 20px 0;    
-    }
-    .estimate .toggle .thum-type li {
-        position: relative;
-        min-height: 96px;
-        padding-left: 112px;
-        padding-right: 0;
-    }
-    .estimate .toggle .thum-type li:not(:first-child) {
-        margin-top: 24px;
-        border-top: 1px solid #e9e9e9;
-    }
-    .estimate .toggle .thum-type .thumb img {
-        width: 96px;
-        height: 96px;
-    }
-    .estimate .toggle .thum-type .name {
-        font-weight: 500;
-        font-size: 12px;
-    }
-    .estimate .toggle .thum-type .price{
-        top: unset;
-        bottom: 0;
-    }
-    .estimate .js-radio-cont {
-        margin-left: 0;
-    }
-    .estimate .js-radio-cont .custom-radio .btn-radio {
-        font-size: 13px;
-    }
-    .estimate .payment-area .payment {
-        margin: 20px 16px 32px
-    }
-    .estimate .payment-area .payment label {
-        width: 50%;
-        padding: 4px;
-    }
-    .estimate .payment-area .payment span {
-        height: 88px;
-        padding-top: 52px;
-        font-size: 13px;
-    }
-    .estimate .payment-area .payment .card span,
-    .estimate .payment-area .payment .cash span {
-        background-position-y: 7px;
-    }
-    .estimate .payment-area .payment .linepay span,
-    .estimate .payment-area .payment .paypay span {
-        background-position-y: 20px;
-    }
-    .estimate .payment-area .check-terms {
-        margin: 0 20px 32px;
-    }
-    .estimate .cont-right .cont-text {
-        margin-top: 56px;
-    }
-    .estimate .cont-right .email-area,
-    .estimate .cont-right .banner-area {
-        padding: 0 20px;
-    }
-    .cont-right .mo-bottom-fixed .mo-toggle .cont {
-        display: none;
-    }
-    .estimate .cont-right .mo-bottom-fixed .mo-toggle .total {
-        border-top: none;
-        font-size: 14px;
-    }
-    .estimate .cont-right .mo-bottom-fixed .mo-toggle .mo-btn {
-        border-top: none;
-        position: absolute;
-        top: -24px;
-        left: 0;
-        right: 0;
-        display: block;
-        height: 24px;
-        font-size: 0;
-        width: 100%;
-        background: transparent url(../images/mo/bg_floating_shape.png) no-repeat center top;
-    }
-
-    .estimate .cont-right .mo-bottom-fixed .mo-toggle .mo-btn::before {
-        content: '';
-        -webkit-transform: rotate(180deg);
-        transform: rotate(180deg);
-        transition: all .3s ease-in;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        opacity: .4;
-        width: 24px;
-        height: 24px;
-        margin: -8px 0 0 -12px;
-        background: url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h16v16H0z'/%3E%3Cpath stroke='%23191919' stroke-width='2' d='M1 11l6.998-7 7 7'/%3E%3C/g%3E%3C/svg%3E") no-repeat center center;
-    }
-    .estimate .cont-right .mo-bottom-fixed .mo-toggle .item.active .mo-btn::before {
-        transition: all .3s ease-in;
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-        opacity: 1;
-    }
-    .estimate .cont-right .mo-bottom-fixed .total {
-        font-size: 16px;
-        line-height: 26px;
-        padding-top: 16px;
-        border-top: 1px solid #e9e9e9;
-    }
-    .estimate .cont-right .mo-bottom-fixed .mo-toggle .cont {
-        margin-bottom: 0;
-        border-top:1px solid #e9e9e9;
-        font-size: 13px;
-    }
-    .estimate .cont-right .mo-bottom-fixed .mo-toggle .cont li:not(:first-child) {
-        margin-top: 16px;
-    }
-    .cp-complete {
-        padding-left:20px;
-        padding-right:20px;
-    }
-    .cp-complete .complete-area {
-        margin-top: 40px;
-        font-size: 16px;
-        line-height: 26px;
-    }
-    .cp-complete .order-num {
-        width: 100%;
-        height: 56px;
-        line-height: 56px;
-        font-size: 12px;
-    }
-    .cp-complete .order-num strong {
-        padding-left: 12px;
-    }
-    .cp-complete .info-area {
-        display: block;
-        margin: 40px 0 56px;
-        padding: 0;
-        border: none;
-    }
-    .cp-complete .info-area .car-area,
-    .cp-complete .info-area .order-state {
-        width: 100%;
-        text-align:center;
-    }
-    .cp-complete .info-area .car-area .name {
-        max-width:730px;
-        margin: 0 auto;
-        padding-left: 44px;
-        font-weight: 500;
-        text-align:left;
-    }
-    .cp-complete .info-area .car-area .name strong {
-        display: block;
-        margin-bottom: 4px;
-        font-size: 16px;
-        line-height: 26px;
-    }
-    .cp-complete .info-area .car-area .name span {
-        font-size: 13px;
+    .test-drive .reserve-info .tit-btn .date {
+        margin-top: 8px;
         line-height: 20px;
     }
-    .cp-complete .info-area .car-area .img {
-        width: 100%;
-        height: auto;
-        margin: 36px 0 16px;
-        padding: 0 36px;
+    .test-drive .toggle.reserve-info .cont {
+        padding: 40px 20px;
+        font-size: 13px;
     }
-    .cp-complete .info-area .car-area .s-text {
-        text-align: center;
-        font-size: 11px;
-    }
-    .cp-complete .info-area .order-state {
-        height: 88px;
-        line-height: 88px;
-        margin-top: 40px;
+    .test-drive .reserve-info .tit {
         font-size: 14px;
     }
-    .cp-complete .info-area .info-caution {
-        margin-top: 0;
-        border-top: none;    
+    .test-drive .reserve-info .tbl-list .item {
+        width: 96px;
     }
-    .cp-complete .info-area .info-caution p.caution {
-        font-size: 12px;
-        margin-bottom: 8px;
+    .test-drive .form-area {
+        padding: 0 20px;
     }
-    .cp-complete .payment-info p.title {
+    .test-drive .form-area ul {
+        padding: 0 !important;
+        border: none;
+    }
+    .test-drive .complete-area {
+        padding: 0 20px;
+    }
+    .test-drive .reserve-info .tbl-list {
+        font-size: 13px;
+    }
+    .test-drive .form-area.poll .btn-select-poll,
+    .test-drive .form-area.poll .btn-select-poll span {
+        width: 100%;
+        margin-right: 0;
+    }
+    .test-drive .poll-complete {
+        margin-top: 40px;
+    }
+    .test-drive .poll-complete .s-text {
+        padding: 0 20px;
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .test-drive .poll-complete .images-html {
+        width: 100%;
+        margin-top: 40px;
+        align-items: center;
+        flex-flow: column;
+    }
+    .test-drive .poll-complete .images-html > .img {
+        display: none;
+    }
+    .test-drive .poll-complete .images-html .html {
+        width: 100%;
+    }
+    .test-drive .poll-complete .images-html .html .text-area .type1 {
         font-size: 14px;
         line-height: 22px;
     }
-    .cp-complete .payment-info {
-        margin-bottom: 24px;
-        font-size: 12px;
+    .test-drive .poll-complete .images-html .html .text-area .type2 {
+        font-size: 18px;
+        line-height: 30px;
     }
-    .cp-complete .payment-info li:first-child > span {
-        padding: 16px 0 12px 16px;
+    .layer-popup-cont.test-drive .reserve-info .title {
+        flex-flow: wrap;
     }
-    .cp-complete .payment-info li:last-child > span {
-        padding-bottom: 16px;
-    }
-    .cp-complete .payment-info li .tit {
-        width: 112px;
+    .layer-popup-cont.test-drive .reserve-info .title .txt {
+        margin-bottom: 4px;
+        font-size: 16px;
+        line-height: 26px;
     }
 }

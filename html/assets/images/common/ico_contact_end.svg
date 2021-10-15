@@ -1,7 +1,18 @@
-<svg width="96" height="96" xmlns="http://www.w3.org/2000/svg">
-    <g fill="none" fill-rule="evenodd">
-        <path stroke="#0793EA" stroke-width="4" d="M31.708 47.67 42.57 58.533l21.723-21.723"/>
-        <circle stroke="#666" stroke-width="2" cx="48" cy="48" r="46"/>
-        <path d="M0 0h96v96H0z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>681576F0-9075-4291-88EA-DAD737A7C492</title>
+    <g id="03_Template" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="[PC]-Result-Message" transform="translate(-1064.000000, -880.000000)" stroke-width="2">
+            <g id="Result-Message" transform="translate(856.000000, 880.000000)">
+                <g id="common-/-alerts-/-ic_check_80" transform="translate(208.000000, 0.000000)">
+                    <g id="Group-2" transform="translate(1.000000, 1.000000)">
+                        <line x1="32" y1="46" x2="24" y2="38" id="Path-47" stroke="#0793EA"></line>
+                        <line x1="34" y1="50" x2="56" y2="28" id="Path-47" stroke="#0793EA"></line>
+                        <circle id="Oval" stroke="#666666" cx="39" cy="39" r="38"></circle>
+                        <path d="M39.5,8 C22.1030304,8 8,22.1030304 8,39.5 M39.5,71 C56.8969696,71 71,56.8969696 71,39.5" id="Shape" stroke="#666666"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
     </g>
 </svg>

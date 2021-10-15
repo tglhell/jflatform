@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="../../assets/css/common.css">
 	<link rel="stylesheet" href="../../assets/css/purchase.css">
+	<link rel="stylesheet" href="../../assets/css/purchase_td.css">
 	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
 	
 	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
@@ -25,57 +26,209 @@
 	<!-- header -->
 	<div class="hmj-header">
 		<!-- header -->
-		<div class="header-cont">
-			<h1><a href="hmj_layout.html"><img src="../../assets/images/common/img_header_logo.png" alt="Hyundai Logo"></a></h1>
-
-			<div class="gnb-menu-outer">
-				<ul class="gnb-menu-list">
-					<li>
-						<button><span>ブランド</span></button>
-					</li>
-					<li>
-						<button><span>IONIQ5</span></button>
-					</li>
-					<li>
-						<button><span>NEXO</span></button>
-					</li>
-					<li>
-						<button><span>購買</span></button>
-					</li>
-					<li>
-						<button><span>サービス</span></button>
-					</li>
-					<li>
-						<button><span>コンテンツ</span></button>
-					</li>
-					<li>
-						<button><span>ストア</span></button>
-					</li>
-				</ul>
+		<div class="header-outer">
+			<div class="header-cont">
+				<h1><a href="hmj_layout.html"><img src="../../assets/images/common/ico_header_logo.svg" alt="Hyundai Logo"></a></h1>
+	
+				<div class="gnb-menu-outer">
+					<div class="gnb-menu-box blur">
+						<!-- 로그인 전 -->
+						<div class="account-box">
+							<button class="btn-account">Account</button>
+							<button class="btn-sign-in">Sign in</button>
+						</div>
+						<!-- // 로그인 전 -->
+						<!-- 로그인 후 -->
+						<!-- <div class="account-box login" style="display: none;">
+							<button class="btn-account">Account</button>
+							<button class="btn-sign-in">木村 拓哉 様</button>
+							<a href="#a" class="btn-alarm">
+								<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
+								<div class="num"><span>2</span></div>
+							</a>
+						</div> -->
+						<!-- // 로그인 후 -->
+						<ul class="gnb-menu-list ir-count inner-scroll-y">
+							<li class="ir-item">
+								<a href="#">IONIQ 5</a>
+							</li>
+							<li class="ir-item">
+								<a href="#">NEXO</a>
+							</li>
+							<li class="ir-item">
+								<a href="#">SHOW ROOM</a>
+							</li>
+							<li class="ir-item">
+								<button class="btn-depth-switch inner-depth"><span>PURCHASE</span></button>
+								<div class="menu-inner-depth">
+									<button class="btn-depth-prev"><span>Back</span></button>
+									<p class="inner-depth-tit">PURCHASE</p>
+									<ul class="ir-count inner-scroll-y">
+										<li class="ir-item">
+											<button class="btn-depth-switch toggle-menu"><span>購入ガイド</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">オンライン購入のご案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">今月の購入特典</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">政府補助金</a>
+												</li>
+											</ul>
+										</li>
+										<li class="ir-item">
+											<button class="btn-depth-switch toggle-menu"><span>見積/試乗</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">オンライン購入のご案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">今月の購入特典</a>
+												</li>
+											</ul>
+										</li>
+										<li class="ir-item">
+											<a href="#">購入相談申込</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">仕様百科</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">ダウンロード</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">My Referralプログラム</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">ブランド拠点</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="ir-item">
+								<button class="btn-depth-switch inner-depth"><span>SERVICE</span></button>
+								<div class="menu-inner-depth">
+									<button class="btn-depth-prev"><span>Back</span></button>
+									<p class="inner-depth-tit">SERVICE</p>
+									<ul class="ir-count inner-scroll-y">
+										<li class="ir-item">
+											<a href="#">Hyundaiサービス</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">充電サービス</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">Hyundaiロードサイド・アシスタンス</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">整備予約</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">リコール情報</a>
+										</li>
+										<li class="ir-item">
+											<button class="btn-depth-switch toggle-menu"><span>BLUELINK</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">ご利用案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+											</ul>
+										</li>
+										<li class="ir-item">
+											<button class="btn-depth-switch toggle-menu"><span>ビルトインカメラ</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">ご利用案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+											</ul>
+										</li>
+										<li class="ir-item">
+											<a href="#">ナビ/カメラアップデート</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">提携サービス</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">アプリ設置</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="ir-item">
+								<button class="btn-depth-switch inner-depth"><span>BRAND</span></button>
+								<div class="menu-inner-depth">
+									<button class="btn-depth-prev"><span>Back</span></button>
+									<p class="inner-depth-tit">BRAND</p>
+									<ul class="ir-count inner-scroll-y">
+										<li class="ir-item">
+											<a href="#">購入ガイド</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">見積/試乗</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">購入相談申込</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="ir-item">
+								<a href="#">MOCEAN</a>
+							</li>
+							<li class="ir-item">
+								<a href="#">SHOP</a>
+							</li>
+						</ul>
+						<button class="btn-menu-close"><span>close</span></button>
+					</div>
+				</div>
+	
+				<div class="gnb-mid-menu">
+					<ul class="mid-list">
+						<li><a href="#"><span>IONIQ 5</span></a></li>
+						<li><a href="#"><span>NEXO</span></a></li>
+						<li><a href="#"><span>SHOW ROOM</span></a></li>
+					</ul>
+				</div>
+	
+				<div class="gnb-right-menu">
+					<ul class="gnb-right-list">
+						<li>
+							<button class="btn-cart pc-only"><span><img src="../../assets/images/common/ico_cart.svg" alt="cart"></span></button>
+						</li>
+						<li>
+							<button class="btn-search"><span><img src="../../assets/images/common/ico_search.svg" alt="search"></span></button>
+						</li>
+						<li>
+							<button class="btn-menu"><span><img src="../../assets/images/common/ico_menu.svg" alt="menu"></span></button>
+						</li>
+					</ul>
+				</div>
 			</div>
-
-			<div class="gnb-right-menu">
-				<ul class="gnb-right-list">
-					<li>
-						<button class="btn-cart"><span><img src="../../assets/images/common/ico_cart.png" alt="장바구니"></span></button>
-					</li>
-					<li>
-						<button class="btn-search">
-							<span>
-								<picture>
-									<source srcset="../../assets/images/common/ico_search.png" media="(min-width: 1120px)">
-									<source srcset="../../assets/images/common/ico_search_mo.png" media="(max-width: 1119px)">
-									<img src="../../assets/images/common/ico_search.png" alt="검색">
-								</picture>
-							</span>
-						</button>
-					</li>
-					<li>
-						<button class="btn-mypage"><span><img src="../../assets/images/common/ico_mypage.png" alt="마이페이지"></span></button>
-					</li>
-				</ul>
-			</div>
-		</div>	
+		</div>		
 		<div class="sub-cont">
 			<div class="history">
 				<a href="javascript:;">HOME</a>
@@ -92,84 +245,107 @@
 	<!-- container -->
 	<div id="hmjContainer" class="hmj-container test-drive">
 		<div class="hmj-content">
-
+			<div class="top-visual pc-only">
+				<img src="../../assets/images/@td_visual.jpg" alt="top visual">
+				<div class="top-visual-text fc-white">
+					<h2 class="top-title">試乗予約</h2>
+					<p class="top-desc">試乗サービスを通して<br>ご希望の車種を直接ご経験ください。</p>
+				</div>
+			</div>
+			
 			<div class="cont-outer fullcase">
-				<div class="service-step">
-                   service-step 디자인미정
-                </div>
+				<ul class="service-step">
+					<li class="ing">
+					   <span class="tit">申込者情報</span>
+					   <span class="step">1</span>
+					</li>
+					<li>
+					   <span class="tit">試乗場所および車種選択</span>
+					   <span class="step">2</span>
+					</li>
+					<li>
+					   <span class="tit">希望日時選択</span>
+					   <span class="step">3</span>
+					</li>
+					<li>
+					   <span class="tit">ご要望</span>
+					   <span class="step">4</span>
+					</li>
+                </ul>
 			</div>
 
-			<div class="cont-outer mincase apply">
-                <ul class="form-list ">
-                    <li>
-                        <div class="inp-outer-box"><!-- 유효성체크 val-error -->
-                            <label for="inpName01_01">姓名 <span class="required">*</span></label>
-                            <div class="inp-group-box mo-full">
-                                <div class="inp-area">
-                                    <input type="text" id="inpName01_01" class="inp-item" placeholder="姓を入力してください。" value="">
-                                    <button class="inp-close"></button>
-                                </div>
-                                <div class="inp-area">
-                                    <input type="text" id="inpName01_02" class="inp-item" placeholder="名を入力してください。" value="">
-                                    <button class="inp-close"></button>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="error-msg lbl-type">error text</p>
-                    </li>
-                    <li>
-                        <div class="inp-outer-box">
-                            <label for="inpName02_01">姓名 (フリガナ) <span class="required">*</span></label>
-                            <div class="inp-group-box mo-full">
-                                <div class="inp-area">
-                                    <input type="text" id="inpName02_01" class="inp-item" placeholder="姓(フリガナ)を入力してください。" value="">
-                                    <button class="inp-close"></button>
-                                </div>
-                                <div class="inp-area">
-                                    <input type="text" id="inpName02_02" class="inp-item" placeholder="名(フリガナ)を入力してください。" value="">
-                                    <button class="inp-close"></button>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="error-msg lbl-type">error text</p>
-                    </li>
-                    <li>
-                        <div class="inp-outer-box">
-                            <label for="inpNum03_01">携帯電話番号 <span class="required">*</span></label>
-                            <div class="inp-slice-box">
-                                <div class="inp-area">
-                                    <input type="number" id="inpNum03_01" class="inp-item" placeholder="数字" value="">
-                                    <button class="inp-close"></button>
-                                </div>
-                                <span class="inp-hpn">-</span>
-                                <div class="inp-area">
-                                    <input type="number" id="inpNum03_02" class="inp-item" placeholder="数字" value="">
-                                    <button class="inp-close"></button>
-                                </div>
-                                <span class="inp-hpn">-</span>
-                                <div class="inp-area">
-                                    <input type="number" id="inpNum03_03" class="inp-item" placeholder="数字" value="">
-                                    <button class="inp-close"></button>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="error-msg lbl-type">error text</p>
-                    </li>
-                    <li>
-                        <div class="inp-outer-box">
-                            <label for="inpTxt01">E-mail</label>
-                            <div class="inp-area">
-                                <input type="text" id="inpTxt01" class="inp-item" placeholder="メールアドレスを入力してください" value="">
-                                <button class="inp-close"></button>
-                            </div>
-                        </div>
-                        <p class="error-msg lbl-type">error text</p>
-                    </li>
-                </ul>
-                <ul class="caution">
-                    <li>申込者情報のお名前と運転免許証の情報が本人情報と異なる場合、ご試乗が制限される場合がございます。</li>
-                    <li>非会員の試乗予約申込における利用同意および確認のために、現場で試乗同意書などの追加書類の作成をお願いする場合があります。</li>
-                </ul>
+			<div class="cont-outer apply">
+				<h4 class="pc-only">試乗申込者情報を入力してください。</h4>
+                <div class="form-list">
+                    <div class="inp-outer-box"><!-- 유효성체크 val-error -->
+						<label for="inpName01_01">姓名 <span class="required">*</span></label>
+						<div class="inp-group-box mo-full">
+							<div class="inp-area">
+								<input type="text" id="inpName01_01" class="inp-item" placeholder="姓を入力してください。" value="">
+								<button class="inp-close"></button>
+							</div>
+							<div class="inp-area">
+								<input type="text" id="inpName01_02" class="inp-item" placeholder="名を入力してください。" value="">
+								<button class="inp-close"></button>
+							</div>
+						</div>
+					</div>
+					<p class="error-msg lbl-type">error text</p>
+                    
+					<div class="inp-outer-box">
+						<label for="inpName02_01">姓名 (フリガナ) <span class="required">*</span></label>
+						<div class="inp-group-box mo-full">
+							<div class="inp-area">
+								<input type="text" id="inpName02_01" class="inp-item" placeholder="姓(フリガナ)を入力してください。" value="">
+								<button class="inp-close"></button>
+							</div>
+							<div class="inp-area">
+								<input type="text" id="inpName02_02" class="inp-item" placeholder="名(フリガナ)を入力してください。" value="">
+								<button class="inp-close"></button>
+							</div>
+						</div>
+					</div>
+					<p class="error-msg lbl-type">error text</p>
+                    
+					<div class="inp-outer-box tel-type">
+						<label for="inpNum01_01">携帯電話 <span class="required">*</span></label>
+						<div class="inp-slice-box">
+							<div class="slt-box type2">
+								<p class="selected-value">選択</p>
+								<ul class="select-items">
+									<li>070</li>
+									<li>080</li>
+								</ul>
+							</div>
+							<span class="inp-hpn">-</span>
+							<div class="inp-area">
+								<input type="number" id="inpNum01_05" class="inp-item" placeholder="数字">
+							</div>
+							<span class="inp-hpn">-</span>
+							<div class="inp-area">
+								<input type="number" id="inpNum01_06" class="inp-item" placeholder="数字">
+							</div>
+							<button class="btn btn-type3 btn-tbl"><span>認証</span></button>
+						</div>
+					</div>
+					<p class="error-msg lbl-type">error text</p>
+                    
+					<div class="inp-outer-box">
+						<label for="inpTxt01">E-mail</label>
+						<div class="inp-area">
+							<input type="text" id="inpTxt01" class="inp-item" placeholder="メールアドレスを入力してください" value="">
+							<button class="inp-close"></button>
+						</div>
+					</div>
+                </div>
+				<!-- //form-list -->
+				
+				<div class="caution">
+					<ul>
+						<li>申込者情報のお名前と運転免許証の情報が本人情報と異なる場合、ご試乗が制限される場合がございます。</li>
+						<li>非会員の試乗予約申込における利用同意および確認のために、現場で試乗同意書などの追加書類の作成をお願いする場合があります。</li>
+					</ul>
+				</div>
                 <div class="cta-outer">
                     <button class="btn"><span>戻る</span></button>
                     <button class="btn btn-type2"><span>次へ</span></button>
@@ -181,7 +357,102 @@
 
 	<!-- footer -->
 	<div class="hmj-footer">
-		<img src="../../assets/images/@footer.jpg" alt="footer">
+		<div class="footer-top">
+			<ul>
+				<li>
+					<ul>
+						<li><a href="#">SHOW ROOM</a></li>
+						<li><a href="#">IONIQ 5</a></li>
+						<li><a href="#">NEXO</a></li>
+						<li><a href="#">ブランド拠点</a></li>
+						<li><a href="#">MOCEAN</a></li>
+					</ul>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Purchase</button>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">オンライン購入のご案内</a></li>
+								<li><a href="#">今月の購入特典</a></li>
+								<li><a href="#">政府補助金</a></li>
+								<li><a href="#">オンライン契約</a></li>
+								<li><a href="#">見積シミュレーション</a></li>
+								<li><a href="#">試乗</a></li>
+								<li><a href="#">購入相談申込</a></li>
+								<li><a href="#">仕様百科</a></li>
+								<li><a href="#">カタログダウンロード</a></li>
+								<li><a href="#">価格表ダウンロード</a></li>
+								<li><a href="#">Referral code</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Service</button>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">サービスネットワーク</a></li>
+								<li><a href="#">充電スポット</a></li>
+								<li><a href="#">RSAサービス</a></li>
+								<li><a href="#">整備予約</a></li>
+								<li><a href="#">リコール情報</a></li>
+								<li><a href="#">BLUELINK</a></li>
+								<li><a href="#">ビルトインカメラ</a></li>
+								<li><a href="#">ナビ/カメラアップデート</a></li>
+								<li><a href="#">提携サービス</a></li>
+								<li><a href="#">アプリ設置</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Brand Story</button>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">IONIQ 5</a></li>
+								<li><a href="#">IONIQ 5 Teasing</a></li>
+								<li><a href="#">Mini 45EV</a></li>
+								<li><a href="#">IONIQ</a></li>
+								<li><a href="#">Hyundai X BTS</a></li>
+								<li><a href="#">#Thisisus</a></li>
+								<li><a href="#">Hyundai X BBC</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">SHOP</a></li>
+						<li><a href="#">イベント</a></li>
+						<li><a href="#">お知らせ</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">1:1お問合せ</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<div class="left-logo"><img src="../../assets/images/common/ico_footer_logo.svg" alt="Hyundai Logo"></div>
+			<div class="center-text">
+				<ul>
+					<li><a href="#">プライバシーポリシー</a></li>
+					<li><a href="#">利用規約</a></li>
+					<li><a href="#">Cookieポリシー </a></li>
+					<li><a href="#"><span class="ico"><img src="../../assets/images/common/ico_country_jp.png" alt="japan"></span>日本語</a></li>
+				</ul>
+				<p class="copyright">COPYRIGHT &#x24D2; HYUNDAI. ALL RIGHTS RESERVED.</p>
+			</div>
+			<div class="right-sns">
+				<ul>
+					<li><a href="#"><img src="../../assets/images/common/ico_youtube.svg" alt="youtube"></a></li>
+					<li><a href="#"><img src="../../assets/images/common/ico_twitter.svg" alt="twitter"></a></li>
+					<li><a href="#"><img src="../../assets/images/common/ico_instagram.svg" alt="instagram"></a></li>
+				</ul>
+			</div>
+		</div>
 	</div>
 	<!--//footer -->
 </div>
@@ -190,5 +461,10 @@
 		<span class="blind">Top</span>
 	</a>
 </div>
+
+<script>
+	customSelect();
+</script>
+
 </body>
 </html>

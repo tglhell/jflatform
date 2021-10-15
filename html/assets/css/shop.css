@@ -572,12 +572,13 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    flex-wrap: wrap;
+    margin-right: -24px;
+    overflow: hidden;
 }
 .main-cate .cate-list li {
     margin-bottom: 24px;
-}
-.main-cate .cate-list li + li {
-    margin-left: 24px;
+    margin-right: 24px;
 }
 .main-cate .cate-list li a {
     display: block;
@@ -619,9 +620,10 @@
     }
     .main-cate .cate-list {
         flex-direction: column;
+        margin-right: 0;
     }
     .main-cate .cate-list li {
-        margin-bottom: 0;
+        margin: 0;
     }
     .main-cate .cate-list li + li {
         margin-left: 0;
@@ -1089,6 +1091,7 @@
 .shop-detail .util .share {
     margin-left: 24px;
     background: url('../images/common/ico_share.svg') no-repeat center;
+    background-size: 24px auto;
 }
 
 .shop-detail .goods-info {
@@ -1614,6 +1617,9 @@
     }
     .sub-curation .curation-cont {
         padding: 0 20px;
+    }
+    .sub-curation .head-cont .share {
+        background-size: 24px auto;
     }
 }
 

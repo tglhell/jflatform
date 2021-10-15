@@ -15,7 +15,7 @@
 
 <body>
 
-<div class="hmj-wrap ">
+<div class="hmj-wrap">
 	<div class="skip-nav">
 		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
 	</div>
@@ -32,7 +32,7 @@
 					<p class="tit-txt">会員登録されているかを確認します。</p>
 				</div>
 				<div class="form-cont">
-					<div class="inp-outer-box val-error">
+					<div class="inp-outer-box val-error"><!-- 에러 메시지 사용시 클래스 val-error 추가-->
 						<label for="inpName01_01">姓名 <span class="required">*</span></label>
 						<div class="inp-group-box mo-full">
 							<div class="inp-area">
@@ -46,7 +46,7 @@
 						</div>
 					</div>
 					<p class="error-msg lbl-type">姓名を入力してください。</p>
-					<div class="inp-outer-box val-error">
+					<div class="inp-outer-box val-error"><!-- 에러 메시지 사용시 클래스 val-error 추가-->
 						<label for="inpName01_02">姓名(フリガナ) <span class="required">*</span></label>
 						<div class="inp-group-box mo-full">
 							<div class="inp-area">
@@ -60,7 +60,7 @@
 						</div>
 					</div>
 					<p class="error-msg lbl-type">姓名(フリガナ)を入力してください。</p>
-					<div class="inp-outer-box val-error">
+					<div class="inp-outer-box val-error"><!-- 에러 메시지 사용시 클래스 val-error 추가-->
 						<label for="inpBirth01_01">生年月日 <span class="required">*</span></label>
 						<div class="inp-slice-box">
 							<div class="slt-box">
@@ -90,12 +90,13 @@
 						</div>
 					</div>
 					<p class="error-msg lbl-type">生年月日を選択してください。</p>
-					<div class="inp-outer-box tel-type val-error">
+					<div class="inp-outer-box tel-type val-error"><!-- 에러 메시지 사용시 클래스 val-error 추가-->
 						<label for="inpTel01_01">携帯電話 <span class="required">*</span></label>
 						<div class="inp-slice-box">
 							<div class="slt-box type2">
 								<p class="selected-value">070</p>
 								<ul class="select-items">
+									<li>070</li>
 									<li>080</li>
 									<li>090</li>
 								</ul>
@@ -113,12 +114,13 @@
 					</div>
 					<p class="error-msg lbl-type">電話番号を入力してください。</p>
 					<!-- 재전송 시 -->
-					<div class="inp-outer-box tel-type val-error">
+					<div class="inp-outer-box tel-type val-error"><!-- 에러 메시지 사용시 클래스 val-error 추가-->
 						<label for="inpTel01_01">携帯電話 <span class="required">*</span></label>
 						<div class="inp-slice-box">
 							<div class="slt-box type2">
 								<p class="selected-value">070</p>
 								<ul class="select-items">
+									<li>070</li>
 									<li>080</li>
 									<li>090</li>
 								</ul>
@@ -136,14 +138,14 @@
 					</div>
 					<p class="error-msg lbl-type">認証コードが送信されました。</p>
 					<!-- //재전송 시 -->
-					<div class="inp-outer-box inp-type val-error">
+					<div class="inp-outer-box inp-type val-error"><!-- 에러 메시지 사용시 클래스 val-error 추가-->
 						<label for="inpNum01_011">認証確認 <span class="required">*</span></label>
 						<div class="inp-btn-box">
 							<div class="inp-area">
 								<input type="text" id="inpNum01_011" class="inp-item" placeholder="６ケタ数字" style="padding-right: 146px;">
 								<button class="inp-close" style="right: 120px;"></button>
 							</div>
-							<span class="time-num">03:00</span>
+							<span class="time-num">03:00</span><!-- 인증번호 발송시 추가 -->
 							<button class="btn btn-type2 btn-tbl" disabled><span>認証</span></button><!-- 입력전 disabled -->
 						</div>
 					</div>

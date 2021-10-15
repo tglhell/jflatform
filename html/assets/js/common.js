@@ -22,8 +22,13 @@ jQuery.event.add(window, 'load', function () {
 	$('.inp-outer-box.inp-type').on('focusin', 'input', function () {
 		const inpTypeParent = $(this).closest('.inp-outer-box.inp-type');
 		let btnTblWid = inpTypeParent.find('.btn-tbl').outerWidth() + (twoDig[2] + irNum[5]);
-		inpTypeParent.find('.inp-item').css('padding-right', btnTblWid);
-		inpTypeParent.find('.inp-close').css('right', btnTblWid - (twoDig[1] + irNum[5]));
+		if (!inpTypeParent.hasClass('post-type')) {
+			inpTypeParent.find('.inp-item').css('padding-right', btnTblWid);
+			inpTypeParent.find('.inp-close').css('right', btnTblWid - (twoDig[1] + irNum[5]));
+		} else {
+			inpTypeParent.find('.inp-btn-box .inp-item').css('padding-right', btnTblWid);
+			inpTypeParent.find('.inp-btn-box .inp-close').css('right', btnTblWid - (twoDig[1] + irNum[5]));
+		}
 		if (inpTypeParent.find('.time-num').length == 1) {
 			inpTypeParent.find('.inp-item').css('padding-right', btnTblWid + twoDig[4]);
 			inpTypeParent.find('.inp-close').css('right', btnTblWid - (twoDig[1] + irNum[5]) + twoDig[4]);
@@ -45,7 +50,7 @@ jQuery.event.add(window, 'load', function () {
 			$('.toggle-menu').removeClass('active').next().slideUp(secVal[2]);
 			$('.hmj-header .gnb-menu-list').css('overflow-y', 'auto');
 			if ($(window).width() <= tbl) {
-				$('.account-box').eq(0).fadeIn(secVal[2]);
+				$('.account-box').fadeIn(secVal[2]);
 			}
 		}
 	});
@@ -309,7 +314,7 @@ jQuery.event.add(window, 'load', function () {
 			popWrap.fadeIn(secVal[4], function () {
 				popAutoHgt();
 			});
-			popCont.attr('tabindex', '0').fadeIn(secVal[4]);
+			popCont.fadeIn(secVal[4]);
 			if (!popWrap.hasClass('full')) {
 				$('body').css({'overflow':'hidden', 'width':bodyWid});
 			}
@@ -346,7 +351,7 @@ jQuery.event.add(window, 'load', function () {
 
 			function popClose (target) {
 				target.fadeOut(secVal[4]);
-				target.find(popCont).removeAttr('tabindex').fadeOut(secVal[4]).parent().removeAttr('style');
+				target.find(popCont).fadeOut(secVal[4]).parent().removeAttr('style');
 				target.find('.tar-loop').remove();
 				chkSwitch = false;
 				setObj(function () {
@@ -392,7 +397,7 @@ jQuery.event.add(window, 'load', function () {
 		
 		if (scrollTop <= 0 && direction == 'up') {
 			e.preventDefault();
-		} else if (scrollTop >= (e.currentTarget.scrollHeight - $(window).outerHeight()) && direction == 'down') {
+		} else if (scrollTop >= (e.currentTarget.scrollHeight - $(window).outerHeight() + secVal[0]) && direction == 'down') {
 			e.preventDefault();
 		}
 		lastY = top;
@@ -412,6 +417,32 @@ jQuery.event.add(window, 'load', function () {
 		} else {
 			$(this).parent().removeClass('active');
 			innerCont.css('height', innerContLineHgt);
+		}
+	});
+
+	$('.btn-search').on('click', function () {
+		const searchTar = $('.gnb-search-dim');
+		if (!searchTar.hasClass('active')) {
+			searchTar.addClass('active');
+		} else {
+			searchTar.removeClass('active');
+		}
+
+		$('.btn-search-close, .gnb-search-dim').on('click', function (e) {
+			const tarItem = $('.search-outer-box, .search-outer-box *:not(.btn-search-close)');
+			if (!$(e.target).is(tarItem)) {
+				searchTar.removeClass('active');
+			}
+		});
+	});
+
+	$('.search-outer-box').on('keyup', '.inp-item', function () {
+		let inpVal = $(this).val();
+		const searchArea = $(this).closest('.search-outer-box').find('.keyword-box');
+		if (!inpVal.length == 0) {
+			searchArea.addClass('active');
+		} else {
+			searchArea.removeClass('active');
 		}
 	});
 

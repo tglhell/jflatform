@@ -1,11 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
     <g fill="none" fill-rule="evenodd">
-        <g>
-            <g transform="translate(-920.000000, -281.000000) translate(920.000000, 281.000000)">
-                <rect width="78.4" height="78.4" x=".8" y=".8" fill-rule="nonzero" stroke="#E63312" stroke-width="1.6" rx="39.2"/>
-                <path fill="#E63312" d="M39 25L42 25 42 55 39 55z" transform="translate(40.500000, 40.000000) rotate(-45.000000) translate(-40.500000, -40.000000)"/>
-                <path fill="#E63312" d="M39 25L42 25 42 55 39 55z" transform="translate(40.500000, 40.000000) rotate(-315.000000) translate(-40.500000, -40.000000)"/>
-            </g>
-        </g>
+        <path fill="#0793EA" fill-rule="nonzero" d="M33.306 18.292v20.236h-2.612V18.292z"/>
+        <circle fill="#0793EA" cx="32" cy="44.403" r="1.958"/>
+        <path d="M0 0h64v64H0z"/>
+        <circle stroke="#666" stroke-width="2" cx="32" cy="32" r="30.333"/>
     </g>
 </svg>
