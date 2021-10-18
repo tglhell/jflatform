@@ -192,12 +192,12 @@ a.ui-state-default {
 a.ui-button:active, 
 .ui-button:active, 
 .ui-button.ui-state-active:hover {
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	border-radius: 50%;
 	background-color: #0793ea;
 	color: #fff !important;
-	line-height:50px;
+	line-height:40px;
 	font-weight:500;
 }
 .ui-datepicker td span, .ui-datepicker td a {

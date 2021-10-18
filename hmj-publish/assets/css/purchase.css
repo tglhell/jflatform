@@ -915,6 +915,7 @@
 }
 .download .cont-outer .tbl-box.pdf .flex .tit {
 	width: calc(100% - 128px);
+	padding-right: 32px;
 	font-weight: 400;
 	text-align: left;
 }

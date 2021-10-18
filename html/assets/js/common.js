@@ -38,16 +38,16 @@ jQuery.event.add(window, 'load', function () {
 	$('.btn-depth-switch:not(.toggle-menu), .btn-depth-prev').on('click', function (e) {
 		if ($(this).hasClass('btn-depth-switch')) {
 			$(this).addClass('active', function () {
-				$('.gnb-menu-list > li').find('> button, > a').stop().animate({'opacity':'0'}, 500);
+				$('.gnb-menu-list > li').find('> button, > a').stop().animate({'opacity':'0'}, secVal[4]);
 				$('.hmj-header .gnb-menu-list').css('overflow-y', 'hidden');
 				if ($(window).width() <= tbl) {
 					$('.account-box').eq(0).fadeOut(secVal[2]);
 				}
 			});
 		} else {
-			$(this).closest('li').find('.btn-depth-switch').removeClass('active');
-			$('.gnb-menu-list > li').find('> button, > a').stop().animate({'opacity':'1'}, 500);
+			$('.gnb-menu-list > li').find('> button, > a').stop().animate({'opacity':'1'}, secVal[4]);
 			$('.toggle-menu').removeClass('active').next().slideUp(secVal[2]);
+			$(this).closest('li').find('.btn-depth-switch').removeClass('active');
 			$('.hmj-header .gnb-menu-list').css('overflow-y', 'auto');
 			if ($(window).width() <= tbl) {
 				$('.account-box').fadeIn(secVal[2]);
@@ -70,7 +70,6 @@ jQuery.event.add(window, 'load', function () {
 		$(this).toggleClass('active');
 		if ($(this).hasClass('active')) {
 			$('body').css({'overflow':'hidden', 'width':bodyWid, 'position':'fixed', 'top':-scrYPos});
-			// gnbInnerHgt();
 			gnbMenuBox.parent().fadeIn(secVal[3], function () {
 				gnbMenuBox.css('right', '0');
 			});
@@ -211,7 +210,6 @@ jQuery.event.add(window, 'load', function () {
 				}
 			}
 			lastScrTopPos = scrPos;
-			rnbContFix();
 		} else if (e.type == 'orientationchange') {
 			if (window.orientation == 0) {
 				$(window).trigger('resize');
@@ -239,9 +237,6 @@ jQuery.event.add(window, 'load', function () {
 			}
 			if ($('.tbl-box.col-fix').length !== 0) {
 				tblFixCol();
-			}
-			if (gnbMenuBox.parent().hasClass('active')) {
-				// gnbInnerHgt();
 			}
 			containerAutoHgt();
 			resChk();
@@ -423,27 +418,45 @@ jQuery.event.add(window, 'load', function () {
 	$('.btn-search').on('click', function () {
 		const searchTar = $('.gnb-search-dim');
 		if (!searchTar.hasClass('active')) {
-			searchTar.addClass('active');
+			searchTar.show();
+			setObj(function () {
+				searchTar.addClass('active');
+				searchTar.find('.inp-item').focus();
+			}, irNum[0]);
 		} else {
-			searchTar.removeClass('active');
+			searchClose();
 		}
 
 		$('.btn-search-close, .gnb-search-dim').on('click', function (e) {
 			const tarItem = $('.search-outer-box, .search-outer-box *:not(.btn-search-close)');
 			if (!$(e.target).is(tarItem)) {
-				searchTar.removeClass('active');
+				searchClose();
 			}
 		});
+
+		function searchClose () {
+			searchTar.removeClass('active');
+			setObj(function () {
+				searchTar.find('.inp-item').val(null);
+				searchTar.find('*').removeClass('active');
+				$('.btn-search').focus();
+				searchTar.hide();
+			}, secVal[6]);
+		}
 	});
 
 	$('.search-outer-box').on('keyup', '.inp-item', function () {
 		let inpVal = $(this).val();
-		const searchArea = $(this).closest('.search-outer-box').find('.keyword-box');
+		const searchParent = $(this).closest('.search-outer-box');
 		if (!inpVal.length == 0) {
-			searchArea.addClass('active');
+			searchParent.find('.keyword-box').addClass('active');
 		} else {
-			searchArea.removeClass('active');
+			searchParent.find('.keyword-box').removeClass('active');
 		}
+
+		searchParent.find('.inp-close').on('click', function () {
+			searchParent.find('.keyword-box').removeClass('active');
+		});
 	});
 
 	function subContChk () {
@@ -613,27 +626,9 @@ jQuery.event.add(window, 'load', function () {
 		})
 	}
 
-	function rnbContFix () {
-		if ($('.cont-right').length !== 0) {
-			const rnbCont = $('.cont-right');
-			const rnbPos = rnbCont.offset().top;
-			const centerContHgt = $('.cont-center').outerHeight();
-			const rnbContHgt = rnbCont.find('.scr-fix-box').outerHeight();
-			let centerPos = $('.cont-center').offset().top + (centerContHgt - rnbContHgt);
-			let scrPos = $(this).scrollTop();
-			if (scrPos > rnbPos) {
-				rnbCont.addClass('scroll-fix');
-				if (scrPos > centerPos) {
-					rnbCont.removeClass('scroll-fix').addClass('scroll-end').find('.scr-fix-box').css('top', centerPos);
-				} else {
-					rnbCont.addClass('scroll-fix').removeClass('scroll-end').find('.scr-fix-box').removeAttr('style');
-				}
-			} else {
-				rnbCont.removeClass('scroll-fix');
-			}
-		}
+	if (!$('.js-is-sticky').length == 0) {
+		$('.js-is-sticky').stickybits();
 	}
-	rnbContFix();
 
 	function tblFixRow () {
 		if ($(window).width() <= tbl) {

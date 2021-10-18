@@ -104,7 +104,6 @@
 }
 .test-drive .poll-complete .images-html .html {
     position: relative;
-    width: 480px;
     color: #fff;
 }
 .test-drive .poll-complete .images-html .html .text-area {
@@ -129,7 +128,11 @@
     font-weight: 500;
 }
 .test-drive .poll-complete .btn-img {
-    margin-top: 40px;
+    width: 600px;
+    margin: 40px auto 0;
+}
+.test-drive .poll-complete .btn-img + .btn-img {
+    margin-top: 16px;
 }
 .test-drive .poll-complete .images-html .html .text-area .cta-outer {
     margin-top: 64px;
@@ -205,11 +208,12 @@
         align-items: center;
         flex-flow: column;
     }
+    .test-drive .poll-complete .btn-img {
+        width: 100%;
+        padding: 0 20px;
+    }
     .test-drive .poll-complete .images-html > .img {
         display: none;
-    }
-    .test-drive .poll-complete .images-html .html {
-        width: 100%;
     }
     .test-drive .poll-complete .images-html .html .text-area .type1 {
         font-size: 14px;

@@ -704,7 +704,7 @@ body::-webkit-scrollbar-track,
 .gnb-menu-outer .gnb-menu-box .account-box .btn-account {
 	margin-right: 12px;
 	font-size: 12px;
-	color: #999;
+	color: rgba(255, 255, 255, .6);
 	line-height: 20px;
 }
 .gnb-menu-outer .gnb-menu-box .account-box .btn-sign-in {
@@ -869,6 +869,7 @@ body::-webkit-scrollbar-track,
 	right: 0;
 	opacity: 0;
 	z-index: 30;
+	display: none;
 	background-color: rgba(0, 0, 0, .4);
 	pointer-events: none;
 }
@@ -914,7 +915,10 @@ body::-webkit-scrollbar-track,
 }
 .gnb-search-dim .search-cont .inp-area .inp-close {
 	top: 50%;
-	margin-top: -8px;
+	width: 24px;
+	height: 24px;
+	margin-top: -12px;
+	background-image: url(../images/common/ico_search_del.svg);
 }
 .gnb-search-dim .search-cont .inp-search::placeholder {
 	color: #ccc;
@@ -944,7 +948,7 @@ body::-webkit-scrollbar-track,
 	font-size: 0;
 }
 .gnb-search-dim .search-outer-box .keyword-box {
-	transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	transform: translateY(10px);
 	position: relative;
 	opacity: 0;
@@ -956,7 +960,7 @@ body::-webkit-scrollbar-track,
 	pointer-events: none;
 }
 .gnb-search-dim .search-outer-box .keyword-box.active {
-	transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	transform: translateY(0px);
 	opacity: 1;
 	pointer-events: auto;
@@ -1075,6 +1079,46 @@ body::-webkit-scrollbar-track,
 		position: absolute;
 		top: 50%;
 		left: 8px;
+	}
+	.gnb-search-dim .search-outer-box {
+		height: 160px;
+	}
+	.gnb-search-dim {
+		top: 110px;
+	}
+	.gnb-search-dim .search-outer-box .search-cont {
+		padding: 88px 16px 24px 64px
+	}
+	.gnb-search-dim .search-outer-box .search-cont:before {
+		content: 'Search';
+		position: absolute;
+		top: 35px;
+		left: 20px;
+		font-size: 16px;
+		line-height: 26px;
+	}
+	.gnb-search-dim .search-outer-box .top-text {
+		padding: 0 16px 0 20px;
+	}
+	.gnb-search-dim .search-outer-box .keyword-box ul li {
+		padding: 8px 16px 8px 20px;
+	}
+	.gnb-search-dim .search-outer-box .keyword-box ul li .btn-del {
+		width: 24px;
+		height: 24px;
+		right: 16px;
+	}
+	.gnb-search-dim .search-outer-box .keyword-box .btn-keyword-del {
+		right: 20px;
+	}
+	.gnb-search-dim .search-cont .btn-box .btn-search-inner {
+		transform: none;
+		top: 90px;
+		left: 8px;
+	}
+	.gnb-search-dim .search-cont .btn-box .btn-search-close {
+		transform: none;
+		top: 24px;
 	}
 	.btn-bto-close {
 		position: absolute;
@@ -1201,13 +1245,9 @@ body::-webkit-scrollbar-track,
 }
 
 @media screen and (min-width: 1120px) {
-	.hmj-container .hmj-content .cont-right.scroll-fix .scr-fix-box {
-		position: fixed;
-		top: 20px;
-		width: 360px;
-	}
-	.hmj-container .hmj-content .cont-right.scroll-end .scr-fix-box {
-		position: absolute;
+	.hmj-container .hmj-content .cont-right .scr-fix-box {
+		width: 320px;
+		top: 20px !important;
 	}
 }
 @media screen and (max-width: 1119px) {
@@ -2212,9 +2252,9 @@ div.slt-box select {
 	right: 0;
 	z-index: 2;
 	display: none;
-	width: 16px;
-	height: 16px;
-	margin-top: -7px;
+	width: 24px;
+	height: 24px;
+	margin-top: -11px;
 	background: transparent url('../images/common/ico_delete.svg') no-repeat center;
 }
 .inp-area.active .inp-close {
@@ -3442,10 +3482,6 @@ div.radio-group {
 	z-index: 15;
 	padding-top: 56px;
 }
-.tab-box-cont .tab-box-item {
-	font-size: 12px;
-	line-height: 18px;
-}
 .js-tab .tab-box-cont .tab-box-item {
 	display: none;
 }
@@ -3468,24 +3504,32 @@ div.radio-group {
 	.tab-box-wrap.x-scroll .tab-box-outer::-webkit-scrollbar {
 		display: none;
 	}
-	.tab-box-wrap.x-scroll .tab-box-list2 {
+	.tab-box-wrap.x-scroll [class*="tab-box-list"] {
 		display: block;
 		width: auto;
 		font-size: 0;
 		white-space: nowrap;
 		position: relative
 	}
-	.tab-box-wrap.x-scroll .tab-box-list2 li {
+	.tab-box-wrap.x-scroll [class*="tab-box-list"] li {
 		display: inline-block;
 		width: auto;
 	}
+	.tab-box-wrap.x-scroll .tab-box-list li,
 	.tab-box-list2 li {
 		padding-left: 24px;
 		position: relative;
 	}
+	.tab-box-wrap.x-scroll .tab-box-list li:last-child,
 	.tab-box-list2 li:last-child {
 		padding-right: 20px;
 	}
+	.tab-box-wrap.x-scroll .tab-box-list li::before {
+		bottom: 0;
+		left: 24px;
+		z-index: 2;
+	}
+	.tab-box-wrap.x-scroll .tab-box-list li::after,
 	.tab-box-list2 li::after {
 		content: '';
 		width: 100%;
@@ -3497,6 +3541,7 @@ div.radio-group {
 		bottom: 0;
 		z-index: 1;
 	}
+	.tab-box-wrap.x-scroll .tab-box-list li a,
 	.tab-box-list2 li a {
 		position: relative;
 		z-index: 2;

@@ -28,24 +28,24 @@
 		<div class="header-outer">
 			<div class="header-cont">
 				<h1><a href="hmj_layout.html"><img src="../../assets/images/common/ico_header_logo.svg" alt="Hyundai Logo"></a></h1>
-	
+
 				<div class="gnb-menu-outer">
 					<div class="gnb-menu-box blur">
 						<!-- 로그인 전 -->
-						<div class="account-box">
+						<!-- <div class="account-box">
 							<button class="btn-account">Account</button>
 							<button class="btn-sign-in">Sign in</button>
-						</div>
+						</div> -->
 						<!-- // 로그인 전 -->
 						<!-- 로그인 후 -->
-						<!-- <div class="account-box login" style="display: none;">
+						<div class="account-box login">
 							<button class="btn-account">Account</button>
 							<button class="btn-sign-in">木村 拓哉 様</button>
 							<a href="#a" class="btn-alarm">
 								<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
 								<div class="num"><span>2</span></div>
 							</a>
-						</div> -->
+						</div>
 						<!-- // 로그인 후 -->
 						<ul class="gnb-menu-list ir-count inner-scroll-y">
 							<li class="ir-item">
@@ -204,7 +204,7 @@
 						<button class="btn-menu-close"><span>close</span></button>
 					</div>
 				</div>
-	
+
 				<div class="gnb-mid-menu">
 					<ul class="mid-list">
 						<li><a href="#"><span>IONIQ 5</span></a></li>
@@ -212,7 +212,7 @@
 						<li><a href="#"><span>SHOW ROOM</span></a></li>
 					</ul>
 				</div>
-	
+
 				<div class="gnb-right-menu">
 					<ul class="gnb-right-list">
 						<li>
@@ -220,6 +220,33 @@
 						</li>
 						<li>
 							<button class="btn-search"><span><img src="../../assets/images/common/ico_search.svg" alt="search"></span></button>
+							<div class="gnb-search-dim">
+								<div class="search-outer-box">
+									<div class="search-cont">
+										<div class="inp-outer-box">
+											<div class="inp-area">
+												<input type="text" class="inp-item" placeholder="検索キーワードを入力してください。">
+												<button class="inp-close"></button>
+											</div>
+										</div>
+										<div class="btn-box">
+											<button class="btn-search-inner">검색</button>
+											<button class="btn-search-close">검색 종료</button>
+										</div>
+									</div>
+									<div class="keyword-box">
+										<p class="top-text">最近検索ワード</p>
+										<ul>
+											<li>モデル <button class="btn-del">삭제</button></li>
+											<li>IONIQ 5 <button class="btn-del">삭제</button></li>
+											<li>NEXO <button class="btn-del">삭제</button></li>
+											<li>恵沢 <button class="btn-del">삭제</button></li>
+											<li>イベント <button class="btn-del"></button></li>
+										</ul>
+										<button class="btn-keyword-del">すべて削除</button>
+									</div>
+								</div>
+							</div>
 						</li>
 						<li>
 							<button class="btn-menu"><span><img src="../../assets/images/common/ico_menu.svg" alt="menu"></span></button>
@@ -230,9 +257,8 @@
 		</div>			
 		<div class="sub-cont">
 			<div class="history">
-				<a href="#">HOME</a>
 				<a href="#">クーポン</a>				
-				<span class="page-title">1:1お問合せ</span>
+				<span class="page-title">FAQ</span>
 			</div>
 			<button type="button" class="back-page">Back page</button>
 		</div>
@@ -241,7 +267,7 @@
 	<!--//header -->
 
 	<!-- container -->
-	<div id="hmjContainer" class="hmj-container contact">
+	<div id="hmjContainer" class="hmj-container faq">
 		<div class="hmj-content">
 			<div class="top-visual pc-only">
 				<img src="../../assets/images/@pc_faq.jpg" alt="top visual">
@@ -254,8 +280,8 @@
 				<div class='cont-search'>
 					<div class="inp-area">
 						<input type="text" id="searchInp" class="inp-item" placeholder="お問合せ内容を検索してしてください。">
-						<button class="btn-search"></button>
-					</div>
+						<button class="btn-srch"></button>
+					</div>						
 				</div>
 				<div class="tab-box-wrap js-tab x-scroll">
 					<div class="tab-box-outer">
@@ -270,24 +296,41 @@
 					</div>				
 					<div class="tab-box-cont js-tab-cont">						
 						<div class="tab-box-item active">
-							<div class="btns-list">
-								<button type="button" class="on">全体</button>
+							<!-- PC 에서만 노출 -->							
+							<div class="btns-list pc-only">
+								<button type="button" class="on">全体</button> <!-- 버튼 활성화 시 on class 추가 -->
 								<button type="button">登録/利用</button>
 								<button type="button">登録情報の確認・変更</button>
 								<button type="button">パスワードの変更</button>
 								<button type="button">ログインエラー</button>
 								<button type="button">退会手続き</button>
 							</div>
-							<div class="toggle faq">
+							<!-- // PC 에서만 노출 -->
+							<!-- Mobile 에서만 노출 -->
+							<div class="slt-box hgt-type2">
+								<p class="selected-value">全体</p>
+								<ul class="select-items">
+									<li>全体</li>
+									<li>登録/利用</li>
+									<li>登録情報の確認・変更</li>
+									<li>パスワードの変更</li>
+									<li>ログインエラー</li>
+									<li>退会手続き</li>
+								</ul>
+							</div>	
+							<!-- // Mobile 에서만 노출 -->
+							<div class="toggle">
 								<div class="item active">
-									<p class="tit-btn"><span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名です。</p>
+									<p class="tit-btn">
+										<span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名です。
+									</p>
 									<div class="cont">
 										<span>よくある質問の内容です。内容が長くなる場合、２行で表示されます。
 											よくある質問の内容です。内容が長くなる場合、２行で表示されます。
 											よくある質問の内容です。内容が長くなる場合、２行で表示されます。</span>
-											<br>
-											<br>
-										<button class="btn-text2">https://www.hyundai.com/</button>
+										<br>
+										<br>
+										<a href="#" class="btn-text2">https://www.hyundai.com/</a>
 									</div>
 								</div>
 								<div class="item">
@@ -300,8 +343,63 @@
 									</div>	
 								</div>
 								<div class="item">
-									<p class="tit-btn"><span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名ですよくある質問の件名です
-										よくある質問の件名ですよくある質問の件名です。</p>
+									<p class="tit-btn"><span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名ですよくある質問の件名です。</p>
+									<div class="cont">											
+										<span>よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。</span>
+									</div>	
+								</div>
+								<div class="item">
+									<p class="tit-btn"><span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名ですよくある質問の件名です。</p>
+									<div class="cont">											
+										<span>よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。</span>
+									</div>	
+								</div>
+								<div class="item">
+									<p class="tit-btn"><span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名ですよくある質問の件名です。</p>
+									<div class="cont">											
+										<span>よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。</span>
+									</div>	
+								</div>
+								<div class="item">
+									<p class="tit-btn"><span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名ですよくある質問の件名です。</p>
+									<div class="cont">											
+										<span>よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。</span>
+									</div>	
+								</div>
+								<div class="item">
+									<p class="tit-btn"><span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名ですよくある質問の件名です。</p>
+									<div class="cont">											
+										<span>よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。</span>
+									</div>	
+								</div>
+								<div class="item">
+									<p class="tit-btn"><span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名ですよくある質問の件名です。</p>
+									<div class="cont">											
+										<span>よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。</span>
+									</div>	
+								</div>
+								<div class="item">
+									<p class="tit-btn"><span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名ですよくある質問の件名です。</p>
+									<div class="cont">											
+										<span>よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。</span>
+									</div>	
+								</div>
+								<div class="item">
+									<p class="tit-btn"><span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名ですよくある質問の件名です。</p>
 									<div class="cont">											
 										<span>よくある質問の内容です。内容が長くなる場合、２行で表示されます。
 											よくある質問の内容です。内容が長くなる場合、２行で表示されます。
@@ -321,28 +419,18 @@
 								<a href="#" class="btn-page-last"></a>
 							</div>
 							<div class="box-contact">
-								<p>お探しの情報がない場合は、<button type="button">1:1お問合せ</button>に直接お問合せ願います。</p>
+								<p>お探しの情報がない場合は、<button type="button" class="btn-text2">1:1お問合せ</button>に直接お問合せ願います。</p>
 							</div>
 						</div>
-						<div class="tab-box-item">
-							
-							
+						<div class="tab-box-item">								
 						</div>	
 						<div class="tab-box-item">
-							
-							
 						</div>	
 						<div class="tab-box-item">
-							
-							
 						</div>	
 						<div class="tab-box-item">
-							
-							
 						</div>	
 						<div class="tab-box-item">
-							
-							
 						</div>			
 					</div>
 				</div>
@@ -350,7 +438,6 @@
 		</div>
 	</div>
 	<!--//container -->
-
 	<!-- footer -->
 	<div class="hmj-footer">
 		<div class="footer-top">
