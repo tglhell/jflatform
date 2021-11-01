@@ -160,11 +160,11 @@
 </div>
 <p class="error-msg lbl-type">error text</p>
 
-<div class="inp-outer-box">
+<div class="inp-outer-box val-error">
 	<label for="inpBirth01_01">生年月日 <span class="required">*</span></label>
 	<div class="inp-slice-box">
 		<div class="slt-box type2">
-			<p class="selected-value">1980</p>
+			<p class="selected-value">Year</p>
 			<ul class="select-items">
 				<li>option1</li>
 				<li>option2</li>
@@ -217,29 +217,14 @@
 <p class="error-msg lbl-type">error text</p>
 
 <div class="inp-outer-box inp-type">
-	<label for="inpNum01_01111">リファラルコード</label>
 	<div class="inp-btn-box">
 		<div class="inp-area">
-			<input type="text" id="inpNum01_01111" class="inp-item" placeholder="きむら">
+			<input type="search" id="inpNum01_011" class="inp-item" placeholder="地名・ビル名を入力">
 			<button class="inp-close"></button>
 		</div>
-		<span class="time-num">03:00</span>
-		<button class="btn btn-type2 btn-tbl"><span>認証</span></button>
+		<button class="btn-tbl btn-search"><span>icon</span></button>
 	</div>
 </div>
-<p class="error-msg lbl-type">error text</p>
-
-<div class="inp-outer-box inp-type val-error">
-	<label for="inpNum01_01111_1">リファラルコード</label>
-	<div class="inp-btn-box">
-		<div class="inp-area">
-			<input type="text" id="inpNum01_01111_1" class="inp-item" placeholder="きむら">
-			<button class="inp-close"></button>
-		</div>
-		<button class="btn btn-type3 btn-tbl"><span>確認</span></button>
-	</div>
-</div>
-<p class="error-msg lbl-type">error text</p>
 --></code></pre>
 <!-- //코드 삽입 -->
 
@@ -335,7 +320,7 @@
 			</div>
 			<p class="error-msg lbl-type">error text</p>
 
-			<div class="inp-outer-box">
+			<div class="inp-outer-box val-error">
 				<label for="inpBirth01_01">生年月日 <span class="required">*</span></label>
 				<div class="inp-slice-box">
 					<div class="slt-box type2">
@@ -392,57 +377,60 @@
 			<p class="error-msg lbl-type">error text</p>
 
 			<div class="inp-outer-box inp-type">
-				<label for="inpNum01_01111">リファラルコード</label>
 				<div class="inp-btn-box">
 					<div class="inp-area">
-						<input type="text" id="inpNum01_01111" class="inp-item" placeholder="きむら">
+						<input type="search" id="inpNum01_011" class="inp-item" placeholder="地名・ビル名を入力">
+						<button class="inp-close"></button>
+					</div>
+					<button class="btn-tbl btn-search"><span>icon</span></button>
+				</div>
+			</div>
+
+			<h4 class="btm-border">- label + form 위아래 정렬 / PC,MO 동일</h4>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				클래스 "<strong>inp-outer-box</strong>" <strong>row-type</strong>"를 추가.
+			</div>
+
+			<div class="inp-outer-box row-type"><!-- 유효성체크 val-error -->
+				<label for="inpName01_021">リファラルコード</label>
+				<div class="inp-group-box mo-full">
+					<div class="inp-area">
+						<input type="text" id="inpName01_021" class="inp-item" placeholder="이름">
+						<button class="inp-close"></button>
+					</div>
+					<div class="inp-area">
+						<input type="text" id="inpName01_012" class="inp-item" placeholder="성">
+						<button class="inp-close"></button>
+					</div>
+				</div>
+			</div>
+			<p class="error-msg">error text</p>
+
+			<div class="inp-outer-box row-type inp-type"><!-- 유효성체크 val-error -->
+				<label for="inpNum01_0112">リファラルコード</label>
+				<div class="inp-btn-box">
+					<div class="inp-area">
+						<input type="text" id="inpNum01_0112" class="inp-item" placeholder="きむら">
 						<button class="inp-close"></button>
 					</div>
 					<span class="time-num">03:00</span>
-					<button class="btn btn-type2 btn-tbl"><span>認証</span></button>
+					<button class="btn btn-type3 btn-tbl"><span>認証</span></button>
 				</div>
 			</div>
-			<p class="error-msg lbl-type">error text</p>
+			<p class="error-msg">error text</p>
 
-			<div class="inp-outer-box inp-type val-error">
-				<label for="inpNum01_01111_1">リファラルコード</label>
-				<div class="inp-btn-box">
-					<div class="inp-area">
-						<input type="text" id="inpNum01_01111_1" class="inp-item" placeholder="きむら">
-						<button class="inp-close"></button>
-					</div>
-					<button class="btn btn-type3 btn-tbl"><span>確認</span></button>
-				</div>
-			</div>
-			<p class="error-msg lbl-type">error text</p>
 
-			<h4 class="btm-border">- 버튼 타입</h4>
+
+			<h4 class="btm-border">- 주소타입</h4>
 
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<div class="inp-outer-box">
-	<div class="inp-slice-box">
-		<div class="inp-area">
-			<input type="search" class="inp-item" placeholder="입력해 주세요.">
-			<button class="inp-close"></button>
-		</div>
-		<button class="btn btn-middle btn-type2"><span>확인</span></button>
-	</div>
-</div>
-<p class="error-msg">error text</p>
-
-<div class="inp-outer-box val-error">
-	<div class="inp-slice-box">
-		<div class="inp-area">
-			<input type="text" class="inp-item" placeholder="입력해 주세요.">
-			<button class="inp-close"></button>
-		</div>
-		<button class="btn btn-middle btn-type2"><span>郵便番号検索</span></button>
-	</div>
-</div>
-<p class="error-msg">error text</p>
-
-<div class="inp-outer-box inp-type post-type">
+<pre class="language-html"><code><!--<div class="inp-outer-box inp-type post-type">
 	<label for="inpNum01_01">住所 <span class="required">*</span></label>
 	<div class="inp-group-box">
 		<div class="inp-btn-box">
@@ -450,7 +438,7 @@
 				<input type="text" class="inp-item" placeholder="〒" readonly>
 				<button class="inp-close"></button>
 			</div>
-			<button class="btn btn-tbl btn-type3"><span>郵便番号検索</span></button>
+			<button class="btn btn-tbl btn-type3"><span>郵便番号検索郵便番号検索</span></button>
 		</div>
 		<div class="inp-area">
 			<input type="text" class="inp-item" placeholder="都道府県" readonly>
@@ -477,39 +465,6 @@
 				클래스 "<strong>inp-outer-box</strong>"안에 label과 input부분을 넣어서 사용함.<br>주소 부분은 .inp-outer-box에 클래스 "<strong>post-type</strong>"를 추가하여 스타일 분리.
 			</div>
 
-			<!-- <div class="inp-outer-box">
-				<div class="inp-btn-box">
-					<div class="inp-area">
-						<input type="search" class="inp-item" placeholder="입력해 주세요.">
-						<button class="inp-close"></button>
-					</div>
-					<button class="btn btn-middle btn-type2"><span>확인</span></button>
-				</div>
-			</div>
-			<p class="error-msg">error text</p>
-			<div class="inp-outer-box">
-				<div class="inp-btn-box">
-					<div class="inp-area">
-						<input type="search" class="inp-item" placeholder="ご希望の仕様を探してみてください">
-						<button class="inp-close"></button>
-					</div>
-					<div class="inp-slice-box">
-						<button class="btn btn-middle btn-type2 auto-width"><span>検索</span></button>
-						<button class="btn-reset"><span><img src="../assets/images/common/btn_reset.svg" alt="리셋"></span></button>
-					</div>
-				</div>
-			</div>
-			<p class="error-msg">error text</p>
-			<div class="inp-outer-box val-error">
-				<div class="inp-btn-box">
-					<div class="inp-area">
-						<input type="text" class="inp-item" placeholder="입력해 주세요.">
-						<button class="inp-close"></button>
-					</div>
-					<button class="btn btn-middle btn-type2"><span>郵便番号検索</span></button>
-				</div>
-			</div>
-			<p class="error-msg">error text</p> -->
 			<div class="inp-outer-box inp-type post-type">
 				<label for="inpNum01_01">住所 <span class="required">*</span></label>
 				<div class="inp-group-box">
@@ -654,18 +609,7 @@
 			</div>
 			<p class="error-msg">error</p>
 
-			<div class="val-error">
-				<div class="slt-box ">
-					<p class="selected-value">テキスト</p>
-					<ul class="select-items">
-						<li>option1</li>
-						<li>option2</li>
-						<li>option3</li>
-					</ul>
-				</div>
-				<p class="error-msg">error</p>
-			</div>
-
+			
 			<h4 class="btm-border">- Custom Select H48</h4>
 			
 			<div class="slt-box hgt-type2">
@@ -684,6 +628,16 @@
 					<li>option3</li>
 				</ul>
 			</div>
+			
+			<div class="slt-box val-error hgt-type2">
+				<p class="selected-value">テキスト</p>
+				<ul class="select-items">
+					<li>option1</li>
+					<li>option2</li>
+					<li>option3</li>
+				</ul>
+			</div>
+			<p class="error-msg">error</p>
 
 			<h3 class="title">&#x25CE; Drop Down</h3>
 			<!-- <h4 class="btm-border">- Custom Select</h4> -->
@@ -761,13 +715,22 @@
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--<div class="check-group">
 	<label class="chk"><input type="checkbox"><span>선택1</span></label>
-	<label class="chk"><input type="checkbox" checked="checked"><span>선택2</span></label>
+	<label class="chk"><input type="checkbox" checked="checked"><span>선택2</span></label>				
+	<label class="chk"><input type="checkbox"><span>クレジットカード クレジットカードクレジットカードクレジットカード</span></label>
 </div>
+<p class="error-msg">error text</p>
+
+<ul class="check-group">
+	<li><label class="chk"><input type="checkbox"><span>선택1</span></label></li>
+	<li><label class="chk"><input type="checkbox" checked="checked"><span>선택2</span></label></li>
+	<li><label class="chk"><input type="checkbox"><span>クレジットカード クレジットカードクレジットカードクレジットカード</span></label></li>
+</ul>
 <p class="error-msg">error text</p>
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
-				div.check-group &gt; .chk + .chk
+				div.check-group &gt; .chk + .chk<br>
+				ul.check-group &gt; li + li
 			</div>
 			<div class="check-group"><!-- 에러시 + val-error -->
 				<label class="chk"><input type="checkbox"><span>선택1</span></label>
@@ -776,28 +739,42 @@
 			</div>
 			<p class="error-msg">error text</p>
 
+			<ul class="check-group"><!-- 에러시 + val-error -->
+				<li><label class="chk"><input type="checkbox"><span>선택1</span></label></li>
+				<li><label class="chk"><input type="checkbox" checked="checked"><span>선택2</span></label></li>
+				<li><label class="chk"><input type="checkbox"><span>クレジットカード クレジットカードクレジットカードクレジットカード</span></label></li>
+			</ul>
+			<p class="error-msg">error text</p>
+
 			<h4 class="btm-border">- 약관</h4>
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<ul class="check-terms">
+<pre class="language-html"><code><!--<div class="check-terms"> 
+	<label class="chk"><input type="checkbox"><span><em>[必須]</em> 個人情報の収集及び利用目的につい
+		ての同意</span>
+		<a href="#" class="btn-text2">詳細</a>
+	</label>
+	<p class="error-msg">error text</p>
+</div>
+
+<ul class="check-terms">
 	<li>
-		<label class="chk"><input type="checkbox"><span><em>(必須)</em>個人情報の収集及び利用目的につい
+		<label class="chk"><input type="checkbox"><span><em>[必須]</em> 個人情報の収集及び利用目的につい
 			ての同意</span>
 			<a href="#" class="btn-text2">詳細</a>
-		</label>					
+		</label>
 		<p class="error-msg">error text</p>
 	</li>
 	<li>
-		<label class="chk val-error"><input type="checkbox"><span><em>(必須)</em>個人情報の収集及び利用目的につい
+		<label class="chk val-error"><input type="checkbox"><span><em>[必須]</em> 個人情報の収集及び利用目的につい
 			ての同意</span>
 			<a href="#" class="btn-text2">詳細</a>
-		</label>					
+		</label>
 		<p class="error-msg">error text</p>
 	</li>
 	<li>
-		<label class="chk val-error"><input type="checkbox"><span><em>(必須)</em>登録された携帯電話あてに試乗サービ
+		<label class="chk"><input type="checkbox"><span>[선택] 登録された携帯電話あてに試乗サービ
 		ス利用についてご案内させていただきます。</span></label>
-		<p class="error-msg">error text</p>
 	</li>
 </ul>
 
@@ -930,6 +907,7 @@
 <label class="btn-select"><input type="radio" name="rdSelect" id="rdSelect2"><span>Default</span></label></li>
 <label class="btn-select2"><input type="radio" name="rdSelect3" id="rdSelect1" checked="checked"><span>Checked</span></label>
 <label class="btn-select2"><input type="radio" name="rdSelect3" id="rdSelect2"><span>Default</span></label></li>
+<label class="btn-select3"><input type="radio" name="onlyOne" /><span>13:00 ~ 13:30</span></label>
 
 <div class="select-group">
 	<label class="btn-select"><input type="radio" name="rdSelect2" id="rdSelect3" checked="checked"><span>心変わり</span></label></li>
@@ -944,6 +922,17 @@
 	<label class="btn-select2"><input type="radio" name="rdSelect4" id="rdSelect5"><span>発送遅延</span></label></li>
 	<label class="btn-select2"><input type="radio" name="rdSelect4" id="rdSelect6"><span>商品不具合/破損</span></label></li>
 </div>
+
+<div class="select-hour">
+	<label class="btn-select3"><input type="radio" name="onlyOne" /><span>09:00 ~ 09:30</span></label>
+	<label class="btn-select3"><input type="radio" name="onlyOne" /><span>09:30 ~ 10:00</span></label>
+	<label class="btn-select3"><input type="radio" name="onlyOne" /><span>10:00 ~ 10:30</span></label>
+	<label class="btn-select3"><input type="radio" name="onlyOne" /><span>10:30 ~ 11:00</span></label>
+	<label class="btn-select3"><input type="radio" name="onlyOne" disabled /><span>12:00 ~ 12:30</span></label>
+	<label class="btn-select3"><input type="radio" name="onlyOne" checked /><span>13:00 ~ 13:30</span></label>
+	<label class="btn-select3"><input type="radio" name="onlyOne" /><span>13:00 ~ 13:30</span></label>
+	<label class="btn-select3"><input type="radio" name="onlyOne" /><span>13:00 ~ 13:30</span></label>
+</div>
 --></code></pre>
 <!-- //코드 삽입 -->
 
@@ -955,7 +944,11 @@
 			<label class="btn-select"><input type="radio" name="rdSelect" id="rdSelect2"><span>Btn Select</span></label>
 			<label class="btn-select2"><input type="radio" name="rdSelect3" id="rdSelect1_1" checked="checked"><span>Btn Select2 Checked</span></label>
 			<label class="btn-select2"><input type="radio" name="rdSelect3" id="rdSelect2_1"><span>Btn Select2</span></label>
-			
+			<br>
+			<label class="btn-select3"><input type="radio" name="rdSelect5" id="rdSelect7_1"><span>09:00 ~ 09:30</span></label>
+			<label class="btn-select3"><input type="radio" name="rdSelect5" id="rdSelect7_2" checked><span>09:00 ~ 09:30</span></label>
+			<label class="btn-select3"><input type="radio" name="rdSelect5" id="rdSelect7_3" disabled><span>09:00 ~ 09:30</span></label>
+			<br><br>
 			<div class="select-group">
 				<label class="btn-select"><input type="radio" name="rdSelect2" id="rdSelect3" checked="checked"><span>心変わり</span></label>
 				<label class="btn-select"><input type="radio" name="rdSelect2" id="rdSelect4"><span>その他</span></label>
@@ -970,12 +963,6 @@
 				<label class="btn-select2"><input type="radio" name="rdSelect4" id="rdSelect6_1"><span>商品不具合/破損</span></label>
 			</div>
 
-			<div class="select-group">
-				<label class="btn-select3"><input type="radio" name="rdSelect4" id="rdSelect7_1" checked="checked"><span>心変わり</span></label>
-				<label class="btn-select3"><input type="radio" name="rdSelect4" id="rdSelect8_1"><span>その他</span></label>
-				<label class="btn-select3"><input type="radio" name="rdSelect4" id="rdSelect9_1"><span>発送遅延</span></label>
-				<label class="btn-select3"><input type="radio" name="rdSelect4" id="rdSelect10_1"><span>商品不具合/破損</span></label>
-			</div>
 
 
 			<h3 class="title">&#x25CE; Date Picker</h3>
@@ -1159,7 +1146,6 @@
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
-				
 			</div>
 
 			<div class="inp-outer-box add-file">
@@ -1190,7 +1176,7 @@
 
 
 
-			<h4 class="btm-border">- 달력 (작업중)</h4>
+			<h4 class="btm-border">- 달력</h4>
 <!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--<div id="datePicker" class="date-picker"></div>
@@ -1201,6 +1187,32 @@
 			</div>
 
 			<div id="sampleDatePicker"></div>
+
+
+
+			<h4 class="btm-border">- payment</h4>
+<!-- 코드 삽입 -->
+<button class="view_code">Code View ▼</button>
+<pre class="language-html"><code><!--<div class="payment">
+	<label class="card"><input type="radio" id="isPay01" name="isPay" checked="checked"><span>クレジットカード</span></label>
+	<label class="cash"><input type="radio" id="isPay02" name="isPay"><span>銀行振込</span></label>
+	<label class="linepay"><input type="radio" id="isPay03" name="isPay"><span>ラインペイ</span></label>
+	<label class="paypay"><input type="radio" id="isPay04" name="isPay"><span>ペイペイ</span></label>
+</div>
+--></code></pre>
+<!-- //코드 삽입 -->
+			<div class="conIn_tip">
+				결제수단
+			</div>
+
+			<div class="payment">
+				<label class="card"><input type="radio" id="isPay01" name="isPay" checked="checked"><span>クレジットカード</span></label>
+				<label class="cash"><input type="radio" id="isPay02" name="isPay"><span>銀行振込</span></label>
+				<label class="linepay"><input type="radio" id="isPay03" name="isPay"><span>ラインペイ</span></label>
+				<label class="paypay"><input type="radio" id="isPay04" name="isPay"><span>ペイペイ</span></label>
+			</div>
+						
+						
 
 			<!-- //form -->
 

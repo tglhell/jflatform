@@ -4,7 +4,6 @@
 .delivery-price {
     padding-top: 8px;
     text-align: right;
-    line-height: 22px;
 }
 .delivery-price .s-txt {
     font-size: 12px;
@@ -24,87 +23,6 @@
     }
     .item + .delivery-price {
         margin-top: 24px;
-    }
-}
-
-.payment {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 -4px 0;
-}
-.payment label {
-    flex: 1 1;
-    padding: 0 4px;
-}
-.payment input {
-    display: none;
-}
-.payment span {
-    cursor: pointer;
-    display: block;
-    text-align: center;
-    width: 100%;
-    height: 97px;
-    border:1px solid #ccc;
-    border-radius: 4px;
-    color: #666;
-    padding-top: 58px;
-    
-}
-.payment .card span {
-    background: url(../images/common/ico_card.svg) no-repeat center 12px;
-    background-size: 48px 48px;
-}
-.payment .cash span {
-    background: url(../images/common/ico_cash.svg) no-repeat center 12px;
-    background-size: 48px 48px;
-}
-.payment .linepay span {
-    background: url(../images/common/ico_linepay.svg) no-repeat center 24px;
-    background-size: 68px 20px;
-}
-.payment .paypay span {
-    background: url(../images/common/ico_paypay.svg) no-repeat center 24px;
-    background-size: 80px 20px;
-}
-.payment input[type=radio]:checked + span {
-    border-color: #0793ea;
-    color: #191919;
-}
-.payment .card input[type=radio]:checked + span {
-    background-image: url(../images/common/ico_card_on.svg);
-}
-.payment .cash input[type=radio]:checked + span {
-    background-image: url(../images/common/ico_cash_on.svg);
-}
-.payment .linepay input[type=radio]:checked + span {
-    background-image: url(../images/common/ico_linepay_on.svg);
-}
-.payment .paypay input[type=radio]:checked + span {
-    background-image: url(../images/common/ico_paypay_on.svg);
-}
-@media screen and (max-width: 1119px) {
-    .payment {
-        margin: -4px;
-    }
-    .payment label {
-        width: 50%;
-        flex: unset;
-        padding: 4px;
-    }
-    .payment span {
-        height: 88px;
-        padding-top: 52px;
-        font-size: 13px;
-    }
-    .payment .card span,
-    .payment .cash span {
-        background-position-y: 7px;
-    }
-    .payment .linepay span,
-    .payment .paypay span {
-        background-position-y: 20px;
     }
 }
 
@@ -180,6 +98,7 @@
 }
 .prod-list .goods .thumb span {
     padding-left: 0;
+    padding-top: 0;
 }
 .prod-list .goods .thumb span::before {
     z-index: 3;
@@ -195,7 +114,6 @@
 }
 .prod-list .goods .name {
     font-weight: 500;
-    line-height: 22px;
     overflow: hidden;
     display: -webkit-box;
     text-overflow: ellipsis;
@@ -294,8 +212,6 @@
         border-radius: 4px;
     }
     .prod-list .goods .name {
-        font-size: 13px;
-        line-height: 20px;
         padding-right: 32px;
     }
     .prod-list .goods .option {
@@ -560,7 +476,6 @@
 	position: relative;
     padding: 24px;
     color: #333;
-    line-height: 22px;
 }
 .list-payment ul li:nth-child(2) {
     padding-bottom: 0;
@@ -607,7 +522,6 @@
     .list-payment ul li:not(:first-child) {
         color: #999;
         font-size: 12px;
-        line-height: 20px;
         font-weight: 4000;
     }
     .list-payment li:first-child > .tit {
@@ -835,7 +749,6 @@
 .shop-option .select-items li .tit {
     border-top: 1px solid #e9e9e9;
     padding-top: 16px;
-    line-height: 22px;
 }
 .shop-option .select-items li:first-child .tit {
     border-top: none;

@@ -1,9 +1,10 @@
-<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <g fill="none" fill-rule="evenodd">
-        <path d="M8 .5c2.071 0 3.946.84 5.303 2.197A7.477 7.477 0 0 1 15.5 8c0 2.071-.84 3.946-2.197 5.303A7.477 7.477 0 0 1 8 15.5a7.477 7.477 0 0 1-5.303-2.197A7.477 7.477 0 0 1 .5 8c0-2.071.84-3.946 2.197-5.303A7.477 7.477 0 0 1 8 .5z" stroke="#999"/>
-        <text font-family="HyundaiSansTextJP-Regular, Hyundai Sans Text JP" font-size="12" fill="#999">
-                            <tspan x="5" y="13">?</tspan>
-                        </text>
-        <path d="M0 0h16v16H0z"/>
+        <path d="M0 0h24v24H0z"/>
+        <path d="M12 1.5c2.9 0 5.524 1.175 7.425 3.075 1.9 1.9 3.075 4.526 3.075 7.425 0 2.9-1.175 5.524-3.075 7.425A10.467 10.467 0 0 1 12 22.5c-2.9 0-5.524-1.175-7.425-3.075A10.467 10.467 0 0 1 1.5 12c0-2.9 1.175-5.524 3.075-7.425C6.475 2.675 9.101 1.5 12 1.5z" stroke="#999"/>
+        <g transform="translate(9 6)">
+            <circle fill="#999" fill-rule="nonzero" cx="3" cy="11" r="1"/>
+            <path d="M3 8V6.588c0-.487.274-.933.709-1.153C5.236 4.66 6 3.81 6 2.882 6 1.29 4.657 0 3 0S0 1.29 0 2.882" stroke="#999" stroke-linejoin="round"/>
+        </g>
     </g>
 </svg>

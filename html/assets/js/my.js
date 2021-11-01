@@ -1,9 +1,15 @@
 jQuery.event.add(window, 'load', function () {
     
-    let otherCheckBox = $('.check-terms .other input');
+    let checkBox = $('.check-terms input');
     
-    otherCheckBox.on('click',function(){
-        $('.other-textarea').slideToggle(200);
+    checkBox.on('click',function(){
+        let otherCheckBox =  $(this).closest('li').hasClass('other');
+        
+        if(otherCheckBox) {
+            $('.other-textarea').slideDown(200);
+        } else {
+            $('.other-textarea').slideUp(200);
+        }
     })
         
 })

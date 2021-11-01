@@ -1,17 +1,17 @@
-<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs>
-        <path id="a" d="M0 31.998h32V0H0z"/>
-    </defs>
-    <g fill="none" fill-rule="evenodd">
-        <mask id="b" fill="#fff">
-            <use xlink:href="#a"/>
-        </mask>
-        <path d="M16 28C9.382 28 4 22.617 4 16 4 9.385 9.383 4 16 4s12 5.384 12 12c0 6.617-5.383 12-12 12" stroke="#000" stroke-width="1.5" fill="#FEFEFE" mask="url(#b)"/>
-        <g mask="url(#b)">
-            <path stroke="#1D1D1B" stroke-width="1.5" d="M24.286 16.349h-3.373M11.375 16.349H8"/>
-            <path stroke="#1D1D1B" stroke-width="1.5" stroke-linejoin="bevel" d="m22.292 11.655-1.537 5.135-1.537 5.136-1.538-5.136-1.536-5.135-1.537 5.135-1.537 5.136-1.538-5.136-1.537-5.135"/>
-            <path fill="#FEFEFE" d="M8.86 11.986h14.684v-.811H8.86z"/>
-            <path stroke="#FEFEFE" stroke-width="1.5" d="M22.599 22.374H9.688"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>8B09E902-A855-4620-BA4D-BB82731D0553</title>
+    <g id="❇️-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="[PC/MO]Icon" transform="translate(-120.000000, -2496.000000)">
+            <g id="pictogram-/-mymain-/-ic_estimate" transform="translate(120.000000, 2496.000000)">
+                <path d="M23,13.8340751 C22.1206533,19.0361846 17.5647278,23 12.07656,23 C5.95914484,23 1,18.0751322 1,12 C1,5.92486775 5.95914484,1 12.07656,1 C17.565049,1 22.1211866,4.96427942 23,10.1668383" id="Path" stroke="#666666"></path>
+                <g id="Group-2" transform="translate(7.000000, 6.000000)" stroke="#0793EA" stroke-linejoin="round">
+                    <line x1="1.25" y1="10.4" x2="8.75" y2="10.4" id="Path"></line>
+                    <line x1="1.25" y1="7.8" x2="8.75" y2="7.8" id="Path"></line>
+                    <line x1="5.02777778" y1="6.80952381" x2="5.02777778" y2="13" id="Path"></line>
+                    <polyline id="Path" points="10 0 5 6.80952381 0 0"></polyline>
+                </g>
+            </g>
         </g>
     </g>
 </svg>

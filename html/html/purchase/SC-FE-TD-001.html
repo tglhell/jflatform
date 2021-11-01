@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="../../assets/css/common.css">
 	<link rel="stylesheet" href="../../assets/css/purchase.css">
-	<link rel="stylesheet" href="../../assets/css/purchase_td.css">
 	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
 	
 	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
@@ -296,13 +295,16 @@
 									<input type="search" id="inpNum01_011" class="inp-item" placeholder="地域名、店名 入力">
 									<button class="inp-close"></button>
 								</div>
-								<button class="btn-tbl map-search"><span>icon</span></button>
+								<button class="btn-tbl btn-search"><span>icon</span></button><!-- 2021-10-28 수정 -->
 							</div>
 						</div>
 					</div>
 					<!-- //search -->
 
                     <div class="map">
+						<img src="../../assets/images/common/map_hyundai.png" class="map_hyundai" style="position: absolute; top: 20%; left: 50%">
+						<img src="../../assets/images/common/map_mocean.png" class="map_mocean" style="position: absolute; top: 70%; left: 40%">
+						<img src="../../assets/images/common/map_anyca.png" class="map_anyca" style="position: absolute; top: 10%; left: 80%">
 						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25321.666663415752!2d127.0507571!3d37.50300425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sko!2skr!4v1626328179535!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 					</div>
 					<!-- //map -->
@@ -324,7 +326,8 @@
                                     </li>
                                     <li class="hour">
                                         <span>営業時間</span>
-                                        <p>09:00~18:00</p>
+                                        <p>平日 09:00~18:00</p>
+                                        <p>週末 09:00~18:00</p>
                                     </li>
                                     <li class="service">
                                         <span>保有車両</span>

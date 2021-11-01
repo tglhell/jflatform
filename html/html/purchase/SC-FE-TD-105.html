@@ -274,36 +274,70 @@
 	<!-- container -->
 	<div id="hmjContainer" class="hmj-container test-drive">
 		<div class="hmj-content">
-
-			<div class="cont-outer fullcase">
-				<div class="service-step">
-                   service-step 디자인미정
-                </div>
+			<div class="top-visual pc-only">
+				<img src="../../assets/images/@td_visual.jpg" alt="top visual">
+				<div class="top-visual-text fc-white">
+					<h2 class="top-title">試乗予約</h2>
+					<p class="top-desc">試乗サービスを通して<br>ご希望の車種を直接ご経験ください。</p>
+				</div>
 			</div>
 
-			<div class="cont-outer mincase apply">
-                <div class="inp-outer-box2"><!-- 유효성체크 val-error -->
-                    <label for="inpName01_01" class="label">希望日選択 <span class="required">*</span></label>
-                    
-                    <!-- 달력 -->
-                    <div id="datePicker"></div>
-                </div>
-                <p class="error-msg">error text</p>
-                
-                <div class="inp-outer-box2"><!-- 유효성체크 val-error -->
-                    <label for="inpName01_01" class="label">希望時間選択 <span class="required">*</span></label>                    
-                    <div class="select-hour">
-                        <label class="btn-select"><input type="radio" name="onlyOne" /><span>09:00 ~ 09:30</span></label>
-                        <label class="btn-select"><input type="radio" name="onlyOne" /><span>09:30 ~ 10:00</span></label>
-                        <label class="btn-select"><input type="radio" name="onlyOne" /><span>10:00 ~ 10:30</span></label>
-                        <label class="btn-select"><input type="radio" name="onlyOne" /><span>10:30 ~ 11:00</span></label>
-                        <label class="btn-select"><input type="radio" name="onlyOne" disabled /><span>12:00 ~ 12:30</span></label>
-                        <label class="btn-select"><input type="radio" name="onlyOne" checked /><span>13:00 ~ 13:30</span></label>
-                        <label class="btn-select"><input type="radio" name="onlyOne" /><span>13:00 ~ 13:30</span></label>
-                        <label class="btn-select"><input type="radio" name="onlyOne" /><span>13:00 ~ 13:30</span></label>
-                    </div>
-                </div>
-                <p class="error-msg">error text</p>
+			<div class="cont-outer fullcase">
+				<ul class="service-step">
+					<li class="end">
+					   <span class="tit">申込者情報</span>
+					   <span class="step">1</span>
+					</li>
+					<li class="end">
+					   <span class="tit">試乗場所および車種選択</span>
+					   <span class="step">2</span>
+					</li>
+					<li class="ing">
+					   <span class="tit">希望日時選択</span>
+					   <span class="step">3</span>
+					</li>
+					<li>
+					   <span class="tit">ご要望</span>
+					   <span class="step">4</span>
+					</li>
+                </ul>
+			</div>
+			<!-- //step -->
+
+			<div class="cont-outer apply">
+				<h4 class="pc-only">試乗希望日と時間を選択してください。</h4>
+				<div class="form-list type2">
+					<div class="inp-outer-box row-type val-error"><!-- 유효성체크 val-error -->
+						<label for="inpName02_01">希望日選択 <span class="required">*</span></label>
+						
+						<!-- 달력 -->
+						<div class="select-date">
+							<div id="datePicker">
+							</div>
+							<div class="remark">
+								<span>予約可能</span>
+								<span class="disabled">予約不可</span>
+							</div>
+						</div>
+						
+						<!-- //달력 -->
+					</div>
+
+					<div class="inp-outer-box row-type"><!-- 유효성체크 val-error -->
+						<label for="inpName02_01">希望時間選択 <span class="required">*</span></label>
+						<div class="select-hour">
+							<label class="btn-select3"><input type="radio" name="onlyOne" /><span>09:00 ~ 09:30</span></label>
+							<label class="btn-select3"><input type="radio" name="onlyOne" /><span>09:30 ~ 10:00</span></label>
+							<label class="btn-select3"><input type="radio" name="onlyOne" /><span>10:00 ~ 10:30</span></label>
+							<label class="btn-select3"><input type="radio" name="onlyOne" /><span>10:30 ~ 11:00</span></label>
+							<label class="btn-select3"><input type="radio" name="onlyOne" disabled /><span>12:00 ~ 12:30</span></label>
+							<label class="btn-select3"><input type="radio" name="onlyOne" checked /><span>13:00 ~ 13:30</span></label>
+							<label class="btn-select3"><input type="radio" name="onlyOne" /><span>13:30 ~ 14:00</span></label>
+							<label class="btn-select3"><input type="radio" name="onlyOne" /><span>14:00 ~ 14:30</span></label>
+						</div>
+					</div>
+					
+				</div>
 
                 <div class="cta-outer">
                     <button class="btn"><span>戻る</span></button>
@@ -420,8 +454,9 @@
 <script>
     $(function () {
         $('.test-drive #datePicker').datepicker({
-            minDate: '0'
-        });
+			minDate: '0'
+		});
+		$('.test-drive #datePicker').datepicker('setDate', '+1D');
     });
 </script>
 </body>

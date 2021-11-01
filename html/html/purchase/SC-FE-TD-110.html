@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="../../assets/css/common.css">
 	<link rel="stylesheet" href="../../assets/css/purchase.css">
-	<link rel="stylesheet" href="../../assets/css/purchase_td.css">
 	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
 	
 	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
@@ -277,8 +276,8 @@
 				<p class="desc">試乗サービスを通して<br>
 					ご希望の車種を直接ご経験ください</p>
 				<div class="cta-outer">
-					<button class="btn"><span>予約確認</span></button>
-					<button class="btn btn-type2"><span>予約</span></button>
+					<button class="btn pop-open" data-pop-idx="121"><span>予約確認</span></button>
+					<button class="btn btn-type2 pop-open" data-pop-idx="122"><span>予約</span></button>
 				</div>
 			</div>
 			<div class="cont-outer fullcase guide-main">
@@ -440,6 +439,38 @@
 		</div>
 	</div>
 	<!--//footer -->
+</div>
+
+<!-- TD-121 -->
+<div class="layer-popup-wrap" data-pop-idx="121">
+	<div class="layer-popup-body">
+		<div class="layer-popup-cont pop-small none-close">
+			<div class="layer-cont">
+				<div class="alert-icon"><img src="../../assets/images/common/ico_complete_td_search.svg" alt="confirm"></div>
+				<p class="alert-desc">試乗予約履歴を確認されますか。</p>
+				<div class="cta-outer full-type row-type">
+					<button class="btn btn-middle btn-close"><span>非会員確認</span></button>
+					<button class="btn btn-middle btn-type2 btn-close"><span>会員確認</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- TD-122 -->
+<div class="layer-popup-wrap" data-pop-idx="122">
+	<div class="layer-popup-body">
+		<div class="layer-popup-cont pop-small none-close">
+			<div class="layer-cont">
+				<div class="alert-icon"><img src="../../assets/images/common/ico_complete_apply.svg" alt="confirm"></div>
+				<p class="alert-desc">試乗を予約されますか。</p>
+				<div class="cta-outer full-type row-type">
+					<button class="btn btn-middle btn-close"><span>非会員予約</span></button>
+					<button class="btn btn-middle btn-type2 btn-close"><span>会員予約</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 </body>

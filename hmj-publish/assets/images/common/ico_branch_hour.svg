@@ -1,7 +1,14 @@
-<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-    <g fill="none" fill-rule="evenodd">
-        <path fill="none" d="M0 0h16v16H0z"/>
-        <path d="M8 1A7 7 0 1 1 8 15 7 7 0 0 1 8 1z" fill="#0793EA"/>
-        <path stroke="#FFF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" d="M11.197 9.5 7.904 8.063V4.5"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>26654D04-7016-4375-9899-04651740023B</title>
+    <g id="❇️-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="[PC/MO]Icon" transform="translate(-805.000000, -615.000000)">
+            <g id="common-/-content-/-ic_clock" transform="translate(805.000000, 615.000000)">
+                <rect id="Rectangle" x="0" y="0" width="16" height="16"></rect>
+                <g id="Group-5" transform="translate(1.000000, 1.000000)" fill="#0793EA">
+                    <path d="M7,0 C10.866,0 14,3.134 14,7 C14,10.866 10.866,14 7,14 C3.134,14 0,10.866 0,7 C0,3.134 3.134,0 7,0 Z M7.504,2.9 L6.304,2.9 L6.304,7.45581221 L10.506946,9.28989461 L10.9868946,8.19005404 L7.504,6.671 L7.504,2.9 Z" id="Combined-Shape"></path>
+                </g>
+            </g>
+        </g>
     </g>
 </svg>

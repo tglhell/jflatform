@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="../../assets/css/common.css">
 	<link rel="stylesheet" href="../../assets/css/purchase.css">
-	<link rel="stylesheet" href="../../assets/css/purchase_td.css">
 	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
 	
 	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
@@ -303,15 +302,15 @@
 			<!-- //step -->
 
 			<div class="cont-outer apply">
-				<h4 class="pc-only">試乗申込者情報を入力してください。</h4>
+				<h4 class="pc-only">試乗場所とご希望の車種を選択してください。</h4>
 				<div class="form-list type2">
 					<section>
 						<div class="inp-outer-box row-type"><!-- 유효성체크 val-error -->
 							<label for="inpName02_01">試乗場所選択 <span class="required">*</span></label>
-							<div class="slt-box hgt-type2">
-								<p class="selected-value">選択</p>
+							<div class="slt-box hgt-type2 on">
+								<p class="selected-value">横浜試乗センター</p>
 								<ul class="select-items">
-									<li>070</li>
+									<li class="selected">横浜試乗センター</li>
 									<li>080</li>
 								</ul>
 							</div>
@@ -376,18 +375,16 @@
 									</div>
 								</div>
 							</div>
-						</div>
-						
-						<div class="select-car">
-							<p class="thumb"><img src="../../assets/images/@img_200_107.jpg"></p>
-							<div class="info">
-								<p class="name">IONIQ 5</p>
-								<p class="desc">Prestige 4WD <br>
-									ストーングレー</p>
-							</div>
-						</div>
 
-						<div class="inp-outer-box row-type post-type">
+							<div class="select-car">
+								<p class="thumb"><img src="../../assets/images/@img_200_107.jpg"></p>
+								<div class="info">
+									<p class="name">IONIQ 5</p>
+									<p class="desc">Prestige 4WD <br>
+										ストーングレー</p>
+								</div>
+							</div>
+
 							<div class="inp-group-box">
 								<label class="radio type2"><input type="radio" name="radio" id="radioChk01_1"><span>NEXO</span></label>
 								<div class="inp-area">
@@ -414,6 +411,59 @@
 						</div>
 						<p class="error-msg">error text</p>
 					</section>
+
+					<div class="caution type2">
+						<ul>
+							<li>イベント車両の運営期間は2021.08.01~2021.05.15です。</li>
+							<li>車両のイメージは、実際と異なる場合があります。</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="form-list type2">
+					<section>
+						<div class="inp-outer-box row-type post-type"><!-- 유효성체크 val-error -->
+							<label for="inpName01_01" class="label">車種選択 <span class="required">*</span></label>
+							<div class="radio-group">
+								<label class="radio"><input type="radio" name="radio" id="radioChk01_1"><span>IONIQ5 グレード1 ボディカラー1</span></label>
+							</div>
+
+							<div class="select-car">
+								<p class="thumb"><img src="../../assets/images/@img_200_107.jpg"></p>
+								<div class="info">
+									<p class="name">IONIQ 5</p>
+									<p class="desc">Prestige 4WD <br>
+										ストーングレー</p>
+								</div>
+							</div>
+
+							<div class="radio-group">
+								<label class="radio"><input type="radio" name="radio" id="radioChk01_1"><span>IONIQ5 グレード1 ボディカラー2</span></label>
+							</div>
+
+							<!-- <div class="select-car">
+								<p class="thumb"><img src="../../assets/images/@img_200_107.jpg"></p>
+								<div class="info">
+									<p class="name">IONIQ 5</p>
+									<p class="desc">Prestige 4WD <br>
+										ストーングレー</p>
+								</div>
+							</div> -->
+
+							<div class="radio-group">
+								<label class="radio"><input type="radio" name="radio" id="radioChk01_1"><span>IONIQ 5 Prestige 4WD ストーングレー</span></label>
+							</div>
+							
+							<div class="radio-group">
+								<label class="radio"><input type="radio" name="radio" id="radioChk01_1"><span>IONIQ5 グレード1 ボディカラー1</span></label>
+							</div>
+
+							<div class="radio-group">
+								<label class="radio"><input type="radio" name="radio" id="radioChk01_1"><span>IONIQ 5 Prestige 4WD ストーングレー</span></label>
+							</div>
+						</div>
+					</section>
+
 					<div class="caution type2">
 						<ul>
 							<li>イベント車両の運営期間は2021.08.01~2021.05.15です。</li>
@@ -532,6 +582,9 @@
 	</div>
 	<!--//footer -->
 </div>
+<script>
+	customSelect();
+</script>
 
 </body>
 </html>

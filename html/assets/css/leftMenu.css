@@ -67,8 +67,6 @@
     padding-bottom: 16px;
 }
 .cont-left-box .lnb-depth2 > li > a{
-    font-size: 14px;
-    line-height: 22px;
     font-weight: 400;
 }
 .cont-left-box .lnb-depth2 > li:not(:first-of-type) a{

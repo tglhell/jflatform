@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+/* my-알림 */
+.alarm-top{
+    margin-bottom: 8px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 30px;
+}
+.alarm-top .total-num .date-num{
+    font-size: 18px;
+    font-weight: 500;
+    color: #1c6bba;
+}
+.alarm-top .alarm-ref{
+    padding: 0 4px;
+    color: #999;
+}
+.alarm-top .btn-extra-small span{
+    font-size: 12px;
+}
+
+.alarm-box{
+    border-radius: 8px;
+    border: 1px solid #e9e9e9;
+    overflow: hidden;
+}
+.alarm-box + .alarm-box{
+    margin-top: 16px;
+}
+.alarm-box .alarm-date{
+    padding: 16px;
+    max-height: 58px;
+    border-bottom: 1px solid #e9e9e9;
+    background: #fafafa;
+}
+.alarm-box .alarm-date .cont-text{
+    font-weight: 500;
+}
+.alarm-box .alarm-list{
+padding: 0 16px;
+}
+.alarm-list .alarm-item{
+    position: relative;
+    padding: 24px 0;
+}
+.alarm-list .alarm-item + .alarm-item{
+    border-top: 1px solid #e9e9e9;
+}
+.alarm-list .alarm-item .btn-del{
+    position: absolute;
+    top: 24px;
+    right: 0;
+    z-index: 1;
+}
+.alarm-list .alarm-item .alarm-title{
+    position: relative;
+    padding: 2px 32px;
+    font-weight: 500;
+}
+.alarm-list .alarm-item .alarm-title::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../images/common/ico_alarm_read.svg);
+}
+.alarm-list .alarm-item.new .alarm-title::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../images/common/ico_alarm_new.svg);
+}
+.alarm-list .alarm-item .alarm-title .cont-text2{
+    margin-right: 10px;
+}
+.alarm-list .alarm-item .alarm-title .receive-time{
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #999;
+}
+.alarm-list .alarm-item .alarm-cont{
+    clear: both;
+    padding-top: 16px;
+    color: #666;
+}
+.alarm-list .alarm-item .alarm-more{
+    padding-top: 16px;
+}
+
+@media screen and (max-width: 1119px) {
+    .my-alarm{
+        padding: 40px 20px 32px;
+    }
+    .alarm-top{
+        height: 26px;
+    }
+    .alarm-top .total-num .date-num{
+        font-size: 16px;
+    }
+    .alarm-top .alarm-ref{
+        font-size: 12px;
+    }
+    .alarm-list .alarm-item .btn-del{
+        top: 20px;
+    }
+}
+
+
+

@@ -1,23 +1,20 @@
-<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs>
-        <path id="a" d="M0 .292h1V.39H0z"/>
-        <path id="c" d="M0 .285h1v.111H0z"/>
-    </defs>
-    <g fill="none" fill-rule="evenodd">
-        <path d="M0 32h32V0H0z"/>
-        <path d="M28 24.402v-5.246a2.753 2.753 0 1 1 0-5.506V8.292H4v5.22a2.89 2.89 0 1 1 0 5.782v5.108h24z" stroke="#1D1D1B" stroke-width="1.5"/>
-        <g transform="translate(10.22 8)">
-            <mask id="b" fill="#fff">
-                <use xlink:href="#a"/>
-            </mask>
-            <path stroke="#1D1D1B" stroke-width="1.5" mask="url(#b)" d="M.5-.302V.39"/>
-        </g>
-        <path stroke="#1D1D1B" stroke-width="1.5" stroke-dasharray="2.12,2.12" d="M10.719 9.835v13.733"/>
-        <g transform="translate(10.22 24.006)">
-            <mask id="d" fill="#fff">
-                <use xlink:href="#c"/>
-            </mask>
-            <path stroke="#1D1D1B" stroke-width="1.5" mask="url(#d)" d="M.5.285v.693"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>C6391C78-840B-418C-810D-9678BAAB1F8B</title>
+    <g id="❇️-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="[PC/MO]Icon" transform="translate(-408.000000, -2496.000000)">
+            <g id="pictogram-/-mymain-/-ic_coupon" transform="translate(408.000000, 2496.000000)">
+                <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                <g id="Group-2" transform="translate(1.500000, 4.000000)">
+                    <path d="M0,10 L0,3.33333333 L0,1.66666667 C0,0.746192084 0.723232327,0 1.61538462,0 L13.7307692,0 C13.7307692,0.920474583 14.4540016,1.66666667 15.3461538,1.66666667 C16.2383061,1.66666667 16.9615385,0.920474583 16.9615385,0 L19.3846154,0 C20.2767677,0 21,0.746192084 21,1.66666667 L21,13.3333333 C21,14.2538079 20.2767677,15 19.3846154,15 L16.9615385,15 C16.9615385,14.0795254 16.2383061,13.3333333 15.3461538,13.3333333 C14.4540016,13.3333333 13.7307692,14.0795254 13.7307692,15 L0,15 L0,11.6666667 L0,10 Z" id="Path" stroke="#666666"></path>
+                    <g id="Group" transform="translate(3.658730, 3.571429)" stroke="#0793EA">
+                        <line x1="6.38095238" y1="0.476190476" x2="0.370544741" y2="6.48659812" id="Path" stroke-linecap="square" stroke-linejoin="round" fill-rule="nonzero"></line>
+                        <circle id="Oval" cx="1" cy="1" r="1"></circle>
+                        <circle id="Oval" cx="5.57142857" cy="6.57142857" r="1"></circle>
+                    </g>
+                    <line x1="15.4047619" y1="3.74603175" x2="15.2878095" y2="11" id="Path-43" stroke="#666666" stroke-dasharray="1.5,1.5"></line>
+                </g>
+            </g>
         </g>
     </g>
 </svg>

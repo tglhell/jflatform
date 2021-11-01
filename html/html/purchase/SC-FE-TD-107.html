@@ -272,63 +272,95 @@
 	<!-- container -->
 	<div id="hmjContainer" class="hmj-container test-drive">
 		<div class="hmj-content">
-
-			<div class="cont-outer fullcase">
-				<div class="service-step">
-                   service-step 디자인미정
-                </div>
+			<div class="top-visual pc-only">
+				<img src="../../assets/images/@td_visual.jpg" alt="top visual">
+				<div class="top-visual-text fc-white">
+					<h2 class="top-title">試乗予約</h2>
+					<p class="top-desc">試乗サービスを通して<br>ご希望の車種を直接ご経験ください。</p>
+				</div>
 			</div>
 
-			<div class="cont-outer mincase apply">
-                <div class="apply-info">
-                    <ul>
-                        <li>
-                            <span class="item">姓名</span>
-                            <span class="txt">木村  拓哉</span>
-                        </li>
-                        <li>
-                            <span class="item">姓名(フリガナ)</span>
-                            <span class="txt">きむら たくや</span>
-                        </li>
-                        <li>
-                            <span class="item">携帯電話</span>
-                            <span class="txt">08019721113</span>
-                        </li>
-                        <li>
-                            <span class="item">E-mail</span>
-                            <span class="txt">kimura@abc.com</span>
-                        </li>
-                        <li>
-                            <span class="item">試乗場所</span>
-                            <span class="txt">横浜試乗センター</span>
-                        </li>
-                        <li>
-                            <span class="item">試乗車種</span>
-                            <span class="txt">IONIQ 5</span>
-                        </li>
-                        <li>
-                            <span class="item">試乗希望日時</span>
-                            <span class="txt">2021-05-29 15:00 ~ 16:00</span>
-                        </li>
-                    </ul>
-                </div>
-                <ul class="check-terms">
-                    <li>
-                        <label class="chk"><input type="checkbox"><span><em>(必須)</em>個人情報の収集及び利用目的についての同意</span>
-                            <a href="#" class="link-more pop-open" data-pop-idx="persnalTerms01">詳細を見る</a>
-                        </label>					
-                        <p class="error-msg">error text</p>
-                    </li>
-                    <li>
-                        <label class="chk"><input type="checkbox"><span><em>(必須)</em>個人情報の処理委託についての同意</span>
-                            <a href="#" class="link-more pop-open" data-pop-idx="persnalTerms02">詳細を見る</a>
-                        </label>					
-                        <p class="error-msg">error text</p>
-                    </li>
-                    <li>
-                        <label class="chk"><input type="checkbox"><span><em>(必須)</em>登録された携帯電話あてに試乗サービス利用についてご案内させていただきます。</span></label>					
-                    </li>
+			<div class="cont-outer fullcase">
+				<ul class="service-step">
+					<li class="end">
+					   <span class="tit">申込者情報</span>
+					   <span class="step">1</span>
+					</li>
+					<li class="end">
+					   <span class="tit">試乗場所および車種選択</span>
+					   <span class="step">2</span>
+					</li>
+					<li class="end">
+					   <span class="tit">希望日時選択</span>
+					   <span class="step">3</span>
+					</li>
+					<li class="ing">
+					   <span class="tit">ご要望</span>
+					   <span class="step">4</span>
+					</li>
                 </ul>
+			</div>
+			<!-- //step -->
+
+			<div class="cont-outer apply">
+				<h4 class="pc-only">お申込みの内容をもう一度ご確認ください。</h4>
+				<div class="form-list">
+					<div class="reserve-info">
+						<p class="tit">ご要望</p>
+						<ul class="tbl-list">
+							<li>
+								<span class="item">姓名</span>
+								<span class="txt">木村  拓哉</span>
+							</li>
+							<li>
+								<span class="item">姓名(フリガナ)</span>
+								<span class="txt">きむら たくや</span>
+							</li>
+							<li>
+								<span class="item">携帯電話</span>
+								<span class="txt">08019721113</span>
+							</li>
+							<li>
+								<span class="item">E-mail</span>
+								<span class="txt">kimura@abc.com</span>
+							</li>
+							<li>
+								<span class="item">試乗場所</span>
+								<span class="txt">横浜試乗センター</span>
+							</li>
+							<li>
+								<span class="item">試乗車種</span>
+								<span class="txt">IONIQ 5 Prestige 4WD ストーングレー</span>
+							</li>
+							<li>
+								<span class="item">試乗希望日時</span>
+								<span class="txt">2021-05-29 15:00 ~ 16:00</span>
+							</li>
+						</ul>
+					</div>
+
+					<ul class="check-terms">
+						<li><!-- 유효성 val-error -->
+							<label class="chk"><input type="checkbox"><span><em>[必須]</em> 個人情報の収集及び利用目的についての同意</span>
+								<a href="#" class="btn-text2">詳細</a>
+							</label>					
+							<p class="error-msg">約款に同意してください。</p>
+						</li>
+						<li>
+							<label class="chk"><input type="checkbox"><span><em>[必須]</em> 個人情報の処理委託についての同意</span>
+								<a href="#" class="btn-text2">詳細</a>
+							</label>					
+							<p class="error-msg">約款に同意してください。</p>
+						</li>
+						<li>
+							<label class="chk"><input type="checkbox"><span><em>[必須]</em> 登録された携帯電話あてに試乗サービス利用についてご案内させていただきます。</span></label>					
+							<p class="error-msg">通知に同意してください。</p>
+						</li>
+					</ul>
+				</div>
+                
+
+                
 
                 <div class="cta-outer">
                     <button class="btn"><span>戻る</span></button>

@@ -12,7 +12,8 @@
 	font-size: 12px;
 }
 .ui-datepicker {
-	width: 370px;
+	width: auto;
+	max-width: 370px;
 	font-family: 'HyundaiSansHeadJP', sans-serif;
 }
 .ui-datepicker table {
@@ -166,24 +167,26 @@ a.ui-state-default {
 	content: '';
 	width: 18px;
 	position:absolute;	
-	bottom:13px;
+	bottom: 14px;
 	left:50%;
 	margin-left:-9px;
 	border-bottom: 3px solid #0793ea;
 }
-.ui-state-highlight::after,
+/* .ui-state-highlight::after,
 .ui-widget-content .ui-state-highlight::after,
-.ui-widget-header .ui-state-highlight::after {
+.ui-widget-header .ui-state-highlight::after, */
+.ui-datepicker-inline .ui-state-highlight::after{
 	content:'今日';
 	position:absolute;
 	left:50%;
-	bottom:-7px;	
+	bottom: -2px;	
 	transform: translateX(-50%);
 	width: 20px;	
 	color:#333;
 	line-height:normal;
 	font-family:'HyundaiSansTextJP', sans-serif;
 	font-size:10px;
+	line-height: 16px;
 }
 
 .ui-state-active,
@@ -220,21 +223,20 @@ a.ui-button:active,
 .ui-datepicker-inline .ui-state-highlight::before,
 .ui-datepicker-inline .ui-widget-content .ui-state-highlight::before,
 .ui-datepicker-inline .ui-widget-header .ui-state-highlight::before {
-	content: '';
-	bottom:15px;
+	bottom: 16px;
 }
 
-.ui-datepicker-inline .ui-state-highlight::after,
+/* .ui-datepicker-inline .ui-state-highlight::after,
 .ui-datepicker-inline .ui-widget-content .ui-state-highlight::after,
 .ui-datepicker-inline .ui-widget-header .ui-state-highlight::after {
 	bottom:-4px;
-}
+} */
 
-.ui-datepicker-inline.ui-datepicker th {
+.pc .ui-datepicker-inline.ui-datepicker th {
 	height: 80px;
 }
 
-.ui-datepicker-inline.ui-datepicker tbody td {
+.pc .ui-datepicker-inline.ui-datepicker tbody td {
 	height: 80px;
 }
 .ui-datepicker-inline .ui-state-default, 
@@ -279,6 +281,7 @@ a.ui-button:active,
 		width: 38px;
 		height: 38px;
 		line-height: 38px;
+		font-size: 13px;
 	}
 	.ui-state-highlight::after,
 	.ui-widget-content .ui-state-highlight::after,
@@ -287,6 +290,7 @@ a.ui-button:active,
 		width: 20px;
 		height: 8px;
 		font-size:8px;
+		line-height: 100%;
 	}
 	.ui-state-highlight::before,
 	.ui-widget-content .ui-state-highlight::before,

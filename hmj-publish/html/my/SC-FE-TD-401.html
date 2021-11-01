@@ -260,13 +260,13 @@
 	<!--//header -->
 
 	<!-- container -->
-	<div id="hmjContainer" class="hmj-container test-drive">
+	<div id="hmjContainer" class="hmj-container test-drive poll"><!-- 2021-10-28 class수정 -->
 		<div class="hmj-content">
 			<div class="top-visual pc-only">
 				<picture>
 					<img src="../../assets/images/common/img_poll.jpg" alt="top visual">
 				</picture>
-				<div class="top-visual-text">
+				<div class="top-visual-text fc-white">
 					<h2 class="top-title">顧客満足度アンケート</h2>
 					<p class="top-desc">
 						お客様の貴重なご意見を<br>
@@ -276,7 +276,7 @@
 			</div>
 			<div class="cont-outer">
                 <div class="cont-center"> 
-					<div class="complete-area poll">
+					<div class="complete-area"><!-- 2021-10-28 class수정 -->
                         <div class="tit">試乗の顧客満足度調査</div>
                         <div class="desc">
                             現代自動車の試乗サービスはいかかでしたか？<br>
@@ -284,51 +284,45 @@
                         </div>
                     </div>
 
-                    <div class="form-area poll">
-                        <ul>
-                            <li>
-                                <p class="question">ご購入の意向はごさいますでしょうか。</p>
-								<div class="data-form type2">
-                                    <div class="select-group"><!-- 유효성체크 val-error -->
-                                        <label class="btn-select-poll"><input type="radio" checked="checked" name="radioChk01" id="radioChk01_1"><span>大変満足</span></label>
-                                    	<label class="btn-select-poll"><input type="radio" name="radioChk01" id="radioChk01_2"><span>満足</span></label>
-                                    	<label class="btn-select-poll"><input type="radio" name="radioChk01" id="radioChk01_3"><span>普通</span></label>
-                                    </div>
-                                    <p class="error-msg">error text</p>
-                                </div>
-                                <!-- //type1 -->
-                            </li>
-                            <li>
-                                <p class="question">試乗車両は清潔な状態だったでしょうか。</p>
-                                <div class="data-form type2">
-                                    <div class="select-group">
-                                        <label class="btn-select-poll"><input type="radio" checked="checked" name="radioChk02" id="radioChk02_1"><span>大変満足</span></label>
-                                        <label class="btn-select-poll"><input type="radio" name="radio" id="radioChk02_2"><span>満足</span></label>
-                                        <label class="btn-select-poll"><input type="radio" name="radioChk02" id="radioChk02_3"><span>普通</span></label>
-                                        <label class="btn-select-poll"><input type="radio" name="radioChk02" id="radioChk02_4"><span>不満</span></label>
-                                        <label class="btn-select-poll"><input type="radio" name="radioChk02" id="radioChk02_5"><span>大変不満</span></label>
-                                    </div>
-                                    <p class="error-msg">error text</p>
-                                </div>
-                                <!-- //type2 -->
-                            </li>
-                            <li>
-                                <p class="question">[選択] 試乗サービスに対するご要望やコメントをご自由にご記入ください。</p>
-                                <div class="data-form type3">
-                                    <div class="inp-textarea">
-                                        <textarea name="name" rows="8" placeholder="内容をご記入ください。"></textarea>
-                                        <span class="bite"><em>0</em>/100</span>
-                                    </div>
-                                    <p class="error-msg">error text</p>
-                                </div>
-                                <!-- //type3 -->
-                            </li>
-                        </ul>
-        
-                        <div class="cta-outer">
-                            <button type="button" class="btn btn-type2"><span>保存</span></button>
-                        </div>
+                    <div class="poll-list type1"><!-- 2021-10-28 class수정 -->
+						<div class="data-form">
+							<p class="question">ご購入の意向はごさいますでしょうか。</p>
+							<div class="select-group"><!-- 유효성체크 val-error -->
+								<label class="btn-select-poll"><input type="radio" checked="checked" name="radioChk01" id="radioChk01_1"><span>大変満足</span></label>
+								<label class="btn-select-poll"><input type="radio" name="radioChk01" id="radioChk01_2"><span>満足</span></label>
+								<label class="btn-select-poll"><input type="radio" name="radioChk01" id="radioChk01_3"><span>普通</span></label>
+							</div>
+							<p class="error-msg">error text</p>
+						</div>
+						<!-- //type1 -->
+
+                        <div class="data-form">
+							<p class="question">試乗車両は清潔な状態だったでしょうか。</p>
+							<div class="select-group">
+								<label class="btn-select-poll"><input type="radio" checked="checked" name="radioChk02" id="radioChk02_1"><span>大変満足</span></label>
+								<label class="btn-select-poll"><input type="radio" name="radio" id="radioChk02_2"><span>満足</span></label>
+								<label class="btn-select-poll"><input type="radio" name="radioChk02" id="radioChk02_3"><span>普通</span></label>
+								<label class="btn-select-poll"><input type="radio" name="radioChk02" id="radioChk02_4"><span>不満</span></label>
+								<label class="btn-select-poll"><input type="radio" name="radioChk02" id="radioChk02_5"><span>大変不満</span></label>
+							</div>
+							<p class="error-msg">error text</p>
+						</div>
+						<!-- //type2 -->
+
+						<div class="data-form">
+							<p class="question">[選択] 試乗サービスに対するご要望やコメントをご自由にご記入ください。</p>						
+							<div class="inp-textarea">
+								<textarea name="name" rows="8" placeholder="内容をご記入ください。"></textarea>
+								<span class="bite"><em>0</em>/100</span>
+							</div>
+							<p class="error-msg">error text</p>
+						</div>
+						<!-- //type3 -->
                     </div>
+
+					<div class="cta-outer">
+						<button type="button" class="btn btn-type2"><span>保存</span></button>
+					</div>
                 </div>			
 			</div>
 		</div>

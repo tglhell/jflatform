@@ -1,8 +1,11 @@
-<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
     <g fill="none" fill-rule="evenodd">
-        <path fill="#0793EA" fill-rule="nonzero" d="M33.306 18.292v20.236h-2.612V18.292z"/>
-        <circle fill="#0793EA" cx="32" cy="44.403" r="1.958"/>
-        <path d="M0 0h64v64H0z"/>
-        <circle stroke="#666" stroke-width="2" cx="32" cy="32" r="30.333"/>
+        <path d="M0 0h80v80H0z"/>
+        <g transform="translate(2 2)" stroke-width="2">
+            <circle stroke="#666" cx="38" cy="38" r="37"/>
+            <g stroke="#E63312">
+                <path d="M48.577 49.148 26.852 27.423M27.424 49.148l8.003-8.004M40.573 35.999l8.575-8.575"/>
+            </g>
+        </g>
     </g>
 </svg>

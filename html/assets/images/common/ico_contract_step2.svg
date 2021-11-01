@@ -1,0 +1,14 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd">
+        <path d="M0 0h64v64H0z"/>
+        <g stroke-width="2">
+            <path d="M34.25 45H13V18.431C13 16.536 14.679 15 16.75 15h32.5c2.071 0 3.75 1.536 3.75 3.431v16.104" stroke="#666"/>
+            <g stroke="#0793EA">
+                <path d="M43.5 49h10M48.833 53.5l4.667-4.527-4.667-4.473"/>
+            </g>
+            <path stroke="#666" d="m13 20 20.155 13L53 20"/>
+            <circle cx="11" cy="11" r="10" transform="translate(38 38)" stroke="#0793EA"/>
+        </g>
+        <path d="M0 0h64v64H0z"/>
+    </g>
+</svg>
