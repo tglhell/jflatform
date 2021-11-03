@@ -347,7 +347,9 @@ jQuery.event.add(window, 'load', function () {
 
 	$('.btn-top-box').on('click', '.btn-top', function (e) {
 		e.preventDefault();
-		const lineWrapPos = $('.lineup-wrap').offset().top;
+		if (!$('.lineup-wrap').length == 0) {
+			lineWrapPos = $('.lineup-wrap').offset().top;
+		}
 		if (!$(this).hasClass('main')) {
 			$('html, body').animate({scrollTop:'0'}, '0');
 			$(this).blur();

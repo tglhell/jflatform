@@ -571,14 +571,14 @@ $(function () {
 	//브랜드거점
 	if ($('.branch-swp01 .list').length == 1) {
 		let swpOpt = {},
-		slideLength = $('.branch-swp0 .list .swiper-slide').length;
+		slideLength = $('.branch-swp01 .list .swiper-slide').length;
 		if (slideLength == 1) {
 			swpOpt = {
 				allowSlidePrev: false,
 				allowSlideNext: false,
 				simulateTouch: false
 			}
-			$('.branch-swp0 .list [class*="swiper-button"]').hide();
+			$('.branch-swp01 .list [class*="swiper-button"]').hide();
 		} else {
 			if ($(window).width() > tbl) {
 				//pc
@@ -589,7 +589,7 @@ $(function () {
 					speed: 300,
 					loop: false,
 					observer: true,
-					observeParents: true
+					observeParents: true,
 				}
 			} else {
 				//mo
@@ -604,7 +604,7 @@ $(function () {
 					speed: 300,
 					loop: false,
 					observer: true,
-					observeParents: true
+					observeParents: true,
 				}
 			}
 		}
@@ -618,7 +618,7 @@ $(function () {
 			swpOpt = {
 				allowSlidePrev: false,
 				allowSlideNext: false,
-				simulateTouch: false
+				simulateTouch: false,
 			}
 			$('.branch-swp01 .thumb [class*="swiper-button"]').hide();
 		} else {
@@ -639,8 +639,21 @@ $(function () {
 					keyboard: true,
 					observer: true,
 					observeParents: true,
+					navigation: false
 				}
 			} else {
+				//mo
+				swpOpt = {
+					pagination: {
+						el: '.branch-swp01 .thumb .swiper-pagination',
+						clickable: true,
+						type: 'progressbar'
+					},
+					navigation: {
+						nextEl: '.branch-swp01 .swiper-button-next',
+						prevEl: '.branch-swp01 .swiper-button-prev',
+					}
+				}
 				$('.branch-swp01 thumb').hide();
 			}
 		}
@@ -718,8 +731,20 @@ $(function () {
 					keyboard: true,
 					observer: true,
 					observeParents: true,
+					navigation:false
 				}
 			} else {
+				swpOpt = {
+					pagination: {
+						el: '.branch-swp02 .thumb .swiper-pagination',
+						clickable: true,
+						type: 'progressbar'
+					},
+					navigation: {
+						nextEl: '.branch-swp02 .swiper-button-next',
+						prevEl: '.branch-swp02 .swiper-button-prev',
+					}
+				}
 				$('.branch-swp02 thumb').hide();
 			}
 		}
@@ -727,16 +752,16 @@ $(function () {
 	};
 
 
-	if ($('.branch-swp02 .list').length == 1) {
+	if ($('.branch-swp03 .list').length == 1) {
 		let swpOpt = {},
-		slideLength = $('.branch-swp02 .list .swiper-slide').length;
+		slideLength = $('.branch-swp03 .list .swiper-slide').length;
 		if (slideLength == 1) {
 			swpOpt = {
 				allowSlidePrev: false,
 				allowSlideNext: false,
 				simulateTouch: false
 			}
-			$('.branch-swp02 .list [class*="swiper-button"]').hide();
+			$('.branch-swp03 .list [class*="swiper-button"]').hide();
 		} else {
 			if ($(window).width() > tbl) {
 				//pc
@@ -747,14 +772,15 @@ $(function () {
 					speed: 300,
 					loop: false,
 					observer: true,
-					observeParents: true
+					observeParents: true,
+					
 				}
 			} else {
 				//mo
 				swpOpt = {
 					spaceBetween: 0,
 					pagination: {
-						el: '.branch-swp02 .list .swiper-pagination',
+						el: '.branch-swp03 .list .swiper-pagination',
 						clickable: true,
 						type: 'progressbar'
 					},
@@ -766,19 +792,19 @@ $(function () {
 				}
 			}
 		}
-		var brandThumbList = new Swiper('.branch-swp02 .list .swiper-container', swpOpt);
+		var brandThumbList = new Swiper('.branch-swp03 .list .swiper-container', swpOpt);
 	};
 
-	if ($('.branch-swp02 .thumb').length == 1) {
+	if ($('.branch-swp03 .thumb').length == 1) {
 		let swpOpt = {},
-		slideLength = $('.branch-swp02 .thumb .swiper-slide').length;
+		slideLength = $('.branch-swp03 .thumb .swiper-slide').length;
 		if (slideLength == 1) {
 			swpOpt = {
 				allowSlidePrev: false,
 				allowSlideNext: false,
 				simulateTouch: false
 			}
-			$('.branch-swp02 .thumb [class*="swiper-button"]').hide();
+			$('.branch-swp03 .thumb [class*="swiper-button"]').hide();
 		} else {
 			if ($(window).width() > tbl) {
 				//pc
@@ -787,7 +813,7 @@ $(function () {
 						swiper: brandThumbList
 					},
 					pagination: {
-						el: '.branch-swp02 .thumb .swiper-pagination',
+						el: '.branch-swp03 .thumb .swiper-pagination',
 						clickable: true,
 						type: 'progressbar'
 					},
@@ -797,11 +823,23 @@ $(function () {
 					keyboard: true,
 					observer: true,
 					observeParents: true,
+					navigation:false
 				}
 			} else {
-				$('.branch-swp02 thumb').hide();
+				swpOpt = {
+					pagination: {
+						el: '.branch-swp03 .thumb .swiper-pagination',
+						clickable: true,
+						type: 'progressbar'
+					},
+					navigation: {
+						nextEl: '.branch-swp03 .swiper-button-next',
+						prevEl: '.branch-swp03 .swiper-button-prev',
+					}
+				}
+				$('.branch-swp03 thumb').hide();
 			}
 		}
-		let brandDetailThumb = new Swiper('.branch-swp02 .thumb .swiper-container', swpOpt);
+		let brandDetailThumb = new Swiper('.branch-swp03 .thumb .swiper-container', swpOpt);
 	};
 });
