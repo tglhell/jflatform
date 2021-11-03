@@ -6,7 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>HMJ 온라인 판매 사이트 구축</title>
 
+	<link rel="stylesheet" href="../assets/css/lib/swiper.min.css">
+	<link rel="stylesheet" href="../assets/css/lib/customlib.css">
     <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
 	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
 	<style>
 		.hmj-header {
@@ -17,7 +20,6 @@
 			left: 0;
 			right: 0;
 			z-index: 20;
-			background-color: #fff;
 		}
 		.hmj-header.header-fixed {
 			-webkit-transition: top .4s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -33,163 +35,7 @@
 		.hmj-wrap.type2 .sub-cont {
 			display: none;
 		}
-		.gnb-menu-outer {
-			-webkit-transition: top .4s ease-in-out;
-			transition: top .4s ease-in-out;
-			position: fixed;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			z-index: 15;
-			display: none;
-			background-color: rgba(0, 0, 0, .5);
-		}
-		.btn-menu-close {
-			position: absolute;
-			top: 27px;
-			right: 22px;
-			z-index: 100;
-			width: 33px;
-			height: 33px;
-			font-size: 0;
-			line-height: 0;
-			background: transparent url(../assets/images/common/ico_gnb_close.svg) no-repeat center;
-		}
-		.gnb-menu-outer .btn-menu-close {
-			right: -100px;
-			width: 43px;
-			height: 43px;
-			padding: 5px;
-		}
-		.gnb-menu-outer .gnb-menu-list > li {
-			-webkit-transition: all .5s ease-in-out;
-			transition: all .5s ease-in-out;
-			padding-left: 100px;
-			opacity: 0;
-		}
-		.gnb-menu-outer.active .gnb-menu-list > li {
-			-webkit-transition: all .5s ease-in-out;
-			transition: all .5s ease-in-out;
-			padding-left: 0px;
-			opacity: 1;
-		}
-		.gnb-menu-box {
-			-webkit-transition: all .4s ease-in-out;
-			transition: all .4s ease-in-out;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			right: -640px;
-			z-index: 25;
-			overflow: hidden;
-			display: block;
-			width: 640px;
-			height: 100%;
-			padding: 272px 40px 20px;
-		}
-		.gnb-menu-box:before,
-		.gnb-menu-box:after {
-			content: '';
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			z-index: -1;
-			background-color: rgba(0, 0, 0, .85);
-		}
-		.gnb-menu-box:after {
-			background-color: rgba(255, 255, 255, .3);
-		}
-		.gnb-menu-box .gnb-menu-list {
-			display: block;
-			height: 100%;
-		}
-		.inner-scroll-y {
-			overflow-x: hidden;
-			overflow-y: auto;
-		}
-		.hmj-header .gnb-menu-list li + li {
-			margin: 40px 0 0;
-		}
-		.gnb-menu-list .menu-inner-depth {
-			-webkit-transition: all .4s ease-in-out;
-			transition: all .4s ease-in-out;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			right: -640px;
-			opacity: 0;
-			z-index: 25;
-			width: 640px;
-			padding: 272px 40px 20px;
-			font-size: 0;
-		}
-		.gnb-menu-outer .menu-inner-depth .inner-depth-tit {
-			display: inline-block;
-			width: 50%;
-			font-size: 20px;
-			color: #fff;
-			line-height: 32px;
-			vertical-align: top;
-		}
-		.gnb-menu-list .menu-inner-depth ul {
-			display: inline-block;
-			width: 50%;
-			vertical-align: top;
-		}
-		.gnb-menu-list .menu-inner-depth ul li + li {
-			margin: 24px 0 0;
-		}
-		.btn-depth-switch.active ~ .menu-inner-depth {
-			-webkit-transition: all .4s ease-in-out;
-			transition: all .4s ease-in-out;
-			right: 0;
-			opacity: 1;
-		}
-		.btn-depth-switch + .menu-inner-depth > .ir-count > li {
-			-webkit-transition: all .4s ease-in-out;
-			transition: all .4s ease-in-out;
-			opacity: 0;
-			padding-left: 100px;
-		}
-		.btn-depth-switch.active + .menu-inner-depth > .ir-count > li {
-			-webkit-transition: all .4s ease-in-out;
-			transition: all .4s ease-in-out;
-			opacity: 1;
-			padding-left: 0;
-		}
-		.btn-depth-prev {
-			position: absolute;
-			top: 232px;
-			left: 40px;
-		}
-		.hmj-header .gnb-menu-list .btn-depth-prev span {
-			padding-left: 24px;
-			background: url(../assets/images/common/ico_gnb_back.svg) no-repeat left center;
-			font-size: 13px;
-			color: #fff;
-			line-height: 20px;
-		}
-		.side-menu-wrap {
-			-webkit-transition: right .5s ease-in-out;
-			transition: right .5s ease-in-out;
-			position: fixed;
-			top: 0;
-			bottom: 0;
-			right: -250px;
-			z-index: 101;
-			width: 250px;
-			background-color: #208ee9;
-		}
-		.side-menu-wrap.active {
-			-webkit-transition: right .5s ease-in-out;
-			transition: right .5s ease-in-out;
-			-webkit-transition-delay: .6s;
-			transition-delay: .6s;
-			right: 0px;
-		}
+		
 		.hmj-container {
 			padding-top: 151px;
 		}
@@ -203,15 +49,9 @@
 				padding-top: 105px;
 			}
 		}
-		@media (orientation: landscape) {
-			.btn-depth-switch.active ~ .menu-inner-depth {
-				min-height: 600px;
-			}
-		}
-
-
-
-
+	</style>
+	
+	<style>
 		.test-slider-outer {
 			position: relative;
 			margin: 40px 0;
@@ -242,6 +82,7 @@
 
 	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/swiper.min.js"></script>
 	<script type="text/javascript" src="../assets/js/common.js"></script>
 </head>
 
@@ -257,23 +98,25 @@
 		<!-- header -->
 		<div class="header-outer">
 			<div class="header-cont">
-				<h1><a href="hmj_layout.html"><img src="../assets/images/common/ico_header_logo.svg" alt="Hyundai Logo"></a></h1>
+				<h1><a href="hmj_layout.html"><img src="../../assets/images/common/ico_header_logo.svg" alt="Hyundai Logo"></a></h1>
 
 				<div class="gnb-menu-outer">
 					<div class="gnb-menu-box blur">
 						<!-- 로그인 전 -->
 						<!-- <div class="account-box">
 							<button class="btn-account">Account</button>
-							<button class="btn-sign-in">Sign in</button>
+							<a href="#" class="btn-sign-in">Sign in</a>
 						</div> -->
 						<!-- // 로그인 전 -->
 						<!-- 로그인 후 -->
 						<div class="account-box login">
 							<button class="btn-account">Account</button>
-							<button class="btn-sign-in">木村 拓哉 様</button>
-							<a href="#a" class="btn-alarm">
-								<img src="../assets/images/common/ico_alarm.svg" alt="alarm">
-								<div class="num"><span>2</span></div>
+							<a href="#" class="btn-sign-link">
+								<span class="btn-sign-in">木村 拓哉 様</span>
+								<span class="btn-alarm">
+									<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
+									<span class="num"><span>2</span></span>
+								</span>
 							</a>
 						</div>
 						<!-- // 로그인 후 -->
@@ -431,6 +274,10 @@
 								<a href="#">SHOP</a>
 							</li>
 						</ul>
+						<div class="btn-box">
+							<button class="btn-sign-out"><span>Sign out</span></button>
+							<button class="btn-setting mo-only"><span>Settings</span></button>
+						</div>
 						<button class="btn-menu-close"><span>close</span></button>
 					</div>
 				</div>
@@ -446,10 +293,10 @@
 				<div class="gnb-right-menu">
 					<ul class="gnb-right-list">
 						<li>
-							<button class="btn-cart pc-only"><span><img src="../assets/images/common/ico_cart.svg" alt="cart"></span></button>
+							<button class="btn-cart pc-only"><span><img src="../../assets/images/common/ico_cart.svg" alt="cart"></span></button>
 						</li>
 						<li>
-							<button class="btn-search"><span><img src="../assets/images/common/ico_search.svg" alt="search"></span></button>
+							<button class="btn-search"><span><img src="../../assets/images/common/ico_search.svg" alt="search"></span></button>
 							<div class="gnb-search-dim">
 								<div class="search-outer-box">
 									<div class="search-cont">
@@ -465,23 +312,29 @@
 										</div>
 									</div>
 									<div class="keyword-box">
-										<div class="top-info">
-											
-										</div>
+										<p class="top-text">最近検索ワード</p>
+										<!-- 키워드가 없을 경우 -->
+										<!-- <p class="top-text">最近検索ワードがありません。</p> -->
+										<!-- // 키워드가 없을 경우 -->
 										<ul>
-											<li></li>
+											<li>モデル <button class="btn-del">삭제</button></li>
+											<li>IONIQ 5 <button class="btn-del">삭제</button></li>
+											<li>NEXO <button class="btn-del">삭제</button></li>
+											<li>恵沢 <button class="btn-del">삭제</button></li>
+											<li>イベント <button class="btn-del"></button></li>
 										</ul>
+										<button class="btn-keyword-del">すべて削除</button>
 									</div>
 								</div>
 							</div>
 						</li>
 						<li>
-							<button class="btn-menu"><span><img src="../assets/images/common/ico_menu.svg" alt="menu"></span></button>
+							<button class="btn-menu"><span><img src="../../assets/images/common/ico_menu.svg" alt="menu"></span></button>
 						</li>
 					</ul>
 				</div>
 			</div>
-		</div>	
+		</div>
 		<div class="sub-cont">
 			<div class="history">
 				<a href="#">HOME</a>
@@ -509,77 +362,141 @@
 					<p class="top-desc">詳細見積シミュレーションを通して車両購入を進めます</p>
 				</div>
 			</div>
-			<div class="cont-outer">
-				<div class="car-item-outer">
-					<div class="car-item">
-						<img src="../assets/images/main/@img_main_sample2.png" class="Car Image2">
+			<div class="cont-outer fullcase">
+				<div class="swiper-outer-box main-item-swiper type2">
+					<div class="swiper-container car-item-outer">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide car-cont">
+								<div class="car-item-text">
+									<strong class="item-tit">IONIQ 5</strong>
+								</div>
+								<div class="car-thumb">
+									<div class="car-image">
+										<img src="../assets/images/main/@img_main_sample_thumb.png" class="Car Image">
+									</div>
+								</div>
+								<div class="car-mov">
+									<video autoplay="autoplay" loop="loop" muted="muted" playsinline>
+										<source src="../assets/images/main/main_ioniq5_1.mov">
+									</video>
+								</div>
+							</div>
+							<div class="swiper-slide car-cont">
+								<div class="car-item-text">
+									<strong class="item-tit">NEXO</strong>
+								</div>
+								<div class="car-thumb">
+									<div class="car-image">
+										<img src="../assets/images/main/@img_main_sample_thumb.png" class="Car Image">
+									</div>
+								</div>
+								<div class="car-mov">
+									<video autoplay="autoplay" loop="loop" muted="muted" playsinline>
+										<source src="../assets/images/main/main_ioniq5_2.mov">
+									</video>
+								</div>
+							</div>
+							<div class="swiper-slide car-cont">
+								<div class="car-item-text">
+									<strong class="item-tit">IONIQ 6</strong>
+								</div>
+								<div class="car-thumb">
+									<div class="car-image">
+										<img src="../assets/images/main/@img_main_sample_thumb.png" class="Car Image">
+									</div>
+								</div>
+								<div class="car-mov">
+									<video autoplay="autoplay" loop="loop" muted="muted" playsinline>
+										<source src="../assets/images/main/main_ioniq5_1.mov">
+									</video>
+								</div>
+							</div>
+							<div class="swiper-slide car-cont">
+								<div class="car-item-text">
+									<strong class="item-tit">IONIQ 7</strong>
+								</div>
+								<div class="car-thumb">
+									<div class="car-image">
+										<img src="../assets/images/main/@img_main_sample_thumb.png" class="Car Image">
+									</div>
+								</div>
+								<div class="car-mov">
+									<video autoplay="autoplay" loop="loop" muted="muted" playsinline>
+										<source src="../assets/images/main/main_ioniq5_1.mov">
+									</video>
+								</div>
+							</div>
+						</div>
 					</div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-pagination"></div>
 				</div>
-				<div class="car-item-outer">
-					<div class="car-item">
-						<img src="../assets/images/main/@img_main_sample.png" class="Car Image">
+				<div class="test-wrap">
+					<div class="test-slider-outer">
+						<div class="test-slider test-slide-01"></div>
+						<ul class="test-slide-paging">
+							<li><span>0</span></li>
+							<li><span>1</span></li>
+							<li><span>2</span></li>
+							<li><span>3</span></li>
+							<li><span>4</span></li>
+							<li><span>5</span></li>
+							<li><span>6</span></li>
+							<li><span>7</span></li>
+							<li><span>8</span></li>
+							<li><span>9</span></li>
+							<li><span>10</span></li>
+						</ul>
+						<!-- <p class="num" style="margin-top: 30px;">0</p> -->
 					</div>
 				</div>
 				<style>
-					.car-item-outer {
+					.test-wrap {
+						padding: 140px 20px 0;
+					}
+					.type2 .test-wrap {
+						padding-top: 92px;
+					}
+					.test-slide-paging {
+						margin: 30px 0 0 0px;
+						font-size: 0;
+					}
+					.test-slide-paging li {
+						position: relative;
 						display: inline-block;
+						width: 10%;
+						padding-left: 8px;
+						text-align: right;
 					}
-					.car-item-outer {
-						overflow: hidden;
-						width: 630px;
-						width: 32.8125vw;
-						height: 380px;
-						height: 19.79167vw;
+					.test-slide-paging li:first-child {
+						width: 0%;
+						padding-left: 0;
 					}
-					.car-item-outer img {
-						max-width: none;
+					.test-slide-paging li:before {
+						content: '';
+						position: absolute;
+						top: -50px;
+						right: 0;
+						width: 1px;
+						height: 20px;
+						background-color: #ccc;
 					}
-					@media (min-width: 1921px) {
-						.car-item-outer .car-item img {width:1890px;}
-						.car-item-outer .car-item[ir='1'] img {transform: translate3d(-630px, 0, 0);}
-						.car-item-outer .car-item[ir='2'] img {transform: translate3d(-1260px, 0, 0);}
-						.car-item-outer .car-item[ir='3'] img {transform: translate3d(-1890px, 0, 0);}
-						.car-item-outer .car-item[ir='4'] img {transform: translate3d(-2520px, 0, 0);}
-						.car-item-outer .car-item[ir='5'] img {transform: translate3d(-3150px, 0, 0);}
+					.test-slide-paging li span {
+						position: absolute;
+						top: 50%;
+						right: -4px;
+						font-size: 14px;
 					}
-			
-					@media (min-width: 768px) and (max-width: 1920px) {
-						.car-item-outer .car-item img {transform:translate3d(0, 0, 0);width:3780px;width:196.875vw;}
-						.car-item-outer .car-item[ir='1'] img {transform: translate3d(-33.333vw, 0, 0);}
-						.car-item-outer .car-item[ir='2'] img {transform: translate3d(-66.667vw, 0, 0);}
-						.car-item-outer .car-item[ir='3'] img {transform: translate3d(-100vw, 0, 0);}
-						.car-item-outer .car-item[ir='4'] img {transform: translate3d(-133.333vw, 0, 0);}
-						.car-item-outer .car-item[ir='5'] img {transform: translate3d(-166.667vw, 0, 0);}
+					.test-slide-paging li:nth-child(2) span {
+						right: -2px;
+					}
+					@media screen and (max-width: 1119px) {
+						.test-slider-outer {
+							margin: 50px 20px 0;
+						}
 					}
 				</style>
-				<script>
-					$(function(){
-						$('.car-item-outer').on('mouseenter mouseleave', function(e){
-							let iNum = 5;
-							let _this = $(this);
-							if (e.type == 'mouseenter') {
-								for (i = 1; i <= iNum ; i++) {
-									$(function(i){
-										setTimeout(function(){
-											_this.find('.car-item').removeAttr('ir').attr('ir', i);
-										}, 21 * i);
-									}(i));
-								}
-							} else {
-								for (i = iNum; i >= 0 ; i--) {
-									$(function(i){
-										setTimeout(function(){
-											_this.find('.car-item').removeAttr('ir').attr('ir', iNum - i);
-										}, 21 * i);
-									}(i));
-								}
-								setTimeout(function(){
-									_this.find('.car-item').removeAttr('ir');
-								}, 21 * iNum);
-							}
-						})
-					});
-				</script>
 			</div>
 		</div>
 	</div>
@@ -591,10 +508,10 @@
 			<ul>
 				<li>
 					<ul>
-						<li><a href="#">Virtual ShowRoom</a></li>
+						<li><a href="#">SHOW ROOM</a></li>
 						<li><a href="#">IONIQ 5</a></li>
 						<li><a href="#">NEXO</a></li>
-						<li><a href="#">브랜드 거점</a></li>
+						<li><a href="#">ブランド拠点</a></li>
 						<li><a href="#">MOCEAN</a></li>
 					</ul>
 				</li>
@@ -603,17 +520,17 @@
 						<button class="tit-btn">Purchase</button>
 						<div class="toggle-outer-cont">
 							<ul class="cont">
-								<li><a href="#">온라인 구매방법 안내</a></li>
-								<li><a href="#">이달의 구매 혜택</a></li>
-								<li><a href="#">정부보조금 정책</a></li>
-								<li><a href="#">온라인 계약</a></li>
-								<li><a href="#">견적내기</a></li>
-								<li><a href="#">테스트 드라이브</a></li>
-								<li><a href="#">구매상담 신청</a></li>
-								<li><a href="#">사양백과</a></li>
-								<li><a href="#">카탈로그 다운로드</a></li>
-								<li><a href="#">가격표 다운로드</a></li>
-								<li><a href="#">Referral code 이용안내</a></li>
+								<li><a href="#">オンライン購入のご案内</a></li>
+								<li><a href="#">今月の購入特典</a></li>
+								<li><a href="#">政府補助金</a></li>
+								<li><a href="#">オンライン契約</a></li>
+								<li><a href="#">見積シミュレーション</a></li>
+								<li><a href="#">試乗</a></li>
+								<li><a href="#">購入相談申込</a></li>
+								<li><a href="#">仕様百科</a></li>
+								<li><a href="#">カタログダウンロード</a></li>
+								<li><a href="#">価格表ダウンロード</a></li>
+								<li><a href="#">Referral code</a></li>
 							</ul>
 						</div>
 					</div>
@@ -623,16 +540,16 @@
 						<button class="tit-btn">Service</button>
 						<div class="toggle-outer-cont">
 							<ul class="cont">
-								<li><a href="#">서비스 네트워크</a></li>
-								<li><a href="#">충전소 안내</a></li>
-								<li><a href="#">긴급출동서비스</a></li>
-								<li><a href="#">정비예약</a></li>
-								<li><a href="#">리콜정보</a></li>
+								<li><a href="#">サービスネットワーク</a></li>
+								<li><a href="#">充電スポット</a></li>
+								<li><a href="#">RSAサービス</a></li>
+								<li><a href="#">整備予約</a></li>
+								<li><a href="#">リコール情報</a></li>
 								<li><a href="#">BLUELINK</a></li>
-								<li><a href="#">빌트인캠</a></li>
-								<li><a href="#">네비게이션/빌트인캠 업데이트</a></li>
-								<li><a href="#">제휴 서비스</a></li>
-								<li><a href="#">앱 설치 안내</a></li>
+								<li><a href="#">ビルトインカメラ</a></li>
+								<li><a href="#">ナビ/カメラアップデート</a></li>
+								<li><a href="#">提携サービス</a></li>
+								<li><a href="#">アプリ設置</a></li>
 							</ul>
 						</div>
 					</div>
@@ -656,16 +573,32 @@
 				<li>
 					<ul>
 						<li><a href="#">SHOP</a></li>
-						<li><a href="#">이벤트</a></li>
-						<li><a href="#">공지사항</a></li>
+						<li><a href="#">イベント</a></li>
+						<li><a href="#">お知らせ</a></li>
 						<li><a href="#">FAQ</a></li>
-						<li><a href="#">1:1 상담</a></li>
+						<li><a href="#">1:1お問合せ</a></li>
 					</ul>
 				</li>
 			</ul>
 		</div>
 		<div class="footer-bottom">
-			<img src="../assets/images/@footer.jpg" alt="footer">
+			<div class="left-logo"><img src="../../assets/images/common/ico_footer_logo.svg" alt="Hyundai Logo"></div>
+			<div class="center-text">
+				<ul>
+					<li><a href="#">プライバシーポリシー</a></li>
+					<li><a href="#">利用規約</a></li>
+					<li><a href="#">Cookieポリシー </a></li>
+					<li><a href="#"><span class="ico"><img src="../../assets/images/common/ico_country_jp.png" alt="japan"></span>日本語</a></li>
+				</ul>
+				<p class="copyright">COPYRIGHT &#x24D2; HYUNDAI. ALL RIGHTS RESERVED.</p>
+			</div>
+			<div class="right-sns">
+				<ul>
+					<li><a href="#"><img src="../../assets/images/common/ico_youtube.svg" alt="youtube"></a></li>
+					<li><a href="#"><img src="../../assets/images/common/ico_twitter.svg" alt="twitter"></a></li>
+					<li><a href="#"><img src="../../assets/images/common/ico_instagram.svg" alt="instagram"></a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<!--//footer -->
@@ -692,5 +625,105 @@
 	</button>
 </div>
 </body>
+
+<script>
+	$(function(){
+		const slideOuter = $('.test-slider-outer')
+		const slideTestNum = $('.test-slider-outer .num');
+		const numberInit = new Intl.NumberFormat();
+		$('.test-slide-01').slider({
+			// range : 'min',
+			min : 0,
+			max : 10,
+			value : 0,
+			slide : function(event, ui){
+				$(this).closest(slideOuter).find(slideTestNum).text(ui.value);
+			}
+		});
+	})
+</script>
+<script>
+	$(function () {
+		if ($('.main-item-swiper').length == 1) {
+			let swpOpt = {},
+			slideLength = $('.main-item-swiper .swiper-slide').length;
+			const _this = $(this);
+			const iNum = 14;
+			carItemWid = _this.find('.car-item').width();
+			carItemWidRes = secVal[0] * carItemWid / $(window).width();
+			if (slideLength == 1) {
+				swpOpt = {
+					allowSlidePrev: false,
+					allowSlideNext: false,
+					simulateTouch: false
+				}
+				$('.main-item-swiper [class*="swiper-button"]').hide();
+			} else {
+				swpOpt = {
+					navigation: {
+						nextEl: '.main-item-swiper .swiper-button-next',
+						prevEl: '.main-item-swiper .swiper-button-prev',
+					},
+					pagination: {
+						el: '.main-item-swiper .swiper-pagination',
+						clickable: true,
+					},
+					// slidesPerView: 'auto',
+					// centeredSlides: true,
+					simulateTouch: false,
+					speed: 500,
+					loop: true,
+					slidesPerView: 'auto',
+					spaceBetween: 0,
+					observer: true,
+					observeParents: true,
+					on: {
+						slideChange: function () {
+							if ($(window).width() <= tbl) {
+								if ($('.main-item-swiper .car-cont').hasClass('swiper-slide-active')) {
+									offIr = setTimeout(function () {
+										for (i = iNum; i > 0 ; i--) {
+											$(function(i){
+												setTimeout(function(){
+													$('.car-cont:not(.swiper-slide-active)').find('img').css('transform', 'translate3d(-' + (carItemWidRes * (iNum - i)) + 'vw, 0, 0)');
+												}, twoDig[1] * i);
+											}(i));
+										}
+										$('.car-cont').removeClass('focus-in');
+									}, secVal[0]);
+									onIr = setTimeout(function () {
+										clearTimeout(onIr);
+										clearTimeout(offIr);
+										for (i = irNum[0]; i < iNum; i++) {
+											$(function(i){
+												testT = setTimeout(function(){
+													$('.swiper-slide-active').find('.car-item img').css('transform', 'translate3d(-' + (carItemWidRes * i) + 'vw, 0, 0)');
+												}, twoDig[3] * i);
+											}(i));
+										}
+										$('.swiper-slide-active').addClass('focus-in');
+									}, secVal[1]);
+								}
+							}
+						}
+					}
+				}
+			}
+			let sampleSwp = new Swiper('.main-item-swiper .swiper-container', swpOpt);
+
+			$('[class*="swiper-button"]').on('click touchend', function () {
+				swpArrowText();
+			});
+			
+			function swpArrowText () {
+				const swpItemPrevTit = $('.main-item-swiper .swiper-slide-active').prev().find('.item-tit').text();
+				const swpItemNextTit = $('.main-item-swiper .swiper-slide-next').next().find('.item-tit').text();
+				$('.main-item-swiper .swiper-button-prev').attr('data-title', swpItemPrevTit);
+				$('.main-item-swiper .swiper-button-next').attr('data-title', swpItemNextTit);
+			}
+			swpArrowText();
+		}
+	});
+</script>
 
 </html>

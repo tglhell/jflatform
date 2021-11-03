@@ -40,10 +40,12 @@
 						<!-- 로그인 후 -->
 						<div class="account-box login">
 							<button class="btn-account">Account</button>
-							<button class="btn-sign-in">木村 拓哉 様</button>
-							<a href="#a" class="btn-alarm">
-								<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
-								<div class="num"><span>2</span></div>
+							<a href="#" class="btn-sign-link">
+								<span class="btn-sign-in">木村 拓哉 様</span>
+								<span class="btn-alarm">
+									<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
+									<span class="num"><span>2</span></span>
+								</span>
 							</a>
 						</div>
 						<!-- // 로그인 후 -->
@@ -259,7 +261,7 @@
 			<div class="history">
 				<a href="#">ホーム </a>				
 				<a href="#">Service</a>
-				<span class="page-title">充電サービス</span>
+				<span class="page-title">充電スポット</span>
 			</div>
 			<button type="button" class="back-page">Back page</button>
 		</div>
@@ -272,47 +274,78 @@
 		<div class="hmj-content">
 			<div class="cont-outer fullcase">
 				<div class="intro-map">
-					<div class="top-float"  style="background-color: #FFF;">
-						<ul class="service-cate">
-							<li class="active"><a href="javascript:void(0)">전기충전</a></li>
-							<li><a href="javascript:void(0)">수소충전</a></li>
-						</ul>
+					<div class="top-float">						
+						<div class="service-cate">
+							<label class="btn-select4"><input type="radio" name="onlyOne" checked/><span>電気充電所</span></label>
+							<label class="btn-select4"><input type="radio" name="onlyOne" /><span>水素ステーション</span></label>
+						</div>
 						<button class="search-toggle">검색열기/닫기</button>
-
 						<div class="search">
 							<div class="slt-box hgt-type2">
 								<p class="selected-value">神奈川県</p>
 								<ul class="select-items">
 									<li>option1</li>
 									<li>option2</li>
-									<li>option3</li>
 								</ul>
 							</div>
 							<div class="inp-outer-box inp-type">
 								<div class="inp-btn-box">
 									<div class="inp-area">
-										<input type="search" id="inpNum01_011" class="inp-item" placeholder="地域名、店名 入力">
+										<input type="search" id="inpNum01_011" class="inp-item" placeholder="地名やビル名を入力">
 										<button class="inp-close"></button>
 									</div>
 									<button class="btn-tbl btn-search"><span>icon</span></button><!-- 2021-10-28 수정 -->
 								</div>
 							</div>
 							<div class="radio-group">
-								<label class="radio"><input type="radio" name="radio" id="radioChk01"><span>1</span></label>
-								<label class="radio"><input type="radio" checked="checked" name="radio" id="radioChk02"><span>2</span></label>
-							</div>
+								<label class="radio"><input type="radio" name="radio" id="radioChk01" checked><span>全体</span></label>
+								<label class="radio"><input type="radio" name="radio" id="radioChk02"><span>急速</span></label>
+								<label class="radio"><input type="radio" name="radio" id="radioChk03"><span>普通</span></label>
+							</div>							
 						</div>
 						<!-- //search -->
 					</div>
-
+					<!-- SC-FE-CH-002 -->
 					<div class="station-info" style="background-color: #FFF;">
-						하단컨텐츠 
-						<button class="close" onclick="javascript:stationOff()">닫기</button>
+						<div class="cont">
+							<p class="name">横浜整備センター</p>
+							<ul class="status">
+								<li>
+									<span class="text-flag2 c3">急速</span>
+									<p class="use">使用可能 <em>3</em></p>
+									<p class="ing">使用中 <em>2</em></p>
+									<p class="not">使用不可 <em>0</em></p>
+								</li>
+								<li>
+									<span class="text-flag2 c3">普通</span>
+									<p class="use">使用可能 <em>2</em></p>
+									<p class="ing">使用中 <em>1</em></p>
+									<p class="not">使用不可 <em>0</em></p>
+								</li>
+							</ul>
+							<p class="address">Minatomirai Center Bldg 16F, 3-6-1, Minatomirai, Nishi-Ku, Yokohama-City, Kanagawa 220-0012</p>
+							<ul class="detail">
+								<li class="tel">
+									<!-- PC 전용 -->
+									<span class="pc-only">045-633-9121</span>
+									<!-- // PC 전용 -->
+									<!-- Mobile 전용 -->
+									<span class="mo-only">										
+										<a  class="btn btn-type3 btn-tbl" href="tel:045-633-9121"><span class="ico"><img src="../../assets/images/common/ico_tel3.svg" alt="tel"></span><span>045-633-9121</span></a>
+									</span>
+									<!-- // Mobile 전용 -->
+								</li>
+								<li class="hour"><span>05:00~24:00</span></li>
+							</ul>
+							<button class="btn-icon pop-open" data-pop-idx="SC-FE-CH-003"><span>詳細情報</span></button>
+						</div>
+						<button class="close" onclick="javascript:stationOff()">close</button>
 					</div>
-
+					<!-- // SC-FE-CH-002 -->
                     <div class="map">
-						<a href="javascript:stationOn();" style="position: absolute; top: 20%; left: 50%"><img src="../../assets/images/common/map_hyundai.png" class="map_hyundai"></a>
-						<a href="javascript:stationOn();" style="position: absolute; top: 70%; left: 40%"><img src="../../assets/images/common/map_setting.png" class="map_setting"></a>
+						<a href="javascript:stationOn();" style="position: absolute; top: 20%; left: 50%"><img src="../../assets/images/common/map_charge_elec.png" class="map_charge_elec"></a>
+						<a href="javascript:stationOn();" style="position: absolute; top: 70%; left: 40%"><img src="../../assets/images/common/map_charge_hydro.png" class="map_charge_hydro"></a>
+						<a href="javascript:stationOn();" style="position: absolute; top: 40%; left: 20%"><img src="../../assets/images/common/map_charge_disabled.png" class="map_charge_disabled"></a>
 						<div style="height: 100%"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25321.666663415752!2d127.0507571!3d37.50300425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sko!2skr!4v1626328179535!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
 					</div>
 					<!-- //map -->
@@ -423,6 +456,23 @@
 	</div>
 	<!--//footer -->
 </div>
+
+<!-- SC-FE-CH-003 :: 팝업 -->
+<div class="layer-popup-wrap" data-pop-idx="SC-FE-CH-003">
+    <div class="layer-popup-body">
+        <div class="layer-popup-cont pop-medium">
+            <h1 class="layer-title">詳細情報</h1>
+            <div class="layer-cont">
+				<p class="cont-text">[定休日情報] 毎週月曜日(祝日の場合は営業します。) 年末年始、GW、夏休みなど不定期に停止することがあります。充電時間は１回１時間迄。<br>詳細はセンターへお問合せください。</p>
+				<div class="cta-outer">
+					<button class="btn btn-middle btn-type2"><span>確認</span></button>				
+				</div>									
+            </div>            
+            <button class="btn-close-popup btn-close">close</button>
+        </div>
+    </div>
+</div>
+<!-- // SC-FE-CH-003 -->
 
 <script>
 	// 셀렉트 실행

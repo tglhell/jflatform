@@ -653,9 +653,9 @@
 .apply .form-list .inner-conts .thumb {
 	width: 304px;
 }
-.apply .form-list .select-option {
+/* .apply .form-list .select-option {
 	padding-top: 8px;
-}
+} */
 .apply .form-list .select-option .radio {
 	margin-right: 0;
 }
@@ -748,9 +748,6 @@
 /* E : 정비 */
 
 /* S : 충전 */
-.charge {
-	padding-bottom: 0;
-}
 .charge .intro-map {
 	height: calc(100vh - 109px);
 	position: relative;
@@ -762,19 +759,399 @@
 	position: absolute;
 	right: 16px;
 	top: 16px;
-	width: 376px;
+	width: 424px;	
+	display:flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+.charge .top-float .service-cate {
+	display:flex;
+	padding:8px;
+	margin-bottom:0;
+	border-radius:8px;
+	background:#fff;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+}
+.charge .top-float .service-cate .btn-select4:first-child {
+	margin-right:8px;
+}
+/* S : 라디오 버튼 추후 common 이동 가능 */
+.btn-select4 {
+	height:40px !important;
+}
+.btn-select4 input + span {
+	padding:0 36px 0 37px;
+	height:40px;
+	border-radius: 4px;
+	border:none;
+	background:#fafafa;
+	color: #999;
+	cursor: pointer;
+	line-height:22px;
+	font-size:14px;
+}
+.btn-select4 input:checked + span {
+	color: #fff;
+	background:#0793ea;	
+}
+@media screen and (max-width: 1119px) {
+	.btn-select4 {
+		height:38px !important;
+	}
+	.btn-select4 input + span {
+		padding:0 16px;
+		height:38px;
+		line-height:20px;
+		font-size:13px;
+	}
+}
+/* E : 라디오 버튼 추후 common 이동 가능 */
+
+.charge .top-float .search-toggle {
+	width: 56px;
+	height: 56px;
+	font-size:0;
+	background:#fff url(../images/common/ico_inp_search.svg) no-repeat center;
+	border-radius:8px;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+}
+.charge .top-float .search-toggle.on {
+	background:#0793ea url(../images/common/ico_inp_search_white.svg) no-repeat center;
 }
 .charge .top-float .search {
 	width: 100%;
 	position: static;
-	padding: 24px;
 	display: none;
+	margin-top:16px;
+	padding: 24px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	border-radius:8px;
+}
+.charge .top-float .radio-group {
+	margin-top:24px;
 }
 .charge .station-info {
 	position: absolute;
-	bottom: 16px;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 464px;
+	top: 88px;
+	right: 16px;
+	width: 424px;
+	display: none;
+	padding:24px;
+	background:#fff;
+	border-radius:8px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.charge .station-info .name {
+	line-height:32px;
+	font-size:20px;
+	font-weight:500;
+}
+.charge .station-info .close {
+	position:absolute;
+	top:16px;
+	right:24px;
+	width:24px;
+	height:24px;
+	background:url('../images/common/ico_navigation_close.svg') no-repeat center;
+	font-size:0;
+}
+.charge .station-info .status {
+	margin-top:16px;
+}
+.charge .station-info .status li {
+	display:flex;
+	align-items: center;
+	margin-top:8px;
+}
+.charge .station-info .status li p {
+	position:relative;
+	margin-left:17px;
+}
+.charge .station-info .status li p:first-of-type {
+	margin-left:16px;
+}
+.charge .station-info .status li p em {
+	font-weight:500;
+}
+.charge .station-info .status li p::before {
+	content:'';
+	position:absolute;
+	top:50%;
+	left:-8px;
+	transform:translateY(-50%);
+	width:1px;
+	height:10px;
+	background:#ccc;
+}
+.charge .station-info .status li p:first-of-type::before {
 	display: none;
 }
+.charge .station-info .status li p.use {
+	color:#0793ea;
+}
+.charge .station-info .status li p.ing {
+	color:#ff8f00;
+}
+.charge .station-info .status li p.not {
+	color:#999;
+}
+.charge .station-info .address {
+	margin-top:16px;
+}
+.charge .station-info .detail {
+	display:flex;
+	margin-top:8px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.charge .station-info .detail li > span {
+	position:relative;
+	padding-left:20px;
+}
+.charge .station-info .detail li > span::before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:50%;
+	margin-top:-8px;
+	width: 16px;
+	height: 16px;	
+}
+.charge .station-info .detail li:first-child {
+	margin-right:16px;
+}
+.charge .station-info .detail li.tel > span.pc-only {
+	pointer-events: none;
+}
+.charge .station-info .detail li.tel > span.pc-only::before {
+	background:url('../images/common/ico_tel3.svg') no-repeat;
+	opacity: 0.25;
+}
+.charge .station-info .detail li.tel > span.mo-only::before {
+	display:none;
+}
+.charge .station-info .detail li.tel .ico {
+	opacity: 0.25;
+}
+.charge .station-info .detail li.tel .ico img {
+	vertical-align: middle;
+}
+.charge .station-info .detail li.hour > span::before {
+	background:url('../images/common/ico_clock.svg') no-repeat;
+	opacity: 0.25;
+}
+.charge .station-info .btn-icon {
+	margin-top:16px;
+}
+.charge .map img.on {
+	display:none;
+}
+
+@media screen and (max-width: 1119px) {
+	.charge {
+		padding-bottom:0;
+		min-height:calc(100vh - 109px);
+	}
+	.charge .intro-map {
+		height:calc(100vh - 109px);
+	}
+	.charge .intro-map .map {
+		height:100%;
+	}
+	.charge .top-float {
+		top:8px;
+		right:0;
+		left:0;
+		padding:0 8px;
+		width:100%;
+	}
+	.charge .top-float .service-cate {
+		padding:5px;
+	}
+	.charge .top-float .search-toggle {
+		width:48px;
+		height:48px;
+	}
+	.charge .top-float .search {
+		padding:16px;
+	}
+	.charge .station-info {
+		position: fixed;
+		top:auto;
+		bottom:0;
+		width: 100%;
+		right:0;
+		padding:16px 20px 24px;
+		border-radius:0;
+		box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.1);
+	}
+	.charge .station-info .close {
+		right:20px;
+	}
+	.charge .station-info .name {
+		line-height:26px;
+		font-size:16px;
+	}
+	.charge .station-info .detail li.tel > span {
+		padding-left:0;
+		line-height:normal;
+	}
+}
+
+/* E : 충전 */
+
+/* S : 로드사이드 어시스턴스 */
+.roadside .info-text {
+    text-align: center;
+}
+.roadside .info-text .text-type1 {
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: 500;
+}
+.roadside .info-text .text-type2 {
+    font-size: 16px;
+    line-height: 26px;
+}
+.roadside .service-area {
+    width: 100%;
+    height: 216px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 64px;
+    border: 1px solid #e9e9e9;
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden;
+}
+.roadside .service-area  > * {
+    width: 50%;
+}
+.roadside .service-area .tel .text {
+    margin-bottom: 16px;
+    color: #1c6bba;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+}
+.roadside .service-area .tel .number {
+    color: #000;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
+}
+.roadside .service-area .tel .number::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+    background-image: url(../images/common/ico_tel.svg);
+    vertical-align: middle;
+}
+.roadside .service-area .list {
+    display: flex;
+    height: 100%;
+    padding-top: 58px;
+    color: #333;
+    text-align: center;
+    font-family: 'HyundaiSansTextJP';
+    background-color: #fafafa;
+    border-left: 1px solid #e9e9e9;
+}
+.roadside .service-area .list li {
+    flex: 1;
+    padding: 0 40px;
+}
+.roadside .service-area .list li::before {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 8px;
+}
+.roadside .service-area .list li:nth-child(1)::before {
+    background-image: url(../images/common/ico_roadside1.svg);
+}
+.roadside .service-area .list li:nth-child(2)::before {
+    background-image: url(../images/common/ico_roadside2.svg);
+}
+.roadside .service-area .list li:nth-child(3)::before {
+    background-image: url(../images/common/ico_roadside3.svg);
+}
+.roadside .caution-text {
+    margin-top: 64px;
+    color: #666;
+    text-align: center;
+}
+.roadside .caution-text p:not(:first-child) {
+    margin-top: 8px;
+}
+@media screen and (max-width: 1119px) {
+    .roadside .cont-outer {
+        padding: 40px 20px 0 !important;
+    }
+    .roadside .info-text .text-type1 {
+        font-size: 20px;
+        line-height: 32px;
+    }
+    .roadside .info-text .text-type2 {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .roadside .service-area {
+        flex-flow: column;
+        height: auto;
+        margin-top: 40px;
+    }
+    .roadside .service-area > * {
+        width: 100%;
+        padding: 40px 32px;
+    }
+    .roadside .service-area .tel .text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .roadside .service-area .tel a.number {
+        display: block;
+        width: 224px;
+        height: 58px;
+        margin: 0 auto;
+        line-height: 58px;
+        border: 1px solid #e9e9e9;
+        border-radius: 29px;
+        font-size: 16px;
+    }
+    .roadside .service-area .list {
+        flex-flow: column;
+        padding-top: 40px;
+        border-left: none;
+        border-top: 1px solid #e9e9e9;
+    }
+    .roadside .service-area .list li {
+        position: relative;
+        min-height: 48px;
+        padding: 0 0 0 64px;
+        text-align: left;
+    }
+    .roadside .service-area .list li > p{
+        display: table-cell;
+        height: 48px;
+        vertical-align: middle;
+    }
+    .roadside .service-area .list li:not(:last-child) {
+        margin-bottom: 32px;
+    }
+    .roadside .service-area .list li::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .roadside .caution-text {
+        margin-top: 40px;
+    }
+}
+/* E : 로드사이드 어시스턴스 */

@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/* 간편견적 메인 */
+.easy-estimate .hmj-content .top-visual{
+    height: 400px;
+}
+.easy-estimate .hmj-content .top-visual .top-visual-text{
+    padding: 0;
+    top: auto;
+    bottom: 40px;
+}
+.easy-estimate .top-visual .top-visual-text h3{
+    font-weight: 500;
+}
+@media screen and (min-width: 1120px){
+    .easy-estimate .tab-box-list li .car-imgage{
+        position: relative;
+        margin: 24px auto 26px;
+        height: 208px;
+        width: 380px;
+        text-align: center;
+    }
+    .easy-estimate .tab-box-list li .car-imgage img{
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0.5;
+        transition: all .3s ease-in;
+    }
+    .easy-estimate .tab-box-list li.active .car-imgage img{
+        opacity: 1;
+    }
+    .easy-estimate .tab-box-cont{
+        padding-top: 258px;
+    }
+    .easy-estimate .tab-box-cont .tab-box-item{
+        width: 50%;
+    }
+    .easy-estimate .tab-box-cont .tab-box-item:nth-of-type(1){
+        float: left;
+    }
+    .easy-estimate .tab-box-cont .tab-box-item:nth-of-type(2){
+        float: right;
+    }
+}
+@media screen and (max-width: 1119px) {
+    .easy-estimate .hmj-content .top-visual{
+        height: 232px;
+    }
+    .easy-estimate .hmj-content .top-visual img{
+        width: auto;
+        height: 100%;
+        min-width: unset;
+        max-width: unset;
+    }
+    .easy-estimate .hmj-content .top-visual .top-visual-text{
+        padding: 0 20px;
+    }
+    .easy-estimate .tab-box-list li .car-imgage{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 56px;
+        width: 200%;
+		height: 33.88vw;
+        margin: 24px 0;
+        padding: 0 20px;
+        text-align: center;
+    }
+	.easy-estimate .tab-box-list li.active .car-imgage img{
+		height: 100%;
+	}
+    .easy-estimate .tab-box-list li.active .car-imgage{
+        display: block;    
+    }
+    .easy-estimate .tab-box-list li:nth-of-type(2) .car-imgage{
+        left: -100%;
+    }
+    .easy-estimate .tab-box-cont{
+        margin-top: 33.88vw;
+        padding: 48px 20px 0;
+        transition: none;
+    }
+}
+/* E: 간편견적 메인 */

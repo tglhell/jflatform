@@ -3453,12 +3453,12 @@
     padding-top: 16px;
     align-items: baseline;
 }
-.reserve-info .tbl-list .item {
+.tbl-list .item {
     color: #999;
     width: 136px;
     padding-right: 16px;
 }
-.reserve-info .tbl-list .txt {
+.tbl-list .txt {
     flex: 1 0;
 }
 .reserve-info .cta-outer {
@@ -3529,7 +3529,7 @@
     .reserve-info .tit {
         font-size: 14px;
     }
-    .reserve-info .tbl-list .item {
+    .tbl-list .item {
         width: 96px;
     }
 	.branch-info .name {
@@ -5117,3 +5117,392 @@ padding: 0 16px;
     }
 }
 /* E: 차량주문조회 */
+
+
+/* 견적내역 */
+.estimate-history .estmate-history-top{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;    
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #999999;
+    padding-bottom: 24px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.estimate-history .estmate-history-top .total-num span + span{
+    margin-left: 11px;
+}
+.estimate-history .estimate-history-del{
+    margin: 24px 0;
+}
+.estimate-history .estimate-history-del .chk{
+    margin-right: 23px;
+}
+.estimate-history .estimate-history-del .btn-trash{
+    position: relative;
+    padding: 2px 0 0 32px;
+    min-height: 24px;
+}
+.estimate-history .estimate-history-del .btn-trash::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 0;
+    left: 0;
+    background: url(../images/common/ico_trash.svg) no-repeat left center;
+}
+.estimate-history .estimate-list .estimate-item{
+    position: relative;
+    padding: 32px;
+    border-radius: 8px;
+    border: 1px solid #e9e9e9;
+}
+.estimate-history .estimate-list .estimate-item + .estimate-item{
+    margin-top: 16px;
+}
+.estimate-history .estimate-list .chk input + span{
+    color: #999999;
+}
+.estimate-history .estimate-list .mark{
+    position: absolute;
+    display: inline-block;
+    right: 32px;
+    top: 32px;
+    width: 60px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+}
+.estimate-history .estimate-list .mark-detail{
+    background: #0793ea;
+}
+.estimate-history .estimate-list .mark-easy{
+    background: #1c6bba;
+}
+.estimate-history .estimate-list .model-name{
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
+}
+.estimate-history .estimate-list .model-price{
+    margin-top: 16px;
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: 500;
+    color: #0793ea;
+}
+.estimate-history .estimate-list .model-img{
+    text-align: center;
+}
+.estimate-history .estimate-list .option-list{
+    width: 100%;
+    margin-top: 24px;
+    display: inline-block;
+}
+.estimate-history .estimate-list .option-list .option-name{
+    color: #999999;
+}
+.estimate-history .estimate-list .cta-outer{
+    margin-top: 40px;
+}
+.estimate-bottom{
+    margin-top: 40px;
+}
+@media screen and (min-width: 1120px){
+    .estimate-history .estimate-list .model-img{
+        position: absolute;
+        top: 144px;
+        right: 96px;
+    }
+    .estimate-history .estimate-list .option-list li{
+        display: flex;
+    }
+    .estimate-history .estimate-list .option-list li + li{
+        margin-top: 8px;
+    }
+    .estimate-history .estimate-list .option-list .option-name{
+        width: 144px;
+    }
+}
+@media screen and (max-width: 1119px){
+    .estimate-history {
+        margin-top: 40px;
+        padding: 0 20px;
+    }    
+    .estimate-history .estmate-history-top{
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 16px;
+    }
+    .estimate-history .estmate-history-top .slt-box{
+        width: 100%;
+        margin-top: 16px;
+    }
+    .estimate-history .estimate-list .estimate-item{
+        padding: 24px;
+    }
+    .estimate-history .estimate-list .mark{
+        right: 24px;
+        top: 26px;
+    }
+    .estimate-history .estimate-list .model-name{
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .estimate-history .estimate-list .model-price{
+        font-size: 20px;
+        line-height: 32px;
+    }
+    .estimate-history .estimate-list .model-img{
+        margin: 40px 0;
+    }
+    .estimate-history .estimate-list .option-list li + li{
+        margin-top: 16px;
+    }
+    .estimate-history .estimate-list .option-list .selected-name{
+        margin-top: 8px;
+    }
+    .estimate-bottom{
+        margin-top: 33px;
+        display: flex;
+        flex-direction: column;
+    }
+    .estimate-bottom .estimate-caution{
+        order: 2;
+        background: none;
+        border-top: 1px solid #e9e9e9;
+    }
+    .estimate-bottom .estimate-pagination{
+        order: 1;
+    }
+}
+/* E: 견적내역 */
+
+/* S: 내차량정보 */
+.my-garage .cont-center > .cta-outer {
+	margin-top: 40px;
+}
+.my-garage .list-my-car {
+	border: 1px solid #e9e9e9;
+	border-radius: 8px;
+	overflow: hidden;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.my-garage .list-my-car + .list-my-car {
+	margin-top: 16px;
+}
+.my-garage .list-my-car .info-box {
+	padding: 31px 31px 32px;
+	min-height: 215px;
+}
+.my-garage .list-my-car .btn-icon2 {
+	margin-bottom: 16px;
+}
+.my-garage .list-my-car h3 {
+	font-weight: 500;
+	margin-bottom: 8px;
+}
+.my-garage .list-my-car .cont-text {
+	margin-bottom: 16px;
+}
+.my-garage .list-my-car .cont-text::before {
+	content: '';
+	display: inline-block;
+	margin-right: 8px;
+	margin-bottom: -2px;
+	height: 16px;
+	width: 4px;
+	background-color: #e9e9e9;
+}
+.my-garage .list-my-car .share-info {
+	background: url('../images/common/ico_share2.svg') no-repeat left center;
+	padding-left: 24px;
+	font-size: 12px;
+	line-height: 20px;
+	font-family: 'HyundaiSansTextJP';
+	color: #999;
+	margin-top: 8px;
+}
+.my-garage .list-my-car .img-box{
+	width: 360px;
+	height: auto;
+	position: relative;
+	z-index: 1;
+	margin-right: 31px;
+	margin-bottom: -32px;
+	align-self: flex-end;
+}
+.my-garage .list-my-car .detail-box {
+	position: relative;
+	background-color: #fafafa;
+	padding: 32px 31px 31px;
+	width: 100%;
+}
+.my-garage .list-my-car .detail-box .car-info {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.my-garage .list-my-car .detail-box .car-info li {
+	padding: 32px 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: column;
+	flex: 1 1;
+	align-items: center;
+	position: relative;
+}
+.my-garage .list-my-car .detail-box .car-info li::before {
+	content: '';
+	width: 48px;
+	height: 48px;
+	margin-bottom: 16px;
+	display: inline-block;
+	background: url('../images/common/ico_car_step0.svg') no-repeat center;
+}
+.my-garage .list-my-car .detail-box .car-info li.vin::before {
+	background-image: url('../images/common/ico_roadside1.svg');
+}
+.my-garage .list-my-car .detail-box .car-info li.repair::before {
+	background-image: url('../images/common/ico_calendar2.svg');
+}
+.my-garage .list-my-car .detail-box .car-info li.distance::before {
+	background-image: url('../images/common/ico_distance.svg');
+}
+.my-garage .list-my-car .detail-box .car-info li:not(:last-child)::after {
+	content: '';
+	width: 1px;
+	height: 48px;
+	display: block;
+	background-color: #e9e9e9;
+	position: absolute;
+	top: 65px;
+	right: 0;
+}
+.my-garage .list-my-car .detail-box .car-info li span {
+	font-family: 'HyundaiSansTextJP';
+	font-size: 12px;
+	line-height: 20px;
+	color: #666;
+	margin-bottom: 8px;
+}
+.my-garage .list-my-car .caution.type2 {
+	margin-top: 32px;
+	padding-bottom: 0;
+}
+.my-garage .list-my-car .refresh-info {
+	margin-bottom: 16px;
+	font-family: 'HyundaiSansTextJP';
+	font-size: 12px;
+	line-height: 20px;
+	color: #999;
+	text-align: right;
+}
+.my-garage .list-my-car .refresh-info .date {
+	background: url('../images/common/ico_refresh.svg') no-repeat left center;
+	padding: 0 16px 0 24px;
+}
+.my-garage .intro-txt {
+	text-align:center;
+	font-size: 16px;
+	line-height: 26px;
+	padding-bottom: 40px;
+}
+.select-option {
+	border-top: 1px solid #999;
+}
+.select-option > li {
+	padding-top: 24px;
+}
+.select-option > li + li {
+	border-top: 1px solid #e9e9e9;
+	margin-top: 24px;
+}
+.select-option .tbl-list {
+	margin-top: 16px;
+	padding-left: 32px;
+}
+.select-option .tbl-list li {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+}
+.select-option .tbl-list li + li {
+	margin-top: 8px;
+}
+.select-option + .caution.type2 {
+	margin-top: 24px;
+}
+
+@media screen and (max-width: 1119px) {
+	.my-garage .cont-center > .cta-outer {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	.my-garage .list-my-car {
+		border: 0;
+		border-radius: 0;
+	}
+	.my-garage .list-my-car + .list-my-car {
+		border-top: 12px solid #f5f5f5;
+		margin-top: 0;
+	}
+	.my-garage .list-my-car .info-box {
+		padding: 40px 20px;
+		min-height: unset
+	}
+	.my-garage .list-my-car .img-box {
+		width: 83.33334%;
+		margin: 0 auto;
+	}
+	.my-garage .list-my-car .detail-box {
+		padding: 0 20px 40px;
+		margin-top: -56px;
+		padding-top: 56px;
+	}
+	.my-garage .list-my-car .detail-box .car-info {
+		flex-wrap: wrap;
+	}
+	.my-garage .list-my-car .detail-box .car-info li {
+		flex: none;
+		width: 50%;
+		padding-bottom: 16px;
+	}
+	.my-garage .list-my-car .detail-box .car-info li:nth-child(2)::after {
+		display: none;
+	}
+	.my-garage .list-my-car .detail-box .car-info li span {
+		margin-bottom: 0;
+	}
+	.my-garage .list-my-car .refresh-info {
+		text-align: left;
+		margin: 32px 0 24px;
+	}
+	.my-garage .list-my-car .refresh-info .date {
+		display: block;
+	}
+	.my-garage .intro-txt {
+		font-size: 14px;
+		line-height: 22px;
+	}
+	.my-garage .select-option .chk em {
+		display: block;
+	}
+}
+/* E: 내차량정보 */

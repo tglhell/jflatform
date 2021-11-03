@@ -543,6 +543,12 @@ $(function () {
 	// manin brand
 	if ($('.brand-list-cont').length == 1) {
 		let swpOpt = {};
+		let _gap;
+		if ($(window).width() > tbl) {
+			_gap = 32;
+		} else{
+			_gap = 16;
+		}
 		swpOpt = {
 			navigation: {
 				nextEl: '.brand-list-cont .swiper-button-next',
@@ -555,15 +561,247 @@ $(function () {
 			simulateTouch: true,
 			speed: 300,
 			loop: false,
-			spaceBetween: 32,
+			spaceBetween: _gap,
 			observer: true,
 			observeParents: true,
-			// breakpoints :{
-			// 	1119:{
-			// 		slidesPerView: 4,
-			// 	}
-			// }
 		}
 		let galleryList1 = new Swiper('.brand-list-cont .swiper-container', swpOpt);
 	}
+
+	//브랜드거점
+	if ($('.branch-swp01 .list').length == 1) {
+		let swpOpt = {},
+		slideLength = $('.branch-swp0 .list .swiper-slide').length;
+		if (slideLength == 1) {
+			swpOpt = {
+				allowSlidePrev: false,
+				allowSlideNext: false,
+				simulateTouch: false
+			}
+			$('.branch-swp0 .list [class*="swiper-button"]').hide();
+		} else {
+			if ($(window).width() > tbl) {
+				//pc
+				swpOpt = {
+					spaceBetween: 32,
+					slidesPerView: 3,
+					simulateTouch: true,
+					speed: 300,
+					loop: false,
+					observer: true,
+					observeParents: true
+				}
+			} else {
+				//mo
+				swpOpt = {
+					spaceBetween: 0,
+					pagination: {
+						el: '.branch-swp01 .list .swiper-pagination',
+						clickable: true,
+						type: 'progressbar'
+					},
+					simulateTouch: true,
+					speed: 300,
+					loop: false,
+					observer: true,
+					observeParents: true
+				}
+			}
+		}
+		var brandThumbList = new Swiper('.branch-swp01 .list .swiper-container', swpOpt);
+	};
+
+	if ($('.branch-swp01 .thumb').length == 1) {
+		let swpOpt = {},
+		slideLength = $('.branch-swp01 .thumb .swiper-slide').length;
+		if (slideLength == 1) {
+			swpOpt = {
+				allowSlidePrev: false,
+				allowSlideNext: false,
+				simulateTouch: false
+			}
+			$('.branch-swp01 .thumb [class*="swiper-button"]').hide();
+		} else {
+			if ($(window).width() > tbl) {
+				//pc
+				swpOpt = {
+					thumbs: {
+						swiper: brandThumbList
+					},
+					pagination: {
+						el: '.branch-swp01 .thumb .swiper-pagination',
+						clickable: true,
+						type: 'progressbar'
+					},
+					speed: 100,
+					cssMode: true,
+					mousewheel: true,
+					keyboard: true,
+					observer: true,
+					observeParents: true,
+				}
+			} else {
+				$('.branch-swp01 thumb').hide();
+			}
+		}
+		let brandDetailThumb = new Swiper('.branch-swp01 .thumb .swiper-container', swpOpt);
+	};
+
+
+	if ($('.branch-swp02 .list').length == 1) {
+		let swpOpt = {},
+		slideLength = $('.branch-swp02 .list .swiper-slide').length;
+		if (slideLength == 1) {
+			swpOpt = {
+				allowSlidePrev: false,
+				allowSlideNext: false,
+				simulateTouch: false
+			}
+			$('.branch-swp02 .list [class*="swiper-button"]').hide();
+		} else {
+			if ($(window).width() > tbl) {
+				//pc
+				swpOpt = {
+					spaceBetween: 32,
+					slidesPerView: 3,
+					simulateTouch: true,
+					speed: 300,
+					loop: false,
+					observer: true,
+					observeParents: true
+				}
+			} else {
+				//mo
+				swpOpt = {
+					spaceBetween: 0,
+					pagination: {
+						el: '.branch-swp02 .list .swiper-pagination',
+						clickable: true,
+						type: 'progressbar'
+					},
+					simulateTouch: true,
+					speed: 300,
+					loop: false,
+					observer: true,
+					observeParents: true
+				}
+			}
+		}
+		var brandThumbList = new Swiper('.branch-swp02 .list .swiper-container', swpOpt);
+	};
+
+	if ($('.branch-swp02 .thumb').length == 1) {
+		let swpOpt = {},
+		slideLength = $('.branch-swp02 .thumb .swiper-slide').length;
+		if (slideLength == 1) {
+			swpOpt = {
+				allowSlidePrev: false,
+				allowSlideNext: false,
+				simulateTouch: false
+			}
+			$('.branch-swp02 .thumb [class*="swiper-button"]').hide();
+		} else {
+			if ($(window).width() > tbl) {
+				//pc
+				swpOpt = {
+					thumbs: {
+						swiper: brandThumbList
+					},
+					pagination: {
+						el: '.branch-swp02 .thumb .swiper-pagination',
+						clickable: true,
+						type: 'progressbar'
+					},
+					speed: 100,
+					cssMode: true,
+					mousewheel: true,
+					keyboard: true,
+					observer: true,
+					observeParents: true,
+				}
+			} else {
+				$('.branch-swp02 thumb').hide();
+			}
+		}
+		let brandDetailThumb = new Swiper('.branch-swp02 .thumb .swiper-container', swpOpt);
+	};
+
+
+	if ($('.branch-swp02 .list').length == 1) {
+		let swpOpt = {},
+		slideLength = $('.branch-swp02 .list .swiper-slide').length;
+		if (slideLength == 1) {
+			swpOpt = {
+				allowSlidePrev: false,
+				allowSlideNext: false,
+				simulateTouch: false
+			}
+			$('.branch-swp02 .list [class*="swiper-button"]').hide();
+		} else {
+			if ($(window).width() > tbl) {
+				//pc
+				swpOpt = {
+					spaceBetween: 32,
+					slidesPerView: 3,
+					simulateTouch: true,
+					speed: 300,
+					loop: false,
+					observer: true,
+					observeParents: true
+				}
+			} else {
+				//mo
+				swpOpt = {
+					spaceBetween: 0,
+					pagination: {
+						el: '.branch-swp02 .list .swiper-pagination',
+						clickable: true,
+						type: 'progressbar'
+					},
+					simulateTouch: true,
+					speed: 300,
+					loop: false,
+					observer: true,
+					observeParents: true
+				}
+			}
+		}
+		var brandThumbList = new Swiper('.branch-swp02 .list .swiper-container', swpOpt);
+	};
+
+	if ($('.branch-swp02 .thumb').length == 1) {
+		let swpOpt = {},
+		slideLength = $('.branch-swp02 .thumb .swiper-slide').length;
+		if (slideLength == 1) {
+			swpOpt = {
+				allowSlidePrev: false,
+				allowSlideNext: false,
+				simulateTouch: false
+			}
+			$('.branch-swp02 .thumb [class*="swiper-button"]').hide();
+		} else {
+			if ($(window).width() > tbl) {
+				//pc
+				swpOpt = {
+					thumbs: {
+						swiper: brandThumbList
+					},
+					pagination: {
+						el: '.branch-swp02 .thumb .swiper-pagination',
+						clickable: true,
+						type: 'progressbar'
+					},
+					speed: 100,
+					cssMode: true,
+					mousewheel: true,
+					keyboard: true,
+					observer: true,
+					observeParents: true,
+				}
+			} else {
+				$('.branch-swp02 thumb').hide();
+			}
+		}
+		let brandDetailThumb = new Swiper('.branch-swp02 .thumb .swiper-container', swpOpt);
+	};
 });
