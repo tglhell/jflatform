@@ -479,7 +479,7 @@ body::-webkit-scrollbar-track,
 .hmj-header.scr-chk {
 	-webkit-transition: background-color .4s ease-in-out;
 	transition: background-color .4s ease-in-out;
-	background-color: rgba(255, 255, 255, .24);
+	background-color: rgba(255, 255, 255, .85);
 }
 .hmj-header h1 {
 	font-size: 14px;
@@ -1487,6 +1487,8 @@ body::-webkit-scrollbar-track,
 		max-height: 320px;
 	}
 	.hmj-container .hmj-content .top-visual img {
+		transform: translate(-50%, -50%);
+		top: 50%;
 		width: 100%;
 		height: auto;
 		min-width: unset;
@@ -2149,6 +2151,7 @@ div.slt-box select {
 .inp-outer-box.row-type  > label {
 	line-height: 26px;
 	margin: 0 0 8px;
+	display: block;
 }
 .inp-outer-box > label.top {
 	margin-top: 0;
@@ -2982,15 +2985,15 @@ div.radio-group {
 	padding: 0 15px;
 }
 .btn-small span {
-	font-size: inherit;
+	font-size: 14px;
 }
 .btn-extra-small {
 	height: 24px;
 	min-width: auto;
-	padding: 0 7px;
+	padding: 0 8px;
 }
 .btn-extra-small span {
-	font-size: inherit;
+	font-size: 14px;
 	font-weight: 400;
 }
 [class*='btn-tbl'] {
@@ -3000,7 +3003,7 @@ div.radio-group {
 	box-shadow: none;
 }
 [class*='btn-tbl'] span {
-	font-size: inherit;
+	font-size: 14px;
 }
 .btn-tbl span {
 	font-weight: 400;
@@ -4910,4 +4913,39 @@ p.noti.center::before {
         height: 88px;
         padding-top: 52px;
     } */
+}
+
+/* error */
+.error-cont {
+	width: 700px;
+	margin: 80px auto 0;
+	text-align: center;
+}
+.error-cont .icon {
+	display: block;
+	width: 80px;
+	height: 80px;
+	margin: 0 auto 16px;
+	background: url(../images/common/ico_no_data.svg) no-repeat center;
+	background-size: contain;
+	font-size: 0;
+	line-height: 0;
+}
+.error-cont .message {
+	margin-top: 24px;
+	font-size: 18px;
+	font-weight: 500;
+}
+.error-cont .desc {
+	margin-top: 16px;
+}
+.error-cont .cta-outer {
+	margin-top: 40px;
+}
+
+@media screen and (max-width: 1119px) {
+	.error-cont {
+		width: 100%;
+		padding: 0 20px;
+	}
 }

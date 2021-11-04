@@ -355,7 +355,7 @@ jQuery.event.add(window, 'load', function () {
 			$(this).blur();
 			chkBool = true;
 		} else {
-			$('html, body').animate({scrollTop:lineWrapPos}, secVal[7], 'easeInOutQuint');
+			$('html, body').stop().animate({scrollTop:lineWrapPos}, secVal[4], 'easeInOutQuint');
 		}
 	});
 
@@ -456,9 +456,16 @@ jQuery.event.add(window, 'load', function () {
 		const contTopPd = parseInt($('.cont-outer').eq(0).css('padding-top'));
 		
 		if (!$('.cont-outer').prev().hasClass('top-visual') || $(window).width() <= tbl) {
-			$('.cont-outer').css('padding-top', '0').eq(0).css('padding-top', (contTopPd + headerHgt));
+			if (!$('.hmj-container').hasClass('m-complete')) {
+				$('.cont-outer').css('padding-top', '0').eq(0).css('padding-top', (contTopPd + headerHgt));
+			} else {
+				$('.cont-outer').eq(0).css('margin-top', headerHgt);
+			}
 		} else {
 			$('.cont-outer').eq(0).prev().css('margin-top', headerHgt);
+		}
+		if ($(window).width() <= tbl && !$('.top-visual').hasClass('mo-none')) {
+			$('.top-visual').css('margin-top', headerHgt);
 		}
 		if ($('.cont-outer').prev().hasClass('top-tit-box')) {
 			if ($(window).width() > tbl) {

@@ -382,6 +382,12 @@
 
 
 @media screen and (max-width: 1119px) { 
+	.hmj-container.m-complete2 .hmj-content .top-visual {
+		height: 85.33333vw;
+	}
+	.m-complete2 .top-visual-text {
+		padding: 90px 20px 0 !important;
+	}
 	.m-complete2 .top-visual-text .top-title span {
 		display: block;
 	}
