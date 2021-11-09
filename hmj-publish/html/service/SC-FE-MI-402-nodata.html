@@ -7,7 +7,6 @@
 	<title>HMJ 온라인 판매 사이트 구축</title>
 	<link rel="stylesheet" href="../../assets/css/common.css">
 	<link rel="stylesheet" href="../../assets/css/service.css">
-	<link rel="stylesheet" href="../../assets/css/sunny.css">
 	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
 	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
@@ -258,7 +257,8 @@
 			<div class="history">
 				<a href="javascript:;">ホーム</a>
 				<a href="javascript:;">Service</a>
-				<span class="page-title">リコール情報</span>
+				<a href="javascript:;">リコール情報</a>
+				<span class="page-title">リコール対象確認</span>
 			</div>
 			<button type="button" class="back-page">Back page</button>
 		</div>
@@ -273,24 +273,28 @@
 				<img src="../../assets/images/@img_recall.jpg" alt="top visual">
 				<div class="top-visual-text fc-white">
 					<h2 class="top-title">リコール情報</h2>
-					<p class="top-desc">リコール情報をご確認の上、修理されることをご案内いたします。</p>
+					<p class="top-desc">リコール情報をご確認の上、修理されることをご案内いたします</p>
 				</div>
 			</div>
 			<div class="cont-outer">
                 <div class="car-inquiry">
-                    <p class="tit">リコール対象の車両を確認できます。</p>
-                    <div class="inp-outer-box inp-type">
-                        <label for="carSearch">車台番号(VIN)確認 <span class="required">*</span></label>
-                        <div class="inp-btn-box">
-                            <div class="inp-area">
-                                <input type="search" id="carSearch" class="inp-item" placeholder="ローマ字+数字(17桁)">
-                                <button class="inp-close"></button>
-                            </div>
-                            <button class="btn-tbl btn-search"><span>icon</span></button>
-                        </div>
-                    </div>
-                    <p class="text">当サイトに保有車両を登録している場合、車台番号 (VIN)は <a href="#" class="btn-text2">[MY>マイカー情報]</a> でご確認いただけます。</p>
-                </div>
+					<p class="tit">リコール対象の車両を確認できます。</p>
+					<div class="inp-cont">
+						<div class="inp-outer-box inp-type row-type"><!-- 유효성 검사 class="val-error" -->
+							<label for="carSearch">車台番号(VIN)確認 <span class="required">*</span></label>
+							<div class="inp-btn-box">
+								<div class="inp-area">
+									<input type="search" id="carSearch" class="inp-item" placeholder="ローマ字+数字(17桁)" maxlength="17">
+									<button class="inp-close"></button>
+								</div>
+								<button class="btn-tbl btn-search"><span>icon</span></button>
+							</div>
+						</div>
+						<p class="error-msg">車台番号を入力してください。</p><!-- 차대번호를 입력해주세요. -->
+						<p class="error-msg">無効な車台番号です。 もう一度入力してください。</p><!-- 유효하지 않은 차대번호입니다. 다시 입력해주세요. -->
+					</div>
+					<p class="text">当サイトに保有車両を登録している場合、車台番号 (VIN)は <a href="#" class="btn-text2">[MY>マイカー情報]</a> でご確認いただけます。</p>
+				</div>
                 
 				<!-- nodata -->
 				<div class="no-data">
@@ -298,9 +302,9 @@
 					<p class="desc">検索結果がありません。<br>VIN番号をもう一度お確めください。</p>
 				</div>
 				<!-- //nodata -->
+				
+                <!-- <div class="search-text"><span class="fc-color4">‘ASC1231234567’</span> 当該車両に対しては次のように関連情報が検索されました。 詳細は添付ファイルをご確認願います。</div>
 
-				<!-- 
-                <div class="search-text"><span class="fc-color4">‘ASC1231234567’</span> 当該車両に対しては次のように関連情報が検索されました。 詳細は添付ファイルをご確認願います。</div>
                 <div class="tbl-area">
                     <div class="tbl-box">
                         <table>
@@ -351,8 +355,8 @@
                         <button class="btn"><span>整備センター</span></button>
                         <button class="btn btn-type2"><span>整備予約</span></button>
                     </div>
-                </div>
-				-->
+                </div> -->
+				
 			</div>
 		</div>
 	</div>

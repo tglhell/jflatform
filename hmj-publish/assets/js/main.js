@@ -49,6 +49,7 @@ $(function(){
 		const iNum = 14;
 		carItemWid = _this.find('.car-item').width();
 		carItemWidRes = secVal[0] * carItemWid / $(window).width();
+		console.log(slideLength);
 		for (let i = 0; i < slideLength; i++) {
 			menuItem = $('.main-item-swiper .swiper-slide').eq(i).find('.item-tit').text();
 			menuTitArr.push(menuItem);
@@ -73,8 +74,6 @@ $(function(){
 						return '<span class="' + className + '">' + (menuTitArr[index]) + '</span>';
 					},
 				},
-				// slidesPerView: 'auto',
-				// centeredSlides: true,
 				simulateTouch: true,
 				speed: 500,
 				loop: true,
@@ -116,5 +115,33 @@ $(function(){
 		}
 		let sampleSwp = new Swiper('.main-item-swiper .swiper-container', swpOpt);
 		// sampleSwp.update();
+	}
+
+	// manin brand
+	if ($('.brand-list-cont').length == 1) {
+		let swpOpt = {};
+		let _gap;
+		if ($(window).width() > tbl) {
+			_gap = 32;
+		} else{
+			_gap = 16;
+		}
+		swpOpt = {
+			navigation: {
+				nextEl: '.brand-list-cont .swiper-button-next',
+				prevEl: '.brand-list-cont .swiper-button-prev',
+			},
+			pagination: false,
+			slidesPerView: 'auto',
+			// centeredSlides: true,
+
+			simulateTouch: true,
+			speed: 300,
+			loop: true,
+			spaceBetween: _gap,
+			observer: true,
+			observeParents: true,
+		}
+		let galleryList1 = new Swiper('.brand-list-cont .swiper-container', swpOpt);
 	}
 });

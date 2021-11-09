@@ -612,9 +612,6 @@
 	.notice .hmj-content .cont-outer {
 		padding: 0 20px;
 	}
-	.notice .tbl-box {
-		margin-top: 40px;
-	}
 	.notice .hmj-pagination {
 		margin: 0 -20px;
 	}
@@ -650,8 +647,7 @@
 		line-height: 1.67;
 	}
 	.tbl-box.num-file .auto-width {
-		width:48px;
-		padding: 16px 8px;
+		width: 64px;
 	}
 	.tbl-box .auto-width button.file span {
 		width: 32px;
@@ -782,9 +778,6 @@
 }
 
 @media screen and (max-width: 1119px) {
-	.sitemap.hmj-container .hmj-content .top-visual {
-		display: none;
-	}
 	.sitemap .toggle .tit-btn {
 		display: block;
 		height: 62px;

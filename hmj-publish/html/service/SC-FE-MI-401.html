@@ -257,8 +257,7 @@
 			<div class="history">
 				<a href="javascript:;">ホーム</a>
 				<a href="javascript:;">Service</a>
-				<a href="javascript:;">リコール情報</a>
-				<span class="page-title">リコール対象確認</span>
+				<span class="page-title">リコール情報</span>
 			</div>
 			<button type="button" class="back-page">Back page</button>
 		</div>
@@ -269,94 +268,8 @@
 	<!-- container -->
 	<div id="hmjContainer" class="hmj-container recall">
 		<div class="hmj-content">
-			<div class="top-visual pc-only">
-				<img src="../../assets/images/@img_recall.jpg" alt="top visual">
-				<div class="top-visual-text fc-white">
-					<h2 class="top-title">リコール情報</h2>
-					<p class="top-desc">リコール情報をご確認の上、修理されることをご案内いたします</p>
-				</div>
-			</div>
-			<div class="cont-outer">
-                <div class="car-inquiry">
-					<p class="tit">リコール対象の車両を確認できます。</p>
-					<div class="inp-cont">
-						<div class="inp-outer-box inp-type row-type"><!-- 유효성 검사 class="val-error" -->
-							<label for="carSearch">車台番号(VIN)確認 <span class="required">*</span></label>
-							<div class="inp-btn-box">
-								<div class="inp-area">
-									<input type="search" id="carSearch" class="inp-item" placeholder="ローマ字+数字(17桁)" maxlength="17">
-									<button class="inp-close"></button>
-								</div>
-								<button class="btn-tbl btn-search"><span>icon</span></button>
-							</div>
-						</div>
-						<p class="error-msg">車台番号を入力してください。</p><!-- 차대번호를 입력해주세요. -->
-						<p class="error-msg">無効な車台番号です。 もう一度入力してください。</p><!-- 유효하지 않은 차대번호입니다. 다시 입력해주세요. -->
-					</div>
-					<p class="text">当サイトに保有車両を登録している場合、車台番号 (VIN)は <a href="#" class="btn-text2">[MY>マイカー情報]</a> でご確認いただけます。</p>
-				</div>
-                
-				<!-- nodata -->
-				<div class="no-data" style="display: none;">
-					<p class="tit fc-color4">ASC1231234567</p>
-					<p class="desc">検索結果がありません。<br>VIN番号をもう一度お確めください。</p>
-				</div>
-				<!-- //nodata -->
-				
-                <div class="search-text"><span class="fc-color4">‘ASC1231234567’</span> 当該車両に対しては次のように関連情報が検索されました。 詳細は添付ファイルをご確認願います。</div>
-
-                <div class="tbl-area">
-                    <div class="tbl-box">
-                        <table>
-                            <caption class="blind">関連詳細情報</caption>
-                            <colgroup>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th scope="col">通知番号</th>
-                                    <th scope="col">通知日</th>
-                                    <th scope="col">リコール対象</th>
-                                    <th scope="col" class="auto">詳細案内</th>
-                                    <th scope="col" class="col2">サマリー</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td colspan="5">
-                                        <div class="flex">
-                                            <span>外部-2900</span>
-                                            <span>2021-04-21</span>
-                                            <span>IONIQ5</span>
-                                            <span class="auto"><a href="#" class="btn-text2 regular">210330_IONIQ5_recall.pdf</a></span>
-                                            <span class="col2">エアバッグ制御装置のエラー</span>
-                                        </div>
-                                    </td>
-                                </tr>
-								<tr>
-                                    <td colspan="5">
-                                        <div class="flex">
-                                            <span>外部-2900</span>
-                                            <span>2021-04-21</span>
-                                            <span>IONIQ5</span>
-                                            <span class="auto"><a href="#" class="btn-text2 regular">210330_IONIQ5_recall.pdf</a></span>
-                                            <span class="col2">エアバッグ制御装置のエラー</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="cta-outer">
-                        <button class="btn"><span>整備センター</span></button>
-                        <button class="btn btn-type2"><span>整備予約</span></button>
-                    </div>
-                </div>
-				
+			<div class="cont-outer" style="padding-top: 109px;">
+				<button class="btn pop-open" data-pop-idx="SC-FE-MI-401"><span>SC-FE-MI-401</span></button>
 			</div>
 		</div>
 	</div>
@@ -469,6 +382,45 @@
 		<span class="blind">Top</span>
 	</a>
 </div>
+
+<!-- layerPopup -->
+<div class="layer-popup-wrap" data-pop-idx="SC-FE-MI-401">
+	<div class="layer-popup-body">
+		<div class="layer-popup-cont pop-medium recall">
+			<h1 class="layer-title">詳細情報</h1>
+
+			<div class="layer-cont">
+				<ul class="detail-list">
+					<li>
+						<span class="tit">通知番号</span>
+						<span class="txt">外部-2900</span>
+					</li>
+					<li>
+						<span class="tit">通知日</span>
+						<span class="txt">2021-04-21</span>
+					</li>
+					<li>
+						<span class="tit">リコール対象</span>
+						<span class="txt">IONIQ5</span>
+					</li>
+					<li>
+						<span class="tit">詳細案内</span>
+						<span class="txt"><a href="#" class="btn-text2 regular">210330_IONIQ5_recall.pdf</a></span>
+					</li>
+					<li>
+						<span class="tit">サマリー</span>
+						<span class="txt">エアバッグ制御装置のエラー</span>
+					</li>
+				</ul>
+				<div class="cta-outer">
+					<button class="btn btn-middle btn-type2 btn-close"><span>確認</span></button>
+				</div>
+			</div>
+			<button class="btn-close-popup btn-close">close</button>
+		<a href="#" class="tar-loop"></a></div>
+	</div>
+</div>
+<!-- //layerPopup -->
 
 <script>
 	customSelect();

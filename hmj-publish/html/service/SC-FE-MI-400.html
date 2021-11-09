@@ -7,7 +7,6 @@
 	<title>HMJ 온라인 판매 사이트 구축</title>
 	<link rel="stylesheet" href="../../assets/css/common.css">
 	<link rel="stylesheet" href="../../assets/css/service.css">
-	<link rel="stylesheet" href="../../assets/css/sunny.css">
 	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
 	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
@@ -273,7 +272,7 @@
 				<img src="../../assets/images/@img_recall.jpg" alt="top visual">
 				<div class="top-visual-text fc-white">
 					<h2 class="top-title">リコール情報</h2>
-					<p class="top-desc">リコール情報をご確認の上、修理されることをご案内いたします。</p>
+					<p class="top-desc">リコール情報をご確認の上、修理されることをご案内いたします</p>
 				</div>
 			</div>
 			<div class="cont-outer">
@@ -314,15 +313,17 @@
                                         <div class="slt-box">
                                             <p class="selected-value">全体年度</p>
                                             <ul class="select-items">
-                                                <li>IONIQ 5</li>
-                                                <li>NEXO</li>
+                                                <li>전체</li>
+                                                <li>2021</li>
                                             </ul>
                                         </div>
                                         <div class="slt-box">
                                             <p class="selected-value">全体分類</p>
                                             <ul class="select-items">
-                                                <li>カタログ/価格表ダウンロード</li>
-                                                <li>取扱説明書ダウンロード</li>
+                                                <li>전체 분류(default)</li>
+                                                <li>리콜</li>
+												<li>개선대책</li>
+												<li>캠페인</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -341,8 +342,8 @@
                                             <tr>
                                                 <th scope="col">通知日</th>
                                                 <th scope="col" class="col1">分類</th>
-                                                <th scope="col" class="auto">ダウンロード</th>
-                                                <th scope="col">ダウンロード</th>
+                                                <th scope="col" class="auto">リコール対象</th>
+                                                <th scope="col">詳細</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -398,15 +399,19 @@
 							<!-- 대상 차량 조회 -->
 							<div class="car-inquiry">
 								<p class="tit">リコール対象の車両を確認できます。</p>
-								<div class="inp-outer-box inp-type">
-									<label for="carSearch">車台番号(VIN)確認 <span class="required">*</span></label>
-									<div class="inp-btn-box">
-										<div class="inp-area">
-											<input type="search" id="carSearch" class="inp-item" placeholder="地名・ビル名を入力">
-											<button class="inp-close"></button>
+								<div class="inp-cont">
+									<div class="inp-outer-box inp-type row-type"><!-- 유효성 검사 class="val-error" -->
+										<label for="carSearch">車台番号(VIN)確認 <span class="required">*</span></label>
+										<div class="inp-btn-box">
+											<div class="inp-area">
+												<input type="search" id="carSearch" class="inp-item" placeholder="ローマ字+数字(17桁)" maxlength="17">
+												<button class="inp-close"></button>
+											</div>
+											<button class="btn-tbl btn-search"><span>icon</span></button>
 										</div>
-										<button class="btn-tbl btn-search"><span>icon</span></button>
 									</div>
+									<p class="error-msg">車台番号を入力してください。</p><!-- 차대번호를 입력해주세요. -->
+									<p class="error-msg">無効な車台番号です。 もう一度入力してください。</p><!-- 유효하지 않은 차대번호입니다. 다시 입력해주세요. -->
 								</div>
 								<p class="text">当サイトに保有車両を登録している場合、車台番号 (VIN)は <a href="#" class="btn-text2">[MY>マイカー情報]</a> でご確認いただけます。</p>
 							</div>

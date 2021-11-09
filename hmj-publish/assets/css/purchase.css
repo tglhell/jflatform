@@ -1520,16 +1520,17 @@
 /* download */
 .download .cont-outer .cont-top {
 	position: relative;
-	padding: 73px 0 25px;
+	padding: 73px 0 24px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .download .cont-outer .cont-top h4 {
 	font-weight: 500;
 	line-height: 1.58;
-}
-.download .cont-outer .cont-top .slt-box-cont {
-	position: absolute;
-	top: 73px;
-	right: 0;
 }
 .download .cont-outer .cont-top .slt-box {
 	display: inline-block;
@@ -1595,9 +1596,6 @@
 .download .cont-outer .caution {
 	margin-top: 40px;
 } 
-.download .cont-outer .tbl-box.pdf {
-	margin-top: 0;
-}
 .download .cont-outer .tbl-box.pdf .flex {
 	display: flex;
 	justify-content: space-between;
@@ -1628,7 +1626,9 @@
 		padding: 0 20px;
 	}
 	.download .cont-outer .cont-top {
-		padding: 24px 0 16px;
+		padding: 40px 0 16px;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 	.download .cont-outer .cont-top h4 {
 		font-size: 16px;
@@ -1931,66 +1931,7 @@
     display: none;    
 }
 .estimate .payment-area .payment {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin: 24px -4px 32px;
-}
-.estimate .payment-area .payment label {
-    width: 25%;
-    padding: 0 4px;
-}
-.estimate .payment-area .payment input {
-    display: none;
-}
-.estimate .payment-area .payment span {
-    cursor: pointer;
-    display: block;
-    text-align: center;
-    width: 100%;
-    height: 97px;
-    border:1px solid #ccc;
-    border-radius: 4px;
-    color: #666;
-    padding-top: 58px;
-    
-}
-.estimate .payment-area .payment .card span {
-    background: url(../images/common/ico_card.svg) no-repeat center 12px;
-    background-size: 48px 48px;
-}
-.estimate .payment-area .payment .cash span {
-    background: url(../images/common/ico_cash.svg) no-repeat center 12px;
-    background-size: 48px 48px;
-}
-.estimate .payment-area .payment .linepay span {
-    background: url(../images/common/ico_linepay.svg) no-repeat center 24px;
-    background-size: 68px 20px;
-}
-.estimate .payment-area .payment .paypay span {
-    background: url(../images/common/ico_paypay.svg) no-repeat center 24px;
-    background-size: 80px 20px;
-}
-.estimate .payment-area .payment input[type=radio]:checked + span,
-.estimate .payment-area .payment span:hover {
-    border-color: #0793ea;
-    color: #191919;
-}
-.estimate .payment-area .payment .card input[type=radio]:checked + span,
-.estimate .payment-area .payment .card span:hover {
-    background-image: url(../images/common/ico_card_on.svg);
-}
-.estimate .payment-area .payment .cash input[type=radio]:checked + span,
-.estimate .payment-area .payment .cash span:hover {
-    background-image: url(../images/common/ico_cash_on.svg);
-}
-.estimate .payment-area .payment .linepay input[type=radio]:checked + span,
-.estimate .payment-area .payment .linepay span:hover {
-    background-image: url(../images/common/ico_linepay_on.svg);
-}
-.estimate .payment-area .payment .paypay input[type=radio]:checked + span,
-.estimate .payment-area .payment .paypay span:hover {
-    background-image: url(../images/common/ico_paypay_on.svg);
 }
 .estimate .cont-right .cont-text {
     margin: 72px 0 8px;
@@ -2335,23 +2276,6 @@
     .estimate .payment-area .payment {
         margin: 20px 16px 32px
     }
-    .estimate .payment-area .payment label {
-        width: 50%;
-        padding: 4px;
-    }
-    .estimate .payment-area .payment span {
-        height: 88px;
-        padding-top: 52px;
-        font-size: 13px;
-    }
-    .estimate .payment-area .payment .card span,
-    .estimate .payment-area .payment .cash span {
-        background-position-y: 7px;
-    }
-    .estimate .payment-area .payment .linepay span,
-    .estimate .payment-area .payment .paypay span {
-        background-position-y: 20px;
-    }
     .estimate .payment-area .check-terms {
         margin: 0 20px 32px;
     }
@@ -2634,8 +2558,8 @@
 	.brand-branch.hmj-container .hmj-content .top-visual .top-visual-text .top-desc span {
 		display: inline;
 	}
-	.brand-branch .cont-outer {
-		padding-top: 40px !important;
+	.brand-branch .hmj-content .top-visual + .cont-outer {
+		padding-top: 40px;
 	}
 	.brand-branch .branch-info-wrap {
 		margin-top: 24px;
@@ -2717,15 +2641,16 @@
 		display: block;
 		width: 40px;
 		height: 40px;
-		border-radius: 4px;
 		background: rgba(0,0,0,0.45) url('../images/common/ico_arrow_white_16x16.svg') no-repeat center;
 	}
 	.brand-branch .swiper-button-prev {
 		left: 0;
 		transform: rotate(180deg);
+		border-radius: 4px 0 0 4px;
 	}
 	.brand-branch .swiper-button-next {
 		right: 0;
+		border-radius: 4px 0 0 4px;
 	}
 	.swiper-button-next:after, 
 	.swiper-button-prev:after {

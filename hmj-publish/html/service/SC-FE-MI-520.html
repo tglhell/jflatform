@@ -4,13 +4,15 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-	<title>HMJ 온라인 판매 사이트 구축</title>
-	<link rel="stylesheet" href="../../assets/css/common.css">
+    <title>保証修理 : Service : HMJ</title>
+
+    <link rel="stylesheet" href="../../assets/css/common.css">
 	<link rel="stylesheet" href="../../assets/css/service.css">
 	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+	
 	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
-	<script type="text/javascript" src="../../assets/js/common.js"></script>	
+	<script type="text/javascript" src="../../assets/js/common.js"></script>
 </head>
 
 <body>
@@ -38,10 +40,12 @@
 						<!-- 로그인 후 -->
 						<div class="account-box login">
 							<button class="btn-account">Account</button>
-							<button class="btn-sign-in">木村 拓哉 様</button>
-							<a href="#a" class="btn-alarm">
-								<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
-								<div class="num"><span>2</span></div>
+							<a href="#" class="btn-sign-link">
+								<span class="btn-sign-in">木村 拓哉 様</span>
+								<span class="btn-alarm">
+									<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
+									<span class="num"><span>2</span></span>
+								</span>
 							</a>
 						</div>
 						<!-- // 로그인 후 -->
@@ -252,13 +256,13 @@
 					</ul>
 				</div>
 			</div>
-		</div>	
+		</div>			
 		<div class="sub-cont">
 			<div class="history">
-				<a href="javascript:;">ホーム</a>
-				<a href="javascript:;">Service</a>
-				<a href="javascript:;">リコール情報</a>
-				<span class="page-title">リコール対象確認</span>
+				<a href="#">ホーム </a>				
+				<a href="#">Service</a>
+				<a href="#">Hyundaiサービス</a>
+				<span class="page-title">保証修理</span>
 			</div>
 			<button type="button" class="back-page">Back page</button>
 		</div>
@@ -267,101 +271,108 @@
 	<!--//header -->
 
 	<!-- container -->
-	<div id="hmjContainer" class="hmj-container recall">
+	<div id="hmjContainer" class="hmj-container warranty">
 		<div class="hmj-content">
-			<div class="top-visual pc-only">
-				<img src="../../assets/images/@img_recall.jpg" alt="top visual">
+            <div class="top-visual">
+				<picture>
+					<source srcset="../../assets/images/@warranty_visual_pc.jpg" media="(min-width: 1120px)">
+					<source srcset="../../assets/images/@warranty_visual_mo.jpg" media="(max-width: 1119px)">
+					<img src="../../assets/images/@warranty_visual_pc.jpg" alt="top visual">
+				</picture>
 				<div class="top-visual-text fc-white">
-					<h2 class="top-title">リコール情報</h2>
-					<p class="top-desc">リコール情報をご確認の上、修理されることをご案内いたします</p>
+					<h2 class="top-title">保証修理</h2>
+					<p class="top-desc">新車ご購入の際、お客様が安心してお乗りいただくために車種や部品ごとに<br>保証期間を提供しております</p>
 				</div>
 			</div>
 			<div class="cont-outer">
-                <div class="car-inquiry">
-					<p class="tit">リコール対象の車両を確認できます。</p>
-					<div class="inp-cont">
-						<div class="inp-outer-box inp-type row-type"><!-- 유효성 검사 class="val-error" -->
-							<label for="carSearch">車台番号(VIN)確認 <span class="required">*</span></label>
-							<div class="inp-btn-box">
-								<div class="inp-area">
-									<input type="search" id="carSearch" class="inp-item" placeholder="ローマ字+数字(17桁)" maxlength="17">
-									<button class="inp-close"></button>
-								</div>
-								<button class="btn-tbl btn-search"><span>icon</span></button>
-							</div>
-						</div>
-						<p class="error-msg">車台番号を入力してください。</p><!-- 차대번호를 입력해주세요. -->
-						<p class="error-msg">無効な車台番号です。 もう一度入力してください。</p><!-- 유효하지 않은 차대번호입니다. 다시 입력해주세요. -->
-					</div>
-					<p class="text">当サイトに保有車両を登録している場合、車台番号 (VIN)は <a href="#" class="btn-text2">[MY>マイカー情報]</a> でご確認いただけます。</p>
-				</div>
-                
-				<!-- nodata -->
-				<div class="no-data" style="display: none;">
-					<p class="tit fc-color4">ASC1231234567</p>
-					<p class="desc">検索結果がありません。<br>VIN番号をもう一度お確めください。</p>
-				</div>
-				<!-- //nodata -->
-				
-                <div class="search-text"><span class="fc-color4">‘ASC1231234567’</span> 当該車両に対しては次のように関連情報が検索されました。 詳細は添付ファイルをご確認願います。</div>
+                <section>
+                    <h4>対象車両</h4>
+                    <p class="txt">IONIQ 5、NEXO</p>
+                </section>
 
-                <div class="tbl-area">
+                <section>
+                    <h4>保証期間・内容</h4>
                     <div class="tbl-box">
-                        <table>
-                            <caption class="blind">関連詳細情報</caption>
+                        <table class="data-tbl w100">
                             <colgroup>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
+                                <col width="37%">
                                 <col>
                             </colgroup>
-                            <thead>
-                                <tr>
-                                    <th scope="col">通知番号</th>
-                                    <th scope="col">通知日</th>
-                                    <th scope="col">リコール対象</th>
-                                    <th scope="col" class="auto">詳細案内</th>
-                                    <th scope="col" class="col2">サマリー</th>
-                                </tr>
-                            </thead>
                             <tbody>
                                 <tr>
-                                    <td colspan="5">
-                                        <div class="flex">
-                                            <span>外部-2900</span>
-                                            <span>2021-04-21</span>
-                                            <span>IONIQ5</span>
-                                            <span class="auto"><a href="#" class="btn-text2 regular">210330_IONIQ5_recall.pdf</a></span>
-                                            <span class="col2">エアバッグ制御装置のエラー</span>
-                                        </div>
-                                    </td>
+                                    <th>ボディ/一般部品</th>
+                                    <td>5年/10万 km</td>
                                 </tr>
-								<tr>
-                                    <td colspan="5">
-                                        <div class="flex">
-                                            <span>外部-2900</span>
-                                            <span>2021-04-21</span>
-                                            <span>IONIQ5</span>
-                                            <span class="auto"><a href="#" class="btn-text2 regular">210330_IONIQ5_recall.pdf</a></span>
-                                            <span class="col2">エアバッグ制御装置のエラー</span>
-                                        </div>
-                                    </td>
+                                <tr>
+                                    <th>エンジン/動力伝達機構</th>
+                                    <td>5年/10万 km</td>
+                                </tr>
+                                <tr>
+                                    <th>水素/電気自動車専用部品</th>
+                                    <td>5年/10万 km</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div class="cta-outer">
-                        <button class="btn"><span>整備センター</span></button>
-                        <button class="btn btn-type2"><span>整備予約</span></button>
+                </section>
+
+                <section>
+                    <h4>参考</h4>
+                    <p class="txt">高電圧バッテリー特別保証 8年/16万 km (SOH 70%以上)</p>
+                </section>
+
+                <section>
+                    <h4>保証基準</h4>
+                    <div class="cont-flex">
+                        <div class="img-box"><img src="../../assets/images/@img_warranty1.jpg" alt="warranty1" ></div>
+                        <div class="info-box">
+                            <p class="s-tit">5年10万 km 保証</p>
+                            <p class="txt">ご購入の新車は、車両の一般部品および動力伝達機構に対して*5年または10万 km走行時点のいずれか早い方まで保証いたします。<br>
+                                (* 5年または10万 km走行時点のいずれか早い方)</p>
+                        </div>
                     </div>
+                    <div class="cont-flex">
+                        <div class="img-box"><img src="../../assets/images/@img_warranty2.jpg" alt="warranty2" ></div>
+                        <div class="info-box">
+                            <p class="s-tit">8年16万 km Battery Warranty</p>
+                            <p class="txt">安心してお乗りいただけくために高電圧バッテリーは 8年または16万 km走行時点のいずれか早い方まで保証いたします。<br>
+                                (*8年または16万 km走行時点のいずれか早い方、またはバッテリー容量70%まで)</p>
+                        </div>
+                    </div>
+                    <div class="cont-flex">
+                        <div class="img-box"><img src="../../assets/images/@img_warranty3.jpg" alt="warranty3" ></div>
+                        <div class="info-box">
+                            <p class="s-tit">5年10万 km 保証</p>
+                            <p class="txt">ご購入の新車は、車両の一般部品および動力伝達機構に対して*5年または10万 km走行時点のいずれか早い方まで保証いたします。<br>
+                                (* 5年または10万 km走行時点のいずれか早い方)</p>
+                        </div>
+                    </div>
+                    <div class="cont-flex">
+                        <div class="img-box"><img src="../../assets/images/@img_warranty4.jpg" alt="warranty4" ></div>
+                        <div class="info-box">
+                            <p class="s-tit">8年16万 km Battery Warranty</p>
+                            <p class="txt">安心してお乗りいただけくために高電圧バッテリーは 8年または16万 km走行時点のいずれか早い方まで保証いたします。<br>
+                                (*8年または16万 km走行時点のいずれか早い方、またはバッテリー容量70%まで)</p>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="caution type2 full">
+                    <p class="tit">保証修理のご案内</p>
+                    <ul>
+                        <li>保証期間の適用 : 保証期間は新車登録日から適用され、   機関又は走行郷里のいずれか早い方までを保証期間の満了であるとみなします。</li>
+                        <li>冷暖房装置部品の保証期間 : ボディおよび一般部品と同様(ただし、1年以内は走行距離とは関係なし)</li>
+                        <li>AVN保証期間(オーディオ、ビデオ、ナビゲーション(IONIQ5に限る) : 3年または6万 km走行時点のいずれか早い方</li>
+                        <li>保証修理は、Hyundai 指定の整備工場で行われます。</li>
+                        <li>H Genuine Accessories部品は、ボディおよび一般部品/冷暖房装置に適用される保証期間と異なる場合があります。</li>
+                        <li>それぞれの項目の保証期間および詳細については、別途で提供いたします保証書をご参照ください。</li>
+                    </ul>
                 </div>
-				
+
 			</div>
 		</div>
 	</div>
 	<!--//container -->
-
 	<!-- footer -->
 	<div class="hmj-footer">
 		<div class="footer-top">
@@ -463,16 +474,5 @@
 	</div>
 	<!--//footer -->
 </div>
-
-<div class="btn-top-box">
-	<a href="#" title="move to top" role="button" class="btn-top">
-		<span class="blind">Top</span>
-	</a>
-</div>
-
-<script>
-	customSelect();
-</script>
-
 </body>
 </html>

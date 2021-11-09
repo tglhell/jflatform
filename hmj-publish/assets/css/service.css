@@ -365,7 +365,7 @@
 }
 .hd-service .center-list .desc {
 	margin-top:8px;
-	color:#333;
+	color:#191919;
 }
 .hd-service .cta-outer {
 	margin-top:40px;
@@ -1056,7 +1056,7 @@
     display: flex;
     height: 100%;
     padding-top: 58px;
-    color: #333;
+    color: #191919;
     text-align: center;
     font-family: 'HyundaiSansTextJP';
     background-color: #fafafa;
@@ -1091,8 +1091,8 @@
     margin-top: 8px;
 }
 @media screen and (max-width: 1119px) {
-    .roadside .cont-outer {
-        padding: 40px 20px 0 !important;
+    .roadside .hmj-content .top-visual + .cont-outer {
+        padding: 40px 20px 0 ;
     }
     .roadside .info-text .text-type1 {
         font-size: 20px;
@@ -1155,3 +1155,560 @@
     }
 }
 /* E : 로드사이드 어시스턴스 */
+
+/* S : 앱설치안내 */
+.svc-app-link > li {
+	display: flex;
+	padding: 32px;
+	border-radius: 8px;
+	border: 1px solid #e9e9e9;
+	justify-content: space-between;
+	align-items: center;
+}
+.svc-app-link > li + li {
+	margin-top: 16px;
+}
+.svc-app-link .app-name {
+	display: flex;
+	width: 704px;
+	min-height: 112px;
+}
+.svc-app-link .app-name .img {
+	flex: none;
+	width: 112px;
+	height: 112px;
+	margin-right: 24px;
+	border-radius: 24px;
+	overflow: hidden;
+
+}
+.svc-app-link .app-name .img img {
+	width: 100%;
+	height: 100%;
+}
+.svc-app-link .app-name .name {
+	display: block;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.67;
+}
+.svc-app-link .app-name .txt {
+	margin-top: 8px;
+	font-size: 14px;
+	line-height: 1.57;
+	color: #666;
+}
+.svc-app-link .qr-code {
+	display: flex;
+	justify-content: space-between;
+}
+.svc-app-link .qr-code li {
+	text-align: center;
+}
+.svc-app-link .qr-code li+li {
+	margin-left: 32px;
+}
+.svc-app-link .qr-code .qr-img {
+	width: 80px;
+	height:80px;
+	margin: 0 auto;
+	border: solid 1px #999;
+}
+.svc-app-link .qr-code .type {
+	display: block;
+	margin-top: 8px;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 1.67;
+	color: #1c6bba;
+}
+.svc-app-link .qr-code .btn span {
+	padding-left: 20px;
+	background:url('../../assets/images/common/ico_down_w.svg') no-repeat 0 1px;
+	background-size: 16px;
+	color: #fff;
+	font-size: 12px;
+}
+
+@media screen and (max-width: 1119px) {
+	.svc-app.hmj-container .hmj-content .cont-outer {
+		padding: 40px 20px 0;
+	}
+	.svc-app-link > li {
+		display: block;
+		padding: 24px 16px;
+	}
+	.svc-app-link .app-name {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	.svc-app-link .app-name .name {
+		font-size: 15px;
+		line-height: 1.6;
+	}
+	.svc-app-link .app-name .img {
+		width: 80px;
+		height: 80px;
+		margin: 0 auto;
+	}
+	.svc-app-link .app-name .desc {
+		margin-top: 24px;
+	}
+	.svc-app-link .app-name .txt {
+		font-size: 13px;
+		line-height: 1.54;
+	}
+	.svc-app-link .qr-code {
+		font-size: 0;
+		display: block;
+		padding-top: 24px;
+		margin-top: 24px;
+		border-top:1px solid #e9e9e9;
+		text-align: center;
+	}
+	.svc-app-link .qr-code > li {
+		display: inline-block;
+	}
+}
+/* E : 앱설치안내 */
+
+/* S : 리콜 */
+.recall .info-text {
+    margin-bottom: 64px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+}
+.recall .info-list {
+    display: flex;
+    padding: 32px;
+    border: 1px solid #e9e9e9;
+    border-radius: 8px;
+    color: #999;      
+}
+.recall .info-list strong {
+    display: block;
+    margin-bottom: 16px;
+    color: #333;
+    font-size: 16px;
+    line-height: 48px;
+}
+.recall .info-list strong::before {
+    content: '';
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin-right: 16px;
+    vertical-align: middle;
+}
+.recall .info-list li:nth-child(1) strong::before {
+    background-image: url(../images/common/ico_recall1.svg);
+}
+.recall .info-list li:nth-child(2) strong::before {
+    background-image: url(../images/common/ico_recall2.svg);
+}
+.recall .info-list li:nth-child(3) strong::before {
+    background-image: url(../images/common/ico_recall3.svg);
+}
+.recall .info-list li {
+    flex: 1;
+}
+.recall .info-list li:nth-child(2) {
+    position: relative;
+    margin: 0 48px;
+    padding: 0 48px;
+}
+.recall .info-list li:nth-child(2)::before,
+.recall .info-list li:nth-child(2)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: calc(100% - 64px);
+    margin: 32px 0;
+    background-color: #e9e9e9;
+}
+.recall .info-list li:nth-child(2)::before {
+    left: 0;
+}
+.recall .info-list li:nth-child(2)::after {
+    right: 0;
+}
+.recall .tbl-area .tbl-top {
+    display: flex;
+    justify-content: space-between;
+    margin: 56px 0 20px;
+}
+.recall .tbl-area .tbl-top .title {
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 500;
+}
+.recall .tbl-area .tbl-top .slt-box-cont .slt-box {
+    display: inline-block;
+    width: 176px;
+}
+.recall .tbl-area .tbl-top .slt-box-cont .slt-box + .slt-box {
+    margin: 0 0 0 12px;
+}
+.recall .tbl-area .tbl-box th {
+    width: 160px;
+}
+.recall .tbl-area .tbl-box td {
+    padding: 0;
+}
+.recall .tbl-area .tbl-box .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.recall .tbl-area .tbl-box span {
+    width: 160px;
+}
+.recall .tbl-area .tbl-box .date {
+    color: #999;
+}
+.recall .tbl-area .tbl-box .col1 {
+    width: 240px;
+}
+.recall .tbl-area .tbl-box .col2 {
+    width: 290px;
+}
+.recall .tbl-area .tbl-box .auto {
+    width: auto;
+    flex: 1;
+}
+.recall .tbl-area .tbl-box .left {
+    padding-left: 16px;
+    text-align: left;
+}
+.recall .tbl-area .tbl-box a.pdf {
+    display: inline-block;
+    min-height: 24px;
+	padding-left: 24px;
+	background: url('../../assets/images/common/ico_down_g.svg') no-repeat left 2px;
+	background-size: 16px;
+}
+.recall .tbl-area .tbl-box + .cta-outer {
+    margin-top: 40px;
+}
+.recall .search-text {
+    margin: 56px 0 8px;
+}
+.recall .car-inquiry {
+    overflow: hidden;
+    border: 1px solid #e9e9e9;
+    border-radius: 8px;
+}
+.recall .car-inquiry .tit {
+    margin: 48px 0 40px;
+    color: #1c6bba;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+    text-align: center;
+}
+.recall .car-inquiry .text {
+    min-height: 56px;
+    margin-top: 48px;
+    padding: 18px;
+    background-color: #fafafa;
+    color: #666;
+    font-family: 'HyundaiSansTextJP';
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+}
+.recall .car-inquiry .inp-cont {
+    width: 560px;
+    margin: 0 auto;
+}
+.recall .caution a.btn-text {
+    margin: 8px 0 0 16px;
+}
+.recall .cont-outer > .no-data {
+    margin-top: 56px;
+}
+.layer-popup-cont.recall .detail-list li {
+    display: flex;
+}
+.layer-popup-cont.recall .detail-list li:not(:last-child) {
+    margin-bottom: 16px;
+}
+.layer-popup-cont.recall .detail-list li .tit {
+    width: 160px;
+    margin-right: 32px;
+    color: #999;
+}
+.layer-popup-cont.recall .detail-list li .txt {
+    flex: 1;
+    word-break: break-all;
+}
+@media screen and (max-width: 1119px) {
+    .recall .info-text {
+        margin: 40px;
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .recall .info-list {
+        flex-flow: column;
+        margin: 0 20px;
+        padding: 24px;
+    }
+    .recall .info-list li:nth-child(2) {
+        margin: 24px 0;
+        padding: 24px 0;
+    }
+    .recall .info-list li:nth-child(2)::before,
+    .recall .info-list li:nth-child(2)::after {
+        width: 100%;
+        height: 1px;
+        margin: 0;
+    }
+    .recall .info-list li:nth-child(2)::after {
+        top: unset;
+        bottom: 0;
+    }
+    .recall .info-list strong {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .recall .tbl-area {
+        position: relative;
+        padding: 40px 20px 0;
+        margin-top: 40px;
+    }
+    .recall .tbl-area::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 12px;
+        background-color: #f5f5f5;;
+    }
+    .recall .tbl-area .tbl-top {
+        flex-flow: column;
+        margin: 0 0 16px;
+    }
+    .recall .tbl-area .tbl-top .title {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .recall .tbl-area .tbl-top .slt-box-cont {
+        display: flex;
+        margin-top: 16px;
+    }
+    .recall .tbl-area .tbl-top .slt-box-cont .slt-box {
+        width: 50%;
+        min-width: auto;
+    }
+    .recall .tbl-area .tbl-box  table {
+        width: 100%;
+    }
+    .recall .tbl-area .tbl-box col {
+        width: auto !important;
+    }
+    .recall .tbl-area .tbl-box thead {
+        display: none;
+    }
+    .recall .tbl-area .tbl-box  td:last-child {
+        width: 64px;
+    }
+    .recall .tbl-area .tbl-box .flex {
+        flex-flow: column;
+        padding: 16px;
+        font-size: 12px;
+    }
+    .recall .tbl-area .tbl-box .flex span {
+        width: 100%;
+        padding: 0;
+        text-align: left;
+    }
+    .recall .tbl-area .tbl-box .flex span:not(:first-child){
+        margin-top: 8px;
+    }
+    .recall .tbl-area .tbl-box .flex .auto.left {
+        margin-top: 0;
+        font-weight: 500;
+    }
+    .recall .tbl-area .tbl-box a.pdf {
+		display: block;
+		width: 100%;
+		height: 34px;
+		padding-left: 0;
+		background: url('../../assets/images/common/ico_down_g_mo.svg') no-repeat center;
+		background-size: 24px;
+	}
+    .recall .tbl-area .tbl-box a.pdf span {
+        color: transparent;
+    }
+    .recall .car-inquiry {
+        border: none;
+    }
+    .recall .car-inquiry .tit {
+        margin: 40px 0 24px 0;
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .recall .tab-box-item .car-inquiry .tit {
+        margin-top: 0;
+    }
+    .recall .car-inquiry .inp-cont {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .recall .car-inquiry .text {
+        margin: 16px 20px 0;
+        border-radius: 8px;
+    }
+    .recall .search-text {
+        margin: 20px 20px 40px;
+    }
+    .recall .hmj-pagination {
+        margin-top: 32px;
+    }
+    .recall .caution.type2 {
+        margin-top: 40px;
+    }
+    .recall .cont-outer > .no-data {
+        margin-top: 40px;
+    }
+    .layer-popup-cont.recall .detail-list li .tit {
+        width: 80px;
+        margin-right: 16px;
+    }
+}
+/* E : 리콜 */
+
+/* S : 보증수리 */
+.warranty section + section {
+	margin-top: 80px
+}
+.warranty section h4 {
+	font-weight: 500;
+	margin-bottom: 24px;
+}
+.warranty section .txt {
+	color: #333;
+}
+.warranty .cont-flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;	
+}
+.warranty .cont-flex + .cont-flex {
+	margin-top: 40px;
+}
+.warranty .cont-flex .img-box {
+	width: 352px;
+	margin-right: 32px;
+}
+.warranty .cont-flex .info-box {
+	flex: 1 1;
+}
+.warranty .cont-flex .s-tit {
+	font-size: 18px;
+	line-height: 30px;
+	margin-bottom: 16px;
+	font-weight: 500;
+}
+
+@media screen and (max-width: 1119px) {
+	.warranty .hmj-content .top-visual + .cont-outer {
+		padding: 40px 20px 0;
+	}
+	.warranty .cont-flex {
+		flex-direction: column;
+	}
+	.warranty .cont-flex .img-box {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 16px;
+	}
+	.warranty .cont-flex .s-tit {
+		font-size: 15px;
+		line-height: 24px;
+	}
+	.warranty .caution.type2 {
+		margin-top: 40px;
+	}
+}
+/* E : 보증수리 */
+
+/* 제휴서비스 */
+.coalition .accordion .item{
+    border-bottom: 1px solid #e9e9e9;
+}
+.coalition .accordion .tit-btn{
+    padding: 20px 30px 20px 0;
+    line-height: 22px;
+}
+.coalition .accordion .tit-btn .company-info .cont-tit2{
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.coalition .accordion .tit-btn .company-info .cont-text2{
+    color: #666666;
+}
+.coalition .accordion .caution{
+    padding: 48px;
+    border-radius: 0;
+    border-top: 1px solid #e9e9e9;
+}
+.coalition .accordion .caution .tit{
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+.coalition .accordion .caution .tit:not(:first-of-type){
+    margin-top: 40px;
+}
+.coalition .accordion .caution .cta-outer{
+    margin-top: 65px;
+}
+@media screen and (min-width: 1120px){
+    .coalition .tab-box-cont{
+        padding-top: 0;
+    }
+    .coalition .accordion .tit-btn{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;    
+        display: flex;
+        align-items: center;
+    }
+    .coalition .accordion .tit-btn .company-logo{
+        width: 238px;
+        text-align: center;
+    }
+    .coalition .accordion .tit-btn .company-info{
+        position: relative;
+        padding-left: 40px;
+    }
+    .coalition .accordion .tit-btn .company-info::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background-color: #f5f5f5;
+    }
+}
+@media screen and (max-width: 1119px){
+    .coalition .accordion .tit-btn .company-logo{
+        margin-bottom: 16px;
+    }
+    .coalition .accordion .tit-btn{
+        margin: 0 20px;
+    }
+    .coalition .accordion .caution{
+        padding: 40px 20px;
+    }
+    .coalition .accordion .caution .cta-outer{
+        margin-top: 32px;
+    }
+}
+/* E: 제휴서비스 */

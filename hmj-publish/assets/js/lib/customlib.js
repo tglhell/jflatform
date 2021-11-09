@@ -405,12 +405,13 @@ $(function () {
 								clickable: true,
 							},
 							slidesPerView: 'auto',
-							// centeredSlides: true,
+							centeredSlides: true,
 							simulateTouch: true,
 							speed: 300,
 							loop: false,
 							spaceBetween: 0,
 							observer: true,
+							autoHeight:true,
 							observeParents: true,
 						}
 					}
@@ -539,34 +540,6 @@ $(function () {
         }
         let eventBannerSwiper = new Swiper('.event-banner-swiper .swiper-container', swpOpt);
     }
-
-	// manin brand
-	if ($('.brand-list-cont').length == 1) {
-		let swpOpt = {};
-		let _gap;
-		if ($(window).width() > tbl) {
-			_gap = 32;
-		} else{
-			_gap = 16;
-		}
-		swpOpt = {
-			navigation: {
-				nextEl: '.brand-list-cont .swiper-button-next',
-				prevEl: '.brand-list-cont .swiper-button-prev',
-			},
-			pagination: false,
-			slidesPerView: 'auto',
-			// centeredSlides: true,
-
-			simulateTouch: true,
-			speed: 300,
-			loop: false,
-			spaceBetween: _gap,
-			observer: true,
-			observeParents: true,
-		}
-		let galleryList1 = new Swiper('.brand-list-cont .swiper-container', swpOpt);
-	}
 
 	//브랜드거점
 	if ($('.branch-swp01 .list').length == 1) {

@@ -773,9 +773,6 @@
 
 
 @media screen and (max-width: 1119px) {
-    .shop-sub .top-visual {
-        display: none;
-    }
     .sub-cate .tab-box-wrap {
         border-top: 0;
     }

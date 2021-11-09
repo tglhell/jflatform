@@ -10,7 +10,7 @@
 	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
 	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
-	<script type="text/javascript" src="../../assets/js/common.js"></script>	
+	<script type="text/javascript" src="../../assets/js/common.js"></script>
 </head>
 
 <body>
@@ -38,10 +38,12 @@
 						<!-- 로그인 후 -->
 						<div class="account-box login">
 							<button class="btn-account">Account</button>
-							<button class="btn-sign-in">木村 拓哉 様</button>
-							<a href="#a" class="btn-alarm">
-								<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
-								<div class="num"><span>2</span></div>
+							<a href="#" class="btn-sign-link">
+								<span class="btn-sign-in">木村 拓哉 様</span>
+								<span class="btn-alarm">
+									<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
+									<span class="num"><span>2</span></span>
+								</span>
 							</a>
 						</div>
 						<!-- // 로그인 후 -->
@@ -252,13 +254,12 @@
 					</ul>
 				</div>
 			</div>
-		</div>	
+		</div>			
 		<div class="sub-cont">
 			<div class="history">
-				<a href="javascript:;">ホーム</a>
-				<a href="javascript:;">Service</a>
-				<a href="javascript:;">リコール情報</a>
-				<span class="page-title">リコール対象確認</span>
+				<a href="#">ホーム</a>
+				<a href="#">Service</a>
+				<span class="page-title">アプリ設置のご案内</span>
 			</div>
 			<button type="button" class="back-page">Back page</button>
 		</div>
@@ -267,97 +268,147 @@
 	<!--//header -->
 
 	<!-- container -->
-	<div id="hmjContainer" class="hmj-container recall">
+	<div id="hmjContainer" class="hmj-container svc-app">
 		<div class="hmj-content">
-			<div class="top-visual pc-only">
-				<img src="../../assets/images/@img_recall.jpg" alt="top visual">
+			<div class="top-visual">
+				<picture>
+					<source srcset="../../assets/images/@img_visual_app_pc.jpg" media="(min-width: 1120px)">
+					<source srcset="../../assets/images/@img_visual_app_mo.jpg" media="(max-width: 1119px)">
+					<img src="../../assets/images/@img_visual_app_pc.jpg" alt="top visual">
+				</picture>
 				<div class="top-visual-text fc-white">
-					<h2 class="top-title">リコール情報</h2>
-					<p class="top-desc">リコール情報をご確認の上、修理されることをご案内いたします</p>
+					<h2 class="top-title">アプリケーションの設置</h2>
+					<p class="top-desc">モバイルAPPは個人会員専用のサービスです。</p>
 				</div>
 			</div>
 			<div class="cont-outer">
-                <div class="car-inquiry">
-					<p class="tit">リコール対象の車両を確認できます。</p>
-					<div class="inp-cont">
-						<div class="inp-outer-box inp-type row-type"><!-- 유효성 검사 class="val-error" -->
-							<label for="carSearch">車台番号(VIN)確認 <span class="required">*</span></label>
-							<div class="inp-btn-box">
-								<div class="inp-area">
-									<input type="search" id="carSearch" class="inp-item" placeholder="ローマ字+数字(17桁)" maxlength="17">
-									<button class="inp-close"></button>
-								</div>
-								<button class="btn-tbl btn-search"><span>icon</span></button>
+				<ul class="svc-app-link">
+					<li>
+						<div class="app-name">
+							<div class="img">
+								<picture>
+									<source srcset="../../assets/images/ico_svc_app_01_pc.jpg" media="(min-width: 1120px)">
+									<source srcset="../../assets/images/ico_svc_app_01_mo.jpg" media="(max-width: 1119px)">
+									<img src="../../assets/images/ico_svc_app_01_pc.jpg" alt="top visual">
+								</picture>
+							</div>
+							<div class="desc">
+								<strong class="name">Jプラットフォーム</strong>
+								<p class="txt">Hyundai自動車のコネクテッドカーサービス、Bluelinkを通して私とクルマ、私と世界、私と未来がコネクトされます。</p>
 							</div>
 						</div>
-						<p class="error-msg">車台番号を入力してください。</p><!-- 차대번호를 입력해주세요. -->
-						<p class="error-msg">無効な車台番号です。 もう一度入力してください。</p><!-- 유효하지 않은 차대번호입니다. 다시 입력해주세요. -->
-					</div>
-					<p class="text">当サイトに保有車両を登録している場合、車台番号 (VIN)は <a href="#" class="btn-text2">[MY>マイカー情報]</a> でご確認いただけます。</p>
-				</div>
-                
-				<!-- nodata -->
-				<div class="no-data" style="display: none;">
-					<p class="tit fc-color4">ASC1231234567</p>
-					<p class="desc">検索結果がありません。<br>VIN番号をもう一度お確めください。</p>
-				</div>
-				<!-- //nodata -->
-				
-                <div class="search-text"><span class="fc-color4">‘ASC1231234567’</span> 当該車両に対しては次のように関連情報が検索されました。 詳細は添付ファイルをご確認願います。</div>
-
-                <div class="tbl-area">
-                    <div class="tbl-box">
-                        <table>
-                            <caption class="blind">関連詳細情報</caption>
-                            <colgroup>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th scope="col">通知番号</th>
-                                    <th scope="col">通知日</th>
-                                    <th scope="col">リコール対象</th>
-                                    <th scope="col" class="auto">詳細案内</th>
-                                    <th scope="col" class="col2">サマリー</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td colspan="5">
-                                        <div class="flex">
-                                            <span>外部-2900</span>
-                                            <span>2021-04-21</span>
-                                            <span>IONIQ5</span>
-                                            <span class="auto"><a href="#" class="btn-text2 regular">210330_IONIQ5_recall.pdf</a></span>
-                                            <span class="col2">エアバッグ制御装置のエラー</span>
-                                        </div>
-                                    </td>
-                                </tr>
-								<tr>
-                                    <td colspan="5">
-                                        <div class="flex">
-                                            <span>外部-2900</span>
-                                            <span>2021-04-21</span>
-                                            <span>IONIQ5</span>
-                                            <span class="auto"><a href="#" class="btn-text2 regular">210330_IONIQ5_recall.pdf</a></span>
-                                            <span class="col2">エアバッグ制御装置のエラー</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="cta-outer">
-                        <button class="btn"><span>整備センター</span></button>
-                        <button class="btn btn-type2"><span>整備予約</span></button>
-                    </div>
-                </div>
-				
-			</div>
+						<ul class="qr-code">
+							<li>
+								<div class="qr-img">
+									<img src="../../assets/images/img_qrcode.jpg" alt="qrcode">
+								</div>
+								<em class="type">IOS</em>
+								<button class="btn btn-type2 btn-extra-small"><span>ダウンロード</span></button>
+							</li>
+							<li>
+								<div class="qr-img">
+									<img src="../../assets/images/img_qrcode.jpg" alt="qrcode">
+								</div>
+								<em class="type">Android</em>
+								<button class="btn btn-type2 btn-extra-small"><span>ダウンロード</span></button>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="app-name">
+							<div class="img">
+								<picture>
+									<source srcset="../../assets/images/ico_svc_app_02_pc.jpg" media="(min-width: 1120px)">
+									<source srcset="../../assets/images/ico_svc_app_02_mo.jpg" media="(max-width: 1119px)">
+									<img src="../../assets/images/ico_svc_app_02_pc.jpg" alt="top visual">
+								</picture>
+							</div>
+							<div class="desc">
+								<strong class="name">Bluelink</strong>
+								<p class="txt">Hyundai自動車のコネクテッドカーサービス、Bluelinkを通して私とクルマ、私と世界、私と未来がコネクトされます。</p>
+							</div>
+						</div>
+						<ul class="qr-code">
+							<li>
+								<div class="qr-img">
+									<img src="../../assets/images/img_qrcode.jpg" alt="qrcode">
+								</div>
+								<em class="type">IOS</em>
+								<button class="btn btn-type2 btn-extra-small"><span>ダウンロード</span></button>
+							</li>
+							<li>
+								<div class="qr-img">
+									<img src="../../assets/images/img_qrcode.jpg" alt="qrcode">
+								</div>
+								<em class="type">Android</em>
+								<button class="btn btn-type2 btn-extra-small"><span>ダウンロード</span></button>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="app-name">
+							<div class="img">
+								<picture>
+									<source srcset="../../assets/images/ico_svc_app_03_pc.jpg" media="(min-width: 1120px)">
+									<source srcset="../../assets/images/ico_svc_app_03_mo.jpg" media="(max-width: 1119px)">
+									<img src="../../assets/images/ico_svc_app_03_pc.jpg" alt="top visual">
+								</picture>
+							</div>
+							<div class="desc">
+								<strong class="name">MOCEAN</strong>
+								<p class="txt">これからの業務用車両の利用が便利になります。<br>業務車両の管理から利用まで、ビジネスモビリティサービスが一層簡単に！</p>
+							</div>
+						</div>
+						<ul class="qr-code">
+							<li>
+								<div class="qr-img">
+									<img src="../../assets/images/img_qrcode.jpg" alt="qrcode">
+								</div>
+								<em class="type">IOS</em>
+								<button class="btn btn-type2 btn-extra-small"><span>ダウンロード</span></button>
+							</li>
+							<li>
+								<div class="qr-img">
+									<img src="../../assets/images/img_qrcode.jpg" alt="qrcode">
+								</div>
+								<em class="type">Android</em>
+								<button class="btn btn-type2 btn-extra-small"><span>ダウンロード</span></button>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="app-name">
+							<div class="img">
+								<picture>
+									<source srcset="../../assets/images/ico_svc_app_04_pc.jpg" media="(min-width: 1120px)">
+									<source srcset="../../assets/images/ico_svc_app_04_mo.jpg" media="(max-width: 1119px)">
+									<img src="../../assets/images/ico_svc_app_04_pc.jpg" alt="top visual">
+								</picture>
+							</div>
+							<div class="desc">
+								<strong class="name">ビルトインカメラ</strong>
+								<p class="txt">スマートフォンからビルトインカメラに保存された動画を再生、ダウンロード、編集、共有できます。</p>
+							</div>
+						</div>
+						<ul class="qr-code">
+							<li>
+								<div class="qr-img">
+									<img src="../../assets/images/img_qrcode.jpg" alt="qrcode">
+								</div>
+								<em class="type">IOS</em>
+								<button class="btn btn-type2 btn-extra-small"><span>ダウンロード</span></button>
+							</li>
+							<li>
+								<div class="qr-img">
+									<img src="../../assets/images/img_qrcode.jpg" alt="qrcode">
+								</div>
+								<em class="type">Android</em>
+								<button class="btn btn-type2 btn-extra-small"><span>ダウンロード</span></button>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>				
 		</div>
 	</div>
 	<!--//container -->
@@ -448,7 +499,7 @@
 					<li><a href="#">プライバシーポリシー</a></li>
 					<li><a href="#">利用規約</a></li>
 					<li><a href="#">Cookieポリシー </a></li>
-					<li class="lang-jp"><a href="#"><span class="ico"><img src="../../assets/images/common/ico_country_jp.png" alt="japan"></span>日本語</a></li>
+					<li><a href="#"><span class="ico"><img src="../../assets/images/common/ico_country_jp.png" alt="japan"></span>日本語</a></li>
 				</ul>
 				<p class="copyright">COPYRIGHT &#x24D2; HYUNDAI. ALL RIGHTS RESERVED.</p>
 			</div>
@@ -464,15 +515,6 @@
 	<!--//footer -->
 </div>
 
-<div class="btn-top-box">
-	<a href="#" title="move to top" role="button" class="btn-top">
-		<span class="blind">Top</span>
-	</a>
-</div>
-
-<script>
-	customSelect();
-</script>
 
 </body>
 </html>
