@@ -406,6 +406,43 @@
 							</div>
 						</div>
 					</div>	
+					<div class="inp-outer-box">
+						<label for="radio01">会員タイプ <span class="required">*</span></label>
+						<div class="radio-group">
+							<label class="radio"><input type="radio" name="radio" id="radioChk01"><span>個人顧客</span></label>
+							<label class="radio"><input type="radio" checked="checked" name="radio" id="radioChk02"><span>法人顧客</span></label>
+						</div>
+					</div>					
+					<div class="inp-outer-box">
+						<label for="contact03_08">社名/商号 <span class="required">*</span></label>
+						<div class="inp-area">
+							<input type="text" id="contact03_08" class="inp-item" placeholder="社名">
+							<button class="inp-close"></button>
+						</div>	
+					</div>
+					<div class="inp-outer-box tel-type">
+						<label for="inpNum01_01">携帯電話番号 <span class="required">*</span></label>
+						<div class="inp-slice-box">
+							<div class="slt-box type2">
+								<p class="selected-value">070</p>
+								<ul class="select-items">
+									<li>070</li>
+									<li>080</li>
+								</ul>
+							</div>
+							<span class="inp-hpn">-</span>
+							<div class="inp-area">
+								<input type="text" id="inpNum01_02" class="inp-item" placeholder="1234">
+								<button class="inp-close"></button>
+							</div>
+							<span class="inp-hpn">-</span>
+							<div class="inp-area">
+								<input type="text" id="inpNum01_03" class="inp-item" placeholder="5678">
+								<button class="inp-close"></button>
+							</div>
+						</div>
+					</div>
+					<p class="error-msg lbl-type">error text</p>
 					<div class="inp-outer-box"><!-- 유효성 검사 시 val-error class 추가 -->
 						<label for="inpName01_02">車種 <span class="required">*</span></label>
 						<div class="inp-area">
@@ -422,8 +459,8 @@
 					<div class="inp-outer-box item-cont">
 						<label for="inpName01_03">お問合せ内容 <span class="required">*</span></label>
 						<div class="inp-textarea">
-							<textarea id="inpName01_035" name="name" rows="8" placeholder="追加のお問い合わせ内容があればご記入ください。&#13;&#10;例) ご希望の相談日、予算、出庫日"></textarea>
-							<span class="bite"><em>0</em>/100</span>
+							<textarea id="inpName01_035" name="name" rows="8" placeholder="追加のお問い合わせ内容があればご記入ください。&#13;&#10;例) ご希望の相談日、予算、出庫日、大量購入"></textarea>
+							<span class="bite"><em>0</em>/1000</span>
 						</div>						
 					</div>						
 				</section>

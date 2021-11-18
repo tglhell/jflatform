@@ -36,16 +36,11 @@
     </div>
 
     <div class="cont_codGuide guide_container">
-        <div class="coding_type">
-            <div>
-                <!--<a href="coding_guide_step_mob.html" title="mobile" class="active">mobile</a>-->
-                <a href="list_page.html" title="coding list">LIST PAGE</a>
-            </div>
-        </div>
+        
 
         <div class="tab">
-            <a href="coding_guide_type.html" title="TYPE">기본 GUIDE 정의</a>
-            <a href="javascript:void(0);" title="NAMING" class="active">네이밍 정의</a>
+            <a href="coding_guide_default.html" title="DEFAULT">DEFAULT</a>
+            <a href="javascript:void(0);" title="NAMING" class="active">NAMING</a>
             <a href="coding_guide_box.html" title="BOX">BOX</a>
             <a href="coding_guide_button.html" title="BUTTON">BUTTON</a>
             <a href="coding_guide_form.html" title="FORM">FORM</a>
@@ -74,9 +69,10 @@
 
 
 
-            <h2 class="title mt30">예약어 정의 - 작업중</h2>
+            <h2 class="title mt30">예약어 정의</h2>
             <div class="conIn_tip">
-                사용된 클래스명 - "<strong>hmj-wrap</strong>", <strong>hmj-header</strong>", <strong>hmj-container</strong>", <strong>hmj-content</strong>", "<strong>hmj-footer</strong>"
+                사용된 클래스명 - <strong>hmj-wrap,  hmj-header,  hmj-container,  hmj-content, hmj-footer</strong>
+                cta-outer, cont-outer, bottom-fixed
             </div>
             
             <h2 class="title mt30">기본폴더 구조 - 작업중</h2>
@@ -105,33 +101,37 @@
                                 assets
 								<ul class="jqueryFileTree">
 									<li class="directory">css
+                                        <ul class="jqueryFileTree">
+											<li class="directory">lib
+												<ul class="jqueryFileTree">
+													<li class="file ext_txt">customlib.css (API Custom Style)</li>
+													<li class="file ext_txt">jquery-ui.css</li>
+													<li class="file ext_txt">swiper.min.css</li>
+												</ul>
+											</li>
+										</ul>
 										<ul class="jqueryFileTree">
 											<li class="file ext_txt">common.css (font style, reset, layout, common style)</li>
 											<li class="file ext_txt">main.css</li>
+											<li class="file ext_txt">lnbMenu.css</li>
+											<li class="file ext_txt">brand.css</li>
+											<li class="file ext_txt">contents.css (Files in common diretory)</li>
+											<li class="file ext_txt">member.css</li>
+											<li class="file ext_txt">mocean.css</li>
+											<li class="file ext_txt">model.css</li>
+											<li class="file ext_txt">my.css</li>
+											<li class="file ext_txt">order.css</li>
+											<li class="file ext_txt">purchase.css</li>
+											<li class="file ext_txt">service.css</li>
+											<li class="file ext_txt">shop.css</li>
 										</ul>
 									</li>
 									<li class="directory">fonts
 										<ul class="jqueryFileTree">
-											<li class="directory">ja
-												<ul class="jqueryFileTree">
-													<li class="file ext_txt">NotoSansJP.eot</li>
-													<li class="file ext_txt">NotoSansJP.woff</li>
-													<li class="file ext_txt">NotoSansJP.woff2</li>
-												</ul>
-											</li>
-										</ul>
-										<ul class="jqueryFileTree">
-											<li class="directory">en
-												<ul class="jqueryFileTree">
-													<li class="file ext_txt">HyundaiSansHeadOffice.eot</li>
-													<li class="file ext_txt">HyundaiSansHeadOffice.woff</li>
-													<li class="file ext_txt">HyundaiSansHeadOffice.woff2</li>
-													<li class="file ext_txt">HyundaiSansTextOffice.eot</li>
-													<li class="file ext_txt">HyundaiSansTextOffice.woff</li>
-													<li class="file ext_txt">HyundaiSansTextOffice.woff2</li>
-												</ul>
-											</li>
-										</ul>
+                                            <li class="file ext_txt">HyundaiSansHeadJP-Medium</li>
+                                            <li class="file ext_txt">HyundaiSansHeadJP-Regular</li>
+                                            <li class="file ext_txt">HyundaiSansTextJP-Regular</li>
+                                        </ul>
 									</li>
 									<li class="directory">js
 										<ul class="jqueryFileTree">
@@ -152,7 +152,6 @@
 										<ul class="jqueryFileTree">
 											<li class="directory">common</li>
 											<li class="directory">email</li>
-											<li class="directory">temp</li>
 										</ul>
 									</li>
 								</ul>

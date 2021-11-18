@@ -318,7 +318,7 @@
 							</div>
 						</div>
 					</div>
-					<p class="error-msg lbl-type">error text</p>
+					<p class="error-msg lbl-type">姓名を入力してください。</p>
                     
 					<div class="inp-outer-box">
 						<label for="inpName02_01">姓名 (フリガナ) <span class="required">*</span></label>
@@ -333,7 +333,7 @@
 							</div>
 						</div>
 					</div>
-					<p class="error-msg lbl-type">error text</p>
+					<p class="error-msg lbl-type">姓名(フリガナ)を入力してください。</p>
                     
 					<div class="inp-outer-box tel-type">
 						<label for="inpNum01_01">携帯電話 <span class="required">*</span></label>
@@ -343,6 +343,7 @@
 								<ul class="select-items">
 									<li>070</li>
 									<li>080</li>
+									<li>090</li>
 								</ul>
 							</div>
 							<span class="inp-hpn">-</span>
@@ -353,10 +354,28 @@
 							<div class="inp-area">
 								<input type="number" id="inpNum01_06" class="inp-item" placeholder="数字">
 							</div>
+							<button class="btn btn-type3 btn-tbl"><span>送信</span></button>
+							<!-- <button class="btn btn-type3 btn-tbl"><span>再送信</span></button> -->
+						</div>
+					</div>
+					<p class="error-msg lbl-type">携帯電話番号を入力してください。</p>
+
+					<!-- 2021-11-16 추가 -->
+					<div class="inp-outer-box inp-type"><!-- 유효성체크 val-error -->
+						<label for="inpNum01_0112">認証確認 <span class="required">*</span></label>
+						<div class="inp-btn-box">
+							<div class="inp-area">
+								<input type="text" id="inpNum01_0112" class="inp-item" placeholder="６ケタ数字">
+								<button class="inp-close"></button>
+							</div>
+							<span class="time-num">03:00</span>
 							<button class="btn btn-type3 btn-tbl"><span>認証</span></button>
 						</div>
 					</div>
-					<p class="error-msg lbl-type">error text</p>
+					<p class="error-msg">認証コードを入力してください。</p>
+					<!-- <p class="error-msg">認証コードをお確かめください。</p> -->
+					<p class="noti-msg lbl-type">届いたコードを入力してください。</p>
+					<!-- //2021-11-16 추가 -->
                     
 					<div class="inp-outer-box">
 						<label for="inpTxt01">E-mail</label>

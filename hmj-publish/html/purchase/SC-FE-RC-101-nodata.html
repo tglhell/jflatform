@@ -391,7 +391,7 @@
 													<span>4.  当社は、提供するサービスの内容について、瑕疵（かし）やバグがないことは保証しておりません。また、当社は、お客様にあらかじめ通知することなくサービスの内容や仕様を変更したり、提供を停止したり中止したりすることができるものとします。当社は、お客様にあらかじめ通知することなくサービスの内容や仕様を変更したり、提供を停止したり中止したりすることができるものとします。</span>
 												</div>
 												<div class="check-terms"> 
-													<label class="chk"><input type="checkbox"><span><em>[必須]</em> リファラルコードの利用規約に同意する。</span>
+													<label class="chk"><input type="checkbox"><span><em>[必須]</em> リファラルコード利用規約に同意する。</span> <!-- 문구 수정 2021.11.12 -->
 													</label>
 												</div>
 												<div class="cta-outer">
@@ -434,7 +434,7 @@
 													当社の規定によりリファラルコードが生成されます。<br>
 													生成および反映時期は、規定により変動する場合があります。</p>
 												<div class="box-info">
-													<p class="sub-copy">追加のお問い合わせは<br><span>統合顧客相センター(+81-45-000-0000)​</span>にご連絡ください。</p>
+													<p class="text">追加のお問い合わせは<br><span>統合顧客相センター(+81-45-000-0000)​</span>にご連絡ください。</p>
 												</div>
 											</div>									
 										</div>
@@ -463,7 +463,7 @@
 									<!-- 나의 Reward 없는 경우 -->
 									<p class="sub-tit">マイリワード</p> <!-- cont-tit class 제거 2021.10.28 -->
 									<div class="no-data">
-										<p class="tit">マイリファラルコードの共有がございません。</p>
+										<p class="tit">支給されたリワードがありません。</p> <!-- 문구 수정 2021.11.12 -->
 										<p class="desc">マイリファラルコード をご友人にご紹介ください。</p>
 										<div class="box-code-share">
 											<input type="url" title="referral code url form" class="inp-url" value="https://www.Hyundai.jp/RC=hyun1574">
@@ -598,14 +598,16 @@
         <div class="layer-popup-cont pop-small">
             <h1 class="layer-title">紹介者変更</h1>
             <div class="layer-cont">
-				<div class="inp-outer-box"> <!-- 유효성 검사 시 val-error class 추가 -->
-					<div class="inp-area">
-						<input type="text" class="inp-item" placeholder="紹介者のコードを入力して下さい。">
-						<button class="inp-close"></button>
+				<div class="change-pop"> <!-- 2021.11.12 수정 -->
+					<div class="inp-outer-box"> <!-- 유효성 검사 시 val-error class 추가 -->
+						<div class="inp-area">
+							<input type="text" class="inp-item" placeholder="紹介者のコードを入力して下さい。">
+							<button class="inp-close"></button>
+						</div>
 					</div>
+					<!-- 유호성 검사 텍스트 -->
+					<p class="error-msg">紹介者のコードを入力して下さい。</p>
 				</div>
-				<!-- 유호성 검사 텍스트 -->
-				<!-- <p class="error-msg">紹介者のコードを入力して下さい。</p> -->
 				<div class="cta-outer">
 					<button class="btn btn-middle btn-type2"><span>変更</span></button>				
 				</div>									

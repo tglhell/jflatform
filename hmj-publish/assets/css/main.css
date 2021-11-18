@@ -4,6 +4,7 @@
     left: 0;
     width: 100%;
     z-index: 200;
+	background-color: transparent;
 }
 .main .hmj-header .header-outer {
     background: transparent;
@@ -17,7 +18,10 @@
     padding-bottom: 0;
 }
 .main .hmj-header.scr-chk {
+	transition: none;
 	background-color: rgba(255, 255, 255, .24);
+	-webkit-backdrop-filter: blur(80px);
+    backdrop-filter: blur(80px);
 }
 .main .hmj-header .gnb-mid-menu .mid-list li a {
     color: #fff;
@@ -50,10 +54,22 @@
     width: 100%;
     height: 100%;
 }
-.media-wrap .video-cont video {
+.media-wrap video {
     width: 100%;
-    height: 100%;
+	max-width: none;
+    height: 100vh;
     object-fit: cover;
+}
+.ie11 .media-wrap video {
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
 }
 .media-wrap .txt-cont {
     position: absolute;
@@ -89,6 +105,9 @@
     min-width: 260px;
     background: transparent;
     border: 1px solid #e9e9e9;
+}
+.media-wrap .txt-cont .cta-outer .btn:hover {
+    opacity: .7;
 }
 .media-wrap .txt-cont .cta-outer .btn span {
     color:#ccc
@@ -212,7 +231,9 @@
 	transition: all .5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
 	position: absolute;
 	top: 42px;
+	top: 2.1875vw;
 	left: 56px;
+	left: 2.91667vw;
 	z-index: 5;
 }
 /* .car-item-outer .car-cont.focus-in .car-item-text {
@@ -222,9 +243,11 @@
 .car-item-outer .car-cont .car-item-text .item-tit {
 	transition: all .5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
 	font-size: 40px;
+	font-size: 2.08333vw;
 	font-weight: 500;
 	color: #191919;
 	line-height: 64px;
+	line-height: 3.33333vw;
 	white-space: nowrap;
 }
 /* .car-item-outer .car-cont.focus-in .car-item-text .item-tit {
@@ -237,9 +260,11 @@
 	transition: all .5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
 	margin-top: 12px;
 	font-size: 32px;
+	font-size: 1.66667vw;
 	font-weight: 500;
 	color: #999;
-	line-height: 52px;
+	line-height: 40px;
+	line-height: 2.08333vw;
 }
 /* .car-item-outer .car-cont.focus-in .car-item-text .item-desc {
 	transition: all .5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
@@ -247,7 +272,7 @@
 	line-height: 80px;
 } */
 .car-item-outer .car-item {
-	transition: all .5s ease-in-out;
+	transition: top .5s, transform .5s ease-in-out;
 	transform: scale(1);
 	position: relative;
 	top: 107px;
@@ -263,9 +288,10 @@
 	pointer-events: none;
 }
 .car-item-outer .focus .car-item {
-	transition: all .5s ease-in-out;
+	transition: top .5s, transform .5s ease-in-out;
 	transform: scale(.8);
 	top: 70px;
+	top: 3.64583vw;
 }
 .car-item-outer img {
 	max-width: none;
@@ -332,6 +358,10 @@
 	font-weight: 500;
 	line-height: 38px;
 }
+.main-item-swiper .swiper-pagination-clickable .swiper-pagination-bullet:active,
+.main-item-swiper .swiper-pagination-clickable .swiper-pagination-bullet:focus {
+	outline: none;
+}
 .main-item-swiper .swiper-pagination-clickable .swiper-pagination-bullet.swiper-pagination-bullet-active {
 	background-color: transparent;
 	color: #1c6bba;
@@ -354,19 +384,24 @@
 	transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	position: absolute;
 	bottom: 213px;
+	bottom: 11.09375vw;
 	left: 56px;
+	left: 2.91667vw;
 	opacity: 0;
 	white-space: nowrap;
 }
 .main-item-swiper .focus-in .btn-box {
 	transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	bottom: 233px;
+	bottom: 12.13542vw;
 	opacity: 1;
 }
 .main-item-swiper .btn-box .btn-desc {
 	font-size: 18px;
+	font-size: 0.9375vw;
 	color: #002c5f;
 	line-height: 56px;
+	line-height: 2.91667vw;
 }
 
 .type2 .car-item-outer .car-cont {
@@ -471,7 +506,7 @@
 	}
 	.brand-list-cont .swiper-slide {
 		display: inline-block;
-		width: 85%;
+		width: 90%;
 	}
 	.brand-list-cont .swiper-slide .tit-cont {
 		bottom: 0;

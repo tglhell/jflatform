@@ -17,7 +17,7 @@
 
 <body>
 
-<div class="hmj-wrap">
+<div class="hmj-wrap tabFixed">
 	<div class="skip-nav">
 		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
 	</div>
@@ -1918,6 +1918,37 @@
 <script>
 	customSelect(); // 셀렉트박스
 </script>
+<style>
+	.tab-box-list.fixed {
+    	z-index: 100;
+    	position: fixed;
+		top: 56px;
+		transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	}
+	.tab-box-list.fixed.up {
+		top: 109px;
+	}
+	.tab-box-list.fixed.down {
+		top: 56px;
+	}
+</style>
+
+<!-- 탭고정 -->
+<script>
+	tabFixed();
+</script>
+<!-- //탭고정 -->
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- 퍼블 UI 확인용 스크립트 -->
 <style>
@@ -1945,6 +1976,7 @@ $(function(){
 });
 </script>
 <!-- //퍼블 UI 확인용 스크립트 -->
+
 
 </body>
 </html>

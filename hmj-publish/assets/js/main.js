@@ -17,10 +17,10 @@ $(function(){
 							$(function(i){
 								setObj(function(){
 									_this.find('.car-item img').css('transform', 'translate3d(-' + (carItemWidRes * i) + 'vw, 0, 0)');
-								}, twoDig[3] * i);
+								}, twoDig[1] * i);
 							}(i));
 						}
-					}, secVal[1]);
+					}, secVal[4]);
 					$('.car-cont').removeClass('focus-in focus');
 					$(this).addClass('focus-in').siblings().addClass('focus');
 				}
@@ -45,11 +45,16 @@ $(function(){
 		let menuTitArr = [];
 		let swpOpt = {},
 		slideLength = $('.main-item-swiper .swiper-slide').length;
+		let _boolChk;
 		const _this = $(this);
 		const iNum = 14;
 		carItemWid = _this.find('.car-item').width();
 		carItemWidRes = secVal[0] * carItemWid / $(window).width();
-		console.log(slideLength);
+		if ($(window).width() > tbl) {
+			_boolChk = true;
+		} else{
+			_boolChk = false;
+		}
 		for (let i = 0; i < slideLength; i++) {
 			menuItem = $('.main-item-swiper .swiper-slide').eq(i).find('.item-tit').text();
 			menuTitArr.push(menuItem);
@@ -76,7 +81,7 @@ $(function(){
 				},
 				simulateTouch: true,
 				speed: 500,
-				loop: true,
+				loop: _boolChk,
 				slidesPerView: 'auto',
 				spaceBetween: 0,
 				observer: true,
@@ -88,9 +93,9 @@ $(function(){
 								offIr = setTimeout(function () {
 									for (i = iNum; i > 0 ; i--) {
 										$(function(i){
-											setTimeout(function(){
+											setObj(function(){
 												$('.car-cont:not(.swiper-slide-active)').find('img').css('transform', 'translate3d(-' + (carItemWidRes * (iNum - i)) + 'vw, 0, 0)');
-											}, twoDig[1] * i);
+											}, twoDig[2] * i);
 										}(i));
 									}
 									$('.car-cont').removeClass('focus-in');
@@ -100,9 +105,9 @@ $(function(){
 									clearTimeout(offIr);
 									for (i = irNum[0]; i < iNum; i++) {
 										$(function(i){
-											testT = setTimeout(function(){
+											setObj(function(){
 												$('.swiper-slide-active').find('.car-item img').css('transform', 'translate3d(-' + (carItemWidRes * i) + 'vw, 0, 0)');
-											}, twoDig[3] * i);
+											}, twoDig[2] * i);
 										}(i));
 									}
 									$('.swiper-slide-active').addClass('focus-in');
@@ -123,8 +128,12 @@ $(function(){
 		let _gap;
 		if ($(window).width() > tbl) {
 			_gap = 32;
+			_resChk = false;
+			_boolChk = true;
 		} else{
 			_gap = 16;
+			_resChk = true;
+			_boolChk = false;
 		}
 		swpOpt = {
 			navigation: {
@@ -137,8 +146,9 @@ $(function(){
 
 			simulateTouch: true,
 			speed: 300,
-			loop: true,
+			loop: _boolChk,
 			spaceBetween: _gap,
+			centeredSlides: _resChk,
 			observer: true,
 			observeParents: true,
 		}

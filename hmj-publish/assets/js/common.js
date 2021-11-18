@@ -125,7 +125,7 @@ jQuery.event.add(window, 'load', function () {
 		});
 	});
 
-	$('.js-tab .tab-box-list > li, .js-tab .tab-box-list2 > li').on('click', function (e) {
+	$('.js-tab .tab-box-list > li').on('click', function (e) {
 		const tabRoot = $(this).closest('.js-tab');
 		const tabBoxItem = $('.js-tab-cont > div');
 		let tabIdx = $(this).index();
@@ -206,6 +206,10 @@ jQuery.event.add(window, 'load', function () {
 								} else {
 									headerOuter.css('top', -headerFixHgt);
 								}
+								if ($('.hmj-wrap').hasClass('tabFixed') && $('.tab-box-list').hasClass('fixed')) { // 탭고정
+									$(".tab-box-list").addClass("down");
+									$(".tab-box-list").removeClass("up");
+								}
 							}
 							if (scrPos < headerFixHgt) {
 								headerOuter.attr('style', 'top: 0 !important;');
@@ -213,6 +217,10 @@ jQuery.event.add(window, 'load', function () {
 						} else {
 							headerOuter.removeClass('header-fixed');
 							headerOuter.css('top', 0);
+							if ($('.hmj-wrap').hasClass('tabFixed') && $('.tab-box-list').hasClass('fixed')) { // 탭고정
+								$(".tab-box-list").addClass("up");
+								$(".tab-box-list").removeClass("down");
+							}
 						}
 					} else {
 						if (scrPos > lastScrTopPos) {
@@ -496,7 +504,7 @@ jQuery.event.add(window, 'load', function () {
 	containerAutoHgt();
 
 	function tabScrCenter (target) {
-		const tabScrBox = target.closest('.js-tab.x-scroll').find('.tab-box-outer');
+		const tabScrBox = target.closest('.js-tab.x-scroll').find('.tab-box-list');
 		const tabScrBoxItem = tabScrBox.find('li');
 		let tabScrBoxHarf = tabScrBox.width() / irNum[1];
 		let tabScrPos;
@@ -736,6 +744,14 @@ jQuery.event.add(window, 'load', function () {
 	otherCheck();
 });
 
+function iconTab(){
+	var iconTabW = $('.icon-tab-list').find('li').outerWidth() / 2; 
+	var iconTabC = $(window).width() / 2 - iconTabW;
+	var iconTabP = $('.icon-tab-list').find('li.active').offset().left;
+
+	$('.icon-tab-outer').scrollLeft(iconTabP - iconTabC);
+}
+
 function stationOn() {
 	if(!$('.station-info').hasClass('on')) {
 		$('.station-info').addClass('on').fadeIn(100);
@@ -852,7 +868,7 @@ function popupOpen (target) {
 	const bodyWid = $('body').width();
 	const hgtSize = $(window).height();
 	const popIdx = target.attr('data-pop-idx');
-	const popCont = $('.layer-popup-cont');
+	popCont = $('.layer-popup-cont');
 	popWrap = $('.layer-popup-wrap' + '[data-pop-idx=' + popIdx + ']');
 	chkSwitch = true;
 	popWrap.fadeIn(secVal[4], function () {
@@ -893,22 +909,22 @@ function popupOpen (target) {
 			}
 		}
 	});
+}
 
-	function popClose (target) {
-		target.fadeOut(secVal[4]);
-		target.find(popCont).fadeOut(secVal[4]).parent().removeAttr('style');
-		target.find('.tar-loop').remove();
-		chkSwitch = false;
-		setObj(function () {
-			if (!target.hasClass('inner-pop')) {
-				$('body').css({'overflow':'auto', 'width':'auto'});
-			}
-			if ($('.swiper-container').length >= irNum[0]) {
-				$('.swiper-wrapper').css('transform', 'translate3d(0, 0, 0)');
-			}
-			popCont.parent().css('height', '100%');
-		}, secVal[4]);
-	}
+function popClose (target) {
+	target.fadeOut(secVal[4]);
+	target.find(popCont).fadeOut(secVal[4]).parent().removeAttr('style');
+	target.find('.tar-loop').remove();
+	chkSwitch = false;
+	setObj(function () {
+		if (!target.hasClass('inner-pop')) {
+			$('body').css({'overflow':'auto', 'width':'auto'});
+		}
+		if ($('.swiper-container').length >= irNum[0]) {
+			$('.swiper-wrapper').css('transform', 'translate3d(0, 0, 0)');
+		}
+		popCont.parent().css('height', '100%');
+	}, secVal[4]);
 }
 
 function popAutoHgt () {
@@ -1003,5 +1019,33 @@ function cateCenter() {
 	}
 	tabScrBox.stop().animate({scrollLeft:tabScrPos}, secVal[2]);
 };
+// 탭고정
+function tabFixed(){
+	$.fn.Scrolling = function(obj, tar) {
+		var _this = this;
 
+		$(window).on('scroll resize orientationchange', function (e) {
+			if ($(window).width() <= tbl) {
+				var end = obj + tar;
+				$(window).scrollTop() >= obj ? _this.addClass("fixed") : _this.removeClass("fixed");
+				if($(window).scrollTop() >= end) _this.removeClass("fixed");
+			} else {
+				$(".tab-box-list").removeClass("fixed")
+			}
+		});
+	};
+	$(".tab-box-list").Scrolling($(".tab-box-list").offset().top, ($(".tab-box-item").height()));
 
+	$('.tab-box-list li').click(function(){
+		var offset = $('.tab-box-cont').offset();
+		$('html').animate({scrollTop : offset.top - 160}, 400);
+	});
+}
+//쿠기활용동의 팝업
+function cookiePop() {
+	if ($('body').children('.cookie-pop-wrap').length == 1) {
+		$('body').css('overflow', 'hidden');
+	} else {
+		$('body').css('overflow', 'auto');
+	}		
+}

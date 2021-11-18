@@ -542,277 +542,101 @@ $(function () {
     }
 
 	//브랜드거점
-	if ($('.branch-swp01 .list').length == 1) {
-		let swpOpt = {},
-		slideLength = $('.branch-swp01 .list .swiper-slide').length;
-		if (slideLength == 1) {
-			swpOpt = {
-				allowSlidePrev: false,
-				allowSlideNext: false,
-				simulateTouch: false
-			}
-			$('.branch-swp01 .list [class*="swiper-button"]').hide();
-		} else {
-			if ($(window).width() > tbl) {
-				//pc
-				swpOpt = {
-					spaceBetween: 32,
-					slidesPerView: 3,
-					simulateTouch: true,
-					speed: 300,
-					loop: false,
-					observer: true,
-					observeParents: true,
-				}
-			} else {
-				//mo
-				swpOpt = {
-					spaceBetween: 0,
-					pagination: {
-						el: '.branch-swp01 .list .swiper-pagination',
-						clickable: true,
-						type: 'progressbar'
-					},
-					simulateTouch: true,
-					speed: 300,
-					loop: false,
-					observer: true,
-					observeParents: true,
-				}
-			}
-		}
-		var brandThumbList = new Swiper('.branch-swp01 .list .swiper-container', swpOpt);
-	};
+	let branchLen = $('.brand-branch .branch-list > li').length;
 
-	if ($('.branch-swp01 .thumb').length == 1) {
-		let swpOpt = {},
-		slideLength = $('.branch-swp01 .thumb .swiper-slide').length;
-		if (slideLength == 1) {
-			swpOpt = {
-				allowSlidePrev: false,
-				allowSlideNext: false,
-				simulateTouch: false,
-			}
-			$('.branch-swp01 .thumb [class*="swiper-button"]').hide();
-		} else {
-			if ($(window).width() > tbl) {
-				//pc
+	for (var i = 0; i < branchLen+1; i++) {
+		let branchSwp = $('.branch-swp').eq(i);
+		if (branchSwp.children('.list').length == 1) {
+			let swpOpt = {},
+			slideLength = branchSwp.children('.list').find('.swiper-slide').length;
+			if (slideLength == 1) {
 				swpOpt = {
-					thumbs: {
-						swiper: brandThumbList
-					},
-					pagination: {
-						el: '.branch-swp01 .thumb .swiper-pagination',
-						clickable: true,
-						type: 'progressbar'
-					},
-					speed: 100,
-					cssMode: true,
-					mousewheel: true,
-					keyboard: true,
-					observer: true,
-					observeParents: true,
-					navigation: false
+					allowSlidePrev: false,
+					allowSlideNext: false,
+					simulateTouch: false
 				}
+				branchSwp.find('.list [class*="swiper-button"]').hide();
 			} else {
-				//mo
-				swpOpt = {
-					pagination: {
-						el: '.branch-swp01 .thumb .swiper-pagination',
-						clickable: true,
-						type: 'progressbar'
-					},
-					navigation: {
-						nextEl: '.branch-swp01 .swiper-button-next',
-						prevEl: '.branch-swp01 .swiper-button-prev',
+				if ($(window).width() > tbl) {
+					//pc
+					swpOpt = {
+						spaceBetween: 32,
+						slidesPerView: 3,
+						simulateTouch: true,
+						speed: 300,
+						loop: false,
+						observer: true,
+						observeParents: true,
+						watchSlidesVisibility: true,  
+        				watchSlidesProgress: true, 
+					}
+				} else {
+					//mo
+					swpOpt = {
+						spaceBetween: 0,
+						pagination: {
+							el: branchSwp.find('.swiper-pagination'),
+							clickable: true,
+							type: 'progressbar'
+						},
+						simulateTouch: true,
+						speed: 300,
+						loop: false,
+						observer: true,
+						observeParents: true,
 					}
 				}
-				$('.branch-swp01 thumb').hide();
 			}
-		}
-		let brandDetailThumb = new Swiper('.branch-swp01 .thumb .swiper-container', swpOpt);
-	};
-
-
-	if ($('.branch-swp02 .list').length == 1) {
-		let swpOpt = {},
-		slideLength = $('.branch-swp02 .list .swiper-slide').length;
-		if (slideLength == 1) {
-			swpOpt = {
-				allowSlidePrev: false,
-				allowSlideNext: false,
-				simulateTouch: false
-			}
-			$('.branch-swp02 .list [class*="swiper-button"]').hide();
-		} else {
-			if ($(window).width() > tbl) {
-				//pc
+			var brandThumbList = new Swiper(branchSwp.find('.list .swiper-container'), swpOpt);
+		};
+	
+		if (branchSwp.find('.thumb').length == 1) {
+			let swpOpt = {},
+			slideLength = branchSwp.find('.thumb .swiper-slide').length;
+			if (slideLength == 1) {
 				swpOpt = {
-					spaceBetween: 32,
-					slidesPerView: 3,
-					simulateTouch: true,
-					speed: 300,
-					loop: false,
-					observer: true,
-					observeParents: true
+					allowSlidePrev: false,
+					allowSlideNext: false,
+					simulateTouch: false,
 				}
+				branchSwp.find('.thumb [class*="swiper-button"]').hide();
 			} else {
-				//mo
-				swpOpt = {
-					spaceBetween: 0,
-					pagination: {
-						el: '.branch-swp02 .list .swiper-pagination',
-						clickable: true,
-						type: 'progressbar'
-					},
-					simulateTouch: true,
-					speed: 300,
-					loop: false,
-					observer: true,
-					observeParents: true
-				}
-			}
-		}
-		var brandThumbList = new Swiper('.branch-swp02 .list .swiper-container', swpOpt);
-	};
-
-	if ($('.branch-swp02 .thumb').length == 1) {
-		let swpOpt = {},
-		slideLength = $('.branch-swp02 .thumb .swiper-slide').length;
-		if (slideLength == 1) {
-			swpOpt = {
-				allowSlidePrev: false,
-				allowSlideNext: false,
-				simulateTouch: false
-			}
-			$('.branch-swp02 .thumb [class*="swiper-button"]').hide();
-		} else {
-			if ($(window).width() > tbl) {
-				//pc
-				swpOpt = {
-					thumbs: {
-						swiper: brandThumbList
-					},
-					pagination: {
-						el: '.branch-swp02 .thumb .swiper-pagination',
-						clickable: true,
-						type: 'progressbar'
-					},
-					speed: 100,
-					cssMode: true,
-					mousewheel: true,
-					keyboard: true,
-					observer: true,
-					observeParents: true,
-					navigation:false
-				}
-			} else {
-				swpOpt = {
-					pagination: {
-						el: '.branch-swp02 .thumb .swiper-pagination',
-						clickable: true,
-						type: 'progressbar'
-					},
-					navigation: {
-						nextEl: '.branch-swp02 .swiper-button-next',
-						prevEl: '.branch-swp02 .swiper-button-prev',
+				if ($(window).width() > tbl) {
+					//pc
+					swpOpt = {
+						thumbs: {
+							swiper: brandThumbList
+						},
+						pagination: {
+							el: branchSwp.find('.thumb .swiper-pagination'),
+							clickable: true,
+							type: 'progressbar'
+						},
+						speed: 100,
+						cssMode: true,
+						mousewheel: true,
+						keyboard: true,
+						observer: true,
+						observeParents: true,
+						navigation: false
+					}
+				} else {
+					//mo
+					swpOpt = {
+						pagination: {
+							el: branchSwp.find('.thumb .swiper-pagination'),
+							clickable: true,
+							type: 'progressbar'
+						},
+						navigation: {
+							nextEl: branchSwp.find('.swiper-button-next'),
+							prevEl: branchSwp.find('.swiper-button-prev'),
+						}
 					}
 				}
-				$('.branch-swp02 thumb').hide();
 			}
-		}
-		let brandDetailThumb = new Swiper('.branch-swp02 .thumb .swiper-container', swpOpt);
-	};
+			let brandDetailThumb = new Swiper(branchSwp.find('.thumb .swiper-container'), swpOpt);
+		};
+	}
 
-
-	if ($('.branch-swp03 .list').length == 1) {
-		let swpOpt = {},
-		slideLength = $('.branch-swp03 .list .swiper-slide').length;
-		if (slideLength == 1) {
-			swpOpt = {
-				allowSlidePrev: false,
-				allowSlideNext: false,
-				simulateTouch: false
-			}
-			$('.branch-swp03 .list [class*="swiper-button"]').hide();
-		} else {
-			if ($(window).width() > tbl) {
-				//pc
-				swpOpt = {
-					spaceBetween: 32,
-					slidesPerView: 3,
-					simulateTouch: true,
-					speed: 300,
-					loop: false,
-					observer: true,
-					observeParents: true,
-					
-				}
-			} else {
-				//mo
-				swpOpt = {
-					spaceBetween: 0,
-					pagination: {
-						el: '.branch-swp03 .list .swiper-pagination',
-						clickable: true,
-						type: 'progressbar'
-					},
-					simulateTouch: true,
-					speed: 300,
-					loop: false,
-					observer: true,
-					observeParents: true
-				}
-			}
-		}
-		var brandThumbList = new Swiper('.branch-swp03 .list .swiper-container', swpOpt);
-	};
-
-	if ($('.branch-swp03 .thumb').length == 1) {
-		let swpOpt = {},
-		slideLength = $('.branch-swp03 .thumb .swiper-slide').length;
-		if (slideLength == 1) {
-			swpOpt = {
-				allowSlidePrev: false,
-				allowSlideNext: false,
-				simulateTouch: false
-			}
-			$('.branch-swp03 .thumb [class*="swiper-button"]').hide();
-		} else {
-			if ($(window).width() > tbl) {
-				//pc
-				swpOpt = {
-					thumbs: {
-						swiper: brandThumbList
-					},
-					pagination: {
-						el: '.branch-swp03 .thumb .swiper-pagination',
-						clickable: true,
-						type: 'progressbar'
-					},
-					speed: 100,
-					cssMode: true,
-					mousewheel: true,
-					keyboard: true,
-					observer: true,
-					observeParents: true,
-					navigation:false
-				}
-			} else {
-				swpOpt = {
-					pagination: {
-						el: '.branch-swp03 .thumb .swiper-pagination',
-						clickable: true,
-						type: 'progressbar'
-					},
-					navigation: {
-						nextEl: '.branch-swp03 .swiper-button-next',
-						prevEl: '.branch-swp03 .swiper-button-prev',
-					}
-				}
-				$('.branch-swp03 thumb').hide();
-			}
-		}
-		let brandDetailThumb = new Swiper('.branch-swp03 .thumb .swiper-container', swpOpt);
-	};
 });

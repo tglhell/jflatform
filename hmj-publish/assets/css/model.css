@@ -1,20 +1,41 @@
 @charset "utf-8";
 
 /* 간편견적 메인 */
-.easy-estimate .hmj-content .top-visual{
-    height: 400px;
+.easy-estimate.hmj-container .hmj-content .top-tit-box{
+    padding: 0;
 }
-.easy-estimate .hmj-content .top-visual .top-visual-text{
+.easy-estimate .top-img{
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+.easy-estimate .top-img img{
+    min-width: 1920px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.easy-estimate .hmj-content .top-img .top-img-text{
+    max-width: 1120px;
+    margin: auto;
+}
+.easy-estimate .top-img .top-img-text h3{
+    position: absolute;
     padding: 0;
     top: auto;
     bottom: 40px;
-}
-.easy-estimate .top-visual .top-visual-text h3{
     font-weight: 500;
 }
 @media screen and (min-width: 1120px){
+    .easy-estimate .tab-box-wrap{
+        margin-top: 70px;
+    }
     .easy-estimate .tab-box-list li .car-imgage{
-        position: relative;
+        position: absolute;
+        top: 40px;
         margin: 24px auto 26px;
         height: 208px;
         width: 380px;
@@ -46,17 +67,20 @@
     }
 }
 @media screen and (max-width: 1119px) {
-    .easy-estimate .hmj-content .top-visual{
-        height: 232px;
+    .easy-estimate .top-img{
+        height: 180px;
     }
-    .easy-estimate .hmj-content .top-visual img{
+    .easy-estimate .top-img img{
         width: auto;
         height: 100%;
         min-width: unset;
         max-width: unset;
     }
-    .easy-estimate .hmj-content .top-visual .top-visual-text{
+    .easy-estimate .top-img .top-img-text{
         padding: 0 20px;
+    }
+    .easy-estimate .top-img .top-img-text h3 {
+        width: 55%
     }
     .easy-estimate .tab-box-list li .car-imgage{
         display: none;

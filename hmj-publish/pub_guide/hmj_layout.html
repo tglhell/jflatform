@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="../assets/css/common.css">
 	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
 	<style>
-		.cont-outer p:not(.cont-text2) {height:100px; background-color: rgb(205, 206, 182); margin-bottom: 20px}
+		.cont-outer > p, .cont-outer.fullcase, .cont-center, .cont-right > p {height:100px; background-color: rgb(205, 206, 182);}
+		.cont-outer {margin-bottom: 20px !important}
 		.test .hmj-container .hmj-content .cont-outer.fullcase {
 			background-color: #f4f4f4;
 		}
@@ -279,8 +280,9 @@
 			<!-- //cont-outer -->
 
 			<div class="cont-outer fullcase">
+				fullcase
 				<div class="cont-inner">
-					<p>fullcase</p>
+					cont-inner
 				</div>
 			</div>
 			<!-- //cont-outer -->
@@ -361,9 +363,9 @@
 			</div>
 			<!-- //cont-outer -->
 
-			<div class="cont-outer mincase">
+			<!-- <div class="cont-outer mincase">
 				<p>mincase 700</p>
-			</div>
+			</div> -->
 			<!-- //cont-outer -->
 		</div>
 	</div>

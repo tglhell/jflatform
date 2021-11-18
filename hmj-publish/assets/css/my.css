@@ -344,8 +344,9 @@
 	margin-top:40px;
 }
 .my-rc .recommend-code .no-data {
-	min-height: 0;
 	padding: 48px;
+	margin-bottom:0;
+	min-height: auto;
 }
 .my-rc .box-code-share {
 	position :relative;
@@ -386,19 +387,24 @@
 	font-weight:500;
 	font-size:16px;
 }
+.my-rc .my-code .no-data {
+	padding:48px;
+	margin-bottom:0;
+	min-height:auto;
+}
 .my-rc .my-code .no-data .box-info {
-	width: 100%;
-	margin-top: 24px;
+	width: 736px;
+	margin: 24px auto 0;
 	padding:16px;
 	box-sizing: border-box;
 	background:#fff;
 	border:1px solid #e9e9e9;
 	border-radius: 8px;
 }
-.my-rc .my-code .no-data .box-info .sub-copy {
+.my-rc .my-code .no-data .box-info .text {
 	color:#666;
 }
-.my-rc .my-code .no-data .box-info .sub-copy span {
+.my-rc .my-code .no-data .box-info .text span {
 	color:#191919;
 }
 .my-rc .my-code .my-rc-code {
@@ -550,8 +556,9 @@
 	margin-top: 16px;
 }
 .my-rc .my-reward .list-reward li {
+	position:relative;
 	margin-top:8px;
-	padding:0 32px;
+	padding:0 132px 0 24px;
 	display:flex;
 	align-items: center;
 	height:74px;
@@ -561,26 +568,70 @@
 .my-rc .my-reward .list-reward li:first-child {
 	margin-top:0;
 }
-.my-rc .my-reward .list-reward li p {
-	flex:1 auto;	
-}
 .my-rc .my-reward .list-reward .product-name {	
-	min-width:520px;
+	width:396px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-.my-rc .my-reward .list-reward .name {
-	padding-left:32px;
-	color:#999;
+.my-rc .my-reward .list-reward .text-flag {
+	margin-right:16px;
 }
-
-.my-rc .my-reward .list-reward .date {
-	text-align: right;
+.my-rc .my-reward .list-reward .box-data {
+	font-size:0;
+	margin-left:auto;
+	line-height:20px;
+}
+.my-rc .my-reward .list-reward .name {
+	position:relative;
+	display:inline-block;
+	padding-right:16px;
 	color:#999;
+	line-height:20px;
+	font-size:12px;
+}
+.my-rc .my-reward .list-reward .name::after {
+	content:'';
+	position:absolute;
+	top:6px;
+	right:0;
+	width:1px;
+	height:8px;
+	background:#e9e9e9;
+}
+.my-rc .my-reward .list-reward .date {
+	display:inline-block;
+	padding-left:16px;
+	color:#999;
+	line-height:20px;
+	font-size:12px;
+}
+.my-rc .my-reward .list-reward .btn {
+	position:absolute;
+	right:24px;
+	top:21px;
 }
 .my-rc .my-reward .no-data {
 	margin-top:16px;
+}
+.reward-info-pop .cont-text {
+	font-weight:500;
+}
+.reward-info-pop .reward-info dt {
+	margin-top:24px;
+	color:#999;
+	line-height:20px;
+	font-size:12px;
+}
+.reward-info-pop .reward-info dd {
+	margin-top:8px;
+}
+.reward-info-pop .reward-info .btn-extra-small {
+	margin-left:8px;
+	vertical-align: middle;
+}
+.change-pop {
+	height:68px;
 }
 
 @media screen and (max-width: 1119px) {
@@ -607,16 +658,15 @@
 		flex-wrap: wrap;
 	}
 	.my-rc .box-code-share .inp-url {
-		padding:0 16px 0 40px;
-		width:calc(100% - 68px);
+		padding:0 16px 0 48px;
+		width:calc(100% - 71px);
 		height:48px;
-		font-size:12px;
-		line-height:20px;
+		font-size:14px;
+		line-height:22px;
 	}
 	.my-rc .box-code-share::before {
-		width:16px;
-		height:16px;
-		background-size:18px;
+		top:11px;
+		left:15px;
 	}
 	.my-rc .box-code-share .btn-copy {
 		width:68px;
@@ -626,7 +676,7 @@
 	}
 	.my-rc .box-code-share .btn-share {
 		display:block;
-		padding-top:16px;
+		margin-top:16px;
 		width: 100%;		
 	}
 	
@@ -641,7 +691,7 @@
 		margin-right:8px;
 		width:16px;
 		height:16px;
-		background:url('../images/common/ico_url_share.svg') no-repeat;
+		background:url('../images/common/ico_share3.svg') no-repeat;
 		vertical-align: middle;
 	}
 	.my-rc .recommend-code .box-data {
@@ -665,8 +715,7 @@
 		margin:32px 0 0;
 	}
 	.my-rc .recommend-code .no-data {
-		padding:40px 20px;
-		margin:0;
+		padding:40px 20px;		
 	}
 	.my-rc .my-code .my-rc-code {
 		padding:40px 20px;
@@ -702,8 +751,14 @@
 	.my-rc .my-code .my-rc-code .check-terms + .cta-outer {
 		margin-top:32px;
 	}
+	.my-rc .my-code .no-data {
+		padding:40px 20px;
+	}
+	.my-rc .my-code .no-data .box-info {
+		width: 100%;
+	}
 	.my-rc .reward-status {
-		margin:0 20px;
+		padding:0 20px;
 	}
 	.my-rc .reward-status .reward-data {
 		display:block;
@@ -751,37 +806,54 @@
 		margin-top:48px;
 	}
 	.my-rc .my-reward .sub-tit {
-		margin:0 20px;
+		padding:0 20px;
 	}
 	.my-rc .my-reward .list-reward {
-		margin:16px 20px 32px;
+		padding:0 20px 32px;
 	}
 	.my-rc .my-reward .list-reward li {
-		flex-wrap: wrap;
-		padding:16px;
+		flex-flow: row wrap;
+		padding:16px 90px 16px 16px;
 		height:auto;
 	}
+	.my-rc .my-reward .list-reward .text-flag {
+		margin-right:8px;
+	}
 	.my-rc .my-reward .list-reward .product-name {
-		margin-bottom:8px;
-		min-width:100%;
+		width:calc(100% - 70px);
+	}
+	.my-rc .my-reward .list-reward .box-data {
+		margin-top:8px;
+		margin-left:0;
+		height:20px;
 	}
 	.my-rc .my-reward .list-reward .name {
-		padding-left:0;
-		font-size:12px;		
-	}
+		padding-right:8px;
+	}	
 	.my-rc .my-reward .list-reward .date {
-		font-size:12px;
+		padding-left:8px;
+	}
+	.my-rc .my-reward .list-reward .btn {
+		top:24px;
+		right:16px;
 	}
 	.my-rc .my-reward .no-data {
-		padding:40px 20px;
-	}
-	
-
+		/* padding:40px 20px; */
+	}	
 	.my-rc .svg-outer-box.mo-only .progress-num {
 		line-height:120px;
 	}
 	.my-rc .svg-outer-box.mo-only {
 		display:block;
+	}	
+	.reward-info-pop .reward-info {
+		margin-top:24px;
+	}
+	.reward-info-pop .reward-info dt {
+		margin-top:16px;
+	}
+	.reward-info-pop .reward-info dd {
+		margin-top:4px;
 	}
 }
 
@@ -791,6 +863,8 @@
 	z-index: -1;	
 }
 .mo .my-main .top-visual img {
+	top:20%;
+	transform:translate(-50% , -20%);
     max-height: 960px;
     min-height: 320px;
 }
@@ -1313,6 +1387,7 @@
 	bottom:0;
 	left:0;
 	right:0;
+	border-radius:0 0 8px 8px;
 }
 .my-main .no-data .box-caution .htr {
 	color:#999;
@@ -1412,10 +1487,8 @@
 		padding-left: 0;
 		margin-top:4px;
 		line-height:26px;
-	}
-	.my-main .dashboard .intro .btn-alarm {
-		top:14px;
-	}
+		font-size:16px;
+	}	
 	.my-main .dashboard .box-dashboard {
 		margin-top:24px;
 		border:none;
@@ -2457,13 +2530,23 @@
     padding: 0 136px;
 }
 .pop-my-order .prod-list .item .thumb {
-    position: absolute;
+	position: absolute;
     top: 0;
     left: 0;
+    border: 1px solid #e9e9e9;
+    line-height: 0;
+}
+.pop-my-order .prod-list .item .thumb .chk {
+	margin-right: 0;
 }
 .pop-my-order .prod-list .item .thumb .chk input + span {
     padding-left: 0;
 	padding-top: 0;
+}
+.pop-my-order .prod-list .goods .thumb span::before {
+	z-index: 3;
+	left: -1px;
+	top: -1px;
 }
 .pop-my-order .prod-list .item .thumb img {
     width: 120px;
@@ -2801,9 +2884,6 @@
 .check-my-info .address-info .cont .btn-cont {
 	margin:0;
 }
-.check-my-info .address-info .cont .btn-cont .btn  {
-	width: 40px;
-}
 .check-my-info .address-info .cont .btn-cont .btn span {
 	font-size: 12px;
 }
@@ -2891,10 +2971,7 @@
 }
 
 .shipping > .radio-group {
-    margin-bottom: 16px;
-}
-.shipping > .radio-group .radio {
-	margin-bottom: 0;
+    padding-bottom: 16px;
 }
 .shipping > .radio-group .radio:last-child {
 	margin-right: 0;
@@ -4856,6 +4933,7 @@ padding: 0 16px;
 }
 .pop-order-inquiry .prod-list .thumb .chk input + span {
     padding-left: 0;
+	padding-top: 0
 }
 .pop-order-inquiry .prod-list .thumb img {
     width: 120px;
@@ -5168,6 +5246,7 @@ padding: 0 16px;
 }
 .estimate-history .estimate-list .chk input + span{
     color: #999999;
+	font-size: 12px;
 }
 .estimate-history .estimate-list .mark{
     position: absolute;
@@ -5254,9 +5333,9 @@ padding: 0 16px;
         top: 26px;
     }
     .estimate-history .estimate-list .model-name{
-        font-size: 18px;
-        line-height: 30px;
-    }
+        font-size: 16px;
+        line-height: 26px;
+	}
     .estimate-history .estimate-list .model-price{
         font-size: 20px;
         line-height: 32px;
@@ -5270,7 +5349,10 @@ padding: 0 16px;
     .estimate-history .estimate-list .option-list .selected-name{
         margin-top: 8px;
     }
-    .estimate-bottom{
+	.estimate-history .hmj-pagination {
+		margin:32px -20px 0;
+	}
+    /* .estimate-bottom{
         margin-top: 33px;
         display: flex;
         flex-direction: column;
@@ -5279,10 +5361,11 @@ padding: 0 16px;
         order: 2;
         background: none;
         border-top: 1px solid #e9e9e9;
+		border-radius: 0;
     }
     .estimate-bottom .estimate-pagination{
         order: 1;
-    }
+    } */
 }
 /* E: 견적내역 */
 

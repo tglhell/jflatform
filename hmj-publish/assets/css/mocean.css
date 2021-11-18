@@ -6,9 +6,24 @@ body {
 	left: 0;
 	right: 0;
 }
-.mocean .hmj-header.none-sub {
-	transition: none;
+.mocean .hmj-header {
 	background-color: transparent;
+}
+.mocean .header-fixed {
+	-webkit-backdrop-filter: blur(80px);
+	backdrop-filter: blur(80px);
+}
+.ios .mocean .header-fixed {
+	top: -52px;
+}
+.mocean .sub-cont {
+	border: 1px solid rgb(233, 233, 233, .1);
+	border-width: 1px 0;
+	background-color: transparent;
+}
+.mocean .hmj-header .sub-cont .history > a,
+.mocean .hmj-header .sub-cont .history > span {
+	color: #fff;
 }
 .mocean .hmj-container {
 	min-height: auto;
@@ -19,10 +34,31 @@ body {
 	bottom: 0;
 	left: 0;
 	right: 0;
+	pointer-events: none;
+}
+.mocean .hmj-header .header-outer {
+	border-bottom: 0;
+}
+.mocean .hmj-header .gnb-mid-menu .mid-list li a {
+	color: #fff;
+}
+.mocean .scr-gall-box {
+	height: 100vh;
+}
+.mocean .scr-gall-box ul {
+	overflow-x: auto;
+	display: inline-block;
+	font-size: 0;
+	white-space: nowrap;
+}
+.mocean .scr-gall-box ul li {
+	display: inline-block;
+	width: 320px;
+	height: 320px;
+	background-color: rgba(255, 255, 255, .5);
 }
 
 .scr-item {
-	/* transition: all .7s cubic-bezier(0.785, 0.135, 0.15, 0.86); */
 	transition: opacity .7s cubic-bezier(0.785, 0.135, 0.15, 0.86), top .7s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 	position: fixed;
 	top: 100%;
@@ -32,7 +68,7 @@ body {
 	opacity: 0;
 	z-index: 2;
 	padding: 82px 0;
-	background-color: #000;
+	background-color: rgba(0, 0, 0, .9);
 	color: #fff;
 	-ms-touch-action: pan-y;
 	touch-action: pan-y;
@@ -49,12 +85,12 @@ body {
 	top: 0%;
 }
 .hmj-footer {
-	transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition: all .7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	opacity: 0;
 	z-index: -1;
 }
 .hmj-footer.active {
-	transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition: all .7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -62,10 +98,15 @@ body {
 	opacity: 1;
 	z-index: 10;
 	overflow-y: auto;
-	padding-top: 24px;
+	padding-top: 160px;
+	pointer-events: auto;
 }
 @media screen and (max-width: 1119px) {
-	.hmj-footer.active {
+	.hmj-header .sub-cont .back-page {
+		background-image: url(../images/common/ico_page_back_w.svg);
+	}
+	.mocean .hmj-footer,
+	.mocean .hmj-footer.active {
 		top: 0;
 	}
 }

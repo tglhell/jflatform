@@ -29,6 +29,14 @@
 .pop-contact .form-qa .inp-outer-box:first-child {
 	margin-top:0;
 }
+.pop-contact .form-qa .radio-group {
+	display:flex;
+	width:100%;
+	align-items: center;
+}
+.pop-contact .form-qa label + .radio-group label {
+	margin-bottom:0;
+}
 .pop-contact .box-product {
 	display:flex;
 	align-items: center;
@@ -184,6 +192,9 @@
 	.pop-contact .form-qa .inp-textarea textarea {
 		height:130px;
 	}
+	.pop-contact .form-qa .radio-group {
+		margin-bottom:0;
+	}
 }
 
 /* popShippingList */
@@ -238,7 +249,7 @@
 
 /* popShippingRegist */
 .shipping > .radio-group {
-	margin-bottom: 16px;
+	padding-bottom: 16px;
 }
 .shipping > .list-type1 {
 	border-top: 1px solid #999;
@@ -819,5 +830,61 @@
 	}
 	
 }
-
 /* E: 사이트맵 */
+
+/* S: 쿠키활용동의 */
+.cookie-pop-wrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.6);
+}
+.cookie-pop-wrap .cont {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 48px 20px;
+	background: #fff;
+	border-radius: 8px 8px 0 0;
+	text-align: center;
+}
+.cookie-pop-wrap .cont .tit {
+	display: block;
+	margin-bottom: 16px;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 38px;
+	color: #191919;
+}
+.cookie-pop-wrap .cont .txt {
+	font-size: 16px;
+	line-height: 26px;
+	color: #191919;
+}
+.cookie-pop-wrap .cont .cta-outer {
+	margin-top: 32px;
+}
+.cookie-pop-wrap .cont .cta-outer .btn {
+	min-width: 180px;
+}
+.cookie-pop-wrap .cont .cta-outer .btn+.btn {
+	margin-left: 8px;
+}
+
+@media screen and (max-width: 1119px)  {
+	.cookie-pop-wrap .cont .tit {
+		font-size: 18px;
+		line-height: 30px;
+	}
+	.cookie-pop-wrap .cont .txt {
+		font-size: 14px;
+		line-height: 22px;
+	}
+	.cookie-pop-wrap .cont .cta-outer .btn {
+		min-width: auto;
+	}
+}
+/* E: 쿠키활용동의 */

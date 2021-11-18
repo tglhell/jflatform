@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>5F7367AA-2708-4D45-A78B-3ADF89D4A0F0</title>
-    <g id="home-&gt;-common-+-main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="PC-JP-DS-FE-CO-Main_01basic-2quickmenu_1019" transform="translate(-1707.000000, -806.000000)" stroke="#FFFFFF">
-            <g id="ic_steering" transform="translate(1707.000000, 806.000000)">
-                <circle id="Oval" stroke-width="0.928571429" cx="15" cy="15" r="2.53571429"></circle>
-                <circle id="Oval" stroke-width="0.928571429" cx="15" cy="15" r="14.5357143"></circle>
-                <path d="M4,17 C5.65858159,16.205294 7.02815174,15.7004574 8.10871046,15.4854902 C9.24258527,15.2599163 10.697354,14.9981866 12,15" id="Path-53" stroke-width="0.928571429"></path>
-                <path d="M18,17 C19.6585816,16.205294 21.0281517,15.7004574 22.1087105,15.4854902 C23.2425853,15.2599163 24.697354,14.9981866 26,15" id="Path-53" stroke-width="0.928571429" transform="translate(22.000000, 16.000000) scale(-1, 1) translate(-22.000000, -16.000000) "></path>
-                <line x1="15" y1="18" x2="15" y2="27" id="Path-90"></line>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>93C241CD-E841-4108-BAF9-82F826F5F1A2</title>
+    <g id="home-&gt;-common-1019" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PC-JP-DS-FE-CO-Main_01basic-2quickmenu_1105" transform="translate(-1716.000000, -752.000000)">
+            <g id="Group-20" transform="translate(1696.000000, 560.000000)">
+                <g id="Group-16-Copy" transform="translate(0.000000, 176.000000)">
+                    <g id="Group-11" transform="translate(20.000000, 16.000000)">
+                        <rect id="Rectangle-Copy-6" x="0" y="0" width="24" height="24"></rect>
+                        <g id="ic_steering" transform="translate(0.750000, 0.750000)" stroke="#FFFFFF">
+                            <circle id="Oval" stroke-width="0.928571429" cx="11.25" cy="11.25" r="1.78571429"></circle>
+                            <circle id="Oval" stroke-width="0.928571429" cx="11.25" cy="11.25" r="10.7857143"></circle>
+                            <path d="M3,12.75 C4.24393619,12.1539705 5.27111381,11.7753431 6.08153284,11.6141177 C6.93193895,11.4449372 8.02301548,11.24864 9,11.25" id="Path-53" stroke-width="0.928571429"></path>
+                            <path d="M13.5,12.75 C14.7439362,12.1539705 15.7711138,11.7753431 16.5815328,11.6141177 C17.431939,11.4449372 18.5230155,11.24864 19.5,11.25" id="Path-53" stroke-width="0.928571429" transform="translate(16.500000, 12.000000) scale(-1, 1) translate(-16.500000, -12.000000) "></path>
+                            <line x1="11.25" y1="13.5" x2="11.25" y2="20.25" id="Path-90"></line>
+                        </g>
+                    </g>
+                </g>
             </g>
         </g>
     </g>
