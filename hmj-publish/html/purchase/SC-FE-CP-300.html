@@ -39,6 +39,7 @@
 		<div class="hmj-content">
             <div class="cont-outer fullcase">
                 <div class="car-area">
+                    <p class="text"><img src="../../assets/images/img_text_nexo.png" alt="car text"></p>
                     <p class="img"><img src="../../assets/images/@img_car2.png" alt="car img"></p>
                     <p class="name">
                         <strong>NEXO</strong>
@@ -247,7 +248,19 @@
                                     </li>
                                     <li>
                                         <div class="inp-outer-box inp-type">
-                                            <label for="inpNum01_011">リファラルコード</label>
+                                            <label for="inpNum01_011">
+                                                <div class="tooltip-outer">
+                                                    <strong>リファラルコード</strong>
+                                                    <div class="tooltip-box">
+                                                        <button class="btn-tooltip"><span><img src="../../assets/images/common/btn_tooltip.svg" alt="tooltip"></span></button>
+                                                        <div class="tooltip-cont">
+                                                            <p class="tit">リファラルコードとは？</p>
+                                                            <div class="cont">リファラルコードはHyundaiならではのスペシャルリワードサービスです。</div>
+                                                            <button type="button" class="close">Popover Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
                                             <div class="inp-btn-box">
                                                 <div class="inp-area">
                                                     <input type="text" id="inpNum01_011" class="inp-item" placeholder="きむら">
@@ -378,15 +391,15 @@
                                             <label for="inpNum01_01">携帯電話 <span class="required">*</span></label>
                                             <div class="inp-slice-box">
                                                 <div class="inp-area">
-                                                    <input type="text" id="inpNum01_04" class="inp-item" placeholder="010" disabled>
+                                                    <input type="text" id="inpNum01_04" class="inp-item" placeholder="010">
                                                 </div>
                                                 <span class="inp-hpn">-</span>
                                                 <div class="inp-area">
-                                                    <input type="text" id="inpNum01_05" class="inp-item" placeholder="9876" disabled>
+                                                    <input type="text" id="inpNum01_05" class="inp-item" placeholder="9876">
                                                 </div>
                                                 <span class="inp-hpn">-</span>
                                                 <div class="inp-area">
-                                                    <input type="text" id="inpNum01_06" class="inp-item" placeholder="5432" disabled>
+                                                    <input type="text" id="inpNum01_06" class="inp-item" placeholder="5432">
                                                 </div>
                                             </div>
                                         </div>
@@ -395,7 +408,7 @@
                                         <div class="inp-outer-box">
                                             <label for="inpNum01_011">E-mail</label>
                                             <div class="inp-area">
-                                                <input type="text" id="inpNum01_011" class="inp-item" placeholder="my@hyundai.com" disabled>
+                                                <input type="text" id="inpNum01_011" class="inp-item" placeholder="my@hyundai.com">
                                             </div>
                                         </div>
                                     </li>
@@ -500,7 +513,7 @@
                                     <label class="linepay"><input type="radio" id="isPay03" name="isPay"><span>ラインペイ</span></label>
                                     <label class="paypay"><input type="radio" id="isPay04" name="isPay"><span>ペイペイ</span></label>
                                 </div>
-                                <ul class="check-terms">
+                                <!-- 삭제 <ul class="check-terms">
                                     <li>
                                         <label class="chk"><input type="checkbox"><span>
                                             <em>[必須]</em> 充電所利用の契約に同意する。</span>
@@ -515,7 +528,7 @@
                                         </label>
                                         <p class="error-msg">error text</p>
                                     </li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                         <!-- //계약금 결제수단 선택 -->

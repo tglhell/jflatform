@@ -3,13 +3,14 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover" />
     <title>HMJ 온라인 판매 사이트 구축</title>
 
 	<link rel="stylesheet" href="../assets/css/lib/swiper.min.css">
     <link rel="stylesheet" href="../assets/css/lib/customlib.css">
     <link rel="stylesheet" href="../assets/css/common.css">
-    <link rel="stylesheet" href="../assets/css/mocean.css">
+    <!-- <link rel="stylesheet" href="../assets/css/mocean.css"> -->
 	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
 	
 	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
@@ -17,6 +18,218 @@
 	<script type="text/javascript" src="../assets/js/common.js"></script>
 	<script type="text/javascript" src="../assets/js/mocean.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/swiper.min.js"></script>
+	<style>
+		/* main */
+		html {
+			height: 100%;
+		}
+		body,
+		.hmj-wrap,
+		.hmj-container,
+		.main-top-cont,
+		.hmj-content {
+			height: 100%;
+		}
+		.swiper-outer-box {
+			height: 100%;
+		}
+
+		.mocean .hmj-header {
+			background-color: transparent;
+		}
+		.mocean .header-fixed {
+			-webkit-backdrop-filter: blur(80px);
+			backdrop-filter: blur(80px);
+		}
+		.ios .mocean .header-fixed {
+			top: -52px;
+		}
+		.mocean .sub-cont {
+			border: 1px solid rgb(233, 233, 233, .1);
+			border-width: 1px 0;
+			background-color: transparent;
+		}
+		.mocean .hmj-header .sub-cont .history > a,
+		.mocean .hmj-header .sub-cont .history > span {
+			color: #fff;
+		}
+		.mocean .hmj-container {
+			min-height: auto;
+			padding-bottom: 0;
+		}
+		.mocean .hmj-footer {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			pointer-events: none;
+		}
+		.mocean .hmj-header .header-outer {
+			border-bottom: 0;
+		}
+		.mocean .hmj-header .gnb-mid-menu .mid-list li a {
+			color: #fff;
+		}
+		.mocean .scr-gall-box {
+			height: 100%;
+		}
+		.mocean .scr-gall-box ul {
+			overflow-x: auto;
+			display: inline-block;
+			font-size: 0;
+			white-space: nowrap;
+		}
+		.mocean .scr-gall-box ul li {
+			display: inline-block;
+			width: 320px;
+			height: 320px;
+			background-color: rgba(255, 255, 255, .5);
+		}
+
+		.scr-item {
+			transition: opacity .7s cubic-bezier(0.785, 0.135, 0.15, 0.86), top .7s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+			position: fixed;
+			top: 100%;
+			left: 0;
+			right: 0;
+			opacity: 0;
+			z-index: 2;
+			width: 100%;
+			height: 100%;
+			padding: 82px 0;
+			background-color: rgba(0, 0, 0, .9);
+			color: #fff;
+			-ms-touch-action: pan-y;
+			touch-action: pan-y;
+		}
+		.scr-item:first-child {
+			top: 0%;
+			opacity: 1;
+			padding-top: 0 !important;
+		}
+		.scr-item.active {
+			/* transition: all .7s cubic-bezier(0.785, 0.135, 0.15, 0.86); */
+			transition: opacity .7s cubic-bezier(0.785, 0.135, 0.15, 0.86), top .7s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+			opacity: 1;
+			top: 0%;
+		}
+		.hmj-footer {
+			transition: all .7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+			opacity: 0;
+			z-index: -1;
+		}
+		.hmj-footer.active {
+			transition: all .7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			opacity: 1;
+			z-index: 10;
+			overflow-y: auto;
+			padding-top: 160px;
+			pointer-events: auto;
+		}
+
+		.mocean .btn-scr {
+			display: none;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000000;
+			width: 100%;
+			height: 40px;
+			display: block;
+			background-color: #fff;
+		}
+		@media screen and (max-width: 1119px) {
+			.hmj-header .sub-cont .back-page {
+				background-image: url(../assets/images/common/ico_page_back_w.svg);
+			}
+			.mocean .hmj-footer,
+			.mocean .hmj-footer.active {
+				top: 0;
+			}
+			.mocean .btn-scr {
+				display: none;
+			}
+		}
+
+		.scr-navi-wrap {
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+			position: fixed;
+			top: 50%;
+			right: 20px;
+			z-index: 999;
+		}
+		.scr-idx-list li {
+			position: relative;
+		}
+		.scr-idx-list li a {
+			transition: color 0.5s ease-in-out;
+			padding-right: 30px;
+			font-size: 0;
+			color: #fff;
+		}
+		.scr-idx-list li a:focus {
+			outline: none;
+		}
+		.scr-idx-list li a:before {
+			transition: border 0.5s ease-in-out;
+			content: '';
+			position: absolute;
+			top: 7px;
+			right: 0;
+			width: 14px;
+			height: 14px;
+			margin: -5px 0 0 -5px;
+			border: 1px solid #999;
+			border-radius: 50%;
+			vertical-align: top;
+		}
+		.scr-idx-list li a:after {
+			transition: background-color 0.5s ease-in-out;
+			content: '';
+			position: absolute;
+			top: 6px;
+			right: 4px;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: #fff;
+		}
+		.scr-idx-list li a:hover:after {
+			background-color: #666;
+		}
+		.scr-idx-list li a.active {
+			transition: color 0.5s ease-in-out;
+			border-color: #086fe4;
+			font-size: 14px;
+			color: #086fe4;
+			pointer-events: none;
+		}
+		.scr-idx-list li a.active:before {
+			transition: border 0.5s ease-in-out;
+			top: 4px;
+			right: -2px;
+			width: 18px;
+			height: 18px;
+			border-color: #086fe4;
+		}
+		.scr-idx-list li a.active:after {
+			transition: background-color 0.5s ease-in-out;
+			top: 3px;
+			right: 2px;
+			width: 12px;
+			height: 12px;
+			background-color: #086fe4;
+		}
+		.scr-idx-list li + li {
+			margin-top: 5px;
+		}
+	</style>
 </head>
 
 <body>
@@ -395,6 +608,8 @@
 					<li><a href="#">페이지 6</a></li>
 				</ul>
 			</div>
+
+			<button class="btn-scr"><span>아래로</span></button>
 		</div>
 
 	</div>

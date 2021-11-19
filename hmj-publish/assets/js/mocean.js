@@ -9,8 +9,6 @@ $(function () {
 	}
 	
 	scrItem.on('mousewheel DOMMouseScroll', function (e) {
-		tScrIdx = $('.scr-item.active-idx').index();
-		scrIdxCnt = $('.scr-idx-list a.active').parent().index();
 		if (!$('html, body').is(':animated')) {
 			if (e.originalEvent.wheelDelta < 0) {
 				dirDown();
@@ -42,8 +40,6 @@ $(function () {
 
 	$('.scr-item').swipe({
 		swipe:function(event, direction) {
-			tScrIdx = $('.scr-item.active-idx').index();
-			scrIdxCnt = $('.scr-idx-list a.active').parent().index();
 			switch(direction) {
 				case 'up':
 					dirDown();
@@ -57,6 +53,10 @@ $(function () {
 		}
 	});
 
+	$('.mocean').on('click', '.btn-scr', function () {
+		dirDown();
+	});
+
 	$('.hmj-footer').scroll(function () {
 		const footerPd = parseInt($('.hmj-footer.active').css('padding-top'));
 		const footerPos = $(this).find('.footer-top').offset().top;
@@ -68,9 +68,11 @@ $(function () {
 	});
 
 	function dirDown () { // up
+		tScrIdx = $('.scr-item.active-idx').index();
+		scrIdxCnt = $('.scr-idx-list a.active').parent().index();
 		$('html, body').stop().animate({'overflow':'visible'}, secVal[3]);
 		if (tScrIdx !== $(this.length)) {
-			if (!$('.gall').hasClass('active-idx')) {
+			if (!$('.gall').hasClass('active-idx') || $(window).width() <= tbl) {
 				scrItem.eq(tScrIdx + 1).addClass('active');
 				scrItem.eq(tScrIdx + 1).addClass('active-idx').siblings().removeClass('active-idx');
 				scrIdxLst.parent().eq(tScrIdx + 1).find('a').addClass('active').parent().siblings().find('a').removeClass('active');
@@ -86,10 +88,12 @@ $(function () {
 		return false;
 	}
 	function dirUp () { // down
+		tScrIdx = $('.scr-item.active-idx').index();
+		scrIdxCnt = $('.scr-idx-list a.active').parent().index();
 		$('html, body').stop().animate({'overflow':'visible'}, secVal[3]);
 		if (!ftrCnt.hasClass('active')) {
 			if (tScrIdx !== 0) {
-				if (!$('.gall').hasClass('active-idx')) {
+				if (!$('.gall').hasClass('active-idx') || $(window).width() <= tbl) {
 					scrItem.eq(tScrIdx).removeClass('active');
 					scrItem.eq(tScrIdx - 1).addClass('active-idx').siblings().removeClass('active-idx');
 					scrIdxLst.parent().eq(tScrIdx - 1).find('a').addClass('active').parent().siblings().find('a').removeClass('active');
