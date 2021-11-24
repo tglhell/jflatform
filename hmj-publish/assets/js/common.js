@@ -75,6 +75,7 @@ jQuery.event.add(window, 'load', function () {
 			$('body').css('overflow', 'hidden');
 		}
 		if ($(this).hasClass('active')) {
+			$('.hmj-header.scr-chk').css('backdrop-filter', 'unset');
 			gnbMenuBox.parent().fadeIn(secVal[3], function () {
 				gnbMenuBox.css('right', '0');
 			});
@@ -101,6 +102,7 @@ jQuery.event.add(window, 'load', function () {
 					gnbMenuBox.parent().removeClass('active').fadeOut(secVal[2]);
 					$('.btn-depth-switch').removeClass('active');
 					$(window).scrollTop(scrYPos);
+					$('.hmj-header.scr-chk').css('backdrop-filter', 'blur(80px)');
 				}, secVal[3]);
 				$('.btn-menu').removeClass('active');
 				$('.toggle-menu').removeClass('active').next().slideUp(secVal[2]);
@@ -185,14 +187,14 @@ jQuery.event.add(window, 'load', function () {
 								headerOuter.removeClass('header-fixed');
 								headerOuter.css('top', 0);
 								if ($(window).width() <= tbl && $('.sub-cont').is('display', 'none')) {
-									headerOuter.removeClass('scr-chk');
+									headerOuter.removeClass('scr-chk').removeAttr('style');
 								}
 							}
 						} else {
 							if (e.originalEvent.wheelDelta < 0) {
 								headerOuter.addClass('scr-chk');
 							} else {
-								headerOuter.removeClass('scr-chk');
+								headerOuter.removeClass('scr-chk').removeAttr('style');
 							}
 						}
 					});
@@ -226,7 +228,7 @@ jQuery.event.add(window, 'load', function () {
 						if (scrPos > lastScrTopPos) {
 							headerOuter.addClass('scr-chk');
 						} else {
-							headerOuter.removeClass('scr-chk');
+							headerOuter.removeClass('scr-chk').removeAttr('style');
 						}
 					}
 				}
