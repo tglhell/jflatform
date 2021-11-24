@@ -1607,7 +1607,6 @@
 	border-top: 1px solid #999;
 }
 .download .cont-outer .cont-list li {
-	height: 332px;
 	padding: 48px;
 	border-radius: 8px;
 	border: 1px solid #e9e9e9;
@@ -1837,6 +1836,9 @@
     line-height: 20px;
     font-family: 'HyundaiSansTextJP';
 }
+.hmj-container.estimate .hmj-content .cont-center {
+	padding-bottom: 500px;
+}
 .estimate .toggle .tit-btn .price {
 	float: right;
     padding-right: 32px;
@@ -2022,8 +2024,8 @@
 .estimate .mo-bottom-fixed .btn-down {
     display: none;    
 }
-.estimate .payment-area .payment {
-    margin-bottom: 24px;
+.estimate .payment-area .check-terms {
+    margin-top: 24px;
 }
 .estimate .cont-right .cont-text {
     margin: 40px 0 16px;
@@ -2331,6 +2333,9 @@
 	.estimate .car-area .s-text {
 		margin-top: 8px;
 	}
+	.hmj-container.estimate .hmj-content .cont-center {
+		padding-bottom: 0;
+	}
     .estimate .toggle .inp-list .caution {
         margin-top: 40px;
     }
@@ -2423,8 +2428,8 @@
     .estimate .js-radio-cont {
         margin-left: 0;
     }
-	.estimate .payment-area .payment {
-		margin-bottom: 36px;
+	.estimate .payment-area .check-terms {
+		margin-top: 36px;
 	}
     .estimate .cont-right .email-area,
     .estimate .cont-right .banner-area {

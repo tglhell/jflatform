@@ -1045,9 +1045,16 @@ function tabFixed(){
 }
 //쿠기활용동의 팝업
 function cookiePop() {
-	if ($('body').children('.cookie-pop-wrap').length == 1) {
+	let cookiePopWrap = $('.cookie-pop-wrap');
+
+	if ($('body').find(cookiePopWrap).length == 1) {
 		$('body').css('overflow', 'hidden');
 	} else {
 		$('body').css('overflow', 'auto');
 	}		
+
+	cookiePopWrap.find('.btn-close').on('click',function(){
+		cookiePopWrap.fadeOut(secVal[4]);
+		$('body').css('overflow', 'auto');
+	})
 }

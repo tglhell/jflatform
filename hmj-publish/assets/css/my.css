@@ -1079,7 +1079,7 @@
 }
 .my-main .list-my-car .cont-box {
 	position:relative;
-	padding:32px;
+	padding:32px 352px 32px 32px;
 	display:flex;
 	flex-wrap: wrap;
 	flex-direction: row;
@@ -1088,19 +1088,28 @@
 	min-height:340px;
 }
 
-.my-main .list-my-car .item-tit {
-	width: 100%;
-	line-height:32px;
-	font-size:20px;
+.my-main .list-my-car h3 {
 	font-weight:500;
 }
-.my-main .list-my-car .car-detail .num {
+/* .my-main .list-my-car .cont-text {
 	margin-top:8px;
+} */
+/* .my-main .list-my-car .cont-text::before {
+	content: '';
+	display: inline-block;
+	margin-right: 8px;
+	margin-bottom: -2px;
+	height: 16px;
+	width: 4px;
+	background-color: #e9e9e9;
+} */
+.my-main .list-my-car .car-detail .num {
+	margin-top: 16px;
 }
 .my-main .list-my-car .img-box {
 	position:absolute;	
 	top:64px;
-	right:64px;
+	right:32px;
 	width:320px;
 	height:180px;
 }
@@ -1114,9 +1123,9 @@
 	flex-wrap: wrap;
 	align-content: flex-start;
 	align-items: flex-end;
-	margin-top: 24px;
+	margin-top: 16px;
 	width: 260px;	
-	height:82px;
+	/* height:82px; */
 }
 .my-main .list-my-car .info dt:first-of-type,
 .my-main .list-my-car .info dd:first-of-type {
@@ -1149,60 +1158,65 @@
 	border:1px solid #e9e9e9;
 	border-radius:8px;
 }
-.my-main .list-order .item {
+.my-main .car-order .list-order .item {
 	position:relative;
 	padding:32px 32px 0;
 }
-.my-main .list-order .item + .item {
+.my-main .car-order .list-order .item + .item {
 	border-top:1px solid #e9e9e9;
 }
-.my-main .list-order .detail {
+.my-main .car-order .list-order .detail {
+	padding-right:320px;
 	width: 100%;
 }
-.my-main .list-order .item-tit {
-	line-height:32px;
-	font-size:20px;
+.my-main .car-order .list-order h3 {
 	font-weight:500;
 }
-.my-main .list-order .item-sub-tit {
-	padding-left:8px;
+.my-main .car-order .list-order .cont-text::before {
+	/* content: '';
+	display: inline-block;
+	margin-right: 8px;
+	margin-bottom: -2px;
+	height: 16px;
+	width: 4px;
+	background-color: #e9e9e9; */
 }
-.my-main .list-order .img-box {
+.my-main .car-order .list-order .img-box {
 	position:absolute;
 	top:32px;
-	right:64px;
+	right:32px;
 	width:320px;
 	height:180px;
 }
-.my-main .list-order.img-box img {
+.my-main .car-order .list-order.img-box img {
 	display: block;
 	width: 100%;
 	height: 100%;
 }
-.my-main .list-order .info {
+.my-main .car-order .list-order .info {
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: 24px;
+	margin-top: 16px;
 	width: 260px;
 }
-.my-main .list-order .info dt:first-of-type,
-.my-main .list-order .info dd:first-of-type {
+.my-main .car-order .list-order .info dt:first-of-type,
+.my-main .car-order .list-order .info dd:first-of-type {
 	margin-top:0;
 }
-.my-main .list-order .info dt {
+.my-main .car-order .list-order .info dt {
 	margin-top: 8px;
 	min-width: 160px;
 	color:#999;
 }
-.my-main .list-order .info dd {
+.my-main .car-order .list-order .info dd {
 	margin-top: 8px;
 }
-.my-main .list-order .box-status {
+.my-main .car-order .list-order .box-status {
 	display:flex;
 	margin-top:88px;
 	width: 100%;
 }
-.my-main .list-order .box-status li {
+.my-main .car-order .list-order .box-status li {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -1211,16 +1225,16 @@
 	background:#fafafa;
 	border-radius:4px;
 }
-.my-main .list-order .box-status li:first-child {
+.my-main .car-order .list-order .box-status li:first-child {
 	margin-right:8px;
 }
-.my-main .list-order .box-status .text {
+.my-main .car-order .list-order .box-status .text {
 	display:inline-block;
 }
-.my-main .list-order .item:last-child .box-desc {
+.my-main .car-order .list-order .item:last-child .box-desc {
 	border-radius: 0 0 8px 8px;
 }
-.my-main .list-order .box-desc {
+.my-main .car-order .list-order .box-desc {
 	margin: 32px -32px 0;
 }
 
@@ -1468,6 +1482,25 @@
 
 
 @media screen and (max-width: 1119px) {
+	.my-main .hmj-content > .cont-outer:not(.dashboard) {
+		display:flex;
+		flex-flow: column;
+	}
+	.my-main .hmj-content .cont-center {
+		order:1;
+	}
+	.my-main .hmj-content .cont-left {
+		margin-top:80px;
+		padding:0 20px;
+		order:2;
+	}
+	.my-main .hmj-content .cont-left .cont-left-box {
+		display: block;
+		min-height:auto;
+	}
+	.my-main .hmj-content .cont-left-box .toggle .tit-btn:before {
+		right:0;
+	}
 	.my-main .hmj-content .top-visual {
 		height: 320px;
 	}
@@ -1552,22 +1585,21 @@
 	.my-main .list-my-car .cont-box {
 		padding:24px;
 	}
-	.my-main .list-my-car .item-tit {
-		line-height:26px;
-		font-size:16px;
-	}
 	.my-main .list-my-car .detail-box {
-		min-height:166px;
+		/* min-height:166px; */
 		width: 100%;
 	}
 	.my-main .list-my-car .car-detail {
 		width:100%;
 	}
+	.my-main .list-my-car .car-detail .num {
+		margin-top:16px;
+	}
 	.my-main .list-my-car .info {
 		margin-top:16px;
 		justify-content: space-between;
 		width: 100%;
-		height:68px;
+		/* height:68px; */
 		font-size:12px;
 	}
 	.my-main .list-my-car .info dt {
@@ -1611,55 +1643,48 @@
 	}	
 
 
-	.my-main .list-order .item {
+	.my-main .car-order .list-order .item {
 		padding:24px 24px 0;
 	}
-	.my-main .list-order .item-tit {
-		line-height:26px;
-		font-size:16px;
+	.my-main .car-order .list-order .detail {
+		padding-right:0;
 	}
-	.my-main .list-order .item-sub-tit {
-		display:block;
-		padding-left:0;
-		margin-top:4px;
-		font-weight:500;
-	}
-	.my-main .list-order .info {
-		margin-top:12px;
+	.my-main .car-order .list-order .info {
+		margin-top:16px;
 		width:100%;
 		font-size:12px;
 	}
-	.my-main .list-order .info dt {
+	.my-main .car-order .list-order .info dt {
 		margin-top: 4px;
 		min-width: 50%;
 	}
-	.my-main .list-order .info dd {
+	.my-main .car-order .list-order .info dd {
 		margin-top: 4px;
 		width: 50%;
 		text-align: right;
-	}
-	.my-main .list-order .img-box {
+	}	
+	.my-main .car-order .list-order .img-box {
 		position:static;
 		margin:32px auto 0;
 		padding:0 40px;
 		width: auto;
 		height: auto;
 	}
-	.my-main .list-order .box-status {
+	.my-main .car-order .list-order .box-status {
 		margin-top:16px;
 		flex-direction: column;
 	}
-	.my-main .list-order .box-status li {
+	.my-main .car-order .list-order .box-status li {
 		width: 100%;
 		margin-top:8px;
 		padding:13px 16px;
 		border-radius:8px;
 	}
-	.my-main .list-order .box-status li:first-child {
+	.my-main .car-order .list-order .box-status li:first-child {
 		margin-right:0;
 		margin-top:0;
 	}
-	.my-main .list-order .box-desc {
+	.my-main .car-order .list-order .box-desc {
 		margin:24px -24px 0;
 	}
 
@@ -5396,12 +5421,12 @@ padding: 0 16px;
 }
 .my-garage .list-my-car h3 {
 	font-weight: 500;
-	margin-bottom: 8px;
+	/* margin-bottom: 8px; */
 }
-.my-garage .list-my-car .cont-text {
-	margin-bottom: 16px;
+.my-garage .list-my-car .cont-text2 {
+	margin-top: 16px;
 }
-.my-garage .list-my-car .cont-text::before {
+/* .my-garage .list-my-car .cont-text::before {
 	content: '';
 	display: inline-block;
 	margin-right: 8px;
@@ -5409,7 +5434,7 @@ padding: 0 16px;
 	height: 16px;
 	width: 4px;
 	background-color: #e9e9e9;
-}
+} */
 .my-garage .list-my-car .share-info {
 	background: url('../images/common/ico_share2.svg') no-repeat left center;
 	padding-left: 24px;

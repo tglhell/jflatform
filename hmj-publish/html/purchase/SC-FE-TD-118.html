@@ -4,10 +4,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-	<title>HMJ</title>
-	<link rel="stylesheet" href="../../assets/css/common.css">
-	<link rel="stylesheet" href="../../assets/css/service.css">
-    <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+    <title>HMJ</title>
+
+    <link rel="stylesheet" href="../../assets/css/common.css">
+	<link rel="stylesheet" href="../../assets/css/purchase.css">
+	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+	
 	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
 	<script type="text/javascript" src="../../assets/js/common.js"></script>
@@ -257,84 +259,22 @@
 		</div>			
 		<div class="sub-cont">
 			<div class="history">
-				<a href="#">ホーム</a>
-				<a href="#">Service</a>
-				<span class="page-title">アプリ設置のご案内</span>
+				<a href="javascript:;">HOME</a>
+				<a href="javascript:;">Purchase</a>
+				<a href="javascript:;">試乗</a>
+				<span class="page-title">試乗予約</span>
 			</div>
 			<button type="button" class="back-page">Back page</button>
 		</div>
-		<!-- //header -->
+		<!-- //sub-cont -->
 	</div>
 	<!--//header -->
 
 	<!-- container -->
-	<div id="hmjContainer" class="hmj-container built-in-cam">
+	<div id="hmjContainer" class="hmj-container">
 		<div class="hmj-content">
-			<div class="top-visual pc-only">
-                <img src="../../assets/images/@img_visual_built_in.jpg" alt="top visual">
-				<div class="top-visual-text fc-white">
-					<h2 class="top-title">サービス紹介</h2>
-					<p class="top-desc">ビルトインカメラに保存された動画をスマートフォンに転<br>送・共有します</p>
-				</div>
-			</div>
-
 			<div class="cont-outer">
-                <div class="icon-tab-outer">
-                    <ul class="icon-tab-list">
-                        <li class="active">
-                            <a href="SC-FE-PD-322.html">
-                                <span class="ico-img"><img src="../../assets/images/common/ico_service_video.svg" alt="video icon"></span>
-                                <span class="cont-tit2">記録動画の確認</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="SC-FE-PD-323.html">
-                                <span class="ico-img"><img src="../../assets/images/common/ico_service_download.svg" alt="download icon"></span>
-                                <span class="cont-tit2">ダウンロードの手順</span>
-                            </a>
-                        </li>
-                        <li>
-                           <a href="SC-FE-PD-324.html">
-                                <span class="ico-img"><img src="../../assets/images/common/ico_service_setting.svg" alt="setting icon"></span>
-                                <span class="cont-tit2">設定</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="built-in-item">
-                    <ul class="item item-section1">
-                        <li>
-                            <p class="item-img"><img src="../../assets/images/@img_built_in_video01.jpg" alt="録画動画の確認イメージ"></p>
-                            <p class="cont-tit2">録画動画の確認</p>
-                            <p class="cont-text2">ビルトインカメラに保存されている動画をリアルタイムで確認できます。</p>
-                            <p class="caption">車両のビルトインカメラに接続してご使用ください。</p>
-                        </li>
-                        <li>
-                            <p class="item-img"><img src="../../assets/images/@img_built_in_video02.jpg" alt="録画動画の確認イメージ"></p>
-                            <p class="cont-tit2">
-								イベント録画動画の確認
-								<div class="tooltip-box">
-									<button class="btn-tooltip"><span><img src="../../assets/images/common/btn_tooltip.svg" alt="tooltip"></span></button>
-									<div class="tooltip-cont">
-										<p class="caution">走行中常時録画 : 走行中、常時録画した動画</p>
-										<p class="caution">走行中イベント : 走行中の衝撃または手動で録画された動画</p>
-										<p class="caution">駐車中常時録画 : 駐車中、常時録画した動画</p>
-										<p class="caution">駐車中イベント : : 駐車中の衝撃または手動で録画された動画</p>
-										<button type="button" class="close">Popover Close</button>
-									</div>
-								</div>
-							</p>
-							<p class="cont-text2">走行/駐車中に録画した動画と衝撃が検知されたイベント動画を選択することで、簡単に動画を確認できます。</p>
-                            <p class="caption">タイムラプス機能を利用してお客様の大切な思い出を残すこともできます。</p>
-                        </li>
-                        <li>
-                            <p class="item-img"><img src="../../assets/images/@img_built_in_video03.jpg" alt="録画動画の確認イメージ"></p>
-                            <p class="cont-tit2">ご希望の日付の録画動画の確認</p>
-                            <p class="cont-text2">カレンダーメニューからご希望の日付の動画を確認できます。</p>
-                            <p class="caption">詳細な使い方は設定のヘルプからも提供いたします。</p>
-                        </li>
-                    </ul>
-                </div>
+                <button type="button" class="btn pop-open" data-pop-idx="persnalTerms04"><span>SC-FE-TD-118</span></button>
 			</div>
 		</div>
 	</div>
@@ -426,7 +366,7 @@
 					<li><a href="#">プライバシーポリシー</a></li>
 					<li><a href="#">利用規約</a></li>
 					<li><a href="#">Cookieポリシー </a></li>
-					<li><a href="#"><span class="ico"><img src="../../assets/images/common/ico_country_jp.png" alt="japan"></span>日本語</a></li>
+					<li class="lang-jp"><a href="#"><span class="ico"><img src="../../assets/images/common/ico_country_jp.png" alt="japan"></span>日本語</a></li>
 				</ul>
 				<p class="copyright">COPYRIGHT &#x24D2; HYUNDAI. ALL RIGHTS RESERVED.</p>
 			</div>
@@ -442,8 +382,36 @@
 	<!--//footer -->
 </div>
 
-<script>
-</script>
+<div class="layer-popup-wrap mo-full fix-center" data-pop-idx="persnalTerms04">
+	<div class="layer-popup-body">
+		<div class="layer-popup-cont pop-medium">
+			<h1 class="layer-title">商品・キャンペーン等のご案内</h1>
+			<div class="layer-cont terms">
+                <h2>商品・キャンペーン等のご案内</h2>
+                <h3>収集目的</h3>
+				<p>車両購入案内、製品、サービス、キャンペーン及び各種イベント関連情報等をご案内する為、商品・サービスの向上や新製品の開発を目的としたアンケート調査を行う為、お客様</p>
+                
+                <h3>収集項目</h3>
+				<p>氏名、電話番号、生年月日、性別、連携情報、住所</p>
+                
+                <h3>保有期間</h3>
+				<p>2 年</p>
+                <p>※ お客様は商品・キャンペーン等のご案内を受信することを拒否することができます。同意を拒否されても試乗サービスの利用には制限がありません。</p>
+			</div>
+            <div class="bottom-fixed">
+				<div class="cta-outer full-type">
+					<button class="btn btn-middle btn-type2"><span>確認</span></button>
+				</div>
+			</div>
+			<button class="btn-close-popup btn-close">close</button>
+		</div>
+	</div>
+</div>
 
+<script>
+	jQuery.event.add(window, 'load', function () {
+		$('.pop-open').trigger('click');
+	});
+</script>
 </body>
 </html>

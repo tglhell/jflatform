@@ -342,7 +342,8 @@ $(function () {
 			swpOpt = {
 				allowSlidePrev: false,
 				allowSlideNext: false,
-				simulateTouch: false
+				simulateTouch: false,
+				slidesPerView: 5,
 			}
 			$('.recommend [class*="swiper-button"]').hide();
 		} else {
