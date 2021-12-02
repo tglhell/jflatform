@@ -313,12 +313,13 @@
 <button class="view_code">Code View ▼</button>
 <pre class="language-html"><code><!--<div class="cta-outer">
 	<button class="btn pop-open" data-pop-idx="5"><span>Double Popup</span></button>
+	<button class="btn pop-open" data-pop-idx="5_1"><span>Double Popup (Alert)</span></button>
 </div>
 
 <div class="layer-popup-wrap" data-pop-idx="5">
 	<div class="layer-popup-body">
 		<div class="layer-popup-cont">
-			<h1 class="layer-title">Layer Title 3</h1>
+			<h1 class="layer-title">Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3</h1>
 			<div class="layer-cont">
 				<p>layerCont Text1</p>
 				<p>layerCont Text2</p>
@@ -329,11 +330,11 @@
 				<p>layerCont Text7</p>
 				<p>layerCont Text8</p>
 				<div class="cta-outer full-type">
+					<button class="btn btn-type2 btn-close"><span>Cancel</span></button>
 					<button class="btn pop-open" data-pop-idx="6"><span>Inner popup</span></button>
-					<button class="btn btn-type2 btn-close"><span>CANCEL</span></button>
 				</div>
 			</div>
-			<button class="btn-close-popup">close</button>
+			<button class="btn-close-popup btn-close">close</button>
 		</div>
 	</div>
 </div>
@@ -356,6 +357,45 @@
 		</div>
 	</div>
 </div>
+
+<div class="layer-popup-wrap alert-popup inner-pop" data-pop-idx="6_1">
+	<div class="layer-popup-body">
+		<div class="layer-popup-cont pop-small none-close">
+			<div class="layer-cont">
+				<div class="alert-icon"><img src="../assets/images/common/ico_complete_apply.svg" alt="confirm"></div>
+				<p class="alert-desc">カートに追加しました。<br>カートへ移動しますか？</p>
+				<div class="cta-outer full-type">
+					<button class="btn btn-close"><span>テキスト</span></button>
+					<button class="btn btn-type2"><span>テキスト</span></button>
+				</div>
+			</div>
+			<button class="btn-close-popup btn-close">close</button>
+		</div>
+	</div>
+</div>
+
+<div class="layer-popup-wrap" data-pop-idx="5_1">
+	<div class="layer-popup-body">
+		<div class="layer-popup-cont">
+			<h1 class="layer-title">Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3</h1>
+			<div class="layer-cont">
+				<p>layerCont Text1</p>
+				<p>layerCont Text2</p>
+				<p>layerCont Text3</p>
+				<p>layerCont Text4</p>
+				<p>layerCont Text5</p>
+				<p>layerCont Text6</p>
+				<p>layerCont Text7</p>
+				<p>layerCont Text8</p>
+				<div class="cta-outer full-type">
+					<button class="btn btn-type2 btn-close"><span>Cancel</span></button>
+					<button class="btn pop-open" data-pop-idx="6_1"><span>Alert popup</span></button>
+				</div>
+			</div>
+			<button class="btn-close-popup btn-close">close</button>
+		</div>
+	</div>
+</div>
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
@@ -364,6 +404,7 @@
 
 			<div class="cta-outer">
 				<button class="btn pop-open" data-pop-idx="5"><span>Double Popup</span></button>
+				<button class="btn pop-open" data-pop-idx="5_1"><span>Double Popup (Alert)</span></button>
 			</div>
 
 			<div class="layer-popup-wrap" data-pop-idx="5">
@@ -408,11 +449,55 @@
 				</div>
 			</div>
 
+			<div class="layer-popup-wrap alert-popup inner-pop" data-pop-idx="6_1">
+				<div class="layer-popup-body">
+					<div class="layer-popup-cont pop-small none-close">
+						<div class="layer-cont">
+							<div class="alert-icon"><img src="../assets/images/common/ico_complete_apply.svg" alt="confirm"></div>
+							<p class="alert-desc">カートに追加しました。<br>カートへ移動しますか？</p>
+							<div class="cta-outer full-type">
+								<button class="btn btn-close"><span>テキスト</span></button>
+								<button class="btn btn-type2"><span>テキスト</span></button>
+							</div>
+						</div>
+						<button class="btn-close-popup btn-close">close</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="layer-popup-wrap" data-pop-idx="5_1">
+				<div class="layer-popup-body">
+					<div class="layer-popup-cont">
+						<h1 class="layer-title">Layer Title 3 Layer Title 3 Layer Title 3 Layer Title 3</h1>
+						<div class="layer-cont">
+							<p>layerCont Text1</p>
+							<p>layerCont Text2</p>
+							<p>layerCont Text3</p>
+							<p>layerCont Text4</p>
+							<p>layerCont Text5</p>
+							<p>layerCont Text6</p>
+							<p>layerCont Text7</p>
+							<p>layerCont Text8</p>
+							<div class="cta-outer full-type">
+								<button class="btn btn-type2 btn-close"><span>Cancel</span></button>
+								<button class="btn pop-open" data-pop-idx="6_1"><span>Alert popup</span></button>
+							</div>
+						</div>
+						<button class="btn-close-popup btn-close">close</button>
+					</div>
+				</div>
+			</div>
+
 			<h4 class="btm-border">- 경고 팝업</h4>
 
 			<!-- 코드 삽입 -->
 <button class="view_code">Code View ▼</button>
-<pre class="language-html"><code><!--<div class="layer-popup-wrap" data-pop-idx="7">
+<pre class="language-html"><code><!--<div class="cta-outer">
+	<button class="btn pop-open" data-pop-idx="7"><span>Alert Popup</span></button>
+	<button class="btn pop-open" data-pop-idx="8"><span>Alert Popup (X버튼 없음)</span></button>
+</div>
+
+<div class="layer-popup-wrap alert-popup" data-pop-idx="7">
 	<div class="layer-popup-body">
 		<div class="layer-popup-cont pop-small">
 			<div class="layer-cont">
@@ -427,10 +512,11 @@
 	</div>
 </div>
 
-<div class="layer-popup-wrap" data-pop-idx="8">
+<div class="layer-popup-wrap alert-popup" data-pop-idx="8">
 	<div class="layer-popup-body">
 		<div class="layer-popup-cont pop-small none-close">
 			<div class="layer-cont">
+				<div class="alert-icon"><img src="../assets/images/common/ico_complete_apply.svg" alt="confirm"></div>
 				<p class="alert-desc">カートに追加しました。<br>カートへ移動しますか？</p>
 				<div class="cta-outer full-type">
 					<button class="btn btn-close"><span>テキスト</span></button>
@@ -444,7 +530,7 @@
 --></code></pre>
 <!-- //코드 삽입 -->
 			<div class="conIn_tip">
-				
+				.layer-popup-wrap.alert-popup
 			</div>
 
 			<div class="cta-outer">
@@ -452,7 +538,7 @@
 				<button class="btn pop-open" data-pop-idx="8"><span>Alert Popup (X버튼 없음)</span></button>
 			</div>
 
-			<div class="layer-popup-wrap" data-pop-idx="7">
+			<div class="layer-popup-wrap alert-popup" data-pop-idx="7">
 				<div class="layer-popup-body">
 					<div class="layer-popup-cont pop-small">
 						<div class="layer-cont">
@@ -467,7 +553,7 @@
 				</div>
 			</div>
 
-			<div class="layer-popup-wrap" data-pop-idx="8">
+			<div class="layer-popup-wrap alert-popup" data-pop-idx="8">
 				<div class="layer-popup-body">
 					<div class="layer-popup-cont pop-small none-close">
 						<div class="layer-cont">
@@ -555,10 +641,10 @@
 							<p>layerCont Text8</p>
 						</div>
 						<div class="bottom-fixed">
-							<div class="cta-outer full-type">
+							<!-- <div class="cta-outer full-type">
 								<button class="btn btn-close"><span>適用</span></button>
 								<button class="btn btn-type2"><span>適用</span></button>
-							</div>
+							</div> -->
 						</div>
 						<button class="btn-close-popup btn-close">close</button>
 					</div>

@@ -39,13 +39,13 @@
 						<!-- // 로그인 전 -->
 						<!-- 로그인 후 -->
 						<div class="account-box login">
-							<button class="btn-account">Account</button>
+							<span class="btn-account">Account</span>
 							<a href="#" class="btn-sign-link">
 								<span class="btn-sign-in">木村 拓哉 様</span>
-								<span class="btn-alarm">
-									<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
-									<span class="num"><span>2</span></span>
-								</span>
+							</a>
+							<a href="#" class="btn-alarm">
+								<img src="../assets/images/common/ico_alarm.svg" alt="alarm">
+								<span class="num"><span>2</span></span>
 							</a>
 						</div>
 						<!-- // 로그인 후 -->
@@ -361,19 +361,19 @@
 					<p class="error-msg lbl-type">携帯電話番号を入力してください。</p>
 
 					<!-- 2021-11-16 추가 -->
-					<div class="inp-outer-box inp-type"><!-- 유효성체크 val-error -->
+					<div class="inp-outer-box inp-type time-type"><!-- 유효성체크 val-error --><!-- 2021-11-25 수정 -->
 						<label for="inpNum01_0112">認証確認 <span class="required">*</span></label>
 						<div class="inp-btn-box">
 							<div class="inp-area">
 								<input type="text" id="inpNum01_0112" class="inp-item" placeholder="６ケタ数字">
 								<button class="inp-close"></button>
+								<span class="time-num">03:00</span><!-- 2021-11-25 수정 -->
 							</div>
-							<span class="time-num">03:00</span>
 							<button class="btn btn-type3 btn-tbl"><span>認証</span></button>
 						</div>
 					</div>
-					<p class="error-msg">認証コードを入力してください。</p>
-					<!-- <p class="error-msg">認証コードをお確かめください。</p> -->
+					<p class="error-msg lbl-type">認証コードを入力してください。</p><!-- 2021-11-25 수정 -->
+					<!-- <p class="error-msg lbl-type">認証コードをお確かめください。</p> -->
 					<p class="noti-msg lbl-type">届いたコードを入力してください。</p>
 					<!-- //2021-11-16 추가 -->
                     

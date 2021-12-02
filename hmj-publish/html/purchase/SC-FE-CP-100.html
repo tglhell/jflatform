@@ -149,7 +149,7 @@
                                         <div class="inp-outer-box"><!-- error class="val-error" -->
                                             <label for="radio01" class="top">デリバリー <span class="required">*</span></label>
                                             <div class="radio-group">
-                                                <label class="radio"><input type="radio" name="radio01" id="radioChk01"><span>営業拠点<em class="fc-color3"> ￥0 (無料)</em></span></label>
+                                                <label class="radio"><input type="radio" name="radio01" id="radioChk01"><span>デリバリースポット<em class="fc-color3"> ￥0 (無料)</em></span></label><!-- 2021.11.22 수정 -->
                                                 <label class="radio"><input type="radio" name="radio01" id="radioChk02"><span>ご希望の場所 <em class="fc-color3">￥10,000</em></span></label>
                                             </div>
                                         </div>
@@ -232,6 +232,7 @@
                                             <div class="radio-group">
                                                 <label class="radio"><input type="radio" name="radio2" id="radio2_1"><span>現金/クレジットカード</span></label>
                                                 <label class="radio"><input type="radio" name="radio2" id="radio2_2"><span>分割払い</span></label>
+                                                <label class="radio"><input type="radio" name="radio2" id="radio2_2"><span>リース</span></label><!-- 2021.11.22 수정 -->
                                             </div>
                                         </div>
                                         <p class="error-msg lbl-type">残代金支払方法を選択してください。</p>
@@ -243,15 +244,15 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                             <div class="item">
-                                                 <p class="cont-text">予想月賦金</p>
+                                            <div class="item">
+                                                <p class="cont-text">毎月のお支払い額</p><!-- 2021.11.22 수정 -->
                                                 <ul class="list-type">
                                                     <li>
                                                         <div class="tit">初回払込金</div>
                                                         <div class="price"><strong>￥ 95,900</strong></div>
                                                     </li>
                                                     <li>
-                                                        <div class="tit">初回払込金</div>
+                                                        <div class="tit">2~48回目払込金</div>
                                                         <div class="price"><strong>￥ 95,900</strong></div>
                                                     </li>
                                                     <li>
@@ -264,7 +265,7 @@
                                                     </li>
                                                     <li>
                                                         <div class="tit">期間</div>
-                                                        <div class="price">48</div>
+                                                        <div class="price">48ヶ月</div>
                                                     </li>
                                                     <li>
                                                         <div class="tit">ボーナス加算額</div>
@@ -275,15 +276,63 @@
                                                         <div class="price">3.5 %</div>
                                                     </li>
                                                 </ul>
+                                                <!-- 2021.11.22 수정 -->
                                                 <div class="cta-outer">
-                                                    <button class="btn btn-middle"><span>ローンシミュレーション</span></button>
+                                                    <button class="btn btn-middle"><span>金融シミュレーション</span></button>
                                                 </div>
                                                 <div class="caution type2">
                                                     <ul>
-                                                        <li>元金の一部を最終支払いまでに凍結、月賦額を軽減する金融商品です。</li>
+                                                        <li>ローン元金の一部を最終回のお支払いまで据え置き、毎月のお支払い額を減らす金融商品です。</li> 
+                                                        <li>上記の金額は予想額で、金融会社の実際の契約金額及び適用金利と異なる可能性がございます。</li>
                                                     </ul>
                                                 </div>
-                                             </div>
+                                                <!-- //2021.11.22 수정 -->
+                                            </div>
+                                            <!-- 2021.11.22 수정 -->
+                                            <div class="item">
+                                                <p class="cont-text">毎月のお支払い額</p>
+                                                <ul class="list-type">
+                                                    <li>
+                                                        <div class="tit">月々の支払額</div>
+                                                        <div class="price"><strong>￥ 95,900</strong></div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">頭金</div>
+                                                        <div class="price">￥ 5,765,770</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">リース元金</div>
+                                                        <div class="price">￥ 5,765,770</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">残存価格</div>
+                                                        <div class="price">30%</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">月間走行距離</div>
+                                                        <div class="price">1,000 km</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">リース期間</div>
+                                                        <div class="price">48ヶ月</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">適用金利</div>
+                                                        <div class="price">3.5 %</div>
+                                                    </li>
+                                                </ul>
+                                                <div class="cta-outer">
+                                                    <button class="btn btn-middle"><span>金融シミュレーション</span></button>
+                                                </div>
+                                                <div class="caution type2">
+                                                    <ul>
+                                                        <li>残存価格を差し引いた分を月割りで支払う金融商品でございます。</li>
+                                                        <li>車両契約はリース会社との契約となります。</li>
+                                                        <li>上記の金額は予想額で、金融会社の実際の契約金額及び適用金利と異なる可能性がございます。</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- //2021.11.22 수정 -->
                                         </div>
                                     </li>
                                 </ul>
@@ -410,6 +459,7 @@
                         <div class="banner-area">
                             <p class="cont-text">IONIQ 5のスペシャル特典</p>
                             <button type="button"><img src="../../assets/images/@img_banner01.jpg" alt="banner img"></button>
+                            <button type="button"><img src="../../assets/images/@img_banner03.jpg" alt="banner img"></button><!-- 2021.11.22 수정 -->
                             <button type="button"><img src="../../assets/images/@img_banner02.jpg" alt="banner img"></button>
                         </div>
                         <!-- //이달의 혜택, 정보조금 정보 -->

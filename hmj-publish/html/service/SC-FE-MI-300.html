@@ -37,13 +37,13 @@
 						<!-- // 로그인 전 -->
 						<!-- 로그인 후 -->
 						<div class="account-box login">
-							<button class="btn-account">Account</button>
+							<span class="btn-account">Account</span>
 							<a href="#" class="btn-sign-link">
 								<span class="btn-sign-in">木村 拓哉 様</span>
-								<span class="btn-alarm">
-									<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
-									<span class="num"><span>2</span></span>
-								</span>
+							</a>
+							<a href="#" class="btn-alarm">
+								<img src="../assets/images/common/ico_alarm.svg" alt="alarm">
+								<span class="num"><span>2</span></span>
 							</a>
 						</div>
 						<!-- // 로그인 후 -->
@@ -414,58 +414,6 @@
 		<span class="blind">Top</span>
 	</a>
 </div>
-
-<!-- chart script -->
-<script>
-	$(function () {
-		let numVal = 105; //소비된 일수
-		function progress() {
-			let progressItem = [$('.progress-top') , $('.progress-bottom'), $('.progress-ing'), $('.progress-num')];
-			let svgLeng = $('.svg-outer-box').length;
-			let circumference = [irNum[1] * Math.PI * radius[0], irNum[1] * Math.PI * radius[1]];
-			let progress = numVal / day;
-			let dashoffset = [circumference[0] * (irNum[0] - progress), circumference[1] * (irNum[0] - progress)];
-			let dayCntNum = day - numVal;
-			for (let i = day; i >= dayCntNum; i--) {
-				$(function (i) {
-					setObj(function () {
-						progressItem[3].text((day + dayCntNum) - i + '日');
-					}, (decimalVal * twoDig[0]) * i);
-				}(i));
-			}
-			setObj(function () {
-				for (let j = 0; j < svgLeng; j++ ) {
-					let svgItem = $('.svg-outer-box:nth-child(' + (j + irNum[0]) + ')');
-					for (let i = 1; i <= 2; i++ ) progressItem[i].css('stroke-dasharray', circumference[j]);
-					if (!$('html').hasClass('ios')) {
-						svgItem.find(progressItem[0]).css('stroke-dasharray', circumference[j] + 16);
-						svgItem.find(progressItem[1]).css('stroke-dashoffset', (dashoffset[j] - circumference[j]) + irNum[1]);
-						svgItem.find(progressItem[2]).animate({strokeDashoffset:dashoffset[j] - circumference[j]}, ((numVal / secVal[0]) * decimalVal) * mSecond);
-					} else {
-						svgItem.find(progressItem[0]).css('stroke-dasharray', circumference[j] + 11);
-						svgItem.find(progressItem[1]).css('stroke-dashoffset', (circumference[j] - dashoffset[j]) - irNum[1]);
-						svgItem.find(progressItem[2]).animate({strokeDashoffset:circumference[j] - dashoffset[j]}, ((numVal / secVal[0]) * decimalVal) * mSecond);
-					}
-				}
-			}, ((day - numVal) / secVal[0] * decimalVal) * mSecond);
-			setObj(function () {
-				switch(numVal) {
-					case day:
-						for (let i = 0; i <= 1; i++ ) progressItem[i].fadeOut(secVal[1]);
-					break;
-				}
-			}, ((numVal / secVal[0]) * decimalVal) * mSecond);
-		}
-		if (numVal > twoDig[5]) {
-			setObj(function () {
-				progress();
-			}, secVal[4]);
-		} else {
-			progress();
-		}
-	});
-</script>
-<!-- // chart script -->
 
 </body>
 </html>

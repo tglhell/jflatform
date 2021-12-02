@@ -84,11 +84,14 @@
 .branch-info .detail li + li {
 	margin-top: 16px;
 }
-.branch-info .detail li > span{
+.branch-info .detail li > span {
 	display: table-cell;
 	color: #999;
 	width: 96px;
 	padding-right: 40px;
+}
+.branch-info .detail li > p {
+    word-break: break-all;
 }
 .branch-info .detail .address {
 	background: transparent url('../images/common/ico_branch_map.svg') no-repeat left 2px;
@@ -763,12 +766,13 @@
 	display:flex;
 	flex-wrap: wrap;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: flex-end;
 }
 .charge .top-float .service-cate {
 	display:flex;
 	padding:8px;
 	margin-bottom:0;
+    margin-right: 16px;
 	border-radius:8px;
 	background:#fff;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
@@ -843,6 +847,7 @@
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .charge .station-info .name {
+    width: 340px;
 	line-height:32px;
 	font-size:20px;
 	font-weight:500;
@@ -2604,6 +2609,9 @@
         top: -58px;
         width: 66px;
         height: 74px;
+    }
+    .bluelink .tab-box-cont .tab-box-item{
+        padding: 0 20px;
     }
     .bluelink .tab-box-cont .cont-box-wrap {
         padding: 40px;

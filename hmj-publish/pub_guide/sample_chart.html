@@ -236,7 +236,7 @@
 			// 	}
 			// });
 
-			let numVal = 105; //소비된 일수
+			let numVal = 1; //소비된 일수
 			function progress() {
 				let progressItem = [$('.progress-top') , $('.progress-bottom'), $('.progress-ing'), $('.progress-num')];
 				let svgLeng = $('.svg-outer-box').length;
@@ -274,13 +274,9 @@
 					}
 				}, ((numVal / secVal[0]) * decimalVal) * mSecond);
 			}
-			if (numVal > twoDig[5]) {
-				setObj(function () {
-					progress();
-				}, secVal[4]);
-			} else {
+			setObj(function () {
 				progress();
-			}
+			}, secVal[4]);
 		});
 	</script>
 </head>

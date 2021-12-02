@@ -7,6 +7,7 @@
 	font-size: 12px;
 	line-height: 20px;
 	padding: 10px 40px 10px 12px;
+	background: url('../../images/common/ico_calendar.svg') no-repeat right 8px center;
 }
 .inp-item.date-picker::placeholder {
 	font-size: 12px;

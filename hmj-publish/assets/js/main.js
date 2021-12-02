@@ -10,8 +10,8 @@ $(function(){
 		carItemWidRes = secVal[0] * carItemWid / $(window).width();
 		if ($(window).width() > tbl) {
 			if (e.type == 'mouseenter') {
-				if (!$(this).is(':animated')) {
-					$(this).stop().animate({'overflow':'visible'}, secVal[4]);
+				if (!_this.is(':animated')) {
+					_this.stop().animate({'overflow':'visible'}, secVal[4]);
 					setObj(function () {
 						for (i = irNum[0]; i < iNum; i++) {
 							$(function(i){
@@ -22,7 +22,7 @@ $(function(){
 						}
 					}, secVal[4]);
 					$('.car-cont').removeClass('focus-in focus');
-					$(this).addClass('focus-in').siblings().addClass('focus');
+					_this.addClass('focus-in').siblings().addClass('focus');
 				}
 			} else {
 				setObj(function () {
@@ -42,7 +42,6 @@ $(function(){
 	});
 
 	if ($('.main-item-swiper').length == 1) {
-		let menuTitArr = [];
 		let swpOpt = {},
 		slideLength = $('.main-item-swiper .swiper-slide').length;
 		let _boolChk;
@@ -54,10 +53,6 @@ $(function(){
 			_boolChk = true;
 		} else{
 			_boolChk = false;
-		}
-		for (let i = 0; i < slideLength; i++) {
-			menuItem = $('.main-item-swiper .swiper-slide').eq(i).find('.item-tit').text();
-			menuTitArr.push(menuItem);
 		}
 		if (slideLength == 1) {
 			swpOpt = {
@@ -72,18 +67,14 @@ $(function(){
 					nextEl: '.main-item-swiper .swiper-button-next',
 					prevEl: '.main-item-swiper .swiper-button-prev',
 				},
-				pagination: {
-					el: '.main-item-swiper .swiper-pagination',
-					clickable: true,
-					renderBullet: function (index, className) {
-						return '<span class="' + className + '">' + (menuTitArr[index]) + '</span>';
-					},
-				},
 				simulateTouch: true,
 				speed: 500,
 				loop: _boolChk,
 				slidesPerView: 'auto',
 				spaceBetween: 0,
+				lazy: {
+					loadPrevNext : true,
+				},
 				observer: true,
 				observeParents: true,
 				on: {
@@ -101,8 +92,6 @@ $(function(){
 									$('.car-cont').removeClass('focus-in');
 								}, secVal[0]);
 								onIr = setTimeout(function () {
-									clearTimeout(onIr);
-									clearTimeout(offIr);
 									for (i = irNum[0]; i < iNum; i++) {
 										$(function(i){
 											setObj(function(){
@@ -127,11 +116,9 @@ $(function(){
 		let swpOpt = {};
 		let _gap;
 		if ($(window).width() > tbl) {
-			_gap = 32;
 			_resChk = false;
 			_boolChk = true;
 		} else{
-			_gap = 16;
 			_resChk = true;
 			_boolChk = false;
 		}
@@ -147,7 +134,7 @@ $(function(){
 			simulateTouch: true,
 			speed: 300,
 			loop: _boolChk,
-			spaceBetween: _gap,
+			spaceBetween: 16,
 			centeredSlides: _resChk,
 			observer: true,
 			observeParents: true,

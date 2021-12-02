@@ -1298,6 +1298,7 @@
 .my-main .shop-order .detail .count {
 	margin-top:8px;
 	color:#999;
+	line-height:22px;
 	font-family: 'HyundaiSansTextJP', sans-serif;
 }
 .my-main .shop-order .detail .count span + span::before {
@@ -1418,7 +1419,6 @@
 .my-main .box-no-data .swiper-slide {
 	position:relative;
 	width: 100%;
-	height:120px;
 	border-radius:8px ;
 	overflow: hidden;
 }
@@ -1426,36 +1426,10 @@
 	position:relative;
 	width: 100%;
 	height: 100%;
-	overflow: hidden;
 }
 .my-main .box-no-data .swiper-slide .img img {
-	position:absolute;
-	top:50%;
-	left:50%;	
-	width: 100%;	
-	transform: translate(-50% , -50%);
-}
-.my-main .box-no-data .swiper-slide .text {
-	position:absolute;
-	top:23px;
-	left:32px;
-	color:#fff;	
-}
-.my-main .box-no-data .swiper-slide .tit {
-	max-width:240px;
-	line-height:30px;
-	height: 30px;
-	overflow: hidden;
-	font-size:18px;
-	font-weight:500;
-}
-.my-main .box-no-data .swiper-slide .desc {
-	margin-top: 4px;
-	max-width:240px;
-	max-height: 40px;
-	line-height:20px;
-	overflow: hidden;
-	font-size:13px;
+	display: block;
+	width: 100%;
 }
 
 .my-main .box-no-data .type02 .swiper-wrapper {
@@ -1794,30 +1768,16 @@
 	.my-main .box-no-data .type02 .swiper-wrapper {
 		flex-flow:nowrap row;
 	}
+	.my-main .box-no-data .swiper-slide {
+		width:100%;
+		height: auto;
+	}
 	.my-main .box-no-data .type02 .swiper-slide {
 		width:100%;
 	}
 	.my-main .box-no-data .type02 .swiper-slide:nth-child(even) {
 		margin-left:0;
 	}	
-	.my-main .box-no-data .swiper-slide .img img {
-		min-width: 832px;
-		height: auto;
-	}
-	.my-main .box-no-data .type02 .swiper-slide img {
-		min-width:640px;
-	}
-	.my-main .box-no-data .swiper-slide .text {
-		top:21px;
-		left:24px;
-	}
-	.my-main .box-no-data .swiper-slide .tit {
-		font-size:14px;
-		line-height:22px;
-	}
-	.my-main .box-no-data .swiper-slide .desc {
-		font-size:12px;
-	}
 }
 
 
@@ -1970,6 +1930,7 @@
 }
 .my-order .order-list .store .name {
     font-size: 18px;
+	line-height: 30px;
     font-weight: 500;
 }
 .my-order .order-list .detail-list > li {
@@ -1982,7 +1943,6 @@
 }
 .my-order .order-list .store .tooltip-outer {
     float: left;
-    line-height: 30px;
 }
 .my-order .order-list .store .btn-icon {
     float: right;
@@ -1991,11 +1951,12 @@
 .my-order .order-list .store .tooltip-cont dl.info {
     display: flex;
     flex-wrap: wrap;
-    width: 180px;
+    width: 206px;
     line-height: 20px;
     font-size: 12px;
 }
 .my-order .order-list .store .tooltip-cont .info dt {
+	width: 88px;
     padding-right:16px;
     color: #999;
 }
@@ -3461,6 +3422,7 @@
 }
 .my-contact .toggle .txt {
 	color:#666;
+	word-break: break-all;
 }
 .my-contact .toggle .answer-date {
 	margin-top: 8px;
@@ -4242,7 +4204,13 @@ padding: 0 16px;
 /* E: 알림 */
 
 /* S: 차량주문조회 */
+.order-inquiry .cont-center .top-slt {
+	float: right;
+	width: 400px;
+	padding-bottom: 16px;
+}
 .order-inquiry .top-area {
+	clear: both;
     position: relative;
     margin-bottom: 40px;
     padding-top: 40px;
@@ -4253,17 +4221,17 @@ padding: 0 16px;
     line-height: 52px;
 }
 .order-inquiry .top-area .car-model span {
-    font-size: 16px;
-    line-height: 26px;
+    display: block;
+	margin-top: 8px;
 }
-.order-inquiry .top-area .car-model span::before {
+/* .order-inquiry .top-area .car-model span::before {
     content: '';
     display: inline-block;
     width: 4px;
     height: 16px;
     margin: 0 8px;
     background-color: #e9e9e9;
-}
+} */
 .order-inquiry .top-area .car-img {
     position: absolute;
     bottom: 0;
@@ -4274,7 +4242,7 @@ padding: 0 16px;
     height: 214px;
 }
 .order-inquiry .top-area .order-info {
-    margin: 24px 0;
+    margin: 16px 0 24px;
 }
 .order-inquiry .top-area .order-info li:not(:last-child) {
     margin-bottom: 8px;
@@ -4702,10 +4670,10 @@ padding: 0 16px;
     height: 62px;
     vertical-align: middle;
 }
-.order-inquiry .state[class*='step'] li:not(:nth-child(6)) {
+.order-inquiry .state[class*='step'] li:not(.step6) {
     padding-bottom: 48px;
 }
-.order-inquiry .state[class*='step'] li:not(:nth-child(6))::after {
+.order-inquiry .state[class*='step'] li:not(.step6)::after {
     content: '';
     display: block;
     position: absolute;
@@ -4780,6 +4748,9 @@ padding: 0 16px;
 }
 .order-inquiry .car-step .step7::before {
     background-image: url(../images/common/ico_car_step7.svg);
+}
+.order-inquiry .car-step .step8::before {
+    background-image: url(../images/common/ico_car_step8.svg);
 }
 .order-inquiry .order-step li:last-child {
     margin-top: 32px;
@@ -4958,11 +4929,12 @@ padding: 0 16px;
 }
 .pop-order-inquiry .prod-list .thumb .chk input + span {
     padding-left: 0;
-	padding-top: 0
+	padding-top: 0;
 }
 .pop-order-inquiry .prod-list .thumb img {
-    width: 120px;
+	width: 120px;
     height: 120px;
+	border:1px solid #e9e9e9;
 }
 .pop-order-inquiry .prod-list .name {
     max-height: 40px;
@@ -5025,6 +4997,11 @@ padding: 0 16px;
     margin-top: -10px
 }
 @media screen and (max-width: 1119px) {
+	.order-inquiry .cont-center .top-slt {
+		clear: both;
+		padding: 40px 20px 0;
+		width: 100%;
+	}
     .order-inquiry .no-data {
         margin-bottom: -80px;
     }
@@ -5082,6 +5059,22 @@ padding: 0 16px;
         padding-bottom: 40px;
         background-color: #fff;
     }
+	.order-inquiry .tab-box-list {
+		background-color: #fff;
+	}
+	.order-inquiry .tab-box-outer.fixed {
+    	z-index: 100;
+    	position: fixed;
+		top: 56px;
+		width: 100%;
+		transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+	}
+	.order-inquiry .tab-box-outer.fixed.up {
+		top: 109px;
+	}
+	.order-inquiry .tab-box-outer.fixed.down {
+		top: 56px;
+	}
     .order-inquiry .tab-box-item li .title {
         padding-left: 52px;
     }

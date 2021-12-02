@@ -39,13 +39,13 @@
 						<!-- // 로그인 전 -->
 						<!-- 로그인 후 -->
 						<div class="account-box login">
-							<button class="btn-account">Account</button>
+							<span class="btn-account">Account</span>
 							<a href="#" class="btn-sign-link">
 								<span class="btn-sign-in">木村 拓哉 様</span>
-								<span class="btn-alarm">
-									<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
-									<span class="num"><span>2</span></span>
-								</span>
+							</a>
+							<a href="#" class="btn-alarm">
+								<img src="../assets/images/common/ico_alarm.svg" alt="alarm">
+								<span class="num"><span>2</span></span>
 							</a>
 						</div>
 						<!-- // 로그인 후 -->
@@ -406,21 +406,25 @@
 							</div>
 						</div>
 					</div>	
-					<div class="inp-outer-box">
+					<div class="inp-outer-box val-error"> <!-- 2021.11.25 class 수정 유효성 검사시 val-error class 추가 -->
 						<label for="radio01">会員タイプ <span class="required">*</span></label>
 						<div class="radio-group">
 							<label class="radio"><input type="radio" name="radio" id="radioChk01"><span>個人顧客</span></label>
 							<label class="radio"><input type="radio" checked="checked" name="radio" id="radioChk02"><span>法人顧客</span></label>
 						</div>
 					</div>					
-					<div class="inp-outer-box">
+					<p class="error-msg lbl-type">会員種類を選択してください。</p> <!-- 2021.11.25 추가 -->
+
+					<div class="inp-outer-box val-error"> <!-- 2021.11.25 class 수정 유효성 검사시 val-error class 추가 -->
 						<label for="contact03_08">社名/商号 <span class="required">*</span></label>
 						<div class="inp-area">
 							<input type="text" id="contact03_08" class="inp-item" placeholder="社名">
 							<button class="inp-close"></button>
 						</div>	
 					</div>
-					<div class="inp-outer-box tel-type">
+					<p class="error-msg lbl-type">社名を入力してください。</p> <!-- 2021.11.25 추가 -->
+
+					<div class="inp-outer-box tel-type val-error"> <!-- 2021.11.25 class 수정 유효성 검사시 val-error class 추가 -->
 						<label for="inpNum01_01">携帯電話番号 <span class="required">*</span></label>
 						<div class="inp-slice-box">
 							<div class="slt-box type2">
@@ -442,6 +446,8 @@
 							</div>
 						</div>
 					</div>
+					<p class="error-msg lbl-type">携帯電話番号を入力してください。</p> <!-- 2021.11.25 추가 -->
+
 					<p class="error-msg lbl-type">error text</p>
 					<div class="inp-outer-box"><!-- 유효성 검사 시 val-error class 추가 -->
 						<label for="inpName01_02">車種 <span class="required">*</span></label>

@@ -39,13 +39,13 @@
 						<!-- // 로그인 전 -->
 						<!-- 로그인 후 -->
 						<div class="account-box login">
-							<button class="btn-account">Account</button>
+							<span class="btn-account">Account</span>
 							<a href="#" class="btn-sign-link">
 								<span class="btn-sign-in">木村 拓哉 様</span>
-								<span class="btn-alarm">
-									<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
-									<span class="num"><span>2</span></span>
-								</span>
+							</a>
+							<a href="#" class="btn-alarm">
+								<img src="../assets/images/common/ico_alarm.svg" alt="alarm">
+								<span class="num"><span>2</span></span>
 							</a>
 						</div>
 						<!-- // 로그인 후 -->
@@ -386,7 +386,7 @@
 		<div class="layer-popup-cont pop-medium">
 			<h1 class="layer-title">相談申込書</h1>
 			<div class="layer-cont">
-                <div class="inp-outer-box row-type"><!-- 유효성체크 val-error -->
+                <div class="inp-outer-box row-type val-error"><!-- 유효성체크 val-error -->
                     <label for="inpName01_01">姓名 <span class="required">*</span></label>
                     <div class="inp-group-box mo-full">
                         <div class="inp-area">
@@ -401,7 +401,7 @@
                 </div>
                 <p class="error-msg">姓名を入力してください。</p>
                 
-                <div class="inp-outer-box row-type">
+                <div class="inp-outer-box row-type val-error">
                     <label for="inpName02_01">姓名 (フリガナ) <span class="required">*</span></label>
                     <div class="inp-group-box mo-full">
                         <div class="inp-area">
@@ -414,9 +414,9 @@
                         </div>
                     </div>
                 </div>
-                <p class="error-msg lbl-type">姓名(フリガナ)を入力してください。</p>
+                <p class="error-msg">姓名(フリガナ)を入力してください。</p>
 
-                <div class="inp-outer-box tel-type row-type">
+                <div class="inp-outer-box tel-type row-type val-error">
                     <label for="inpNum03_01">携帯電話 <span class="required">*</span></label>
                     <div class="inp-slice-box">
                         <div class="slt-box type2 on">
@@ -436,16 +436,16 @@
                         </div>
                     </div>
                 </div>
-                <p class="error-msg lbl-type">電話番号を入力してください。</p>
+                <p class="error-msg">電話番号を入力してください。</p>
 
-                <div class="inp-outer-box row-type">
+                <div class="inp-outer-box row-type val-error">
                     <label for="inpNum04_01">E-mail <span class="required">*</span></label>
                     <div class="inp-area">
                         <input type="text" id="inpNum04_01" class="inp-item" placeholder="メールアドレスを入力してください" value="kimura@abc.com" readonly>
                         <button class="inp-close"></button>
                     </div>
                 </div>
-                <p class="error-msg lbl-type">メールアドレスをお確かめください。</p>
+                <p class="error-msg">メールアドレスをお確かめください。</p>
 
                 <div class="inp-outer-box inp-type post-type row-type">
                     <label for="inpNum05_01">住所</label>

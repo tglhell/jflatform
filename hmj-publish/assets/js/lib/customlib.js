@@ -6,10 +6,10 @@ $(function () {
 		, showMonthAfterYear: true //년도 먼저 나오고, 뒤에 월 표시
 		, changeYear: false //콤보박스에서 년 선택 가능
 		, changeMonth: false //콤보박스에서 월 선택 가능                
-		, showOn: "button" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
-		, buttonImage: "../../assets/images/common/ico_calendar.svg" //버튼 이미지 경로
+		//, showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
+		//, buttonImage: "../../assets/images/common/ico_calendar.svg" //버튼 이미지 경로
 		, buttonImageOnly: true //기본 버튼의 회색 부분을 없애고, 이미지만 보이게 함
-		, buttonText: "달력 선택" //버튼에 마우스 갖다 댔을 때 표시되는 텍스트                
+		, buttonText: "カレンダーの選択" //버튼에 마우스 갖다 댔을 때 표시되는 텍스트                
 		, yearSuffix: "." //달력의 년도 부분 뒤에 붙는 텍스트
 		, monthNamesShort: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'] //달력의 월 부분 텍스트
 		, monthNames: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'] //달력의 월 부분 Tooltip 텍스트
@@ -65,108 +65,6 @@ $(function () {
 			}, secVal[4]);
 		});
 	}
-
-
-	//사양백과 리스트
-	if ($('.gallery-list1').length == 1) {
-		let swpOpt = {};
-		let slideLength = $('.gallery-list1 .swiper-slide').length;
-		if (slideLength == 1) {
-			swpOpt = {
-				allowSlidePrev: false,
-				allowSlideNext: false,
-				simulateTouch: false
-			}
-			$('.gallery-list1 [class*="swiper-button"]').hide();
-		} else {
-			swpOpt = {
-				navigation: {
-					nextEl: '.gallery-list1 .swiper-button-next',
-					prevEl: '.gallery-list1 .swiper-button-prev',
-				},
-				pagination: {
-					el: '.gallery-list1 .swiper-pagination',
-					clickable: true,
-				},
-				// slidesPerView: 'auto',
-				// centeredSlides: true,
-				simulateTouch: true,
-				speed: 300,
-				loop: false,
-				spaceBetween: 0,
-				observer: true,
-				observeParents: true,
-			}
-		}
-		let galleryList1 = new Swiper('.gallery-list1 .swiper-container', swpOpt);
-	}
-
-	if ($('.gallery-list2').length == 1) {
-		let swpOpt = {};
-		let slideLength = $('.gallery-list2 .swiper-slide').length;
-		if (slideLength == 1) {
-			swpOpt = {
-				allowSlidePrev: false,
-				allowSlideNext: false,
-				simulateTouch: false
-			}
-			$('.gallery-list2 [class*="swiper-button"]').hide();
-		} else {
-			swpOpt = {
-				navigation: {
-					nextEl: '.gallery-list2 .swiper-button-next',
-					prevEl: '.gallery-list2 .swiper-button-prev',
-				},
-				pagination: {
-					el: '.gallery-list2 .swiper-pagination',
-					clickable: true,
-				},
-				// slidesPerView: 'auto',
-				// centeredSlides: true,
-				simulateTouch: true,
-				speed: 300,
-				loop: false,
-				spaceBetween: 0,
-				observer: true,
-				observeParents: true,
-			}
-		}
-		let galleryList2 = new Swiper('.gallery-list2 .swiper-container', swpOpt);
-	}
-
-	//사양백과 팝업
-	if ($('.gallery-list3').length == 1) {
-		let swpOpt = {};
-		let slideLength = $('.gallery-list3 .swiper-slide').length;
-		if (slideLength == 1) {
-			swpOpt = {
-				allowSlidePrev: false,
-				allowSlideNext: false,
-				simulateTouch: false
-			}
-			$('.gallery-list3 [class*="swiper-button"]').hide();
-		} else {
-			swpOpt = {
-				navigation: {
-					nextEl: '.gallery-list3 .swiper-button-next',
-					prevEl: '.gallery-list3 .swiper-button-prev',
-				},
-				pagination: {
-					el: '.gallery-list3 .swiper-pagination',
-					clickable: true,
-				},
-				// slidesPerView: 'auto',
-				// centeredSlides: true,
-				simulateTouch: true,
-				speed: 300,
-				loop: false,
-				spaceBetween: 0,
-				observer: true,
-				observeParents: true,
-			}
-		}
-		let galleryList3 = new Swiper('.gallery-list3 .swiper-container', swpOpt);		
-	};
 
 	//Shop Main
 	if ($('.shop-visual').length == 1) {
@@ -259,10 +157,23 @@ $(function () {
 		let swpOpt = {},
 		slideLength = $('.thumb-list .swiper-slide').length;
 		if (slideLength == 1) {
-			swpOpt = {
-				allowSlidePrev: false,
-				allowSlideNext: false,
-				simulateTouch: false
+			if ($(window).width() > tbl) {
+				//pc
+				swpOpt = {
+					allowSlidePrev: false,
+					allowSlideNext: false,
+					simulateTouch: false,
+					spaceBetween: 16,
+					slidesPerView: 5
+				}
+			} else {
+				//mo
+				swpOpt = {
+					allowSlidePrev: false,
+					allowSlideNext: false,
+					simulateTouch: false,
+					spaceBetween: 0
+				}
 			}
 			$('.thumb-list [class*="swiper-button"]').hide();
 		} else {
@@ -307,6 +218,9 @@ $(function () {
 				allowSlideNext: false,
 				simulateTouch: false
 			}
+			if ($(window).width() < tbl) {//mo
+				$('.detail-thumb').hide();
+			}
 			$('.detail-thumb [class*="swiper-button"]').hide();
 		} else {
 			if ($(window).width() > tbl) {
@@ -339,13 +253,26 @@ $(function () {
 		let swpOpt = {};
 		let slideLength = $('.recommend .swiper-slide').length;
 		if (slideLength == 1) {
-			swpOpt = {
-				allowSlidePrev: false,
-				allowSlideNext: false,
-				simulateTouch: false,
-				slidesPerView: 5,
+			if ($(window).width() > tbl) {
+				//pc
+				swpOpt = {
+					allowSlidePrev: false,
+					allowSlideNext: false,
+					simulateTouch: false,
+					slidesPerView: 5,
+					spaceBetween: 40
+				}
+			} else {
+				//mo
+				swpOpt = {
+					allowSlidePrev: false,
+					allowSlideNext: false,
+					simulateTouch: false,
+					spaceBetween: 16,
+					slidesPerView: 'auto'
+				}
 			}
-			$('.recommend [class*="swiper-button"]').hide();
+			$('.recommend .swiper-control').hide();
 		} else {
 			if ($(window).width() > tbl) {
 				//pc
@@ -388,7 +315,7 @@ $(function () {
 				if ($('.list-my-car').length == 1) {
 					let swpOpt = {},
 					slideLength = $('.list-my-car .swiper-slide').length;
-					if (slideLength == 1) {
+					if (slideLength <= 1) {
 						swpOpt = {
 							allowSlidePrev: false,
 							allowSlideNext: false,
@@ -639,5 +566,86 @@ $(function () {
 			let brandDetailThumb = new Swiper(branchSwp.find('.thumb .swiper-container'), swpOpt);
 		};
 	}
+
+	//brand story
+	if ($('.brand-story').length == 1) {
+		let swpOpt = {},
+		slideLength = $('.brand-story .swiper-slide').length;
+		if (slideLength == 1) {
+			swpOpt = {
+				allowSlidePrev: false,
+				allowSlideNext: false,
+				simulateTouch: false
+			}
+			$('.brand-story [class*="swiper-button"]').hide();
+		} else {
+			swpOpt = {
+				navigation: {
+					nextEl: '.brand-story .swiper-button-next',
+					prevEl: '.brand-story .swiper-button-prev',
+				},
+				slidesPerView: '4',
+				simulateTouch: true,
+				speed: 300,
+				loop: true,
+				observer: true,
+				observeParents: true,
+				slidesOffsetBefore: 0,
+			}
+		}
+		let sampleSwp = new Swiper('.brand-story .swiper-container', swpOpt);
+	}
+
+	//사양백과 리스트
+	$('.gallery-list').each(function(){
+		if ($(this).length == 1) {
+			let swpOpt = {};
+			let slideLength = $(this).find('.swiper-slide').length;
+			if (slideLength == 1) {
+				swpOpt = {
+					allowSlidePrev: false,
+					allowSlideNext: false,
+					simulateTouch: false
+				}
+				$(this).find('[class*="swiper-button"]').hide();
+			} else {
+				let _pcNon;
+				if($(this).hasClass('swiper-pc-non')){ 
+					_pcNon = false;
+				}else{
+					_pcNon = true;
+				}
+				swpOpt = {
+					navigation: {
+						nextEl: $(this).find('.swiper-button-next'),
+						prevEl: $(this).find('.swiper-button-prev'),
+					},
+					pagination: {
+						el: $(this).find('.swiper-pagination'),
+						clickable: true,
+					},
+					simulateTouch: true,
+					speed: 300,
+					loop: false,
+					spaceBetween: 0,
+					observer: true,
+					observeParents: true,
+					watchOverflow : true,
+					allowTouchMove : true,
+					autoPlay: false,
+					breakpoints:{
+						1120:{
+							allowTouchMove : _pcNon,
+						}
+					}
+				}
+			}
+			let galleryList = new Swiper($(this).find('.swiper-container'), swpOpt);
+
+			$(window).on('resize',function(){
+				galleryList.slideTo(0, 0, false);
+			});
+		}
+	});
 
 });

@@ -38,13 +38,13 @@
 						<!-- // 로그인 전 -->
 						<!-- 로그인 후 -->
 						<div class="account-box login">
-							<button class="btn-account">Account</button>
+							<span class="btn-account">Account</span>
 							<a href="#" class="btn-sign-link">
 								<span class="btn-sign-in">木村 拓哉 様</span>
-								<span class="btn-alarm">
-									<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
-									<span class="num"><span>2</span></span>
-								</span>
+							</a>
+							<a href="#" class="btn-alarm">
+								<img src="../assets/images/common/ico_alarm.svg" alt="alarm">
+								<span class="num"><span>2</span></span>
 							</a>
 						</div>
 						<!-- // 로그인 후 -->
@@ -294,7 +294,7 @@
 							</section>
 							<section class="wrap">
 								<p class="tit">リサイクルの流れ</p>
-								<div class="cont-box type2">
+								<div class="cont-box type2 img-graph">
 									<picture>
 										<source srcset="../../assets/images/img_rc_graph.png" media="(min-width: 1120px)">
 										<source srcset="../../assets/images/img_rc_graph_mo.png" media="(max-width: 1119px)">
@@ -328,14 +328,14 @@
 								<p class="tit">IONIQ5</p>
 								<div class="tbl-box">
 									<table class="data-tbl">
-										<caption class="blind">비고정 타입</caption>
+										<caption class="blind">IONIQ5</caption>
 										<colgroup>
-											<col>
-											<col width="196px">
-											<col width="196px">
-											<col width="174px">
-											<col width="174px">
-											<col width="108px">
+											<col width="*">
+											<col width="18%">
+											<col width="18%">
+											<col width="16%">
+											<col width="16%">
+											<col width="10%">
 										</colgroup>
 										<thead>
 											<tr>
@@ -346,7 +346,7 @@
 												<th scope=col>合計</th>
 												<th scope=col>シュレッダーダスト</th>
 												<th scope=col>フロン類</th>
-												<th colspan="2" scope=col>フロン類</th>
+												<th colspan="2" scope=col>エアバッグ類</th>
 											</tr>
 										</thead>
 										<tbody>
@@ -367,7 +367,7 @@
 												<td>8個</td>
 											</tr>
 											<tr>
-												<th scope="row" class="align-c">ABA-FD16</th>
+												<th scope="row" class="align-c">ABA-FD15</th>
 												<td class="align-r"><strong>18,260</strong></td>
 												<td class="align-r">11,200</td>
 												<td class="align-r">2,360</td>
@@ -375,7 +375,7 @@
 												<td>8個</td>
 											</tr>
 											<tr>
-												<th scope="row" class="align-c">ABA-FD16</th>
+												<th scope="row" class="align-c">ABA-FD14</th>
 												<td class="align-r"><strong>17,660</strong></td>
 												<td class="align-r">10,600</td>
 												<td class="align-r">2,360</td>
@@ -391,14 +391,14 @@
 								<p class="tit">NEXO</p>
 								<div class="tbl-box">
 									<table class="data-tbl">
-										<caption class="blind">비고정 타입</caption>
+										<caption class="blind">NEXO</caption>
 										<colgroup>
 											<col>
-											<col width="196px">
-											<col width="196px">
-											<col width="174px">
-											<col width="174px">
-											<col width="108px">
+											<col width="18%">
+											<col width="18%">
+											<col width="16%">
+											<col width="16%">
+											<col width="10%">
 										</colgroup>
 										<thead>
 											<tr>
@@ -409,7 +409,7 @@
 												<th scope=col>合計</th>
 												<th scope=col>シュレッダーダスト</th>
 												<th scope=col>フロン類</th>
-												<th colspan="2" scope=col>フロン類</th>
+												<th colspan="2" scope=col>エアバッグ類</th>
 											</tr>
 										</thead>
 										<tbody>
@@ -427,10 +427,10 @@
 								<div class="caption htr">上記料金は2021年3月から施行される料金です。</div>
 							</section>
 							<div class="cta-outer row-type">
-								<button class="btn pop-open type1" data-pop-idx="SC-FE-RE-111">
+								<button class="btn pop-open" data-pop-idx="SC-FE-RE-111">
 									<span>回収・運搬料金</span>
 								</button>
-								<button class="btn pop-open" data-pop-idx="SC-FE-RE-112">
+								<button class="btn pop-open type1" data-pop-idx="SC-FE-RE-112">
 									<span>バッテリー取外方法</span>
 								</button>
 							</div>
@@ -652,25 +652,320 @@
 	<!--//footer -->
 </div>
 
-<div class="layer-popup-wrap mo-full" data-pop-idx="SC-FE-RE-111">
+<!-- SC-FE-RE-111 팝업 -->
+<div class="layer-popup-wrap mo-full fix-center" data-pop-idx="SC-FE-RE-111">
     <div class="layer-popup-body">
         <div class="layer-popup-cont">
             <h1 class="layer-title">回収・運搬料金</h1>
             <div class="layer-cont">
-				<p class="txt">本契約第４条に基づく委託料金は、「再資源化等に係る料金」及び「事務取扱手数料」から成る。 </p>
 				<section class="wrap">
+					<p class="desc">本契約第４条に基づく委託料金は、「再資源化等に係る料金」及び「事務取扱手数料」から成る。 </p>
 					<h4 class="page-tit">再資源化等に係る料金</h4>
+					<p class="tit">エアバッグ類回収料金 (1個あたりの料金)</p>
+					<div class="tbl-box">
+						<table class="data-tbl w100">
+							<caption class="blind">エアバッグ類回収料金</caption>
+							<colgroup>
+								<col width="25%"> 
+								<col width="25%">
+								<col width="25%">
+								<col width="25%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope=col rowspan="2">対象車両の装備個数</th>
+									<th rowspan="2">取外し回収</th>
+									<th colspan="2">車上作動処理</th>
+								</tr>
+								<tr>
+									<th scope=col>一括作動非搭載車</th>
+									<th scope=col>一括作動搭載車</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1個</td>
+									<td class="align-r">684</td>
+									<td class="align-r">895</td>
+									<td class="align-r">895</td>
+								</tr>
+								<tr>
+									<td>2個</td>
+									<td class="align-r">614</td>
+									<td class="align-r">670</td>
+									<td class="align-r">900</td>
+								</tr>
+								<tr>
+									<td>3個</td>
+									<td class="align-r">591</td>
+									<td class="align-r">497</td>
+									<td class="align-r">601</td>
+								</tr>
+								<tr>
+									<td>4個</td>
+									<td class="align-r">579</td>
+									<td class="align-r">410</td>
+									<td class="align-r">450</td>
+								</tr>
+								<tr>
+									<td>5個</td>
+									<td class="align-r">572</td>
+									<td class="align-r">373</td>
+									<td class="align-r">360</td>
+								</tr>
+								<tr>
+									<td>6個</td>
+									<td class="align-r">567</td>
+									<td class="align-r">348</td>
+									<td class="align-r">300</td>
+								</tr>
+								<tr>
+									<td>7個</td>
+									<td class="align-r">564</td>
+									<td class="align-r">315</td>
+									<td class="align-r">258</td>
+								</tr>
+								<tr>
+									<td>8個</td>
+									<td class="align-r">562</td>
+									<td class="align-r">293</td>
+									<td class="align-r">226</td>
+								</tr>
+								<tr>
+									<td>9個</td>
+									<td class="align-r">560</td>
+									<td class="align-r">281</td>
+									<td class="align-r">201</td>
+								</tr>
+								<tr>
+									<td>10個</td>
+									<td class="align-r">558</td>
+									<td class="align-r">264</td>
+									<td class="align-r">108</td>
+								</tr>
+								<tr>
+									<td>11個</td>
+									<td class="align-r">557</td>
+									<td class="align-r">253</td>
+									<td class="align-r">164</td>
+								</tr>
+								<tr>
+									<td>12個</td>
+									<td class="align-r">556</td>
+									<td class="align-r">242</td>
+									<td class="align-r">151</td>
+								</tr>
+								<tr>
+									<td>13個</td>
+									<td class="align-r">555</td>
+									<td class="align-r">236</td>
+									<td class="align-r">139</td>
+								</tr>
+								<tr>
+									<td>14個</td>
+									<td class="align-r">554</td>
+									<td class="align-r">225</td>
+									<td class="align-r">129</td>
+								</tr>
+								<tr>
+									<td>15個</td>
+									<td class="align-r">553</td>
+									<td class="align-r">219</td>
+									<td class="align-r">120</td>
+								</tr>
+								<tr>
+									<td>16個</td>
+									<td class="align-r">553</td>
+									<td class="align-r">209</td>
+									<td class="align-r">113</td>
+								</tr>
+								<tr>
+									<td>17個</td>
+									<td class="align-r">552</td>
+									<td class="align-r">203</td>
+									<td class="align-r">106</td>
+								</tr>
+								<tr>
+									<td>18個</td>
+									<td class="align-r">552</td>
+									<td class="align-r">198</td>
+									<td class="align-r">101</td>
+								</tr>
+								<tr>
+									<td>19個</td>
+									<td class="align-r">551</td>
+									<td class="align-r">187</td>
+									<td class="align-r">95</td>
+								</tr>
+								<tr>
+									<td>20個</td>
+									<td class="align-r">551</td>
+									<td class="align-r">182</td>
+									<td class="align-r">90</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<p class="caption">単位 : 円 / 台(税別)</p>
+				</section>
+				<section class="wrap">
+					<p class="tit">フロン類回収料金</p>
+					<div class="tbl-box">
+						<table class="data-tbl w100">
+							<caption class="blind">フロン類回収料金</caption>
+							<colgroup>
+								<col width="30%">
+								<col width="*">
+								<col width="25%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>車種クラス</th>
+									<th>車種クラスの定義</th>
+									<th>1台あたりの料金</th>
+								</tr>								
+							</thead>
+							<tbody>
+								<tr>
+									<td>乗用車等</td>
+									<td class="align-l">小型バス、大型バス以外</td>
+									<td class="align-r">225</td>
+								</tr>
+								<tr>
+									<td>小型バス</td>
+									<td class="align-l">全長7ｍ未満のバス</td>
+									<td class="align-r">421</td>
+								</tr>
+								<tr>
+									<td>大型バス</td>
+									<td class="align-l">全長7ｍ以上のバス</td>
+									<td class="align-r">768</td>
+								</tr>							
+							</tbody>
+						</table>
+					</div>
+					<p class="caption">単位 : 円 / 台(税別)</p>
+				</section>
+				<section class="wrap">
+					<p class="tit">シュレッダーダスト(ASR)回収料金</p>
+					<div class="tbl-box">
+						<table class="data-tbl w100">
+							<caption class="blind">シュレッダーダスト(ASR)回収料金</caption>
+							<colgroup>
+								<col width="40%">
+								<col width="*">
+							</colgroup>							
+							<tbody>
+								<tr>
+									<th class="align-c">1㎏あたりの料金</th>
+									<td class="align-r">32.7</td>
+								</tr>							
+							</tbody>
+						</table>
+					</div>
+					<p class="caption">単位 : 円 / 台(税別)</p>
+				</section>
+				<h4 class="page-tit">事務取扱手数料</h4>
+				<section class="wrap">
+					<div class="tbl-box">
+						<table class="data-tbl w100">
+							<caption class="blind">事務取扱手数料</caption>
+							<colgroup>
+								<col width="40%">
+								<col width="*">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>物品名</th>
+									<th>1台あたりの料金</th>
+								</tr>								
+							</thead>
+							<tbody>
+								<tr>
+									<td>エアバッグ類</td>
+									<td class="align-r">563</td>
+								</tr>
+								<tr>
+									<td>フロン類</td>
+									<td class="align-r">563</td>
+								</tr>
+								<tr>
+									<td>シュレッダーダスト(ASR)</td>
+									<td class="align-r">563</td>
+								</tr>							
+							</tbody>
+						</table>
+					</div>
+					<p class="caption">単位 : 円 / 台(税別)</p>
+				</section>
+				<h4 class="page-tit">エアバッグ類 / フロン類運搬料金</h4>
+				<section class="wrap">
+					<div class="cont-box">
+						<p class="txt">運搬料金について詳しくは自動化再資源化協力機構のホームページのPDFファイルをご参照ください。</p>
+						<div class="cta-outer row-type align-l">
+							<a class="btn btn-middle" href="http://www.jarp.org/pdfs/11/pdf/airbagunpan.pdf" target="_blank">
+								<span class="ico"><img src="../../assets/images/common/ico_pdf.svg" alt="pdf view"></span>
+								<span>エアバッグ類運搬料金</span>
+							</a>
+							<a class="btn btn-middle" href="http://www.jarp.org/pdfs/11/pdf/fronunpan.pdf" target="_blank">
+								<span class="ico"><img src="../../assets/images/common/ico_pdf.svg" alt="pdf view"></span>
+								<span>フロン類運搬料金</span>
+							</a>
+						</div>
+					</div>
 				</section>
             </div>           
             <button class="btn-close-popup btn-close">close</button>
         </div>
     </div>
 </div>
+<!-- // SC-FE-RE-111 팝업 -->
 
-<script>
-	jQuery.event.add(window, 'load', function () {
-		$('.pop-open.type1').trigger('click');
-	});
-</script>
+<!-- SC-RE-RE-112 팝업 -->
+<div class="layer-popup-wrap mo-full fix-center" data-pop-idx="SC-FE-RE-112">
+    <div class="layer-popup-body">
+        <div class="layer-popup-cont">
+            <h1 class="layer-title">バッテリーの取外方法</h1>
+            <div class="layer-cont">				
+				<section class="wrap">
+					<h4 class="page-tit">自動車バッテリーのリサイクル</h4>
+					<p class="txt">自動車解体事業者向けに電気自動車、PHEV、ハイブリッド自動車に搭載されているバッテリー(リチウムイオン電池、またはニッケル水素電池)の取外しと回収に関する詳しい情報(PDFオンラインマニュアル)を掲載しています。</p>
+					<p class="txt">自動車に搭載されているリチウムイオン電池やニッケル水素電池は、自動車リサイクル法のより「解体時の事前回収物品」として指定されています。</p>
+					<p class="txt">Hyundai自動車は、持続可能な社会と環境保全のために回収された使用済みバッテリーのリサイクルに積極的に取り組んでいます。車種別マニュアルをご参照のうえ、バッテリーの安全な取り外し、回収作業にご協力をお願いします。</p>
+				</section>
+				<section class="wrap">
+					<p class="tit">IONIQ5</p>
+					<div class="cont-box">
+						<div class="cta-outer row-type align-l">
+							<a class="btn btn-middle" href="#" target="_blank">
+								<span class="ico"><img src="../../assets/images/common/ico_pdf.svg" alt="pdf view"></span>
+								<span>取外しマニュアル</span>
+							</a>
+						</div>
+					</div>
+				</section>
+				<section class="wrap">
+					<p class="tit">NEXO</p>
+					<div class="cont-box">
+						<div class="cta-outer row-type align-l">
+							<a class="btn btn-middle" href="#" target="_blank">
+								<span class="ico"><img src="../../assets/images/common/ico_pdf.svg" alt="pdf view"></span>
+								<span>取外しマニュアル</span>
+							</a>
+						</div>
+					</div>
+				</section>
+				<div class="caution type2">
+					<ul>
+						<li>記載内容は、2022年4月5日のもので、予告なしに変更、あるいは終了することがあります。</li>
+					</ul>
+				</div>
+            </div>           
+			<button class="btn-close-popup btn-close">close</button>
+        </div>
+    </div>
+</div>
+<!-- // SC-RE-RE-112 팝업 -->
+
 </body>
 </html>

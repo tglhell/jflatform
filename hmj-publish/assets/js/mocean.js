@@ -7,7 +7,7 @@ $(function () {
 	} else {
 		scrItem = $('.scr-item');
 	}
-	
+
 	scrItem.on('mousewheel DOMMouseScroll', function (e) {
 		if (!$('html, body').is(':animated')) {
 			if (e.originalEvent.wheelDelta < 0) {
@@ -51,10 +51,6 @@ $(function () {
 					return;
 			}
 		}
-	});
-
-	$('.mocean').on('click', '.btn-scr', function () {
-		dirDown();
 	});
 
 	$('.hmj-footer').scroll(function () {
@@ -109,5 +105,96 @@ $(function () {
 			return false;
 		}
 		ftrCnt.removeClass('active');
+	}
+
+	var txtBox = $('.text-box');
+	var contH = $(txtBox).height();
+	$(txtBox).css({height: '84px'});
+	$('.txt-open').on('click', function(){
+		$(txtBox).toggleClass('active');
+		if(txtBox.hasClass('active')){
+			$(txtBox).css({height: contH});
+		}else{
+			$(txtBox).css({height: '84px'});
+		}
+	});
+
+
+	function videoControls(){
+		$('.video-box').each(function(){
+			var controlBtn = $(this).find('.btn-play');
+			var video = $(this).find('video');
+			var thumb = $(this).find('.img-thumb');
+			if (!$(this).hasClass('sep-m-p') || $(window).width() <= tbl) {	
+				$(controlBtn).on('click', function(){
+					$(controlBtn).fadeOut();
+					$(thumb).fadeOut();
+					$(video).get(0).play();
+				});
+				$(video).on('click', function(e){
+					e.preventDefault();
+					$(video).get(0).pause();
+					$(controlBtn).fadeToggle();
+				});
+				$(this).on('mousewheel DOMMouseScroll', function(){
+					$(controlBtn).fadeIn();
+					$(thumb).fadeIn();
+					$(video).get(0).pause();
+				});
+			}else{
+				$(video).get(0).play();
+			}
+		});
+	}
+	videoControls();
+
+	$(window).on('resize',function(){
+		videoControls();
+	});
+
+
+	if ($('.sample-swiper-num03').length == 1) {
+		let swpOpt = {},
+		slideLength = $('.sample-swiper-num03 .swiper-slide').length;
+		if (slideLength == 1) {
+			swpOpt = {
+				allowSlidePrev: false,
+				allowSlideNext: false,
+				simulateTouch: false
+			}
+			$('.sample-swiper-num03 [class*="swiper-button"]').hide();
+		} else {
+			swpOpt = {
+				pagination: {
+					el: '.sample-swiper-num03 .swiper-pagination',
+					clickable: true,
+				},
+				freeMode: true,
+				mousewheel: {
+					releaseOnEdges: true,
+					sensitivity: 2,
+				},
+				simulateTouch: true,
+				speed: 500,
+				loop: false,
+				spaceBetween: 0,
+				observer: true,
+				observeParents: true,
+				slidesPerView: 'auto',
+			}
+		}
+		let sampleSwp3 = new Swiper('.sample-swiper-num03 .swiper-container', swpOpt);
+		
+		sampleSwp3.on('reachBeginning', function(){
+			setObj(function(){
+				$('.scr-item.gall-chk').removeClass('gall');
+			}, secVal[0]);
+		});
+
+		sampleSwp3.on('reachEnd', function(){
+			setObj(function(){
+				$('.scr-item.gall-chk').removeClass('gall');
+			}, secVal[0]);
+		});
 	}
 });

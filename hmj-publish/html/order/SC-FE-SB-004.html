@@ -38,13 +38,13 @@
 						<!-- // 로그인 전 -->
 						<!-- 로그인 후 -->
 						<div class="account-box login">
-							<button class="btn-account">Account</button>
+							<span class="btn-account">Account</span>
 							<a href="#" class="btn-sign-link">
 								<span class="btn-sign-in">木村 拓哉 様</span>
-								<span class="btn-alarm">
-									<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
-									<span class="num"><span>2</span></span>
-								</span>
+							</a>
+							<a href="#" class="btn-alarm">
+								<img src="../assets/images/common/ico_alarm.svg" alt="alarm">
+								<span class="num"><span>2</span></span>
 							</a>
 						</div>
 						<!-- // 로그인 후 -->
@@ -333,7 +333,7 @@
                                     <label class="radio"><input type="radio" name="radio" id="radioChk02"><span>会社</span></label>
                                     <label class="radio"><input type="radio" name="radio" id="radioChk03"><span>その他</span></label>
                                 </div>
-								<div class="inp-outer-box">
+								<div class="inp-outer-box val-error"><!-- 유효성체크 val-error --><!-- 2021-11-25 추가 -->
                                     <label for="inpName01_01">受取人 <span class="required">*</span></label>
                                     <div class="inp-group-box mo-full">
                                         <div class="inp-area">
@@ -346,6 +346,8 @@
                                         </div>
                                     </div>
                                 </div>
+								<p class="error-msg lbl-type">errorMSG</p><!-- 2021-11-25 추가 -->
+
 								<div class="inp-outer-box">
                                     <label for="inpName01_01">受取人(フリガナ) <span class="required">*</span></label>
                                     <div class="inp-group-box mo-full">
@@ -359,6 +361,8 @@
                                         </div>
                                     </div>
                                 </div>
+								<p class="error-msg lbl-type">errorMSG</p><!-- 2021-11-25 추가 -->
+
                                 <div class="inp-outer-box">
                                     <label for="inpNum01_01">携帯電話 <span class="required">*</span></label>
                                     <div class="inp-slice-box">
@@ -378,6 +382,8 @@
                                         </div>
                                     </div>
                                 </div>
+								<p class="error-msg lbl-type">errorMSG</p><!-- 2021-11-25 추가 -->
+
                                 <div class="inp-outer-box inp-type post-type">
                                     <label for="inpNum01_01">住所 <span class="required">*</span></label>
                                     <div class="inp-group-box">
@@ -409,6 +415,8 @@
                                         </div>
                                     </div>
                                 </div>
+								<p class="error-msg lbl-type">errorMSG</p><!-- 2021-11-25 추가 -->
+
 							</div>
 						</div>
 						<!-- //배송지 없음 -->
@@ -490,59 +498,61 @@
 				</div>
 
                 <div class="cont-right">
-                    <div class="info-list">
-                        <div class="item">
-                            <div class="title">合計金額</div>
-                            <ul class="list-type1 flex-both">
-                                <li class="midterm">
-                                    <div class="tit">合計金額 <em>(税込)</em></div>
-                                    <div class="price">¥ 113,400</div>
-                                </li>
-                                <li>
-                                    <div class="tit">商品販売価格 <em>(税込)</em></div>
-                                    <div class="price">¥ 126,000</div>
-                                </li>
-                                <li>
-                                    <div class="tit">クーポン<br> <em>(新規登録クーポン10%)</em></div>
-                                    <div class="price">(-) ¥ 12,600</div>
-                                </li>
-                            </ul>
-                            <ul class="list-type1 flex-both">
-                                <li class="midterm">
-                                    <div class="tit">送料合計</div>
-                                    <div class="price">¥ 1,750</div>
-                                </li>
-                                <li>
-                                    <div class="tit">送料 <em>(2件)</em></div>
-                                    <div class="price">¥ 1,000</div>
-                                </li>
-                                <li>
-                                    <div class="tit">追加送料 <em>(1件)</em></div>
-                                    <div class="price">¥ 750</div>
-                                </li>
-                            </ul>
-                            <ul class="list-type1 flex-both">
-                                <li class="total">
-                                    <div class="name">合計金額 <em>(税込)</em></div>
-                                    <div class="price">¥ 115,150</div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+					<div class="scr-fix-box js-is-sticky"><!-- 2021-12-01 div 추가 -->
+						<div class="info-list">
+							<div class="item">
+								<div class="title">合計金額</div>
+								<ul class="list-type1 flex-both">
+									<li class="midterm">
+										<div class="tit">合計金額 <em>(税込)</em></div>
+										<div class="price">¥ 113,400</div>
+									</li>
+									<li>
+										<div class="tit">商品販売価格 <em>(税込)</em></div>
+										<div class="price">¥ 126,000</div>
+									</li>
+									<li>
+										<div class="tit">クーポン(新規登録クーポン10%新規登録クーポン10%新規登録クーポン10%新規登録クーポン10%新規登録クーポン10%)</div>
+										<div class="price">(-) ¥ 12,600</div>
+									</li>
+								</ul>
+								<ul class="list-type1 flex-both">
+									<li class="midterm">
+										<div class="tit">送料合計</div>
+										<div class="price">¥ 1,750</div>
+									</li>
+									<li>
+										<div class="tit">送料 <em>(2件)</em></div>
+										<div class="price">¥ 1,000</div>
+									</li>
+									<li>
+										<div class="tit">追加送料 <em>(1件)</em></div>
+										<div class="price">¥ 750</div>
+									</li>
+								</ul>
+								<ul class="list-type1 flex-both">
+									<li class="total">
+										<div class="name">合計金額 <em>(税込)</em></div>
+										<div class="price">¥ 115,150</div>
+									</li>
+								</ul>
+							</div>
+						</div>
 
-                    <!-- 모바일 고정영역 -->
-                    <div class="mo-bottom-fixed">
-                        <div class="check-terms"> 
-                            <label class="chk"><input type="checkbox"><span><em>[必須]</em> 購入利用規約にすべて同意する。</span>
-                                <a href="#" class="btn-text2">詳細</a>
-                            </label>
-                            <p class="error-msg">error text</p>
-                        </div>
-                        <div class="cta-outer col-type full-type">
-                            <button class="btn btn-type2"><span>ご注文</span></button>
-                        </div>
-                    </div>
-                    <!-- // 모바일 고정영역 -->
+						<!-- 모바일 고정영역 -->
+						<div class="mo-bottom-fixed">
+							<div class="check-terms"> 
+								<label class="chk"><input type="checkbox"><span><em>[必須]</em> 購入利用規約にすべて同意する。</span>
+									<a href="#" class="btn-text2">詳細</a>
+								</label>
+								<p class="error-msg">error text</p>
+							</div>
+							<div class="cta-outer col-type full-type">
+								<button class="btn btn-type2"><span>ご注文</span></button>
+							</div>
+						</div>
+						<!-- // 모바일 고정영역 -->
+					</div>
                 </div>
                 <!-- //cont-right -->
             </div>

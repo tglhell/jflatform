@@ -39,13 +39,13 @@
 						<!-- // 로그인 전 -->
 						<!-- 로그인 후 -->
 						<div class="account-box login">
-							<button class="btn-account">Account</button>
+							<span class="btn-account">Account</span>
 							<a href="#" class="btn-sign-link">
 								<span class="btn-sign-in">木村 拓哉 様</span>
-								<span class="btn-alarm">
-									<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
-									<span class="num"><span>2</span></span>
-								</span>
+							</a>
+							<a href="#" class="btn-alarm">
+								<img src="../assets/images/common/ico_alarm.svg" alt="alarm">
+								<span class="num"><span>2</span></span>
 							</a>
 						</div>
 						<!-- // 로그인 후 -->
@@ -620,8 +620,8 @@
 
 <!-- chart script -->
 <script>
-	$(function () {
-		let numVal = 105; //소비된 일수
+	jQuery.event.add(window, 'load', function () {
+		let numVal = 4; //소비된 일수
 		function progress() {
 			let progressItem = [$('.progress-top') , $('.progress-bottom'), $('.progress-ing'), $('.progress-num')];
 			let svgLeng = $('.svg-outer-box').length;
@@ -631,12 +631,12 @@
 			let dayCntNum = day - numVal;
 			for (let i = day; i >= dayCntNum; i--) {
 				$(function (i) {
-					setObj(function () {
+					setTimeout(function () {
 						progressItem[3].text((day + dayCntNum) - i + '日');
 					}, (decimalVal * twoDig[0]) * i);
 				}(i));
 			}
-			setObj(function () {
+			setTimeout(function () {
 				for (let j = 0; j < svgLeng; j++ ) {
 					let svgItem = $('.svg-outer-box:nth-child(' + (j + irNum[0]) + ')');
 					for (let i = 1; i <= 2; i++ ) progressItem[i].css('stroke-dasharray', circumference[j]);
@@ -651,7 +651,7 @@
 					}
 				}
 			}, ((day - numVal) / secVal[0] * decimalVal) * mSecond);
-			setObj(function () {
+			setTimeout(function () {
 				switch(numVal) {
 					case day:
 						for (let i = 0; i <= 1; i++ ) progressItem[i].fadeOut(secVal[1]);
@@ -659,13 +659,7 @@
 				}
 			}, ((numVal / secVal[0]) * decimalVal) * mSecond);
 		}
-		if (numVal > twoDig[5]) {
-			setObj(function () {
-				progress();
-			}, secVal[4]);
-		} else {
-			progress();
-		}
+		progress();
 	});
 </script>
 <!-- // chart script -->

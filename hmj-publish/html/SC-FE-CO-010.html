@@ -15,7 +15,6 @@
 	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/swiper.min.js"></script>
-	<script type="text/javascript" src="../assets/js/lib/customlib.js"></script>
 	<script type="text/javascript" src="../assets/js/common.js"></script>
 	<script type="text/javascript" src="../assets/js/main.js"></script>
 </head>
@@ -47,10 +46,10 @@
 							<span class="btn-account">Account</span>
 							<a href="#" class="btn-sign-link">
 								<span class="btn-sign-in">木村 拓哉 様</span>
-								<span class="btn-alarm">
-									<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
-									<span class="num"><span>2</span></span>
-								</span>
+							</a>
+							<a href="#" class="btn-alarm">
+								<img src="../assets/images/common/ico_alarm.svg" alt="alarm">
+								<span class="num"><span>2</span></span>
 							</a>
 						</div>
 						<!-- // 로그인 후 -->
@@ -62,7 +61,10 @@
 								<a href="#">NEXO</a>
 							</li>
 							<li class="ir-item">
-								<a href="#">SHOW ROOM</a>
+								<a href="#">Virtual Showroom</a>
+							</li>
+							<li class="ir-item">
+								<a href="#">Digital Brand Studio</a>
 							</li>
 							<li class="ir-item">
 								<button class="btn-depth-switch inner-depth"><span>PURCHASE</span></button>
@@ -204,10 +206,17 @@
 							<li class="ir-item">
 								<a href="#">MOCEAN</a>
 							</li>
-							<li class="ir-item">
+							<li class="ir-item mo-only">
 								<a href="#">SHOP</a>
 							</li>
+							<li class="ir-item mo-only">
+								<a href="#">CART</a>
+							</li>
 						</ul>
+						<div class="btn-box">
+							<button class="btn-sign-out"><span>Sign out</span></button>
+							<!-- <button class="btn-setting mo-only"><span>Settings</span></button> -->
+						</div>
 						<button class="btn-menu-close"><span>close</span></button>
 					</div>
 				</div>
@@ -216,7 +225,8 @@
 					<ul class="mid-list">
 						<li><a href="#"><span>IONIQ 5</span></a></li>
 						<li><a href="#"><span>NEXO</span></a></li>
-						<li><a href="#"><span>SHOW ROOM</span></a></li>
+						<li><a href="#"><span>Virtual Showroom</span></a></li>
+						<li><a href="#"><span>Digital Brand Studio</span></a></li>
 					</ul>
 				</div>
 
@@ -288,6 +298,7 @@
 				<div class="lineup-wrap">
 					<div class="top-tit-cont">
 						<h2>Line up</h2>
+						<p class="top-desc">ラインナップ</p>
 					</div>
 					
 					<div class="swiper-outer-box main-item-swiper">
@@ -298,12 +309,34 @@
 										<div class="car-item-text">
 											<strong class="item-tit">IONIQ 5</strong>
 											<p class="item-desc">A new generation<br>of cabin styling.</p>
+											<div class="btn-box">
+												<a href="#" class="btn-desc">詳しくみる</a>
+											</div>
+											<div class="item-info-box">
+												<ul>
+													<li>
+														<div class="info-list-item">
+															<p class="list-tit">走行可能距離</p>
+															<p class="list-unit"><strong>430</strong><span>Km</span></p>
+														</div>
+													</li>
+													<li>
+														<div class="info-list-item">
+															<p class="list-tit">燃費</p>
+															<p class="list-unit"><strong>5.1</strong><span>KmKwh</span></p>
+														</div>
+													</li>
+													<li>
+														<div class="info-list-item">
+															<p class="list-tit">最大出力</p>
+															<p class="list-unit"><strong>125.0</strong><span>KW</span></p>
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
 										<div class="car-item">
 											<img src="../assets/images/main/@img_main_sample_new.png" class="Car Image">
-										</div>
-										<div class="btn-box">
-											<a href="#" class="btn-desc">Discover the IONIQ 5</a>
 										</div>
 									</div>
 								</div>
@@ -312,12 +345,34 @@
 										<div class="car-item-text">
 											<strong class="item-tit">NEXO</strong>
 											<p class="item-desc">A new generation<br>of cabin styling.</p>
+											<div class="btn-box">
+												<a href="#" class="btn-desc">詳しくみる</a>
+											</div>
+											<div class="item-info-box">
+												<ul>
+													<li>
+														<div class="info-list-item">
+															<p class="list-tit">走行可能距離</p>
+															<p class="list-unit"><strong>430</strong><span>Km</span></p>
+														</div>
+													</li>
+													<li>
+														<div class="info-list-item">
+															<p class="list-tit">燃費</p>
+															<p class="list-unit"><strong>5.1</strong><span>KmKwh</span></p>
+														</div>
+													</li>
+													<li>
+														<div class="info-list-item">
+															<p class="list-tit">最大出力</p>
+															<p class="list-unit"><strong>125.0</strong><span>KW</span></p>
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
 										<div class="car-item">
 											<img src="../assets/images/main/@img_main_sample_new2.png" class="Car Image">
-										</div>
-										<div class="btn-box">
-											<a href="#" class="btn-desc">Discover the NEXO</a>
 										</div>
 									</div>
 								</div>
@@ -326,12 +381,34 @@
 										<div class="car-item-text">
 											<strong class="item-tit">IONIQ 6</strong>
 											<p class="item-desc">A new generation<br>of cabin styling.</p>
+											<div class="btn-box">
+												<a href="#" class="btn-desc">詳しくみる</a>
+											</div>
+											<div class="item-info-box">
+												<ul>
+													<li>
+														<div class="info-list-item">
+															<p class="list-tit">走行可能距離</p>
+															<p class="list-unit"><strong>430</strong><span>Km</span></p>
+														</div>
+													</li>
+													<li>
+														<div class="info-list-item">
+															<p class="list-tit">燃費</p>
+															<p class="list-unit"><strong>5.1</strong><span>KmKwh</span></p>
+														</div>
+													</li>
+													<li>
+														<div class="info-list-item">
+															<p class="list-tit">最大出力</p>
+															<p class="list-unit"><strong>125.0</strong><span>KW</span></p>
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
 										<div class="car-item">
 											<img src="../assets/images/main/@img_main_sample_new.png" class="Car Image">
-										</div>
-										<div class="btn-box">
-											<a href="#" class="btn-desc">Discover the IONIQ 6</a>
 										</div>
 									</div>
 								</div>
@@ -339,50 +416,59 @@
 						</div>
 						<div class="swiper-button-prev"></div>
 						<div class="swiper-button-next"></div>
-						<div class="swiper-pagination"></div>
 					</div>
 				</div>
 				<div class="brand-wrap">
 					<div class="top-tit-cont">
 						<h2>Brand</h2>
-						<p class="tit-txt">We share technology and engineering expertise <br>Volvo Car Group, yet we go our own way.</p>
+						<p class="top-desc">ブランド</p>
 					</div>
 					<div class="swiper-outer-box brand-list-cont">
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
-									<img src="../assets/images/@goods_img01.jpg" alt="sample01">
+									<img src="../assets/images/main/img_goods_01.png" alt="sample01">
 									<div class="tit-cont">
 										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
-										<button class="btn btn-type2"><span>もっと見る</span></button>
+										<div class="btn-box">
+											<a href="#" class="btn-desc">詳しくみる</a>
+										</div>
 									</div>
 								</div>
 								<div class="swiper-slide">
-									<img src="../assets/images/@goods_img02.jpg" alt="sample02">
+									<img src="../assets/images/main/img_goods_02.png" alt="sample02">
 									<div class="tit-cont">
 										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
-										<button class="btn btn-type2"><span>もっと見る</span></button>
+										<div class="btn-box">
+											<a href="#" class="btn-desc">詳しくみる</a>
+										</div>
 									</div>
 								</div>
 								<div class="swiper-slide">
-									<img src="../assets/images/@goods_img03.jpg" alt="sample02">
+									<img src="../assets/images/main/img_goods_03.png" alt="sample02">
 									<div class="tit-cont">
 										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
-										<button class="btn btn-type2"><span>もっと見る</span></button>
+										<div class="btn-box">
+											<a href="#" class="btn-desc">詳しくみる</a>
+										</div>
 									</div>
 								</div>
 								<div class="swiper-slide">
-									<img src="../assets/images/@goods_img04.jpg" alt="sample02">
+									<img src="../assets/images/main/img_goods_01.png" alt="sample02">
 									<div class="tit-cont">
 										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
-										<button class="btn btn-type2"><span>もっと見る</span></button>
+										<div class="btn-box">
+											<a href="#" class="btn-desc">詳しくみる</a>
+										</div>
 									</div>
 								</div>
 								<div class="swiper-slide">
-									<img src="../assets/images/@goods_img05.jpg" alt="sample02">
+									<img src="../assets/images/main/img_goods_02.png" alt="sample02">
 									<div class="tit-cont">
 										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
-										<button class="btn btn-type2"><span>もっと見る</span></button>
+										<div class="btn-box">
+											<a href="#" class="btn-desc">詳しくみる</a>
+										</div>
 									</div>
 								</div>
 							</div>

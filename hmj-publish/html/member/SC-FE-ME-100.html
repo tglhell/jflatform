@@ -104,7 +104,7 @@
 						<label for="inpTel01_01">携帯電話 <span class="required">*</span></label>
 						<div class="inp-slice-box">
 							<div class="slt-box type2">
-								<p class="selected-value">+44 United Kingdom</p>
+								<p class="selected-value">+44</p>
 								<ul class="select-items">
 									<li>+44 United Kingdom</li>
 									<li>+420 Czech Republic</li>
@@ -139,7 +139,7 @@
 							<div class="inp-area">
 								<input type="text" id="inpNum01_05_1" class="inp-item" placeholder="08012345678">
 							</div>
-							<button class="btn btn-type btn-tbl" disabled><span>送信</span></button><!-- 입력전 disabled -->
+							<button class="btn btn-type3 btn-tbl"><span>送信</span></button><!-- 입력전 disabled --><!-- 2021-11-25 수정 -->
 						</div>
 					</div>
 					<p class="error-msg lbl-type">電話番号を入力してください。</p>
@@ -152,25 +152,29 @@
 								<ul class="select-items">
 									<li>81</li>
 									<li>82</li>
+									<li>83</li>
+									<li>84</li>
+									<li>85</li>
 								</ul>
 							</div>
 							<div class="inp-area">
 								<input type="text" id="inpNum01_05_2" class="inp-item" placeholder="08012345678">
 							</div>
-							<button class="btn btn-type btn-tbl"><span>再送信</span></button>
+							<button class="btn btn-type3 btn-tbl"><span>再送信</span></button><!-- 2021-11-25 수정 -->
 						</div>
 					</div>
 					<p class="error-msg lbl-type">認証コードが送信されました。</p>
 					<!-- //재전송 시 -->
-					<div class="inp-outer-box inp-type val-error"><!-- 에러 메시지 사용시 클래스 val-error 추가-->
+
+					<div class="inp-outer-box inp-type val-error time-type"><!-- 에러 메시지 사용시 클래스 val-error 추가--> <!-- 2021-11-25 수정 -->
 						<label for="inpNum01_011">認証確認 <span class="required">*</span></label>
 						<div class="inp-btn-box">
 							<div class="inp-area">
-								<input type="text" id="inpNum01_011" class="inp-item" placeholder="６ケタ数字" style="padding-right: 146px;">
-								<button class="inp-close" style="right: 120px;"></button>
+								<input type="text" id="inpNum01_011" class="inp-item" placeholder="６ケタ数字">
+								<button class="inp-close"></button>
+								<span class="time-num">03:00</span><!-- 인증번호 발송시 추가 --> <!-- 2021-11-25 수정 -->
 							</div>
-							<span class="time-num">03:00</span><!-- 인증번호 발송시 추가 -->
-							<button class="btn btn-type2 btn-tbl" disabled><span>認証</span></button><!-- 입력전 disabled -->
+							<button class="btn btn-type3 btn-tbl"><span>認証</span></button><!-- 입력전 disabled --><!-- 2021-11-25 수정 -->
 						</div>
 					</div>
 					<p class="error-msg lbl-type">認証コードをお確かめください。</p>
@@ -218,12 +222,6 @@
 		</div>
 	</div>
 	<!--//footer : 로그인후 -->
-</div>
-
-<div class="btn-top-box">
-	<a href="#" title="move to top" role="button" class="btn-top">
-		<span class="blind">Top</span>
-	</a>
 </div>
 
 <script>

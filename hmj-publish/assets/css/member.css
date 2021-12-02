@@ -63,41 +63,6 @@
     transition:all 0.5s ease;
 } */
 
-
-/* S: 로그인 */
-.login-gate .tit {
-	display: block;
-	margin-bottom: 16px;
-	font-size: 32px;
-	font-weight: 500;
-	line-height: 1.63;
-	text-align: center;
-	color: #002c5f;
-}
-.login-gate .alert-desc {
-	font-size: 14px;
-	line-height: 1.57;
-}
-.login-gate .cta-outer {
-	display: block;
-}
-.login-gate .cta-outer .btn + .btn {
-	margin: 8px 0 0 0;
-}
-@media screen and (max-width: 1119px) { 
-	.login-gate .tit {
-		font-size: 24px;
-		line-height: 1.58;
-	}
-	.login-gate .alert-desc {
-		font-size: 12px;
-		line-height: 1.67;
-	}
-}
-/* E: 로그인 */
-
-
-
 /* S: 회원가입 */
 .hmj-container.login {
 	min-height: calc(100vh - 206px);
@@ -167,6 +132,12 @@
 	}
 	.login .inp-outer-box .inp-item {
 		background: transparent;
+	}
+	.login .form-cont .tel-type .inp-slice-box {
+		flex-wrap: wrap;
+	}
+	.login .inp-outer-box.tel-type .inp-slice-box .slt-box {
+		width: 100%;
 	}
 }
 
@@ -449,8 +420,7 @@
 .chk-cont-wrap .chk-txt {
 	margin-top: 8px;
 	font-size: 12px;
-	color: #999;
-	text-align: right;
+	color: #e63312;
 	line-height: 1.67;
 }
 .chk-cont-wrap .chk-cont {
@@ -669,7 +639,7 @@
 
 /* s : other select box case */
 .slt-box.type2 .selected-value {
-	min-width: 208px;
+	min-width: 100px;
 	padding-right: 60px;
 }
 .inp-outer-box.tel-type .inp-slice-box .slt-box {
@@ -678,6 +648,7 @@
 }
 .slt-box.type2 .select-items {
 	overflow-y: auto;
-	max-height: 960px;
+	min-width: 208px;
+	max-height: 192px;
 }
 /* e : other select box case */

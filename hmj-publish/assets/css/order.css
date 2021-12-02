@@ -140,8 +140,9 @@
     content: '在庫切れ';
     display: block;
     min-width: 56px;
-    height: 22px;
-    padding: 10px 20px 8px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -266,8 +267,8 @@
     display: inline-flex;
     margin-top: 24px;
 }
-.info-list .sub-tit strong {
-    padding-left: 8px
+.info-list .sub-tit .text-flag {
+    margin-right: 8px
 }
 .info-list .list-type1 {
     padding-top: 24px;
@@ -294,6 +295,9 @@
     color: #999;
     min-width: 160px;
     margin-right: 32px;
+}
+.info-list .list-type1.flex-both li .tit {
+    flex: 1;
 }
 .info-list .list-type1 li .price {
     color: #999;
@@ -357,7 +361,6 @@
     }
     .info-list .sub-tit strong {
         margin-top: 8px;
-        padding-left: 0;
     }
     .info-list .list-type1 {
         padding-top: 16px;
@@ -538,6 +541,8 @@
     .list-payment .tit {
         margin: 0;
         font-size: 12px;
+        margin-right: 16px;
+        flex: 1;
     }
     .list-payment .price {
         margin: 0;

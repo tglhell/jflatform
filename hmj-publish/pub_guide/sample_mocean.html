@@ -17,7 +17,7 @@
 	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
 	<script type="text/javascript" src="../assets/js/common.js"></script>
 	<script type="text/javascript" src="../assets/js/mocean.js"></script>
-	<script type="text/javascript" src="../assets/js/lib/swiper.min.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/swiper.min.old.ver.js"></script>
 	<style>
 		/* main */
 		html {
@@ -40,9 +40,6 @@
 		.mocean .header-fixed {
 			-webkit-backdrop-filter: blur(80px);
 			backdrop-filter: blur(80px);
-		}
-		.ios .mocean .header-fixed {
-			top: -52px;
 		}
 		.mocean .sub-cont {
 			border: 1px solid rgb(233, 233, 233, .1);
@@ -256,13 +253,13 @@
 						<!-- // 로그인 전 -->
 						<!-- 로그인 후 -->
 						<div class="account-box login">
-							<button class="btn-account">Account</button>
+							<span class="btn-account">Account</span>
 							<a href="#" class="btn-sign-link">
 								<span class="btn-sign-in">木村 拓哉 様</span>
-								<span class="btn-alarm">
-									<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
-									<span class="num"><span>2</span></span>
-								</span>
+							</a>
+							<a href="#" class="btn-alarm">
+								<img src="../assets/images/common/ico_alarm.svg" alt="alarm">
+								<span class="num"><span>2</span></span>
 							</a>
 						</div>
 						<!-- // 로그인 후 -->
@@ -798,6 +795,7 @@
 					loop: false,
 					spaceBetween: 0,
 					observer: true,
+					slidesPerView: 'auto',
 					observeParents: true,
 				}
 			}

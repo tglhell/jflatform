@@ -38,13 +38,13 @@
 						<!-- // 로그인 전 -->
 						<!-- 로그인 후 -->
 						<div class="account-box login">
-							<button class="btn-account">Account</button>
+							<span class="btn-account">Account</span>
 							<a href="#" class="btn-sign-link">
 								<span class="btn-sign-in">木村 拓哉 様</span>
-								<span class="btn-alarm">
-									<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
-									<span class="num"><span>2</span></span>
-								</span>
+							</a>
+							<a href="#" class="btn-alarm">
+								<img src="../assets/images/common/ico_alarm.svg" alt="alarm">
+								<span class="num"><span>2</span></span>
 							</a>
 						</div>
 						<!-- // 로그인 후 -->
@@ -393,7 +393,7 @@
                         <label class="radio"><input type="radio" name="radio" id="radioChk03"><span>その他</span></label>
                     </div>
                     <div class="list-type1">
-                        <div class="inp-outer-box">
+                        <div class="inp-outer-box val-error"><!-- 유효성체크 val-error --><!-- 2021-11-25 추가 -->
                             <label for="inpName01_01">受取人 <span class="required">*</span></label>
                             <div class="inp-group-box mo-full">
                                 <div class="inp-area">
@@ -406,6 +406,8 @@
                                 </div>
                             </div>
                         </div>
+						<p class="error-msg lbl-type">errorMSG</p><!-- 2021-11-25 추가 -->
+
                         <div class="inp-outer-box">
                             <label for="inpName01_01">受取人(フリガナ) <span class="required">*</span></label>
                             <div class="inp-group-box mo-full">
@@ -419,6 +421,8 @@
                                 </div>
                             </div>
                         </div>
+						<p class="error-msg lbl-type">errorMSG</p><!-- 2021-11-25 추가 -->
+
                         <div class="inp-outer-box">
                             <label for="inpNum01_01">携帯電話 <span class="required">*</span></label>
                             <div class="inp-slice-box">
@@ -438,7 +442,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="inp-outer-box inp-type post-type">
+						<p class="error-msg lbl-type">errorMSG</p><!-- 2021-11-25 추가 -->
+
+                        <div class="inp-outer-box inp-type post-type val-error">
                             <label for="inpNum01_01">住所 <span class="required">*</span></label>
                             <div class="inp-group-box">
                                 <div class="inp-btn-box">
@@ -469,6 +475,7 @@
                                 </div>
                             </div>
                         </div>
+						<p class="error-msg lbl-type">errorMSG</p><!-- 2021-11-25 추가 -->
                     </div>
                 </div>
             </div>

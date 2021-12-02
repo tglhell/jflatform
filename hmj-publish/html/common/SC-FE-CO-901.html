@@ -1,0 +1,931 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>HMJ</title>
+
+	<link rel="stylesheet" href="../../assets/css/lib/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/lib/customlib.css">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+	<link rel="stylesheet" href="../../assets/css/purchase.css">
+	<link rel="stylesheet" href="../../assets/css/shop.css">
+    <link rel="stylesheet" href="../../assets/css/contents.css">
+	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/swiper.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
+	<script type="text/javascript" src="../../assets/js/common.js"></script>
+</head>
+
+<body>
+
+<div class="hmj-wrap"> <!-- test 클래스는 제거 예정 : 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+	<div class="skip-nav">
+		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
+	</div>
+
+	<!-- header -->
+	<div class="hmj-header"><!-- 백버튼 있는타입 hc-type2 -->
+		<!-- header -->
+		<div class="header-outer">
+			<div class="header-cont">
+				<h1><a href="hmj_layout.html"><img src="../../assets/images/common/ico_header_logo.svg" alt="Hyundai Logo"></a></h1>
+
+				<div class="gnb-menu-outer">
+					<div class="gnb-menu-box blur">
+						<!-- 로그인 전 -->
+						<!-- <div class="account-box">
+							<button class="btn-account">Account</button>
+							<button class="btn-sign-in">Sign in</button>
+						</div> -->
+						<!-- // 로그인 전 -->
+						<!-- 로그인 후 -->
+						<div class="account-box login">
+							<span class="btn-account">Account</span>
+							<a href="#" class="btn-sign-link">
+								<span class="btn-sign-in">木村 拓哉 様</span>
+							</a>
+							<a href="#" class="btn-alarm">
+								<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
+								<span class="num"><span>2</span></span>
+							</a>
+						</div>
+						<!-- // 로그인 후 -->
+						<ul class="gnb-menu-list ir-count inner-scroll-y">
+							<li class="ir-item">
+								<a href="#">IONIQ 5</a>
+							</li>
+							<li class="ir-item">
+								<a href="#">NEXO</a>
+							</li>
+							<li class="ir-item">
+								<a href="#">SHOW ROOM</a>
+							</li>
+							<li class="ir-item">
+								<button class="btn-depth-switch inner-depth"><span>PURCHASE</span></button>
+								<div class="menu-inner-depth">
+									<button class="btn-depth-prev"><span>Back</span></button>
+									<p class="inner-depth-tit">PURCHASE</p>
+									<ul class="ir-count inner-scroll-y">
+										<li class="ir-item">
+											<button class="btn-depth-switch toggle-menu"><span>購入ガイド</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">オンライン購入のご案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">今月の購入特典</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">政府補助金</a>
+												</li>
+											</ul>
+										</li>
+										<li class="ir-item">
+											<button class="btn-depth-switch toggle-menu"><span>見積/試乗</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">オンライン購入のご案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">今月の購入特典</a>
+												</li>
+											</ul>
+										</li>
+										<li class="ir-item">
+											<a href="#">購入相談申込</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">仕様百科</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">ダウンロード</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">My Referralプログラム</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">ブランド拠点</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="ir-item">
+								<button class="btn-depth-switch inner-depth"><span>SERVICE</span></button>
+								<div class="menu-inner-depth">
+									<button class="btn-depth-prev"><span>Back</span></button>
+									<p class="inner-depth-tit">SERVICE</p>
+									<ul class="ir-count inner-scroll-y">
+										<li class="ir-item">
+											<a href="#">Hyundaiサービス</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">充電サービス</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">Hyundaiロードサイド・アシスタンス</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">整備予約</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">リコール情報</a>
+										</li>
+										<li class="ir-item">
+											<button class="btn-depth-switch toggle-menu"><span>BLUELINK</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">ご利用案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+											</ul>
+										</li>
+										<li class="ir-item">
+											<button class="btn-depth-switch toggle-menu"><span>ビルトインカメラ</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">ご利用案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+											</ul>
+										</li>
+										<li class="ir-item">
+											<a href="#">ナビ/カメラアップデート</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">提携サービス</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">アプリ設置</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="ir-item">
+								<button class="btn-depth-switch inner-depth"><span>BRAND</span></button>
+								<div class="menu-inner-depth">
+									<button class="btn-depth-prev"><span>Back</span></button>
+									<p class="inner-depth-tit">BRAND</p>
+									<ul class="ir-count inner-scroll-y">
+										<li class="ir-item">
+											<a href="#">購入ガイド</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">見積/試乗</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">購入相談申込</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="ir-item">
+								<a href="#">MOCEAN</a>
+							</li>
+							<li class="ir-item">
+								<a href="#">SHOP</a>
+							</li>
+						</ul>
+						<button class="btn-menu-close"><span>close</span></button>
+					</div>
+				</div>
+
+				<div class="gnb-mid-menu">
+					<ul class="mid-list">
+						<li><a href="#"><span>IONIQ 5</span></a></li>
+						<li><a href="#"><span>NEXO</span></a></li>
+						<li><a href="#"><span>SHOW ROOM</span></a></li>
+					</ul>
+				</div>
+
+				<div class="gnb-right-menu">
+					<ul class="gnb-right-list">
+						<li>
+							<button class="btn-cart pc-only"><span><img src="../../assets/images/common/ico_cart.svg" alt="cart"></span></button>
+						</li>
+						<li>
+							<button class="btn-search"><span><img src="../../assets/images/common/ico_search.svg" alt="search"></span></button>
+							<div class="gnb-search-dim">
+								<div class="search-outer-box">
+									<div class="search-cont">
+										<div class="inp-outer-box">
+											<div class="inp-area">
+												<input type="text" class="inp-item" placeholder="検索キーワードを入力してください。">
+												<button class="inp-close"></button>
+											</div>
+										</div>
+										<div class="btn-box">
+											<button class="btn-search-inner">검색</button>
+											<button class="btn-search-close">검색 종료</button>
+										</div>
+									</div>
+									<div class="keyword-box">
+										<p class="top-text">最近検索ワード</p>
+										<ul>
+											<li>モデル <button class="btn-del">삭제</button></li>
+											<li>IONIQ 5 <button class="btn-del">삭제</button></li>
+											<li>NEXO <button class="btn-del">삭제</button></li>
+											<li>恵沢 <button class="btn-del">삭제</button></li>
+											<li>イベント <button class="btn-del"></button></li>
+										</ul>
+										<button class="btn-keyword-del">すべて削除</button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button class="btn-menu"><span><img src="../../assets/images/common/ico_menu.svg" alt="menu"></span></button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//header -->
+
+	<!-- container -->
+	<div id="hmjContainer" class="hmj-container unified-search">
+		<div class="hmj-content">
+			<div class="top-tit-box">
+                <h2>統合検索</h2>
+				<div class="inp-outer-box inp-type">
+					<div class="inp-btn-box">
+						<div class="inp-area">
+							<input type="search" id="searchForm01" class="inp-item" placeholder="統合検索">
+							<button class="inp-close"></button>
+						</div>
+						<button class="btn-tbl btn-search"><span>icon</span></button>
+					</div>
+				</div>
+            </div>
+			<div class="cont-outer">
+                <div class="tab-box-outer">
+					<!-- s : no data -->
+					<div class="js-tab x-scroll">
+						<ul class="btns-list tab-box-list">
+							<li class="active"><button type="button" data-keyword="全体">全体 (<span class="num">30</span>)</button> <!-- 버튼 활성화 시 on class 추가 --></li>
+							<li><button type="button" data-keyword="車種">車種 (<span class="num">5</span>)</button></li>
+							<li><button type="button" data-keyword="仕様百科">仕様百科 (<span class="num">4</span>)</button></li>
+							<li><button type="button" data-keyword="FAQ">FAQ (<span class="num">15</span>)</button></li>
+							<li><button type="button" data-keyword="SHOP">SHOP (<span class="num">11</span>)</button></li>
+						</ul>
+					</div>
+
+					<div class="no-data">
+						<p class="tit">&ldquo;<span class="fc-color3">モーベル a14060</span>&rdquo;  に一致する情報は見つかりませんでした</p>
+						<p class="desc">誤字・脱字がないかを確認してみてください。<br>キーワードを変えてみてください。<br>より一般的なキーワードを使ってみてください。</p>
+					</div>
+					<!-- e : no data -->
+
+					<br><br>
+
+					<!-- s : data -->
+					<div class="js-tab x-scroll">
+						<ul class="btns-list tab-box-list">
+							<li class="active"><button type="button" data-keyword="全体">全体 (<span class="num">30</span>)</button> <!-- 버튼 활성화 시 on class 추가 --></li>
+							<li><button type="button" data-keyword="車種">車種 (<span class="num">5</span>)</button></li>
+							<li><button type="button" data-keyword="仕様百科">仕様百科 (<span class="num">4</span>)</button></li>
+							<li><button type="button" data-keyword="FAQ">FAQ (<span class="num">15</span>)</button></li>
+							<li><button type="button" data-keyword="SHOP">SHOP (<span class="num">11</span>)</button></li>
+						</ul>
+					</div>
+
+					<div class="tab-search-menu">
+						<strong class="cont-tit">&lsquo;<span class="fc-color3">モデル</span>&rsquo; メニュー</strong>
+						<div class="history">
+							<a href="#"><span class="fc-color3">モデル</span></a>
+							<a href="#">購入情報</a>
+							<a href="#">自分の車づくり</a>
+						</div>
+						<div class="history">
+							<a href="#">メンバーシップ&amp;車両管理</a>
+							<a href="#">現代デジタルキー</a>
+							<a href="#">顧客サポート</a>
+							<a href="#">車両及びスマートフォン<span class="fc-color3">モデル</span>案内</a>
+						</div>
+						<div class="history">
+							<a href="#"><span class="fc-color3">モデル</span></a>
+							<a href="#">購入情報</a>
+							<a href="#">自動車仕様百科</a>
+						</div>
+						<div class="history">
+							<a href="#"><span class="fc-color3">モデル</span></a>
+							<a href="#">購入情報</a>
+							<a href="#">詳細モデル検索</a>
+						</div>
+						<div class="history">
+							<a href="#"><span class="fc-color3">モデル</span></a>
+							<a href="#">購入情報</a>
+							<a href="#">モデル比較</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-box-cont">
+					<div class="tab-box-item" data-keyword="車種">
+						<div class="keyword-top-box">
+							<strong class="cont-tit">車種 (5)</strong>
+							<button class="btn-icon"><span>もっと見る </span></button>
+						</div>
+						<ul class="model-list">
+							<li>
+								<div class="search-item">
+									<div class="item-img">
+										<img src="../../assets/images/@cp_complete.jpg" alt="car01">
+									</div>
+									<a href="#" class="btn-category-link">
+										<strong>IONIQ5</strong>
+										<span>Design</span>
+									</a>
+									<div class="select-group">
+										<label class="btn-select"><input type="radio" name="rdSelectHash"><span>IONIQ 5</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash" checked="checked"><span>Design</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash"><span>LED</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash"><span>LED</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash"><span>IONIQ 5</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash"><span>車種</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash"><span>IONIQ 5</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash"><span>LED</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash"><span>IONIQ 5</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash"><span>車種</span></label>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="search-item">
+									<div class="item-img">
+										<img src="../../assets/images/@curation2.jpg" alt="car02">
+									</div>
+									<a href="#" class="btn-category-link">
+										<strong>IONIQ5</strong>
+										<span>Technology</span>
+									</a>
+									<div class="select-group">
+										<label class="btn-select"><input type="radio" name="rdSelectHash2"><span>IONIQ 5</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash2" checked="checked"><span>Design</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash2"><span>LED</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash2"><span>LED</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash2"><span>IONIQ 5</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash2"><span>車種</span></label>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="search-item">
+									<div class="item-img">
+										<img src="../../assets/images/@cp_complete.jpg" alt="car03">
+									</div>
+									<a href="#" class="btn-category-link">
+										<strong>IONIQ5</strong>
+										<span>諸元</span>
+									</a>
+									<div class="select-group">
+										<label class="btn-select"><input type="radio" name="rdSelectHash3"><span>IONIQ 5</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash3" checked="checked"><span>Design</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash3"><span>LED</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash3"><span>LED</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash3"><span>IONIQ 5</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash3"><span>車種</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash3"><span>IONIQ 5</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash3"><span>LED</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash3"><span>IONIQ 5</span></label>
+										<label class="btn-select"><input type="radio" name="rdSelectHash3"><span>車種</span></label>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="tab-box-item spec-enc" data-keyword="仕様百科">
+						<div class="keyword-top-box">
+							<strong class="cont-tit">仕様百科 (4)</strong>
+							<button class="btn-icon"><span>もっと見る </span></button>
+						</div>
+						<div class="list-wrap">
+							<div class="list-box-wrap">
+								<div class="list-box">
+									<div class="cont-img">
+										<div class="swiper-outer-box gallery-list swiper-pc-non">
+											<div class="swiper-container">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<img src="../../assets/images/@img_scroll_sample01.jpg" alt="sample01">
+													</div>
+													<div class="swiper-slide">
+														<img src="../../assets/images/@img_scroll_sample02.jpg" alt="sample02">
+													</div>
+													<div class="swiper-slide">
+														<img src="../../assets/images/@img_scroll_sample03.jpg" alt="sample03">
+													</div>
+													<div class="swiper-slide">
+														<img src="../../assets/images/@img_scroll_sample04.jpg" alt="sample04">
+													</div>
+												</div>
+											</div>
+											<div class="swiper-button-prev"></div>
+											<div class="swiper-button-next"></div>
+											<div class="swiper-pagination"></div>
+										</div>
+									</div>
+									<div class="cont-tit">
+										<p class="top"><span class="text-flag c1">IONIQ 5</span><span class="text-flag c2">2021</span></p>
+										<p class="cont-text2">外装</p>
+										<p class="cont-text">
+											インチナビゲーション[AM/FMラジオ、フォンコネクティビティ、ブルートゥースハンズフリー(音声認識)、Bluelink
+										</p>
+									</div>
+									<div class="cont-detail">
+										<p class="cont-text2">
+											希望温度を設定すると、自動で設定温度までに風量を調節し、室内を快適にします。
+											* 車両によって空調関連の様々な機能が追加されます。
+											デュアル : デュアルモードの適用で運転席と助手席の温度を個別に設定することができます。
+											オートデフォグ : 前面ガラスのくもりを検知し、自動で全面ガラスおよび前方座席ガラスのくもりを除去し、運転視野を確保します。
+											クラスターイオナイザー：車内の空気を抗菌および脱臭する機能で、エアコンの臭いの除去および車両の室内空気を浄化し、ドライブ環境を改善します。
+											空気清浄モード : 一定時間外気を遮断し、内部循環モードで室内の空気をフィルターを通して改善する機能です。
+											3ゾーン独立制御 : 運転席や助手席のみならず、リヤシートでもコントロール可能なエアコンです。
+										</p>
+										<div class="caution type2 mo-only">
+											<p class="tit">必ず!ご確認ください。</p>
+											<ul>
+												<li>2021年06月03日基準</li>
+												<li>ホームページの写真と説明は参考であり、実際の車両に搭載される機能と説明は異なる場合がありますので、車両購入の間にカーマスターを通してご確認ください。</li>
+											</ul>
+										</div>
+										<button type="button" class="btn-icon pop-open" data-pop-idx="1"><span>詳細を見る</span></button>
+									</div>
+								</div>
+								<!--//list box-->
+								<div class="list-box">
+									<div class="cont-img">
+										<div class="swiper-outer-box gallery-list swiper-pc-non">
+											<div class="swiper-container">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<img src="../../assets/images/@img_scroll_sample01.jpg" alt="sample01">
+													</div>
+													<div class="swiper-slide">
+														<img src="../../assets/images/@img_scroll_sample02.jpg" alt="sample02">
+													</div>
+												</div>
+											</div>
+											<div class="swiper-button-prev"></div>
+											<div class="swiper-button-next"></div>
+											<div class="swiper-pagination"></div>
+										</div>
+									</div>
+									<div class="cont-tit">
+										<p class="top"><span class="text-flag c1">IONIQ 5</span><span class="text-flag c2">2021</span></p>
+										<p class="cont-text2">ナビゲーション & オーディオ</p>
+										<p class="cont-text">
+											インチナビゲーション[AM/FMラジオ、フォンコネクティビティ、ブルートゥースハンズフリー(音声認識)、Bluelink(５年無償)、サウンドハウンド]
+										</p>
+									</div>
+									<div class="cont-detail">
+										<p class="cont-text2">
+											希望温度を設定すると、自動で設定温度までに風量を調節し、室内を快適にします。
+											* 車両によって空調関連の様々な機能が追加されます。
+											デュアル : デュアルモードの適用で運転席と助手席の温度を個別に設定することができます。
+											オートデフォグ : 前面ガラスのくもりを検知し、自動で全面ガラスおよび前方座席ガラスのくもりを除去し、運転視野を確保します。
+										</p>
+										<div class="caution type2 mo-only">
+											<p class="tit">必ず!ご確認ください。</p>
+											<ul>
+												<li>必ず!ご確認ください。</li>
+												<li>ホームページの写真と説明は参考であり、実際の車両に搭載される機能と説明は異なる場合がありますので、車両購入の間にカーマスターを通してご確認ください。</li>
+											</ul>
+										</div>
+										<button type="button" class="btn-icon pop-open" data-pop-idx="1"><span>詳細を見る</span></button>
+									</div>
+								</div>
+								<!--//list box-->
+								<div class="list-box">
+									<div class="cont-tit">
+										<p class="top"><span class="text-flag c1">IONIQ 5</span><span class="text-flag c2">2021</span></p>
+										<p class="cont-text2">外装</p>
+										<p class="cont-text">
+											左右独立温度コントロールフルオートエアコン(マイクロエアフィルター, オートデフォッガー、PM センサー, 空気清浄モード付)
+										</p>
+									</div>
+									<div class="cont-detail">
+										<p class="cont-text2">
+											量の衝突時の衝撃から自動車の乗客を保護する装置で6つのエアバッグが適用されています。
+											前席アドバンスドエアバッグ：衝突の程度に応じてエアバッグの展開圧力を制御（低圧/高圧）で助手席にチャイルドシート装着後の幼児の搭乗時の安全のためにエア
+										</p>
+										<button type="button" class="btn-icon pop-open" data-pop-idx="1"><span>詳細を見る</span></button>
+									</div>
+								</div>
+								<!--//list box-->
+								<div class="list-box">
+									<div class="cont-img">
+										<div class="swiper-outer-box gallery-list swiper-pc-non">
+											<div class="swiper-container">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<img src="../../assets/images/@img_scroll_sample01.jpg" alt="sample01">
+													</div>
+												</div>
+											</div>
+											<div class="swiper-button-prev"></div>
+											<div class="swiper-button-next"></div>
+											<div class="swiper-pagination"></div>
+										</div>
+									</div>
+									<div class="cont-tit">
+										<p class="top"><span class="text-flag c1">IONIQ 5</span><span class="text-flag c2">2021</span></p>
+										<p class="cont-text2">ナビゲーション & オーディオ</p>
+										<p class="cont-text">
+											フォンコネクティビティ、ブルートゥースハンズフリー(音声認識)、サウンドハウンド
+										</p>
+									</div>
+									<div class="cont-detail">
+										<p class="cont-text2">
+											アウトサイドミラー下部に底を照らす水たまりランプを装着し、夜間のw /下車時にドライバーの視界確保に役立ちます。
+										</p>
+										<button type="button" class="btn-icon pop-open" data-pop-idx="1"><span>詳細を見る</span></button>
+									</div>
+								</div>
+								<!--//list box-->
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-box-item faq" data-keyword="FAQ">
+						<div class="tab-box-item">
+							<div class="keyword-top-box">
+								<strong class="cont-tit">FAQ (15)</strong>
+								<button class="btn-icon"><span>もっと見る </span></button>
+							</div>
+							<div class="toggle">
+								<div class="item">
+									<p class="tit-btn">
+										<span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名です。
+									</p>
+									<div class="cont">
+										<span>よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。</span>
+										<br>
+										<br>
+										<a href="#" class="btn-text2">https://www.hyundai.com/</a>
+									</div>
+								</div>
+								<div class="item">
+									<p class="tit-btn"><span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名ですよくある質問の件名です
+										よくある質問の件名ですよくある質問の件名です。よくある質問の件名ですよくある質問の件名です</p>
+									<div class="cont">											
+										<span>よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。</span>
+									</div>	
+								</div>
+								<div class="item">
+									<p class="tit-btn"><span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名ですよくある質問の件名です。</p>
+									<div class="cont">											
+										<span>よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。</span>
+									</div>	
+								</div>
+								<div class="item">
+									<p class="tit-btn"><span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名ですよくある質問の件名です。</p>
+									<div class="cont">											
+										<span>よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。</span>
+									</div>	
+								</div>
+								<div class="item">
+									<p class="tit-btn"><span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名ですよくある質問の件名です。</p>
+									<div class="cont">											
+										<span>よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。</span>
+									</div>	
+								</div>
+								<div class="item">
+									<p class="tit-btn"><span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名ですよくある質問の件名です。</p>
+									<div class="cont">											
+										<span>よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。</span>
+									</div>	
+								</div>
+								<div class="item">
+									<p class="tit-btn"><span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名ですよくある質問の件名です。</p>
+									<div class="cont">											
+										<span>よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。</span>
+									</div>	
+								</div>
+								<div class="item">
+									<p class="tit-btn"><span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名ですよくある質問の件名です。</p>
+									<div class="cont">											
+										<span>よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。</span>
+									</div>	
+								</div>
+								<div class="item">
+									<p class="tit-btn"><span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名ですよくある質問の件名です。</p>
+									<div class="cont">											
+										<span>よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。</span>
+									</div>	
+								</div>
+								<div class="item">
+									<p class="tit-btn"><span class="type">[登録/利用]</span> よくある質問の件名ですよくある質問の件名ですよくある質問の件名です。</p>
+									<div class="cont">											
+										<span>よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。
+											よくある質問の内容です。内容が長くなる場合、２行で表示されます。</span>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-box-item display" data-keyword="SHOP">
+						<div class="keyword-top-box">
+							<strong class="cont-tit">SHOP (11)</strong>
+							<button class="btn-icon"><span>もっと見る </span></button>
+						</div>
+						<div class="grid goods-list">
+							<div class="grid-item item">
+								<a href="javascript:void(0);">
+									<div class="thumb"><img src="../../assets/images/@goods3.jpg" alt="goods-thumb"></div>
+									<div class="info">
+										<div class="flag-area">
+											<span class="text-flag c4">HOT</span>
+											<span class="text-flag c4">Reorder</span>
+											<span class="text-flag c4">Hyundai ONLY</span>
+										</div>
+										<p class="tit">[リファイナー] ロイヤルスペード・デュオ自動車量芳香剤のリフィルエッセンスストーン(2個セット)</p>
+										<div class="price">
+											<span class="real">40,000</span>
+											<div class="sale">
+												<span class="rate">10%</span>
+												<span class="final">¥ 40,000 </span>
+												<span class="tax">(税込)</span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<div class="util">
+									<button type="button" class="like"><span>Like</span></button>
+									<button type="button" class="cart"><span>Add Cart</span></button>
+								</div>
+							</div>
+							<!-- type3 상담형 상품 -->
+							
+							<div class="grid-item item" data-type="soldout">
+								<a href="javascript:void(0);">
+									<div class="thumb"><img src="../../assets/images/@goods4.jpg" alt="goods-thumb"></div>
+									<div class="info">
+										<p class="tit">1PcsスマートカーLCDデジタル温度計ア</p>
+										<div class="price">
+											<div class="sale">
+												<span class="final">¥ 40,000 </span>
+												<span class="tax">(税込)</span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<div class="util">
+									<button type="button" class="like"><span>Like</span></button>
+									<button type="button" class="cart"><span>Add Cart</span></button>
+								</div>
+							</div>
+							<!-- soldout -->
+		
+							<div class="grid-item item">
+								<a href="javascript:void(0);">
+									<div class="thumb"><img src="../../assets/images/@goods6.jpg" alt="goods-thumb"></div>
+									<div class="info">
+										<p class="tit">[リファイナー] ロイヤルスペード・デュオ自動車量芳香剤のリフィルエッセンスストーン(2個セット)</p>
+										<div class="price">
+											<div class="sale">
+												<span class="final">¥ 40,000 </span>
+												<span class="tax">(税込)</span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<div class="util">
+									<button type="button" class="like on"><span>Like</span></button>
+									<button type="button" class="cart"><span>Add Cart</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e : data -->
+            </div>
+		</div>
+	</div>
+	<!--//container -->
+
+	<!-- footer -->
+	<div class="hmj-footer">
+		<div class="footer-top">
+			<ul>
+				<li>
+					<ul>
+						<li><a href="#">SHOW ROOM</a></li>
+						<li><a href="#">IONIQ 5</a></li>
+						<li><a href="#">NEXO</a></li>
+						<li><a href="#">ブランド拠点</a></li>
+						<li><a href="#">MOCEAN</a></li>
+					</ul>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Purchase</button>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">オンライン購入のご案内</a></li>
+								<li><a href="#">今月の購入特典</a></li>
+								<li><a href="#">政府補助金</a></li>
+								<li><a href="#">オンライン契約</a></li>
+								<li><a href="#">見積シミュレーション</a></li>
+								<li><a href="#">試乗</a></li>
+								<li><a href="#">購入相談申込</a></li>
+								<li><a href="#">仕様百科</a></li>
+								<li><a href="#">カタログダウンロード</a></li>
+								<li><a href="#">価格表ダウンロード</a></li>
+								<li><a href="#">Referral code</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Service</button>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">サービスネットワーク</a></li>
+								<li><a href="#">充電スポット</a></li>
+								<li><a href="#">RSAサービス</a></li>
+								<li><a href="#">整備予約</a></li>
+								<li><a href="#">リコール情報</a></li>
+								<li><a href="#">BLUELINK</a></li>
+								<li><a href="#">ビルトインカメラ</a></li>
+								<li><a href="#">ナビ/カメラアップデート</a></li>
+								<li><a href="#">提携サービス</a></li>
+								<li><a href="#">アプリ設置</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Brand Story</button>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">IONIQ 5</a></li>
+								<li><a href="#">IONIQ 5 Teasing</a></li>
+								<li><a href="#">Mini 45EV</a></li>
+								<li><a href="#">IONIQ</a></li>
+								<li><a href="#">Hyundai X BTS</a></li>
+								<li><a href="#">#Thisisus</a></li>
+								<li><a href="#">Hyundai X BBC</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">SHOP</a></li>
+						<li><a href="#">イベント</a></li>
+						<li><a href="#">お知らせ</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">1:1お問合せ</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<div class="left-logo"><img src="../../assets/images/common/ico_footer_logo.svg" alt="Hyundai Logo"></div>
+			<div class="center-text">
+				<ul>
+					<li><a href="#">プライバシーポリシー</a></li>
+					<li><a href="#">利用規約</a></li>
+					<li><a href="#">Cookieポリシー </a></li>
+				</ul>
+				<p class="copyright">COPYRIGHT &#x24D2; HYUNDAI. ALL RIGHTS RESERVED.</p>
+			</div>
+			<div class="right-sns">
+				<ul>
+					<li><a href="#"><img src="../../assets/images/common/ico_youtube.svg" alt="youtube"></a></li>
+					<li><a href="#"><img src="../../assets/images/common/ico_twitter.svg" alt="twitter"></a></li>
+					<li><a href="#"><img src="../../assets/images/common/ico_instagram.svg" alt="instagram"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--//footer -->
+</div>
+
+<!-- pc 더보기 팝업 -->
+<div class="layer-popup-wrap mo-full" data-pop-idx="1">
+	<div class="layer-popup-body">
+		<div class="layer-popup-cont spec-enc">
+			<h1 class="layer-title">仕様詳細</h1>
+			<div class="layer-cont">
+				<div class="spec-detail-cont">
+					<div class="cont-tit">
+						<p class="top"><span class="text-flag c1">IONIQ 5</span><span class="text-flag c2">2021</span></p>
+						<p class="cont-text2">ナビゲーション & オーディオ</p>
+						<p class="cont-text">
+							インチナビゲーション[AM/FMラジオ、フォンコネクティビティ、ブルートゥースハンズフリー(音声認識)、Bluelink(５年無償)、サウンドハウンド]
+						</p>
+					</div>
+					<div class="cont-img">
+						<div class="swiper-outer-box gallery-list">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="../../assets/images/@img_scroll_sample01.jpg" alt="sample01">
+									</div>
+									<div class="swiper-slide">
+										<img src="../../assets/images/@img_scroll_sample02.jpg" alt="sample02">
+									</div>
+									<div class="swiper-slide">
+										<img src="../../assets/images/@img_scroll_sample03.jpg" alt="sample03">
+									</div>
+									<div class="swiper-slide">
+										<img src="../../assets/images/@img_scroll_sample04.jpg" alt="sample04">
+									</div>
+								</div>
+							</div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+					<div class="cont-detail">
+						<p class="cont-text2">
+							希望温度を設定すると、自動で設定温度までに風量を調節し、室内を快適にします。
+							* 車両によって空調関連の様々な機能が追加されます。
+							デュアル : デュアルモードの適用で運転席と助手席の温度を個別に設定することができます。
+							オートデフォグ : 前面ガラスのくもりを検知し、自動で全面ガラスおよび前方座席ガラスのくもりを除去し、運転視野を確保します。
+							クラスターイオナイザー：車内の空気を抗菌および脱臭する機能で、エアコンの臭いの除去および車両の室内空気を浄化し、ドライブ環境を改善します。
+							空気清浄モード : 一定時間外気を遮断し、内部循環モードで室内の空気をフィルターを通して改善する機能です。
+							3ゾーン独立制御 : 運転席や助手席のみならず、リヤシートでもコントロール可能なエアコンです。
+						</p>
+						<div class="caution type2 mo-only">
+							<p class="tit">必ず!ご確認ください。</p>
+							<ul>
+								<li>必ず!ご確認ください。</li>
+								<li>ホームページの写真と説明は参考であり、実際の車両に搭載される機能と説明は異なる場合がありますので、車両購入の間にカーマスターを通してご確認ください。</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="btn-close-popup btn-close">close</button>
+		</div>
+	</div>
+</div>
+<!-- // pc 더보기 팝업 -->
+
+</body>
+
+<script>
+	$(function () {
+		$('.unified-search .btns-list').on('click', 'li', function () {
+			const btnKeyword = $(this).find('button').attr('data-keyword');
+			const tabContItem = $('.tab-box-cont .tab-box-item');
+			const tabContKeyword = $('.tab-box-cont').find('.tab-box-item' + '[data-keyword=' + btnKeyword + ']');
+			if (btnKeyword == '全体') {
+				tabContItem.removeClass('active').show();
+			} else {
+				tabContKeyword.addClass('active').show().siblings().removeClass('active').hide();
+			}
+		});
+	});
+</script>
+</html>
