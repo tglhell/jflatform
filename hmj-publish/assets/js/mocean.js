@@ -80,6 +80,9 @@ $(function () {
 		}
 		if ((tScrIdx + 1) == scrItem.length) {
 			ftrCnt.addClass('active');
+			setObj(function () {
+				ftrCnt.stop().animate({ scrollTop: '1' }, '0');
+			}, secVal[3]);
 		}
 		return false;
 	}

@@ -85,7 +85,7 @@ body,
 	left: 0;
 	right: 0;
 	opacity: 0;
-	z-index: 10;
+	z-index: 999;
 	height: 0;
 	padding-top: 24px;
 	pointer-events: none;
@@ -233,7 +233,7 @@ body,
 	top: 60px;
 	width: 17px;
 	height: 16px;
-	background: url(/assets/images/common/ico_scroll_arrow.svg) no-repeat center;
+	background: url(../images/common/ico_scroll_arrow.svg) no-repeat center;
 	font-size: 0;
 	animation: topDown 2s ease-in 0s infinite normal forwards;
 }
@@ -600,7 +600,7 @@ body,
         height: 100%;
     }
     .mocean .gall-chk .gall-txt-outer{
-        top: 14%;
+        top: 14vh;
 		width: 100%;
 		padding: 0 20px;
 	}
@@ -658,6 +658,15 @@ body,
 	}
 	.hmj-footer.active {
 		top: 0;
+	}
+}
+
+@media screen and (orientation: landscape) {
+	.mocean .hmj-container .hmj-content .cont-outer .cont-inner {
+		padding-top: 24vh;
+	}
+	.mocean .gall-chk .gall-txt-outer{
+        top: 24vh;
 	}
 }
 

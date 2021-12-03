@@ -2,10 +2,15 @@ $(function(){
 	const iNum = 14;
 	$('.car-item-outer').on('mouseenter mouseleave', '.car-cont', function (e) {
 		const _this = $(this);
-		if ($(window).width() >= pc) {
-			carItemWid = _this.find('.car-item').width();
+		$('body').css('overflow', 'hidden');
+		const winWid = $(window).width();
+		$('body').css('overflow', 'visible');
+		const bdWid = $('body').width();
+		const widSum = winWid - bdWid;
+		if (widSum == 0) {
+			carItemWid = _this.find('.car-item').width() + irNum[5];
 		} else {
-			carItemWid = _this.find('.car-item').width() + irNum[4];
+			carItemWid = _this.find('.car-item').width();
 		}
 		carItemWidRes = secVal[0] * carItemWid / $(window).width();
 		if ($(window).width() > tbl) {

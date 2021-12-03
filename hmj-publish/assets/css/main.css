@@ -372,11 +372,11 @@
 }
 .car-item-outer .car-item {
 	transition: top .5s, left .5s, transform .5s ease-in-out;
-	transform: scale(1);
+	transform: scale(1) translateX(-50%);
 	position: relative;
 	top: 107px;
 	top: 5.57292vw;
-	left: 0;
+	left: 50%;
 	z-index: 10;
 	overflow: hidden;
 	display: inline-block;
@@ -387,8 +387,8 @@
 	pointer-events: none;
 }
 .car-item-outer .focus .car-item {
-	transition: top .5s, left .5s, transform .5s ease-in-out;
-	transform: scale(.8);
+	transition: top .5s, left .5s .5s, transform .5s ease-in-out;
+	transform: scale(.8) translateX(-65%);
 	top: 70px;
 	top: 3.64583vw;
 }
@@ -539,7 +539,7 @@
 	}
 }
 @media screen and (max-width: 1119px) {
-	/* .media-wrap .txt-cont .tit {
+	.media-wrap .txt-cont .tit {
 		font-size: 40px;
 	}
 	.media-wrap .txt-cont .cta-outer {
@@ -728,5 +728,5 @@
 		font-size: 16px;
 		font-weight: 500;
 		line-height: 20px;
-	} */
+	}
 }

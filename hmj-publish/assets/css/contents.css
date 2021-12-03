@@ -184,10 +184,10 @@
 		margin:0 20px 24px;
 	}
 	.faq .toggle .item .tit-btn {
-		padding:24px 60px 24px 20px;
+		padding:20px 60px 20px 20px;
 	}
 	.faq .toggle .cont {
-		padding:24px;
+		padding:20px;
 	}	
 	.faq .box-contact {
 		margin:40px 20px 0;
@@ -634,64 +634,6 @@
 }
 /* E: 사이트맵 */
 
-/* S: 쿠키활용동의 */
-.cookie-pop-wrap {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(0,0,0,0.6);
-	z-index: 200;
-}
-.cookie-pop-wrap .cont {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	padding: 48px 20px;
-	background: #fff;
-	border-radius: 8px 8px 0 0;
-	text-align: center;
-}
-.cookie-pop-wrap .cont .tit {
-	display: block;
-	margin-bottom: 16px;
-	font-size: 24px;
-	font-weight: 500;
-	line-height: 38px;
-	color: #191919;
-}
-.cookie-pop-wrap .cont .txt {
-	font-size: 16px;
-	line-height: 26px;
-	color: #191919;
-}
-.cookie-pop-wrap .cont .cta-outer {
-	margin-top: 32px;
-}
-.cookie-pop-wrap .cont .cta-outer .btn {
-	min-width: 180px;
-}
-.cookie-pop-wrap .cont .cta-outer .btn+.btn {
-	margin-left: 8px;
-}
-
-@media screen and (max-width: 1119px)  {
-	.cookie-pop-wrap .cont .tit {
-		font-size: 18px;
-		line-height: 30px;
-	}
-	.cookie-pop-wrap .cont .txt {
-		font-size: 14px;
-		line-height: 22px;
-	}
-	.cookie-pop-wrap .cont .cta-outer .btn {
-		min-width: auto;
-	}
-}
-/* E: 쿠키활용동의 */
-
 /* S: 리사이클, 비상태응 */
 h4.page-tit {
 	font-weight: 500;
@@ -873,7 +815,7 @@ section.wrap .cta-outer + .txt {
 	max-width: 100%;
 	padding-right: 12px;
 	border: 1px solid #e9e9e9;
-	border-radius: 8px;
+	border-radius: 4px;
 	background-color: #fff;
 }
 .unified-search .inp-outer-box .inp-item {
@@ -883,7 +825,10 @@ section.wrap .cta-outer + .txt {
 .unified-search .tab-box-outer {
 	overflow: hidden;
 	margin-bottom: 39px;
-	padding-top: 40px;
+	padding-top: 24px;
+}
+.unified-search .tab-box-outer:after {
+	background-color: #999;
 }
 .unified-search .btns-list {
 	display: flex;
@@ -913,6 +858,7 @@ section.wrap .cta-outer + .txt {
     height: 12px;
     margin-right: 16px;
     background-color: #e9e9e9;
+	vertical-align: middle;
 }
 .unified-search .cont-tit {
 	display: inline-block;
@@ -1089,6 +1035,9 @@ section.wrap .cta-outer + .txt {
 	}
 	.unified-search .tab-box-outer {
 		padding: 28px 20px 0;
+	}
+	.unified-search .tab-box-outer .no-data {
+		margin: 0 -20px;
 	}
 	.tab-box-item .keyword-top-box {
 		padding: 0 20px;

@@ -189,6 +189,9 @@ a.ui-state-default {
 	font-size:10px;
 	line-height: 16px;
 }
+.ui-datepicker-inline .ui-state-active.ui-state-highlight::after {
+	content:'';
+}
 
 .ui-state-active,
 .ui-widget-content .ui-state-active, 

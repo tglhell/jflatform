@@ -1221,10 +1221,9 @@
     margin-left: 32px;
 }
 .shop-detail .add-info .tit-line .ico {
-    content: '';
     width: 24px;
     height: 24px;
-    margin-right: 16px;
+    margin-right: 8px;
     display: inline-block;
 }
 
@@ -1282,6 +1281,13 @@
     .shop-detail .thumb-list .swiper-slide {
         width: 100%;
         height: calc(100vw - 40px);
+        border: 1px solid #e9e9e9;
+    }
+    .shop-detail .thumb-list .swiper-pagination {
+        width: 100px;
+        left: 50%;
+        bottom: 24px;
+        transform: translateX(-50%);
     }
     .shop-detail .util {
         position: static;
@@ -1345,8 +1351,6 @@
         flex-wrap: wrap
     }
     .shop-detail .add-info .tit-line .ico {
-        width: 32px;
-        margin-right: 8px;
         text-align: center;
         vertical-align: middle;
         float: left
@@ -1356,15 +1360,18 @@
         line-height: 22px;
         flex: 1 auto;
     }
+    .shop-detail .add-info .tit-line .tit span {
+        font-size: 13px;
+    }
     .shop-detail .add-info .tit-line .fee {
-        margin-left: 24px;
+        margin-left: 16px;
     }
     .shop-detail .add-info.delivery .info {
         font-size: 12px;
     }
     .shop-detail .add-info.cs .btn-icon2 {
         margin-top: 4px;
-        margin-left: 40px;
+        margin-left: 32px;
         margin-right: calc(100% - 122px)
     }
     .shop-detail .add-info .seller li + li {
@@ -1470,6 +1477,7 @@
 .shop-detail .good-detail-img {
     width: 100%;
     overflow: hidden;
+    text-align: center;
 }
 .shop-detail .good-detail-info dl + dl{
     margin-top: 32px;

@@ -528,14 +528,34 @@
 .brand-cont .mt10 {
     margin-top: 72px !important;
 }
+.brand-cont .mt11 {
+    margin-top: 200px !important;
+}
+.brand-cont .mt12 {
+    margin-top: 120px !important;
+}
+.brand-cont .mt13 {
+    margin-top: 13px !important;
+}
+.brand-cont .mt14 {
+    margin-top: 40px !important;
+}
+
 .brand-cont.pb0 {
-    padding-bottom:0;
+    padding-bottom:0 !important;
 }
 .brand-cont .mr100 {
     margin-right: 100px;
 }
 .brand-cont .al-right {
     text-align: right;
+}
+.brand-cont .al-cl {
+    text-align: center;
+}
+.brand-cont .col-center {
+    display: flex !important;
+    align-items: center;
 }
 
 .brand-cont .hmj-content .cont-outer {
@@ -561,6 +581,9 @@
     font-weight: 500;
     line-height: 30px;
     color: #002c5f;
+}
+.brand-cont .label.type02 {
+    margin: 72px 0 32px;
 }
 .brand-cont .title {
     display: block;
@@ -612,6 +635,12 @@
 .brand-cont .txt.color02 {
     color: #002c5f;
 }
+.brand-cont .pic-txt {
+    margin-top: 24px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #666;
+}
 .brand-cont .btn-more {
     display: block;
     font-size: 16px;
@@ -643,6 +672,9 @@
     background: url('../../assets/images/common/ico_arrow_navy.svg') no-repeat;
     background-size: 100%;
     content: '';
+}
+.brand-cont .img-box {
+    position: relative;
 }
 .brand-cont .video-box {
     width: 100%;
@@ -690,12 +722,14 @@
     width: 45px;
     height: 35px;
     margin-right: 52px;
-    background: url('../images/common/ico_br_q_pc.png') no-repeat;
+    background: url('../images/common/ico_br_q_w.svg') no-repeat;
+    background-size:100%;
     vertical-align: top;
     content:'';
 }
 .brand-cont .quote-box .inner .cont {
     display: inline-block;
+    width: calc(100% - 101px);
     margin-top: 8px;
     text-align: left;
 }
@@ -713,6 +747,28 @@
     line-height: 26px;
     color: #fff;
 }
+.brand-cont .quote-box.type02 {
+    padding: 72px 0 96px;
+    background:#f6f3f2;
+}
+.brand-cont .quote-box.type02 .inner {
+    text-align: left;
+}
+.brand-cont .quote-box.type02 .inner:before {
+    width: 48px;
+    height: 40px;
+    margin-right: 76px;
+    background: url('../images/common/ico_br_q_navy_pc.png') no-repeat;
+    background-size: 100%;
+}
+.brand-cont .quote-box.type02 .tit,
+.brand-cont .quote-box.type02 .txt {
+    color: #002c5f;
+}
+.brand-cont .quote-box.type02 .cont {
+    width: calc(100% - 128px);
+    margin-top: 64px;
+}
 
 .brand-cont .quote-txt {
     position: relative;
@@ -728,7 +784,7 @@
     left: 0;
     width: 45px;
     height: 35px;
-    background: url('../../assets/images/common/ico_br_q_black_pc.png') no-repeat;
+    background: url('../../assets/images/common/ico_br_q_bl.svg') no-repeat;
     background-size: 100%;
     content:''
 }
@@ -790,7 +846,7 @@
     width: 56px;
     height: 44px;
     margin-right: 32px;
-    background: url('../images/common/ico_br_q_pc02.png') no-repeat;
+    background: url('../../assets/images/common/ico_br_q_w.svg') no-repeat;
     background-size: 100%;
 }
 .brand-cont .img-box .quote-box .inner .cont {
@@ -844,7 +900,7 @@
     color: #002c5f;
 }
 .brand-cont .txt-img-box .half-box .quote-txt:before {
-    background: url('../../assets/images/common/ico_br_q_navy_pc.png') no-repeat;
+    background: url('../../assets/images/common/ico_br_q_nv.svg') no-repeat;
     background-size: 100%;
 }
 .brand-cont .txt-img-box .half-box .quote-txt .txt {
@@ -852,12 +908,18 @@
     width: auto;
     margin-top: 40px;
 }
+.brand-cont .txt-img-box .half-box .right .txt {
+    padding-top: 32px;
+}
 .brand-cont .txt-img-box.bg-w {
     padding: 0;
     background: #fff;
 }
 .brand-cont .txt-img-box.bg-w .img-box {
     margin-top: 9px;
+}
+.brand-cont .life-logo {
+    width: 168px;
 }
 .brand-cont .grid-wrap {
     display: flex;
@@ -973,9 +1035,17 @@
     top: 0;
     right: 0;
 }
-.brand-cont .overlap-box .txt.pos-bottom {
+.brand-cont .overlap-box .txt.l-t {
+    left: 0;
+    right: auto;
+}
+.brand-cont .overlap-box .txt.r-b {
     top: auto;
     bottom: 0;
+}
+.brand-cont .overlap-box .txt.type-bg {
+    padding: 40px;
+    background: #f6f3f2;;
 }
 .brand-cont .cont-label {
     display: block;
@@ -1076,6 +1146,23 @@
 }
 
 @media screen and (max-width:1119px) {
+    .brand-cont .hmj-content .top-visual {
+        height: 320px;
+        max-height: none;
+    }
+    .brand-cont .hmj-content .top-visual img {
+        position: static;
+        width: 100%;
+        min-width: auto;
+        height: auto;
+        transform: translateX(0);
+        left: 0;
+        top: 0;
+    }
+}
+
+@media screen and (max-width:1119px) {
+
     .brand-cont .w100 {
         width: 100% !important;
     }
@@ -1120,8 +1207,18 @@
     .brand-cont .momt07 {
         margin-top: 72px !important;
     }
+    .brand-cont .momt08 {
+        margin-top: 40px !important;
+    }
+    .brand-cont .pb0 {
+        padding-bottom:0 !important;
+    }
+
     .brand-cont .wid02 {
         width: 100% !important;
+    }
+    .brand-cont .al-cl {
+        text-align: left;
     }
 
     .brand-cont .hmj-content .cont-outer {
@@ -1134,6 +1231,9 @@
         margin: 40px 0 16px;
         font-size: 15px;
         line-height:24px;
+    }
+    .brand-cont .label.type02 {
+        margin: 40px 0 8px;
     }
     .brand-cont .title {
         font-size: 24px;
@@ -1156,6 +1256,11 @@
         font-size: 24px;
         line-height: 38px;
     }
+    .brand-cont .pic-txt {
+        margin-top: 16px;
+        font-size: 13px;
+        line-height: 20px;
+    }
     .brand-cont .half-box {
         display: block;
     }
@@ -1170,7 +1275,13 @@
         width: 100%;
     }
     .brand-cont .half-box .cont-label {
-        margin-top: 32px;
+        margin-top: 0;
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .brand-cont .half-box .info-tit {
+        font-size: 18px;
+        line-height: 28px;
     }
     .brand-cont .half-box.reverse {
         display: flex;
@@ -1195,10 +1306,9 @@
         width: 30px;
         height: 24px;
         margin-right: 0;
-        background: url("../images/common/ico_br_q_mo.png") no-repeat;
-        background-size: 100%;
     }
     .brand-cont .quote-box .inner .cont {
+        width: 100%;
         margin-top: 32px;
     }
     .brand-cont .quote-box .tit {
@@ -1219,6 +1329,17 @@
         width: calc(100% - 46px);
         margin-top: 1px;
     }
+    .brand-cont .quote-box.type02 {
+        padding: 40px 20px;
+    }
+    .brand-cont .quote-box.type02 .inner:before {
+        width: 30px;
+        height: 24px;
+    }
+    .brand-cont .quote-box.type02 .tit {
+        font-size: 16px;
+        line-height: 24px;
+    }
 
     .brand-cont .quote-txt{
         padding: 8px 0 0 46px;
@@ -1229,8 +1350,6 @@
     .brand-cont .quote-txt:before {
         width: 30px;
         height: 24px;
-        background: url('../../assets/images/common/ico_br_q_black_mo.png') no-repeat;
-        background-size: 100%;
     }
     .brand-cont iframe {
         height: 49vw;
@@ -1318,6 +1437,9 @@
     .brand-cont .learnMore:after {
         vertical-align: -2px;
     }
+    .brand-cont .life-logo {
+        width: 60px;
+    }
     .brand-cont .grid-wrap {
         gap: 2.2222vw;
     }
@@ -1386,12 +1508,11 @@
         font-size: 16px;
         line-height: 24px;
     }
-    .brand-cont .txt-img-box .half-box .quote-txt:before {
-        background: url('../../assets/images/common/ico_br_q_navy_mo.png') no-repeat;
-        background-size: 100%;
-    }
     .brand-cont .txt-img-box .half-box .quote-txt .txt {
         margin-top: 32px;
+    }
+    .brand-cont .txt-img-box .half-box .right .txt {
+        padding-top: 0;
     }
     .brand-cont .txt-img-box.bg-w {
         margin: 0 20px;
@@ -1399,10 +1520,24 @@
     .brand-cont .overlap-box {
         margin-top: 56px;
     }
+    .brand-cont .overlap-box + .overlap-box {
+        margin-top: 32px;
+    }
     .brand-cont .overlap-box .txt {
         position: static;
         width: 100% !important;
         margin-top: 56px;
+    }
+    .brand-cont .overlap-box .txt.type-bg {
+        padding: 16px;
+        margin-top: 32px;
+    }
+    .brand-cont .overlap-box .txt.type-bg + .hidden-img,
+    .brand-cont .overlap-box .txt.type-bg + .img-box {
+        margin-top: 32px;
+    }
+    .brand-cont .overlap-box .txt.type-bg + .img-box + .hidden-img {
+        margin-top: 16px;
     }
     .brand-cont .overlap-box .hidden-img {
         display: block;

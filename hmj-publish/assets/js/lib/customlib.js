@@ -126,14 +126,14 @@ $(function () {
 	//curation-list
 	if ($(window).width() <= tbl) { //only mo
 		let swpOpt = {},
-		slideLength = $('.shop-visual .swiper-slide').length;
+		slideLength = $('.curation-list .swiper-slide').length;
 		if (slideLength == 1) {
 			swpOpt = {
 				allowSlidePrev: false,
 				allowSlideNext: false,
 				simulateTouch: false
 			}
-			$('.curation-list [class*="swiper-button"]').hide();
+			$('.curation-list .swiper-pagination').hide();
 		} else {
 			swpOpt = {
 				pagination: {

@@ -24,10 +24,14 @@
 		.brand-list-cont .swiper-slide-duplicate,
 		.brand-list-cont .swiper-wrapper > div {
 			width: 25%;
+			padding: 0 32px;
 		}
 		.brand-list-cont .swiper-slide.swiper-slide-active,
 		.brand-list-cont .swiper-slide.swiper-slide-duplicate-active {
 			transition: all .3s ease-in-out;
+		}
+		.brand-list-cont2 .swiper-container {
+			padding-right: 120px;
 		}
 	</style>
 </head>
@@ -61,7 +65,7 @@
 								<span class="btn-sign-in">木村 拓哉 様</span>
 							</a>
 							<a href="#" class="btn-alarm">
-								<img src="../assets/images/common/ico_alarm.svg" alt="alarm">
+								<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
 								<span class="num"><span>2</span></span>
 							</a>
 						</div>
@@ -297,7 +301,7 @@
 					<div class="swiper-outer-box brand-list-cont">
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
-								<div class="swiper-slide">
+								<div class="swiper-slide swiper-slide-active">
 									<img src="../assets/images/main/img_goods_01.png" alt="sample01">
 									<div class="tit-cont">
 										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
@@ -349,6 +353,66 @@
 						<div class="swiper-pagination"></div>
 					</div>
 				</div>
+
+				<div class="top-tit-cont">
+					<h2>Brand</h2>
+					<p class="top-desc">ブランド</p>
+				</div>
+				<div class="swiper-outer-box brand-list-cont brand-list-cont2" dir="rtl">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide swiper-slide-active">
+								<img src="../assets/images/main/img_goods_01.png" alt="sample01">
+								<div class="tit-cont">
+									<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
+									<div class="btn-box">
+										<a href="#" class="btn-desc">詳しくみる</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="../assets/images/main/img_goods_02.png" alt="sample02">
+								<div class="tit-cont">
+									<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
+									<div class="btn-box">
+										<a href="#" class="btn-desc">詳しくみる</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="../assets/images/main/img_goods_03.png" alt="sample02">
+								<div class="tit-cont">
+									<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
+									<div class="btn-box">
+										<a href="#" class="btn-desc">詳しくみる</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="../assets/images/main/img_goods_01.png" alt="sample02">
+								<div class="tit-cont">
+									<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
+									<div class="btn-box">
+										<a href="#" class="btn-desc">詳しくみる</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="../assets/images/main/img_goods_02.png" alt="sample02">
+								<div class="tit-cont">
+									<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
+									<div class="btn-box">
+										<a href="#" class="btn-desc">詳しくみる</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
 			</div>
 		</div>
 	</div>
@@ -476,38 +540,68 @@
 			<span class="blind">Top</span>
 		</button>
 	</div>
-</div>
+</body>
 
 <script>
 	$(function () {
 		// manin brand
-		if ($('.brand-list-cont').length == 1) {
+		if ($('.brand-list-cont:not(.brand-list-cont2)').length == 1) {
+			setObj(function () {
+				$('.brand-list-cont:not(.brand-list-cont2) .swiper-slide.swiper-slide-active').css('width', '52%');
+			}, secVal[2]);
 			swpOpt = {
 				navigation: {
-					nextEl: '.brand-list-cont .swiper-button-next',
-					prevEl: '.brand-list-cont .swiper-button-prev',
+					nextEl: '.brand-list-cont:not(.brand-list-cont2) .swiper-button-next',
+					prevEl: '.brand-list-cont:not(.brand-list-cont2) .swiper-button-prev',
 				},
 				pagination: false,
 				slidesPerView: 'auto',
 				simulateTouch: true,
 				speed: 300,
 				loop: true,
-				spaceBetween: 16,
 				centeredSlides: false,
 				observer: true,
 				observeParents: true,
 				on: {
 					slideChange: function () {
-						$('.brand-list-cont .swiper-slide.swiper-slide-active').css('width', '25%');
+						$('.brand-list-cont:not(.brand-list-cont2) .swiper-slide.swiper-slide-active').css('width', '25%');
 						setObj(function () {
-							$('.brand-list-cont .swiper-slide.swiper-slide-active').css('width', '60%').siblings().css('width', '25%');
-						}, secVal[4]);
+							$('.brand-list-cont:not(.brand-list-cont2) .swiper-slide.swiper-slide-active').css('width', '52%').siblings().css('width', '25%');
+						}, secVal[2]);
 					}
 				}
 			}
-			let galleryList1 = new Swiper('.brand-list-cont .swiper-container', swpOpt);
+			let galleryList1 = new Swiper('.brand-list-cont:not(.brand-list-cont2) .swiper-container', swpOpt);
+		}
+
+		if ($('.brand-list-cont2').length == 1) {
+			setObj(function () {
+				$('.brand-list-cont2 .swiper-slide.swiper-slide-active').css('width', '52%');
+			}, secVal[2]);
+			swpOpt = {
+				navigation: {
+					nextEl: '.brand-list-cont2 .swiper-button-next',
+					prevEl: '.brand-list-cont2 .swiper-button-prev',
+				},
+				pagination: false,
+				slidesPerView: 'auto',
+				simulateTouch: true,
+				speed: 300,
+				loop: true,
+				centeredSlides: false,
+				observer: true,
+				observeParents: true,
+				on: {
+					slideChange: function () {
+						$('.brand-list-cont2 .swiper-slide.swiper-slide-active').css('width', '25%');
+						setObj(function () {
+							$('.brand-list-cont2 .swiper-slide.swiper-slide-active').css('width', '52%').siblings().css('width', '25%');
+						}, secVal[2]);
+					}
+				}
+			}
+			let galleryList2 = new Swiper('.brand-list-cont2 .swiper-container', swpOpt);
 		}
 	});
 </script>
-</body>
 </html>
