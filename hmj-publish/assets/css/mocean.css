@@ -661,7 +661,7 @@ body,
 	}
 }
 
-@media screen and (orientation: landscape) {
+@media (max-width: 1119px) and (orientation: landscape) {
 	.mocean .hmj-container .hmj-content .cont-outer .cont-inner {
 		padding-top: 24vh;
 	}

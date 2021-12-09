@@ -1232,6 +1232,7 @@
     border-radius: 8px;
     background-color: #fafafa;
     color: #666;
+    word-break: break-all;
 }
 .shop-detail .add-info .seller li {
     display: -webkit-box;

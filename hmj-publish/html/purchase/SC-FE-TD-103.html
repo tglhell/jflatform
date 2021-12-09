@@ -334,12 +334,13 @@
 						</div>
 					</div>
 					<p class="error-msg lbl-type">姓名(フリガナ)を入力してください。</p>
-                    
-					<div class="inp-outer-box tel-type">
+
+					<!-- 수정 2021.12.08 -->
+					<div class="inp-outer-box tel-type"><!-- 유효성 검사 시 val-error class 추가 -->
 						<label for="inpNum01_01">携帯電話 <span class="required">*</span></label>
 						<div class="inp-slice-box">
 							<div class="slt-box type2">
-								<p class="selected-value">選択</p>
+								<p class="selected-value">070</p>
 								<ul class="select-items">
 									<li>070</li>
 									<li>080</li>
@@ -348,17 +349,20 @@
 							</div>
 							<span class="inp-hpn">-</span>
 							<div class="inp-area">
-								<input type="number" id="inpNum01_05" class="inp-item" placeholder="数字">
+								<input type="tel" id="inpNum01_02" class="inp-item" placeholder="数字" maxlength="4" oninput="telInputCheck(this)">
+								<button class="inp-close"></button>
 							</div>
 							<span class="inp-hpn">-</span>
 							<div class="inp-area">
-								<input type="number" id="inpNum01_06" class="inp-item" placeholder="数字">
+								<input type="tel" id="inpNum01_03" class="inp-item" placeholder="数字" maxlength="4" oninput="telInputCheck(this)">
+								<button class="inp-close"></button>
 							</div>
 							<button class="btn btn-type3 btn-tbl"><span>送信</span></button>
 							<!-- <button class="btn btn-type3 btn-tbl"><span>再送信</span></button> -->
 						</div>
 					</div>
 					<p class="error-msg lbl-type">携帯電話番号を入力してください。</p>
+					<!-- //수정 2021.12.08 -->
 
 					<!-- 2021-11-16 추가 -->
 					<div class="inp-outer-box inp-type time-type"><!-- 유효성체크 val-error --><!-- 2021-11-25 수정 -->

@@ -173,11 +173,11 @@ jQuery.event.add(window, 'load', function () {
 					}
 				}
 				if (!$('.gnb-menu-outer').hasClass('active')) {
-					// if (scrPos > 0 || topVal > 0) {
-					// 	$('.btn-top-box').fadeIn(secVal[2]);
-					// } else {
-					// 	$('.btn-top-box').fadeOut(secVal[2]);
-					// }
+					if (scrPos > 0 || topVal > 0) {
+						$('.btn-top-box').addClass('active');
+					} else {
+						$('.btn-top-box').removeClass('active');
+					}
 					if ($('html').hasClass('ie11')) {
 						$('.hmj-wrap').on('mousewheel DOMMouseScroll', function (e) {
 							if ($('.sub-cont').length !== 0) {
@@ -238,9 +238,6 @@ jQuery.event.add(window, 'load', function () {
 					}
 				}
 				lastScrTopPos = scrPos;
-				if (!$('.side-menu-wrap').length == 0 && !$('.lineup-wrap').length == 0) {
-					mainBtnTop();
-				}
 			}
 		} else if (e.type == 'orientationchange') {
 			if (window.orientation == 0) {
@@ -363,16 +360,7 @@ jQuery.event.add(window, 'load', function () {
 
 	$('.btn-top-box').on('click', '.btn-top', function (e) {
 		e.preventDefault();
-		if (!$('.lineup-wrap').length == 0) {
-			lineWrapPos = $('.lineup-wrap').offset().top;
-		}
-		if (!$(this).hasClass('main')) {
-			$('html, body').animate({scrollTop:'0'}, '0');
-			$(this).blur();
-			chkBool = true;
-		} else {
-			$('html, body').stop().animate({scrollTop:lineWrapPos}, secVal[4], 'easeInOutQuint');
-		}
+		$('html, body').stop().animate({scrollTop:0}, secVal[4], 'easeInOutQuint');
 	});
 
 	$('.btn-drop-down').on('click', function () {
@@ -654,24 +642,6 @@ jQuery.event.add(window, 'load', function () {
 	// 	innerDepthTar.css('height', $(window).height() - 180);
 	// }
 
-	function mainBtnTop () {
-		let lineWrapPos = $('.lineup-wrap').offset().top;
-		let scrPos = $(this).scrollTop();
-		if (scrPos < lineWrapPos) {
-			$('.btn-top').addClass('main');
-		} else {
-			$('.btn-top').removeClass('main');
-		}
-	}
-	if (!$('.side-menu-wrap').length == 0 && !$('.lineup-wrap').length == 0) {
-		mainBtnTop();
-	}
-	if ($('.lineup-wrap').length == 0) {
-		$('.btn-top-box').addClass('none-top');
-	} else {
-		$('.btn-top-box').removeClass('none-top');
-	}
-
 	//moToggle 
 	function moToggle(){
 		$('.mo-toggle').off()
@@ -755,6 +725,14 @@ jQuery.event.add(window, 'load', function () {
 		})
 	}
 	otherCheck();
+
+	//상세결제 mo container padding-bottom 계산
+	if ($(window).width() <= tbl) {
+		if($('.hmj-container').hasClass('estimate')) {
+			var bottomH = $('.hmj-container.estimate').find('.mo-bottom-fixed').height() + 34;
+			$('.hmj-container').css({'padding-bottom' : bottomH + 'px'})
+		}
+	}
 
 	toggle();
 	jsTab();
@@ -1126,4 +1104,9 @@ function cookiePop() {
 		cookiePopWrap.fadeOut(secVal[4]);
 		$('body').css('overflow', 'auto');
 	})
+}
+
+// 휴대전화번호 체크
+function telInputCheck(num){
+	num.value = num.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1'); // 숫자만
 }

@@ -115,6 +115,7 @@
 	padding:20px 115px 20px 0;
 	color:#191919;
 	line-height:22px;
+	word-break:break-all;
 	font-size:14px;
 }
 .faq .toggle .item.active .tit-btn {
@@ -225,7 +226,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 72px 0 48px;
+    padding: 0 0 48px;
     border-bottom: 1px solid #ccc;
     align-items: flex-start;
 }
@@ -348,7 +349,7 @@
         padding: 32px 0 0;
     }
     .detail-page .cont-wrap .attach-file {
-		margin-top: 120px;
+		margin-top: 40px;
 	}
 	.detail-page .cont-wrap .attach-file .tit {
 		background-position: 0 -3px;
@@ -378,7 +379,7 @@
 /* E: 상세 페이지 */
 
 /* S: 공지사항 */
-.notice .tbl-box{
+.pc .hmj-container.notice .cont-outer > div:first-child {
 	margin-top: 72px;
 }
 .tbl-box.num-file .num {
@@ -421,12 +422,12 @@
 .ie11 .tbl-box.num-file .auto-width {
 	padding: 13px 10px;
 }
-
 @media screen and (max-width: 1119px) {
 	.notice .hmj-content .cont-outer {
 		padding: 0 20px;
 	}
-	.notice .hmj-pagination {
+	.notice .hmj-pagination,
+	.notice .no-data {
 		margin: 0 -20px;
 	}
 	.notice .tbl-box {

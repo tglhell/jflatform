@@ -207,6 +207,12 @@ a.ui-button:active,
 	line-height:40px;
 	font-weight:500;
 }
+.ui-state-active.ui-state-highlight::before,
+.ui-widget-content .ui-state-active.ui-state-highlight::before {
+	display:none;
+}
+
+
 .ui-datepicker td span, .ui-datepicker td a {
 	padding: 0;
 }

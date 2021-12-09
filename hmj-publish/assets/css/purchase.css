@@ -5,6 +5,21 @@
 	width: 100%;
     padding: 48px 0;
 }
+.spec-enc .top-search-wrap .auto-txt-box{
+	position: absolute;
+	width: 100%;
+	top: 100%;
+	margin-top: 16px;
+	padding: 16px;
+	border: 1px solid #e9e9e9;
+	border-radius: 4px;
+	background: #fff;
+	color: #333;
+	z-index: 5;
+}
+.spec-enc .top-search-wrap .auto-txt-box p + p{
+	margin-top: 16px;
+}
 .spec-enc .top-search-wrap .inp-outer-box+.inp-outer-box {
 	margin-top: 16px;
 }
@@ -85,7 +100,7 @@
     content: '';
     width: 100%;
     height: 100%;
-    background: url(/assets/images/common/ico_arrow_white_16x16.svg) no-repeat center;
+    background: url(../images/common/ico_arrow_white_16x16.svg) no-repeat center;
     transform: rotate(180deg);
 }
 .spec-enc .cont-img .swiper-outer-box .swiper-button-next{
@@ -97,7 +112,7 @@
     content: '';
     width: 100%;
     height: 100%;
-    background: url(/assets/images/common/ico_arrow_white_16x16.svg) no-repeat center;
+    background: url(../images/common/ico_arrow_white_16x16.svg) no-repeat center;
     transform: rotate(0deg);
 }
 .spec-enc .cont-img .swiper-outer-box .swiper-pagination {
@@ -194,9 +209,6 @@
     .spec-enc .search-result.txt{
         margin-top: 24px;
         padding: 0 20px;
-    }
-    .spec-enc .cont-outer .no-data:last-of-type{
-        margin-bottom: 0;
     }
     .spec-enc .list-wrap{
         margin-top: 40px;
@@ -1598,7 +1610,6 @@
 	background-size: 16px;
 	color: #191919;
 }
-
 @media screen and (max-width: 1119px) {
 	.download .hmj-content .cont-outer {
 		padding: 0 20px;
@@ -1704,6 +1715,9 @@
 	}
 	.ie11 .download .cont-outer .tbl-box.pdf .auto-width {
 		padding: 0;
+	}
+	.download .no-data{
+		margin: 0 -20px;
 	}
 }
 
@@ -1856,6 +1870,12 @@
     color: #333;
     font-size: 12px;
 }
+.estimate .list-type.type1 .list-type {
+	flex: 1;
+}
+.estimate .list-type.type1 .list-type li:not(:first-child) {
+	padding-top: 0;
+}
 .estimate .toggle .item > .cont,
 .estimate .toggle .payment-area .cont {
     padding: 48px 0;
@@ -1866,7 +1886,7 @@
 	background-color: #fafafa;
 	border-radius: 8px;
 }
-.estimate .toggle .inp-list.type1 li:not(:first-child) {
+.estimate .toggle .inp-list.type1 > li:not(:first-child) {
     margin-top: 40px;
 }
 .estimate .toggle .agree {
@@ -1906,6 +1926,7 @@
     display: block;
     width: 100%;
     padding: 16px;
+	padding-right: 88px;
     border-radius: 4px;
     border: 1px solid #ccc;
 }
@@ -2766,5 +2787,502 @@
 	}
 
 }	
-
 /* E: 브랜드거점 */
+
+/* 정부보조금정책 */
+.subsidy .prd-spec{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.subsidy .prd-spec .prd-img h3{
+    font-weight: 500;
+    margin-top: 42px;
+}
+.subsidy .prd-spec .prd-img .img{
+    margin: 24px 0 48px;
+    text-align: center;
+}
+.subsidy .prd-spec .prd-img .img img{
+    width: auto;
+    max-height: 205px;
+}
+.subsidy .prd-spec .prd-img .caption{
+    color: #999;
+}
+.subsidy .prd-spec .benefit-list{
+    background: #fafafa;
+    border-radius: 8px;
+    padding: 0 32px;
+}
+.subsidy .prd-spec .benefit-list li{
+    height: 86px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.subsidy .prd-spec .benefit-list li + li{
+    border-top: 1px solid #e9e9e9;
+}
+.subsidy .prd-spec .benefit-list .item-r{
+    text-align: right;
+}
+.subsidy .prd-spec .benefit-list .item-r .cont-text{
+    font-weight: 500;
+}
+.subsidy .prd-spec .benefit-list .cont-text2{
+    color: #999;
+}
+.subsidy .prd-spec .final-price{
+    margin-top: 24px;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.subsidy .prd-spec .final-price .item-l{
+    font-size: 18px;
+    color: #1c6bba;
+}
+.subsidy .prd-spec .final-price .item-r{
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: 500;
+    color: #1c6bba;
+}
+.subsidy .swiper-outer-box .swiper-button-prev,
+.subsidy .swiper-outer-box .swiper-button-next{
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0,0,0,.7);
+}
+.subsidy .swiper-outer-box .swiper-button-prev{
+    left: 0;
+	border-radius: 0 4px 4px 0;
+}
+.subsidy .swiper-outer-box .swiper-button-prev::after{
+	display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url(../images/common/ico_arrow_white_16x16.svg) no-repeat center;
+    transform: rotate(180deg);
+}
+.subsidy .swiper-outer-box .swiper-button-next{
+    right: 0;
+	border-radius: 4px 0 0 4px;
+}
+.subsidy .swiper-outer-box .swiper-button-next:after{
+	display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url(../images/common/ico_arrow_white_16x16.svg) no-repeat center;
+    transform: rotate(0deg);
+}
+.subsidy .swiper-outer-box .swiper-pagination {
+    position: relative;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+    line-height: 8px;
+    margin-top: 24px;
+}
+.subsidy .swiper-outer-box .swiper-pagination span + span{
+    margin-left: 8px;
+}
+.subsidy .prd-spec .cta-outer{
+    display: inline-block;
+    width: 100%;
+    margin-top: 64px;
+}
+.subsidy .price-info{
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+.subsidy .price-info .info-tit{
+    padding: 32px 24px;
+    font-size: 16px;
+    line-height: 26px;
+    background: #fafafa;
+    border: 1px solid #e9e9e9;
+    border-bottom: 0;
+    border-radius: 8px 8px 0 0;
+}
+.subsidy .price-info .swiper-container{
+    border: 1px solid #e9e9e9;
+    border-top: 0;
+    border-radius: 0 0 8px 8px;
+}
+.subsidy .price-info .prd-grade{
+    padding: 32px 48px;
+}
+.subsidy .price-info .prd-grade .prd-name{
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
+}
+.subsidy .price-info .prd-grade .price-list{
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e9e9e9;
+}
+.subsidy .price-info .prd-grade .price-list li{
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+.subsidy .price-info .prd-grade .price-list li + li{
+    margin-top: 24px;
+}
+.subsidy .price-info .prd-grade .price-list li .item-r{
+    text-align: right;
+}
+.subsidy .price-info .prd-grade .total-price{
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 500;
+    text-align: right;
+}
+.subsidy .accordion{
+    border-bottom: 1px solid #e9e9e9;
+}
+.subsidy .accordion .tit-btn{
+    border-top: 1px solid #e9e9e9;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
+    padding: 20px 0;
+}
+.subsidy .accordion .cont{
+    border-top: 1px solid #e9e9e9;
+}
+.subsidy .accordion .cont .caution{
+    border-radius: 0;
+}
+.subsidy .bottom-ref{
+    display: inline-block;
+    width: 100%;
+    margin-top: 32px;
+}
+.subsidy .bottom-ref button{
+    float: right;
+}
+.subsidy .bttom-cta{
+    margin-top: 64px;
+}
+@media screen and (min-width: 1120px) {
+    .subsidy .prd-spec .prd-img{
+        float: left;
+        width: calc(100% - 440px);
+        padding-left: 28px;
+    }
+    .subsidy .prd-spec .prd-img .caption{
+        padding-left: 16px;
+    }
+    .subsidy .prd-spec .benefit{
+        float: left;
+        width: 440px;
+    }
+    .subsidy .prd-spec .cta-outer .btn{
+        min-width: 360px;
+    }
+    .subsidy .price-info .info-tit{
+        text-align: center;
+    }
+    .subsidy .bottom-ref .caution{
+        width: calc(100% - 200px);
+        float: left;
+    }
+}
+@media screen and (max-width: 1119px) {
+    .subsidy .prd-spec{
+        padding: 0 20px;
+    }
+    .subsidy .prd-spec .prd-img h3{
+        margin-top: 16px;
+    }
+    .subsidy .prd-spec .prd-img .img{
+        margin: 32px 0 16px;
+    }
+    .subsidy .prd-spec .prd-img .img img{
+        max-height: 154px;
+    }
+    .subsidy .prd-spec .prd-img .caption{
+        text-align: center;
+    }
+    .subsidy .prd-spec .benefit{
+        margin-top: 32px;
+    }
+    .subsidy .prd-spec .benefit-list{
+        padding: 0 16px;
+    }
+    .subsidy .prd-spec .benefit-list li{
+        height: 84px;
+    }
+    .subsidy .prd-spec .benefit-list li > div{
+        width: 50%;
+    }
+    .subsidy .prd-spec .final-price{
+        margin-top: 16px;
+        padding: 0 16px;
+    }
+    .subsidy .prd-spec .final-price .item-l{
+        font-size: 15px;
+    }
+    .subsidy .prd-spec .final-price .item-r{
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .subsidy .prd-spec .cta-outer{
+        margin-top: 48px;
+    }
+    .subsidy .swiper-outer-box .swiper-button-next{
+        right: -20px;
+    }
+    .subsidy .swiper-outer-box .swiper-button-prev{
+        left: -20px;
+    }
+    .subsidy .price-info{
+        padding: 0 20px;
+    }
+    .subsidy .price-info .info-tit{
+        padding: 20px 16px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .subsidy .price-info .prd-grade{
+        padding: 16px 16px 24px 16px;
+    }
+    .subsidy .price-info .prd-grade .prd-name{
+        margin-bottom: 16px;
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .subsidy .price-info .prd-grade .price-list li + li{
+        margin-top: 16px;
+    }
+    .subsidy .price-info .prd-grade .total-price{
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .subsidy .accordion .tit-btn{
+        padding: 20px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .subsidy .accordion .tit-btn:before{
+        right: 20px;
+    }
+    .subsidy .bottom-ref{
+        margin-top: 26px;
+        padding: 0 20px;
+    }
+    .subsidy .bottom-ref button{
+        margin-top: 8px;
+    }
+    .subsidy .bttom-cta{
+        margin-top: 48px;
+        padding: 0 20px;
+    }
+}
+/* E: 정부보조금정책 */
+
+/* 이달의구매혜택 */
+.monthly-benefit .top-tit{
+    margin: 72px 0 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #999999;
+}
+.monthly-benefit .top-tit h4{
+    font-weight: 500;
+}
+.monthly-benefit .top-tit .caption{
+    margin-top: 8px;
+    color: #999999;
+}
+.monthly-benefit .cont-box{
+    padding: 80px 56px 48px;
+    border-radius: 8px;
+    border: 1px solid #e9e9e9;
+}
+.monthly-benefit .cont-box + .cont-box{
+    margin-top: 80px;
+}
+.monthly-benefit .cont-prd{
+    margin-bottom: 72px;
+}
+.monthly-benefit .cont-prd .prd-img{
+    padding: 0 52px;
+    text-align: center;
+}
+.monthly-benefit .cont-prd .prd-img img{
+    max-height: 200px;
+}
+.monthly-benefit .cont-prd .prd-img .caption{
+    margin-top: 32px;
+    color: #999;
+}
+.monthly-benefit .cont-prd .prd-info{
+    position: relative;
+}
+.monthly-benefit .cont-prd .prd-info span{
+    display: block;
+    font-size: 18px;
+    line-height: 30px;
+}
+.monthly-benefit .cont-prd .prd-info .name .mark{
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: 500;
+}
+.monthly-benefit .cont-prd .prd-info .discount{
+    color: #1c6bba;
+}
+.monthly-benefit .cont-prd .prd-info .discount .mark{
+    font-size: 32px;
+    line-height: 52px;
+    font-weight: 500;
+}
+.monthly-benefit .cont-option + .cont-option{
+    margin-top: 40px;
+}
+.monthly-benefit .cont-option .cont-text{
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.monthly-benefit .option-list{
+    padding: 16px 0;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #e9e9e9;
+}
+.monthly-benefit .option-list li + li{
+    padding-top: 16px;
+}
+.monthly-benefit .option-list li{
+    display: flex;
+}
+.monthly-benefit .option-list li .list-head{
+    color: #666;
+}
+.monthly-benefit .option-list.full li .list-head{
+    width: 100%;
+}
+.monthly-benefit .option-list li .list-data{
+    font-weight: 500;
+}
+.monthly-benefit .option-list li .regular{
+    font-weight: 400;
+}
+.monthly-benefit .option-list li .blue{
+    color: #1c6bba;
+}
+.monthly-benefit .caution-wrap{
+    margin-top: 32px;
+}
+.monthly-benefit .cta-outer{
+    margin-top: 64px;
+}
+@media screen and (min-width: 1120px) {
+    .monthly-benefit .cont-prd{
+        display: flex;
+        justify-content: space-between;
+    }    
+    .monthly-benefit .cont-prd .prd-info{
+        width: 340px;
+        padding-left: 80px;
+    }
+    .monthly-benefit .cont-prd .prd-info::before{
+        content: '';
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+        width: 3px;
+        height: 176px;
+        background: #e9e9e9;
+    }
+    .monthly-benefit .cont-prd .prd-info .discount{
+        margin-top: 32px;
+    }
+    .monthly-benefit .option-list li .list-head{
+        width: 392px;
+    }
+}
+@media screen and (max-width: 1119px) {
+    .monthly-benefit .inner-cont{
+        padding: 0 20px;
+    }
+    .monthly-benefit .cont-prd{
+        margin-bottom: 56px;
+    }
+    .monthly-benefit .cont-prd .prd-img{
+        padding: 0 8px;
+    }
+    .monthly-benefit .cont-prd .prd-img .caption{
+        margin-top: 25px;
+    }
+    .monthly-benefit .cont-prd .prd-info{
+        display: flex;
+        margin-top: 32px;
+    }
+    .monthly-benefit .cont-prd .prd-info p{
+        position: relative;
+    }
+    .monthly-benefit .cont-prd .prd-info p + p{
+        padding-left: 16px;
+    }
+    .monthly-benefit .cont-prd .prd-info p + p::before{
+        content: '';
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+        width: 2px;
+        height: 52px;
+        background: #e9e9e9;
+    }
+    .monthly-benefit .cont-prd .prd-info span{
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .monthly-benefit .cont-prd .prd-info .name{
+        width: calc(50% - 8px);
+    }
+    .monthly-benefit .cont-prd .prd-info .name .mark{
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .monthly-benefit .cont-prd .prd-info .discount .mark{
+        font-size: 20px;
+        line-height: 32px;
+    }
+    .monthly-benefit .top-tit{
+        margin: 40px 0 32px;
+        padding-bottom: 16px;
+    }
+    .monthly-benefit .top-tit .caption{
+        margin-top: 2px;
+    }
+    .monthly-benefit .cont-box{
+        padding: 48px 16px 40px;
+    }
+    .monthly-benefit .option-list.m-half li .list-head{
+        width: 50%;
+    }
+    .monthly-benefit .option-list.m-column li .list-data{
+        display: inline-block;
+        margin-top: 8px;
+    }
+    .monthly-benefit .option-list.m-column li{
+        flex-direction: column;
+    }
+    .monthly-benefit .caution-wrap{
+        margin-top: 24px;
+    }
+    .monthly-benefit .cta-outer{
+        margin-top: 48px;
+    }
+}
+/* E: 이달의구매혜택 */

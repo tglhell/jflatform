@@ -33,12 +33,18 @@
 		.brand-list-cont2 .swiper-container {
 			padding-right: 120px;
 		}
+		.scr-fix-box {
+			top: 100px !important;
+		}
+		.pos-scr-box li + li {
+			margin-top: 30px;
+		}
 	</style>
 </head>
 
 <body>
 
-<div class="hmj-wrap main">
+<div class="hmj-wrap">
 	<div class="skip-nav">
 		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
 	</div>
@@ -48,7 +54,7 @@
 		<!-- header -->
 		<div class="header-outer">
 			<div class="header-cont">
-				<h1><a href="hmj_layout.html"><img src="../assets/images/common/ico_header_logo_w.svg" alt="Hyundai Logo"></a></h1>
+				<h1><a href="hmj_layout.html"><img src="../assets/images/common/ico_header_logo.svg" alt="Hyundai Logo"></a></h1>
 
 				<div class="gnb-menu-outer">
 					<div class="gnb-menu-box blur">
@@ -246,10 +252,10 @@
 				<div class="gnb-right-menu">
 					<ul class="gnb-right-list">
 						<li>
-							<button class="btn-cart pc-only"><span><img src="../assets/images/main/ico_shop_w.svg" alt="shop"></span></button>
+							<button class="btn-cart pc-only"><span><img src="../assets/images/common/ico_cart.svg" alt="shop"></span></button>
 						</li>
 						<li>
-							<button class="btn-search"><span><img src="../assets/images/main/ico_search_w.svg" alt="search"></span></button>
+							<button class="btn-search"><span><img src="../assets/images/common/ico_search.svg" alt="search"></span></button>
 							<div class="gnb-search-dim">
 								<div class="search-outer-box">
 									<div class="search-cont">
@@ -279,7 +285,7 @@
 							</div>
 						</li>
 						<li>
-							<button class="btn-menu"><span><img src="../assets/images/main/ico_menu_w.svg" alt="menu"></span></button>
+							<button class="btn-menu"><span><img src="../assets/images/common/ico_menu.svg" alt="menu"></span></button>
 						</li>
 					</ul>
 				</div>
@@ -292,127 +298,49 @@
 	<!-- container -->
 	<div id="hmjContainer" class="hmj-container">
 		<div class="hmj-content">
-			<div class="section-wrap">
-				<div class="brand-wrap">
-					<div class="top-tit-cont">
-						<h2>Brand</h2>
-						<p class="top-desc">ブランド</p>
-					</div>
-					<div class="swiper-outer-box brand-list-cont">
-						<div class="swiper-container">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide swiper-slide-active">
-									<img src="../assets/images/main/img_goods_01.png" alt="sample01">
-									<div class="tit-cont">
-										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
-										<div class="btn-box">
-											<a href="#" class="btn-desc">詳しくみる</a>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<img src="../assets/images/main/img_goods_02.png" alt="sample02">
-									<div class="tit-cont">
-										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
-										<div class="btn-box">
-											<a href="#" class="btn-desc">詳しくみる</a>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<img src="../assets/images/main/img_goods_03.png" alt="sample02">
-									<div class="tit-cont">
-										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
-										<div class="btn-box">
-											<a href="#" class="btn-desc">詳しくみる</a>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<img src="../assets/images/main/img_goods_01.png" alt="sample02">
-									<div class="tit-cont">
-										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
-										<div class="btn-box">
-											<a href="#" class="btn-desc">詳しくみる</a>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<img src="../assets/images/main/img_goods_02.png" alt="sample02">
-									<div class="tit-cont">
-										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
-										<div class="btn-box">
-											<a href="#" class="btn-desc">詳しくみる</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-button-prev"></div>
-						<div class="swiper-button-next"></div>
-						<div class="swiper-pagination"></div>
-					</div>
-				</div>
-
-				<div class="top-tit-cont">
-					<h2>Brand</h2>
-					<p class="top-desc">ブランド</p>
-				</div>
-				<div class="swiper-outer-box brand-list-cont brand-list-cont2" dir="rtl">
-					<div class="swiper-container">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide swiper-slide-active">
-								<img src="../assets/images/main/img_goods_01.png" alt="sample01">
-								<div class="tit-cont">
-									<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
-									<div class="btn-box">
-										<a href="#" class="btn-desc">詳しくみる</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<img src="../assets/images/main/img_goods_02.png" alt="sample02">
-								<div class="tit-cont">
-									<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
-									<div class="btn-box">
-										<a href="#" class="btn-desc">詳しくみる</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<img src="../assets/images/main/img_goods_03.png" alt="sample02">
-								<div class="tit-cont">
-									<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
-									<div class="btn-box">
-										<a href="#" class="btn-desc">詳しくみる</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<img src="../assets/images/main/img_goods_01.png" alt="sample02">
-								<div class="tit-cont">
-									<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
-									<div class="btn-box">
-										<a href="#" class="btn-desc">詳しくみる</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<img src="../assets/images/main/img_goods_02.png" alt="sample02">
-								<div class="tit-cont">
-									<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
-									<div class="btn-box">
-										<a href="#" class="btn-desc">詳しくみる</a>
-									</div>
-								</div>
-							</div>
+			<div class="top-tit-box" style="margin-top: 129px;">
+				<h2>政府補助金制度</h2>
+				<p class="cont-tit2">スペシャルな特典を今すぐご経験ください。</p>
+			</div>
+			<div class="cont-outer">
+				<div class="top-tab-area">
+					<div class="tab-box-wrap x-scroll">
+						<div class="tab-box-outer">
+							<ul class="tab-box-list">
+								<li><a href="#">車両選択&#x30FB;見積確認</a></li>
+								<li><a href="#">契約</a></li>
+								<li><a href="#">車庫登録書類返信</a></li>
+								<li class="active"><a href="#">車庫登録書類返信</a></li>
+								<li><a href="#">車庫登録書類返信</a></li>
+							</ul>
 						</div>
 					</div>
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-button-next"></div>
-					<div class="swiper-pagination"></div>
 				</div>
 			</div>
+
+			<br><br><br><br>
+
+			<div class="cont-outer">
+				<div class="cont-left mo-only">
+					<div class="scr-fix-box js-is-sticky">
+						<ul class="pos-scr-box">
+							<li>
+								<a href="" class="btn-scroll-down">1. 히히</a>
+							</li>
+							<li>
+								<a href="" class="btn-scroll-down">2. 헤헤</a>
+							</li>
+							<li>
+								<a href="" class="btn-scroll-down">3. 흐흐</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="cont-center">
+					<p  style="height: 500px;">1. asd</p>
+					<p style="height: 500px;">2. asd</p>
+					<p style="height: 500px;">3. asd</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -540,67 +468,13 @@
 			<span class="blind">Top</span>
 		</button>
 	</div>
+</div>
 </body>
 
 <script>
 	$(function () {
-		// manin brand
-		if ($('.brand-list-cont:not(.brand-list-cont2)').length == 1) {
-			setObj(function () {
-				$('.brand-list-cont:not(.brand-list-cont2) .swiper-slide.swiper-slide-active').css('width', '52%');
-			}, secVal[2]);
-			swpOpt = {
-				navigation: {
-					nextEl: '.brand-list-cont:not(.brand-list-cont2) .swiper-button-next',
-					prevEl: '.brand-list-cont:not(.brand-list-cont2) .swiper-button-prev',
-				},
-				pagination: false,
-				slidesPerView: 'auto',
-				simulateTouch: true,
-				speed: 300,
-				loop: true,
-				centeredSlides: false,
-				observer: true,
-				observeParents: true,
-				on: {
-					slideChange: function () {
-						$('.brand-list-cont:not(.brand-list-cont2) .swiper-slide.swiper-slide-active').css('width', '25%');
-						setObj(function () {
-							$('.brand-list-cont:not(.brand-list-cont2) .swiper-slide.swiper-slide-active').css('width', '52%').siblings().css('width', '25%');
-						}, secVal[2]);
-					}
-				}
-			}
-			let galleryList1 = new Swiper('.brand-list-cont:not(.brand-list-cont2) .swiper-container', swpOpt);
-		}
-
-		if ($('.brand-list-cont2').length == 1) {
-			setObj(function () {
-				$('.brand-list-cont2 .swiper-slide.swiper-slide-active').css('width', '52%');
-			}, secVal[2]);
-			swpOpt = {
-				navigation: {
-					nextEl: '.brand-list-cont2 .swiper-button-next',
-					prevEl: '.brand-list-cont2 .swiper-button-prev',
-				},
-				pagination: false,
-				slidesPerView: 'auto',
-				simulateTouch: true,
-				speed: 300,
-				loop: true,
-				centeredSlides: false,
-				observer: true,
-				observeParents: true,
-				on: {
-					slideChange: function () {
-						$('.brand-list-cont2 .swiper-slide.swiper-slide-active').css('width', '25%');
-						setObj(function () {
-							$('.brand-list-cont2 .swiper-slide.swiper-slide-active').css('width', '52%').siblings().css('width', '25%');
-						}, secVal[2]);
-					}
-				}
-			}
-			let galleryList2 = new Swiper('.brand-list-cont2 .swiper-container', swpOpt);
+		if (!$('.pos-scr-box').length == 0) {
+			$('.btn-scroll-down').offset().top;
 		}
 	});
 </script>

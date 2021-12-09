@@ -428,7 +428,8 @@
 							</div>
 						</div>
 						<p class="error-msg lbl-type">姓名(フリガナ)を入力してください。</p>
-						<div class="inp-outer-box val-error tel-type"><!-- 에러메시지 사용 시 클래스 val-error 추가 --> 
+						<!-- 수정 2021.12.08 -->
+						<div class="inp-outer-box tel-type"><!-- 유효성 검사 시 val-error class 추가 -->
 							<label for="inpNum01_01">携帯電話 <span class="required">*</span></label>
 							<div class="inp-slice-box">
 								<div class="slt-box type2">
@@ -441,17 +442,18 @@
 								</div>
 								<span class="inp-hpn">-</span>
 								<div class="inp-area">
-									<input type="text" id="inpNum01_02" class="inp-item" placeholder="1234">
+									<input type="tel" id="inpNum01_02" class="inp-item" placeholder="数字" maxlength="4" oninput="telInputCheck(this)">
 									<button class="inp-close"></button>
 								</div>
 								<span class="inp-hpn">-</span>
 								<div class="inp-area">
-									<input type="text" id="inpNum01_03" class="inp-item" placeholder="5678">
+									<input type="tel" id="inpNum01_03" class="inp-item" placeholder="数字" maxlength="4" oninput="telInputCheck(this)">
 									<button class="inp-close"></button>
 								</div>
 							</div>
 						</div>
-						<p class="error-msg lbl-type">電話番号を入力してください。</p>
+						<p class="error-msg lbl-type">携帯電話番号を入力してください。</p>
+						<!-- //수정 2021.12.08 -->
 						<div class="inp-outer-box inp-type post-type val-error"><!-- 에러메시지 사용 시 클래스 val-error 추가 --> 
 							<label for="inpAdd01_01">住所 <span class="required">*</span></label>
 							<div class="inp-group-box">

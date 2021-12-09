@@ -336,27 +336,32 @@
 					</div>
 					<p class="error-msg lbl-type">error text</p>
                     
-					<div class="inp-outer-box tel-type">
+					<!-- 수정 2021.12.08 -->
+					<div class="inp-outer-box tel-type"><!-- 유효성 검사 시 val-error class 추가 -->
 						<label for="inpNum01_01">携帯電話 <span class="required">*</span></label>
 						<div class="inp-slice-box">
-							<div class="slt-box type2 disabled on">
-								<p class="selected-value">080</p>
+							<div class="slt-box type2 disabled">
+								<p class="selected-value">070</p>
 								<ul class="select-items">
 									<li>070</li>
-									<li class="selected">080</li>
+									<li>080</li>
+									<li>090</li>
 								</ul>
 							</div>
 							<span class="inp-hpn">-</span>
 							<div class="inp-area">
-								<input type="number" id="inpNum01_05" class="inp-item" placeholder="数字" readonly value="1234">
+								<input type="tel" id="inpNum01_02" class="inp-item" placeholder="数字" maxlength="4" readonly value="5678" oninput="telInputCheck(this)">
+								<button class="inp-close"></button>
 							</div>
 							<span class="inp-hpn">-</span>
 							<div class="inp-area">
-								<input type="number" id="inpNum01_06" class="inp-item" placeholder="数字" readonly value="5678">
+								<input type="tel" id="inpNum01_03" class="inp-item" placeholder="数字" maxlength="4" readonly value="5678" oninput="telInputCheck(this)">
+								<button class="inp-close"></button>
 							</div>
 						</div>
 					</div>
-					<p class="error-msg lbl-type">error text</p>
+					<p class="error-msg lbl-type">携帯電話番号を入力してください。</p>
+					<!-- //수정 2021.12.08 -->
                     
 					<div class="inp-outer-box">
 						<label for="inpTxt01">E-mail</label>

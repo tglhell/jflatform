@@ -648,4 +648,51 @@ $(function () {
 		}
 	});
 
+	$('.subsidy-swiper').each(function(){
+		if ($(this).length == 1) {
+			let swpOpt = {};
+			let slideLength = $(this).find('.swiper-slide').length;
+			if (slideLength == 1) {
+				swpOpt = {
+					allowSlidePrev: false,
+					allowSlideNext: false,
+					simulateTouch: false,
+                    centeredSlides : true,
+				}
+				$(this).find('[class*="swiper-button"]').hide();
+			} else {
+                let _view;
+				if($(window).width() > tbl){ 
+					_view = 2;
+				}else{
+					_view = 1;
+				}
+				swpOpt = {
+					navigation: {
+						nextEl: $(this).find('.swiper-button-next'),
+						prevEl: $(this).find('.swiper-button-prev'),
+					},
+					pagination: {
+						el: $(this).find('.swiper-pagination'),
+						clickable: true,
+					},
+					simulateTouch: true,
+					speed: 300,
+					loop: false,
+					spaceBetween: 0,
+					observer: true,
+					observeParents: true,
+					watchOverflow : true,
+					allowTouchMove : true,
+					autoPlay: false,
+                    breakpoints:{
+						1120:{
+                            slidesPerView : _view,
+                        }
+                    }
+				}
+			}
+			let subsidySwiper = new Swiper($(this).find('.swiper-container'), swpOpt);
+		}
+	});	
 });

@@ -1706,6 +1706,9 @@
     }
 }
 @media screen and (max-width: 1119px){
+    .coalition .accordion .item:last-of-type{
+        border-bottom: none;
+    }
     .coalition .accordion .tit-btn .company-logo{
         margin-bottom: 16px;
     }

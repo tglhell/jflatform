@@ -1124,7 +1124,7 @@
 	align-content: flex-start;
 	align-items: flex-end;
 	margin-top: 16px;
-	width: 260px;	
+	/* width: 260px;	 */
 	/* height:82px; */
 }
 .my-main .list-my-car .info dt:first-of-type,
@@ -1138,6 +1138,7 @@
 }
 .my-main .list-my-car .info dd {
 	margin-top: 8px;
+	width: calc(100% - 160px);
 }
 .my-main .list-my-car .info dd.fc-color4 {
 	font-weight:500;
@@ -1197,7 +1198,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 16px;
-	width: 260px;
 }
 .my-main .car-order .list-order .info dt:first-of-type,
 .my-main .car-order .list-order .info dd:first-of-type {
@@ -1210,6 +1210,7 @@
 }
 .my-main .car-order .list-order .info dd {
 	margin-top: 8px;
+	width:calc(100% - 160px);
 }
 .my-main .car-order .list-order .box-status {
 	display:flex;
@@ -1271,7 +1272,6 @@
 .my-main .shop-order .bottom-area {
 	display:flex;
 	align-items: center;
-	justify-content: space-between;
 	padding:24px 0 32px;
 	line-height:0;
 }
@@ -1287,8 +1287,9 @@
 	height: 100%;
 }
 .my-main .shop-order .detail {
+	margin-left:16px;
 	margin-bottom:auto;
-	width:352px;
+	width:350px;
 }
 .my-main .shop-order .detail .name {
 	line-height:22px;
@@ -1315,6 +1316,7 @@
 	font-weight:500;
 }
 .my-main .shop-order .status {
+	margin:0 16px;
 	width: 144px;
 	text-align: center;
 	line-height:26px;
@@ -1668,9 +1670,6 @@
 	.my-main .shop-order .list-order li:last-child {
 		border-bottom:none;
 	}
-	.my-main .shop-order .list-order li:last-child .bottom-area {
-		padding-bottom:0;
-	}
 	.my-main .shop-order .top-area {
 		margin:0 -20px;
 		padding:0 20px;
@@ -1680,15 +1679,19 @@
 	}
 	.my-main .shop-order .bottom-area {
 		position:relative;
-		padding:58px 0 48px;
+		padding:58px 0 0;
 		flex-wrap: wrap;
 		align-items: flex-start;
 		justify-content: flex-start;
+	}
+	.my-main .shop-order .bottom-area:last-child {
+		padding-bottom:48px;
 	}
 	.my-main .shop-order .status {
 		position:absolute;
 		top:24px;
 		left:0;
+		margin:0;
 		width: auto;
 	}
 	.my-main .shop-order .thumbnail {
@@ -1698,7 +1701,6 @@
 	}	
 	.my-main .shop-order .detail {
 		width: calc(100% - 112px);
-		padding-left:16px;
 	}
 	.my-main .shop-order .detail .name {
 		font-size:13px;
@@ -1714,15 +1716,18 @@
 		margin-top: 8px;
 	}
 	.my-main .shop-order .btn-box {
-		margin-top: 24px;
 		width: 100%;
+	}
+	.my-main .shop-order .btn-box .btn:first-child {
+		margin-top:24px;
 	}
 	
 	
 	.my-main .cont-main > div.info-box {
-		margin-top:80px;
+		margin-top:32px;
 	}
 	.my-main .info-box section {
+		margin-top:0;
 		padding:0;
 		flex-flow: column wrap;
 	}
@@ -1951,7 +1956,7 @@
 .my-order .order-list .store .tooltip-cont dl.info {
     display: flex;
     flex-wrap: wrap;
-    width: 206px;
+    /* width: 206px; */
     line-height: 20px;
     font-size: 12px;
 }
@@ -1959,6 +1964,9 @@
 	width: 88px;
     padding-right:16px;
     color: #999;
+}
+.my-order .order-list .store .tooltip-cont .info dd {
+	width: calc(100% - 88px);
 }
 .my-order .order-list .store .tooltip-cont .info dt:nth-of-type(n+2),
 .my-order .order-list .store .tooltip-cont .info dd:nth-of-type(n+2) {
@@ -2002,6 +2010,7 @@
 }
 .my-order .order-list .mo-toggle .cont .item li {
     display: flex;
+	margin: 0;
 }
 .my-order .order-list .mo-toggle .cont .item .cont-text {
     font-weight: 500;
@@ -2337,6 +2346,7 @@
     .my-order .order-list .mo-toggle .cont .item li.payment .date {
         display: block;
         font-size: 10px;
+		flex: 100%;
     }
     .my-order .order-list .mo-toggle .cont .item li.payment .cont {
         width: 100%;
@@ -2441,6 +2451,8 @@
     .my-order .order-detail .list-payment .tit {
         margin: 0;
         font-size: 12px;
+		flex: 1;
+		margin-right: 16px;
     }
     .my-order .order-detail .list-payment .price {
         margin: 0;
@@ -2572,6 +2584,17 @@
 .pop-my-order .list-payment {
     margin: 24px 0 48px;
 }
+.pop-my-order .list-payment.type2 {
+	border-top: 1px solid #e9e9e9;
+	color: #999;
+	margin: 48px 0 40px;
+}
+.pop-my-order .list-payment.type2 > ul:last-child {
+	border-bottom: 1px solid #e9e9e9;
+}
+.pop-my-order .list-payment.type2 ul {
+    border-bottom-color: #e9e9e9;
+}
 .pop-my-order .list-payment .title {
     margin-bottom: 8px;
 }
@@ -2597,6 +2620,8 @@
 }
 .pop-my-order .list-payment li:first-child {
     margin-bottom: 16px;
+}
+.pop-my-order .list-payment:not(.type2) li:first-child {
     color: #333;
     font-size: 16px;
     font-weight: 500;
@@ -2668,7 +2693,7 @@
     background-color: #ccc;
 }
 .pop-my-order div.caution.type2 li.accent {
-    font-family: 'HyundaiSansHeadJP-Regular';
+    font-family: 'HyundaiSansHeadJP';
     color: #333;
 }
 @media screen and (max-width: 1119px) {
@@ -3760,10 +3785,6 @@
 		border: none;
 		border-radius: 0;
     }
-	.test-drive .cta-outer {
-		margin-right: 20px;
-		margin-left: 20px;
-	}
     .test-drive .complete-area {
         padding: 0 20px;
     }
@@ -3833,6 +3854,10 @@
         font-size: 16px;
         line-height: 26px;
     }
+	.poll .cta-outer {
+		margin-right: 20px;
+		margin-left: 20px;
+	}
 }
 /* E : 시승 */
 
@@ -3864,6 +3889,7 @@
 	justify-content: space-between;
 	padding-bottom: 8px;
 	border-bottom: 1px solid #999;
+	margin-bottom: 24px;
 }
 .wish-wrap .wish-cont .list-top .num {
 	font-size: 18px;
@@ -3871,17 +3897,19 @@
 	line-height: 1.67;
 	color: #1c6bba;
 }
-.wish-wrap .list-wrap .box:first-child {
+/* .wish-wrap .list-wrap .box:first-child {
 	margin-top: 0;
-}
+} */
 .wish-wrap .list-wrap .box {
 	display: flex;
 	justify-content: space-between;
-	padding-top: 24px;
-	margin-top: 24px;
+	/* padding-top: 24px;
+	margin-top: 24px; */
+	padding-bottom: 24px;
 }
 .wish-wrap .list-wrap .box + .box {
 	border-top: 1px solid #e9e9e9;
+	padding-top: 24px;
 }
 .wish-wrap .list-wrap .box .day {
 	flex: none;
@@ -4000,20 +4028,21 @@
 .wish-wrap .list-wrap .list .end .desc .discount_price {
 	opacity: 0.5;
 }
-
 @media screen and (max-width: 1119px) {
 	.wish-wrap {
 		padding: 40px 0 80px;
 	}
 	.wish-wrap .wish-cont .list-top {
-		margin: 0 20px;
+		margin-right:20px;
+		margin-left:20px;
 	}
 	.wish-wrap .wish-cont .list-top .num {
 		font-size: 16px;
 		line-height: 1.63;
 	}
 	.wish-wrap .list-wrap .box {
-		padding: 0 20px;
+		padding-right:20px;
+		padding-left:20px;
 	}
 	.wish-wrap .list-wrap .box .day {
 		display: block;
@@ -4068,18 +4097,18 @@
 	}
 	.wish-wrap .list-wrap .box {
 		display: block;
-		margin-top: 40px;
-		padding-top: 40px;
+		padding-bottom: 40px;
 	}
-	.wish-wrap .list-wrap .box:first-child {
+	/* .wish-wrap .list-wrap .box:first-child {
 		padding-top: 24px;
-	}
+	} 
 	.wish-wrap .list-wrap .box:last-child {
 		padding-bottom: 32px;
-	}
+	}*/
 	.wish-wrap .list-wrap .box + .box {
 		border-width: 12px;
 		border-color: #f5f5f5;
+		padding-top: 40px;
 	}
 	.wish-wrap .list-wrap .list .end .cont .thumb .txt {
 		width: 72px;
@@ -4191,10 +4220,9 @@ padding: 0 16px;
 .alarm-list .alarm-item .alarm-more{
     padding-top: 16px;
 }
-
 @media screen and (max-width: 1119px) {
     .my-alarm{
-        padding: 40px 20px 32px;
+        padding: 40px 20px 0;
     }
     .alarm-top{
         height: 26px;
@@ -4208,6 +4236,13 @@ padding: 0 16px;
     .alarm-list .alarm-item .btn-del{
         top: 20px;
     }
+	.my-alarm + .hmj-pagination {
+		margin-top: 32px;
+	}
+	.my-alarm .no-data {
+		margin-right: -20px;
+		margin-left: -20px;
+	}
 }
 /* E: 알림 */
 
