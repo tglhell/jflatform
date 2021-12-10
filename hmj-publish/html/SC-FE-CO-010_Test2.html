@@ -17,65 +17,34 @@
 	<script type="text/javascript" src="../assets/js/lib/swiper.min.js"></script>
 	<script type="text/javascript" src="../assets/js/common.js"></script>
 	<style>
-		.hmj-header + .hmj-container .scr-fix-box {
-			transition: top .5s ease-in-out;
-			top: 162px !important;
-			margin-top: 70px;
+		.swiper-container {
+			overflow: visible;
 		}
-		.hmj-header.header-fixed + .hmj-container .scr-fix-box {
-			transition: top .5s ease-in-out;
-			top: 107px !important;
+		.brand-list-cont .swiper-slide,
+		.brand-list-cont .swiper-slide-duplicate,
+		.brand-list-cont .swiper-wrapper > div {
+			width: 25%;
+			padding: 0 32px;
 		}
-		.scr-fix-box {
-			top: 107px !important;
-			margin-top: 70px;
+		.brand-list-cont .swiper-slide.swiper-slide-active,
+		.brand-list-cont .swiper-slide.swiper-slide-duplicate-active {
+			transition: all .3s ease-in-out;
 		}
-		.pos-scr-box li + li {
-			margin-top: 30px;
+		.brand-list-cont2 .swiper-container {
+			padding-right: 120px;
 		}
-		.pos-scr-box li.active .btn-scr-down {
-			color: #0793ea;
-			pointer-events: none;
-		}
-
-		.pos-scr-item {
-			margin-top: 40px;
-			padding-top: 30px;
-		}
-		.pos-scr-item + .pos-scr-item {
-			border-top: 1px solid #e9e9e9;
-		}
-		
-		@media screen and (max-width: 1119px) {
-			.hmj-container .hmj-content .cont-left.pc-only {
-				display: none;
-			}
-			.pos-scr-box li + li {
-				margin-top: 0;
-			}
-			.pos-scr-item {
-				padding-left: 20px;
-				padding-right: 20px;
-			}
-			.hmj-header + .hmj-container .mo-pos.active {
-				transition: top .4s cubic-bezier(0.645, 0.045, 0.355, 1);
-				position: fixed;
-				top: 109px;
-				left: 0;
-				right: 0;
-				z-index: 19;
-			}
-			.hmj-header.header-fixed + .hmj-container .mo-pos.active {
-				transition: top .4s cubic-bezier(0.645, 0.045, 0.355, 1);
-				top: 55px;
-			}
+		/* .brand-list-cont {
+			padding: 0;
+		} */
+		.brand-list-cont .swiper-slide, .brand-list-cont .swiper-slide-duplicate, .brand-list-cont .swiper-wrapper > div {
+			padding: 0;
 		}
 	</style>
 </head>
 
 <body>
 
-<div class="hmj-wrap">
+<div class="hmj-wrap main">
 	<div class="skip-nav">
 		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
 	</div>
@@ -85,7 +54,7 @@
 		<!-- header -->
 		<div class="header-outer">
 			<div class="header-cont">
-				<h1><a href="hmj_layout.html"><img src="../assets/images/common/ico_header_logo.svg" alt="Hyundai Logo"></a></h1>
+				<h1><a href="hmj_layout.html"><img src="../assets/images/common/ico_header_logo_w.svg" alt="Hyundai Logo"></a></h1>
 
 				<div class="gnb-menu-outer">
 					<div class="gnb-menu-box blur">
@@ -102,7 +71,7 @@
 								<span class="btn-sign-in">木村 拓哉 様</span>
 							</a>
 							<a href="#" class="btn-alarm">
-								<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
+								<img src="../assets/images/common/ico_alarm.svg" alt="alarm">
 								<span class="num"><span>2</span></span>
 							</a>
 						</div>
@@ -283,10 +252,10 @@
 				<div class="gnb-right-menu">
 					<ul class="gnb-right-list">
 						<li>
-							<button class="btn-cart pc-only"><span><img src="../assets/images/common/ico_cart.svg" alt="shop"></span></button>
+							<button class="btn-cart pc-only"><span><img src="../assets/images/main/ico_shop_w.svg" alt="shop"></span></button>
 						</li>
 						<li>
-							<button class="btn-search"><span><img src="../assets/images/common/ico_search.svg" alt="search"></span></button>
+							<button class="btn-search"><span><img src="../assets/images/main/ico_search_w.svg" alt="search"></span></button>
 							<div class="gnb-search-dim">
 								<div class="search-outer-box">
 									<div class="search-cont">
@@ -316,18 +285,11 @@
 							</div>
 						</li>
 						<li>
-							<button class="btn-menu"><span><img src="../assets/images/common/ico_menu.svg" alt="menu"></span></button>
+							<button class="btn-menu"><span><img src="../assets/images/main/ico_menu_w.svg" alt="menu"></span></button>
 						</li>
 					</ul>
 				</div>
 			</div>
-		</div>
-		<div class="sub-cont">
-			<div class="history">
-				<a href="javascript:;">ホーム</a>
-				<span class="page-title">ブランド</span>
-			</div>
-			<button type="button" class="back-page">Back page</button>
 		</div>
 		<!-- //sub-cont -->
 	</div>
@@ -336,77 +298,127 @@
 	<!-- container -->
 	<div id="hmjContainer" class="hmj-container">
 		<div class="hmj-content">
-			<div class="top-tit-box" style="margin-top: 129px;">
-				<h2>政府補助金制度</h2>
-				<p class="cont-tit2">スペシャルな特典を今すぐご経験ください。</p>
-			</div>
-			<div class="cont-outer">
-				<div class="top-tab-area">
-					<div class="tab-box-wrap x-scroll">
-						<div class="tab-box-outer">
-							<ul class="tab-box-list">
-								<li><a href="#">車両選択&#x30FB;見積確認</a></li>
-								<li><a href="#">契約</a></li>
-								<li><a href="#">車庫登録書類返信</a></li>
-								<li class="active"><a href="#">車庫登録書類返信</a></li>
-								<li><a href="#">車庫登録書類返信</a></li>
-							</ul>
-						</div>
+			<div class="section-wrap">
+				<div class="brand-wrap">
+					<div class="top-tit-cont">
+						<h2>Brand</h2>
+						<p class="top-desc">ブランド</p>
 					</div>
+					<div class="swiper-outer-box brand-list-cont">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide swiper-slide-active">
+									<img src="../assets/images/main/img_goods_01.png" alt="sample01">
+									<div class="tit-cont">
+										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
+										<div class="btn-box">
+											<a href="#" class="btn-desc">詳しくみる</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<img src="../assets/images/main/img_goods_02.png" alt="sample02">
+									<div class="tit-cont">
+										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
+										<div class="btn-box">
+											<a href="#" class="btn-desc">詳しくみる</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<img src="../assets/images/main/img_goods_03.png" alt="sample02">
+									<div class="tit-cont">
+										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
+										<div class="btn-box">
+											<a href="#" class="btn-desc">詳しくみる</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<img src="../assets/images/main/img_goods_01.png" alt="sample02">
+									<div class="tit-cont">
+										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
+										<div class="btn-box">
+											<a href="#" class="btn-desc">詳しくみる</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<img src="../assets/images/main/img_goods_02.png" alt="sample02">
+									<div class="tit-cont">
+										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
+										<div class="btn-box">
+											<a href="#" class="btn-desc">詳しくみる</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
 
-					<div class="js-tab x-scroll mo-only mo-pos">
-						<ul class="pos-scr-box tab-box-list">
-							<li><a href="#">1. 3D コンフィギュレーター</a></li>
-							<li><a href="#">2. 簡単見積確認</a></li>
-							<li><a href="#">3. 詳細見積 シミュレーション</a></li>
-							<li><a href="#">4. 키키</a></li>
-							<li><a href="#">5. 캬캬</a></li>
-						</ul>
+				<div class="top-tit-cont">
+					<h2>Brand</h2>
+					<p class="top-desc">ブランド</p>
+				</div>
+				<div class="swiper-outer-box brand-list-cont brand-list-cont2" dir="rtl">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide swiper-slide-active">
+								<img src="../assets/images/main/img_goods_01.png" alt="sample01">
+								<div class="tit-cont">
+									<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
+									<div class="btn-box">
+										<a href="#" class="btn-desc">詳しくみる</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="../assets/images/main/img_goods_02.png" alt="sample02">
+								<div class="tit-cont">
+									<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
+									<div class="btn-box">
+										<a href="#" class="btn-desc">詳しくみる</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="../assets/images/main/img_goods_03.png" alt="sample02">
+								<div class="tit-cont">
+									<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
+									<div class="btn-box">
+										<a href="#" class="btn-desc">詳しくみる</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="../assets/images/main/img_goods_01.png" alt="sample02">
+								<div class="tit-cont">
+									<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
+									<div class="btn-box">
+										<a href="#" class="btn-desc">詳しくみる</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="../assets/images/main/img_goods_02.png" alt="sample02">
+								<div class="tit-cont">
+									<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
+									<div class="btn-box">
+										<a href="#" class="btn-desc">詳しくみる</a>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-pagination"></div>
 				</div>
 			</div>
-
-			<div class="cont-outer">
-				<div class="cont-left pc-only">
-					<div class="scr-fix-box js-is-sticky">
-						<ul class="pos-scr-box">
-							<li>
-								<a href="" class="btn-scr-down">1. 3D コンフィギュレーター</a>
-							</li>
-							<li>
-								<a href="" class="btn-scr-down">2. 簡単見積確認</a>
-							</li>
-							<li>
-								<a href="" class="btn-scr-down">3. 詳細見積 シミュレーション</a>
-							</li>
-							<li>
-								<a href="" class="btn-scr-down">4. 키키</a>
-							</li>
-							<li>
-								<a href="" class="btn-scr-down">5. 캬캬</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="cont-center">
-					<div class="pos-scr-list">
-						<div class="pos-scr-item" style="height: 700px;">
-							<div class="box">1. asd</div>
-						</div>
-						<div class="pos-scr-item" style="height: 700px;">
-							<div class="box">2. asd</div>
-						</div>
-						<div class="pos-scr-item" style="height: 700px;">
-							<div class="box">3. asd</div>
-						</div>
-						<div class="pos-scr-item" style="height: 700px;">
-							<div class="box">4. asd</div>
-						</div>
-						<div class="pos-scr-item" style="height: 700px;">
-							<div class="box">5. asd</div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -534,63 +546,71 @@
 			<span class="blind">Top</span>
 		</button>
 	</div>
-</div>
+
 </body>
 
 <script>
 	$(function () {
-		const posScrArr = [];
-		const moScrPos = $('.mo-pos').offset().top;
-		chkBool = false;
-		
-		$('.pos-scr-box li .btn-scr-down, .pos-scr-box a').on('click', function (e) {
-			e.preventDefault();
-			if (!$('.pos-scr-box').length == 0) {
-				const thisBtnIdx = $(this).parent().index();
-				const activeBtnIdx = $(this).closest('.pos-scr-box').find('.active').index();
-				const headerHgt = $('.hmj-header .header-outer').height();
-				const hdrContHgt = $('.hmj-header .header-cont').height();
-				const subContHgt = $('.hmj-header .sub-cont').height();
-				const posScrItem = $('.pos-scr-item');
-				const posScrVal = posScrItem.eq(thisBtnIdx).offset().top;
-				$(this).parent().addClass('active').siblings().removeClass('active');
-				$('html, body').stop().animate({scrollTop:posScrVal - (headerHgt)}, secVal[2]);
-				if (activeBtnIdx <= thisBtnIdx) {
-						if ($(window).width() > tbl) {
-							$('html, body').stop().animate({scrollTop:posScrVal - (headerHgt)}, secVal[2]);
-						} else {
-							$('html, body').stop().animate({scrollTop:posScrVal - (headerHgt + 52)}, secVal[2]);
-						}
-					console.log('left');
-					setObj(function () {
-						$('.hmj-header').addClass('header-fixed').stop().animate({'top':-hdrContHgt}, secVal[3]);
-					}, secVal[4]);
-				} else {
-						if ($(window).width() > tbl) {
-							$('html, body').stop().animate({scrollTop:posScrVal - (headerHgt + hdrContHgt)}, secVal[2]);
-						} else {
-							$('html, body').stop().animate({scrollTop:posScrVal - (headerHgt + 109)}, secVal[2]);
-						}
-					console.log('right');
-					setObj(function () {
-						$('.hmj-header').removeClass('header-fixed').stop().animate({'top':'0'}, secVal[2]);
-					}, secVal[4]);
+		// manin brand
+		if ($('.brand-list-cont:not(.brand-list-cont2)').length == 1) {
+			setObj(function () {
+				$('.brand-list-cont:not(.brand-list-cont2) .swiper-slide.swiper-slide-active').css('width', '52%');
+			}, secVal[2]);
+			swpOpt = {
+				navigation: {
+					nextEl: '.brand-list-cont:not(.brand-list-cont2) .swiper-button-next',
+					prevEl: '.brand-list-cont:not(.brand-list-cont2) .swiper-button-prev',
+				},
+				pagination: false,
+				slidesPerView: 'auto',
+				simulateTouch: true,
+				speed: 300,
+				loop: true,
+				centeredSlides: false,
+				spaceBetween: 30,
+				observer: true,
+				observeParents: true,
+				on: {
+					slideChange: function () {
+						$('.brand-list-cont:not(.brand-list-cont2) .swiper-slide.swiper-slide-active').css('width', '25%');
+						setObj(function () {
+							$('.brand-list-cont:not(.brand-list-cont2) .swiper-slide.swiper-slide-active').css('width', '52%').siblings().css('width', '25%');
+						}, secVal[4]);
+					}
 				}
 			}
-		});
+			let galleryList1 = new Swiper('.brand-list-cont:not(.brand-list-cont2) .swiper-container', swpOpt);
+		}
 
-		$(window).scroll(function () {
-			const scrPos = $(this).scrollTop();
-			if (!$('.mo-pos').length == 0) {
-				if (scrPos > moScrPos) {
-					$('.mo-pos').addClass('active');
-					chkBool = true;
-				} else {
-					$('.mo-pos').removeClass('active');
-					chkBool = false;
+		if ($('.brand-list-cont2').length == 1) {
+			setObj(function () {
+				$('.brand-list-cont2 .swiper-slide.swiper-slide-active').css('width', '52%');
+			}, secVal[2]);
+			swpOpt = {
+				navigation: {
+					nextEl: '.brand-list-cont2 .swiper-button-next',
+					prevEl: '.brand-list-cont2 .swiper-button-prev',
+				},
+				pagination: false,
+				slidesPerView: 'auto',
+				simulateTouch: true,
+				speed: 300,
+				loop: true,
+				spaceBetween: 30,
+				centeredSlides: false,
+				observer: true,
+				observeParents: true,
+				on: {
+					slideChange: function () {
+						$('.brand-list-cont2 .swiper-slide.swiper-slide-active').css('width', '25%');
+						setTimeout(function () {
+							$('.brand-list-cont2 .swiper-slide.swiper-slide-active').css('width', '52%').siblings().css('width', '25%');
+						}, 700);
+					}
 				}
 			}
-		});
+			let galleryList2 = new Swiper('.brand-list-cont2 .swiper-container', swpOpt);
+		}
 	});
 </script>
 </html>

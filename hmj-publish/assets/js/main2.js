@@ -51,6 +51,7 @@ $(function(){
 				centeredSlides: false,
 				loop: true,
 				loopAdditionalSlides: 30,
+				speed: 700,
 				navigation: {
 					nextEl: ".swiper-button-next",
 					prevEl: ".swiper-button-prev"
