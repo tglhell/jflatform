@@ -67,7 +67,7 @@ $(function(){
 								// 		}, twoDig[1] * i);
 								// 	}(i));
 								// }
-								$('.car-cont:not(.swiper-slide-active)').find('img').css('transform', 'translate3d(-0vw, 0, 0)');
+								$('.car-cont').find('img').css('transform', 'translate3d(-0vw, 0, 0)');
 								$('.car-cont').removeClass('focus-in');
 								onIr = setTimeout(function () {
 									for (i = irNum[0]; i < iNum; i++) {

@@ -1,3 +1,6 @@
+body {
+	padding-top: 0;
+}
 .main .hmj-header {
     position: fixed;
     top: 0;

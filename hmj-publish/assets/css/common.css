@@ -238,6 +238,7 @@ caption {
 }
 body {
 	overflow-x: hidden;
+	padding-top: 129px;
 }
 .blind {
 	clip: rect(0, 0, 0, 0);
@@ -301,6 +302,9 @@ body::-webkit-scrollbar-track,
 	html, body {
 		font-size: 13px;
 		line-height: 20px;
+	}
+	body {
+		padding-top: 109px;
 	}
 	body::-webkit-scrollbar,
 	.layer-popup-wrap::-webkit-scrollbar,

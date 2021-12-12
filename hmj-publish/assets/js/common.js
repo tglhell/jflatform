@@ -264,7 +264,7 @@ jQuery.event.add(window, 'load', function () {
 			}
 			containerAutoHgt();
 			resChk();
-			contAutoPadding();
+			// contAutoPadding();
 			mapAutoHeight();
 		}
 	});
@@ -453,38 +453,6 @@ jQuery.event.add(window, 'load', function () {
 		}
 	}
 	checkAgent ();
-
-	function contAutoPadding () {
-		$('.cont-outer').removeAttr('style');
-		let headerHgt = $('.hmj-header').outerHeight(true);
-		const contTopPd = parseInt($('.cont-outer').eq(0).css('padding-top'));
-		
-		if (!$('.cont-outer').prev().hasClass('top-visual') || $(window).width() <= tbl) {
-			if (!$('.hmj-container').hasClass('m-complete')) {
-				$('.cont-outer').css('padding-top', '0').eq(0).css('padding-top', (contTopPd + headerHgt));
-			} else {
-				$('.cont-outer').eq(0).css('margin-top', headerHgt);
-			}
-		} else {
-			$('.cont-outer').eq(0).prev().css('margin-top', headerHgt);
-		}
-		if (!$('.top-visual').length == 0) {
-			if ($(window).width() <= tbl && !$('.top-visual').hasClass('mo-none') && !$('.top-visual').hasClass('pc-only')) {
-				$('.top-visual').css('margin-top', headerHgt);
-				$('.cont-outer').eq(0).removeAttr('style');
-			}
-		}
-		if ($('.cont-outer').prev().hasClass('top-tit-box')) {
-			if ($(window).width() > tbl) {
-				$('.cont-outer').css('padding-top', '0');
-				$('.top-tit-box').css('margin-top', headerHgt);
-			} else {
-				$('.top-tit-box').css('margin-top', 0);
-				$('.cont-outer').eq(0).css('padding-top', (contTopPd + headerHgt));
-			}
-		}
-	}
-	contAutoPadding();
 
 	function containerAutoHgt () {
 		let hmjHeaderHgt= $('.hmj-header').outerHeight(true);
