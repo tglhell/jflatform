@@ -17,7 +17,7 @@ jQuery.event.add(window, 'load', function () {
 		innerCont.css('height', boxHgt);
 	}
 	sideBox.css({'width':'0', 'height':'0'});
-	
+
 	// $('.inp-outer-box.inp-type').on('focusin', 'input', function () {
 	// 	const inpTypeParent = $(this).closest('.inp-outer-box.inp-type');
 	// 	let btnTblWid = inpTypeParent.find('.btn-tbl').outerWidth() + (twoDig[2] + irNum[5]);
@@ -264,7 +264,6 @@ jQuery.event.add(window, 'load', function () {
 			}
 			containerAutoHgt();
 			resChk();
-			// contAutoPadding();
 			mapAutoHeight();
 		}
 	});

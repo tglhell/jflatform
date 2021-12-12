@@ -238,7 +238,6 @@ caption {
 }
 body {
 	overflow-x: hidden;
-	padding-top: 129px;
 }
 .blind {
 	clip: rect(0, 0, 0, 0);
@@ -302,9 +301,6 @@ body::-webkit-scrollbar-track,
 	html, body {
 		font-size: 13px;
 		line-height: 20px;
-	}
-	body {
-		padding-top: 109px;
 	}
 	body::-webkit-scrollbar,
 	.layer-popup-wrap::-webkit-scrollbar,
@@ -1217,7 +1213,10 @@ body::-webkit-scrollbar-track,
 
 .hmj-container {
 	min-height: calc(100vh - 592px); /* calc(100vh - (header height + footer height)) */
-	padding-bottom: 160px;
+	padding: 129px 0 160px;
+}
+.none-sub ~ .hmj-container {
+	padding-top: 72px;
 }
 .hmj-container .hmj-content .cont-outer {
 	position: relative;
@@ -1414,7 +1413,10 @@ body::-webkit-scrollbar-track,
 	}
 	.hmj-container {
 		min-height: calc(100vh - 496px);
-		padding-bottom: 80px;
+		padding: 109px 0 80px;
+	}
+	.none-sub ~ .hmj-container {
+		padding-top: 56px;
 	}
 	.hmj-container .hmj-content .cont-outer {
 		display: block;
