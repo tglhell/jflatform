@@ -543,6 +543,7 @@
 <script>
 	$(function () {
 		const posScrArr = [];
+		const moScrPos = $('.mo-pos').offset().top - 129;
 		chkBool = false;
 		
 		$('.pos-scr-box li .btn-scr-down, .pos-scr-box a').on('click', function (e) {
@@ -550,33 +551,31 @@
 			if (!$('.pos-scr-box').length == 0) {
 				const thisBtnIdx = $(this).parent().index();
 				const activeBtnIdx = $(this).closest('.pos-scr-box').find('.active').index();
-				const headerHgt = $('.hmj-header .header-outer').height();
-				const hdrContHgt = $('.hmj-header .header-cont').height();
-				const subContHgt = $('.hmj-header .sub-cont').height();
+				const headerHgt = $('.hmj-header').height();
+				const headerOuterHgt = $('.hmj-header .header-outer').height();
 				const posScrItem = $('.pos-scr-item');
 				let posScrVal = posScrItem.eq(thisBtnIdx).offset().top;
 				$(this).parent().addClass('active').siblings().removeClass('active');
 				if (activeBtnIdx <= thisBtnIdx) {
 					if ($(window).width() > tbl) {
-						$('html, body').stop().animate({scrollTop:posScrVal - (headerHgt)}, secVal[2]);
+						$('html, body').stop().animate({scrollTop:posScrVal - headerOuterHgt}, secVal[2]);
 					} else {
 						if ($('.mo-pos').hasClass('active')) {
-							$('html, body').stop().animate({scrollTop:posScrVal - (headerHgt + 52)}, secVal[2]);
+							$('html, body').stop().animate({scrollTop:posScrVal - headerHgt}, secVal[2]);
 						} else {
-							$('html, body').stop().animate({scrollTop:posScrVal - (headerHgt + 109)}, secVal[2]);
+							$('html, body').stop().animate({scrollTop:posScrVal - (headerOuterHgt + headerHgt)}, secVal[2]);
 						}
 					}
 				} else {
 					if ($(window).width() > tbl) {
-						$('html, body').stop().animate({scrollTop:posScrVal - (headerHgt + hdrContHgt)}, secVal[2]);
+						$('html, body').stop().animate({scrollTop:posScrVal - headerHgt}, secVal[2]);
 					} else {
-						$('html, body').stop().animate({scrollTop:posScrVal - (headerHgt + 109)}, secVal[2]);
+						$('html, body').stop().animate({scrollTop:posScrVal - (headerOuterHgt + headerHgt)}, secVal[2]);
 					}
 				}
 			}
 		});
 
-		const moScrPos = $('.mo-pos').offset().top - 129;
 		$(window).scroll(function () {
 			const scrPos = $(this).scrollTop();
 			if (!$('.mo-pos').length == 0) {
