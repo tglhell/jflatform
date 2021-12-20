@@ -76,6 +76,9 @@ jQuery.event.add(window, 'load', function () {
 		}
 		if ($(this).hasClass('active')) {
 			$('.hmj-header.scr-chk').css('backdrop-filter', 'unset');
+			if ($('.hmj-wrap').hasClass('main')) {
+				$('.hmj-header.active').css('backdrop-filter', 'unset');
+			}
 			gnbMenuBox.parent().fadeIn(secVal[3], function () {
 				gnbMenuBox.css('right', '0');
 			});
@@ -107,6 +110,9 @@ jQuery.event.add(window, 'load', function () {
 					$('.btn-depth-switch').removeClass('active');
 					$(window).scrollTop(scrYPos);
 					$('.hmj-header.scr-chk').css('backdrop-filter', 'blur(80px)');
+					if ($('.hmj-wrap').hasClass('main')) {
+						$('.hmj-header.active').css('backdrop-filter', 'blur(80px)');
+					}
 				}, secVal[3]);
 				$('.btn-menu').removeClass('active');
 				$('.toggle-menu').removeClass('active').next().slideUp(secVal[2]);
@@ -1196,7 +1202,7 @@ function posActive() {
 
 		let posScrBox = $('.pos-scr-box'),
 			posScrBoxLen = posScrBox.length,
-			dist = secVal[1],
+			dist = 200,
 			moPosScrBox = $('.mo-pos .pos-scr-box'),
 			moPosScrBoxWid = moPosScrBox.outerWidth(),
 			moPosScrBoxLi = moPosScrBox.children('li'),

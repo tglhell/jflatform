@@ -158,8 +158,8 @@
 }
 .brand-list-cont {
     min-width: 1120px;
-    padding: 0 0 0 120px;
-    margin: 64px 0 152px;
+    padding: 0 0 152px 120px;
+    margin: 64px 0 0;
 }
 .brand-list-cont .swiper-slide {
     position: relative;
@@ -469,7 +469,7 @@
 }
 @media screen and (min-width: 1120px) {
 	.car-item-outer .car-cont .car-item {
-		transition: all .5s ease-out;
+		transition: all .8s ease-out;
 		transform: scale(1.3) translateX(-40%) translateY(0vw);
 	}
 	.active .car-item-outer .car-cont:not(.swiper-slide-active, .swiper-slide-duplicate-active) .car-item {
@@ -524,11 +524,11 @@
 		opacity: 1;
 	}
 	.brand-list-cont .swiper-slide:hover .tit-cont {
-		transition: bottom .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+		transition: bottom .3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 		bottom: 40px;
 	}
 	.brand-list-cont .swiper-slide:hover .btn-box {
-		transition: all .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+		transition: all .3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 		transform: translateY(0px);
 		opacity: 1;
 	}

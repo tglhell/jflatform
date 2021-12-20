@@ -36,7 +36,7 @@ body,
 	background-color: transparent;
 }
 .mocean .hmj-header .sub-cont .history > a,
-.mocean .hmj-header .sub-cont .history > span {
+.mocean .hmj-header .sub-cont .history .page-title {
 	color: #fff;
 }
 .mocean .hmj-container {
