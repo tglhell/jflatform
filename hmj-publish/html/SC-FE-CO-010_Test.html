@@ -4,13 +4,13 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-	<title>HMJ</title>
+	<title>Hyundai Mobility</title>
 
 	<link rel="stylesheet" href="../assets/css/common.css">
 	<link rel="stylesheet" href="../assets/css/lib/swiper.min.css">
 	<link rel="stylesheet" href="../assets/css/lib/customlib.css">
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
 
 	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
@@ -270,7 +270,7 @@
 		<div class="sub-cont">
 			<div class="history">
 				<a href="javascript:;">ホーム</a>
-				<span class="page-title">ブランド</span>
+				<h1 class="page-title">ブランド</h1>
 			</div>
 			<button type="button" class="back-page">Back page</button>
 		</div>
@@ -483,18 +483,30 @@
 </body>
 
 <style>
+	.scr-fix-box {
+		top: 107px !important;
+		margin-top: 70px;
+	}
+	.ie11 .scr-fix-box {
+		top: 34px !important;
+		margin-top: 70px;
+	}
 	.hmj-header + .hmj-container .scr-fix-box {
 		transition: top .5s ease-in-out;
 		top: 162px !important;
 		margin-top: 70px;
 	}
+	.ie11 .hmj-header + .hmj-container .scr-fix-box {
+		transition: top .5s ease-in-out;
+		top: 92px !important;
+	}
 	.hmj-header.header-fixed + .hmj-container .scr-fix-box {
 		transition: top .5s ease-in-out;
 		top: 107px !important;
 	}
-	.scr-fix-box {
-		top: 107px !important;
-		margin-top: 70px;
+	.ie11 .hmj-header.header-fixed + .hmj-container .scr-fix-box {
+		transition: top .5s ease-in-out;
+		top: 34px !important;
 	}
 	.pos-scr-box li + li {
 		margin-top: 30px;
@@ -556,6 +568,12 @@
 				let posScrVal = posScrItem.eq(thisBtnIdx).offset().top;
 				$(this).parent().addClass('active').siblings().removeClass('active');
 				if (activeBtnIdx <= thisBtnIdx) {
+					if ($('html').hasClass('ie11')) {
+						$('.hmj-header').addClass('header-fixed');
+						setObj(function () {
+							$('.hmj-header').css('top', -$('.header-cont').height());
+						}, secVal[4]);
+					}
 					if ($(window).width() > tbl) {
 						$('html, body').stop().animate({scrollTop:posScrVal - headerOuterHgt}, secVal[2]);
 					} else {
@@ -569,6 +587,12 @@
 						}
 					}
 				} else {
+					if ($('html').hasClass('ie11')) {
+						$('.hmj-header').removeClass('header-fixed');
+						setObj(function () {
+							$('.hmj-header').css('top', '0');
+						}, secVal[4]);
+					}
 					if ($(window).width() > tbl) {
 						$('html, body').stop().animate({scrollTop:posScrVal - headerHgt}, secVal[2]);
 					} else {
@@ -590,6 +614,15 @@
 				}
 			}
 		});
+
+		posArr = [];
+		const posScrItem = $('.pos-scr-list .pos-scr-item');
+		const posScrItemLeng = posScrItem.length;
+		for (let i = 0; i < posScrItemLeng; i++) {
+			let thisPos = posScrItem.eq(i).offset().top;
+			posArr.push(thisPos);
+			console.log(thisPos);
+		}
 	});
 </script>
 </html>

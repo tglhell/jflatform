@@ -4,10 +4,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>HMJ 온라인 판매 사이트 구축</title>
+    <title>Hyundai Mobility 온라인 판매 사이트 구축</title>
 
     <link rel="stylesheet" href="../assets/css/common.css">
-	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="https://www.hyundai.com/static/images/common/favicon/favicon.ico" type="image/x-icon">
 	<style>
 		.cont-outer > p, .cont-outer.fullcase, .cont-center, .cont-right > p {height:100px; background-color: rgb(205, 206, 182);}
 		.cont-outer {margin-bottom: 20px !important}
@@ -38,20 +38,20 @@
 				<div class="gnb-menu-outer">
 					<div class="gnb-menu-box blur">
 						<!-- 로그인 전 -->
-						<!-- <div class="account-box">
-							<button class="btn-account">Account</button>
-							<button class="btn-sign-in">Sign in</button>
-						</div> -->
+						<div class="account-box">
+							<a href="#" class="btn-sign-in">ログイン</a>
+						</div>
 						<!-- // 로그인 전 -->
 						<!-- 로그인 후 -->
-						<div class="account-box login">
-							<button class="btn-account">Account</button>
-							<button class="btn-sign-in">木村 拓哉 様</button>
-							<a href="#a" class="btn-alarm">
-								<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
-								<div class="num"><span>2</span></div>
+						<!-- <div class="account-box login">
+							<a href="#" class="btn-sign-link">
+								<span class="btn-sign-in">木村 拓哉 様</span>
 							</a>
-						</div>
+							<a href="#" class="btn-alarm">
+								<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
+								<span class="num"><span>99+</span></span>
+							</a>
+						</div> -->
 						<!-- // 로그인 후 -->
 						<ul class="gnb-menu-list ir-count inner-scroll-y">
 							<li class="ir-item">
@@ -203,10 +203,17 @@
 							<li class="ir-item">
 								<a href="#">MOCEAN</a>
 							</li>
-							<li class="ir-item">
+							<li class="ir-item mo-only">
 								<a href="#">SHOP</a>
 							</li>
+							<li class="ir-item mo-only">
+								<a href="#">CART</a>
+							</li>
 						</ul>
+						<div class="btn-box">
+							<button class="btn-sign-out"><span>ログアウト</span></button>
+							<button class="btn-setting app-only"><span>Settings</span></button>
+						</div>
 						<button class="btn-menu-close"><span>close</span></button>
 					</div>
 				</div>
@@ -215,7 +222,8 @@
 					<ul class="mid-list">
 						<li><a href="#"><span>IONIQ 5</span></a></li>
 						<li><a href="#"><span>NEXO</span></a></li>
-						<li><a href="#"><span>SHOW ROOM</span></a></li>
+						<li><a href="#"><span>Virtual Showroom</span></a></li>
+						<li><a href="#"><span>Digital Brand Studio</span></a></li>
 					</ul>
 				</div>
 
@@ -244,12 +252,15 @@
 										</div>
 									</div>
 									<div class="keyword-box">
-										<div class="top-info">
-											
-										</div>
+										<p class="top-text">最近検索ワード</p>
 										<ul>
-											<li></li>
+											<li><span>モデル</span> <button class="btn-del">삭제</button></li>
+											<li><span>IONIQ 5</span> <button class="btn-del">삭제</button></li>
+											<li><span>NEXO</span> <button class="btn-del">삭제</button></li>
+											<li><span>恵沢</span> <button class="btn-del">삭제</button></li>
+											<li><span>イベント</span> <button class="btn-del"></button></li>
 										</ul>
+										<button class="btn-keyword-del">すべて削除</button>
 									</div>
 								</div>
 							</div>

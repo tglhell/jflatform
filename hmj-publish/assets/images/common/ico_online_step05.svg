@@ -1,0 +1,14 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd">
+        <path d="M0 0h64v64H0z"/>
+        <g transform="translate(4 4)" stroke-width="2">
+            <path d="M0 44V11.524L23.464.754A4 4 0 0 1 26.76.735L51 11.524h0V27" stroke="#666" stroke-linecap="square"/>
+            <circle stroke="#0793EA" cx="43.5" cy="44.5" r="12.5"/>
+            <path stroke="#0793EA" stroke-linecap="square" d="m37.667 44.936 4.1 4.101 8.203-8.202"/>
+            <path d="M13.5 38h2a.5.5 0 1 1 0 1h-2a.5.5 0 1 1 0-1z" stroke="#666" fill="#0793EA" stroke-linecap="square" stroke-linejoin="bevel"/>
+            <path d="M27.442 38H24.37c-4.26 0-8.522-.188-12.783-.565A1.74 1.74 0 0 1 10 35.703v-5.917l2.874-4.643.917-3.874a3.482 3.482 0 0 1 2.825-2.632A47.782 47.782 0 0 1 24.371 18c2.585 0 5.17.212 7.755.637a3.482 3.482 0 0 1 2.825 2.632l.917 3.874L37 27.565" stroke="#666" stroke-linecap="square" stroke-linejoin="bevel"/>
+            <path d="M10 25c5.578.667 10.411 1 14.5 1s8.922-.333 14.5-1" stroke="#666" fill="#FFF" stroke-linecap="square" stroke-linejoin="round"/>
+            <path stroke="#666" stroke-linecap="square" stroke-linejoin="round" d="m17 30.6-2-.2M31 30.6l2-.2"/>
+        </g>
+    </g>
+</svg>

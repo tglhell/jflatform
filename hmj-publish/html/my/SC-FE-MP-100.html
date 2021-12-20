@@ -4,13 +4,13 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-	<title>Main : My : HMJ</title>
+	<title>Main : My : Hyundai Mobility</title>
 
 	<link rel="stylesheet" href="../../assets/css/common.css">
 	<link rel="stylesheet" href="../../assets/css/lib/swiper.min.css">
     <link rel="stylesheet" href="../../assets/css/lib/customlib.css">
 	<link rel="stylesheet" href="../../assets/css/my.css">
-	<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="../../assets/images/favicon.ico" type="image/x-icon">
 
 	<script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
@@ -31,7 +31,7 @@
 		<!-- header -->
 		<div class="header-outer">
 			<div class="header-cont">
-				<h1><a href="hmj_layout.html"><img src="../../assets/images/common/ico_header_logo.svg" alt="Hyundai Logo"></a></h1>
+				<span class="logo"><a href="hmj_layout.html"><img src="../../assets/images/common/ico_header_logo.svg" alt="Hyundai Logo"></a></span>
 
 				<div class="gnb-menu-outer">
 					<div class="gnb-menu-box blur">
@@ -266,7 +266,7 @@
 				<a href="#">HOME</a>
 				<a href="#">MY</a>
 				<a href="#">クーポン</a>
-				<span class="page-title">マイリファラルコード </span>
+				<h1 class="page-title">マイリファラルコード </h1>
 			</div>
 			<button type="button" class="back-page">Back page</button>
 		</div>
@@ -547,32 +547,20 @@
 									</div>
 									<ul class="box-status">
 										<li>
-											<div class="tooltip-outer">
+											<!-- 2021-12-15 수정 -->
+											<a href='javascript:void(0);' class="pop-open" data-pop-idx="SC-FE-CP-220">
 												<p class="text">注文状態</p>
-												<div class="tooltip-box">
-													<button class="btn-tooltip"><span><img src="../../assets/images/common/btn_tooltip.svg" alt="tooltip"></span></button>
-													<div class="tooltip-cont" style="">
-														<p class="tit">Popover Title</p>
-														<div class="cont">contents</div>
-														<button type="button" class="close">Popover Close</button>
-													</div>
-												</div>
-											</div>
-											<span class="fc-color4">契約金お支払完了</span>
+												<span class="btn-icon2">契約金お支払完了</span>
+											</a>
+											<!-- //2021-12-15 수정 -->
 										</li>
 										<li>
-											<div class="tooltip-outer">
+											<!-- 2021-12-15 수정 -->
+											<a href='javascript:void(0);' class="pop-open" data-pop-idx="SC-FE-CP-501">
 												<p class="text">車両状態</p>
-												<div class="tooltip-box">
-													<button class="btn-tooltip"><span><img src="../../assets/images/common/btn_tooltip.svg" alt="tooltip"></span></button>
-													<div class="tooltip-cont" style="">
-														<p class="tit">Popover Title</p>
-														<div class="cont">contents</div>
-														<button type="button" class="close">Popover Close</button>
-													</div>
-												</div>
-											</div>
-											<span class="fc-color4">確認中</span>
+												<span class="btn-icon2">確認中</span>
+											</a>
+											<!-- //2021-12-15 수정 -->
 										</li>
 									</ul>
 									<div class="box-desc">
@@ -700,12 +688,12 @@
 					<!-- 고객센터 -->
 					<div class="info-box">
 						<!-- PC only -->
-						<h4 class="pc-title">顧客センター</h4>
+						<h4 class="pc-title">Hyundaiカスタマーセンター </h4>
 						<!-- // PC only -->
 						<section>
 							<div class="box-tel">
 								<!-- mobile only -->
-								<h4 class="mo-title">顧客センター</h4>
+								<h4 class="mo-title">Hyundaiカスタマーセンター </h4>
 								<!-- // mobile only -->
 								<!-- PC only -->
 								<p class="pc-tel">0120-600-066</p> <!-- 2021.11.05 전화번호 수정 -->
@@ -730,6 +718,7 @@
 							</div>
 							<div class="box-caution">
 								<p class="caution">セキュリティ業務時間サービスは24時間提供されます。</p>
+								<p class="caution">祝日の営業に関してはホームページでご案内させていただきます。</p><!-- 2021-12-14 추가 -->
 							</div>
 						</section>
 					</div>
@@ -840,6 +829,140 @@
 		</div>
 	</div>
 	<!--//footer -->
+</div>
+
+<!-- SC-FE-CP-220 -->
+<div class="layer-popup-wrap mo-full fix-center" data-pop-idx="SC-FE-CP-220">
+    <div class="layer-popup-body">
+        <div class="layer-popup-cont pop-medium order-inquiry">
+            <h1 class="layer-title">注文状態のご案内</h1>
+            <div class="layer-cont">
+                <ul class="state order-step">
+					<!-- 2021.11.22 수정 -->
+                    <li class="step1">
+						<div class="text">
+							<strong>契約中</strong>
+							申込金の未払い、または電子署名の未完了状態です。<br>
+							申込んの入金と電子署名が完了されると車両契約が確定されます。
+						</div>
+						
+                    </li>
+                    <li class="step2">
+						<div class="text">
+							<strong>契約確定</strong>
+							契約が確定し、架電による契約確認後、担当の行政書士が指定されます。<br>
+							割賦とリースの場合、金融審査が先に行われます。
+						</div>
+                    </li>
+					<!-- //2021.11.22 수정 -->
+                    <li class="step3">
+						<div class="text">
+							<strong>書類受付完了</strong>
+							お客様の書類を行政書士が受付、<br>
+							車庫地登録が行われます。
+						</div>
+                    </li>
+                    <li class="step4">
+						<div class="text">
+							<strong>車庫地登録完了</strong>
+                        	車庫地登録が完了し、残代金が確定されます。
+						</div>
+                    </li>
+                    <li class="step5">
+						<div class="text">
+							<strong>残代金お支払い要請</strong>
+                        	確定された残代金に対して、クレジットカード、または銀行振込による残代金のお支払いが行われます。
+						</div>
+                    </li>
+                    <li class="step6">
+						<div class="text">
+							<strong>残代金支払い完了</strong>
+                       		残代金のお支払いが完了し、車両を登録します。
+						</div>
+                    </li>
+                    <li class="step7">
+                        <div class="text">
+							<strong>注文キャンセル</strong>
+                        	お客様の要請で注文がキャンセルされました。
+						</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-fixed">
+                <div class="cta-outer full-type">
+                    <button class="btn btn-type2"><span>確認</span></button>
+                </div>
+            </div>
+            <button class="btn-close-popup btn-close">close</button>
+        </div>
+    </div>
+</div>
+
+<!-- SC-FE-CP-501 -->
+<div class="layer-popup-wrap mo-full fix-center" data-pop-idx="SC-FE-CP-501">
+    <div class="layer-popup-body">
+        <div class="layer-popup-cont pop-medium order-inquiry">
+            <h1 class="layer-title">車両状態のご案内</h1>
+            <div class="layer-cont">
+                <ul class="state car-step">
+                    <li class="step1">
+						<div class="text">
+							<strong>生産準備中</strong>
+                            ご注文の車両の生産準備をしています。
+						</div>
+                    </li>
+                    <li class="step2">
+						<div class="text">
+							<strong>生産中</strong>
+                            HyundaiのULSAN工場で<br>
+                            ご注文の車両の生産が始まりました。
+						</div>
+                    </li>
+                    <li class="step3">
+						<div class="text">
+							<strong>輸送中</strong>
+                            ご注文の車両が完成し、韓国から日本へ輸送しています。<br>
+                            船積 / 輸送 / 通関プロセスが行われます。
+						</div>
+                    </li>
+					<!-- 2021.11.22 수정 -->
+					<li class="step8">
+						<div class="text">
+							<strong>車両準備中</strong>
+							お客様の車両を登録するために最終検査を実行中です。 
+						</div>
+                    </li>
+					<!-- //2021.11.22 수정 -->
+                    <li class="step4">
+						<div class="text">
+							<strong>車両登録</strong>
+                            確定された情報をもとに車両を登録しました。<br>
+                            出荷の準備をしています。
+						</div>
+                    </li>
+                    <li class="step5">
+						<div class="text">
+							<strong>配送開始</strong>
+                            アクセサリーの取付など出荷の準備が整い、<br>
+                            お客様の車庫地への配送が始まりました。
+						</div>
+                    </li>
+                    <li class="step6">
+						<div class="text">
+							<strong>納車完了</strong>
+                            車両を安全にお届けいたしました。
+						</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-fixed">
+                <div class="cta-outer full-type">
+                    <button class="btn btn-type2"><span>確認</span></button>
+                </div>
+            </div>
+            <button class="btn-close-popup btn-close">close</button>
+        </div>
+    </div>
 </div>
 
 </body>

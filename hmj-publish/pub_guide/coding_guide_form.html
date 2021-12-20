@@ -4,12 +4,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>HMJ 온라인 판매 사이트 구축 CODING GUIDE</title>
+    <title>Hyundai Mobility 온라인 판매 사이트 구축 CODING GUIDE</title>
 
     <!-- 코딩 가이드용 -->
     <link rel="stylesheet" href="docs/guide.css">
     <link rel="stylesheet" href="docs/prism.css">
-	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
 	<script type="text/javascript" src="docs/prism.js"></script>
 	<script type="text/javascript" src="docs/plugin.js"></script>
 	<!-- //코딩 가이드용 -->
@@ -34,7 +34,7 @@
 <body>
 <div class="wrap hmj-wrap" id="codingGiuide">
 	<div class="header">
-		<div><em>HMJ 온라인 판매 사이트 구축</em> project coding guide</div>
+		<div><em>Hyundai Mobility 온라인 판매 사이트 구축</em> project coding guide</div>
 		<h1><img src="images/logo_header.png" alt="로고"></h1>
 	</div>
 
@@ -267,31 +267,7 @@
 			</div>
 			<p class="error-msg lbl-type">error text</p>
 			
-			<div class="inp-outer-box tel-type">
-				<label for="inpNum01_01">電話番号 <span class="required">*</span></label>
-				<div class="inp-slice-box">
-					<div class="slt-box type2">
-						<p class="selected-value">070</p>
-						<ul class="select-items">
-							<li>070</li>
-							<li>080</li>
-						</ul>
-					</div>
-					<span class="inp-hpn">-</span>
-					<div class="inp-area">
-						<input type="number" id="inpNum01_02" class="inp-item" placeholder="1234">
-						<button class="inp-close"></button>
-					</div>
-					<span class="inp-hpn">-</span>
-					<div class="inp-area">
-						<input type="number" id="inpNum01_03" class="inp-item" placeholder="5678">
-						<button class="inp-close"></button>
-					</div>
-				</div>
-			</div>
-			<p class="error-msg lbl-type">error text</p>
-
-			<div class="inp-outer-box tel-type">
+			<div class="inp-outer-box tel-type"><!-- 유효성 검사 시 val-error class 추가 -->
 				<label for="inpNum01_01">携帯電話 <span class="required">*</span></label>
 				<div class="inp-slice-box">
 					<div class="slt-box type2">
@@ -299,20 +275,48 @@
 						<ul class="select-items">
 							<li>070</li>
 							<li>080</li>
+							<li>090</li>
 						</ul>
 					</div>
 					<span class="inp-hpn">-</span>
 					<div class="inp-area">
-						<input type="number" id="inpNum01_05" class="inp-item" placeholder="9876">
+						<input type="tel" id="inpNum01_02" class="inp-item" placeholder="数字" maxlength="4" oninput="telInputCheck(this)">
+						<button class="inp-close"></button>
 					</div>
 					<span class="inp-hpn">-</span>
 					<div class="inp-area">
-						<input type="number" id="inpNum01_06" class="inp-item" placeholder="5432">
+						<input type="tel" id="inpNum01_03" class="inp-item" placeholder="数字" maxlength="4" oninput="telInputCheck(this)">
+						<button class="inp-close"></button>
+					</div>
+				</div>
+			</div>
+			<p class="error-msg lbl-type">携帯電話番号を入力してください。</p>
+
+			<div class="inp-outer-box tel-type"><!-- 유효성 검사 시 val-error class 추가 -->
+				<label for="inpNum01_01">携帯電話 <span class="required">*</span></label>
+				<div class="inp-slice-box">
+					<div class="slt-box type2">
+						<p class="selected-value">070</p>
+						<ul class="select-items">
+							<li>070</li>
+							<li>080</li>
+							<li>090</li>
+						</ul>
+					</div>
+					<span class="inp-hpn">-</span>
+					<div class="inp-area">
+						<input type="tel" id="inpNum01_02" class="inp-item" placeholder="数字" maxlength="4" oninput="telInputCheck(this)">
+						<button class="inp-close"></button>
+					</div>
+					<span class="inp-hpn">-</span>
+					<div class="inp-area">
+						<input type="tel" id="inpNum01_03" class="inp-item" placeholder="数字" maxlength="4" oninput="telInputCheck(this)">
+						<button class="inp-close"></button>
 					</div>
 					<button class="btn btn-type3 btn-tbl"><span>変更</span></button>
 				</div>
 			</div>
-			<p class="error-msg lbl-type">error text</p>
+			<p class="error-msg lbl-type">携帯電話番号を入力してください。</p>
 
 			<div class="inp-outer-box val-error">
 				<label for="inpBirth01_01">生年月日 <span class="required">*</span></label>
@@ -523,7 +527,7 @@
 			<p class="error-msg">error text</p>
 			<div class="inp-outer-box">
 				<div class="inp-area">
-					<input type="text" class="inp-item" placeholder="Disabled" disabled>
+					<input type="text" class="inp-item" placeholder="Disabled" disabled value="dddddddd">
 					<button class="inp-close"></button>
 				</div>
 			</div>

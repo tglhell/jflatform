@@ -1,0 +1,75 @@
+<svg width="642" height="164" viewBox="0 0 642 164" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd">
+        <rect fill="#FFF" width="642" height="164" rx="8"/>
+        <path d="M243 70h251a4 4 0 0 1 4 4v52a4 4 0 0 1-4 4H243a4 4 0 0 1-4-4V74a4 4 0 0 1 4-4z" stroke="#0793EA" stroke-dasharray="2,2"/>
+        <g transform="translate(334 120)">
+            <rect fill="#0793EA" width="64" height="20" rx="10"/>
+            <text font-family="HyundaiSansHeadJP-Regular, Hyundai Sans Head JP" font-size="12" fill="#FFF">
+                                            <tspan x="8" y="15">顧客通知</tspan>
+                                        </text>
+        </g>
+        <path fill="#CCC" d="M67 55h520v2H67z"/>
+        <g transform="translate(555 24)">
+            <text font-family="HyundaiSansHeadJP-Regular, Hyundai Sans Head JP" font-size="14" fill="#E63312">
+                                            <tspan x="0" y="64">支払期限</tspan>
+                                        </text>
+            <circle stroke="#E63312" stroke-width="2" fill="#FFF" cx="28" cy="32" r="7"/>
+            <text font-family="HyundaiSansHeadJP-Regular, Hyundai Sans Head JP" font-size="12" fill="#999">
+                                            <tspan x="10.088" y="11">7 day</tspan>
+                                        </text>
+        </g>
+        <g transform="translate(491 24)">
+            <circle stroke="#CCC" stroke-width="2" fill="#FFF" cx="19" cy="32" r="7"/>
+            <text font-family="HyundaiSansHeadJP-Regular, Hyundai Sans Head JP" font-size="12" fill="#CCC">
+                                            <tspan x=".206" y="11">6 day</tspan>
+                                        </text>
+        </g>
+        <g transform="translate(396.5 24)">
+            <text font-family="HyundaiSansHeadJP-Regular, Hyundai Sans Head JP" font-size="14" fill="#1C6BBA">
+                                            <tspan x="25.289" y="64">O/B</tspan>
+                                            <tspan x=".292" y="86">(営業日基準)</tspan>
+                                        </text>
+            <circle stroke="#1C6BBA" stroke-width="2" fill="#FFF" cx="40.5" cy="32" r="7"/>
+            <text font-family="HyundaiSansHeadJP-Regular, Hyundai Sans Head JP" font-size="12" fill="#999">
+                                            <tspan x="22.108" y="11">5 day</tspan>
+                                        </text>
+        </g>
+        <g transform="translate(345 24)">
+            <circle stroke="#CCC" stroke-width="2" fill="#FFF" cx="19" cy="32" r="7"/>
+            <text font-family="HyundaiSansHeadJP-Regular, Hyundai Sans Head JP" font-size="12" fill="#CCC">
+                                            <tspan x=".26" y="11">4 day</tspan>
+                                        </text>
+        </g>
+        <g transform="translate(263 24)">
+            <text font-family="HyundaiSansHeadJP-Regular, Hyundai Sans Head JP" font-size="14" fill="#1C6BBA">
+                                            <tspan x="0" y="64">支払要請</tspan>
+                                            <tspan x="0" y="86">通知発送</tspan>
+                                        </text>
+            <circle stroke="#1C6BBA" stroke-width="2" fill="#FFF" cx="28" cy="32" r="7"/>
+            <text font-family="HyundaiSansHeadJP-Regular, Hyundai Sans Head JP" font-size="12" fill="#999">
+                                            <tspan x="9.578" y="11">3 day</tspan>
+                                        </text>
+        </g>
+        <g transform="translate(199 24)">
+            <circle stroke="#CCC" stroke-width="2" fill="#FFF" cx="19" cy="32" r="7"/>
+            <text font-family="HyundaiSansHeadJP-Regular, Hyundai Sans Head JP" font-size="12" fill="#CCC">
+                                            <tspan x=".734" y="11">2 day</tspan>
+                                        </text>
+        </g>
+        <g transform="translate(126 24)">
+            <circle stroke="#CCC" stroke-width="2" fill="#FFF" cx="19" cy="32" r="7"/>
+            <text font-family="HyundaiSansHeadJP-Regular, Hyundai Sans Head JP" font-size="12" fill="#CCC">
+                                            <tspan x="2.036" y="11">1 day</tspan>
+                                        </text>
+        </g>
+        <g transform="translate(30 24)">
+            <text font-family="HyundaiSansHeadJP-Regular, Hyundai Sans Head JP" font-size="14" fill="#666">
+                                            <tspan x="0" y="64">支払方法選択</tspan>
+                                        </text>
+            <circle stroke="#666" stroke-width="2" fill="#FFF" cx="42" cy="32" r="7"/>
+            <text font-family="HyundaiSansHeadJP-Regular, Hyundai Sans Head JP" font-size="12" fill="#999">
+                                            <tspan x="22.462" y="11">D day</tspan>
+                                        </text>
+        </g>
+    </g>
+</svg>

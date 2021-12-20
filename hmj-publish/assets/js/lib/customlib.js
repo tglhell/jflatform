@@ -440,10 +440,13 @@ $(function () {
             $('.event-banner-swiper [class*="swiper-button"]').hide();
         } else {
             let _gap ;
+			let _autoH;
             if ($(window).width() > tbl) {
                 _gap = 80;
+				_autoH = false;
             } else{
                 _gap = 0;
+				_autoH = true;
             }
             swpOpt = {
                 navigation: {
@@ -463,6 +466,7 @@ $(function () {
                 observer: true,
                 observeParents: true,
                 autoplay: true,
+				autoHeight: _autoH,
                 delay: 5000,
             }
         }
@@ -633,6 +637,7 @@ $(function () {
 					watchOverflow : true,
 					allowTouchMove : true,
 					autoPlay: false,
+					autoHeight: true,
 					breakpoints:{
 						1120:{
 							allowTouchMove : _pcNon,

@@ -4,19 +4,19 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-	<title>HMJ</title>
+	<title>Hyundai Mobility</title>
 
 	<link rel="stylesheet" href="../assets/css/common.css">
 	<link rel="stylesheet" href="../assets/css/lib/swiper.min.css">
 	<link rel="stylesheet" href="../assets/css/lib/customlib.css">
-	<link rel="stylesheet" href="../assets/css/main2.css">
-	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
 
 	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/swiper.min.js"></script>
 	<script type="text/javascript" src="../assets/js/common.js"></script>
-	<script type="text/javascript" src="../assets/js/main2.js"></script>
+	<script type="text/javascript" src="../assets/js/main.js"></script>
 </head>
 
 <body>
@@ -31,19 +31,17 @@
 		<!-- header -->
 		<div class="header-outer">
 			<div class="header-cont">
-				<h1><a href="hmj_layout.html"><img src="../assets/images/common/ico_header_logo_w.svg" alt="Hyundai Logo"></a></h1>
+				<span class="logo"><a href="hmj_layout.html"><img src="../assets/images/common/ico_header_logo_w.svg" alt="Hyundai Logo"></a></span>
 
 				<div class="gnb-menu-outer">
 					<div class="gnb-menu-box blur">
 						<!-- 로그인 전 -->
 						<!-- <div class="account-box">
-							<button class="btn-account">Account</button>
-							<button class="btn-sign-in">Sign in</button>
+							<a href="#" class="btn-sign-in">ログイン</a>
 						</div> -->
 						<!-- // 로그인 전 -->
 						<!-- 로그인 후 -->
 						<div class="account-box login">
-							<span class="btn-account">Account</span>
 							<a href="#" class="btn-sign-link">
 								<span class="btn-sign-in">木村 拓哉 様</span>
 							</a>
@@ -214,7 +212,7 @@
 							</li>
 						</ul>
 						<div class="btn-box">
-							<button class="btn-sign-out"><span>Sign out</span></button>
+							<button class="btn-sign-out"><span>ログアウト</span></button>
 							<button class="btn-setting app-only"><span>Settings</span></button>
 						</div>
 						<button class="btn-menu-close"><span>close</span></button>
@@ -257,11 +255,11 @@
 									<div class="keyword-box">
 										<p class="top-text">最近検索ワード</p>
 										<ul>
-											<li>モデル <button class="btn-del">삭제</button></li>
-											<li>IONIQ 5 <button class="btn-del">삭제</button></li>
-											<li>NEXO <button class="btn-del">삭제</button></li>
-											<li>恵沢 <button class="btn-del">삭제</button></li>
-											<li>イベント <button class="btn-del"></button></li>
+											<li><span>モデル</span> <button class="btn-del">삭제</button></li>
+											<li><span>IONIQ 5</span> <button class="btn-del">삭제</button></li>
+											<li><span>NEXO</span> <button class="btn-del">삭제</button></li>
+											<li><span>恵沢</span> <button class="btn-del">삭제</button></li>
+											<li><span>イベント</span> <button class="btn-del"></button></li>
 										</ul>
 										<button class="btn-keyword-del">すべて削除</button>
 									</div>
@@ -283,25 +281,74 @@
 	<div id="hmjContainer" class="hmj-container">
 		<div class="hmj-content">
 			<div class="section-wrap">
-				<div class="media-wrap">
-					<div class="video-cont">
-						<video autoplay loop muted playsinline poster="">
-							<source src="../assets/images/main/main_ioniq5_1.mov">
-						</video>
-					</div>
-					<div class="txt-cont">
-						<strong class="tit">IONIQ 5</strong>
-						<p class="tit-txt">オフィスだけが、仕事場ではない。</p>
-						<div class="cta-outer">
-							<button class="btn btn-type2"><span>SHOW ROOM</span></button>
-							<button class="btn"><span>BUILD YOUR CAR</span></button>
+				<div class="swiper-outer-box main-swiper-num01">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="media-wrap">
+									<img src="../assets/images/main/@img_top_bg_sample.png" alt="main_sample01">
+									<div class="txt-cont">
+										<strong class="tit">IONIQ 5</strong>
+										<p class="tit-txt">オフィスだけが、仕事場ではない。</p>
+										<div class="cta-outer">
+											<button class="btn btn-type2"><span>SHOW ROOM</span></button>
+											<button class="btn"><span>BUILD YOUR CAR</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="media-wrap">
+									<img src="../assets/images/main/@img_top_bg_sample.png" alt="main_sample01">
+									<div class="txt-cont">
+										<strong class="tit">IONIQ 5</strong>
+										<p class="tit-txt">オフィスだけが、仕事場ではない。</p>
+										<div class="cta-outer">
+											<button class="btn btn-type2"><span>SHOW ROOM</span></button>
+											<button class="btn"><span>BUILD YOUR CAR</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="media-wrap">
+									<div class="video-cont">
+										<video autoplay loop muted playsinline poster="">
+											<source src="../assets/images/main/main_ioniq5_1.mov">
+										</video>
+									</div>
+									<div class="txt-cont">
+										<strong class="tit">IONIQ 5</strong>
+										<p class="tit-txt">オフィスだけが、仕事場ではない。</p>
+										<div class="cta-outer">
+											<button class="btn btn-type2"><span>SHOW ROOM</span></button>
+											<button class="btn"><span>BUILD YOUR CAR</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="media-wrap">
+									<img src="../assets/images/main/@img_top_bg_sample.png" alt="main_sample01">
+									<div class="txt-cont">
+										<strong class="tit">IONIQ 5</strong>
+										<p class="tit-txt">オフィスだけが、仕事場ではない。</p>
+										<div class="cta-outer">
+											<button class="btn btn-type2"><span>SHOW ROOM</span></button>
+											<button class="btn"><span>BUILD YOUR CAR</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
+					<div class="swiper-pagination"></div>
 				</div>
+				
 				<div class="lineup-wrap">
 					<div class="top-tit-cont">
 						<h2>Line up</h2>
-						<p class="top-desc">ラインナップ</p>
+						<p class="top-desc">明日のために、もう待たない。</p>
 					</div>
 					
 					<div class="swiper-outer-box main-item-swiper">
@@ -311,31 +358,30 @@
 									<a href="" class="car-space-box">
 										<span class="car-item-text">
 											<strong class="item-tit">IONIQ 5</strong>
-											<span class="item-desc">A new generation<br>of cabin styling.</span>
-											<span class="btn-box">
-												<span class="btn-desc">詳しくみる</span>
-											</span>
 											<span class="item-info-box">
 												<ul>
-													<li>
-														<span class="info-list-item">
-															<span class="list-tit">走行可能距離</span>
-															<span class="list-unit"><strong>430</strong><span>Km</span></span>
-														</span>
-													</li>
-													<li>
-														<span class="info-list-item">
-															<span class="list-tit">燃費</span>
-															<span class="list-unit"><strong>5.1</strong><span>KmKwh</span></span>
-														</span>
-													</li>
 													<li>
 														<span class="info-list-item">
 															<span class="list-tit">最大出力</span>
 															<span class="list-unit"><strong>125.0</strong><span>KW</span></span>
 														</span>
 													</li>
+													<li>
+														<span class="info-list-item">
+															<span class="list-tit">燃費</span>
+															<span class="list-unit"><strong>5.1</strong><span>Km/Kwh</span></span>
+														</span>
+													</li>
+													<li>
+														<span class="info-list-item">
+															<span class="list-tit">行可能距離</span>
+															<span class="list-unit"><strong>430</strong><span>KM</span></span>
+														</span>
+													</li>
 												</ul>
+											</span>
+											<span class="btn-box">
+												<span class="btn-desc">詳しくみる</span>
 											</span>
 										</span>
 										<span class="car-item">
@@ -347,31 +393,30 @@
 									<a href="" class="car-space-box">
 										<span class="car-item-text">
 											<strong class="item-tit">NEXO</strong>
-											<span class="item-desc">A new generation<br>of cabin styling.</span>
-											<span class="btn-box">
-												<span class="btn-desc">詳しくみる</span>
-											</span>
 											<span class="item-info-box">
 												<ul>
 													<li>
 														<span class="info-list-item">
 															<span class="list-tit">走行可能距離</span>
-															<span class="list-unit"><strong>430</strong><span>Km</span></span>
+															<span class="list-unit"><strong>152.4</strong><span>KW</span></span>
 														</span>
 													</li>
 													<li>
 														<span class="info-list-item">
 															<span class="list-tit">燃費</span>
-															<span class="list-unit"><strong>5.1</strong><span>KmKwh</span></span>
+															<span class="list-unit"><strong>7.2</strong><span>Km/Kwh</span></span>
 														</span>
 													</li>
 													<li>
 														<span class="info-list-item">
 															<span class="list-tit">最大出力</span>
-															<span class="list-unit"><strong>125.0</strong><span>KW</span></span>
+															<span class="list-unit"><strong>800</strong><span>KM</span></span>
 														</span>
 													</li>
 												</ul>
+											</span>
+											<span class="btn-box">
+												<span class="btn-desc">詳しくみる</span>
 											</span>
 										</span>
 										<span class="car-item">
@@ -383,10 +428,6 @@
 									<div class="car-space-box">
 										<span class="car-item-text">
 											<strong class="item-tit">IONIQ 6</strong>
-											<span class="item-desc">A new generation<br>of cabin styling.</span>
-											<span class="btn-box">
-												<span class="btn-desc">詳しくみる</span>
-											</span>
 											<span class="item-info-box">
 												<ul>
 													<li>
@@ -398,7 +439,7 @@
 													<li>
 														<span class="info-list-item">
 															<span class="list-tit">燃費</span>
-															<span class="list-unit"><strong>5.1</strong><span>KmKwh</span></span>
+															<span class="list-unit"><strong>5.1</strong><span>Km/Kwh</span></span>
 														</span>
 													</li>
 													<li>
@@ -408,6 +449,9 @@
 														</span>
 													</li>
 												</ul>
+											</span>
+											<span class="btn-box">
+												<span class="btn-desc">詳しくみる</span>
 											</span>
 										</span>
 										<span class="car-item">
@@ -419,12 +463,13 @@
 						</div>
 						<div class="swiper-button-prev"></div>
 						<div class="swiper-button-next"></div>
+						<div class="swiper-pagination"></div>
 					</div>
 				</div>
 				<div class="brand-wrap">
 					<div class="top-tit-cont">
 						<h2>Brand</h2>
-						<p class="top-desc">ブランド</p>
+						<p class="top-desc">進もう。私たちの未来のために。</p>
 					</div>
 					<div class="swiper-outer-box brand-list-cont">
 						<div class="swiper-container">
@@ -432,7 +477,7 @@
 								<a href="" class="swiper-slide">
 									<img src="../assets/images/main/img_goods_01.png" alt="sample01">
 									<span class="tit-cont">
-										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
+										<strong class="tit">水素社会が<br>もたらす未来</strong>
 										<span class="btn-box">
 											<span class="btn-desc">詳しくみる</span>
 										</span>
@@ -441,7 +486,7 @@
 								<a href="" class="swiper-slide">
 									<img src="../assets/images/main/img_goods_02.png" alt="sample02">
 									<span class="tit-cont">
-										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
+										<strong class="tit">水素社会が<br>もたらす未来</strong>
 										<span class="btn-box">
 											<span class="btn-desc">詳しくみる</span>
 										</span>
@@ -450,7 +495,7 @@
 								<a href="" class="swiper-slide">
 									<img src="../assets/images/main/img_goods_03.png" alt="sample02">
 									<span class="tit-cont">
-										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
+										<strong class="tit">水素社会が<br>もたらす未来</strong>
 										<span class="btn-box">
 											<span class="btn-desc">詳しくみる</span>
 										</span>
@@ -459,7 +504,7 @@
 								<a href="" class="swiper-slide">
 									<img src="../assets/images/main/img_goods_01.png" alt="sample02">
 									<span class="tit-cont">
-										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
+										<strong class="tit">水素社会が<br>もたらす未来</strong>
 										<span class="btn-box">
 											<span class="btn-desc">詳しくみる</span>
 										</span>
@@ -468,7 +513,7 @@
 								<a href="" class="swiper-slide">
 									<img src="../assets/images/main/img_goods_02.png" alt="sample02">
 									<span class="tit-cont">
-										<strong class="tit">明日のために、<br>私たちはもう待たない。</strong>
+										<strong class="tit">水素社会が<br>もたらす未来</strong>
 										<span class="btn-box">
 											<span class="btn-desc">詳しくみる</span>
 										</span>
@@ -597,6 +642,7 @@
 					<li><span><img src="../assets/images/main/ico_floating_03.svg" alt="仕様百科"></span><a href="#">仕様百科</a></li>
 					<li><span><img src="../assets/images/main/ico_floating_04.svg" alt="試乗予約"></span><a href="#">試乗予約</a></li>
 					<li><span><img src="../assets/images/main/ico_floating_05.svg" alt="イベント"></span><a href="#">イベント</a></li>
+					<li><span><img src="../assets/images/main/ico_floating_05.svg" alt="イベント"></span><a href="#">イベント</a></li>
 				</ul>
 				<div class="img-banner"><a href="#"><img src="../assets/images/main/@img_floating_banner.jpg" alt="상단 배너"></a></div>
 			</div>
@@ -611,4 +657,11 @@
 </div>
 
 </body>
+
+<script>
+	mainKeyvisualSwiper(); // Key Visual Swiper
+	chkStartPos(); // Lineup Rotate
+	mainLineupSwiper(); // Lineup Swiper
+	mainBrandSwiper(); // Brand Swiper
+</script>
 </html>
