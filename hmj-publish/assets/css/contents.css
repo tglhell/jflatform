@@ -246,7 +246,7 @@
 }
 .detail-page .title .share{
     width: 32px;
-    line-height: 52px;
+    height: 52px;
     background: url('../images/common/ico_share.svg') no-repeat center;
     font-size: 0;
 }
@@ -347,7 +347,7 @@
         line-height: 30px;
     }
     .detail-page .title .share{
-        line-height: 32px;
+        height: 32px;
         background-size: 24px;
     }
     .detail-page .cont-wrap{
@@ -909,13 +909,10 @@ section.wrap .cta-outer + .txt {
 	margin-bottom: 16px;
 }
 .tab-box-item .model-list {
-	margin: 0 -16px;
 	font-size: 0;
 }
 .tab-box-item .model-list li {
-	displaY: inline-block;
-	width: 33.33%;
-	padding: 0 16px;
+	display: inline-block;
 	vertical-align: top;
 }
 .tab-box-item .model-list li:first-child {
@@ -962,14 +959,43 @@ section.wrap .cta-outer + .txt {
 	height: 16px;
 	background-color: #e9e9e9;
 }
-.tab-box-item .model-list li .select-group {
-	margin-top: 16px;
+.tab-box-item .model-list li .tag-group {
+	margin-top: 8px;
 }
-.tab-box-item .model-list li .select-group label {
-	pointer-events: none;
+.tab-box-item .model-list li .tag-item{
+	position: relative;
+	display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 16px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #666;
+	border-radius: 16px;
+	margin: 8px 8px 0 0;
 }
-.tab-box-item .model-list li .btn-select input + span:before {
-	margin-right: 0;
+.tab-box-item .model-list li .tag-item.active{
+	padding-left: 36px;
+    border-color: #002c5f;
+	color: #002c5f;
+	font-weight: 500;
+}
+.tab-box-item .model-list li .tag-item.active:before {
+	position: absolute;
+	content: '';
+    display: inline-block;
+	top: 0;
+	left: 16px;
+    width: 16px;
+    height: 30px;
+    background: url(../images/common/ico_select.svg) no-repeat center;
+    vertical-align: middle;
+    margin-right: 4px;
+    transition: all .2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 .unified-search .list-wrap {
 	margin-top: 0;
@@ -980,7 +1006,72 @@ section.wrap .cta-outer + .txt {
 .unified-search .tab-box-cont .tab-box-item + .tab-box-item.active {
 	margin-top: 0;
 }
-
+.unified-search .swiper-outer-box .swiper-button-prev,
+.unified-search .swiper-outer-box .swiper-button-next{
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0,0,0,.7);
+}
+.unified-search .display .swiper-outer-box .swiper-button-prev,
+.unified-search .display .swiper-outer-box .swiper-button-next{
+	top: 140px;
+}
+.unified-search .search-model-swiper.swiper-outer-box .swiper-button-prev,
+.unified-search .search-model-swiper.swiper-outer-box .swiper-button-next{
+	top: 132px;
+}
+.unified-search .swiper-outer-box .swiper-button-prev{
+    left: 0;
+	border-radius: 0 4px 4px 0;
+}
+.unified-search .swiper-outer-box .swiper-button-prev::after{
+	display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url(../images/common/ico_arrow_white_16x16.svg) no-repeat center;
+    transform: rotate(180deg);
+}
+.unified-search .swiper-outer-box .swiper-button-next{
+    right: 0;
+	border-radius: 4px 0 0 4px;
+}
+.unified-search .swiper-outer-box .swiper-button-next:after{
+	display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url(../images/common/ico_arrow_white_16x16.svg) no-repeat center;
+    transform: rotate(0deg);
+}
+.pc .unified-search .display .goods-list .item{
+	padding-top: 0;
+	margin-right: 0;
+}
+.pc .unified-search .display .goods-list .item::after {
+    background: #e9e9e9;
+    width: 1px;
+    height: 100%;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: -16px;
+    top: 0;
+}
+.unified-search .goods-list .info .curation{
+	max-height: 88px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    font-size: 14px;
+    line-height: 22px;
+}
+.unified-search .goods-list .info .curation + .price{
+	margin-top: 24px;
+}
 @media screen and (max-width: 1119px) {
 	.hmj-container.unified-search .hmj-content .top-tit-box {
 		display: block;
@@ -1033,6 +1124,9 @@ section.wrap .cta-outer + .txt {
 	.unified-search .spec-enc .cont-tit {
 		order: unset;
 	}
+	.unified-search .spec-enc .list-box {
+		border-bottom: none;
+	}
 	.unified-search .tab-box-cont .tab-box-item + .tab-box-item {
 		padding-top: 40px;
 	}
@@ -1057,11 +1151,21 @@ section.wrap .cta-outer + .txt {
 	.tab-box-item .model-list li {
 		width: 100%;
 	}
+	.unified-search .tab-box-cont .tab-box-item.faq {
+		border-top: 12px solid #f5f5f5;
+	}
 	.unified-search .tab-box-cont .tab-box-item.display {
 		border-top: 12px solid #f5f5f5;
 	}
 	.unified-search .tab-box-cont .tab-box-item.display .goods-list {
 		padding: 0 20px;
+	}
+	.unified-search .goods-list .info .curation{
+		font-size: 13px;
+		line-height: 20px;
+	}
+	.unified-search .goods-list .info .curation + .price{
+		margin-top: 16px;
 	}
 }
 /* e : unified search */

@@ -157,14 +157,14 @@ a.ui-state-default {
 	color: #ccc;
 }
 
-.ui-state-highlight,
-.ui-widget-content .ui-state-highlight,
-.ui-widget-header .ui-state-highlight {
+.ui-datepicker-today .ui-state-default,
+.ui-widget-content .ui-datepicker-today .ui-state-default,
+.ui-widget-header .ui-datepicker-today .ui-state-default {
 	position: relative;
 }
-.ui-state-highlight::before,
-.ui-widget-content .ui-state-highlight::before,
-.ui-widget-header .ui-state-highlight::before {
+.ui-datepicker-today .ui-state-default::before,
+.ui-widget-content .ui-datepicker-today .ui-state-default::before,
+.ui-widget-header .ui-datepicker-today .ui-state-default::before {
 	content: '';
 	width: 18px;
 	position:absolute;	
@@ -176,7 +176,7 @@ a.ui-state-default {
 /* .ui-state-highlight::after,
 .ui-widget-content .ui-state-highlight::after,
 .ui-widget-header .ui-state-highlight::after, */
-.ui-datepicker-inline .ui-state-highlight::after{
+.ui-datepicker-inline .ui-datepicker-today .ui-state-default::after{
 	content:'今日';
 	position:absolute;
 	left:50%;
@@ -189,7 +189,7 @@ a.ui-state-default {
 	font-size:10px;
 	line-height: 16px;
 }
-.ui-datepicker-inline .ui-state-active.ui-state-highlight::after {
+.ui-datepicker-inline .ui-datepicker-today .ui-state-active.ui-state-default::after {
 	content:'';
 }
 
@@ -207,8 +207,8 @@ a.ui-button:active,
 	line-height:40px;
 	font-weight:500;
 }
-.ui-state-active.ui-state-highlight::before,
-.ui-widget-content .ui-state-active.ui-state-highlight::before {
+.ui-datepicker-today .ui-state-active.ui-state-default::before,
+.ui-widget-content .ui-datepicker-today .ui-state-active.ui-state-default::before {
 	display:none;
 }
 
@@ -230,9 +230,9 @@ a.ui-button:active,
 .ui-datepicker-inline .ui-datepicker-header {
 	margin-bottom:16px;
 }
-.ui-datepicker-inline .ui-state-highlight::before,
-.ui-datepicker-inline .ui-widget-content .ui-state-highlight::before,
-.ui-datepicker-inline .ui-widget-header .ui-state-highlight::before {
+.ui-datepicker-inline .ui-datepicker-today .ui-state-default::before,
+.ui-datepicker-inline .ui-widget-content .ui-datepicker-today .ui-state-default::before,
+.ui-datepicker-inline .ui-widget-header .ui-datepicker-today .ui-state-default::before {
 	bottom: 16px;
 }
 

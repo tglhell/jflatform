@@ -22,7 +22,7 @@
 	z-index: -1;
 	height: 100%;
 	position: relative;
-	padding-left: 464px;
+	margin-left: 464px;
 }
 .intro-map .result {
 	position: absolute;
@@ -60,7 +60,7 @@
 	}
 	.intro-map .map {
 		height: 66.6667vw;
-		padding-left: 0;
+		margin-left: 0;
 	}
 	.intro-map .result {
 		padding: 40px 20px 0;
@@ -766,7 +766,7 @@
 	position: relative;
 } */
 .charge .intro-map .map {
-	padding-left: 0;
+	margin-left: 0;
 }
 .charge .top-float {
 	position: absolute;
@@ -1705,6 +1705,7 @@
     .coalition .accordion .tit-btn .company-logo{
         width: 238px;
         text-align: center;
+        flex-shrink: 0;
     }
     .coalition .accordion .tit-btn .company-info{
         position: relative;

@@ -31,7 +31,7 @@
 		<!-- header -->
 		<div class="header-outer">
 			<div class="header-cont">
-				<span class="logo"><a href="SC-FE-CO-010.html"><img src="../assets/images/common/ico_header_logo_w.svg" alt="Hyundai Logo"></a></span>
+				<span class="logo"><a href="/html/SC-FE-CO-010.html"><img src="../assets/images/common/ico_header_logo_w.svg" alt="Hyundai Logo"></a></span>
 
 				<div class="gnb-menu-outer">
 					<div class="gnb-menu-box blur">
@@ -74,7 +74,7 @@
 											<button class="btn-depth-switch toggle-menu"><span>購入ガイド</span></button>
 											<ul class="toggle-cont">
 												<li class="ir-item">
-													<a href="#">人生に迷ったとき、傍には「かけがえのない海」がある</a>
+													<a href="#">人生に迷ったとき</a>
 												</li>
 												<li class="ir-item">
 													<a href="#">今月の購入特典</a>
@@ -102,10 +102,18 @@
 											<a href="#">仕様百科</a>
 										</li>
 										<li class="ir-item">
-											<a href="#">ダウンロードダウンロードダウンロード</a>
+											<a href="#">ダウンロード</a>
 										</li>
 										<li class="ir-item">
-											<a href="#">人生に迷ったとき、傍には「かけがえのない海」がある</a>
+											<button class="btn-depth-switch toggle-menu"><span>Hyundai House Harajuku</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">オンライン購入のご案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">今月の購入特典</a>
+												</li>
+											</ul>
 										</li>
 										<li class="ir-item">
 											<a href="#">ブランド拠点</a>
@@ -126,7 +134,7 @@
 											<a href="#">充電サービス</a>
 										</li>
 										<li class="ir-item">
-											<a href="#">Hyundaiロードサイド・アシスタンス</a>
+											<a href="#">Hyundaiロードサイド</a>
 										</li>
 										<li class="ir-item">
 											<a href="#">整備予約</a>
@@ -374,7 +382,7 @@
 													</li>
 													<li>
 														<span class="info-list-item">
-															<span class="list-tit">行可能距離</span>
+															<span class="list-tit">走行可能距離</span>
 															<span class="list-unit"><strong>430</strong><span>KM</span></span>
 														</span>
 													</li>
@@ -397,20 +405,20 @@
 												<ul>
 													<li>
 														<span class="info-list-item">
-															<span class="list-tit">走行可能距離</span>
-															<span class="list-unit"><strong>152.4</strong><span>KW</span></span>
+															<span class="list-tit">最大出力</span>
+															<span class="list-unit"><strong>125.0</strong><span>KW</span></span>
 														</span>
 													</li>
 													<li>
 														<span class="info-list-item">
 															<span class="list-tit">燃費</span>
-															<span class="list-unit"><strong>7.2</strong><span>Km/Kwh</span></span>
+															<span class="list-unit"><strong>5.1</strong><span>Km/Kwh</span></span>
 														</span>
 													</li>
 													<li>
 														<span class="info-list-item">
-															<span class="list-tit">最大出力</span>
-															<span class="list-unit"><strong>800</strong><span>KM</span></span>
+															<span class="list-tit">走行可能距離</span>
+															<span class="list-unit"><strong>999.9</strong><span>KM</span></span>
 														</span>
 													</li>
 												</ul>
@@ -432,8 +440,8 @@
 												<ul>
 													<li>
 														<span class="info-list-item">
-															<span class="list-tit">走行可能距離</span>
-															<span class="list-unit"><strong>430</strong><span>Km</span></span>
+															<span class="list-tit">最大出力</span>
+															<span class="list-unit"><strong>125.0</strong><span>KW</span></span>
 														</span>
 													</li>
 													<li>
@@ -444,8 +452,8 @@
 													</li>
 													<li>
 														<span class="info-list-item">
-															<span class="list-tit">最大出力</span>
-															<span class="list-unit"><strong>125.0</strong><span>KW</span></span>
+															<span class="list-tit">走行可能距離</span>
+															<span class="list-unit"><strong>430</strong><span>KM</span></span>
 														</span>
 													</li>
 												</ul>
@@ -643,6 +651,8 @@
 					<li><span><img src="../assets/images/main/ico_floating_04.svg" alt="試乗予約"></span><a href="#">試乗予約</a></li>
 					<li><span><img src="../assets/images/main/ico_floating_05.svg" alt="イベント"></span><a href="#">イベント</a></li>
 					<li><span><img src="../assets/images/main/ico_floating_05.svg" alt="イベント"></span><a href="#">イベント</a></li>
+					<li><span><img src="../assets/images/main/ico_floating_05.svg" alt="イベント"></span><a href="#">イベント</a></li>
+					<li><span><img src="../assets/images/main/ico_floating_05.svg" alt="イベント"></span><a href="#">イベント</a></li>
 				</ul>
 				<div class="img-banner"><a href="#"><img src="../assets/images/main/@img_floating_banner.jpg" alt="상단 배너"></a></div>
 			</div>
@@ -659,9 +669,12 @@
 </body>
 
 <script>
-	mainKeyvisualSwiper(); // Key Visual Swiper
-	chkStartPos(); // Lineup Rotate
-	mainLineupSwiper(); // Lineup Swiper
-	mainBrandSwiper(); // Brand Swiper
+	jQuery.event.add(window, 'load', function () {
+		mainKeyvisualSwiper(); // Key Visual Swiper
+		mainLineupSwiper(); // Lineup Swiper
+		chkStartPos(); // Lineup Rotate
+		mainBrandSwiper(); // Brand Swiper
+		sideMenuInit (); // Side Menu
+	});
 </script>
 </html>

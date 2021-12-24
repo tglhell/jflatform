@@ -35,15 +35,17 @@
     }
     .easy-estimate .tab-box-list li .car-imgage{
         position: absolute;
-        top: 40px;
+        top: 55px;
+        left: 0;
         margin: 24px auto 26px;
         height: 208px;
-        width: 380px;
+        width: 100%;
         text-align: center;
     }
     .easy-estimate .tab-box-list li .car-imgage img{
         position: relative;
         width: 100%;
+        max-width: 380px;
         height: auto;
         top: 50%;
         transform: translateY(-50%);

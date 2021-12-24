@@ -424,7 +424,7 @@
 	line-height:22px;
 	font-size:14px;
 }
-.my-rc .my-code .my-rc-code .box-terms {
+.my-rc .my-code .my-rc-code .terms {
 	margin-top:32px;
 	padding:32px;
 	height:224px;
@@ -433,20 +433,20 @@
 	background:#fafafa;;
 	text-align:left;
 }
-.my-rc .my-code .my-rc-code .box-terms .tit {
+/* .my-rc .my-code .my-rc-code .box-terms .tit {
 	margin-bottom: 16px;
 	color:#333;
 	line-height:26px;
 	font-size:16px;
 	font-weight:500;
-}
-.my-rc .my-code .my-rc-code .box-terms span {
+} */
+/* .my-rc .my-code .my-rc-code .box-terms span {
 	display:block;
 	margin-bottom:8px;
 	color:#333;
 	font-family: 'HyundaiSansTextJP', sans-serif;
 	font-size:12px;
-}
+} */
 .my-rc .my-code .my-rc-code .check-terms {
 	margin-top:24px;
 	text-align: left;
@@ -1975,7 +1975,7 @@
 .my-order .order-list .store .tooltip-cont dl.info {
     display: flex;
     flex-wrap: wrap;
-    /* width: 206px; */
+    width: 210px;
     line-height: 20px;
     font-size: 12px;
 }
@@ -2971,7 +2971,7 @@
 	}
 	.check-my-info .tbl-box table {
 		width: 100%;
-		min-width: 360px;
+		/* min-width: 360px; */
 	}
 	.check-my-info .tbl-box table th {
 		width: 120px;

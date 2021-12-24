@@ -299,9 +299,9 @@ textarea::-webkit-scrollbar-track {
 	.pc-only {
 		display: none;
 	}
-	.mo-only {
+	/* .mo-only {
 		display: unset;
-	}
+	} */
 	html, body {
 		font-size: 13px;
 		line-height: 20px;
@@ -309,8 +309,7 @@ textarea::-webkit-scrollbar-track {
 	body::-webkit-scrollbar,
 	.layer-popup-wrap::-webkit-scrollbar,
 	.layer-popup-wrap .layer-cont::-webkit-scrollbar,
-	.inner-scroll-y::-webkit-scrollbar,
-	.scroll-area::-webkit-scrollbar {
+	.inner-scroll-y::-webkit-scrollbar {
 		display: none;
 	}
 }
@@ -468,6 +467,10 @@ textarea::-webkit-scrollbar-track {
 	line-height: 68px;
 	text-align: center;
 }
+.gnb-menu-outer .btn-box button:hover span,
+.gnb-menu-outer .btn-box a:hover {
+	color: rgba(255, 255, 255, 1);
+}
 .gnb-menu-outer .btn-box button + button:before,
 .gnb-menu-outer .btn-box a + a:before {
 	content: '';
@@ -537,7 +540,8 @@ textarea::-webkit-scrollbar-track {
 }
 .gnb-menu-outer .menu-inner-depth .inner-depth-tit {
 	display: inline-block;
-	width: 50%;
+	width: 40%;
+	padding-right: 20px;
 	font-size: 20px;
 	color: #fff;
 	line-height: 32px;
@@ -548,7 +552,7 @@ textarea::-webkit-scrollbar-track {
 	top: 272px;
 	bottom: 68px;
 	display: inline-block;
-	width: 50%;
+	width: 60%;
 	padding: 0 20px 32px 0;
 	vertical-align: top;
 }
@@ -679,8 +683,8 @@ textarea::-webkit-scrollbar-track {
 	visibility: hidden;
 	pointer-events: none;
 }
-.hmj-header .gnb-menu-list li button span,
-.hmj-header .gnb-menu-list li a {
+.hmj-header .gnb-menu-list > li button span,
+.hmj-header .gnb-menu-list > li a {
 	opacity: .8;
 	font-size: 20px;
 	color: #fff;
@@ -689,7 +693,7 @@ textarea::-webkit-scrollbar-track {
 .hmj-header .gnb-menu-list li button:hover span,
 .hmj-header .gnb-menu-list li button.active span,
 .hmj-header .gnb-menu-list li a:hover {
-	opacity: 1;
+	opacity: 1 !important;
 }
 .gnb-menu-outer .gnb-menu-list li .inner-depth span {
 	padding-right: 28px;
@@ -708,7 +712,7 @@ textarea::-webkit-scrollbar-track {
 }
 .gnb-menu-outer .gnb-menu-list li .menu-inner-depth .toggle-menu {
 	position: relative;
-	padding-right: 28px;
+	padding-right: 20px;
 }
 .gnb-menu-outer .gnb-menu-list li .menu-inner-depth .toggle-menu:before {
 	transition: transform .3s ease-in-out;
@@ -1104,7 +1108,10 @@ textarea::-webkit-scrollbar-track {
 		line-height: 56px;
 	}
 	.side-menu-wrap .inner-floating-box {
-		padding-bottom: 64px;
+		padding-bottom: 56px;
+	}
+	.side-menu-wrap ul li+li {
+		margin-top: 24px;
 	}
 	.gnb-menu-box {
 		right: -100%;
@@ -1116,7 +1123,6 @@ textarea::-webkit-scrollbar-track {
 	}
 	.hmj-header .gnb-menu-list li button span,
 	.hmj-header .gnb-menu-list li a  {
-		opacity: 1;
 		font-size: 16px;
 		line-height: 26px;
 	}
@@ -1161,7 +1167,7 @@ textarea::-webkit-scrollbar-track {
 		line-height: 26px;
 	}
 	.gnb-menu-list .menu-inner-depth > ul {
-		top: 137px;
+		top: 135px;
 		bottom: 52px;
 	}
 	.ios .gnb-menu-list .menu-inner-depth > ul {
@@ -2420,6 +2426,7 @@ div.slt-box select {
 .add-file .inp-group-box {
 	display: block;
 	width: 100%;
+	line-height: 0; /* ie11 때문에 추가 */
 }
 .post-type .inp-group-box > .inp-area {
 	margin-top: 8px;
@@ -2850,7 +2857,8 @@ div.radio-group {
 	padding: 0; 
 	margin: -1px; 
 	overflow: hidden;
-	border: 0; 
+	border: 0;
+	font-size: 0 /* ie11 때문에 추가 */
 } 
 .filebox label { 
 	display: inline-block;
@@ -3643,7 +3651,7 @@ div.radio-group {
 
 @media screen and (max-width: 1119px) {
 	.tbl-box table {
-		width: 1120px;
+		width: 1079px;
 	}
 	.tbl-box.col-fix table {
 		width: 100%;
@@ -4577,6 +4585,7 @@ p.noti.center::before {
 	padding: 32px 48px 0;
 	background-color: #fff;
 	overflow: hidden;
+	z-index: 3;
 }
 .layer-popup-wrap .bottom-fixed .cta-outer{
 	display: -webkit-box;
@@ -4588,7 +4597,7 @@ p.noti.center::before {
 .layer-popup-wrap .bottom-fixed .btn  {
 	height: 64px;
 	border-radius: 0;
-	transform:initial;
+	transform:none;
 }
 .layer-popup-wrap .bottom-fixed .btn {
 	border-width: 0;
@@ -5116,20 +5125,21 @@ p.noti.center::before {
 }
 
 .terms h2 {
-	font-size: 24px;
+	font-size: 21px;
 	font-weight: 500;
 	line-height: normal;
 	text-align: center;
-	margin-bottom: 40px
+	margin-bottom: 32px
 }
 .terms h3 {
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 500;
 	line-height: normal;
-	margin-top: 64px;
+	margin-top: 52px;
 }
 .terms h4 {
-	font-size: 16px;
+	font-size: 14px;
+	font-weight: 500;
 	line-height: normal;
 	margin: 24px 0 16px;
 }
@@ -5165,13 +5175,16 @@ p.noti.center::before {
 .terms-cont .hmj-content .cont-outer{
 	margin-top: 72px;
 }
-.terms-cont .inp-textarea {
-	height: 414px;
+.terms-cont .terms {	
+	border:1px solid #e9e9e9;
+	border-radius: 8px;
+	padding: 24px 8px 24px 24px;
 }
-.terms-cont textarea {
-	height: 100%;
+.terms-cont .terms .scroll-area {
+	max-height: 400px;
+	overflow-y: scroll;
 }
-.terms-cont .inp-textarea + .tit-cont {
+.terms-cont .terms + .tit-cont {
 	margin-top: 72px;
 }
 
@@ -5196,7 +5209,13 @@ p.noti.center::before {
 	.terms-cont .hmj-content .cont-outer{
 		margin-top: 0;
 	}
-	.terms-cont .inp-textarea + .tit-cont {
+	.terms-cont .terms {
+		padding: 16px;
+	}
+	.terms-cont .terms .scroll-area {
+		max-height: 210px
+	}
+	.terms-cont .terms + .tit-cont {
 		margin-top: 40px;
 	}
 }

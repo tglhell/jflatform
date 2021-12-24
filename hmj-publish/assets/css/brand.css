@@ -157,7 +157,7 @@
 }
 .brand-event .event-title .share{
     width: 32px;
-    line-height: 52px;
+    height: 52px;
     background: url('../images/common/ico_share.svg') no-repeat center;
     font-size: 0;
 }
@@ -348,7 +348,7 @@
         line-height: 30px;
     }
     .brand-event .event-title .share{
-        line-height: 32px;
+        height: 32px;
         background-size: 24px;
     }
     .brand-event .event-detail .event-cont{
@@ -400,11 +400,13 @@
 }
 .brand-index .hmj-content .brand-visual .img-box {
     width: 100%;
+    text-align: center;
 }
 .brand-index .hmj-content .brand-visual .img-box.type2 {
     display: none;
 }
 .brand-index .hmj-content .brand-visual .img-box img {
+    width: 100%;
     min-width: auto;
     position: static;
     transform: none;
@@ -779,7 +781,7 @@
     padding-bottom:0 !important;
 }
 .brand-cont .al-right {
-    text-align: right;
+    text-align: right !important;
 }
 .brand-cont .al-cl {
     text-align: center;
@@ -1188,6 +1190,7 @@
     padding: 104px 0 0 0;
     transform: translate(-50%);
     background: transparent;
+    text-align: left;
 }
 .brand-cont .img-box .txt-box .inner {
     max-width: 1120px;
@@ -1394,6 +1397,9 @@
 .brand-cont .overlap-box {
     position: relative;
     margin-top: 104px;
+}
+.brand-cont .overlap-box > .img-box {
+    text-align: left;
 }
 .brand-cont .overlap-box .hidden-img {
     display: none;

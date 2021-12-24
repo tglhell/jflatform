@@ -287,7 +287,7 @@
 						<ul class="btns-list tab-box-list">
 							<li class="active"><button type="button" data-keyword="全体">全体 (<span class="num">30</span>)</button> <!-- 버튼 활성화 시 on class 추가 --></li>
 							<li><button type="button" data-keyword="車種">車種 (<span class="num">5</span>)</button></li>
-							<li><button type="button" data-keyword="仕様百科">仕様百科 (<span class="num">4</span>)</button></li>
+							<li><button type="button" data-keyword="車両情報検索">車両情報検索 (<span class="num">4</span>)</button></li>
 							<li><button type="button" data-keyword="FAQ">FAQ (<span class="num">15</span>)</button></li>
 							<li><button type="button" data-keyword="SHOP">SHOP (<span class="num">11</span>)</button></li>
 						</ul>
@@ -306,7 +306,7 @@
 						<ul class="btns-list tab-box-list">
 							<li class="active"><button type="button" data-keyword="全体">全体 (<span class="num">30</span>)</button> <!-- 버튼 활성화 시 on class 추가 --></li>
 							<li><button type="button" data-keyword="車種">車種 (<span class="num">5</span>)</button></li>
-							<li><button type="button" data-keyword="仕様百科">仕様百科 (<span class="num">4</span>)</button></li>
+							<li><button type="button" data-keyword="車両情報検索">車両情報検索 (<span class="num">4</span>)</button></li>
 							<li><button type="button" data-keyword="FAQ">FAQ (<span class="num">15</span>)</button></li>
 							<li><button type="button" data-keyword="SHOP">SHOP (<span class="num">11</span>)</button></li>
 						</ul>
@@ -346,81 +346,154 @@
 				<div class="tab-box-cont">
 					<div class="tab-box-item" data-keyword="車種">
 						<div class="keyword-top-box">
-							<strong class="cont-tit">車種 (5)</strong>
+							<strong class="cont-tit">車種 (6)</strong>
 							<button class="btn-icon"><span>もっと見る </span></button>
 						</div>
-						<ul class="model-list">
-							<li>
-								<div class="search-item">
-									<div class="item-img">
-										<img src="../../assets/images/@cp_complete.jpg" alt="car01">
-									</div>
-									<a href="#" class="btn-category-link">
-										<strong>IONIQ5</strong>
-										<span>Design</span>
-									</a>
-									<div class="select-group">
-										<label class="btn-select"><input type="radio" name="rdSelectHash"><span>IONIQ 5</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash" checked="checked"><span>Design</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash"><span>LED</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash"><span>LED</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash"><span>IONIQ 5</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash"><span>車種</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash"><span>IONIQ 5</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash"><span>LED</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash"><span>IONIQ 5</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash"><span>車種</span></label>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="search-item">
-									<div class="item-img">
-										<img src="../../assets/images/@curation2.jpg" alt="car02">
-									</div>
-									<a href="#" class="btn-category-link">
-										<strong>IONIQ5</strong>
-										<span>Technology</span>
-									</a>
-									<div class="select-group">
-										<label class="btn-select"><input type="radio" name="rdSelectHash2"><span>IONIQ 5</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash2" checked="checked"><span>Design</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash2"><span>LED</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash2"><span>LED</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash2"><span>IONIQ 5</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash2"><span>車種</span></label>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="search-item">
-									<div class="item-img">
-										<img src="../../assets/images/@cp_complete.jpg" alt="car03">
-									</div>
-									<a href="#" class="btn-category-link">
-										<strong>IONIQ5</strong>
-										<span>諸元</span>
-									</a>
-									<div class="select-group">
-										<label class="btn-select"><input type="radio" name="rdSelectHash3"><span>IONIQ 5</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash3" checked="checked"><span>Design</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash3"><span>LED</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash3"><span>LED</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash3"><span>IONIQ 5</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash3"><span>車種</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash3"><span>IONIQ 5</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash3"><span>LED</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash3"><span>IONIQ 5</span></label>
-										<label class="btn-select"><input type="radio" name="rdSelectHash3"><span>車種</span></label>
-									</div>
-								</div>
-							</li>
-						</ul>
+						<div class="swiper-outer-box search-model-swiper model-list">
+							<div class="swiper-container">
+								<ul class="swiper-wrapper swiper-pc-only"><!--모바일 슬라이드 비활성화 swiper-pc-only-->
+									<li class="swiper-slide">
+										<div class="search-item">
+											<div class="item-img">
+												<img src="../../assets/images/@cp_complete.jpg" alt="car01">
+											</div>
+											<a href="#" class="btn-category-link">
+												<strong>IONIQ5</strong>
+												<span>Design</span>
+											</a>
+											<div class="tag-group">
+												<span class="tag-item">IONIQ 5</span>
+												<span class="tag-item active">Design</span>
+												<span class="tag-item">LED</span>
+												<span class="tag-item">LED</span>
+												<span class="tag-item">IONIQ 5</span>
+												<span class="tag-item">車種</span>
+												<span class="tag-item">IONIQ 5</span>
+												<span class="tag-item">LED</span>
+												<span class="tag-item">IONIQ 5</span>
+												<span class="tag-item">車種</span>
+											</div>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="search-item">
+											<div class="item-img">
+												<img src="../../assets/images/@curation2.jpg" alt="car02">
+											</div>
+											<a href="#" class="btn-category-link">
+												<strong>IONIQ5</strong>
+												<span>Technology</span>
+											</a>
+											<div class="tag-group">
+												<span class="tag-item active">Design</span>
+												<span class="tag-item">LED</span>
+											</div>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="search-item">
+											<div class="item-img">
+												<img src="../../assets/images/@cp_complete.jpg" alt="car03">
+											</div>
+											<a href="#" class="btn-category-link">
+												<strong>IONIQ5</strong>
+												<span>諸元</span>
+											</a>
+											<div class="tag-group">
+												<span class="tag-item">IONIQ 5</span>
+												<span class="tag-item active">Design</span>
+												<span class="tag-item">LED</span>
+												<span class="tag-item">LED</span>
+												<span class="tag-item">IONIQ 5</span>
+												<span class="tag-item">車種</span>
+												<span class="tag-item">IONIQ 5</span>
+												<span class="tag-item">IONIQ 5</span>
+												<span class="tag-item">車種</span>
+												<span class="tag-item">IONIQ 5</span>
+												<span class="tag-item">IONIQ 5</span>
+												<span class="tag-item">車種</span>
+												<span class="tag-item">IONIQ 5</span>
+											</div>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="search-item">
+											<div class="item-img">
+												<img src="../../assets/images/@cp_complete.jpg" alt="car04">
+											</div>
+											<a href="#" class="btn-category-link">
+												<strong>IONIQ5</strong>
+												<span>諸元</span>
+											</a>
+											<div class="tag-group">
+												<span class="tag-item active">Design</span>
+												<span class="tag-item">車種</span>
+												<span class="tag-item">IONIQ 5</span>
+												<span class="tag-item">車種</span>
+											</div>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="search-item">
+											<div class="item-img">
+												<img src="../../assets/images/@cp_complete.jpg" alt="car05">
+											</div>
+											<a href="#" class="btn-category-link">
+												<strong>IONIQ5</strong>
+												<span>諸元</span>
+											</a>
+											<div class="tag-group">
+												<span class="tag-item">IONIQ 5</span>
+												<span class="tag-item">LED</span>
+												<span class="tag-item">IONIQ 5</span>
+												<span class="tag-item">車種</span>
+												<span class="tag-item active">Design</span>
+												<span class="tag-item">車種</span>
+											</div>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="search-item">
+											<div class="item-img">
+												<img src="../../assets/images/@cp_complete.jpg" alt="car06">
+											</div>
+											<a href="#" class="btn-category-link">
+												<strong>IONIQ5</strong>
+												<span>諸元</span>
+											</a>
+											<div class="tag-group">
+												<span class="tag-item">IONIQ 5</span>
+												<span class="tag-item">LED</span>
+												<span class="tag-item">IONIQ 5</span>
+												<span class="tag-item">車種</span>
+												<span class="tag-item active">Design</span>
+												<span class="tag-item">車種</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="pc-only swiper-button-prev"></div><!--모바일 비활성화 pc-only-->
+							<div class="pc-only swiper-button-next"></div><!--모바일 비활성화 pc-only-->
+						</div>
+						<!--pagenation-->
+						<div class="hmj-pagination">
+							<a href="#" class="btn-page-first disabled"></a>
+							<a href="#" class="btn-page-prev disabled"></a>
+							<a href="#" class="btn-page-num active">1</a>
+							<a href="#" class="btn-page-num">2</a>
+							<a href="#" class="btn-page-num">3</a>
+							<a href="#" class="btn-page-num">4</a>
+							<a href="#" class="btn-page-num">5</a>
+							<a href="#" class="btn-page-next">もっと見る <span>(<em>1</em>/<em>3</em>)</span></a>
+							<a href="#" class="btn-page-last"></a>
+						</div>
+						<!--//pagenation-->
 					</div>
 
-					<div class="tab-box-item spec-enc" data-keyword="仕様百科">
+					<div class="tab-box-item spec-enc" data-keyword="車両情報検索">
 						<div class="keyword-top-box">
-							<strong class="cont-tit">仕様百科 (4)</strong>
+							<strong class="cont-tit">車両情報検索 (4)</strong>
 							<button class="btn-icon"><span>もっと見る </span></button>
 						</div>
 						<div class="list-wrap">
@@ -569,6 +642,19 @@
 								<!--//list box-->
 							</div>
 						</div>
+						<!--pagenation-->
+						<div class="hmj-pagination">
+							<a href="#" class="btn-page-first disabled"></a>
+							<a href="#" class="btn-page-prev disabled"></a>
+							<a href="#" class="btn-page-num active">1</a>
+							<a href="#" class="btn-page-num">2</a>
+							<a href="#" class="btn-page-num">3</a>
+							<a href="#" class="btn-page-num">4</a>
+							<a href="#" class="btn-page-num">5</a>
+							<a href="#" class="btn-page-next">もっと見る <span>(<em>1</em>/<em>3</em>)</span></a>
+							<a href="#" class="btn-page-last"></a>
+						</div>
+						<!--//pagenation-->
 					</div>
 
 					<div class="tab-box-item faq" data-keyword="FAQ">
@@ -666,80 +752,141 @@
 								</div>
 							</div>
 						</div>
+						<!--pagenation-->
+						<div class="hmj-pagination">
+							<a href="#" class="btn-page-first disabled"></a>
+							<a href="#" class="btn-page-prev disabled"></a>
+							<a href="#" class="btn-page-num active">1</a>
+							<a href="#" class="btn-page-num">2</a>
+							<a href="#" class="btn-page-num">3</a>
+							<a href="#" class="btn-page-num">4</a>
+							<a href="#" class="btn-page-num">5</a>
+							<a href="#" class="btn-page-next">もっと見る <span>(<em>1</em>/<em>3</em>)</span></a>
+							<a href="#" class="btn-page-last"></a>
+						</div>
+						<!--//pagenation-->
 					</div>
 
 					<div class="tab-box-item display" data-keyword="SHOP">
 						<div class="keyword-top-box">
-							<strong class="cont-tit">SHOP (11)</strong>
+							<strong class="cont-tit">SHOP (6)</strong>
 							<button class="btn-icon"><span>もっと見る </span></button>
 						</div>
-						<div class="grid goods-list">
-							<div class="grid-item item">
-								<a href="javascript:void(0);">
-									<div class="thumb"><img src="../../assets/images/@goods3.jpg" alt="goods-thumb"></div>
-									<div class="info">
-										<div class="flag-area">
-											<span class="text-flag c4">HOT</span>
-											<span class="text-flag c4">Reorder</span>
-											<span class="text-flag c4">Hyundai ONLY</span>
-										</div>
-										<p class="tit">[リファイナー] ロイヤルスペード・デュオ自動車量芳香剤のリフィルエッセンスストーン(2個セット)</p>
-										<div class="price">
-											<span class="real">40,000</span>
-											<div class="sale">
-												<span class="rate">10%</span>
-												<span class="final">¥ 40,000 </span>
-												<span class="tax">(税込)</span>
+						<div class="swiper-outer-box search-goods-swiper grid goods-list">
+							<div class="swiper-container">
+								<div class="swiper-wrapper swiper-pc-only">
+									<!-- 상담형 상품 -->
+									<div class="swiper-slide grid-item item">
+										<a href="javascript:void(0);">
+											<div class="thumb"><img src="../../assets/images/@goods3.jpg" alt="goods-thumb"></div>
+											<div class="info">
+												<div class="flag-area">
+													<span class="text-flag c4">HOT</span>
+													<span class="text-flag c4">Reorder</span>
+													<span class="text-flag c4">Hyundai ONLY</span>
+												</div>
+												<p class="tit">[リファイナー] ロイヤルスペード・デュオ自動車量芳香剤のリフィルエッセンスストーン(2個セット)</p>
+												<div class="price">
+													<span class="real">40,000</span>
+													<div class="sale">
+														<span class="rate">10%</span>
+														<span class="final">¥ 40,000 </span>
+														<span class="tax">(税込)</span>
+													</div>
+												</div>
 											</div>
-										</div>
+										</a>
 									</div>
-								</a>
-								<div class="util">
-									<button type="button" class="like"><span>Like</span></button>
-									<button type="button" class="cart"><span>Add Cart</span></button>
+
+									<!-- soldout -->
+									<div class="swiper-slide grid-item item" data-type="soldout">
+										<a href="javascript:void(0);">
+											<div class="thumb"><img src="../../assets/images/@goods4.jpg" alt="goods-thumb"></div>
+											<div class="info">
+												<p class="tit">1PcsスマートカーLCDデジタル温度計ア</p>
+												<div class="price">
+													<div class="sale">
+														<span class="final">¥ 40,000 </span>
+														<span class="tax">(税込)</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+				
+									<!-- 큐레이션 -->
+									<div class="swiper-slide grid-item item">
+										<a href="javascript:void(0);">
+											<div class="thumb"><img src="../../assets/images/@goods6.jpg" alt="goods-thumb"></div>
+											<div class="info">
+												<p class="tit">[リファイナー] ロイヤルスペード・デュオ自動車量芳香剤のリフィルエッセンスストーン(2個セット)</p>
+												<p class="curation">大胆で壮大なアイディアが、時にはごく小さな形で実現することもあります。壮大なアイディアを非常に小さな空間で実現させるということは、長きにわたる研究開発と世界最高水準の革新的な技術が投入されるという…</p>
+											</div>
+										</a>
+									</div>
+				
+									<div class="swiper-slide grid-item item">
+										<a href="javascript:void(0);">
+											<div class="thumb"><img src="../../assets/images/@goods6.jpg" alt="goods-thumb"></div>
+											<div class="info">
+												<p class="tit">[リファイナー] ロイヤルスペード・デュオ自動車量芳香剤のリフィルエッセンスストーン(2個セット)</p>
+												<div class="price">
+													<div class="sale">
+														<span class="final">¥ 40,000 </span>
+														<span class="tax">(税込)</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+				
+									<div class="swiper-slide grid-item item">
+										<a href="javascript:void(0);">
+											<div class="thumb"><img src="../../assets/images/@goods6.jpg" alt="goods-thumb"></div>
+											<div class="info">
+												<p class="tit">[リファイナー] ロイヤルスペード・デュオ自動車量芳香剤のリフィルエッセンスストーン(2個セット)</p>
+												<div class="price">
+													<div class="sale">
+														<span class="final">¥ 40,000 </span>
+														<span class="tax">(税込)</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+				
+									<div class="swiper-slide grid-item item">
+										<a href="javascript:void(0);">
+											<div class="thumb"><img src="../../assets/images/@goods6.jpg" alt="goods-thumb"></div>
+											<div class="info">
+												<p class="tit">[リファイナー] ロイヤルスペード・デュオ自動車量芳香剤のリフィルエッセンスストーン(2個セット)</p>
+												<div class="price">
+													<div class="sale">
+														<span class="final">¥ 40,000 </span>
+														<span class="tax">(税込)</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
 								</div>
 							</div>
-							<!-- type3 상담형 상품 -->
-							
-							<div class="grid-item item" data-type="soldout">
-								<a href="javascript:void(0);">
-									<div class="thumb"><img src="../../assets/images/@goods4.jpg" alt="goods-thumb"></div>
-									<div class="info">
-										<p class="tit">1PcsスマートカーLCDデジタル温度計ア</p>
-										<div class="price">
-											<div class="sale">
-												<span class="final">¥ 40,000 </span>
-												<span class="tax">(税込)</span>
-											</div>
-										</div>
-									</div>
-								</a>
-								<div class="util">
-									<button type="button" class="like"><span>Like</span></button>
-									<button type="button" class="cart"><span>Add Cart</span></button>
-								</div>
-							</div>
-							<!-- soldout -->
-		
-							<div class="grid-item item">
-								<a href="javascript:void(0);">
-									<div class="thumb"><img src="../../assets/images/@goods6.jpg" alt="goods-thumb"></div>
-									<div class="info">
-										<p class="tit">[リファイナー] ロイヤルスペード・デュオ自動車量芳香剤のリフィルエッセンスストーン(2個セット)</p>
-										<div class="price">
-											<div class="sale">
-												<span class="final">¥ 40,000 </span>
-												<span class="tax">(税込)</span>
-											</div>
-										</div>
-									</div>
-								</a>
-								<div class="util">
-									<button type="button" class="like on"><span>Like</span></button>
-									<button type="button" class="cart"><span>Add Cart</span></button>
-								</div>
-							</div>
+							<div class="pc-only swiper-button-prev"></div>
+							<div class="pc-only swiper-button-next"></div>
 						</div>
+						<!--pagenation-->
+						<div class="hmj-pagination">
+							<a href="#" class="btn-page-first disabled"></a>
+							<a href="#" class="btn-page-prev disabled"></a>
+							<a href="#" class="btn-page-num active">1</a>
+							<a href="#" class="btn-page-num">2</a>
+							<a href="#" class="btn-page-num">3</a>
+							<a href="#" class="btn-page-num">4</a>
+							<a href="#" class="btn-page-num">5</a>
+							<a href="#" class="btn-page-next">もっと見る <span>(<em>1</em>/<em>3</em>)</span></a>
+							<a href="#" class="btn-page-last"></a>
+						</div>
+						<!--//pagenation-->
 					</div>
 				</div>
 				<!-- e : data -->
@@ -926,6 +1073,20 @@
 				tabContKeyword.addClass('active').show().siblings().removeClass('active').hide();
 			}
 		});
+		
+		function searchResize(){
+			if ($(window).width() > tbl) {
+				$('.swiper-pc-only').addClass('swiper-wrapper');
+			} else{
+				$('.swiper-pc-only').removeClass('swiper-wrapper');
+			}
+		}
+		searchResize();
+		
+		$(window).on('resize',function(){
+			searchResize();
+		});
+		
 	});
 </script>
 </html>

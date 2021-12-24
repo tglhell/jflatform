@@ -16,9 +16,24 @@ $(function () {
 		, dayNamesMin: ['日', '月', '火', '水', '木', '金', '土'] //달력의 요일 부분 텍스트
 		, dayNames: ['日', '月', '火', '水', '木', '金', '土'] //달력의 요일 부분 Tooltip 텍스트
 		// , minDate: "-1D" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
-		//, maxDate: "+1M" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)                    
+		//, maxDate: "+1M" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)                  
 	});
 
+	//종료일을 시작일보다 큰 날짜만 지정 가능하도록 설정
+	$("#startDate").datepicker({
+		nextText: ">",
+		prevText: "<",
+		onSelect: function (date) {
+			var endDate = $('#endDate');
+			var startDate = $(this).datepicker('getDate');
+			var minDate = $(this).datepicker('getDate');
+			// endDate.datepicker('setDate', minDate);
+			startDate.setDate(startDate.getDate() + 30);
+			// endDate.datepicker('option', 'maxDate', startDate);
+			endDate.datepicker('option', 'minDate', minDate);
+		}
+	});
+	
 	//input을 datepicker로 선언
 	$('.date-picker').datepicker();
 
@@ -124,7 +139,7 @@ $(function () {
 	};
 
 	//curation-list
-	if ($(window).width() <= tbl) { //only mo
+	if ($(window).width() <= tbl && $('.curation-list').length == 1) { //only mo
 		let swpOpt = {},
 		slideLength = $('.curation-list .swiper-slide').length;
 		if (slideLength == 1) {
@@ -465,9 +480,11 @@ $(function () {
                 spaceBetween: _gap,
                 observer: true,
                 observeParents: true,
-                autoplay: true,
+				autoplay : {
+					delay: 5000,
+					disableOnInteraction : false,
+				},
 				autoHeight: _autoH,
-                delay: 5000,
             }
         }
         let eventBannerSwiper = new Swiper('.event-banner-swiper .swiper-container', swpOpt);
@@ -653,6 +670,7 @@ $(function () {
 		}
 	});
 
+	//정부보조금
 	$('.subsidy-swiper').each(function(){
 		if ($(this).length == 1) {
 			let swpOpt = {};
@@ -700,4 +718,86 @@ $(function () {
 			let subsidySwiper = new Swiper($(this).find('.swiper-container'), swpOpt);
 		}
 	});	
+
+	//통합검색 shop
+	if ($('.search-goods-swiper').length == 1) {
+		let swpOpt = {},
+		slideLength = $('.search-goods-swiper .swiper-slide').length;
+		if (slideLength == 1) {
+			swpOpt = {
+				allowSlidePrev: false,
+				allowSlideNext: false,
+				simulateTouch: false
+			}
+			$('.search-goods-swiper [class*="swiper-button"]').hide();
+		} else {
+			swpOpt = {
+				navigation: {
+					nextEl: '.search-goods-swiper .swiper-button-next',
+					prevEl: '.search-goods-swiper .swiper-button-prev',
+				},
+				pagination: {
+					el: '.search-goods-swiper .swiper-pagination',
+					clickable: true,
+				},
+				slidesPerView: 'auto',
+				// centeredSlides: true,
+				spaceBetween: 32,
+				simulateTouch: true,
+				speed: 300,
+				loop: false,
+				observer: true,
+				observeParents: true,
+				autoplay: false,
+				autoHeight: false,
+			}
+		}
+		let searchGoodsSwiper = new Swiper('.search-goods-swiper .swiper-container', swpOpt);
+	}
+		
+	//통합검색 차량
+	if ($('.search-model-swiper').length == 1) {
+		let swpOpt = {},
+		slideLength = $('.search-model-swiper .swiper-slide').length;
+		if (slideLength == 1) {
+			swpOpt = {
+				allowSlidePrev: false,
+				allowSlideNext: false,
+				simulateTouch: false
+			}
+			$('.search-model-swiper [class*="swiper-button"]').hide();
+		} else {
+			let _view;
+			if($(window).width() > tbl){
+				_view = 3;
+			}else{
+				_view = 1;
+			}
+			swpOpt = {
+				navigation: {
+					nextEl: '.search-model-swiper .swiper-button-next',
+					prevEl: '.search-model-swiper .swiper-button-prev',
+				},
+				pagination: {
+					el: '.search-model-swiper .swiper-pagination',
+					clickable: true,
+				},
+				// centeredSlides: true,
+				spaceBetween: 32,
+				simulateTouch: true,
+				speed: 300,
+				loop: false,
+				observer: true,
+				observeParents: true,
+				autoplay: false,
+				autoHeight: false,
+				breakpoints:{
+					1120:{
+						slidesPerView : _view,
+					}
+				}
+			}
+		}
+		let searchModelSwiper = new Swiper('.search-model-swiper .swiper-container', swpOpt);
+	}
 });

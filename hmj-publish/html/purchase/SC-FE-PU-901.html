@@ -308,6 +308,7 @@
 						</div>
 					</div>
 					<p class="cont-text2 pc-only">作成した見積書をもとに契約書を作成し、期限内に申請金のお支払いと電子署名を行います。</p>
+					<!-- mo버전 메뉴 -->
 					<div class="js-tab x-scroll mo-only mo-pos">
 						<ul class="pos-scr-box tab-box-list">
 							<li><a href="#">1. 申請金支払</a></li>
@@ -316,26 +317,31 @@
 							<li><a href="#">4. 注文状態確認</a></li>
 						</ul>
 					</div>
+					<!-- //mo버전 메뉴 -->
 				</div>
 			</div>
 			<div class="cont-outer">
 				<div class="cont-left pc-only">
+					<!-- pc버전 메뉴 -->
 					<div class="scr-fix-box js-is-sticky">
-						<ul class="pos-scr-box">
-							<li>
-								<a href="#" class="btn-scr-down"><span class="num">1</span> 申請金支払</a>
-							</li>
-							<li>
-								<a href="#" class="btn-scr-down"><span class="num">2</span> 電子署名</a>
-							</li>
-							<li>
-								<a href="#" class="btn-scr-down"><span class="num">3</span>統合顧客センター<br>確認電話</a>
-							</li>
-							<li>
-								<a href="#" class="btn-scr-down"><span class="num">4</span> 注文状態確認</a>
-							</li>
-						</ul>
+						<div class="js-tab">
+							<ul class="pos-scr-box tab-box-list">
+								<li>
+									<a href="#" class="btn-scr-down"><span class="num">1</span> 申請金支払</a>
+								</li>
+								<li>
+									<a href="#" class="btn-scr-down"><span class="num">2</span> 電子署名</a>
+								</li>
+								<li>
+									<a href="#" class="btn-scr-down"><span class="num">3</span>統合顧客センター<br>確認電話</a>
+								</li>
+								<li>
+									<a href="#" class="btn-scr-down"><span class="num">4</span> 注文状態確認</a>
+								</li>
+							</ul>
+						</div>
 					</div>
+					<!-- //pc버전 메뉴 -->
 				</div>
 				<div class="cont-center">
 					<div class="pos-scr-list">
@@ -349,16 +355,16 @@
 										<li>申請金は、車両価格および販売諸費用から差し引かれます。</li>
 									</ul>
 								</div>
-								<div class="scroll-x">
-									<div class="caution">
-										<p class="tit">現金で申請金をお支払する場合の注意事項</p>
-										<ul>
-											<li>現金で申請金をお支払する場合は、お客様名義で開設される仮想口座にお振込みください。</li>
-											<li>仮想口座番号は、契約完了の時、お客様の携帯電話に発送します。マイページでもご確認できます。</li>
-											<li>現金振込の際、期限内に申請金のお振込みと電子署名完了してください。契約満了期限までに完了されない場合は、自動キャンセルされます。</li>
-										</ul>
+								<div class="caution">
+									<p class="tit">現金で申請金をお支払する場合の注意事項</p>
+									<ul>
+										<li>現金で申請金をお支払する場合は、お客様名義で開設される仮想口座にお振込みください。</li>
+										<li>仮想口座番号は、契約完了の時、お客様の携帯電話に発送します。マイページでもご確認できます。</li>
+										<li>現金振込の際、期限内に申請金のお振込みと電子署名完了してください。契約満了期限までに完了されない場合は、自動キャンセルされます。</li>
+									</ul>
+									<div class="scroll-x">
 										<div class="img-box">
-											<img src="../../assets/images/img_online_st2_01.svg" alt="現金で申請金をお支払する場合の注意事項">
+											<img src="../../assets/images/img_online_st2_01.png" alt="現金で申請金をお支払する場合の注意事項">
 										</div>
 									</div>
 								</div>
@@ -422,32 +428,31 @@
 										<li class="step3">
 											<div class="text">
 												<strong>書類受付完了</strong>
-												お客様の書類を行政書士が受付、<br>
-												車庫地登録が行われます。
+												顧客の書類を行政書士が受付し、車庫地の登録が行われます。
 											</div>
 										</li>
 										<li class="step4">
 											<div class="text">
-												<strong>車庫地登録完了</strong>
-												車庫地登録が完了し、残代金が確定されます。
+												<strong>車庫登録完了</strong>
+												車庫登録が完了し、残代金が確定されます。
 											</div>
 										</li>
 										<li class="step5">
 											<div class="text">
-												<strong>残代金お支払い要請</strong>
-												確定された残代金に対して、クレジットカード、または銀行振込による残代金のお支払いが行われます。
+												<strong>残代金支払要請</strong>
+												確定された残代金に対して、クレジットカード、または銀行振込により残代金のお支払が行われます。
 											</div>
 										</li>
 										<li class="step6">
 											<div class="text">
-												<strong>残代金支払い完了</strong>
-												残代金のお支払いが完了し、車両を登録します。
+												<strong>残代金支払完了</strong>
+												残代金の支払いが完了し、車両登録が行われます。
 											</div>
 										</li>
 										<li class="step7">
 											<div class="text">
-												<strong>注文キャンセル</strong>
-												お客様の要請で注文がキャンセルされました。
+												<strong>契約キャンセル</strong>
+												顧客の要請により注文がキャンセルされました。
 											</div>
 										</li>
 									</ul>
@@ -467,8 +472,7 @@
 										<li class="step2">
 											<div class="text">
 												<strong>生産中</strong>
-												HyundaiのULSAN工場で<br>
-												ご注文の車両の生産が始まりました。
+												HyundaiのULSAN工場でご注文の車両の生産が始まりました。
 											</div>
 										</li>
 										<li class="step3">
@@ -481,7 +485,7 @@
 										<li class="step8">
 											<div class="text">
 												<strong>車両準備中</strong>
-												お客様の車両を登録するために最終検査を実行中です。 
+												お客様の車両を登録するために最終検査を実行中です。
 											</div>
 										</li>
 										<li class="step4">
@@ -494,8 +498,7 @@
 										<li class="step5">
 											<div class="text">
 												<strong>配送開始</strong>
-												アクセサリーの取付など出荷の準備が整い、<br>
-												お客様の車庫地への配送が始まりました。
+												アクセサリーの取付など出荷の準備が整い、お客様の車庫地への配送が始まりました。
 											</div>
 										</li>
 										<li class="step6">

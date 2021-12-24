@@ -254,8 +254,14 @@ body,
 		top: 160px;
 	}
 }
-.mocean h1,
-.mocean h2{
+.mocean .h1{
+	font-size: 56px;
+    line-height: 90px;
+	font-weight: 500;
+}
+.mocean .h2{
+	font-size: 56px;
+    line-height: 90px;
 	font-weight: 500;
 }
 .mocean .section2{
@@ -280,11 +286,13 @@ body,
     background-size: cover;
 	text-align: center;
 }
-.mocean .section3 h3{
+.mocean .section3 .h3{
 	position: absolute;
 	width: 100%;
 	left: 0;
 	bottom: 112px;
+	font-size: 32px;
+    line-height: 52px;
 	font-weight: 500;
 	color: rgba(255, 255, 255, .6);
 }
@@ -473,11 +481,11 @@ body,
 	.mocean .hmj-footer.active {
 		top: 0;
 	}
-	.mocean h1{
+	.mocean .h1{
 		font-size: 24px;
 		line-height: 38px;
 	}
-	.mocean h2{
+	.mocean .h2{
 		font-size: 20px;
 		line-height: 30px;
 	}
@@ -496,9 +504,14 @@ body,
 	.mocean .section1 .video-text .video-tit{
 		margin-bottom: 16px;
 	}
+	.mocean .section1 .video-text .video-logo{
+		margin-bottom: 24px;
+	}
 	.mocean .section1 .video-box .btn-play{
-		top: 90px;
-		transform: translateX(-50%);
+		position: relative;
+		top: 0;
+		left: 0;
+		transform: translate(0, 0);
 	}
 	.mocean .section1 .scroll-guide{
 		height: 120px;
@@ -592,7 +605,7 @@ body,
 		line-height: 22px;
         margin-top: 3%;
     }
-	.mocean .section3 h3{
+	.mocean .section3 .h3{
 		bottom: 12%;
 		font-size: 16px;
 		line-height: 26px;
