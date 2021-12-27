@@ -550,10 +550,11 @@ textarea::-webkit-scrollbar-track {
 .gnb-menu-list .menu-inner-depth > ul {
 	position: absolute;
 	top: 272px;
+	right: 40px;
 	bottom: 68px;
 	display: inline-block;
 	width: 60%;
-	padding: 0 20px 32px 0;
+	padding: 0 0 32px 0;
 	vertical-align: top;
 }
 .gnb-menu-list .menu-inner-depth ul li + li {
@@ -712,7 +713,7 @@ textarea::-webkit-scrollbar-track {
 }
 .gnb-menu-outer .gnb-menu-list li .menu-inner-depth .toggle-menu {
 	position: relative;
-	padding-right: 20px;
+	padding-right: 28px;
 }
 .gnb-menu-outer .gnb-menu-list li .menu-inner-depth .toggle-menu:before {
 	transition: transform .3s ease-in-out;
@@ -762,12 +763,20 @@ textarea::-webkit-scrollbar-track {
 }
 .gnb-menu-outer .gnb-menu-box .account-box .btn-sign-in {
 	opacity: .8;
+	display: inline-flex;
+	align-items: center;
 	font-size: 14px;
 	color: #fff;
 	line-height: 22px;
 }
+.ie11 .gnb-menu-outer .gnb-menu-box .account-box .btn-sign-in {
+	line-height: 28px;
+}
 .gnb-menu-outer .gnb-menu-box .account-box .btn-sign-in:hover {
 	opacity: 1;
+}
+.gnb-menu-outer .gnb-menu-box .account-box .btn-sign-in .ico-account {
+	margin-right: 8px;
 }
 .gnb-menu-outer .gnb-menu-box .account-box .btn-alarm {
 	position: relative;
@@ -870,6 +879,7 @@ textarea::-webkit-scrollbar-track {
 }
 .hmj-header .gnb-right-list li .btn-cart {
 	position: relative;
+	display: block;
 }
 .hmj-header .gnb-right-list li button:hover {
 	opacity: .8;
@@ -958,6 +968,7 @@ textarea::-webkit-scrollbar-track {
 .gnb-search-dim.active {
 	transition: opacity .7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	opacity: 1;
+	height: 100vh;
 	pointer-events: auto;
 }
 .gnb-search-dim .search-outer-box {
@@ -1129,8 +1140,8 @@ textarea::-webkit-scrollbar-track {
 	.hmj-header .gnb-menu-list li + li {
 		margin: 24px 0 0;
 	}
-	.gnb-menu-outer.active .gnb-menu-list > li.mo-only {
-		display: block;
+	.gnb-menu-outer .gnb-menu-list > li.mo-only {
+		display: list-item;
 		margin: 24px 0;
 	}
 	.gnb-menu-outer .gnb-menu-box .account-box {
@@ -1168,7 +1179,9 @@ textarea::-webkit-scrollbar-track {
 	}
 	.gnb-menu-list .menu-inner-depth > ul {
 		top: 135px;
+		right: 0;
 		bottom: 52px;
+		padding-right: 20px;
 	}
 	.ios .gnb-menu-list .menu-inner-depth > ul {
 		bottom: 58px;
@@ -3359,9 +3372,9 @@ div.radio-group {
 	transform: rotate(-45deg);
 }
 @media screen and (max-width: 1119px) {
-	.btn-top-box {
+	/* .btn-top-box {
 		bottom: 20px;
-	}
+	} */
 	.btn-top-box .btn-side-menu {
 		transition: all .3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
 		transform: translateY(52px);

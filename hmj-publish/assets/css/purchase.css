@@ -649,6 +649,9 @@
 	box-shadow: 2px 6px 6px -1px rgba(25, 25, 25, 0.42);
 }
 @media screen and (min-width: 1120px) {/* only pc */
+	.intro-map .search {
+		height: 232px;
+	}
 	.intro-map .result .scroll-area {
 		height: 100%;
 		overflow-y: auto;
@@ -3473,11 +3476,23 @@
 	transition: top .5s ease-in-out;
 	margin-top: 128px;
 } */
-.online .pos-scr-box li {
-	min-height: 62px;
+.online .cont-left .pos-scr-box {
+	position: relative;
 }
-.online .pos-scr-box li + li {
-	margin-top: 54px;
+.online .cont-left .pos-scr-box:before {
+	position: absolute;
+	top: 0;
+	left: 20px;
+	display: block;
+	width: 1px;
+	height: calc(100% - 76px);
+	background-color: #e9e9e9;
+	content: '';
+}
+.online .cont-left .pos-scr-box li {
+	display: block;
+	position: relative;
+	min-height: 116px;
 }
 .online .pos-scr-box li.active .btn-scr-down {
 	color: #0793ea;
@@ -3508,17 +3523,6 @@
 }
 .ie11 .online .pos-scr-box li .num {
 	line-height: 45px;
-}
-.online .pos-scr-box li+li .num:before {
-	position: absolute;
-	top: -40px;
-	left: 50%;
-	width: 1px;
-	height: 80px;
-	background: #e9e9e9;
-	transform: translateY(-50%);
-	z-index: -1;
-	content: '';
 }
 .online .pos-scr-box li.active .num {
 	background: #0793ea;

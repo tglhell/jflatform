@@ -760,7 +760,7 @@
 }
 /* E : 정비 */
 
-/* S : 충전 */
+/* S : 충전 서비스 */
 /* .charge .intro-map {
 	height: calc(100vh - 109px);
 	position: relative;
@@ -778,49 +778,6 @@
 	align-items: center;
 	justify-content: flex-end;
 }
-.charge .top-float .service-cate {
-	display:flex;
-	padding:8px;
-	margin-bottom:0;
-    margin-right: 16px;
-	border-radius:8px;
-	background:#fff;
-	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
-}
-.charge .top-float .service-cate .btn-select4:first-child {
-	margin-right:8px;
-}
-/* S : 라디오 버튼 추후 common 이동 가능 */
-.btn-select4 {
-	height:40px !important;
-}
-.btn-select4 input + span {
-	padding:0 36px 0 37px;
-	height:40px;
-	border-radius: 4px;
-	border:none;
-	background:#fafafa;
-	color: #999;
-	cursor: pointer;
-	line-height:22px;
-	font-size:14px;
-}
-.btn-select4 input:checked + span {
-	color: #fff;
-	background:#0793ea;	
-}
-@media screen and (max-width: 1119px) {
-	.btn-select4 {
-		height:38px !important;
-	}
-	.btn-select4 input + span {
-		padding:0 16px;
-		height:38px;
-		line-height:20px;
-		font-size:13px;
-	}
-}
-/* E : 라디오 버튼 추후 common 이동 가능 */
 
 .charge .top-float .search-toggle {
 	width: 56px;
@@ -829,6 +786,10 @@
 	background:#fff url(../images/common/ico_inp_search.svg) no-repeat center;
 	border-radius:8px;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+}
+.charge .tab-box-cont {
+    padding-top:24px;
+    overflow: visible;
 }
 .charge .top-float .search-toggle.on {
 	background:#0793ea url(../images/common/ico_inp_search_white.svg) no-repeat center;
@@ -841,6 +802,9 @@
 	padding: 24px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	border-radius:8px;
+}
+.charge .intro-map .search .inp-outer-box {
+    margin-top:0;
 }
 .charge .top-float .radio-group {
 	margin-top:24px;
@@ -1014,7 +978,7 @@
 	}
 }
 
-/* E : 충전 */
+/* E : 충전 서비스 */
 
 /* S : 로드사이드 어시스턴스 */
 .roadside .info-text {

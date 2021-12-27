@@ -1364,7 +1364,7 @@
     .shop-detail .add-info.cs .btn-icon2 {
         margin-top: 4px;
         margin-left: 32px;
-        margin-right: calc(100% - 122px)
+        /* margin-right: calc(100% - 122px) */
     }
     .shop-detail .add-info .seller li + li {
         margin-top: 8px;
@@ -1379,6 +1379,7 @@
 
     .shop-detail .mo-bottom-fixed {
         height: auto;
+        min-height: 96px;
         padding: 0;
         background-color: #fff;
     }

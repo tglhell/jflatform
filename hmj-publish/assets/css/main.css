@@ -486,20 +486,20 @@
 }
 @media screen and (min-width: 1120px) {
 	.car-item-outer .car-cont .car-item {
-		transition: all .5s ease-out;
+		transition: all .8s linear;
 		transform: scale(.8) translateX(-63%) translateY(-10%);
 	}
 	.active .car-item-outer .car-cont.swiper-slide-active .car-item,
 	.active .car-item-outer .car-cont.swiper-slide-duplicate-active .car-item {
-		transition: all .8s ease-out;
+		transition: all .8s linear;
 		transform: scale(1.3) translateX(-40%) translateY(0%);
 	}
 	.active .car-item-outer .car-cont.swiper-slide-active {
-		transition: width .7s .3s linear;
+		transition: width .7s linear;
 		width: 70%;
 	}
 	.active .car-item-outer .car-cont.swiper-slide-next {
-		transition: width .7s .3s linear;
+		transition: width .7s linear;
 		width: 30%;
 	}
 	.car-item-outer .car-cont.swiper-slide-active .car-space-box {
@@ -510,7 +510,7 @@
 		margin-left: 8px;
 		margin-left: 0.41666vw;
 	}
-	.car-item-outer .car-cont:not(.swiper-slide-active, .swiper-slide-duplicate-active, .swiper-slide-next) .car-item-text {
+	.car-item-outer .car-cont .car-item-text {
 		transition: none;
 		opacity: 0;
 	}

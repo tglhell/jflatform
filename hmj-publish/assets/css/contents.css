@@ -915,9 +915,6 @@ section.wrap .cta-outer + .txt {
 	display: inline-block;
 	vertical-align: top;
 }
-.tab-box-item .model-list li:first-child {
-	width: 33.34%;
-}
 .tab-box-item .model-list li .item-img {
 	position: relative;
 	overflow: hidden;
@@ -1006,19 +1003,16 @@ section.wrap .cta-outer + .txt {
 .unified-search .tab-box-cont .tab-box-item + .tab-box-item.active {
 	margin-top: 0;
 }
-.unified-search .swiper-outer-box .swiper-button-prev,
-.unified-search .swiper-outer-box .swiper-button-next{
+.unified-search .swiper-outer-box.search-swiper .swiper-button-prev,
+.unified-search .swiper-outer-box.search-swiper .swiper-button-next{
     width: 40px;
     height: 40px;
     background-color: rgba(0,0,0,.7);
+	top: 132px;
 }
 .unified-search .display .swiper-outer-box .swiper-button-prev,
 .unified-search .display .swiper-outer-box .swiper-button-next{
 	top: 140px;
-}
-.unified-search .search-model-swiper.swiper-outer-box .swiper-button-prev,
-.unified-search .search-model-swiper.swiper-outer-box .swiper-button-next{
-	top: 132px;
 }
 .unified-search .swiper-outer-box .swiper-button-prev{
     left: 0;
@@ -1044,11 +1038,41 @@ section.wrap .cta-outer + .txt {
     background: url(../images/common/ico_arrow_white_16x16.svg) no-repeat center;
     transform: rotate(0deg);
 }
-.pc .unified-search .display .goods-list .item{
-	padding-top: 0;
+.pc .tab-box-item .model-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+.pc .tab-box-item .model-list li {
+	width: 352px;
+	padding-bottom: 32px;
+}
+.pc .tab-box-item .model-list li:not(:nth-of-type(3n)) {
+	margin-right: 32px;
+}
+.pc .tab-box-item .search-swiper .model-list{
+	flex-wrap: nowrap;
+}
+.pc .tab-box-item .search-swiper .model-list li{
+	margin-bottom: 0;
+	margin-right: 32px;
+}
+.pc .tab-box-item .search-swiper .model-list li:last-of-type {
 	margin-right: 0;
 }
-.pc .unified-search .display .goods-list .item::after {
+.pc .unified-search .display .search-swiper .goods-list{
+	flex-wrap: nowrap;
+}
+.pc .unified-search .display .goods-list .item{
+	height: auto;
+}
+.pc .unified-search .display .search-swiper .goods-list .item{
+	margin-right: 32px;
+	padding-top: 0;
+}
+.pc .unified-search .display .search-swiper .goods-list .item:last-of-type{
+	margin-right: 0;
+}
+.pc .unified-search .display .search-swiper .goods-list .item:not(:last-of-type)::after {
     background: #e9e9e9;
     width: 1px;
     height: 100%;
@@ -1071,6 +1095,12 @@ section.wrap .cta-outer + .txt {
 }
 .unified-search .goods-list .info .curation + .price{
 	margin-top: 24px;
+}
+.pc .tab-box-item [class*="swiper-button"] {
+	display: none;
+}
+.pc .tab-box-item .search-swiper [class*="swiper-button"] {
+	display: block;
 }
 @media screen and (max-width: 1119px) {
 	.hmj-container.unified-search .hmj-content .top-tit-box {

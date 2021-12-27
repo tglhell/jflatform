@@ -3297,6 +3297,9 @@
 .leave-cont .cta-outer {
 	margin-top: 40px;
 }
+.pop-leave .caution {
+	margin-top: 40px;
+}
 
 @media screen and (max-width: 1119px) {
 	.leave-cont {
@@ -3357,6 +3360,9 @@
 		font-size: 13px;
 	}
 	.leave-cont .cta-outer {
+		margin-top: 32px;
+	}
+	.pop-leave .caution {
 		margin-top: 32px;
 	}
 }

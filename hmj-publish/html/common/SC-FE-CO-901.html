@@ -282,26 +282,6 @@
             </div>
 			<div class="cont-outer">
                 <div class="tab-box-outer">
-					<!-- s : no data -->
-					<div class="js-tab x-scroll">
-						<ul class="btns-list tab-box-list">
-							<li class="active"><button type="button" data-keyword="全体">全体 (<span class="num">30</span>)</button> <!-- 버튼 활성화 시 on class 추가 --></li>
-							<li><button type="button" data-keyword="車種">車種 (<span class="num">5</span>)</button></li>
-							<li><button type="button" data-keyword="車両情報検索">車両情報検索 (<span class="num">4</span>)</button></li>
-							<li><button type="button" data-keyword="FAQ">FAQ (<span class="num">15</span>)</button></li>
-							<li><button type="button" data-keyword="SHOP">SHOP (<span class="num">11</span>)</button></li>
-						</ul>
-					</div>
-
-					<div class="no-data">
-						<p class="tit">&ldquo;<span class="fc-color3">モーベル a14060</span>&rdquo;  に一致する情報は見つかりませんでした</p>
-						<p class="desc">誤字・脱字がないかを確認してみてください。<br>キーワードを変えてみてください。<br>より一般的なキーワードを使ってみてください。</p>
-					</div>
-					<!-- e : no data -->
-
-					<br><br>
-
-					<!-- s : data -->
 					<div class="js-tab x-scroll">
 						<ul class="btns-list tab-box-list">
 							<li class="active"><button type="button" data-keyword="全体">全体 (<span class="num">30</span>)</button> <!-- 버튼 활성화 시 on class 추가 --></li>
@@ -343,15 +323,23 @@
 					</div>
 				</div>
 
+				<!-- s : no data -->
+				<div class="no-data">
+					<p class="tit">&ldquo;<span class="fc-color3">モーベル a14060</span>&rdquo;  に一致する情報は見つかりませんでした</p>
+					<p class="desc">誤字・脱字がないかを確認してみてください。<br>キーワードを変えてみてください。<br>より一般的なキーワードを使ってみてください。</p>
+				</div>
+				<!-- e : no data -->
+
+				<!-- s : data -->
 				<div class="tab-box-cont">
 					<div class="tab-box-item" data-keyword="車種">
 						<div class="keyword-top-box">
 							<strong class="cont-tit">車種 (6)</strong>
 							<button class="btn-icon"><span>もっと見る </span></button>
 						</div>
-						<div class="swiper-outer-box search-model-swiper model-list">
+						<div class="swiper-outer-box search-swiper swp">
 							<div class="swiper-container">
-								<ul class="swiper-wrapper swiper-pc-only"><!--모바일 슬라이드 비활성화 swiper-pc-only-->
+								<ul class="model-list swiper-list swiper-wrapper">
 									<li class="swiper-slide">
 										<div class="search-item">
 											<div class="item-img">
@@ -473,8 +461,8 @@
 									</li>
 								</ul>
 							</div>
-							<div class="pc-only swiper-button-prev"></div><!--모바일 비활성화 pc-only-->
-							<div class="pc-only swiper-button-next"></div><!--모바일 비활성화 pc-only-->
+							<div class="pc-only swiper-button-prev"></div>
+							<div class="pc-only swiper-button-next"></div>
 						</div>
 						<!--pagenation-->
 						<div class="hmj-pagination">
@@ -772,9 +760,9 @@
 							<strong class="cont-tit">SHOP (6)</strong>
 							<button class="btn-icon"><span>もっと見る </span></button>
 						</div>
-						<div class="swiper-outer-box search-goods-swiper grid goods-list">
+						<div class="swiper-outer-box search-swiper swp">
 							<div class="swiper-container">
-								<div class="swiper-wrapper swiper-pc-only">
+								<div class="grid goods-list swiper-list swiper-wrapper">
 									<!-- 상담형 상품 -->
 									<div class="swiper-slide grid-item item">
 										<a href="javascript:void(0);">
@@ -1059,6 +1047,7 @@
 </div>
 <!-- // pc 더보기 팝업 -->
 
+
 </body>
 
 <script>
@@ -1069,16 +1058,79 @@
 			const tabContKeyword = $('.tab-box-cont').find('.tab-box-item' + '[data-keyword=' + btnKeyword + ']');
 			if (btnKeyword == '全体') {
 				tabContItem.removeClass('active').show();
+				$('.swp').each(function(){
+					$(this).addClass('search-swiper');
+				});
 			} else {
 				tabContKeyword.addClass('active').show().siblings().removeClass('active').hide();
+				$('.swp').each(function(){
+					$(this).removeClass('search-swiper');
+				});
 			}
 		});
-		
+
+		//통합검색 shop
+		function searchSlider(){
+			$('.search-swiper').each(function(){
+				if ($(this).length == 1) {
+					let swpOpt = {};
+					let slideLength = $(this).find('.swiper-slide').length;
+					if (slideLength == 1) {
+						swpOpt = {
+							allowSlidePrev: false,
+							allowSlideNext: false,
+							simulateTouch: false
+						}
+						$(this).find('[class*="swiper-button"]').hide();
+					} else {
+						if($(window).width() > tbl && $('.swiper-list').hasClass('swiper-wrapper')){
+							swpOpt = {
+								navigation: {
+									nextEl: $(this).find('.swiper-button-next'),
+									prevEl: $(this).find('.swiper-button-prev'),
+								},
+								pagination: {
+									el: $(this).find('.swiper-pagination'),
+									clickable: true,
+								},
+								slidesPerView: 'auto',
+								// centeredSlides: true,
+								spaceBetween: 0,
+								simulateTouch: true,
+								speed: 300,
+								loop: false,
+								observer: true,
+								observeParents: true,
+								autoplay: false,
+								autoHeight: false,
+								allowTouchMove : false,
+								breakpoints:{
+									1120:{
+										allowTouchMove : true,
+									}
+								}
+							}
+						}
+					}
+					let searchSwiper = new Swiper($(this).find('.swiper-container'), swpOpt);
+
+					$(window).on('resize',function(){
+						searchSwiper.slideTo(0, 0, false);
+					});
+				}
+			});
+		}
+		searchSlider();
+
 		function searchResize(){
 			if ($(window).width() > tbl) {
-				$('.swiper-pc-only').addClass('swiper-wrapper');
+				$('.search-swiper').each(function(){
+					$('.swiper-list').addClass('swiper-wrapper');
+				});
 			} else{
-				$('.swiper-pc-only').removeClass('swiper-wrapper');
+				$('.search-swiper').each(function(){
+					$('.swiper-list').removeClass('swiper-wrapper');
+				});
 			}
 		}
 		searchResize();
@@ -1086,7 +1138,6 @@
 		$(window).on('resize',function(){
 			searchResize();
 		});
-		
 	});
 </script>
 </html>
