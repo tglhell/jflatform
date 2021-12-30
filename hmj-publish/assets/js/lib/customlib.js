@@ -619,8 +619,10 @@ $(function () {
 			let subsidySwiper = new Swiper($(this).find('.swiper-container'), swpOpt);
 		}
 	});	
+});
 
-	//통합검색 shop
+//통합검색 shop
+function searchSwipers(){
 	$('.search-swiper').each(function(){
 		if ($(this).length == 1) {
 			let swpOpt = {};
@@ -674,4 +676,4 @@ $(function () {
 			});
 		}
 	});
-});
+}

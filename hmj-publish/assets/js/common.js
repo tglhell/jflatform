@@ -771,7 +771,8 @@ $(function () {
 		});
 
 		$('.btn-top-box').on('click', '.btn-top', function(){
-			$(window).scrollTop(0);
+			// $(window).scrollTop(0);
+			$('html, body').stop().animate({scrollTop:0}, secVal[3], 'easeInOutQuint');
 		});
 	};
 });

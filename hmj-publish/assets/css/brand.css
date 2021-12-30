@@ -294,9 +294,6 @@
     .brand-event .event-form .check-terms{
         margin-left: 192px;
     }
-    .brand-event .event-form .inp-col.val-error + .error-msg{
-        margin-left: 0;
-    }
 }
 @media screen and (max-width:1119px) {
     .brand-event .top-tit-box{
@@ -509,14 +506,24 @@
     cursor: pointer;
 }
 .brand-index .brand-list-cont .swiper-slide .img-box {
+    position: relative;
     width: 100%;
     height: 13.5938vw;
+    overflow: hidden;
 }
 .brand-index .brand-list-cont .swiper-slide img {
     display: block;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100%;
     object-fit: cover;
+    -webkit-transform: translate(-50%, 50%);
+    transform: translate(-50%, -50%);
 }
 .brand-index .brand-list-cont .swiper-slide .tit-cont {
     margin-top: 16px;
@@ -708,7 +715,7 @@
         min-height: auto;
     }
     .brand-index .brand-list-cont .swiper-slide .img-box {
-        height: auto !important;
+        height: 46.1111vw !important;
     }
     .brand-index .brand-list-cont .swiper-slide:not(.swiper-slide-active) .img-box {
         transform: scaleY(0.9);

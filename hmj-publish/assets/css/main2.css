@@ -491,7 +491,7 @@
 	width: 100%;
 }
 
-/* skeleton ui - use only mo */
+/* s : skeleton ui - 모바일만 적용 */
 @media screen and (max-width: 1119px) {
 	.ui-start,
 	.skeleton-ui {
@@ -514,9 +514,13 @@
 	.skeleton-ui .hmj-header.active {
 		background-color: #ddd !important;
 	}
+	.skeleton-ui .hmj-header .gnb-right-list li .btn-search {
+		transform: none;
+		top: 0;
+	}
 	.skeleton-ui .hmj-header .logo a,
 	.skeleton-ui .hmj-header .gnb-right-list .btn-menu,
-	.hmj-header .gnb-right-list li .btn-search span {
+	.skeleton-ui .hmj-header .gnb-right-list li .btn-search span {
 		position: relative;
 		overflow: hidden;
 		width: 52px;
@@ -525,16 +529,16 @@
 	}
 	.skeleton-ui .hmj-header .logo a:before,
 	.skeleton-ui .hmj-header .gnb-right-list .btn-menu:before,
-	.hmj-header .gnb-right-list li .btn-search span:after {
+	.skeleton-ui .hmj-header .gnb-right-list li .btn-search span:after {
 		content: '';
 		position: absolute;
 		top: 0;
-		left: -100px;
-		opacity: .5;
-		width: 100px;
+		left: -120px;
+		opacity: .6;
+		width: 120px;
 		height: 100%;
 		background: linear-gradient(to right, #ccc, #ddd, #ccc);
-		animation: skeleton-loading 2s infinite linear;
+		animation: skeleton-loading 1.5s infinite linear;
 	}
 	.skeleton-ui .media-wrap:before {
 		content: '';
@@ -547,11 +551,13 @@
 	}
 	.skeleton-ui .txt-cont .tit {
 		width: 138px;
+		width: 38.33333vw;
 		max-width: 100%;
 		height: 52px;
 	}
 	.skeleton-ui .txt-cont .tit-txt {
 		width: 224px;
+		width: 62.22222vw;
 		max-width: 100%;
 		height: 22px;
 	}
@@ -573,12 +579,14 @@
 		content: '';
 		position: absolute;
 		top: 0;
-		left: -100px;
-		opacity: .5;
-		width: 100px;
+		left: -120px;
+		left: -33.33333vw;
+		opacity: .6;
+		width: 120px;
+		width: 33.33333vw;
 		height: 100%;
 		background: linear-gradient(to right, #ccc, #ddd, #ccc);
-		animation: skeleton-loading 2s infinite linear;
+		animation: skeleton-loading 1.5s infinite linear;
 	}
 	.skeleton-ui .txt-cont .cta-outer .btn {
 		border-radius: 0;
@@ -591,14 +599,17 @@
 	}
 	@keyframes skeleton-loading {
 		0% {
-			transform: translateX(0);
+			transform: translateX(-120px);
+			transform: translateX(-10.72386vw);
 		}
 		50%,
 		100% {
-			transform: translateX(460px);
+			transform: translateX(700px);
+			transform: translateX(82.55585vw);
 		}
 	}
 }
+/* e : skeleton ui - 모바일만 적용 */
 
 @media screen and (min-width: 1120px) {
 	.car-item-outer .car-cont .car-item {

@@ -167,11 +167,12 @@ $(function () {
 	});
 
 
+	//동영상 제어
 	function videoControls(){
 		$('.video-box').each(function(){
-			var controlBtn = $(this).find('.btn-play');
-			var video = $(this).find('video');
-			var thumb = $(this).find('.img-thumb');
+			let controlBtn = $(this).find('.btn-play');
+			let video = $(this).find('video');
+			let thumb = $(this).find('.img-thumb');
 			if (!$(this).hasClass('sep-m-p') || $(window).width() <= tbl) {	
 				$(controlBtn).on('click', function(){
 					$(controlBtn).fadeOut();
@@ -188,13 +189,20 @@ $(function () {
 						$(controlBtn).fadeIn();
 					}
 				});
-				$(this).on('mousewheel DOMMouseScroll', function(){
-					$(controlBtn).fadeIn();
-					$(thumb).fadeIn();
+				$(this).on('mousewheel DOMMouseScroll touchmove', function(){
+					$(controlBtn).fadeIn(500);
+					$(thumb).fadeIn(500);
 					$(video).get(0).pause();
 				});
 			}else{
 				$(video).get(0).play();
+				$(window).on('mousewheel DOMMouseScroll', function(){
+					if ($('.section1').parent().hasClass('active-idx')){
+						$(video).get(0).play();
+					} else{
+						$(video).get(0).pause();
+					}
+				});
 			}
 		});
 	}

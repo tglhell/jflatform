@@ -38,7 +38,7 @@ function chkStartPos () {
 	chkPos = false;
 	scrPos = $(window).scrollTop();
 	iNum = 12; // 전체 이미지수 -1
-	
+
 	$(window).scroll(function () {
 		scrPos = $(this).scrollTop();
 		startPos();
@@ -131,9 +131,9 @@ function mainLineupSwiper () {
 								}(i));
 							}
 							$('.car-cont').find('img').css('transform', 'translateX(-0vw)');
+							$('.car-cont').removeClass('focus-in');
 							if (!$('.car-cont').is(':animated')) {
 								$('.car-cont').animate({'overflow':'visible'}, secVal[4]);
-								$('.car-cont').removeClass('focus-in');
 								swpActChk = true;
 							}
 							setTimeout(function () {
