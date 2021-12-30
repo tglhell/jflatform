@@ -565,7 +565,6 @@ jQuery.event.add(window, 'load', function () {
 
 	//textarea focus
 	$('.inp-textarea').on('focusin focusout keyup', 'textarea', function (e) {
-		debugger
 		if (e.type == 'focusin') {
 			$(this).parent().addClass('focus');
 		} else if (e.type == "focusout") {

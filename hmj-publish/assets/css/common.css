@@ -299,9 +299,9 @@ textarea::-webkit-scrollbar-track {
 	.pc-only {
 		display: none;
 	}
-	/* .mo-only {
+	.mo-only {
 		display: unset;
-	} */
+	}
 	html, body {
 		font-size: 13px;
 		line-height: 20px;
@@ -955,7 +955,7 @@ textarea::-webkit-scrollbar-track {
 	transition: opacity .7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	transition-delay: .5s;
 	position: fixed;
-	top: 73px;
+	top: 72px;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -1661,6 +1661,7 @@ textarea::-webkit-scrollbar-track {
 }
 .hmj-footer .footer-top > ul li a,
 .hmj-footer .footer-top > ul li .tit-btn {
+	display: block;
 	font-size: 14px;
 	color: #fff;
 	line-height: 22px;
@@ -1674,6 +1675,7 @@ textarea::-webkit-scrollbar-track {
 	margin-top: 10px;
 }
 .hmj-footer .footer-top ul li .item .cont a {
+	display: block;
 	font-size: 13px;
 	color: #999;
 	line-height: 28px;
@@ -2050,7 +2052,7 @@ div.slt-box select {
     top: 40px;
     left: 0;
     right: 0;
-    z-index: 2;
+    z-index: 3;
 	width: 100%;
 	display: none;
 	overflow-y: auto;
@@ -3236,7 +3238,7 @@ div.radio-group {
 [class*='btn-icon'] {
 	position: relative;
 	display: inline-block;
-	height: 20px;
+	/* height: 20px; */
 	font-size: 12px;
 	color: #999;
 	line-height: 20px;
@@ -3276,7 +3278,7 @@ div.radio-group {
 
 [class*='btn-icon'].regular {
 	font-size: 14px;
-	/* height: 22px; */
+	line-height: 22px;
 }
 
 .btn-del {
@@ -3297,11 +3299,10 @@ div.radio-group {
 	[class*='btn-text'].regular {
 		font-size: 13px;
 		line-height: 20px;
-		height: 20px;
 	}
 	[class*='btn-icon'].regular {
 		font-size: 13px;
-		height: 20px;
+		line-height: 20px;
 	}
 }
 
@@ -3431,14 +3432,20 @@ div.radio-group {
 	font-size: 12px;
 	color: #191919;
 }
-.amount-calc.disabled * {
+.amount-calc.disabled *,
+.amount-calc .disabled,
+.amount-calc button:disabled {
 	color: #ccc;
 	cursor: default;
 }
-.amount-calc.disabled .down{
+.amount-calc.disabled .down,
+.amount-calc .down.disabled,
+.amount-calc .down:disabled {
 	background-image: url('../images/common/ico_minus_disabled.svg');
 }
-.amount-calc.disabled .up{
+.amount-calc.disabled .up,
+.amount-calc .up.disabled,
+.amount-calc .up:disabled {
 	background-image: url('../images/common/ico_plus_disabled.svg');
 }
 
@@ -3874,10 +3881,8 @@ div.caution {
 }
 .caution .tit {
 	margin-bottom: 16px;
-	font-size: 14px;
 	font-weight: 500;
 	color: #191919;
-	line-height: 22px;
 }
 .caution ul li {
 	position: relative;
@@ -3975,7 +3980,6 @@ p.noti.center::before {
 	}
 	.caution .tit {
 		margin-bottom: 8px;
-		font-size: 12px;
 	}
 }
 

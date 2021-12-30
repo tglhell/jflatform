@@ -1938,6 +1938,7 @@
     color: #666;
 }
 .my-order .order-list .item li .status .btn-text {
+	display: block;
 	margin-top: 2px;
 }
 .my-order .order-list .item li .cta-outer {
@@ -3300,6 +3301,10 @@
 .pop-leave .caution {
 	margin-top: 40px;
 }
+.pop-leave .layer-cont strong {
+	font-size: 16px;
+	line-height: 26px;
+}
 
 @media screen and (max-width: 1119px) {
 	.leave-cont {
@@ -3364,6 +3369,10 @@
 	}
 	.pop-leave .caution {
 		margin-top: 32px;
+	}
+	.pop-leave .layer-cont strong {
+		font-size: 14px;
+		line-height: 22px;
 	}
 }
 
@@ -3578,7 +3587,7 @@
 .reserve-info .tbl-list li {
     display: flex;
     padding-top: 16px;
-    align-items: baseline;
+    /* align-items: baseline; */
 }
 .tbl-list .item {
     color: #999;
@@ -3587,6 +3596,7 @@
 }
 .tbl-list .txt {
     flex: 1 0;
+	word-break: break-all;
 }
 .reserve-info .cta-outer {
     margin-top: 40px;

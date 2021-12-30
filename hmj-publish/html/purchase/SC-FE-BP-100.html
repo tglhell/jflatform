@@ -664,5 +664,111 @@
 	<!--//footer -->
 </div>
 
+<script>
+	jQuery.event.add(window, 'load', function () {
+		//브랜드거점
+		let branchLen = $('.brand-branch .branch-list > li').length;
+
+		for (var i = 0; i < branchLen+1; i++) {
+			let branchSwp = $('.branch-swp').eq(i);
+			if (branchSwp.children('.list').length == 1) {
+				let swpOpt = {},
+				slideLength = branchSwp.children('.list').find('.swiper-slide').length;
+				if (slideLength == 1) {
+					swpOpt = {
+						allowSlidePrev: false,
+						allowSlideNext: false,
+						simulateTouch: false
+					}
+					branchSwp.find('.list [class*="swiper-button"]').hide();
+				} else {
+					if ($(window).width() > tbl) {
+						//pc
+						swpOpt = {
+							spaceBetween: 32,
+							slidesPerView: 3,
+							simulateTouch: true,
+							speed: 300,
+							loop: false,
+							observer: true,
+							observeParents: true,
+							watchSlidesVisibility: true,  
+							watchSlidesProgress: true, 
+						}
+					} else {
+						//mo
+						swpOpt = {
+							spaceBetween: 0,
+							pagination: {
+								el: branchSwp.find('.swiper-pagination'),
+								clickable: true,
+								type: 'progressbar'
+							},
+							simulateTouch: true,
+							speed: 300,
+							loop: false,
+							observer: true,
+							observeParents: true,
+						}
+					}
+				}
+				var brandThumbList = new Swiper(branchSwp.find('.list .swiper-container'), swpOpt);
+			};
+
+			if (branchSwp.find('.thumb').length == 1) {
+				let swpOpt = {},
+				slideLength = branchSwp.find('.thumb .swiper-slide').length;
+				if (slideLength == 1) {
+					swpOpt = {
+						allowSlidePrev: false,
+						allowSlideNext: false,
+						simulateTouch: false,
+					}
+					branchSwp.find('.thumb [class*="swiper-button"]').hide();
+				} else {
+					if ($(window).width() > tbl) {
+						//pc
+						swpOpt = {
+							thumbs: {
+								swiper: brandThumbList
+							},
+							pagination: {
+								el: branchSwp.find('.thumb .swiper-pagination'),
+								clickable: true,
+								type: 'progressbar'
+							},
+							speed: 100,
+							cssMode: true,
+							mousewheel: true,
+							keyboard: true,
+							observer: true,
+							observeParents: true,
+							navigation: false,
+						}
+					} else {
+						//mo
+						swpOpt = {
+							pagination: {
+								el: branchSwp.find('.thumb .swiper-pagination'),
+								clickable: true,
+								type: 'progressbar'
+							},
+							navigation: {
+								nextEl: branchSwp.find('.swiper-button-next'),
+								prevEl: branchSwp.find('.swiper-button-prev'),
+							},
+							/* 2021-12-29 추가 */
+							observer: true,
+							observeParents: true,
+							autoHeight:true,
+						}
+					}
+				}
+				let brandDetailThumb = new Swiper(branchSwp.find('.thumb .swiper-container'), swpOpt);
+			};
+		}
+	});
+</script>
+
 </body>
 </html>

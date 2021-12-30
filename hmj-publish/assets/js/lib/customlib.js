@@ -36,6 +36,7 @@ $(function () {
 	
 	//input을 datepicker로 선언
 	$('.date-picker').datepicker();
+	$('.ui-datepicker').addClass('notranslate');
 
 	//From의 초기값을 오늘 날짜로 설정
 	// $('#datepicker').datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
@@ -191,6 +192,7 @@ $(function () {
 				}
 			}
 			$('.thumb-list [class*="swiper-button"]').hide();
+			$('.thumb-list .swiper-pagination').hide();
 		} else {
 			if ($(window).width() > tbl) {
 				//pc
@@ -198,19 +200,19 @@ $(function () {
 					spaceBetween: 16,
 					slidesPerView: 5,
 					simulateTouch: true,
-					speed: 300,
+					speed: 100,
 					loop: false,
 					observer: true,
 					observeParents: true
-				}
+				},
+				$('.thumb-list .swiper-pagination').hide();
 			} else {
 				//mo
 				swpOpt = {
 					spaceBetween: 0,
 					pagination: {
 						el: '.thumb-list .swiper-pagination',
-						clickable: true,
-						type: 'progressbar'
+						clickable: true
 					},
 					simulateTouch: true,
 					speed: 300,
@@ -236,6 +238,7 @@ $(function () {
 			if ($(window).width() < tbl) {//mo
 				$('.detail-thumb').hide();
 			}
+			$('.detail-thumb .swiper-pagination').hide();
 			$('.detail-thumb [class*="swiper-button"]').hide();
 		} else {
 			if ($(window).width() > tbl) {
@@ -246,8 +249,7 @@ $(function () {
 					},
 					pagination: {
 						el: '.detail-thumb .swiper-pagination',
-						clickable: true,
-						type: 'progressbar'
+						clickable: true
 					},
 					speed: 100,
 					cssMode: true,
@@ -455,13 +457,10 @@ $(function () {
             $('.event-banner-swiper [class*="swiper-button"]').hide();
         } else {
             let _gap ;
-			let _autoH;
             if ($(window).width() > tbl) {
                 _gap = 80;
-				_autoH = false;
             } else{
                 _gap = 0;
-				_autoH = true;
             }
             swpOpt = {
                 navigation: {
@@ -484,109 +483,11 @@ $(function () {
 					delay: 5000,
 					disableOnInteraction : false,
 				},
-				autoHeight: _autoH,
+				autoHeight: false,
             }
         }
         let eventBannerSwiper = new Swiper('.event-banner-swiper .swiper-container', swpOpt);
     }
-
-	//브랜드거점
-	let branchLen = $('.brand-branch .branch-list > li').length;
-
-	for (var i = 0; i < branchLen+1; i++) {
-		let branchSwp = $('.branch-swp').eq(i);
-		if (branchSwp.children('.list').length == 1) {
-			let swpOpt = {},
-			slideLength = branchSwp.children('.list').find('.swiper-slide').length;
-			if (slideLength == 1) {
-				swpOpt = {
-					allowSlidePrev: false,
-					allowSlideNext: false,
-					simulateTouch: false
-				}
-				branchSwp.find('.list [class*="swiper-button"]').hide();
-			} else {
-				if ($(window).width() > tbl) {
-					//pc
-					swpOpt = {
-						spaceBetween: 32,
-						slidesPerView: 3,
-						simulateTouch: true,
-						speed: 300,
-						loop: false,
-						observer: true,
-						observeParents: true,
-						watchSlidesVisibility: true,  
-        				watchSlidesProgress: true, 
-					}
-				} else {
-					//mo
-					swpOpt = {
-						spaceBetween: 0,
-						pagination: {
-							el: branchSwp.find('.swiper-pagination'),
-							clickable: true,
-							type: 'progressbar'
-						},
-						simulateTouch: true,
-						speed: 300,
-						loop: false,
-						observer: true,
-						observeParents: true,
-					}
-				}
-			}
-			var brandThumbList = new Swiper(branchSwp.find('.list .swiper-container'), swpOpt);
-		};
-	
-		if (branchSwp.find('.thumb').length == 1) {
-			let swpOpt = {},
-			slideLength = branchSwp.find('.thumb .swiper-slide').length;
-			if (slideLength == 1) {
-				swpOpt = {
-					allowSlidePrev: false,
-					allowSlideNext: false,
-					simulateTouch: false,
-				}
-				branchSwp.find('.thumb [class*="swiper-button"]').hide();
-			} else {
-				if ($(window).width() > tbl) {
-					//pc
-					swpOpt = {
-						thumbs: {
-							swiper: brandThumbList
-						},
-						pagination: {
-							el: branchSwp.find('.thumb .swiper-pagination'),
-							clickable: true,
-							type: 'progressbar'
-						},
-						speed: 100,
-						cssMode: true,
-						mousewheel: true,
-						keyboard: true,
-						observer: true,
-						observeParents: true,
-						navigation: false
-					}
-				} else {
-					//mo
-					swpOpt = {
-						pagination: {
-							el: branchSwp.find('.thumb .swiper-pagination'),
-							clickable: true,
-							type: 'progressbar'
-						},
-						navigation: {
-							nextEl: branchSwp.find('.swiper-button-next'),
-							prevEl: branchSwp.find('.swiper-button-prev'),
-						}
-					}
-				}
-			}
-			let brandDetailThumb = new Swiper(branchSwp.find('.thumb .swiper-container'), swpOpt);
-		};
-	}
 
 	//brand story
 	if ($('.brand-story').length == 1) {
@@ -718,4 +619,59 @@ $(function () {
 			let subsidySwiper = new Swiper($(this).find('.swiper-container'), swpOpt);
 		}
 	});	
+
+	//통합검색 shop
+	$('.search-swiper').each(function(){
+		if ($(this).length == 1) {
+			let swpOpt = {};
+			let slideLength = $(this).find('.swiper-slide').length;
+			if (slideLength <= 3) {
+				swpOpt = {
+					slidesPerView: 'auto',
+					allowSlidePrev: false,
+					allowSlideNext: false,
+					simulateTouch: false
+				}
+				$(this).find('[class*="swiper-button"]').hide();
+			} else {
+				let _touch;
+				if($(window).width() > tbl && $('.swiper-pc-only').hasClass('swiper-wrapper')){
+					_touch = true;
+				}else{
+					_touch = false;
+				}
+				swpOpt = {
+					navigation: {
+						nextEl: $(this).find('.swiper-button-next'),
+						prevEl: $(this).find('.swiper-button-prev'),
+					},
+					pagination: {
+						el: $(this).find('.swiper-pagination'),
+						clickable: true,
+					},
+					slidesPerView: 'auto',
+					// centeredSlides: true,
+					spaceBetween: 0,
+					simulateTouch: true,
+					speed: 300,
+					loop: false,
+					observer: true,
+					observeParents: true,
+					autoplay: false,
+					autoHeight: false,
+					allowTouchMove : false,
+					breakpoints:{
+						1120:{
+							allowTouchMove : _touch,
+						}
+					}
+				}
+			}
+			let searchSwiper = new Swiper($(this).find('.swiper-container'), swpOpt);
+
+			$(window).on('resize',function(){
+				searchSwiper.slideTo(0, 0, false);
+			});
+		}
+	});
 });

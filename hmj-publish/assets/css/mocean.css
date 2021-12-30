@@ -407,6 +407,9 @@ body,
     opacity: 1;
     transition: all .5s .9s ease-in;
 }
+.mocean .btn-top-box {
+	z-index: 1000;
+}
 @media screen and (min-width: 1120px) {
 	.mocean .video-box.sep-m-p .img-thumb,
 	.mocean .video-box.sep-m-p .btn-play{

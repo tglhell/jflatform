@@ -38,7 +38,6 @@
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;
     height: auto;
 }
 .brand-event .banner-item .img-area{
@@ -50,17 +49,31 @@
 .brand-event .banner-item .txt-area{
     position: relative;
     width: calc(100% - 544px);
-    padding-left: 64px;
+    padding: 65px 0 0 64px;
 }
 .brand-event .banner-item .caption{
     color: #999;
     margin-bottom: 32px;
 }
 .brand-event .banner-item h3{
+    max-height: 104px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
     font-weight: 500;
 }
 .brand-event .banner-item .cont-text{
     margin-top: 8px;
+    max-height: 52px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
 }
 .brand-event .banner-item .btn-icon2{
     margin-top: 48px;
@@ -86,6 +99,10 @@
     border-bottom: 1px solid #e9e9e9;
     overflow: hidden;
 }
+.brand-event .event-list .txt-area{
+    max-height: 88px;
+    overflow: hidden;
+}
 .brand-event .event-list .img-area img{
     width: auto;
     height: auto;
@@ -99,12 +116,19 @@
 .brand-event .event-list .cont-tit2{
     position: relative;
     font-weight: 500;
-    height: 60px;
-    overflow: hidden;
+    max-height: 60px;
     text-overflow: ellipsis;
+    overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.brand-event .event-list li a{
+    overflow: hidden;
+}
+.brand-event .event-list li a:hover .cont-tit2 span{
+    border-bottom: 1px solid #191919;
 }
 .brand-event .event-list li.event-finish .img-area img{
     opacity: .5;
@@ -130,6 +154,9 @@
 }
 .brand-event .event-list li.event-finish .cont-tit2{
     color: #999;
+}
+.brand-event .event-list li.event-finish a:hover .cont-tit2 span{
+    border-bottom: 1px solid #999;
 }
 .brand-event .event-title{
     position: relative;
@@ -327,7 +354,7 @@
     .brand-event .event-list .cont-tit2{
         font-size: 16px;
         line-height: 26px;
-        height: 52px;
+        max-height: 52px;
     }
     .brand-event .event-list .hmj-pagination{
         margin-top: 32px;
@@ -465,7 +492,7 @@
 .brand-index .brand-list-cont {
     position: relative;
     min-width: 1120px;
-    min-height: 33vw;
+    min-height: 33.645833vw;
     padding: 0 10.4167vw;
     margin-top:-30px;
 }
@@ -479,6 +506,7 @@
 .brand-index .brand-list-cont .swiper-slide {
     position: relative;
     width: 24.1667vw;
+    cursor: pointer;
 }
 .brand-index .brand-list-cont .swiper-slide .img-box {
     width: 100%;

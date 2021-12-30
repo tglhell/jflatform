@@ -120,7 +120,6 @@ function mainLineupSwiper () {
 				},
 				on: {
 					slideChange: function () {
-						$('.main-item-swiper').find('.car-item').trigger('resize');
 						if ($('.main-item-swiper .car-cont').hasClass('swiper-slide-active')) {
 							$('.car-cont').removeClass('focus-in');
 							$('.car-cont').find('img').css('transform', 'translateX(-0vw)');
