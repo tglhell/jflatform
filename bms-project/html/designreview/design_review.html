@@ -130,11 +130,10 @@
 								const swtParent = $('.js-switch-outer');
 								const swtBtn = $('.js-switch');
 								const chkBoxItem = swtParent.find('.chk');
-								chkSwitch = 0;
+								chkSwtVal = lastY;
 								
 								swtParent.find(swtBtn).on('click', function () {
 									$(this).closest(swtParent).toggleClass('active');
-
 									if ($(this).closest(swtParent).hasClass('active')) {
 										$(this).closest(swtParent).find('.switch-placeholder').slideUp(secVal[2]);
 									} else {
@@ -153,13 +152,13 @@
 									if ($(this).parent().hasClass('on')) {
 										const titSwtTxt = $(this).closest('.check-box').find('>label').text();
 										const chkSwtTxt = $(this).parent().find('span').text();
-										$(this).closest(swtParent).find('ul').prepend('<li data-label="' + chkSwtTxt + '">'
-										+ titSwtTxt + ' - ' + chkSwtTxt + '<button class="btn-item-del"></button></li>');
+										$(this).closest(swtParent).find('ul').prepend('<li data-label="' + chkSwtTxt + '"><strong>'
+										+ titSwtTxt + '</strong> - ' + chkSwtTxt + '<button class="btn-item-del"></button></li>');
 										let swtItems = $(this).closest(swtParent).find('ul').children('li').get();
 										swtItems.sort(function (a, b) {
-											let swtListItem1 =$(a).text().toUpperCase();
-											let swtListItem2 =$(b).text().toUpperCase();
-											return(swtListItem1 < swtListItem2)? - 1:(swtListItem1 > swtListItem2)?1:0;
+											let swtLi1 =$(a).text().toUpperCase();
+											let swtLi2 =$(b).text().toUpperCase();
+											return(swtLi1 < swtLi2)? - irNum[lastY]:(swtLi1 > swtLi2)?irNum[lastY]:lastY;
 										});
 										$.each(swtItems, function (index, row) {
 											$(this).closest(swtParent).find('ul').append(row);
@@ -167,7 +166,7 @@
 										$('.btn-item-del').on('click', function () {
 											const dataChkTxt = $(this).parent().attr('data-label');
 											$(this).parent().remove();
-											$('.check-box .chk').removeClass('on').find('span:contains(' + dataChkTxt + ')').parent().find('input').prop('checked', false);
+											$('.check-box .chk').find('span:contains(' + dataChkTxt + ')').parent().removeClass('on').find('input').prop('checked', false);
 											chkLeng (chkBoxItem.find('input'));
 										});
 									} else {
@@ -177,13 +176,13 @@
 
 								function chkLeng (target) {
 									if (chkBoxItem.find('input:checked').length !== 0) {
-										if (!chkSwitch) {
+										if (!chkSwtVal) {
 											target.closest(swtParent).find('.switch-cont').prepend('<div class="switch-item-list"><ul></ul></div>');
-											chkSwitch = 1;
+											chkSwtVal = irNum[lastY];
 										}
 									} else {
 										target.closest(swtParent).find('.switch-item-list').remove();
-										chkSwitch = 0;
+										chkSwtVal = lastY;
 									}
 								}
 							});
