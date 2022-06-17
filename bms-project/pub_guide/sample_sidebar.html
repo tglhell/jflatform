@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0</title>
+
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <style>
+    .cont-outer > p, .cont-outer.fullcase, .cont-center, .cont-right > p {height:100px; background-color: rgb(205, 206, 182);}
+    .cont-outer {margin-bottom: 20px !important}
+    .test .bms-container .bms-content .cont-outer.fullcase {
+      background-color: #f4f4f4;
+    }
+    /* S: list-sidebar css */
+    .list-outer .side-open{
+      font-size: 20px;
+      line-height: 40px;
+      cursor: pointer;
+    }
+    .list-sidebar{
+      width: 600px;
+      height: 100vh;
+      background: #fff;
+      position:fixed;
+      top: 0;
+      right: -600px;
+      z-index: 10;
+      border-left: 1px solid #e9e9e9;
+      padding: 100px 60px;
+      transition: .5s;
+    }
+    .list-sidebar .btn-close{
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      background: url('../assets/images/common/ico_close3.svg') no-repeat;
+      position: absolute;
+      top: 31px;
+      right: 30px;
+    }
+    /* E: list-sidebar css */
+  </style>
+
+  <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../assets/js/common.js"></script>
+</head>
+
+<body>
+
+<div class="bms-wrap">
+  <div class="skip-nav">
+    <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
+  </div>
+
+  <!-- header -->
+  <div class="bms-header">
+    <img src="../assets/images/temp/@header.png" alt="">
+  </div>
+  <!--//header -->
+
+  <!-- container -->
+  <div id="bmsContainer" class="bms-container"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+    <div class="bms-content">
+      <div class="cont-outer">
+        <div class="list-outer">
+          <p class="side-open">리스트1</p>
+          <p class="side-open">리스트2</p>
+        </div>
+        <div class="list-sidebar">
+          <p class="btn-close"></p>
+          <h4>SIDE BAR</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--//container -->
+
+  <!-- footer -->
+  <div class="bms-footer">
+    <img src="../assets/images/temp/@footer.png" alt="">
+  </div>
+  <!--//footer -->
+
+  <div class="btn-top-box">
+    <button title="move to top" role="button" class="btn-top">
+      <span>TOP</span> <!-- 220527 대문자 변경 -->  </button>
+  </div>
+</div>
+
+<!-- S: list-sidebar script -->
+<script>
+  //sidebar open
+  const listSidebar = $('.list-sidebar');
+  $('.side-open').on('click', () => {
+    listSidebar.css('right','0px');
+  });
+
+  //sidebar close
+  $('.list-sidebar .btn-close').on('click', () => {
+    let sideWidth = listSidebar.outerWidth()
+    listSidebar.css('right', -sideWidth);
+  });
+</script>
+<!-- E: list-sidebar script -->
+</body>
+</html>

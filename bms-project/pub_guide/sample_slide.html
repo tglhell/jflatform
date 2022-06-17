@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/><!--swiper 플러그인 추가-->
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <style>
+    .cont-outer > p, .cont-outer.fullcase, .cont-center, .cont-right > p {height:100px; background-color: rgb(205, 206, 182);}
+    .cont-outer {margin-bottom: 20px !important}
+    .test .bms-container .bms-content .cont-outer.fullcase {
+      background-color: #f4f4f4;
+    }
+
+    /*slide 공통*/
+    .cont-outer.fullcase {
+      height: unset;
+      background-color: unset;
+    }
+    .slide-wrap .swiper {
+      width: 100%;
+    }
+    .slide-wrap .swiper-slide > img {
+      margin-bottom: 16px;
+      width: 100%;
+    }
+    /*fulltype-slide*/
+    .fulltype-slide {   /*fulltype-slide와 basic-slide 시각적구분을 위해 임시로 지정한 마진값(추후에 삭제)*/
+      margin-bottom: 100px;
+    }
+    .fulltype-slide .swiper-slide {
+      width: 35.8%;
+    }
+    .fulltype-slide .swiper-button-prev {
+      left: 80px;
+      width: 40px;
+    }
+    .fulltype-slide .swiper-button-next {
+      right: 80px;
+      width: 40px;
+    }
+    .fulltype-slide .swiper-button-prev img {
+      transform: rotate(180deg);
+    }
+    .fulltype-slide .swiper-button-prev.swiper-button-disabled , .fulltype-slide .swiper-button-next.swiper-button-disabled  {
+      display: none;
+    }
+    .fulltype-slide .swiper-button-prev:after , .fulltype-slide .swiper-button-next:after {
+      display: none;
+    }
+
+    /*basic-slide*/
+    .basic-slide-wrap {
+      padding: 0 80px;
+    }
+    .basic-slide .swiper-wrapper{
+      padding-top: 61px;
+    }
+    .basic-slide .swiper-slide {
+      width: 31.333333%;
+    }
+    .basic-slide .swiper-button-prev:after , .basic-slide .swiper-button-next:after {
+      display: none;
+    }
+    .basic-slide .swiper-button-prev {
+      top: 9px;
+      left: unset;
+      right: 32px;
+      justify-content: flex-end;
+    }
+    .basic-slide .swiper-button-next {
+      top: 9px;
+      right: 0;
+      justify-content: flex-end;
+    }
+    .basic-slide .swiper-button-prev img , .basic-slide .swiper-button-next img{
+      width: 9px;
+      height: 18px;
+    }
+    
+
+  </style>
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script><!--swiper 플러그인 추가-->
+  <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../assets/js/common.js"></script>
+</head>
+
+<body>
+
+<div class="bms-wrap">
+  <div class="skip-nav">
+    <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
+  </div>
+
+  <!-- header -->
+  <div class="bms-header">
+    <img src="../assets/images/temp/@header.png" alt="">
+  </div>
+  <!--//header -->
+
+  <!-- container -->
+  <div id="bmsContainer" class="bms-container"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+    <div class="bms-content">
+      <div class="cont-outer fullcase">
+        <!-- slide type1 -->
+        <div class="slide-wrap fulltype-slide">
+          <!-- Slider main container -->
+          <div class="swiper fulltype-swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="../assets/images/sample/sample-slide-img01.png">
+                <p>Hyundai Brand NFT</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="../assets/images/sample/sample-slide-img02.png">
+                <p>FIFA World Cup Qatar 2022™</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="../assets/images/sample/sample-slide-img03.png">
+                <p>CES 2022: Expanding Human Reach</p>
+              </div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev">
+              <img src="../assets/images/sample/button/slide01-carousel.png">
+            </div>
+            <div class="swiper-button-next">
+              <img src="../assets/images/sample/button/slide01-carousel.png">
+            </div>
+          </div>
+        </div>
+        <!-- //slide type1 -->
+
+        <!-- slide type2 -->
+        <div class="basic-slide-wrap">
+          <div class="slide-wrap basic-slide">
+            <!-- Slider main container -->
+            <div class="swiper basic-swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <img src="../assets/images/sample/sample-slide-img04.png">
+                  <p>Logo</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="../assets/images/sample/sample-slide-img05.png">
+                  <p>Font</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="../assets/images/sample/sample-slide-img06.png">
+                  <p>Image</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="../assets/images/sample/sample-slide-img04.png">
+                  <p>Image</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="../assets/images/sample/sample-slide-img04.png">
+                  <p>Image</p>
+                </div>
+              </div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev">
+                <img src="../assets/images/sample/button/slide02-carousel-left.png">
+              </div>
+              <div class="swiper-button-next">
+                <img src="../assets/images/sample/button/slide02-carousel-right.png">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //slide type2 -->
+    </div>
+    </div>
+  </div>
+  <!--//container -->
+
+  <!-- footer -->
+  <div class="bms-footer">
+    <img src="../assets/images/temp/@footer.png" alt="">
+  </div>
+  <!--//footer -->
+
+  <div class="btn-top-box">
+    <button title="move to top" role="button" class="btn-top">
+      <span>TOP</span> <!-- 220527 대문자 변경 -->  </button>
+  </div>
+</div>
+
+<script>
+  //fulltype-slider js
+  const fulltype = new Swiper('.fulltype-swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    slidesPerView: "auto",
+    spaceBetween: 11,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.fulltype-slide .swiper-button-next',
+      prevEl: '.fulltype-slide .swiper-button-prev',
+    },
+  });
+
+
+  //basic-slider js
+  const basic = new Swiper('.basic-swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    slidesPerView: "3",
+    spaceBetween: 10,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.basic-slide .swiper-button-next',
+      prevEl: '.basic-slide .swiper-button-prev',
+    },
+  });
+
+</script>
+</body>
+</html>

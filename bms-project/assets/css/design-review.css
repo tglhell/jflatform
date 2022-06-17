@@ -1,0 +1,111 @@
+.design-review-wrap {
+	padding-top: 90px;
+}
+.design-review-wrap .tit-box h1 {
+	font-weight: 500;
+	text-align: center;
+	letter-spacing: -2px;
+}
+.design-review-cont {
+	margin-top: 229px;
+}
+.row-type.radio-box > label {
+	display: inline-block;
+}
+.row-type.radio-box div label {
+	display: inline-block;
+	margin: 0 75px 16px 0;
+}
+.slide-switch-box {
+	transition: all .3s ease-in-out;
+	position: relative;
+	overflow: hidden;
+	height: 46px;
+	max-height: 520px;
+	border: 1px solid #ccc;
+	border-color: #ccc;
+}
+.slide-switch-box .btn-switch {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10;
+	min-height: 46px;
+	font-size: 0;
+	line-height: 0;
+}
+.slide-switch-box .btn-switch span {
+	transition: transform .3s ease-in-out;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 46px;
+	height: 46px;
+	background: url(../images/common/ico_slt_box_off.svg) no-repeat center center;
+	background-size: 23px auto;
+}
+.slide-switch-box.active {
+	transition: all .3s ease-in-out;
+	border-color: #00aad2;
+}
+.slide-switch-box.active .btn-switch span {
+	transition: transform .3s ease-in-out;
+	transform: rotate(180deg);
+}
+.slide-switch-box .switch-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	min-height: 46px;
+}
+.slide-switch-box .switch-top .siwtch-placeholder {
+	transition: opacity .8s ease-in-out;
+	opacity: 1;
+	padding: 11px 46px 11px 16px;
+	font-size: 16px;
+	color: #ccc;
+	line-height: 24px;
+}
+.slide-switch-box.active .switch-top .siwtch-placeholder {
+	transition: opacity .3s ease-in-out;
+}
+.switch-cont .row-type.check-box div label {
+	display: inline-block;
+	min-width: 216px;
+}
+.slide-switch-box .switch-cont {
+	transition: padding-top .3s ease-in-out;
+	padding: 64px 32px 18px;
+}
+.slide-switch-box.active .switch-cont {
+	transition: padding-top .3s ease-in-out;
+	padding-top: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.design-review-wrap .cta-outer {
+	margin-top: 60px;
+}

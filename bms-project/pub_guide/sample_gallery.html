@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>HMJ 온라인 판매 사이트 구축</title>
+
+    <link rel="stylesheet" href="../assets/css/common.css">
+	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+	<style>
+		.grid {
+			counter-reset: numtest;
+		}
+		.grid-item {
+			position: relative;
+			display: inline-block;
+			width: 33.33%;
+			padding: 5px;
+		}
+		.grid-item:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: green;
+		}
+		.grid-item:after {
+			counter-increment: numtest;
+			content: "Number : " counter(numtest);
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			font-size: 16px;
+			color: #fff;
+		}
+		.grid-item img {
+			display: block;
+			min-width: 100%;
+			max-width: 100%;
+			padding: 5px;
+		}
+		@media (min-width: 768px) and (max-width: 1119px) {
+			.grid-item {
+				width: 50%;
+			}
+		}
+		@media screen and (max-width: 767px) {
+			.grid-item {
+				width: 100%;
+			}
+		}
+	</style>
+
+	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/masonry.min.js"></script>
+	<script type="text/javascript" src="../assets/js/common.js"></script>
+</head>
+
+<body>
+
+<div class="bms-wrap"><!-- mo header가 2단이고, 풋터가 있는 타입 : 기본 / mo header가 1단이고, 풋터가 없는 타입: type2 -->
+	<div class="skip-nav">
+		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
+	</div>
+
+	<!-- header -->
+	<div class="hmj-header">
+		<!-- header -->
+		<div class="header-cont">
+			<h1><a href="bms_layout.html"><img src="../assets/images/common/ico_header_logo.svg" alt="Hyundai Logo"></a></h1>
+
+			<div class="gnb-right-menu">
+				<ul class="gnb-right-list">
+					<li>
+						<button class="btn-cart"><span><img src="../assets/images/common/ico_cart.png" alt="장바구니"></span></button>
+					</li>
+					<li>
+						<button class="btn-search">
+							<span>
+								<picture>
+									<source srcset="../assets/images/common/ico_search.png" media="(min-width: 1120px)">
+									<source srcset="../assets/images/common/ico_search_mo.png" media="(max-width: 1119px)">
+									<img src="../assets/images/common/ico_search.png" alt="검색">
+								</picture>
+							</span>
+						</button>
+					</li>
+					<li>
+						<button class="btn-menu"><span>Menu</span></button>
+					</li>
+					<li>
+						<button class="btn-mypage"><span><img src="../assets/images/common/ico_mypage.png" alt="마이페이지"></span></button>
+					</li>
+				</ul>
+			</div>
+		</div>		
+		<div class="sub-cont">
+			<div class="history">
+				<a href="javascript:;">HOME</a>
+				<a href="javascript:;">2Depth</a>
+				<span class="page-title">Page title</span>
+			</div>
+			<button type="button" class="back-page">Back page</button>
+		</div>
+		<!-- //header -->
+	</div>
+	<!--//header -->
+
+	<!-- container -->
+	<div id="hmjContainer" class="hmj-container"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+		<div class="hmj-content">
+			<div class="cont-outer">
+				<div class="grid">
+					<div class="grid-item" style="height: 172px;"></div>
+					<div class="grid-item" style="height: 286px;"></div>
+					<div class="grid-item" style="height: 731px;"></div>
+					<div class="grid-item" style="height: 491px;"></div>
+					<div class="grid-item" style="height: 836px;"></div>
+					<div class="grid-item" style="height: 336px;"></div>
+					<div class="grid-item" style="height: 500px;"></div>
+					<div class="grid-item" style="height: 321px;"></div>
+					<div class="grid-item" style="height: 777px;"></div>
+					<div class="grid-item" style="height: 325px;"></div>
+					<div class="grid-item" style="height: 999px;"></div>
+					<div class="grid-item" style="height: 224px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//container -->
+
+	<!-- footer -->
+	<div class="hmj-footer">
+		<img src="../assets/images/@footer.jpg" alt="footer">
+	</div>
+	<!--//footer -->
+</div>
+
+<div class="btn-top-box">
+	<button title="active side menu" role="button" class="btn-side-menu">
+		<span>Side</span>
+	</button>
+	<button title="move to top" role="button" class="btn-top">
+		<span>top</span>
+	</button>
+</div>
+<script>
+	jQuery.event.add(window, 'load', function () {
+		let msnry = new Masonry( '.grid', {
+			itemSelector: '.grid-item'
+		});
+	});
+</script>
+</body>
+</html>

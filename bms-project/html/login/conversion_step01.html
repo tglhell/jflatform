@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0</title>
+
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <style>
+    .cont-outer > p, .cont-outer.fullcase, .cont-center, .cont-right > p {height:100px; background-color: rgb(205, 206, 182);}
+    .cont-outer {margin-bottom: 20px !important}
+    .test .bms-container .bms-content .cont-outer.fullcase {
+      background-color: #f4f4f4;
+    }
+  </style>
+
+  <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../../assets/js/common.js"></script>
+</head>
+
+<body>
+
+<div class="bms-wrap">
+  <div class="skip-nav">
+    <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
+  </div>
+
+  <!-- header -->
+  <div class="bms-header">
+    <img src="../../assets/images/temp/@header.png" alt="">
+  </div>
+  <!--//header -->
+
+  <!-- container -->
+  <div id="bmsContainer" class="bms-container">
+    <div class="bms-content">
+      <!-- S: cont-outer -->
+      <div class="cont-outer form">
+        <!-- S: [conversion-step01] -->
+        <div class="conversion-step01 conversion-step-all"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+          <div class="tit-box">
+            <h3>Brand Home 통합 회원 전환</h3>
+          </div>
+          <ul class="steps step1">
+            <li><p></p><span class="caption htr">약관동의</span></li>
+            <li><p></p><span class="caption htr">추가정보 입력</span></li>
+            <li><p></p><span class="caption htr">전환완료</span></li>
+          </ul>
+          <div class="agree-box">
+            <p class="cont-tit2">약관동의</p>
+            <div class="caution val-error">
+              <label class="chk cont-text2"><input type="checkbox"><span><span class="essential">[필수]</span> 현대자동차 브랜드홈(Brand Home) <a href="../../html/footer/terms.html" target="_blank">이용약관</a>을 읽고 이해했으며 이에 동의합니다.</span></label>
+              <label class="chk cont-text2"><input type="checkbox"><span><span class="essential">[필수]</span> 현대자동차 브랜드홈(Brand Home) <a href="../../html/footer/privacy.html" target="_blank">개인정보취급방침</a>을 읽고 이해했으며 이에 동의합니다.</span></label>
+            </div>
+            <p class="error-msg">error text</p><!--유효성 검사시 앞선 형제요소에 val-error 클래스 추가-->
+          </div>
+          <div>
+            <div class="form-title-area">
+              <p class="tit">전환 정보</p>
+            </div>
+            <div class="change-information">
+              <div class="brandhome-account">
+                <p class="cont-text">Brand Home 계정 정보</p>
+                <p class="cont-text2">호칭</p>
+                <p class="cont-text2">이름 (이름, 성)</p>
+                <p class="cont-text2">이메일 주소</p>
+                <p class="cont-text2">전화</p>
+                <p class="cont-text2">휴대전화</p>
+                <p class="cont-text2">국가</p>
+                <p class="cont-text2">타임존</p>
+                <p class="cont-text2">언어</p>
+                <p class="cont-text2">담당자 이름</p>
+                <p class="cont-text2">담당자 이메일</p>
+                <p class="cont-text2">법인/사업장</p>
+                <p class="cont-text2">선호브랜드</p>
+                <p class="cont-text2">가입목적 및 회사명</p>
+              </div>
+              <div class="arrow">
+                <img src="../../assets/images/common/ico_arrow_right_bold.svg">
+              </div>
+              <div class="brandhome-change">
+                <p class="cont-text">Brand Home 전환 정보</p>
+                <p class="cont-text2">이름 (이름, 성)</p>
+                <p class="cont-text2">이메일 주소</p>
+                <p class="cont-text2">휴대전화</p>
+                <p class="cont-text2">국가</p>
+                <p class="cont-text2">타임존</p>
+                <p class="cont-text2">언어</p>
+                <p class="cont-text2">담당자 이름</p>
+                <p class="cont-text2">담당자 이메일</p>
+                <p class="cont-text2">법인/사업장</p>
+                <p class="cont-text2">선호브랜드</p>
+                <p class="cont-text2">가입목적 및 회사명</p>
+              </div>
+            </div>
+          </div>
+          <div class="cta-outer">
+            <button class="btn w200" onclick="location.href='conversion_step02.html'"><span>다음단계</span></button>
+          </div>
+        </div>
+        <!-- E: [conversion-step01] -->
+      </div>
+      <!-- E: cont-outer -->
+
+    </div>
+  </div>
+  <!--//container -->
+
+  <!-- footer -->
+  <div class="bms-footer">
+    <img src="../../assets/images/temp/@footer.png" alt="">
+  </div>
+  <!--//footer -->
+
+  <div class="btn-top-box">
+    <button title="move to top" role="button" class="btn-top">
+      <span>TOP</span> <!-- 220527 대문자 변경 -->
+    </button>
+  </div>
+</div>
+
+</body>
+</html>
