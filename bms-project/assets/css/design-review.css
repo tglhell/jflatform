@@ -81,6 +81,10 @@
 .slide-switch-box.active .switch-cont {
 	padding-top: 18px;
 }
+.switch-item-list {
+	margin-bottom: 60px;
+	padding-right: 40px;
+}
 .switch-item-list ul {
 	overflow: hidden;
 	margin-top: -10px;
