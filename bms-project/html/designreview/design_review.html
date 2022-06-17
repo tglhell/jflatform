@@ -89,7 +89,7 @@
               <label for="rvRdo2">미디어 타입 <span class="required">*</span></label>
 							<div class="slide-switch-box js-switch-outer">
 								<div class="switch-top">
-									<p class="siwtch-placeholder">미디어 타입을 선택해주세요.</p>
+									<p class="switch-placeholder">미디어 타입을 선택해주세요.</p>
 									<button class="btn-switch js-switch"><span>펼치기</span></button>
 								</div>
 								<div class="switch-cont">
@@ -116,8 +116,8 @@
 									<div class="input-outer-box row-type check-box">
 										<label for="rvTgChk3">Others</label>
 										<div class="check-group"><!-- 에러시 + val-error -->
-											<label class="chk"><input type="checkbox"><span>TVC</span></label>
-											<label class="chk"><input type="checkbox"><span>Digital Film</span></label>
+											<label class="chk"><input type="checkbox"><span>Others1</span></label>
+											<label class="chk"><input type="checkbox"><span>Others2</span></label>
 										</div>
 									</div>
 								</div>
@@ -126,43 +126,64 @@
 						<script>
 							$(function () {
 								const swtParent = $('.js-switch-outer');
-								const swtParentHgt = swtParent.outerHeight(true);
 								const swtBtn = $('.js-switch');
-								const swtContHgt = swtParent.css('height', 'auto').outerHeight(true);
 								const chkBoxItem = swtParent.find('.chk');
-								swtParent.css('height', swtParentHgt);
+								chkSwitch = 0;
+								
 								swtParent.find(swtBtn).on('click', function () {
 									$(this).closest(swtParent).toggleClass('active');
 
 									if ($(this).closest(swtParent).hasClass('active')) {
-										// swtParent.css('height', swtContHgt - swtParentHgt);
-										swtParent.css('height', 'auto');
-										$(this).closest(swtParent).find('.siwtch-placeholder').slideUp(secVal[2]);
+										$(this).closest(swtParent).find('.switch-placeholder').slideUp(secVal[2]);
 									} else {
-										swtParent.css('height', swtParentHgt);
 										if (chkBoxItem.find('input').is(':checked') == true) {
 											// temp
 										} else {
-											$(this).closest(swtParent).find('.siwtch-placeholder').slideDown(secVal[2]);
+											$(this).closest(swtParent).find('.switch-placeholder').slideDown(secVal[2]);
 										}
 									}
 								});
 
 								$('.check-box .chk').on('click', 'input', function () {
-									const chkSwtTxt = $(this).parent().find('span').text();
-									if (chkBoxItem.find('input').is(':checked') == true) {
-										if (chkBoxItem.find('input:checked').length > 0) {
-											$(this).closest(swtParent).find('.switch-cont').prepend('<div class="switch-item-list"><ul></ul></div>');
-										} else {
-											
-										}
+									const thisText = $(this).parent().find('span').text();
+									$(this).parent().toggleClass('on');
+									chkLeng ($(this));
+									if ($(this).parent().hasClass('on')) {
+										const titSwtTxt = $(this).closest('.check-box').find('>label').text();
+										const chkSwtTxt = $(this).parent().find('span').text();
+										$(this).closest(swtParent).find('ul').prepend('<li data-label="' + chkSwtTxt + '">'
+										+ titSwtTxt + ' - ' + chkSwtTxt + '<button class="btn-item-del"></button></li>');
+										let swtItems = $(this).closest(swtParent).find('ul').children('li').get();
+										swtItems.sort(function (a, b) {
+											let swtListItem1 =$(a).text().toUpperCase();
+											let swtListItem2 =$(b).text().toUpperCase();
+											return(swtListItem1 < swtListItem2)? - 1:(swtListItem1 > swtListItem2)?1:0;
+										});
+										$.each(swtItems, function (index, row) {
+											$(this).closest(swtParent).find('ul').append(row);
+										});
+										$('.btn-item-del').on('click', function () {
+											const dataChkTxt = $(this).parent().attr('data-label');
+											$(this).parent().remove();
+											$('.check-box .chk').removeClass('on').find('span:contains(' + dataChkTxt + ')').parent().find('input').prop('checked', false);
+											chkLeng (chkBoxItem.find('input'));
+										});
 									} else {
-										$(this).closest(swtParent).find('.switch-item-list').remove();
-									}
-									if ($(this).is(':checked') == true) {
-										$('.switch-item-list ul').prepend('<li>' + chkSwtTxt + '</li>');
+										$(this).closest(swtParent).find('ul').find('li[data-label="' + thisText + '"]').remove();
 									}
 								});
+
+								function chkLeng (target) {
+									if (chkBoxItem.find('input:checked').length !== 0) {
+										if (!chkSwitch) {
+											target.closest(swtParent).find('.switch-cont').prepend('<div class="switch-item-list"><ul></ul></div>');
+											chkSwitch = 1;
+										}
+									} else {
+										target.closest(swtParent).find('.switch-item-list').remove();
+										chkSwitch = 0;
+									}
+								}
 							});
 						</script>
 

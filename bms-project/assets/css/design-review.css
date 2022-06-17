@@ -25,6 +25,9 @@
 	border: 1px solid #ccc;
 	border-color: #ccc;
 }
+.slide-switch-box.active {
+	height: auto;
+}
 .slide-switch-box .btn-switch {
 	position: absolute;
 	top: 0;
@@ -59,30 +62,47 @@
 	right: 0;
 	min-height: 46px;
 }
-.slide-switch-box .switch-top .siwtch-placeholder {
-	transition: opacity .8s ease-in-out;
-	opacity: 1;
+.slide-switch-box .switch-top .switch-placeholder {
 	padding: 11px 46px 11px 16px;
 	font-size: 16px;
 	color: #ccc;
 	line-height: 24px;
 }
-.slide-switch-box.active .switch-top .siwtch-placeholder {
-	transition: opacity .3s ease-in-out;
+.slide-switch-box.active .switch-top .switch-placeholder {
+	display: none;
 }
 .switch-cont .row-type.check-box div label {
 	display: inline-block;
 	min-width: 216px;
 }
 .slide-switch-box .switch-cont {
-	transition: padding-top .3s ease-in-out;
 	padding: 64px 32px 18px;
 }
 .slide-switch-box.active .switch-cont {
-	transition: padding-top .3s ease-in-out;
 	padding-top: 18px;
 }
-
+.switch-item-list ul {
+	overflow: hidden;
+	margin-top: -10px;
+}
+.switch-item-list ul li {
+	display: inline-block;
+	margin: 10px 10px 0 0;
+	padding: 7px 4px 7px 14px;
+	background-color: #f6f3f2;
+}
+.switch-item-list ul li:last-child {
+	margin-right: 0;
+}
+.switch-item-list ul li .btn-item-del {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	margin-left: 10px;
+	background: url(../images/common/ico_close2.svg)no-repeat;
+	vertical-align: middle;
+	cursor: pointer;
+}
 
 
 
