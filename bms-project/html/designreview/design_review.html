@@ -86,7 +86,7 @@
 						</div>
 
 						<div class="input-outer-box row-type">
-              <label for="rvRdo2">미디어 타입 <span class="required">*</span></label>
+							<label for="rvRdo2">미디어 타입 <span class="required">*</span></label>
 							<div class="slide-switch-box js-switch-outer">
 								<div class="switch-top">
 									<p class="switch-placeholder">미디어 타입을 선택해주세요.</p>
@@ -125,19 +125,55 @@
 								</div>
 							</div>
 						</div>
+
+						<div class="input-outer-box row-type">
+							<label for="rvRdo3">미디어 타입 <span class="required">*</span></label>
+							<div class="slide-switch-box js-switch-outer">
+								<div class="switch-top">
+									<p class="switch-placeholder">미디어 타입을 선택해주세요.</p>
+									<button class="btn-switch js-switch"><span>펼치기</span></button>
+								</div>
+								<div class="switch-cont">
+									<div class="switch-btm-box">
+										<div class="input-outer-box row-type check-box">
+											<label for="rvTgChk4">Film</label>
+											<div class="check-group"><!-- 에러시 + val-error -->
+												<label class="chk"><input type="checkbox"><span>TVC</span></label>
+												<label class="chk"><input type="checkbox"><span>Digital Film</span></label>
+											</div>
+										</div>
+	
+										<div class="input-outer-box row-type check-box">
+											<label for="rvTgChk5">Print</label>
+											<div class="check-group"><!-- 에러시 + val-error -->
+												<label class="chk"><input type="checkbox"><span>Print Advertising</span></label>
+												<label class="chk"><input type="checkbox"><span>Catalogue</span></label>
+												<label class="chk"><input type="checkbox"><span>Magazine</span></label>
+												<label class="chk"><input type="checkbox"><span>Packaging</span></label>
+												<label class="chk"><input type="checkbox"><span>Out Of Home</span></label>
+												<label class="chk"><input type="checkbox"><span>Stationery</span></label>
+											</div>
+										</div>
+	
+										<div class="input-outer-box row-type check-box">
+											<label for="rvTgChk6">Others</label>
+											<div class="check-group"><!-- 에러시 + val-error -->
+												<label class="chk"><input type="checkbox"><span>Others1</span></label>
+												<label class="chk"><input type="checkbox"><span>Others2</span></label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 						<script>
 							function designReview () {
 								const swtParent = $('.js-switch-outer');
-								const swtBtn = $('.js-switch');
-								const chkBoxItem = swtParent.find('.chk');
-								const tarInp = chkBoxItem.find('input');
-								chkSwtVal = lastY;
-								
-								swtParent.find(swtBtn).on('click', function () {
+								$('.js-switch').on('click', function () {
 									$(this).closest(swtParent).toggleClass('active');
 								});
 
-								$('.check-box .chk').on('click', 'input', function () {
+								$('.switch-btm-box .chk').on('click', 'input', function () {
 									const thisText = $(this).parent().find('span').text();
 									$(this).parent().toggleClass('on');
 									chkLeng ($(this));
@@ -159,8 +195,10 @@
 										});
 										$('.btn-item-del').on('click', function () {
 											const dataChkTxt = $(this).parent().attr('data-label');
+											const chkCnt = $(this).closest('.switch-cont');
+											const tarInp = chkCnt.find('.chk input');
 											$(this).parent().remove();
-											$('.check-box .chk').find('span:contains(' + dataChkTxt + ')').parent().removeClass('on').find('input').prop('checked', false);
+											chkCnt.find('.chk span:contains(' + dataChkTxt + ')').parent().removeClass('on').find('input').prop('checked', false);
 											chkLeng (tarInp);
 										});
 									} else {
@@ -169,14 +207,14 @@
 								});
 
 								function chkLeng (target) {
-									if (chkBoxItem.find('input:checked').length !== 0) {
-										if (!chkSwtVal) {
-											target.closest(swtParent).find('.switch-cont').prepend('<div class="switch-item-list"><ul></ul></div>');
-											chkSwtVal = irNum[lastY];
+									const tarSwtPrnt = target.closest(swtParent);
+									if (tarSwtPrnt.find('.chk input:checked').length !== 0) {
+										if (!tarSwtPrnt.find('.switch-cont').hasClass('active')) {
+											tarSwtPrnt.find('.switch-cont').addClass('active').prepend('<div class="switch-item-list"><ul></ul></div>');
 										}
 									} else {
-										target.closest(swtParent).find('.switch-item-list').remove();
-										chkSwtVal = lastY;
+										tarSwtPrnt.find('.switch-cont').removeClass('active');
+										tarSwtPrnt.find('.switch-item-list').remove();
 									}
 								}
 							}
