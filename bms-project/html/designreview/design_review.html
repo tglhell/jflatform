@@ -185,9 +185,8 @@
 										+ titSwtTxt + '</strong> - <span>' + chkItemIdx + '</span>' + chkSwtTxt + '<button class="btn-item-del"></button></li>');
 										let swtItems = $(this).closest(swtParent).find('ul').children('li').get();
 										swtItems.sort(function (a, b) {
-											let swtLi1 =$(a).text();
-											let swtLi2 =$(b).text();
-											return(swtLi1 < swtLi2)? - irNum[lastY]:(swtLi1 > swtLi2)?irNum[lastY]:lastY;
+											let swtLi = [$(a).text(), $(b).text()];
+											return(swtLi[lastY] < swtLi[irNum[lastY]])? - irNum[lastY]:(swtLi[lastY] > swtLi[irNum[lastY]])?irNum[lastY]:lastY;
 										});
 										$.each(swtItems, function (index, row) {
 											$(this).closest(swtParent).find('ul').append(row);
