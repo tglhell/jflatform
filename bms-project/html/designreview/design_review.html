@@ -172,7 +172,6 @@
 								$('.js-switch').on('click', function () {
 									$(this).closest(swtParent).toggleClass('active');
 								});
-
 								$('.switch-btm-box .chk').on('click', 'input', function () {
 									const thisText = $(this).parent().find('span').text();
 									$(this).parent().toggleClass('on');
@@ -205,7 +204,6 @@
 										$(this).closest(swtParent).find('ul').find('li[data-label="' + thisText + '"]').remove();
 									}
 								});
-
 								function chkLeng (target) {
 									const tarSwtPrnt = target.closest(swtParent);
 									if (tarSwtPrnt.find('.chk input:checked').length !== 0) {
