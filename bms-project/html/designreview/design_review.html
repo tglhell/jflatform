@@ -146,7 +146,7 @@
 										const titSwtTxt = $(this).closest('.check-box').find('>label').text();
 										const chkItemIdx = $(this).parent().index();
 										const chkSwtTxt = $(this).parent().find('span').text();
-										$(this).closest(swtParent).find('ul').prepend('<li data-label="' + chkSwtTxt + '"><em>' + titIdx + '</em><strong>'
+										$(this).closest(swtParent).find('ul').prepend('<li data-label="' + chkSwtTxt + '"><strong><span>' + titIdx + '</span>'
 										+ titSwtTxt + '</strong> - <span>' + chkItemIdx + '</span>' + chkSwtTxt + '<button class="btn-item-del"></button></li>');
 										let swtItems = $(this).closest(swtParent).find('ul').children('li').get();
 										swtItems.sort(function (a, b) {

@@ -94,8 +94,7 @@
 	padding: 7px 4px 7px 14px;
 	background-color: #f6f3f2;
 }
-.switch-item-list ul li > em,
-.switch-item-list ul li > span {
+.switch-item-list ul li span {
 	display: none;
 }
 .switch-item-list ul li:last-child {
