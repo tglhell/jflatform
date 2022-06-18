@@ -130,6 +130,7 @@
 								const swtParent = $('.js-switch-outer');
 								const swtBtn = $('.js-switch');
 								const chkBoxItem = swtParent.find('.chk');
+								const tarInp = chkBoxItem.find('input');
 								chkSwtVal = lastY;
 								
 								swtParent.find(swtBtn).on('click', function () {
@@ -137,7 +138,7 @@
 									if ($(this).closest(swtParent).hasClass('active')) {
 										$(this).closest(swtParent).find('.switch-placeholder').slideUp(secVal[2]);
 									} else {
-										if (chkBoxItem.find('input').is(':checked') == true) {
+										if (tarInp.is(':checked') == true) {
 											// temp
 										} else {
 											$(this).closest(swtParent).find('.switch-placeholder').slideDown(secVal[2]);
@@ -150,14 +151,16 @@
 									$(this).parent().toggleClass('on');
 									chkLeng ($(this));
 									if ($(this).parent().hasClass('on')) {
+										const titIdx = $(this).closest('.check-box').index();
 										const titSwtTxt = $(this).closest('.check-box').find('>label').text();
+										const chkItemIdx = $(this).parent().index();
 										const chkSwtTxt = $(this).parent().find('span').text();
-										$(this).closest(swtParent).find('ul').prepend('<li data-label="' + chkSwtTxt + '"><strong>'
-										+ titSwtTxt + '</strong> - ' + chkSwtTxt + '<button class="btn-item-del"></button></li>');
+										$(this).closest(swtParent).find('ul').prepend('<li data-label="' + chkSwtTxt + '"><em>' + titIdx + '</em><strong>'
+										+ titSwtTxt + '</strong> - <span>' + chkItemIdx + '</span>' + chkSwtTxt + '<button class="btn-item-del"></button></li>');
 										let swtItems = $(this).closest(swtParent).find('ul').children('li').get();
 										swtItems.sort(function (a, b) {
-											let swtLi1 =$(a).text().toUpperCase();
-											let swtLi2 =$(b).text().toUpperCase();
+											let swtLi1 =$(a).text();
+											let swtLi2 =$(b).text();
 											return(swtLi1 < swtLi2)? - irNum[lastY]:(swtLi1 > swtLi2)?irNum[lastY]:lastY;
 										});
 										$.each(swtItems, function (index, row) {
@@ -167,7 +170,7 @@
 											const dataChkTxt = $(this).parent().attr('data-label');
 											$(this).parent().remove();
 											$('.check-box .chk').find('span:contains(' + dataChkTxt + ')').parent().removeClass('on').find('input').prop('checked', false);
-											chkLeng (chkBoxItem.find('input'));
+											chkLeng (tarInp);
 										});
 									} else {
 										$(this).closest(swtParent).find('ul').find('li[data-label="' + thisText + '"]').remove();
