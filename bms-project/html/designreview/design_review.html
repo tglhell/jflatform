@@ -174,7 +174,7 @@
 									chkLeng ($(this));
 								});
 								$('.switch-btm-box .chk').on('click', 'input', function () {
-									const thisText = $(this).parent().find('span').text();
+									const thisTxt = $(this).parent().find('span').text();
 									$(this).parent().toggleClass('on');
 									chkLeng ($(this));
 									if ($(this).parent().hasClass('on')) {
@@ -201,7 +201,7 @@
 											chkLeng (tarInp);
 										});
 									} else {
-										$(this).closest(swtParent).find('ul').find('li[data-label="' + thisText + '"]').remove();
+										$(this).closest(swtParent).find('ul').find('li[data-label="' + thisTxt + '"]').remove();
 									}
 								});
 								function chkLeng (target) {
