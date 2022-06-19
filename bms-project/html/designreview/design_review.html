@@ -170,7 +170,15 @@
 							function designReview () {
 								const swtParent = $('.js-switch-outer');
 								$('.js-switch').on('click', function () {
-									$(this).closest(swtParent).toggleClass('active');
+									const _this = $(this).closest(swtParent);
+									const swtCntVal = [_this.find('ul').height(), parseInt(_this.find('ul').css('margin-top'))];
+									const swtCntPd = parseInt(_this.find('.switch-cont').css('padding-top'));
+									_this.toggleClass('active');
+									if (_this.hasClass('on')) {
+										_this.removeAttr('style');
+										$(this).closest('.js-switch-outer.on:not(.active)').css('height', (swtCntVal[0]
+										+ swtCntVal[1]) + (swtCntPd * irNum[1]));
+									}
 								});
 								$('.switch-btm-box .chk').on('click', 'input', function () {
 									const thisText = $(this).parent().find('span').text();
@@ -209,9 +217,16 @@
 										if (!tarSwtPrnt.find('.switch-cont').hasClass('active')) {
 											tarSwtPrnt.find('.switch-cont').addClass('active').prepend('<div class="switch-item-list"><ul></ul></div>');
 										}
+										if (tarSwtPrnt.find('.chk input:checked').length >= 8) {
+											tarSwtPrnt.find('.chk input:not(:checked)').prop('disabled', true);
+										} else {
+											tarSwtPrnt.find('.chk input:not(:checked)').prop('disabled', false);
+										}
+										tarSwtPrnt.addClass('on');
 									} else {
 										tarSwtPrnt.find('.switch-cont').removeClass('active');
-										tarSwtPrnt.find('.switch-item-list').remove();
+										tarSwtPrnt.removeAttr('style').find('.switch-item-list').remove();
+										tarSwtPrnt.removeClass('on');
 									}
 								}
 							}

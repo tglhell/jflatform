@@ -27,6 +27,9 @@
 .slide-switch-box.active {
 	height: auto;
 }
+.slide-switch-box.on:not(.active) .switch-item-list li {
+	pointer-events: none;
+}
 .slide-switch-box .btn-switch {
 	position: absolute;
 	top: 0;
@@ -67,7 +70,8 @@
 	color: #ccc;
 	line-height: 24px;
 }
-.slide-switch-box.active .switch-top .switch-placeholder {
+.slide-switch-box.active .switch-top .switch-placeholder,
+.slide-switch-box.on:not(.active) .switch-top .switch-placeholder {
 	display: none;
 }
 .switch-cont .row-type.check-box div label {
@@ -77,7 +81,8 @@
 .slide-switch-box .switch-cont {
 	padding: 64px 32px 18px;
 }
-.slide-switch-box.active .switch-cont {
+.slide-switch-box.active .switch-cont,
+.slide-switch-box.on:not(.active) .switch-cont {
 	padding-top: 18px;
 }
 .switch-item-list {
