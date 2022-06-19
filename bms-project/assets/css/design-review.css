@@ -17,7 +17,7 @@
 	margin: 0 75px 16px 0;
 }
 .slide-switch-box {
-	transition: all .3s ease-in-out;
+	transition: border-color .3s ease-in-out;
 	position: relative;
 	overflow: hidden;
 	height: 46px;
@@ -26,9 +26,6 @@
 }
 .slide-switch-box.active {
 	height: auto;
-}
-.slide-switch-box.on:not(.active) .switch-item-list li {
-	pointer-events: none;
 }
 .slide-switch-box .btn-switch {
 	position: absolute;
@@ -50,7 +47,7 @@
 	background-size: 23px auto;
 }
 .slide-switch-box.active {
-	transition: all .3s ease-in-out;
+	transition: border-color .3s ease-in-out;
 	border-color: #00aad2;
 }
 .slide-switch-box.active .btn-switch span {

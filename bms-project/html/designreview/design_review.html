@@ -170,15 +170,8 @@
 							function designReview () {
 								const swtParent = $('.js-switch-outer');
 								$('.js-switch').on('click', function () {
-									const _this = $(this).closest(swtParent);
-									const swtCntVal = [_this.find('ul').height(), parseInt(_this.find('ul').css('margin-top'))];
-									const swtCntPd = parseInt(_this.find('.switch-cont').css('padding-top'));
-									_this.toggleClass('active');
-									if (_this.hasClass('on')) {
-										_this.removeAttr('style');
-										$(this).closest('.js-switch-outer.on:not(.active)').css('height', (swtCntVal[0]
-										+ swtCntVal[1]) + (swtCntPd * irNum[1]));
-									}
+									$(this).closest(swtParent).toggleClass('active');
+									chkLeng ($(this));
 								});
 								$('.switch-btm-box .chk').on('click', 'input', function () {
 									const thisText = $(this).parent().find('span').text();
@@ -213,6 +206,8 @@
 								});
 								function chkLeng (target) {
 									const tarSwtPrnt = target.closest(swtParent);
+									const swtCntVal = [tarSwtPrnt.find('ul').height(), parseInt(tarSwtPrnt.find('ul').css('margin-top'))];
+									const swtCntPd = parseInt(tarSwtPrnt.find('.switch-cont').css('padding-top'));
 									if (tarSwtPrnt.find('.chk input:checked').length !== 0) {
 										if (!tarSwtPrnt.find('.switch-cont').hasClass('active')) {
 											tarSwtPrnt.find('.switch-cont').addClass('active').prepend('<div class="switch-item-list"><ul></ul></div>');
@@ -227,6 +222,11 @@
 										tarSwtPrnt.find('.switch-cont').removeClass('active');
 										tarSwtPrnt.removeAttr('style').find('.switch-item-list').remove();
 										tarSwtPrnt.removeClass('on');
+									}
+									if (tarSwtPrnt.hasClass('on')) {
+										tarSwtPrnt.removeAttr('style');
+										target.closest('.js-switch-outer.on:not(.active)').css('height', (swtCntVal[0]
+										+ swtCntVal[1]) + (swtCntPd * irNum[1]));
 									}
 								}
 							}
