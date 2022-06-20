@@ -354,7 +354,7 @@
 			const swtCntPd = parseInt(tarSwtPrnt.find('.switch-cont').css('padding-top'));
 			if (tarSwtPrnt.find('.chk input:checked').length !== 0) {
 				if (!tarSwtPrnt.find('.switch-cont').hasClass('active')) {
-					tarSwtPrnt.addClass('on').find('.switch-cont').addClass('active').prepend('<div class="switch-item-list"><ul></ul></div>');
+					tarSwtPrnt.find('.switch-cont').addClass('active').prepend('<div class="switch-item-list"><ul></ul></div>');
 				}
 				tarSwtPrnt.addClass('on');
 				if (tarSwtPrnt.find('.chk input:checked').length >= maxItemLeng) {
