@@ -163,11 +163,14 @@
   font-weight: 500;
   color: #333;
 }
+.join .name-box-wrap .input-box:first-child input,
+.conversion-step02 .name-box-wrap .input-box:first-child input{
+  width: 380px;
+}
 .join .name-box-wrap .input-box:last-child,
 .conversion-step02 .name-box-wrap .input-box:last-child{
   margin-left: 8px;
   margin-right: unset;
-  width: 62%;
 }
 .join .radio-group label,
 .conversion-step02 .radio-group label{
@@ -225,8 +228,17 @@
   margin-bottom: 16px;
 }
 .join .agree-box .chk span a{
+  position: relative;
   font-weight: 500;
-  text-decoration: underline;
+}
+.join .agree-box .chk span a:after{
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #191919;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
 }
 /* E: join 페이지 */
 
@@ -694,7 +706,17 @@
   margin-bottom: 16px;
 }
 .conversion-step-all .chk a{
-  text-decoration: underline;
+  position: relative;
+  font-weight: 500;
+}
+.conversion-step-all .chk a:after{
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #191919;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
 }
 .conversion-step-all .cont-tit2{
   margin-bottom: 16px;
@@ -703,13 +725,6 @@
 /* E: conversion_step01 , conversion_step02 , conversion_step03 페이지 공통 */
 
 /* S: conversion_step01 페이지 */
-.conversion-step01 .caution{
-  margin-bottom: 112px !important;
-}
-.conversion-step01 .caution label a{
-  font-weight: 500;
-  text-decoration-line: underline;
-}
 .conversion-step01 .change-information{
   display: flex;
   justify-content: space-between;
@@ -729,10 +744,13 @@
 .conversion-step01 .change-information .brandhome-change{
   background-color: #fafafa;
   padding: 30px 42px;
+  width: 388px;
+  height: 318px;
 }
 .conversion-step01 .change-information .account-content,
 .conversion-step01 .change-information .change-content{
   display: flex;
+  justify-content: space-between;
 }
 .conversion-step01 .change-information .account-content div,
 .conversion-step01 .change-information .change-content div{
@@ -740,56 +758,12 @@
 }
 .conversion-step01 .change-information .arrow{
   display: flex;
+  margin: 0 103px;
 }
 .conversion-step01 .btn{
   margin-top: 80px;
 }
 /* E: conversion_step01 페이지 */
-
-/* S: conversion_step02 페이지, conversion_step02_02 페이지 공통 */
-.conversion-step02 .user-account{
-  margin-bottom: 150px;
-}
-.conversion-step02 .name-box-wrap .input-box:last-child{
-  margin-left: 8px;
-  margin-right: unset;
-  width: 62%;
-}
-.conversion-step02 .radio-group label{
-  margin-top: 0;
-}
-.conversion-step02 .phone-box-wrap .input-box:last-child{
-  margin-right: unset;
-}
-.conversion-step02 .phone-box-wrap .input-box:last-child input{
-  width: 430px;
-  margin-left: 8px;
-}
-.conversion-step02 .email-box-wrap input{
-  margin-bottom: 8px;
-}
-.conversion-step02 .radio{
-  margin-right: 72px;
-}
-.conversion-step02 .radio:last-child{
-  margin-right: unset;
-}
-.conversion-step02 .staff-incharge{
-  margin-bottom: 60px;
-}
-.conversion-step02 .staff-incharge div:nth-child(2){
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 40px;
-}
-.conversion-step02 .staff-incharge div:nth-child(2) .cont-text2{
-  color: #333;
-}
-.conversion-step02 .agree-box{
-  margin-bottom: 90px;
-}
-/* E: conversion_step02 페이지, conversion_step02_02 페이지 공통 */
 
 /* S: conversion_step02_02 페이지 */
 .conversion-step02 .noti{
@@ -807,6 +781,7 @@
   margin: 48px auto 80px;
   padding: 30px 42px;
   width: 468px;
+  height: 288px;
 }
 .conversion-step03 .combine-member .cont-text{
   margin-bottom: 18px;
