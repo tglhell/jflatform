@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0</title>
+
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <style>
+    .cont-outer > p, .cont-outer.fullcase, .cont-center, .cont-right > p {height:100px; background-color: rgb(205, 206, 182);}
+    .cont-outer {margin-bottom: 20px !important}
+    .test .bms-container .bms-content .cont-outer.fullcase {
+      background-color: #f4f4f4;
+    }
+
+
+
+    .checking-list-box .chk-box {
+      display: none;
+    }
+  </style>
+
+  <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../assets/js/common.js"></script>
+</head>
+
+<script>
+  $(function() {
+    $('.checking-list-box .btn-edit').on('click', (e) => {
+      const $chkBox = $(e.currentTarget).parents('.checking-list-box').find('.chk-box')
+      const $editBox = $(e.currentTarget).parents('.checking-list-box').find('.edit-box')
+      const $listContentsTxt = $(e.currentTarget).parents('.checking-list-box').find('.list-contents')
+      let chkHtml = "<label class='chk'>";
+      chkHtml += "<input name='chkList' type='checkbox'>";
+      chkHtml += '<span>';
+      chkHtml += '</span>';
+      chkHtml += '</label>';
+
+      $chkBox.show();
+      $editBox.hide();
+      $listContentsTxt.prepend(chkHtml);
+
+      $('.checking-list-box .btn-select-all').on('click', () => {
+        ($("input:checkbox[name='chkList']:checked").length === $("input:checkbox[name='chkList']").length) ? $("input:checkbox[name='chkList']").prop("checked",false) : $("input:checkbox[name='chkList']").prop("checked",true);
+      });
+
+      $('.checking-list-box .btn-delete').on('click', () => {
+        $("input:checkbox[name='chkList']:checked").parents('.list').remove();
+      });
+
+      $('.checking-list-box .btn-cancel').on('click', () => {
+        $editBox.show();
+        $chkBox.hide();
+        $listContentsTxt.children('.chk').remove();
+      });
+    });
+  })();
+</script>
+<body>
+
+<div class="bms-wrap">
+  <div class="skip-nav">
+    <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
+  </div>
+
+  <!-- header -->
+  <div class="bms-header">
+    <img src="../assets/images/temp/@header.png" alt="">
+  </div>
+  <!--//header -->
+
+  <!-- container -->
+  <div id="bmsContainer" class="bms-container"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+    <div class="bms-content">
+
+      <div class="cont-outer form">
+
+        <!--S: checking list-->
+        <div class="checking-list-box">
+          <div class="btn-area">
+            <div class="edit-box">
+              <button class="btn-txt btn-edit">Edit</button>
+            </div>
+            <div class="chk-box">
+              <button class="btn-txt btn-select-all">Select All</button>
+              <button class="btn-txt btn-cancel">Cancel</button>
+              <button class="btn-txt btn-delete">Delete</button>
+            </div>
+          </div>
+          <ul class="checking-list">
+            <li class="list">
+              <span class="list-contents">option1</span>
+            </li>
+            <li class="list">
+              <span class="list-contents">option2</span>
+            </li>
+            <li class="list">
+              <span class="list-contents">option3</span>
+            </li>
+            <li class="list">
+              <span class="list-contents">option4</span>
+            </li>
+            <li class="list">
+              <span class="list-contents">option5</span>
+            </li>
+          </ul>
+        </div>
+        <!--E: checking list-->
+
+      </div>
+
+    </div>
+  </div>
+  <!--//container -->
+
+  <!-- footer -->
+  <div class="bms-footer">
+    <img src="../assets/images/temp/@footer.png" alt="">
+  </div>
+  <!--//footer -->
+
+  <div class="btn-top-box">
+    <button title="move to top" role="button" class="btn-top">
+      <span>TOP</span> <!-- 220527 대문자 변경 -->  </button>
+  </div>
+</div>
+</body>
+</html>

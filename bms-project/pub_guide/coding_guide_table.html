@@ -58,17 +58,45 @@
       <h2 class="title">TABLE</h2>
 
       <!-- table -->
-      <h3 class="title">&#x25CE; table</h3>
+      <h3 class="title">&#x25CE; Table</h3>
 
       <!-- 코드 삽입 -->
       <button class="view_code">Code View ▼</button>
-      <pre class="language-html"><code><!--
+      <pre class="language-html"><code><!--<div class="tbl-box tbl-type1">
+  <table>
+    <caption class="blind">비고정 타입</caption>
+    <colgroup>
+      <col>
+      <col>
+      <col>
+      <col>
+    </colgroup>
+    <tbody>
+    <tr>
+      <th scope="row">title1</th>
+      <td>test</td>
+      <td>test1</td>
+      <td>test2</td>
+    </tr>
+    <tr>
+      <th scope="row">title1</th>
+      <td>test</td>
+      <th scope="row">title1</th>
+      <td>test2</td>
+    </tr>
+    <tr>
+      <th scope="row">title1</th>
+      <td colspan="3">test</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
 --></code></pre>
       <!-- //코드 삽입 -->
 
       <div class="conIn_tip">
         .tbl-box<br>
-        .tbl-type1
+        .tbl-type1 추가
       </div>
 
       <div class="tbl-box tbl-type1">
@@ -113,6 +141,39 @@
         </table>
       </div>
       <br><br>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="tbl-box tbl-type2">
+  <table>
+    <caption class="blind">비고정 타입</caption>
+    <colgroup>
+      <col>
+      <col>
+      <col>
+      <col>
+    </colgroup>
+    <tbody>
+    <tr>
+      <th scope="row">title1</th>
+      <th scope="row">title1</th>
+      <th scope="row">title1</th>
+      <th scope="row">title1</th>
+    </tr>
+    <tr>
+      <td>test</td>
+      <td>test2</td>
+      <td>test3</td>
+      <td>test4</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+--></code></pre>
+      <div class="conIn_tip">
+        .tbl-box<br>
+        .tbl-type2 추가
+      </div>
       <div class="tbl-box tbl-type2">
         <table>
           <caption class="blind">비고정 타입</caption>

@@ -155,13 +155,7 @@ function jsTab() {
 		// }
 	});
 
-	// error 페이지 헤더&푸터 제외 높이값 설정
-	let headerHeight = $('.bms-header').outerHeight();
-	let footerHeight = $('.bms-footer').outerHeight();
-	let windowHeight = $(window).outerHeight();
-	// console.log(windowHeight);
-	$('#bmsContainer.error-all').height(windowHeight - (headerHeight + footerHeight));
-};
+ };
 
 function designSelect(select) {
 	//default selectbox

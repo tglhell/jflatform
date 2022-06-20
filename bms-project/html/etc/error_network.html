@@ -21,35 +21,33 @@
     <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
   </div>
 
-  <!-- header -->
-  <div class="bms-header">
-    <img src="../../assets/images/temp/@header.png" alt="">
-  </div>
-  <!--//header -->
+  <!-- 220617 header 제거 -->
 
   <!-- container -->
-  <div id="bmsContainer" class="bms-container error-network error-all"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+  <div id="bmsContainer" class="bms-container"><!-- 220617 error-network, error-all 클래스 제거 -->
     <div class="bms-content">
       <!-- S: cont-outer -->
-      <div class="cont-outer">
-        <div class="complete-area">
-          <p class="tit">네트워크 연결 오류</p>
-          <p class="desc">네트워크 연결상태가 좋지 않습니다. 네트워크 연결 상태를 확인해주세요.</p>
-          <div class="cta-outer">
-            <button class="btn w200"><span>Brand Home</span></button>
+      <div class="cont-outer none-gnb"><!-- 220617 none-gnb 클래스 추가 -->
+        <!-- S: 220617 complete-area 감싸는 div 추가 -->
+        <!-- S: [error-network] -->
+        <div class="error-network none-gnb-cont"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+          <div class="complete-area">
+            <p class="tit">네트워크 연결 상태가 좋지 않습니다</p>
+            <p class="desc">네트워크 연결 상태를 확인해주세요.</p>
+            <div class="cta-outer">
+              <button class="btn w200"><span>Brand Home</span></button>
+            </div>
           </div>
         </div>
+        <!-- E: [error-network] -->
+        <!-- E: 220617 complete-area 감싸는 div 추가 -->
       </div>
       <!-- E: cont-outer -->
     </div>
   </div>
   <!--//container -->
 
-  <!-- footer -->
-  <div class="bms-footer">
-    <img src="../../assets/images/temp/@footer.png" alt="">
-  </div>
-  <!--//footer -->
+  <!-- 220617 footer 제거 -->
 
   <div class="btn-top-box">
     <button title="move to top" role="button" class="btn-top">

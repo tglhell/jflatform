@@ -63,58 +63,70 @@
 
       <!-- layer popup -->
 
-      <h4 class="btm-border">- 경고 팝업</h4>
+      <h4 class="btm-border">- 기본 팝업</h4>
 
       <!-- 코드 삽입 -->
       <button class="view_code">Code View ▼</button>
-      <pre class="language-html"><code><!--<div class="layer-popup-wrap alert-popup" data-pop-idx="7">
-	<div class="layer-popup-body">
-		<div class="layer-popup-cont pop-small">
-			<div class="layer-cont">
-				<p class="alert-desc">선택한 항목을 삭제하시겠습니까?</p>
-				<div class="cta-outer">
-					<button class="btn btn-middle btn-type2 btn-close"><span>취소</span></button>
-					<button class="btn btn-middle"><span>확인</span></button>
-				</div>
-			</div>
-			<button class="btn-close-popup btn-close">close</button>
-		</div>
-	</div>
+      <pre class="language-html"><code><!--<div class="cta-outer">
+  <button class="btn btn-small pop-open" data-pop-idx="1"><span>Popup Default</span></button>
 </div>
 
-<div class="layer-popup-wrap alert-popup" data-pop-idx="8">
-	<div class="layer-popup-body">
-		<div class="layer-popup-cont pop-small none-close">
-			<div class="layer-cont">
-				<p class="alert-desc">선택한 항목을 삭제하시겠습니까?</p>
-				<div class="cta-outer">
-					<button class="btn btn-middle btn-type2 btn-close"><span>취소</span></button>
-					<button class="btn btn-middle"><span>확인</span></button>
-				</div>
-			</div>
-			<button class="btn-close-popup btn-close">close</button>
-		</div>
-	</div>
+<div class="layer-popup-wrap" data-pop-idx="1">
+  <div class="layer-popup-body">
+    <div class="layer-popup-cont">
+      <h4 class="layer-title">Popup Size 570px</h4>
+      <div class="layer-popup-cont-inner">
+        <div class="layer-cont">
+          <p>layerCont Text1</p>
+          <div class="cta-outer">
+            <button class="btn btn-middle btn-type2 btn-close"><span>취소</span></button>
+            <button class="btn btn-middle"><span>확인</span></button>
+          </div>
+        </div>
+      </div>
+      <button class="btn-close-popup btn-close">close</button>
+    </div>
+  </div>
 </div>
 --></code></pre>
       <!-- //코드 삽입 -->
       <div class="conIn_tip">
-        .layer-popup-wrap.alert-popup
+        .layer-popup-wrap<br>
+        팝업 띄울 버튼에 클래스 "pop-open"을 붙이고, 클래스 "layer-popup-wrap"과의 data-pop-idx값이 같아야 함.<br>
+<!--        기본 사이즈는 736px, 544px은 .layer-popup-cont에 클래스 "pop-medium"을 464px은 .layer-popup-cont에 클래스 "pop-small"을 추가함.-->
       </div>
-
       <div class="cta-outer">
-        <button class="btn btn-small pop-open" data-pop-idx="7"><span>Alert Popup</span></button>
-        <button class="btn btn-small pop-open" data-pop-idx="8"><span>Alert Popup (X버튼 없음)</span></button>
+        <button class="btn btn-small pop-open" data-pop-idx="1"><span>Popup Default</span></button>
       </div>
 
-      <div class="layer-popup-wrap alert-popup" data-pop-idx="7">
+      <div class="layer-popup-wrap" data-pop-idx="1">
         <div class="layer-popup-body">
-          <div class="layer-popup-cont pop-small">
-            <div class="layer-cont">
-              <p class="alert-desc">선택한 항목을 삭제하시겠습니까?</p>
-              <div class="cta-outer">
-                <button class="btn btn-middle btn-type2 btn-close"><span>취소</span></button>
-                <button class="btn btn-middle"><span>확인</span></button>
+          <div class="layer-popup-cont">
+            <div class="layer-popup-cont-inner">
+              <h4 class="layer-title">Popup Size 570px</h4>
+              <div class="layer-cont">
+                <p>layerCont Text1</p>
+                <p>layerCont Text1</p>
+                <p>layerCont Text1</p>
+                <p>layerCont Text1</p>
+                <p>layerCont Text1</p>
+                <p>layerCont Text1</p>
+                <p>layerCont Text1</p>
+                <p>layerCont Text1</p>
+                <p>layerCont Text1</p>
+                <p>layerCont Text1</p>
+                <p>layerCont Text1</p>
+                <p>layerCont Text1</p>
+                <p>layerCont Text1</p>
+                <p>layerCont Text1</p>
+                <p>layerCont Text1</p>
+                <p>layerCont Text1</p>
+                <p>layerCont Text1</p>
+                <p>layerCont Text1</p>
+                <div class="cta-outer">
+                  <button class="btn btn-middle btn-type2 btn-close"><span>취소</span></button>
+                  <button class="btn btn-middle"><span>확인</span></button>
+                </div>
               </div>
             </div>
             <button class="btn-close-popup btn-close">close</button>
@@ -122,9 +134,61 @@
         </div>
       </div>
 
-      <div class="layer-popup-wrap alert-popup" data-pop-idx="8">
+      <h4 class="btm-border">- 경고 팝업</h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="cta-outer">
+  <button class="btn btn-small pop-open" data-pop-idx="3"><span>Alert Popup</span></button>
+  <button class="btn btn-small pop-open" data-pop-idx="4"><span>Alert Popup (title 있음)</span></button>
+</div>
+<div class="layer-popup-wrap alert-popup" data-pop-idx="7">
+<div class="layer-popup-body">
+  <div class="layer-popup-cont">
+    <div class="layer-cont">
+      <p class="alert-desc">선택한 항목을 삭제하시겠습니까?</p>
+      <div class="cta-outer">
+        <button class="btn btn-middle btn-type2 btn-close"><span>취소</span></button>
+        <button class="btn btn-middle"><span>확인</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="layer-popup-wrap alert-popup" data-pop-idx="8">
+<div class="layer-popup-body">
+  <div class="layer-popup-cont has-title">
+    <div class="layer-cont">
+      <div class="cont-tit2 layer-title">Hyundai 브랜드 1234567890</div>
+      <p class="alert-desc">선택한 항목을 삭제하시겠습니까?</p>
+      <div class="cta-outer">
+        <button class="btn btn-middle btn-type2 btn-close"><span>취소</span></button>
+        <button class="btn btn-middle"><span>확인</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <div class="conIn_tip">
+        .layer-popup-wrap.alert-popup<br>
+        title이 있는 경우 .layer-popup-cont에 .has-title 클래스명 추가.
+      </div>
+
+
+
+
+
+      <div class="cta-outer">
+        <button class="btn btn-small pop-open" data-pop-idx="3"><span>Alert Popup</span></button>
+        <button class="btn btn-small pop-open" data-pop-idx="4"><span>Alert Popup (title 있음)</span></button>
+      </div>
+
+      <div class="layer-popup-wrap alert-popup" data-pop-idx="3">
         <div class="layer-popup-body">
-          <div class="layer-popup-cont pop-small none-close">
+          <div class="layer-popup-cont">
             <div class="layer-cont">
               <p class="alert-desc">선택한 항목을 삭제하시겠습니까?</p>
               <div class="cta-outer">
@@ -132,7 +196,21 @@
                 <button class="btn btn-middle"><span>확인</span></button>
               </div>
             </div>
-            <button class="btn-close-popup btn-close">close</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="layer-popup-wrap alert-popup" data-pop-idx="4">
+        <div class="layer-popup-body">
+          <div class="layer-popup-cont has-title">
+            <div class="layer-cont">
+              <div class="cont-tit2 layer-title">Hyundai 브랜드 1234567890</div>
+              <p class="alert-desc">선택한 항목을 삭제하시겠습니까?</p>
+              <div class="cta-outer">
+                <button class="btn btn-middle btn-type2 btn-close"><span>취소</span></button>
+                <button class="btn btn-middle"><span>확인</span></button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

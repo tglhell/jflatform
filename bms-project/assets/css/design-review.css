@@ -1,13 +1,23 @@
+/* design_review_01 */
 .design-review-wrap {
 	padding-top: 90px;
 }
-.design-review-wrap .tit-box h1 {
+.design-review-wrap .tit-box .review-tit {
+	font-size: 64px;
 	font-weight: 500;
+	line-height: 81px;
 	text-align: center;
 	letter-spacing: -2px;
 }
+.design-review-wrap .tit-box .cont-text2 {
+	margin-top: 11px;
+	font-size: 18px;
+	color: #333;
+	line-height: 30px;
+	text-align: center;
+}
 .design-review-cont {
-	margin-top: 229px;
+	margin-top: 158px;
 }
 .row-type.radio-box > label {
 	display: inline-block;
@@ -88,11 +98,11 @@
 }
 .switch-item-list ul {
 	overflow: hidden;
-	margin-top: -10px;
+	margin-top: -12px;
 }
 .switch-item-list ul li {
 	display: inline-block;
-	margin: 10px 10px 0 0;
+	margin: 12px 10px 0 0;
 	padding: 7px 4px 7px 14px;
 	background-color: #f6f3f2;
 }
@@ -111,28 +121,14 @@
 	vertical-align: middle;
 	cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.design-review-wrap p.noti {
+	margin-top: 40px;
+}
 .design-review-wrap .cta-outer {
 	margin-top: 60px;
+}
+
+/* design_review_02 */
+.design-review-wrap .complete-outer {
+	padding-top: 30px;
 }

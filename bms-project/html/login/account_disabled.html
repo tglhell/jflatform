@@ -21,93 +21,26 @@
     <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
   </div>
 
-  <!-- header -->
-  <div class="bms-header">
-    <img src="../../assets/images/temp/@header.png" alt="">
-  </div>
-  <!--//header -->
+  <!-- 220617 header 제거 -->
 
   <!-- container -->
   <div id="bmsContainer" class="bms-container"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
     <div class="bms-content">
       <!-- S: cont-outer -->
-      <div class="cont-outer">
+      <div class="cont-outer none-gnb"><!-- 220617 none-gnb 클래스 추가 -->
         <!-- S: [account-disabled] -->
-        <div class="account-disabled disabled-all"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
-          <!-- S: tit-box -->
-          <div class="tit-box">
-            <h3>사용자 계정이 비활성화되었습니다.</h3>
-            <p class="cont-text2 fc-color4">계정 재활성화를 위해 지정된 담당 임직원의 승인이 필요합니다.<br/>아래 정보를 기입하여 담당 임직원에게 계정 재활성화 요청을 진행해주세요.</p>
-          </div>
-          <!-- E: tit-box -->
-          <!-- S: form -->
-          <div class="form-outer">
-            <div class="form-title-area">
-              <p class="tit">담당 임직원 정보</p>
-              <label><span class="required">*</span> 필수 입력항목</label>
-            </div>
-            <p class="caption htr fc-color4">현대자동차의 담당 임직원 정보를 입력하세요. (담당 임직원은 현재 프로젝트를 같이 진행하고 있는 현업 담당자로 지정 바랍니다)</p>
-            <div class="input-outer-box short-type input-group-box">
-              <label for="disabledEmail">이메일 <span class="required">*</span></label>
-              <div class="input-box val-error">
-                <input type="text" id="disabledEmail" class="input-item" placeholder="Place Holder">
-                <button class="btn-reset"></button>
-              </div>
-              <p class="error-msg coltype">error text</p><!-- 유효성 검사시 앞선 형제요소에 val-error 클래스 추가 -->
-              <button class="btn btn-middle btn-type3"><span>조회</span></button>
-            </div>
-            <!-- S: 직접입력 -->
-            <div class="direct-input">
-              <div class="input-outer-box short-type check-direct">
-                <div class="input-box">
-                  <label class="chk"><input type="checkbox"><span>직접입력</span></label>
-                </div>
-              </div>
-              <div class="input-outer-box short-type">
-                <label for="disabledName">이름 <span class="required">*</span></label>
-                <div class="input-box">
-                  <input type="text" id="disabledName" class="input-item" placeholder="정조영" disabled>
-                  <button class="btn-reset"></button>
-                </div>
-                <p class="error-msg coltype">error text</p><!-- 유효성 검사시 앞선 형제요소에 val-error 클래스 추가 -->
-              </div>
-              <div class="input-outer-box short-type">
-                <label for="disabledEmail02">이메일 <span class="required">*</span></label>
-                <div class="input-box">
-                  <input type="text" id="disabledEmail02" class="input-item" placeholder="jochung@hyundai.com" disabled>
-                  <button class="btn-reset"></button>
-                </div>
-                <p class="error-msg coltype">error text</p><!-- 유효성 검사시 앞선 형제요소에 val-error 클래스 추가 -->
-              </div>
-              <div class="input-outer-box short-type">
-                <label>법인/사업장 <span class="required">*</span></label>
-                <div class="select-box disabled">
-                  <p class="selected-value">현대자동차</p>
-                  <ul class="select-items">
-                    <li>option1</li>
-                    <li>option2</li>
-                    <li>option3</li>
-                  </ul>
-                </div>
-                <p class="error-msg coltype">error text</p><!-- 유효성 검사시 앞선 형제요소에 val-error 클래스 추가 -->
-              </div>
-            </div>
-            <!-- E: 직접입력 -->
-            <div class="input-outer-box row-type inp-type time-type text-box-outer">
-              <label>계정재활성 목적 <span class="required">*</span></label>
-              <div class="inp-btn-box">
-                <div class="textarea-box">
-                  <textarea name="name" rows="8" placeholder="브랜드홈 사용 목적을 입랙해주세요."></textarea>
-                  <span class="bite"><em>0</em>/1000</span>
-                </div>
-              </div>
-            </div>
+        <div class="account-disabled none-gnb-cont"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 --><!-- 220617 disabled-all 클래스 제거 / none-gnb-cont 클래스 추가 -->
+          <!-- 220617 tit-box, form-outer 영역 제거 -->
+          <!-- S: 220617 complete-area 영역 추가 -->
+          <div class="complete-area">
+            <p class="tit">사용자 계정이 비활성화 되었습니다</p>
+            <p class="desc">계정 활성화를 위해 시스템 관리자에게 활성화 요청해주세요</p>
             <div class="cta-outer">
-              <button class="btn btn-type2"><span>취소</span></button>
-              <button class="btn"><span>보내기</span></button>
+              <button class="btn btn-type2 w200"><span>취소</span></button>
+              <button class="btn w200"><span>활성화 요청</span></button>
             </div>
           </div>
-          <!-- E: form -->
+          <!-- E: 220617 complete-area 영역 추가 -->
         </div>
         <!-- E: [account-disabled] -->
       </div>
@@ -116,11 +49,7 @@
   </div>
   <!--//container -->
 
-  <!-- footer -->
-  <div class="bms-footer">
-    <img src="../../assets/images/temp/@footer.png" alt="">
-  </div>
-  <!--//footer -->
+  <!-- 220617 footer 제거 -->
 
   <div class="btn-top-box">
     <button title="move to top" role="button" class="btn-top">

@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0</title>
+
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <style>
+    .cont-outer > p, .cont-outer.fullcase, .cont-center, .cont-right > p {height:100px; background-color: rgb(205, 206, 182);}
+    .cont-outer {margin-bottom: 20px !important}
+    .test .bms-container .bms-content .cont-outer.fullcase {
+      background-color: #f4f4f4;
+    }
+
+    .tagging {
+      border: 1px solid #ccc;
+    }
+    .tagging.on {
+      border-color: #00AAD2;
+    }
+    .tagging .input-tag {
+      width: 100%;
+      height: auto;
+      min-height: 46px;
+      max-height: 156px;
+      overflow-y: auto;
+      position: relative;
+    }
+    .tagging .slt {
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: url('../assets/images/common/ico_slt_box_off.svg')no-repeat;
+      position: absolute;
+      right: 8px;
+      top: 11px;
+      cursor: pointer;
+    }
+    .tagging .slt.on {
+      background: url('../assets/images/common/ico_slt_box_on.svg')no-repeat;
+    }
+    .tagging .tag-area {
+      position: relative;
+      width: 100%;
+      padding: 11px 30px 1px 16px;
+    }
+    .tagging .tag-area span.label {
+      color: #ccc;
+    }
+    .tagging .tag-area.has-tag span.label {
+      display: none;
+    }
+    .tagging .tag-area span.badge {
+      margin-left: 10px;
+      margin-bottom: 10px;
+      display: inline-block;
+      padding: 0px 4px 7px 14px;
+      background-color: #F6F3F2;
+    }
+    .tagging .tag-area span.badge .btn-close {
+      position: relative;
+      top: 8px;
+      width: 24px;
+      height: 24px;
+      background: url(../assets/images/common/ico_close2.svg);
+    }
+    .tagging .tag-list-wrap {
+      padding-top: 14px;
+      display: none;
+    }
+    .tagging .tag-list-wrap .tag-list {
+      max-height: 400px;
+      overflow: auto;
+      padding: 0 33px 33px 33px;
+      margin-top: 15px;
+      overflow: overlay;
+    }
+    .tagging .tag-list-wrap .tag-list::-webkit-scrollbar {
+      width: 16px;
+    }
+    .tagging .tag-list-wrap .tag-list::-webkit-scrollbar-track {
+      background: #fff;
+    }
+    .tagging .tag-list-wrap .tag-list::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: rgba(102, 102, 102, 0.3);
+      border: 4px solid #FFF;
+    }
+    .tagging .tag-list-wrap .tag-list ul, .tagging .tag-list-wrap .tag-list li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .tagging .tag-list-wrap .tag-list li {
+      padding: 5px 0;
+    }
+
+  </style>
+
+  <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../assets/js/common.js"></script>
+</head>
+
+<script>
+  $(function() {
+    $(document).on('change', '.tag-list-wrap .tag-list li input[type=checkbox][name=mediatag]', (e) => {
+      const $tagArea = $(e.currentTarget).parents('.tagging').find('.tag-area');
+      const $tagItem = $(`
+      <span class="badge bg-primary media-tag${$tagArea.find('span.badge').length}">
+        ${$(e.currentTarget).parents('.form-check').find('label').text()}
+        <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
+      </span>
+    `);
+
+      ($(e.currentTarget).is(':checked')) ? $tagArea.append($tagItem) : $('.tag-area span.badge.media-tag' + ($tagArea.find('span.badge').length - 1)).remove();
+      ($tagArea.find('span.badge').length > 0) ? $tagArea.addClass('has-tag') : $tagArea.removeClass('has-tag');
+    });
+
+    $(document).on('click', '.tag-area span.badge button.btn-close', (e) => {
+      const $tagArea = $(e.currentTarget).parents('.tagging').find('.tag-area');
+      const $tagList = $(e.currentTarget).parents('.tagging').find('.tag-list ul li');
+      const $tagSpan = $(e.currentTarget).parent('.badge').attr('class').split(' ');
+      const $tagClass = $tagSpan[$tagSpan.length - 1];
+
+      $(e.currentTarget).parent('span.badge').remove();
+      ($tagArea.find('span.badge').length > 0) ? $tagArea.addClass('has-tag') : $tagArea.removeClass('has-tag');
+
+      $tagList.find('.form-check-input').each(function (index, item) {
+        if ($(item).hasClass($tagClass)) {
+          // console.log(item);
+          $(item).prop('checked', false);
+        }
+      });
+    });
+    $(document).on('click', '.tagging .input-tag .slt', (e) => {
+      const $tagListWrap= $(e.currentTarget).parents('.tagging').find('.tag-list-wrap');
+      const $this = $('.tagging, .tagging .input-tag .slt');
+      $tagListWrap.toggle();
+      $this.toggleClass('on');
+    });
+  })();
+</script>
+<body>
+
+<div class="bms-wrap">
+  <div class="skip-nav">
+    <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
+  </div>
+
+  <!-- header -->
+  <div class="bms-header">
+    <img src="../assets/images/temp/@header.png" alt="">
+  </div>
+  <!--//header -->
+
+  <!-- container -->
+  <div id="bmsContainer" class="bms-container"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+    <div class="bms-content">
+
+      <div class="cont-outer form">
+
+        <!--S: tagging-->
+        <div class="tagging">
+          <div class="input-tag">
+            <div class="tag-area">
+              <span class="label">미디어 타입을 선택해주세요.</span>
+              <span class="slt"></span>
+            </div>
+          </div>
+          <div class="tag-list-wrap">
+            <div class="tag-list">
+              <ul>
+                <li>
+                  <div class="form-check form-check-inline">
+                    <label class="chk"><input name="mediatag" type="checkbox"><span>option1</span></label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="chk"><input name="mediatag" type="checkbox"><span>option2</span></label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="chk"><input name="mediatag" type="checkbox"><span>option2option2option2option2</span></label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="chk"><input name="mediatag" type="checkbox"><span>option2option2option2option2</span></label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="chk"><input name="mediatag" type="checkbox"><span>option2option2option2option2</span></label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="chk"><input name="mediatag" type="checkbox"><span>option2option2option2option2</span></label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="chk"><input name="mediatag" type="checkbox"><span>option2option2option2option2</span></label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="chk"><input name="mediatag" type="checkbox"><span>option2option2option2option2</span></label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="chk"><input name="mediatag" type="checkbox"><span>option2option2option2option2</span></label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="chk"><input name="mediatag" type="checkbox"><span>option2option2option2option2</span></label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="chk"><input name="mediatag" type="checkbox"><span>option2option2option2option2</span></label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="chk"><input name="mediatag" type="checkbox"><span>option2option2option2option2</span></label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="chk"><input name="mediatag" type="checkbox"><span>option2option2option2option2</span></label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--E: tagging-->
+
+      </div>
+
+    </div>
+  </div>
+  <!--//container -->
+
+  <!-- footer -->
+  <div class="bms-footer">
+    <img src="../assets/images/temp/@footer.png" alt="">
+  </div>
+  <!--//footer -->
+
+  <div class="btn-top-box">
+    <button title="move to top" role="button" class="btn-top">
+      <span>TOP</span> <!-- 220527 대문자 변경 -->  </button>
+  </div>
+</div>
+</body>
+</html>
