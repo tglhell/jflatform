@@ -47,8 +47,7 @@
         <div class="breadclumb-outer">
           <a class="breadclumb"><span>HOME</span></a>
           <a class="breadclumb"><span>Design Review</span></a>
-          <a class="breadclumb"><span>New Design Submission</span></a>
-          <a class="breadclumb regular"><span>Text</span></a>
+          <a class="breadclumb regular"><span>New Design Review Submission</span></a>
         </div>
       </div>
       <!-- E: 20220531 cont-outer 분리(breadclumb-outer 포함)︎ -->
@@ -312,9 +311,9 @@
 
 <script>
 	function designReview () {
-		const swtParent = $('.js-switch-outer');
 		const maxItemLeng = 10; // 체크박스 체크된 최대 갯수
-		$('.js-switch').on('click', function () {
+		const swtParent = $('.js-switch-outer');
+		$('.js-switch, .switch-placeholder').on('click', function () {
 			$(this).closest(swtParent).toggleClass('active');
 			chkLeng ($(this));
 		}); 

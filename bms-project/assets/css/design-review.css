@@ -3,17 +3,12 @@
 	padding-top: 90px;
 }
 .design-review-wrap .tit-box .review-tit {
-	font-size: 64px;
 	font-weight: 500;
-	line-height: 81px;
 	text-align: center;
-	letter-spacing: -2px;
 }
 .design-review-wrap .tit-box .cont-text2 {
 	margin-top: 11px;
-	font-size: 18px;
 	color: #333;
-	line-height: 30px;
 	text-align: center;
 }
 .design-review-cont {
@@ -76,6 +71,7 @@
 	font-size: 16px;
 	color: #ccc;
 	line-height: 24px;
+	cursor: pointer;
 }
 .slide-switch-box.active .switch-top .switch-placeholder,
 .slide-switch-box.on:not(.active) .switch-top .switch-placeholder {
