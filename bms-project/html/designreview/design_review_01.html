@@ -322,8 +322,8 @@
 			$(this).parent().toggleClass('on');
 			chkLeng ($(this));
 			if ($(this).parent().hasClass('on')) {
-				const chkItemIdx = [$(this).closest('.check-box').index(), $(this).parent().index()];
-				const chkSwtTxt = [$(this).closest('.check-box').find('>label').text(), $(this).parent().find('span').text()];
+				let chkItemIdx = [$(this).closest('.check-box').index(), $(this).parent().index()];
+				let chkSwtTxt = [$(this).closest('.check-box').find('>label').text(), $(this).parent().find('span').text()];
 				$(this).closest(swtParent).find('ul').prepend('<li data-label="' + chkSwtTxt[1] + '"><strong><span>' + chkItemIdx[0] + '</span>'
 				+ chkSwtTxt[0] + '</strong> - <span>' + chkItemIdx[1] + '</span>' + chkSwtTxt[1] + '<button class="btn-item-del"></button></li>');
 				let swtItems = $(this).closest(swtParent).find('ul').children('li').get();
