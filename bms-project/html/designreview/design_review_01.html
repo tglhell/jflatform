@@ -331,8 +331,8 @@
 					let swtLi = [$(a).text(), $(b).text()];
 					return(swtLi[lastY] < swtLi[irNum[lastY]])? - irNum[lastY]:(swtLi[lastY] > swtLi[irNum[lastY]])?irNum[lastY]:lastY;
 				});
-				$.each(swtItems, function (index, row) {
-					$(this).closest(swtParent).find('ul').append(row);
+				$.each(swtItems, function (index, obj) {
+					$(this).closest(swtParent).find('ul').append(obj);
 				});
 				$('.btn-item-del').on('click', function () {
 					const dataChkTxt = $(this).parent().attr('data-label');
@@ -347,9 +347,9 @@
 			}
 		});
 	}
-	
-	function chkLeng (target) {
-		const tarSwtPrnt = target.closest(swtParent);
+
+	function chkLeng (elem, arg) {
+		const tarSwtPrnt = elem.closest(swtParent);
 		const swtCntVal = [tarSwtPrnt.find('ul').height(), parseInt(tarSwtPrnt.find('ul').css('margin-top')),
 		tarSwtPrnt.find('.chk input:checked').length, tarSwtPrnt.find('.chk input:not(:checked)'), 'disabled'];
 		const swtCntPd = [tarSwtPrnt.find('.switch-cont'), parseInt(tarSwtPrnt.find('.switch-cont').css('padding-top'))];
@@ -372,7 +372,7 @@
 		}
 		if (tarSwtPrnt.hasClass('on')) {
 			tarSwtPrnt.removeAttr('style');
-			target.closest('.js-switch-outer.on:not(.active)').css('height', (swtCntVal[0] + swtCntVal[1]) + (swtCntPd[1] * irNum[1]));
+			elem.closest('.js-switch-outer.on:not(.active)').css('height', (swtCntVal[0] + swtCntVal[1]) + (swtCntPd[1] * irNum[1]));
 		}
 	}
 
