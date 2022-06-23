@@ -311,8 +311,8 @@
 
 <script>
 	function designReview () {
-		const maxItemLeng = 10; // 체크박스 체크된 최대 갯수
-		const swtParent = $('.js-switch-outer');
+		maxItemLeng = 10; // 체크박스 체크된 최대 갯수
+		swtParent = $('.js-switch-outer');
 		$('.js-switch, .switch-placeholder').on('click', function () {
 			$(this).closest(swtParent).toggleClass('active');
 			chkLeng ($(this));
@@ -346,32 +346,33 @@
 				$(this).closest(swtParent).find('ul').find('li[data-label="' + thisTxt + '"]').remove();
 			}
 		});
-		function chkLeng (target) {
-			const tarSwtPrnt = target.closest(swtParent);
-			const swtCntVal = [tarSwtPrnt.find('ul').height(), parseInt(tarSwtPrnt.find('ul').css('margin-top')),
-			tarSwtPrnt.find('.chk input:checked').length, tarSwtPrnt.find('.chk input:not(:checked)'), 'disabled'];
-			const swtCntPd = [tarSwtPrnt.find('.switch-cont'), parseInt(tarSwtPrnt.find('.switch-cont').css('padding-top'))];
-			if (swtCntVal[2] !== 0) {
-				if (!swtCntPd[0].hasClass('active')) {
-					swtCntPd[0].addClass('active').prepend('<div class="switch-item-list"><ul></ul></div>');
-				}
-				tarSwtPrnt.addClass('on');
-				switch(swtCntVal[2]) {
-					case maxItemLeng :
-						swtCntVal[3].prop(swtCntVal[4], !chkSwitch);
-						break
-					default :
-						swtCntVal[3].prop(swtCntVal[4], chkSwitch);
-						break
-				}
-			} else {
-				tarSwtPrnt.removeClass('on').find('.switch-cont').removeClass('active');
-				tarSwtPrnt.removeAttr('style').find('.switch-item-list').remove();
+	}
+	
+	function chkLeng (target) {
+		const tarSwtPrnt = target.closest(swtParent);
+		const swtCntVal = [tarSwtPrnt.find('ul').height(), parseInt(tarSwtPrnt.find('ul').css('margin-top')),
+		tarSwtPrnt.find('.chk input:checked').length, tarSwtPrnt.find('.chk input:not(:checked)'), 'disabled'];
+		const swtCntPd = [tarSwtPrnt.find('.switch-cont'), parseInt(tarSwtPrnt.find('.switch-cont').css('padding-top'))];
+		if (swtCntVal[2] !== 0) {
+			if (!swtCntPd[0].hasClass('active')) {
+				swtCntPd[0].addClass('active').prepend('<div class="switch-item-list"><ul></ul></div>');
 			}
-			if (tarSwtPrnt.hasClass('on')) {
-				tarSwtPrnt.removeAttr('style');
-				target.closest('.js-switch-outer.on:not(.active)').css('height', (swtCntVal[0] + swtCntVal[1]) + (swtCntPd[1] * irNum[1]));
+			tarSwtPrnt.addClass('on');
+			switch(swtCntVal[2]) {
+				case maxItemLeng :
+					swtCntVal[3].prop(swtCntVal[4], !chkSwitch);
+					break
+				default :
+					swtCntVal[3].prop(swtCntVal[4], chkSwitch);
+					break
 			}
+		} else {
+			tarSwtPrnt.removeClass('on').find('.switch-cont').removeClass('active');
+			tarSwtPrnt.removeAttr('style').find('.switch-item-list').remove();
+		}
+		if (tarSwtPrnt.hasClass('on')) {
+			tarSwtPrnt.removeAttr('style');
+			target.closest('.js-switch-outer.on:not(.active)').css('height', (swtCntVal[0] + swtCntVal[1]) + (swtCntPd[1] * irNum[1]));
 		}
 	}
 
