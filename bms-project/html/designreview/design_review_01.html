@@ -358,10 +358,10 @@
 				tarSwtPrnt.addClass('on');
 				switch(swtCntVal[2]) {
 					case maxItemLeng :
-						swtCntVal[3].prop(swtCntVal[4], true);
+						swtCntVal[3].prop(swtCntVal[4], !chkSwitch);
 						break
 					default :
-						swtCntVal[3].prop(swtCntVal[4], false);
+						swtCntVal[3].prop(swtCntVal[4], chkSwitch);
 						break
 				}
 			} else {
