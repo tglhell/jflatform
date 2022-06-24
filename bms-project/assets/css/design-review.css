@@ -1,6 +1,6 @@
 /* design_review_01 */
-.design-review-wrap {
-	padding-top: 90px;
+.design-review-wrap .tit-box {
+	min-height: auto;
 }
 .design-review-wrap .tit-box .cont-text2 {
 	margin-top: 11px;

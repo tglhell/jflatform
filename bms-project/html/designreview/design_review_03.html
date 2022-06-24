@@ -18,7 +18,6 @@
   <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
   <script type="text/javascript" src="../../assets/js/common.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/daterangepicker.js"></script>
 </head>
 
@@ -80,21 +79,13 @@
 							<div class="input-outer-box">
 								<label for="inpFiter01">기간상세</label>
 								<div class="inp-slice-box">
-									<div class="inp-area"><input type="text" id="inpFiter01" class="input-item daterange s-date" value="04.05.2022" placeholder="MM.DD.YYYY"></div>
+									<div class="inp-area"><input type="text" id="inpFiter01" class="input-item daterange" placeholder="MM.DD.YYYY"></div>
 									<span class="inp-hpn">~</span>
-									<div class="inp-area"><input type="text" class="input-item daterange e-date" value="06.05.2022" placeholder="MM.DD.YYYY"></div>
+									<div class="inp-area"><input type="text" class="input-item daterange" placeholder="MM.DD.YYYY"></div>
 									<button class="btn btn-type3 btn-middle btn-search"><span>조회</span></button>
 								</div>
 							</div>
-							<script>
-								$(function () {
-									$('.review-list-filter .btn-option').on('click', function () {
-										$(this).parent().toggleClass('on');
-										$('.review-filter-form').slideToggle((secVal[2], 'easeInOutQuart'));
-									});
-								});
-							</script>
-							<div class="input-outer-box">
+							<div class="input-outer-box slt-date-range">
 								<label for="inpFiter02">기간</label>
 								<div class="inp-slice-box">
 									<div class="radio-group"><!-- 에러시 val-error -->
@@ -267,10 +258,34 @@
 </body>
 
 <script>
-	customSelect ();
-
-		const sDateVal = $('.daterange.s-date').val();
-		const eDateVal = $('.daterange.e-date').val();
+	$(function () {
+		$('.review-list-filter .btn-option').on('click', function () {
+			$(this).parent().toggleClass('on');
+			$('.review-filter-form').slideToggle((secVal[2], 'easeInOutQuart'));
+		});
+	});
+</script>
+<script>
+	
+	sltMon = 7;
+	$('.slt-date-range .radio').on('click', 'input', function () {
+		let chkMon = parseInt($(this).closest('.radio').find('span').text());
+		sltMon = chkMon + 1;
+		dateInp ();
+	});
+	
+	function dateInp () {
+		nDate = new Date();
+		chkDate = [nDate.getFullYear(), nDate.getMonth() + 1, nDate.getDate(), nDate.getMonth() + sltMon];
+		chkDate[1] = chkDate[1] >=twoDig[0] ? chkDate[1] : '0' + chkDate[1];
+		chkDate[2]  = chkDate[2]  >= twoDig[0] ? chkDate[2] : '0' + chkDate[2];
+		let sDateVal = chkDate[1] + '.' + chkDate[2] + '.' + chkDate[0];
+		if ((parseInt(chkDate[1]) + (sltMon - 1)) > 12) {
+			let sum = 12 - (parseInt(chkDate[1]) + (sltMon - 1));
+			chkDate[3] = -sum;
+			chkDate[0]++;
+		}
+		let eDateVal = chkDate[3] + '.' + chkDate[2] + '.' + chkDate[0];
 
 		dateRangeOptions = {};
 		dateRangeOptions = {
@@ -283,11 +298,16 @@
 			autoApply: true,
 		}
 
-		$('.daterange').daterangepicker(dateRangeOptions);
+		$('.daterange').eq(0).val(sDateVal);
+		$('.daterange').eq(1).val(eDateVal);
 
 		$('.daterange').on('apply.daterangepicker', function(ev, picker) {
-			$(this).parent().find('.s-date').val(picker.startDate.format('MM.DD.YYYY'));
-			$(this).parent().find('.e-date').val(picker.endDate.format('MM.DD.YYYY'));
+			$('.daterange').eq(0).val(picker.startDate.format('MM.DD.YYYY'));
+			$('.daterange').eq(1).val(picker.endDate.format('MM.DD.YYYY'));
 		});
+		$('.daterange').daterangepicker(dateRangeOptions);
+	}
+
+	dateInp ();
 </script>
 </html>
