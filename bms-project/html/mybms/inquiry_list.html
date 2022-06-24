@@ -50,8 +50,8 @@
         <div class="inquiry-list"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
           <!-- S: tit-box-->
           <div class="tit-box">
-            <h2>문의내역</h2>
-            <p class="cont-text2 fc-color4 htr">등록하신 문의 내역의 내용 및 답변을 확인하실 수 있습니다.</p>
+            <h1 class="h1-title">문의내역</h1><!-- 220621 h1 태그로 변경 및 h1-title 클래스 추가 -->
+            <p class="cont-text">등록하신 문의 내역의 내용 및 답변을 확인하실 수 있습니다.</p><!-- 220621 cont-text2 -> cont-text 클래스 변경 / fc-color4, htr 클래스 삭제 -->
           </div>
           <!-- E: tit-box-->
           <!-- S: calendar box -->
@@ -76,7 +76,7 @@
                 <col style="width: 160px">
                 <col style="width: 160px">
               </colgroup>
-              <tbody>
+              <thead>
               <tr>
                 <th scope="row">번호</th>
                 <th scope="row">문의 유형</th>
@@ -84,45 +84,47 @@
                 <th scope="row">등록일</th>
                 <th scope="row">답변상태</th>
               </tr>
+              </thead>
+              <tbody>
               <tr>
                 <td class="td-num">80</td>
                 <td class="td-type">가이드라인</td>
-                <td class="td-tit">가이드 라인에 대한 질문입니다.</td>
+                <td class="td-tit"><a href="" title="">가이드 라인에 대한 질문입니다.</a></td> <!--20220622 td 내 a태그 추가-->
                 <td class="td-date">MM.DD.YYYY</td>
                 <td class="td-state"><span class="state-receipt">접수</span></td>
               </tr>
               <tr>
                 <td class="td-num">79</td>
                 <td class="td-type">회원인</td>
-                <td class="td-tit">회원 정보 변경에 대한 질문입니다.</td>
+                <td class="td-tit"><a href="" title="">회원 정보 변경에 대한 질문입니다.</a></td><!--20220622 td 내 a태그 추가-->
                 <td class="td-date">MM.DD.YYYY</td>
                 <td class="td-state"><span class=" state-waiting">답변 대기</span></td>
               </tr>
               <tr>
                 <td class="td-num">78</td>
                 <td class="td-type">시스템 오류</td>
-                <td class="td-tit">Admin 사이트 접근 시, 접근할 수 없는 페이지로 이동이 됩니다. Admin 사이트 접근을 하려면</td>
+                <td class="td-tit"><a href="" title="">Admin 사이트 접근 시, 접근할 수 없는 페이지로 이동이 됩니다. Admin 사이트 접근을 하려면</a></td><!--20220622 td 내 a태그 추가-->
                 <td class="td-date">MM.DD.YYYY</td>
                 <td class="td-state"><span class="state-complete">답변 완료</span></td>
               </tr>
               <tr>
                 <td class="td-num">77</td>
                 <td class="td-type">디자인 리뷰</td>
-                <td class="td-tit">디자인 리뷰 관련하여 질문 드립니다.</td>
+                <td class="td-tit"><a href="" title="">디자인 리뷰 관련하여 질문 드립니다.</a></td><!--20220622 td 내 a태그 추가-->
                 <td class="td-date">MM.DD.YYYY</td>
                 <td class="td-state"><span class="state-complete">답변 완료</span></td>
               </tr>
               <tr>
                 <td class="td-num">76</td>
                 <td class="td-type">기타</td>
-                <td class="td-tit">질문이 있습니다.</td>
+                <td class="td-tit"><a href="" title="">질문이 있습니다.</a></td><!--20220622 td 내 a태그 추가-->
                 <td class="td-date">MM.DD.YYYY</td>
                 <td class="td-state"><span class="state-complete">답변 완료</span></td>
               </tr>
               <tr>
                 <td class="td-num">75</td>
                 <td class="td-type">기타</td>
-                <td class="td-tit">기타 질문입니다.</td>
+                <td class="td-tit"><a href="" title="">기타 질문입니다.</a></td><!--20220622 td 내 a태그 추가-->
                 <td class="td-date">MM.DD.YYYY</td>
                 <td class="td-state"><span class="state-complete">답변 완료</span></td>
               </tr>

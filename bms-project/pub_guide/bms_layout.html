@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../assets/css/common.css">
   <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
   <style>
-    .cont-outer > p, .cont-outer.fullcase, .cont-center, .cont-right > p {height:100px; background-color: rgb(205, 206, 182);}
+    .cont-outer p {height:100px; background-color: rgb(205, 206, 182);}
     .cont-outer {margin-bottom: 20px !important}
     .test .bms-container .bms-content .cont-outer.fullcase {
       background-color: #f4f4f4;
@@ -39,8 +39,25 @@
     <div class="bms-content">
 
       <!-- S: cont-outer -->
-      <div class="cont-outer">
-        <p>basic 1280(컨텐츠 1200 + 좌우 패딩 40px)</p>
+      <div class="cont-outer fullcase">
+        <div><p>fullcase (최대 1920)</p></div>
+        <div class="cont-outer">
+        </div>
+      </div>
+
+      <!-- S: cont-outer -->
+      <div class="cont-outer fullcase">
+        <div class="cont-outer">
+          <p>basic 1920(컨텐츠 1760 + 좌우 패딩 80px)</p>
+        </div>
+      </div>
+      <!-- E: cont-outer -->
+
+      <!-- S: cont-outer -->
+      <div class="cont-outer fullcase">
+        <div class="cont-outer middlecase">
+          <p>middlecase 1280(컨텐츠 1200 + 좌우 패딩 40px)</p>
+        </div>
       </div>
       <!-- E: cont-outer -->
 
@@ -49,14 +66,6 @@
         <p>form 928</p>
       </div>
       <!-- E: cont-outer -->
-
-      <!-- S: cont-outer -->
-      <div class="cont-outer fullcase">
-        fullcase
-        <div class="cont-inner">
-          cont-inner
-        </div>
-      </div>
       <!-- E: cont-outer -->
     </div>
   </div>

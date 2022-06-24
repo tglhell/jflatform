@@ -14,40 +14,15 @@
     .test .bms-container .bms-content .cont-outer.fullcase {
       background-color: #f4f4f4;
     }
-
-
-
-    /* masonry */
-    /* clearfix */
-    .masonry .grid:after {
-      content: '';
-      display: block;
-      clear: both;
-    }
-    /* ---- grid-item ---- */
-    .masonry .grid-item,
-    .masonry .grid-sizer {
-      width: calc(33.333% - 10px);
-    }
+    /* 임시 스타일 값 */
     .masonry .grid-item {
-      float: left;
       border: 1px solid #f00;
-      margin-bottom: 15px;
-    }
-    .masonry .grid-item img {
-      width:100%;
-      display: block;
     }
     .masonry .grid-item span {
-      display: block;
-      width: 100%;
-      background-color: #f00;
-      color: #fff;
-      height:20px;
-      line-height: 22px;
+       background-color: #f00;
+       color: #fff;
       text-align: center;
-    }
-
+     }
   </style>
 
   <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
@@ -55,18 +30,6 @@
   <script type="text/javascript" src="../assets/js/common.js"></script>
   <script type="text/javascript" src="../assets/js/lib/masonry.js"></script><!-- masonry plugin -->
 </head>
-
-<script>
-  $(function(){
-    $('.grid').masonry({
-      itemSelector: '.grid-item',
-      // columnWidth: '.grid-sizer',
-      gutter: 15,
-      percentPosition: true,
-      horizontalOrder: true
-    });
-  });
-</script>
 <body>
 
 <div class="bms-wrap">

@@ -32,10 +32,10 @@
         <div class="join none-gnb-cont"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 --><!-- 220617 none-gnb-cont 클래스 추가 -->
           <!-- S: tit-box -->
           <div class="tit-box">
-            <h3>Brand Home 계정 생성</h3>
+            <h1 class="h3-title">Brand Home 계정 생성</h1><!-- 220621 h1 태그로 변경 및 h3-title 클래스 추가 -->
           </div>
           <!-- E: tit-box -->
-          <!-- S: 220617 사용자 계정 정보 & 담당 임직원 정보 구간 구조수정-->
+          <!-- S: 220617 사용자 계정 정보 & 담당 임직원 정보 구간 구조수정 -->
           <div class="user-information">
             <div class="tbl-box tbl-type1 user-account">
               <div class="cont-tit2">사용자 계정 정보</div>
@@ -156,7 +156,7 @@
                       <div class="input-outer-box email-box-wrap">
                         <div class="input-box">
                           <input type="text" id="inpTxt08" class="input-item" maxlength="100">
-                          <p class="caption htr fc-color4">이메일 주소는 ID로 사용되며, 계정 신청 결과는 입력하신 이메일로 발송됩니다.</p>
+                          <p class="caption htr">이메일 주소는 ID로 사용되며, 계정 신청 결과는 입력하신 이메일로 발송됩니다.</p>
                           <button class="btn-reset"></button>
                         </div>
                       </div>
@@ -186,7 +186,7 @@
                       <div class="input-outer-box email-box-wrap">
                         <div class="input-box">
                           <input type="text" id="inpTxt09" class="input-item" maxlength="100">
-                          <p class="caption htr fc-color4">계정 생성 정보 수정 시 사용할 비밀번호를 영문 대소문자/숫자/특수문자 모두 포함하여 8자리 이상 입력하세요.</p>
+                          <p class="caption htr">계정 생성 정보 수정 시 사용할 비밀번호를 영문 대소문자/숫자/특수문자 모두 포함하여 8자리 이상 입력하세요.</p>
                           <button class="btn-reset"></button>
                         </div>
                       </div>
@@ -201,7 +201,7 @@
               <div class="cont-tit2">담당 임직원 정보</div>
               <div>
                 <p class="cont-text2">임직원 조회 버튼을 클릭하시면<br>이름 / 이메일 검색을 통해 담당 임직원의 정보를 선택하실 수 있습니다.</p>
-                <button class="btn btn-type3 btn-small pop-open" data-pop-idx="1"><span>임직원 조회</span></button>
+                <button class="btn btn-type3 btn-middle-small pop-open" data-pop-idx="1"><span>임직원 조회</span></button><!-- 220622 btn-small -> btn-middle-small 클래스명 변경 -->
               </div>
               <div class="tbl-box tbl-type1">
                 <table>
@@ -249,7 +249,7 @@
               </div>
             </div>
           </div>
-          <!-- E: 220617 사용자 계정 정보 구간 구조수정-->
+          <!-- E: 220617 사용자 계정 정보 & 담당 임직원 정보 구간 구조수정 -->
           <div class="agree-box">
             <div class="val-error"><!-- 220617 클래스명 변경 (agree-outer -> val-error) -->
               <label class="chk cont-text2"><input type="checkbox"><span><span class="essential fc-color5">[필수]</span> 현대자동차 브랜드홈(Brand Home) <a target="_blank" href="../footer/terms.html">이용약관</a>을 읽고 이해했으며 이에 동의합니다.</span></label>
@@ -258,16 +258,17 @@
             <p class="error-msg">error text</p><!--유효성 검사시 앞선 형제요소에 val-error 클래스 추가-->
           </div>
           <div class="cta-outer">
-            <button class="btn btn-type2 w200"><span>취소</span></button>
-            <button class="btn w200"><span>계정 생성</span></button>
+            <button class="btn btn-type2 btn-xlarge"><span>취소</span></button><!-- 220622 w200 -> btn-xlarge 클래스명 변경 -->
+            <button class="btn btn-xlarge"><span>계정 생성</span></button><!-- 220622 w200 -> btn-xlarge 클래스명 변경 -->
           </div>
         </div>
+        <!-- E: [join] -->
 
         <!-- 20220717 : layer-popup 추가 -->
         <div class="layer-popup-wrap pop-employees" data-pop-idx="1">
           <div class="layer-popup-body">
             <div class="layer-popup-cont">
-              <div class="layer-cont-inner">
+              <div class="layer-popup-cont-inner"> <!-- 20220622 class 명 변경 -->
                 <h4 class="layer-title">임직원 조회</h4>
                 <div class="layer-cont">
                   <div class="layer-cont-inner">
@@ -301,6 +302,9 @@
                           <th scope="row">이름</th>
                           <th scope="row">이메일</th>
                           <th scope="row">법인/사업장</th>
+                        </tr>
+                        <tr class="no-data"> <!-- 20220622 no-data 타입 추가 -->
+                          <td colspan="3">검색 결과가 없습니다.</td>
                         </tr>
                         <tr>
                           <td><label class="radio"><input type="radio" name="radio" id="radioChk01"><span>정조영</span></label></td>
@@ -337,8 +341,6 @@
             </div>
           </div>
         </div>
-
-        <!-- E: [join] -->
       </div>
       <!-- E: cont-outer -->
     </div>

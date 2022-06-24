@@ -37,10 +37,10 @@
       <!-- S: 20220531 cont-outer 분리(breadclumb-outer 포함)︎ -->
       <div class="cont-outer">
         <div class="breadclumb-outer">
-          <a class="breadclumb"><span>HOME</span></a>
+          <a class="breadclumb"><span>Home</span></a>
           <a class="breadclumb"><span>My BMS</span></a>
-          <a class="breadclumb"><span>Send & Receive Files</span></a>
-          <a class="breadclumb regular"><span>Send Files</span></a>
+          <a class="breadclumb"><span>File Sharing</span></a>
+          <a class="breadclumb regular"><span>Send New Files</span></a>
         </div>
       </div>
       <!-- E: 20220531 cont-outer 분리(breadclumb-outer 포함)︎ -->
@@ -50,10 +50,9 @@
         <!-- S: [send-file] -->
         <div class="send-file file-all"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
           <div class="tit-box">
-            <h2>파일 보내기</h2>
-            <p class="cont-text2">
-              BMS 회원에게 파일을 전달할 수 있습니다.<br>
-              파일 공유 사용은 이메일에 첨부 파일을 더하는 것만큼 간단합니다.
+            <h1 class="h1-title">Send New Files</h1><!--220622 h1 태그로 변경 및 h1-title 클래스 추가-->
+            <p class="cont-text"><!--220622 cont-text2 -> cont-text로 수정-->
+              BMS 회원에게 파일을 공유할 수 있습니다.
             </p>
           </div>
           <div>
@@ -67,7 +66,7 @@
               <p class="error-msg">error text</p>
             </div>
             <div class="input-outer-box row-type">
-              <label for="inpTxt02">수신자</label>
+              <label for="inpTxt02">수신자 <span class="required">*</span></label>
               <div class="autocomplete-wrap">
                 <ul class="autocomplete-area">
                   <li class="input-area">
@@ -150,9 +149,10 @@
                     </table>
                   </div>
                   <div class="caution-area">
+                    <p class="caution">대외비 이상의 파일 공유 시 회사의 보안 규정을 따르며, 외부에 노출되지 않도록 주의하여 공유 바랍니다.</p>
                     <p class="caution">첨부파일은 총 2GB를 초과할 수 없으며 최대 3개까지 업로드 가능합니다.</p>
                     <p class="caution">이미지, 비디오, 음성, 문서 형식만 업로드 할 수 있습니다.</p>
-                    <p class="caution">파일을 첨부한 후 파일 저장하기를 클릭해야 정상 업로드가 됩니다.</p>
+                    <p class="caution">파일을 첨부한 후 ‘파일 저장' 버튼을 클릭해야 서버에 정상 업로드가 됩니다.</p>
                   </div>
                   <div class="button-area">
                     <button class="btn btn-type2 btn-small upload-delete-line" disabled><span>선택 항목 제거</span></button>
@@ -175,8 +175,8 @@
             </ul>
             <p class="error-msg">error text</p>
             <div class="cta-outer">
-              <button class="btn btn-type2"><span>취소</span></button>
-              <button class="btn"><span>보내기</span></button>
+              <button class="btn btn-type2 btn-xlarge"><span>취소</span></button><!--220622 btn-xlarge 클래스 추가-->
+              <button class="btn btn-xlarge"><span>보내기</span></button><!--220622 btn-xlarge 클래스 추가-->
             </div>
           </div>
         </div>

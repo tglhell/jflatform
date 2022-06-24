@@ -30,208 +30,177 @@
   <!-- container -->
   <div id="bmsContainer" class="bms-container">
     <div class="bms-content">
-      <!-- S: cont-outer -->
-      <div class="cont-outer form">
+      <!-- S: 220623 cont-outer 분리(breadclumb-outer 포함)︎ -->
+      <div class="cont-outer">
         <!-- S: breadclumb -->
         <div class="breadclumb-outer">
           <span class="breadclumb"><em>Home</em></span> <!-- 220527 태그 수정 -->
           <span class="breadclumb"><em>My BMS</em></span> <!-- 220527 태그 수정 -->
           <span class="breadclumb"><em>Account</em></span> <!-- 220527 태그 수정 -->
-          <span class="breadclumb regular"><em>회원정보 수정</em></span> <!-- 220527 태그 수정 -->
+          <span class="breadclumb regular"><em>Manage Your Account</em></span> <!-- 220527 태그 수정 --><!-- 220623 breadclumb 국문 -> 영문 변경 -->
         </div>
         <!-- E: breadclumb -->
+      </div>
+      <!-- E: 220623 cont-outer 분리(breadclumb-outer 포함)︎ -->
+      <!-- S: 220623 cont-outer 분리(form 포함)︎ -->
+      <!-- S: cont-outer -->
+      <div class="cont-outer form">
         <!-- S: [info-modify] -->
         <div class="info-modify"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
-          <!-- S: tit-box -->
           <div class="tit-box">
-            <h3>회원정보 수정</h3>
+            <h1 class="h1-title">Manage Your Account</h1><!-- 220621 h1 태그로 변경 및 h1-title 클래스 추가 --><!-- 220623 breadclumb 국문 -> 영문 변경 -->
           </div>
-          <!-- E: tit-box -->
-          <!-- S: user-info -->
-          <div class="user-info form-area">
-            <div class="form-title-area">
-              <p class="tit">사용자 계정 정보</p>
-              <button class="btn-txt btn-icon">비밀번호 재설정</button>
-            </div>
-            <div class="tbl-box">
+          <!-- S: 220623 회원정보 수정 페이지 구조변경(테이블 형식) -->
+          <div class="user-information">
+            <!-- S: user-account -->
+            <div class="tbl-box tbl-type1 user-account">
+              <div class="tbl-tit-outer">
+                <p class="cont-tit2 fc-color3">사용자 계정 정보</p>
+                <button class="btn btn-type3 btn-middle-small"><span>비밀번호 재설정</span></button>
+              </div>
               <table>
                 <caption class="blind">비고정 타입</caption>
                 <colgroup>
-                  <col>
-                  <col>
-                  <col>
+                  <col width="256px">
                   <col>
                 </colgroup>
                 <tbody>
-                <tr>
-                  <th scope="row">title1</th>
-                  <td>test</td>
-                  <th scope="row">title1</th>
-                  <td>test2</td>
-                </tr>
-                <tr>
-                  <th scope="row">title1</th>
-                  <td colspan="3">test</td>
-                </tr>
-                <tr>
-                  <th scope="row">title1</th>
-                  <td>test</td>
-                  <th scope="row">title1</th>
-                  <td>test2</td>
-                </tr>
-                <tr>
-                  <th scope="row">title1</th>
-                  <td colspan="3">test</td>
-                </tr>
+                  <tr>
+                    <th scope="row"><label for="inpTxt01">이름 <span class="required">*</span></label></th>
+                    <td>
+                      <div class="input-outer-box">
+                        <div class="input-outer-box input-group-box name-box-wrap val-error">
+                          <div class="input-box">
+                            <input type="text" id="inpTxt01" class="input-item">
+                            <button class="btn-reset"></button>
+                          </div>
+                          <div class="input-box">
+                            <input type="text" id="inpTxt02" class="input-item">
+                            <button class="btn-reset"></button>
+                          </div>
+                        </div>
+                        <p class="error-msg">error text</p><!--유효성 검사시 앞선 형제요소에 val-error 클래스 추가-->
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">권역선택 <span class="required">*</span></th>
+                    <td>North America</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">국가/지역 <span class="required">*</span></th>
+                    <td>Canada</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">소속 <span class="required">*</span></th>
+                    <td>협력사</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><label for="inpTxt03">회사명 <span class="required">*</span></label></th>
+                    <td>
+                      <div class="input-outer-box">
+                        <div class="input-outer-box">
+                          <div class="input-box">
+                            <input type="text" id="inpTxt03" class="input-item" maxlength="100">
+                            <button class="btn-reset"></button>
+                          </div>
+                        </div>
+                        <p class="error-msg">error text</p><!--유효성 검사시 앞선 형제요소에 val-error 클래스 추가-->
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><label for="inpTxt04">휴대전화 <span class="required">*</span></label></th>
+                    <td>
+                      <div class="input-outer-box">
+                        <div class="input-outer-box input-group-box phone-box-wrap">
+                          <div class="input-box">
+                            <input type="text" id="inpTxt04" class="input-item" placeholder="+82" disabled>
+                            <button class="btn-reset"></button>
+                          </div>
+                          <div class="input-box">
+                            <input type="text" id="inpTxt05" class="input-item">
+                            <button class="btn-reset"></button>
+                          </div>
+                        </div>
+                        <p class="error-msg">error text</p><!--유효성 검사시 앞선 형제요소에 val-error 클래스 추가-->
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">이메일 <span class="required">*</span></th>
+                    <td>apple@gmail.com</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><label for="radioChk09">시스템 언어설정 <span class="required">*</span></label></th>
+                    <td>
+                      <div class="input-outer-box">
+                        <div class="input-outer-box">
+                          <div class="radio-group">
+                            <label class="radio"><input type="radio" name="radio2" id="radioChk09"><span>English</span></label>
+                            <label class="radio"><input type="radio" checked="checked" name="radio2" id="radioChk10"><span>Korean</span></label>
+                            <label class="radio"><input type="radio" name="radio2" id="radioChk11"><span>Chinese</span></label>
+                          </div>
+                        </div>
+                        <p class="error-msg">error text</p><!--유효성 검사시 앞선 형제요소에 val-error 클래스 추가-->
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">계정 만료일</th>
+                    <td class="fc-color5">~ 15.04.2022</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
-          </div>
-          <!-- E: user-info -->
-
-          <!-- S: user-info -->
-          <div class="user-info">
-            <!-- S: form -->
-            <div class="form-outer">
-              <div class="form-title-area">
-                <p class="tit">사용자 계정 정보</p>
-                <button class="btn-txt btn-icon">비밀번호 재설정</button>
+            <!-- E: user-account -->
+            <!-- S: staff-incharge -->
+            <div class="staff-incharge">
+              <div class="tbl-tit-outer">
+                <p class="cont-tit2 fc-color3">담당 임직원 정보</p>
+                <button class="btn btn-type3 btn-middle-small"><span>계정연장 신청</span></button>
               </div>
-              <div class="input-outer-box input-group-box input-sizing">
-                <label for="joinName01">이름 <span class="required">*</span></label>
-                <div class="input-box first-name val-error">
-                  <input type="text" id="joinName01" class="input-item" placeholder="First name">
-                  <button class="btn-reset"></button>
-                </div>
-                <p class="error-msg coltype">error text</p><!-- 유효성 검사시 앞선 형제요소에 val-error 클래스 추가 -->
-                <div class="input-box val-error">
-                  <input type="text" id="joinName02" class="input-item" placeholder="Last name">
-                  <button class="btn-reset"></button>
-                </div>
-                <p class="error-msg coltype msg2 last-name">error text</p><!-- 유효성 검사시 앞선 형제요소에 val-error 클래스 추가 -->
-              </div>
-              <div class="input-outer-box input-group-box input-sizing">
-                <label for="joinNumber">휴대전화 <span class="required">*</span></label>
-                <div class="select-box select-number">
-                  <p class="selected-value">선택</p>
-                  <ul class="select-items">
-                    <li>option1</li>
-                    <li>option2</li>
-                    <li>option3</li>
-                  </ul>
-                </div>
-                <p class="error-msg coltype">error text</p><!-- 유효성 검사시 앞선 형제요소에 val-error 클래스 추가 -->
-                <div class="input-box">
-                  <input type="text" id="joinNumber" class="input-item" placeholder="Place Holder">
-                  <button class="btn-reset"></button>
-                </div>
-                <p class="error-msg coltype msg2 phone">error text</p><!-- 유효성 검사시 앞선 형제요소에 val-error 클래스 추가 -->
-              </div>
-              <div class="input-outer-box input-sizing">
-                <label for="joinCompany">이메일 <span class="required">*</span></label>
-                <div class="input-box">
-                  <span class="txt-box htr">apple@gmail.com</span>
-                </div>
-              </div>
-              <div class="input-outer-box input-sizing">
-                <label for="joinCompany">권역 <span class="required">*</span></label>
-                <div class="input-box">
-                  <span class="txt-box htr">North America</span>
-                </div>
-              </div>
-              <div class="input-outer-box input-sizing">
-                <label for="joinCompany">국가/지역 <span class="required">*</span></label>
-                <div class="input-box">
-                  <span class="txt-box htr">Canada</span>
-                </div>
-              </div>
-              <div class="input-outer-box input-sizing">
-                <label for="joinCompany">소속 <span class="required">*</span></label>
-                <div class="input-box">
-                  <span class="txt-box htr">협력사</span>
-                </div>
-              </div>
-              <div class="input-outer-box input-sizing">
-                <label for="joinCompany">회사명</label>
-                <div class="input-box">
-                  <input type="text" id="joinCompany" class="input-item" placeholder="회사명을 입력해 주세요.">
-                  <button class="btn-reset"></button>
-                </div>
-                <p class="error-msg coltype">error text</p><!-- 유효성 검사시 앞선 형제요소에 val-error 클래스 추가 -->
-              </div>
-              <div class="input-outer-box system-lang">
-                <label>시스템 언어 설정 <span class="required">*</span></label>
-                <div class="radio-group">
-                  <label class="radio"><input type="radio" name="radio1" id="radioChk04"><span>English</span></label>
-                  <label class="radio"><input type="radio" name="radio1" id="radioChk05"><span>Korean</span></label>
-                  <label class="radio"><input type="radio" name="radio1" id="radioChk06"><span>Chinese</span></label>
-                </div>
-                <p class="error-msg coltype">error text</p><!-- 유효성 검사시 앞선 형제요소에 val-error 클래스 추가 -->
-              </div>
-              <div class="input-outer-box input-sizing">
-                <label for="joinCompany">소속 <span class="required">*</span></label>
-                <div class="input-box">
-                  <span class="txt-box htr fc-color5">MM/DD/YYYY</span>
-                </div>
+              <div class="tbl-box tbl-type1">
+                <table>
+                  <caption class="blind">비고정 타입</caption>
+                  <colgroup>
+                    <col width="256px">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">이름 <span class="required">*</span></th>
+                      <td>현대 박</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">이메일 <span class="required">*</span></th>
+                      <td>brandhome@hyundai.com</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">법인/사업장 <span class="required">*</span></th>
+                      <td>현대자동차</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
-            <!-- E: form -->
-          </div>
-          <!-- E: user-info -->
-          <!-- S: staff-info -->
-          <div class="staff-info">
-            <!-- S: form -->
-            <div class="form-outer">
-              <div class="form-title-area">
-                <p class="tit">담당 임직원 정보</p>
-                <button class="btn-txt btn-icon">계정연장 신청</button>
-              </div>
-              <div class="input-outer-box">
-                <label for="joinCompany">이름 <span class="required">*</span></label>
-                <div class="input-box">
-                  <span class="txt-box htr">현대 박</span>
-                </div>
-              </div>
-              <div class="input-outer-box">
-                <label for="joinCompany">이메일 <span class="required">*</span></label>
-                <div class="input-box">
-                  <span class="txt-box htr">brandhome@hyundai.com</span>
-                </div>
-              </div>
-              <div class="input-outer-box">
-                <label for="joinCompany">법인/사업장 <span class="required">*</span></label>
-                <div class="input-box">
-                  <span class="txt-box htr">현대자동차</span>
-                </div>
-              </div>
+            <!-- E: staff-incharge -->
+            <div class="chk-outer">
+              <label class="chk"><input type="checkbox"><span class="fc-color3"><strong>소식 받기</strong>  (동의 변경 일자 MM.DD.YYYY)</span></label>
+              <p class="caption htr fc-color4">수신동의를 하시면 Brand Home 뉴스레터를 받으실 수 있습니다.</p>
             </div>
-            <!-- E: form -->
-          </div>
-          <!-- E: staff-info -->
-          <!-- S: newsletter-info -->
-          <div class="newsletter-info">
-            <!-- S: form -->
-            <div class="form-outer">
-              <div class="form-title-area">
-                <p class="tit">뉴스레터 수신여부</p>
-                <label>동의 변경 일자 <span>MM/DD/YYYY</span></label>
-              </div>
-              <div class="input-outer-box">
-                <label class="chk"><input type="checkbox"><span>소식받기</span></label>
-              </div>
+            <div class="cta-outer">
+              <button class="btn btn-type2 btn-xlarge"><span>취소</span></button>
+              <button class="btn btn-xlarge"><span>회원정보 저장</span></button>
             </div>
-            <p class="caution">수신동의를 하시면 Brand Home 뉴스레터를 받으실 수 있습니다.</p>
-            <!-- E: form -->
           </div>
-          <!-- E: newsletter-info -->
-          <div class="cta-outer">
-            <button class="btn btn-type2"><span>취소</span></button>
-            <button class="btn"><span>회원정보 저장</span></button>
-          </div>
+          <!-- E: 220617 사용자 계정 정보 구간 구조수정-->
+          <!-- E: 220623 회원정보 수정 페이지 구조변경(테이블 형식) -->
         </div>
         <!-- E: [info-modify] -->
       </div>
       <!-- E: cont-outer -->
+      <!-- E: 220623 cont-outer 분리(form 포함)︎ -->
     </div>
   </div>
   <!--//container -->
@@ -249,13 +218,5 @@
   </div>
 </div>
 
-<script>
-  $('#sampleDatePicker').datepicker({
-    minDate: '0'
-  });
-
-  customSelect();
-
-</script>
 </body>
 </html>

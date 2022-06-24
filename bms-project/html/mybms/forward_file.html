@@ -37,9 +37,10 @@
       <!-- S: 20220531 cont-outer 분리(breadclumb-outer 포함)︎ -->
       <div class="cont-outer">
         <div class="breadclumb-outer">
-          <a class="breadclumb"><span>HOME</span></a>
+          <a class="breadclumb"><span>Home</span></a>
           <a class="breadclumb"><span>My BMS</span></a>
-          <a class="breadclumb"><span>Send & Receive Files</span></a>
+          <a class="breadclumb"><span>File Sharing</span></a>
+          <a class="breadclumb"><span>Sent & Received Management</span></a>
           <a class="breadclumb regular"><span>Forward Files</span></a>
         </div>
       </div>
@@ -50,8 +51,8 @@
         <!-- S: [forward_file] -->
         <div class="forward-file file-all"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
           <div class="tit-box">
-            <h2>파일 전달</h2>
-            <p class="cont-text2">수신자를 지정해 공유된 다운로드 패키지를 전달할 수 있습니다.</p>
+            <h1 class="h1-title">Forward Files</h1><!--220622 h1 태그로 변경 및 h1-title 클래스 추가-->
+            <p class="cont-text">BMS 회원에게 수신/발신한 파일을 전달할 수 있습니다.</p><!--220622 cont-text2 -> cont-text로 수정-->
           </div>
           <div>
             <div class="input-outer-box row-type">
@@ -99,7 +100,7 @@
               <p class="error-msg">error text</p>
             </div>
             <div class="input-outer-box row-type">
-              <label>첨부파일</label>
+              <label>첨부파일 <span class="required">*</span></label>
               <div class="upload-container file-uploader"> <!-- 파일업로드 영역 없을 시에는 data-upload-id 삭제 -->
                 <div class="file-box">
                   <div class="file-byte">
@@ -173,8 +174,8 @@
               <p class="error-msg">error text</p>
             </div>
             <div class="cta-outer">
-              <button class="btn btn-type2"><span>취소</span></button>
-              <button class="btn"><span>보내기</span></button>
+              <button class="btn btn-type2 btn-xlarge"><span>취소</span></button><!--220622 btn-xlarge 클래스 추가-->
+              <button class="btn btn-xlarge"><span>보내기</span></button><!--220622 btn-xlarge 클래스 추가-->
             </div>
           </div>
         </div>

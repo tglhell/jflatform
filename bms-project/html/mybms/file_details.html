@@ -34,9 +34,10 @@
       <!-- S: 20220531 cont-outer 분리(breadclumb-outer 포함)︎ -->
       <div class="cont-outer">
         <div class="breadclumb-outer">
-          <a class="breadclumb"><span>HOME</span></a>
+          <a class="breadclumb"><span>Home</span></a>
           <a class="breadclumb"><span>My BMS</span></a>
-          <a class="breadclumb"><span>Send & Receive Files</span></a>
+          <a class="breadclumb"><span>File Sharing</span></a>
+          <a class="breadclumb"><span>Sent & Received Management</span></a>
           <a class="breadclumb regular"><span>File Details</span></a>
         </div>
       </div>
@@ -47,10 +48,9 @@
         <!-- S: [file_details] -->
         <div class="file-details file-all"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
           <div class="tit-box">
-            <h2>파일 상세</h2>
-            <p class="cont-text2">
-              공유 파일 상세 내용입니다.<br>
-              파일을 다운로드하거나 전달할 수 있습니다.
+            <h1 class="h1-title">File Details</h1><!--220622 h1 태그로 변경 및 h1-title 클래스 추가-->
+            <p class="cont-text"><!--220622 cont-text2 -> cont-text로 수정-->
+              유효기간이 지나지 않은 파일을 다운로드하거나 전달할 수 있습니다.
             </p>
           </div>
           <div>
@@ -155,7 +155,7 @@
                 </div>
               </div>
             </div>
-            <div class="input-outer-box row-type">
+            <div class="input-outer-box row-type calendar"><!--220622 calendar 클래스 추가-->
               <label for="inpNum01_05">파일 만료 기한</label>
               <div class="input-box">
                 <input id="inpNum01_05" type="text" class="input-item" placeholder="04-10-2022" disabled>
@@ -164,7 +164,7 @@
               <p class="file-download-end">파일 다운로드 기한 만료 시, 파일 다운로드 및 전달이 불가합니다.</p>
             </div>
             <div class="cta-outer">
-              <button class="btn"><span>전달</span></button>
+              <button class="btn btn-xlarge"><span>전달</span></button><!--220622 btn-xlarge 클래스 추가-->
             </div>
           </div>
         </div>

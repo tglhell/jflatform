@@ -1,4 +1,17 @@
 jQuery.event.add(window, 'load', function () {
+	// masonry
+	if($('.masonry').length !== 0) {
+		$('.masonry .grid').masonry({
+			itemSelector: '.grid-item',
+			// columnWidth: '.grid-sizer',
+			gutter: 15,
+			percentPosition: true,
+			horizontalOrder: true
+		});
+	}
+});
+
+$(function(){
 	const tabTar = $('.js-tab');
 	const inpItem = $('.input-item');
 
@@ -22,12 +35,12 @@ jQuery.event.add(window, 'load', function () {
 		popupOpen($(this));
 	});
 
-	//checkbox all select 
+	//checkbox all select
 	$(".check-terms").on("click", ".all input", function () {
 		$(this).parents(".check-terms").find('input').prop("checked", $(this).is(":checked"));
 	});
 
-	//checkbox part select 
+	//checkbox part select
 	$(".check-terms").on("click", ".normal input", function() {
 		var is_checked = true;
 
@@ -52,6 +65,54 @@ jQuery.event.add(window, 'load', function () {
 		}
 	});
 
+	// checking list
+	$(document).on('click','.checking-list-box .btn-edit', (e) => {
+		const $chkBox = $(e.currentTarget).parents('.checking-list-box').find('.chk-box')
+		const $editBox = $(e.currentTarget).parents('.checking-list-box').find('.edit-box')
+		const $listContentsTxt = $(e.currentTarget).parents('.checking-list-box').find('.list-contents')
+		const $length = $chkBox.find('strong');
+		let chkHtml = "<label class='chk'>";
+		chkHtml += "<input name='chkList' type='checkbox'>";
+		chkHtml += '<span>';
+		chkHtml += '</span>';
+		chkHtml += '</label>';
+
+		const $listContentsTxtAll = $(e.currentTarget).parents('.checking-list-box').find('.list-contents-all')
+		let chkHtmlAll = "<label class='chk'>";
+		chkHtmlAll += "<input class='chkAll' type='checkbox'>";
+		chkHtmlAll += '<span>';
+		chkHtmlAll += '</span>';
+		chkHtmlAll += '</label>';
+
+		$chkBox.show();
+		$editBox.hide();
+		$listContentsTxt.prepend(chkHtml);
+		$listContentsTxtAll.prepend(chkHtmlAll);
+		$length.text('0');
+
+		$('.checking-list-box .btn-cancel').on('click', () => {
+			$editBox.show();
+			$chkBox.hide();
+			$listContentsTxt.children('.chk').remove();
+			$listContentsTxtAll.children('.chk').remove();
+			$length.text('0');
+		});
+		$('.checking-list-box li').on('click', () => {
+			const length = $(".checking-list input:checkbox[name='chkList']:checked").length
+			$length.text(length);
+		});
+		$('.checking-list-box .chkAll').on('click', function() {
+			const _this = $(this)
+			const _chk = $(this).parents('.list-contents-all').siblings('.checking-list').find('input:checkbox')
+			if( _this.is(':checked') ) {
+				_chk.prop('checked',true)
+			}
+			else {
+				_chk.prop('checked',false)
+			}
+		});
+	});
+
 	$(window).scroll(function(){
 		if ( $(this).scrollTop() > 0 ){
 			$('.btn-top-box').addClass('active');
@@ -60,7 +121,7 @@ jQuery.event.add(window, 'load', function () {
 			$('.btn-top-box').removeClass('active');
 		}
 	});
-	
+
 	function checkAgent () {
 		let UserAgent = navigator.platform;
 		let agentBrowser = navigator.userAgent.toLowerCase();
@@ -78,7 +139,7 @@ jQuery.event.add(window, 'load', function () {
 	// accordion common
 	function accordion(){
 		$('.accordion').off()
-		$('.accordion').on('click', '.tit-btn', function() {
+		$(document).on('click', '.accordion .tit-btn', function() {
 			var accordionItem = $(this).parent('.item');
 			accordionItem.toggleClass('active').siblings('.item').removeClass('active');
 			$('.accordion .item').find('.cont').slideUp(0);
@@ -93,7 +154,7 @@ jQuery.event.add(window, 'load', function () {
 
 	jsTab();
 
-	// autocomplete
+	// autocompleteㅊ
 	function autocomplete(){
 		$('.autocomplete-area .input-email').on('focus keyup',function(){
 			const inputLeft = $(this).offset().left;
@@ -114,7 +175,6 @@ jQuery.event.add(window, 'load', function () {
 		});
 	}
 	autocomplete();
-
 });
 
 function jsTab() {

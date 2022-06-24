@@ -17,6 +17,12 @@ $(function () {
     , dayNames: ['S', 'M', 'T', 'W', 'T', 'F', 'S']//달력의 요일 부분 Tooltip 텍스트
     // , minDate: "-1D" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
     //, maxDate: "+1M" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)
+    , beforeShow: function(input){
+      const i_offset = $(input).offset();
+      setTimeout(function(){
+        $('#ui-datepicker-div').css({"top":i_offset.top + 54});
+      })
+    }
   });
 
   //input을 datepicker로 선언
