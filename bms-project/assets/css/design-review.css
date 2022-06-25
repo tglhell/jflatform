@@ -139,8 +139,7 @@
 	height: 32px;
 }
 .review-list-filter {
-	display: flex;
-	justify-content: space-between;
+	position: relative;
 	width: 1920px;
 	max-width: 100%;
 	margin: 107px auto 50px;
@@ -151,9 +150,19 @@
 	font-size: 20px;
 	line-height: 30px;
 }
+.review-list-filter .btn-option {
+	position: absolute;
+	top: 50%;
+	right: 70px;
+	margin-top: -22px;
+}
 .review-list-filter .btn-option span {
+	padding: 10px;
 	font-size: 16px;
 	line-height: 24px;
+}
+.review-list-filter .btn-option .text {
+	display: block;
 }
 .review-list-filter .btn-option .ico {
 	display: none;

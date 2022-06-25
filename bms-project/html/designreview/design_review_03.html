@@ -65,9 +65,9 @@
 					<div class="review-filter-outer">
 						<div class="review-list-filter">
 							<div class="search-option-box">
-								<span class="start-date">04.25.2022</span>
+								<span class="search-date">04.25.2022</span>
 								<span class="inp-hpn">~</span>
-								<span class="end-date">06.25.2022</span>
+								<span class="search-date">06.25.2022</span>
 							</div>
 							<button class="btn-option">
 								<span class="text">조회 설정</span>
@@ -258,36 +258,47 @@
 </body>
 
 <script>
-	$(function () {
-		$('.review-list-filter .btn-option').on('click', function () {
+	function reviewManagementFunc () {
+		eDateTar = [$('.review-list-filter .btn-option'), $('.daterange'), $('.slt-date-range .radio'), $('.search-date')];
+		sltMon = parseInt(eDateTar[2].find('input:checked + span').text());
+		eDateTar[0].on('click', function () {
 			$(this).parent().toggleClass('on');
-			$('.review-filter-form').slideToggle((secVal[2], 'easeInOutQuart'));
+			$(this).closest('.review-filter-outer').find('.review-filter-form').slideToggle((secVal[2], 'easeInOutQuart'));
 		});
-	});
-</script>
-<script>
-	let sltMon = 6; // 기간 기본값
-	$('.slt-date-range .radio').on('click', 'input', function () {
-		let chkMon = parseInt($(this).closest('.radio').find('span').text());
-		sltMon = chkMon;
+		eDateTar[2].on('click', 'input', function () {
+			const chkMon = parseInt($(this).closest('.radio').find('span').text());
+			sltMon = chkMon;
+			dateInp ();
+		});
+		eDateTar[1].on('click', function () {
+			eDateTar[1].on('apply.daterangepicker', function(ev, picker) {
+				sDateVal = picker.startDate.format('MM.DD.YYYY');
+				eDateVal = picker.endDate.format('MM.DD.YYYY');
+				eDateTar[2].find('input').prop('checked', chkSwitch);
+				actDateInp ();
+			});
+		});
 		dateInp ();
-	});
-	
+	}
+
 	function dateInp () {
 		nDate = new Date();
 		dateRangeOptions = {};
 		chkDate = [nDate.getFullYear(), nDate.getMonth() + 1, nDate.getDate(), nDate.getMonth() + (sltMon + 1)];
 		chkDate[1] = chkDate[1] >= twoDig[0] ? chkDate[1] : '0' + chkDate[1];
 		chkDate[2]  = chkDate[2]  >= twoDig[0] ? chkDate[2] : '0' + chkDate[2];
-		let sDateVal = chkDate[1] + '.' + chkDate[2] + '.' + chkDate[0];
+		sDateVal = chkDate[1] + '.' + chkDate[2] + '.' + chkDate[0];
 		if ((parseInt(chkDate[1]) + sltMon) > 12) {
 			let sum = 12 - (parseInt(chkDate[1]) + sltMon);
 			chkDate[3] = -sum;
 			chkDate[0]++;
 		}
 		chkDate[3] = String(chkDate[3]).padStart(2, '0');
-		let eDateVal = chkDate[3] + '.' + chkDate[2] + '.' + chkDate[0];
-
+		eDateVal = chkDate[3] + '.' + chkDate[2] + '.' + chkDate[0];
+		actDateInp ();
+	}
+	
+	function actDateInp () {
 		dateRangeOptions = {
 			startDate: sDateVal,
 			endDate: eDateVal,
@@ -297,21 +308,14 @@
 			},
 			autoApply: true,
 		}
-
-		$('.daterange').daterangepicker(dateRangeOptions);
-		$('.daterange').eq(0).val(sDateVal);
-		$('.daterange').eq(1).val(eDateVal);
-		console.log('start');
-
-		$('.daterange').on('apply.daterangepicker', function(ev, picker) {
-			$('.daterange').eq(0).val(picker.startDate.format('MM.DD.YYYY'));
-			$('.daterange').eq(1).val(picker.endDate.format('MM.DD.YYYY'));
-			console.log('go');
-		});
+		eDateTar[1].daterangepicker(dateRangeOptions);
+		eDateTar[1].eq(0).val(sDateVal);
+		eDateTar[1].eq(1).val(eDateVal);
+		eDateTar[3].eq(0).text(sDateVal);
+		eDateTar[3].eq(1).text(eDateVal);
 	}
 
-	dateInp ();
-
+	reviewManagementFunc ();
 	// simplebar scroll : 커스텀 스크롤 참고
 	// https://github.com/Grsmto/simplebar
 </script>
