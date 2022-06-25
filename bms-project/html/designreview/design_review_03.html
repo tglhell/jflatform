@@ -270,7 +270,7 @@
 			sltMon = chkMon;
 			dateInp ();
 		});
-		eDateTar[1].on('click', function () {
+		eDateTar[1].on('focusin', function () {
 			eDateTar[1].on('apply.daterangepicker', function(ev, picker) {
 				sDateVal = picker.startDate.format('MM.DD.YYYY');
 				eDateVal = picker.endDate.format('MM.DD.YYYY');
