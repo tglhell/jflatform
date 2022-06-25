@@ -90,7 +90,7 @@
 }
 .switch-item-list ul {
 	overflow: hidden;
-	margin-top: -12px;
+	margin: -12px -10px 0 0;
 }
 .switch-item-list ul li {
 	display: inline-block;
