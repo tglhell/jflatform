@@ -266,28 +266,28 @@
 	});
 </script>
 <script>
-	
-	sltMon = 7;
+	let sltMon = 6; // 기간 기본값
 	$('.slt-date-range .radio').on('click', 'input', function () {
 		let chkMon = parseInt($(this).closest('.radio').find('span').text());
-		sltMon = chkMon + 1;
+		sltMon = chkMon;
 		dateInp ();
 	});
 	
 	function dateInp () {
 		nDate = new Date();
-		chkDate = [nDate.getFullYear(), nDate.getMonth() + 1, nDate.getDate(), nDate.getMonth() + sltMon];
-		chkDate[1] = chkDate[1] >=twoDig[0] ? chkDate[1] : '0' + chkDate[1];
+		dateRangeOptions = {};
+		chkDate = [nDate.getFullYear(), nDate.getMonth() + 1, nDate.getDate(), nDate.getMonth() + (sltMon + 1)];
+		chkDate[1] = chkDate[1] >= twoDig[0] ? chkDate[1] : '0' + chkDate[1];
 		chkDate[2]  = chkDate[2]  >= twoDig[0] ? chkDate[2] : '0' + chkDate[2];
 		let sDateVal = chkDate[1] + '.' + chkDate[2] + '.' + chkDate[0];
-		if ((parseInt(chkDate[1]) + (sltMon - 1)) > 12) {
-			let sum = 12 - (parseInt(chkDate[1]) + (sltMon - 1));
+		if ((parseInt(chkDate[1]) + sltMon) > 12) {
+			let sum = 12 - (parseInt(chkDate[1]) + sltMon);
 			chkDate[3] = -sum;
 			chkDate[0]++;
 		}
+		chkDate[3] = String(chkDate[3]).padStart(2, '0');
 		let eDateVal = chkDate[3] + '.' + chkDate[2] + '.' + chkDate[0];
 
-		dateRangeOptions = {};
 		dateRangeOptions = {
 			startDate: sDateVal,
 			endDate: eDateVal,
@@ -298,16 +298,21 @@
 			autoApply: true,
 		}
 
+		$('.daterange').daterangepicker(dateRangeOptions);
 		$('.daterange').eq(0).val(sDateVal);
 		$('.daterange').eq(1).val(eDateVal);
+		console.log('start');
 
 		$('.daterange').on('apply.daterangepicker', function(ev, picker) {
 			$('.daterange').eq(0).val(picker.startDate.format('MM.DD.YYYY'));
 			$('.daterange').eq(1).val(picker.endDate.format('MM.DD.YYYY'));
+			console.log('go');
 		});
-		$('.daterange').daterangepicker(dateRangeOptions);
 	}
 
 	dateInp ();
+
+	// simplebar scroll : 커스텀 스크롤 참고
+	// https://github.com/Grsmto/simplebar
 </script>
 </html>

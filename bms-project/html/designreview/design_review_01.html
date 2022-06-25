@@ -308,7 +308,7 @@
 
 <script>
 	function designReview () {
-		maxItemLeng = 10; // 체크박스 체크된 최대 갯수
+		maxItemLeng = 9; // 체크박스 체크된 최대 갯수
 		swtParent = $('.js-switch-outer');
 		$('.js-switch, .switch-placeholder').on('click', function () {
 			$(this).closest(swtParent).toggleClass('active');
@@ -333,7 +333,7 @@
 				});
 				$('.btn-item-del').on('click', function () {
 					const dataChkTxt = $(this).parent().attr('data-label');
-					const chkCnt = $(this).closest('.switch-cont'); 
+					const chkCnt = $(this).closest('.switch-cont');
 					const tarInp = chkCnt.find('.chk input');
 					$(this).parent().remove();
 					chkCnt.find('.chk span:contains(' + dataChkTxt + ')').parent().removeClass('on').find('input').prop('checked', false);
