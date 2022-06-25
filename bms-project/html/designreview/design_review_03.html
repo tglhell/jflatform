@@ -71,7 +71,7 @@
 							</div>
 							<button class="btn-option">
 								<span class="text">조회 설정</span>
-								<span class="ico"><img src="../../assets/images/common/ico_close3.svg" alt="닫기"></span>
+								<span class="ico btn-search-close"><img src="../../assets/images/common/ico_close3.svg" alt="닫기"></span>
 							</button>
 						</div>
 
@@ -127,7 +127,7 @@
 							</div>
 							<div class="cta-outer">
 								<button class="btn btn-middle-small btn-type2"><span>초기화</span></button>
-								<button class="btn btn-middle-small"><span>조회</span></button>
+								<button class="btn btn-middle-small btn-search-close"><span>조회</span></button>
 							</div>
 						</div>
 
@@ -259,11 +259,16 @@
 
 <script>
 	function reviewManagementFunc () {
-		eDateTar = [$('.review-list-filter .btn-option'), $('.daterange'), $('.slt-date-range .radio'), $('.search-date')];
+		eDateTar = [$('.review-list-filter .text'), $('.daterange'), $('.slt-date-range .radio'), $('.search-date')];
+		prntDateTar = [$('.review-filter-outer'), $('.review-list-filter'), $('.review-filter-form')];
 		sltMon = parseInt(eDateTar[2].find('input:checked + span').text());
 		eDateTar[0].on('click', function () {
-			$(this).parent().toggleClass('on');
-			$(this).closest('.review-filter-outer').find('.review-filter-form').slideToggle((secVal[2], 'easeInOutQuart'));
+			$(this).closest(prntDateTar[1]).addClass('on');
+			$(this).closest(prntDateTar[0]).find(prntDateTar[2]).slideDown((secVal[2], 'easeInOutQuart'));
+		});
+		$('.btn-search-close').on('click', function () {
+			$(this).closest(prntDateTar[0]).find(prntDateTar[1]).removeClass('on');
+			$(this).closest(prntDateTar[0]).find(prntDateTar[2]).slideUp((secVal[2], 'easeInOutQuart'));
 		});
 		eDateTar[2].on('click', 'input', function () {
 			const chkMon = parseInt($(this).closest('.radio').find('span').text());
