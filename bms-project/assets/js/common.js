@@ -113,6 +113,23 @@ $(function(){
 		});
 	});
 
+	// 갤러리&리스트 토글
+	$('.checking-list-box .common-toggle-btns p, .checking-list-box2 .common-toggle-btns p').on('click', function(e){
+		const $checkingList = $(e.currentTarget).parents('.checking-list-box, .checking-list-box2')
+		if( $(this).index() === 0){
+			$checkingList.find('.cont-type:nth-child(3)').hide().siblings('.cont-type').show();
+			$(this).addClass('active').siblings().removeClass('active');
+		}
+		else {
+			$checkingList.find('.cont-type:nth-child(2)').hide().siblings('.cont-type').show();
+			$(this).addClass('active').siblings().removeClass('active');
+		}
+	});
+
+	$('.bookmark').on('click',function() {
+		$(this).toggleClass('active');
+	});
+
 	$(window).scroll(function(){
 		if ( $(this).scrollTop() > 0 ){
 			$('.btn-top-box').addClass('active');
@@ -175,6 +192,35 @@ $(function(){
 		});
 	}
 	autocomplete();
+
+	// training video
+	function trainingVideo(){
+		const playVideo = $('.training-video .play video');
+		const playVideoTitle = $('.training-video .play p');
+
+		// video & thumbnail img switch
+		$('.training-video .play-list .thumb img').on('click', function(){
+			const videoName = $(this).attr('src').split('/').reverse()[0].split('.')[0];
+			let videoTitle = $(this).parent('.thumb').next('.tit').text();
+			const imgName = playVideo.attr('src').split('/').reverse()[0].split('.')[0];
+			let imgTitle = playVideoTitle.text();
+			const imgExtension = $(this).attr('src').split('/').reverse()[0].split('.')[1];
+			playVideo.attr('src', '../../assets/video/' + videoName + '.mp4' );
+			playVideoTitle.text(videoTitle);
+			$(this).attr('src', '../../assets/images/brand/' + imgName + '.' + imgExtension);
+			$(this).parent('.thumb').next('.tit').text(imgTitle);
+		});
+
+		// video title show & hide
+		const isPaused = playVideo.get(0)?.paused || false;
+		playVideo.on('play', (e) => {
+			playVideoTitle.css('opacity', 0)
+		});
+		playVideo.on('pause', (e) => {
+			playVideoTitle.css('opacity', 1);
+		});
+	}
+	trainingVideo();
 });
 
 function jsTab() {
@@ -325,7 +371,7 @@ function popupOpen (target) {
 		const _this = $(this).closest('.layer-popup-wrap');
 		// const tarItem = $('.layer-popup-cont > div, .layer-title,'
 		//  + '.layer-cont *:not(.btn-close, .btn-del), .bottom-fixed *:not(.btn-close)');
-		const tarItem = $('.layer-popup-body, .btn-close');
+		const tarItem = $('.layer-popup-wrap:not(.alert-popup) .layer-popup-body, .btn-close');
 		if ($(e.target).is(tarItem)) {
 			if ($(this).scrollTop() !== 0) {
 				if (hgtSize < popIdxHgt) {

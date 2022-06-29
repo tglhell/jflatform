@@ -1,0 +1,922 @@
+/* S: login 공통 */
+.login-all .tit-box h3{
+  padding-bottom: 48px;
+  text-align: center;
+  font-weight: 500;
+}
+.login-all .form-outer{
+  max-width: 448px;
+  margin: 0 auto;
+}
+/* E: login 공통 */
+
+/* S: login 페이지 */
+.login .tit-box{
+  padding-top: 153px;
+}
+.login .download-btn{
+  max-width: 448px;
+  margin: 0 auto;
+}
+.login .form-outer .input-outer-box.password{
+  margin-top: 24px;
+}
+.login .form-outer .btn-full{
+  margin: 48px 0 16px;
+}
+.login .form-outer .login-opt{
+  display: flex;
+  justify-content: center;
+}
+.login .form-outer .login-opt > p:first-child::after{
+  content:'';
+  display:inline-block;
+  width: 1px;
+  height: 16px;
+  margin: 0 16px;
+  background: #999;
+  position: relative;
+  top: 3px;
+}
+.login .download-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+  border: 1px solid #e9e9e9;
+  padding: 36px 0;
+  margin-top: 64px;
+  cursor: pointer;
+}
+.login .download-btn .cont-text2{
+  margin-right: 8px;
+}
+/* E: login 페이지 */
+
+/* S: login otp 페이지 */
+.login-otp .tit-box{
+  padding-top: 205px;
+}
+.login-otp .form-outer .caution-outer{
+  margin: 16px 0 48px;
+}
+.login-otp .form-outer .send-btn{
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.login-otp .form-outer .send-btn span{
+  margin-right: 8px;
+}
+/* E: login otp 페이지 */
+
+/* S: account approval 페이지 */
+.account-approval{
+  padding-top: 281px;
+}
+/* E: account approval 페이지 */
+
+/* S: account approval pending & approval reject 공통 */
+.approval-all .list-box{
+  max-width: 696px;
+  margin: 72px auto 0;
+}
+.approval-all .list-box .cont-text,
+.approval-all .list-box .cont-text strong{
+  color: #333;
+  text-align: left;
+}
+.approval-all .list-box .cont-box{
+  min-height: 160px;
+  width: 100%;
+  background: #fafafa;
+  margin-top: 8px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+  padding: 32px 40px;
+}
+.approval-all .complete-area .cta-outer{
+  margin-top: 48px;
+}
+/* E: account approval pending & approval reject 공통 */
+
+/* S: account approval pending 페이지 */
+.account-approval-pending{
+  padding-top: 201px;
+}
+/* E: account approval pending 페이지 */
+
+/* S: account approval reject 페이지 */
+.account-approval-reject{
+  padding-top: 201px;
+}
+/* E: account approval reject 페이지 */
+
+/* S: account disabled &  account expiration 공통 */
+.disabled-all .tit-box{
+  padding: 111px 0 119px;
+  text-align: center;
+}
+.disabled-all .tit-box h3{
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.disabled-all .form-outer{
+  max-width: 928px;
+  margin: 0 auto;
+}
+.disabled-all .form-outer .caption.htr{
+  margin: 24px 0 72px;
+}
+.disabled-all .form-outer .text-box-outer{
+  margin-top: 46px;
+}
+.disabled-all .form-outer .cta-outer{
+  margin-top: 103px;
+}
+/* E: account disabled &  account expiration 공통 */
+
+/* S: join 페이지 */
+.join .tit-box h3{
+  text-align: center;
+  font-weight: 500;
+  padding: 100px 0 154px;
+}
+.join .form-outer{
+  max-width: 928px;
+  margin: 0 auto;
+}
+.join .user-info .form-outer .input-outer-box.input-sizing{
+  max-width: 640px;
+}
+.join .user-info .form-outer .input-outer-box .first-name{
+  min-width: 280px;
+}
+.join .user-info .form-outer .error-msg.last-name{
+  left: 480px;
+}
+.join .user-info .form-outer .caption.htr{
+  margin: 8px 0 0 192px;
+}
+.join .user-info .form-outer .radio-group label{
+  margin-right: 75px;
+}
+.join .user-info .form-outer .input-outer-box.belong{
+  margin: 51px 0 56px;
+}
+.join .user-info .form-outer .select-box.select-number{
+  max-width: 96px;
+  min-width: auto;
+}
+.join .user-info .form-outer .error-msg.msg2.phone{
+  left: 297px;
+}
+.join .user-info .form-outer .input-outer-box.system-lang{
+  margin: 53px 0 77px;
+}
+.join .staff-info{
+  margin-top: 80px;
+}
+.join .staff-info .form-outer .caption.htr{
+  margin: 24px 0 72px;
+}
+.join .agree-box{
+  position: relative;
+  margin: 85px 0 80px;
+}
+.join .agree-outer{
+  background: #fafafa;
+  padding: 32px 35px;
+}
+.join .agree-outer .chk{
+  margin-bottom: 8px;
+}
+.join .agree-outer .chk span{
+ font-family: 'HyundaiSansTextKR', sans-serif;
+}
+.join .agree-outer .chk span a{
+  font-weight: 500;
+  text-decoration: underline;
+}
+/* E: join 페이지 */
+
+/* S: join complete 페이지 */
+.join-complete .complete-area{
+  margin-top: 249px;
+}
+.join-complete .complete-area .btn{
+  margin-top: 72px;
+}
+/* E: join complete 페이지 */
+
+/* S: account activation 페이지 */
+.account-activation .tit-box{
+  text-align: center;
+  padding: 154px 0 48px;
+}
+.account-activation .tit-box h3{
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.account-activation .form-outer{
+  max-width: 448px;
+  margin: 0 auto;
+}
+.account-activation .form-outer .btn-full{
+  margin-top: 48px;
+}
+/* E: account activation 페이지 */
+
+/* S: account activation02 페이지 */
+.account-activation02 .complete-area{
+  padding-top: 306px;
+}
+/* E: account activation02 페이지 */
+
+/* S: support 공통 */
+.support-all .tit-box{
+  text-align: center;
+}
+.support-all .tit-box .title{
+  /*color: #000;*/
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.support-all .tit-box .cont-text2{
+  font-family: 'HyundaiSansTextKR', sans-serif;
+  color: #777;
+}
+/* E: support 공통 */
+
+/* S: contact us 페이지 */
+.contactus .tit-box,
+.contactus-complete .tit-box{
+  padding-top: 106px;
+}
+.contactus .form-outer{
+  padding-top: 112px;
+}
+.contactus .form-outer .form-title-area{
+  margin-bottom: 48px;
+}
+.contactus .form-outer .textarea-outer{
+  margin-top: 68px;
+}
+.contactus .form-outer .uploader-outer{
+  margin-top: 68px;
+}
+.contactus .form-outer .cta-outer{
+  margin-top: 80px;
+}
+/* E: contact us 페이지 */
+
+/* S: contact us complete 페이지 */
+.contactus-complete .complete-outer{
+  margin-top: 156px;
+}
+/* E: contact us complete 페이지 */
+
+/* S: glossary 페이지 */
+.glossary .tit-box,
+.glossary-nodata .tit-box{
+  padding-top: 107px;
+}
+.glossary .search-outer,
+.glossary-nodata .search-outer {
+  padding-top: 36px;
+  position: relative;
+  max-width: 520px;
+  margin: 40px auto 0;
+}
+.glossary .search-error,
+.glossary-nodata .search-error{
+ max-width: 520px;
+  margin: 8px auto 0;
+}
+.glossary .search-outer .input-box,
+.glossary-nodata .search-outer .input-box{
+  max-width: 520px
+}
+.glossary .accordion-outer{
+  margin-top: 80px;
+}
+.glossary .pagination{
+  margin-top: 80px;
+}
+/* E: glossary 페이지 */
+
+/* S: glossary nodata 페이지 */
+.glossary-nodata .no-data-outer{
+  text-align: center;
+  margin-top: 96px;
+}
+.glossary-nodata .no-data-outer .tit{
+  font-size: 24px;
+  line-height: 32px;
+  color: #000;
+  margin-bottom: 24px;
+}
+.glossary-nodata .no-data-outer .tit span{
+  font-weight: 500;
+}
+.glossary-nodata .no-data-outer .desc{
+  font-size: 18px;
+  line-height: 28px;
+  color: #333;
+  font-family: 'HyundaiSansTextKR', sans-serif;
+  margin-bottom:64px;
+}
+/* E: glossary nodata 페이지 */
+
+/* S: inquiry list, inquiry list nodata 공통페이지 */
+.inquiry-list .tit-box,
+.inquiry-list-nodata .tit-box {
+  text-align: center;
+  padding-top: 105px;
+  padding-bottom: 72px;
+}
+.inquiry-list .tit-box h2,
+.inquiry-list-nodata .tit-box h2{
+  color: #333;
+  margin-bottom: 16px;
+}
+/* E: inquiry list, inquiry list nodata 공통페이지 */
+
+/* S: inquiry list 페이지 */
+.inquiry-list .calendar{
+  margin-bottom: 96px;
+}
+.inquiry-list .tbl-box table {
+  border-top: none;
+}
+.inquiry-list .tbl-box th,
+.inquiry-list .tbl-box td {
+  padding: 24px;
+  height: 72px;
+}
+.inquiry-list .tbl-box th {
+  background-color: #fff;
+}
+.inquiry-list .tbl-box td {
+  border-bottom: none;
+}
+.inquiry-list .tbl-box tr:hover td {
+  background-color: #fafafa;
+}
+.inquiry-list .tbl-box tr:hover td.td-tit {
+  text-decoration: underline;
+}
+.inquiry-list .tbl-box .td-tit {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.inquiry-list .tbl-box .td-num, .inquiry-list .tbl-box .td-date, .inquiry-list .tbl-box .td-state {
+  text-align: center;
+}
+.inquiry-list .tbl-box .td-state .state-receipt {
+  color: #333;
+}
+.inquiry-list .tbl-box .td-state .state-waiting {
+  color: #00AAD2;
+}
+.inquiry-list .tbl-box .td-state .state-complete {
+  color: #999;
+}
+.inquiry-list .tbl-box th {
+  background-color: #fff;
+}
+.inquiry-list .pagination {
+  margin-top: 57px;
+}
+/* E: inquiry list 페이지 */
+
+/* S: inquiry list nodata 페이지 */
+.inquiry-list-nodata .no-data {
+  padding-top: 144px;
+  padding-bottom: 64px;
+  text-align: center;
+}
+.inquiry-list-nodata .no-data p {
+  color: #333;
+}
+/* E: inquiry list nodata 페이지 */
+
+/* S: inquiry view 페이지 */
+.inquiry-view .tit-box {
+  text-align: center;
+  padding-top: 106px;
+  padding-bottom: 112px;
+}
+.inquiry-view .tit-box h2 {
+  color: #333;
+  margin-bottom: 16px;
+}
+.inquiry-view .tbl-box th {
+  text-align: left;
+}
+.inquiry-view .tbl-box td {
+  line-height: 24px;
+}
+.inquiry-view .tbl-box td.td-file {
+  padding: 33px 24px 50px;
+}
+.inquiry-view .tbl-box td.td-file .file-uploader .file-box > .table-area,
+.inquiry-view .tbl-box td.td-file .file-uploader .file-box th {
+  border-bottom-color: #d7d7d7 !important;
+}
+.inquiry-view .tbl-box td.td-file .file-uploader .file-box .file-byte {
+  top: auto;
+  bottom: 16px;
+}
+.inquiry-view .tbl-box td.td-file table {
+  border-top: none;
+  border-bottom: none;
+}
+.inquiry-view .tbl-box td.td-file td.file-name {
+  text-align: left;
+}
+.inquiry-view .tbl-box td.td-answer {
+  /*padding: 40px 16px;*/
+}
+.inquiry-view .cta-outer {
+  padding-top: 80px;
+}
+/* E: inquiry view 페이지 */
+
+/* S: info modify 페이지 */
+.info-modify .tit-box h3{
+  text-align: center;
+  font-weight: 500;
+  padding: 123px 0 138px;
+}
+.info-modify .user-info,
+.info-modify .staff-info,
+.info-modify .newsletter-info {
+  margin-bottom: 80px;
+}
+.info-modify .form-outer{
+  max-width: 928px;
+  margin: 0 auto;
+  border-bottom: 1px solid #e9e9e9;
+  padding-bottom: 32px;
+}
+.info-modify .user-info .form-outer .input-outer-box.input-sizing{
+  max-width: 640px;
+}
+.info-modify .user-info .form-outer .input-outer-box .first-name{
+  min-width: 280px;
+}
+.info-modify .user-info .form-outer .error-msg.last-name{
+  left: 480px;
+}
+.info-modify .user-info .form-outer .radio-group label{
+  margin-right: 75px;
+}
+.info-modify .user-info .form-outer .select-box.select-number{
+  max-width: 96px;
+  min-width: auto;
+}
+.info-modify .user-info .form-outer .error-msg.msg2.phone{
+  left: 297px;
+}
+.info-modify .user-info .form-outer .input-outer-box.system-lang{
+  margin: 53px 0 77px;
+}
+.info-modify .form-outer .input-box .txt-box {
+  padding-top: 14px;
+  font-size: 16px;
+  height: 46px;
+  color: #333;
+  display: block;
+}
+.info-modify .newsletter-info .form-outer .input-outer-box{
+  display: block;
+}
+.info-modify .staff-info .form-outer .input-outer-box:nth-child(2) {
+  margin-top: 24px;
+}
+.info-modify .newsletter-info .form-outer .input-outer-box:nth-child(2){
+  margin-top: 16px;
+  padding: 0 10px;
+}
+.info-modify .newsletter-info .form-title-area label {
+  color: #333;
+}
+.info-modify .newsletter-info .form-title-area label span {
+  color: #777;
+  padding-left: 8px;
+}
+.info-modify .newsletter-info .caution {
+  max-width: 928px;
+  margin: 16px auto 0;
+  font-size: 14px;
+  color: #777;
+}
+/* E: info modify 페이지 */
+
+/* S: error 공통 */
+.error-all{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0;
+}
+/* E: error 공통 */
+
+/* S: cookie 페이지 */
+.cookie .bms-content{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.7);
+  padding: 0;
+}
+.cookie .bms-content .cookie-pop{
+  width: 100%;
+  min-height: 165px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  padding: 40px 56px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+}
+.cookie .bms-content .cookie-pop .title{
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.cookie .bms-content .cookie-pop .cont-tit2{
+  font-size: 18px;
+}
+/* E: cookie 페이지 */
+
+/* S: terms 페이지, privacy 페이지 공통 */
+.terms .tit-box h2 , .privacy .tit-box h2{
+  text-align: center;
+  margin-top: 109px;
+  margin-bottom: 110px;
+  line-height: 61px;
+  /*color: #000;*/
+  font-weight: 500;
+}
+.terms .select-box , .privacy .select-box{
+  width: 320px;
+  height: 46px;
+  margin-left: auto;
+}
+.terms .cont-text , .privacy .cont-text{
+  margin-top: 56px;
+  margin-bottom: 16px;
+  color: #333;
+  font-weight: 500;
+}
+.terms-wrap > div:nth-child(2) .cont-text , .privacy-wrap > div:nth-child(2) .cont-text{
+  margin-top: 48px;
+}
+.terms .cont-text2 , .privacy .cont-text2{
+  color: #333;
+}
+.terms .cont-text-mb01 , .privacy .cont-text-mb01{
+  margin-bottom: 16px;
+}
+.terms .cont-text-mb02 , .privacy .cont-text-mb02{
+  margin-bottom: 8px;
+}
+/* E: terms 페이지, privacy 페이지 공통 */
+
+/* S: terms 페이지 */
+.terms .bylaw{
+  margin-top: 64px;
+}
+.terms .bylaw p:first-child{
+  margin-bottom: 24px;
+}
+/* E: terms 페이지 */
+
+/* S: privacy 페이지 */
+.privacy .privacy-tb-top , .privacy .privacy-tb-bot{
+  display: flex;
+}
+.privacy .privacy-tb-top p{
+  width: 25%;
+  line-height: 24px;
+  padding: 9px 12px;
+  border-bottom: 2px solid #333;
+  font-weight: 500;
+}
+.privacy .privacy-tb-bot p{
+  width: 25%;
+  line-height: 24px;
+  padding: 9px 12px;
+}
+.privacy .privacy-notice{
+  color: #777;
+}
+.privacy .privacy-tb02-top , .privacy .privacy-tb02-bot{
+  display: flex;
+}
+.privacy .privacy-tb02-top p{
+  width: 33.333333%;
+  line-height: 24px;
+  padding: 9px 12px;
+  border-bottom: 2px solid #333;
+  font-weight: 500;
+}
+.privacy .privacy-tb02-bot p{
+  width: 33.333333%;
+  line-height: 24px;
+  padding: 9px 12px;
+}
+.privacy .privacy-tb02-bot p:last-child{
+  width: 240px;
+}
+.privacy .privacy-tb03-top{
+  border-bottom: 2px solid #333;
+}
+.privacy .privacy-tb03-top p{
+  padding: 9px 12px;
+  font-weight: 500;
+}
+.privacy .privacy-tb03-bot{
+  display: flex;
+}
+.privacy .privacy-tb03-bot p{
+  padding: 9px 12px;
+}
+.privacy .privacy-tb03-bot div{
+  width: 50%;
+}
+.privacy .cont-text-mb03{
+  margin-bottom: 48px;
+}
+.privacy p.cont-text-mb03{
+  margin-bottom: 40px;
+}
+/* E: privacy 페이지 */
+
+/* S: conversion_step01 , conversion_step02 , conversion_step03 페이지 공통 */
+.conversion-step-all .tit-box h3{
+  text-align: center;
+  margin-top: 115px;
+  font-weight: 500;
+  margin-bottom: 88px;
+}
+.conversion-step-all .steps{
+  margin-bottom: 81px;
+}
+.conversion-step-all .agree-box .chk:first-child{
+  margin-bottom: 16px;
+}
+.conversion-step-all .chk .essential{
+  color: #e63312;
+}
+.conversion-step-all .chk a{
+  text-decoration: underline;
+}
+.conversion-step-all .cont-tit2{
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+/* E: conversion_step01 , conversion_step02 , conversion_step03 페이지 공통 */
+
+/* S: conversion_step01 페이지 */
+.conversion-step01 .caution{
+  margin-bottom: 112px !important;
+}
+.conversion-step01 .caution label a{
+  font-weight: 500;
+  text-decoration-line: underline;
+}
+.conversion-step01 .change-information{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+  margin-bottom: 64px;
+}
+.conversion-step01 .change-information .cont-text{
+  width: 240px;
+  margin-bottom: 16px;
+  color: #333;
+}
+.conversion-step01 .change-information .caption{
+  color: #333;
+  margin-bottom: 12px;
+}
+.conversion-step01 .change-information .brandhome-account,
+.conversion-step01 .change-information .brandhome-change{
+  background-color: #fafafa;
+  padding: 30px 42px;
+}
+.conversion-step01 .change-information .account-content,
+.conversion-step01 .change-information .change-content{
+  display: flex;
+}
+.conversion-step01 .change-information .account-content div,
+.conversion-step01 .change-information .change-content div{
+  padding-right: 44px;
+}
+.conversion-step01 .change-information .arrow{
+  display: flex;
+}
+.conversion-step01 .btn{
+  margin-top: 80px;
+}
+/* E: conversion_step01 페이지 */
+
+/* S: conversion_step02 페이지, conversion_step02_02 페이지 공통 */
+.conversion-step02 .user-account{
+  margin-bottom: 150px;
+}
+.conversion-step02 .name-box-wrap .input-box:last-child{
+  margin-left: 8px;
+  margin-right: unset;
+  width: 62%;
+}
+.conversion-step02 .radio-group label{
+  margin-top: 0;
+}
+.conversion-step02 .phone-box-wrap .input-box:last-child{
+  margin-right: unset;
+}
+.conversion-step02 .phone-box-wrap .input-box:last-child input{
+  width: 430px;
+  margin-left: 8px;
+}
+.conversion-step02 .email-box-wrap input{
+  margin-bottom: 8px;
+}
+.conversion-step02 .radio{
+  margin-right: 72px;
+}
+.conversion-step02 .radio:last-child{
+  margin-right: unset;
+}
+.conversion-step02 .staff-incharge{
+  margin-bottom: 60px;
+}
+.conversion-step02 .staff-incharge div:nth-child(2){
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.conversion-step02 .staff-incharge div:nth-child(2) .cont-text2{
+  color: #333;
+}
+.conversion-step02 .agree-box{
+  margin-bottom: 90px;
+}
+/* E: conversion_step02 페이지, conversion_step02_02 페이지 공통 */
+
+/* S: conversion_step02_02 페이지 */
+.conversion-step02 .noti{
+  margin-bottom: 72px;
+}
+/* E: conversion_step02_02 페이지 */
+
+/* S: conversion_step03 페이지 */
+.conversion-step03{
+  width: 470px;
+  margin: 0 auto;
+}
+.conversion-step03 .combine-member{
+  background-color: #fafafa;
+  margin-top: 48px;
+  margin-bottom: 80px;
+  padding: 30px 42px;
+  width: 100%;
+}
+.conversion-step03 .combine-member .cont-text{
+  margin-bottom: 18px;
+  color: #333;
+}
+.conversion-step03 .combine-member .combine-member-content{
+  display: flex;
+}
+.conversion-step03 .combine-member .combine-member-content div{
+  width: 50%;
+}
+.conversion-step03 .combine-member .combine-member-content .caption{
+  margin-bottom: 12px;
+  color: #333;
+}
+.conversion-step03 .combine-member .combine-member-content .caption:last-child{
+  margin-bottom: 0;
+}
+/* E: conversion_step03 페이지 */
+
+/* S: find_password , change_password , change_password02 페이지 공통 */
+.password-all .pw-wrap-form{
+  max-width: 370px;
+  margin: 0 auto;
+}
+.password-all .tit-box h3{
+  text-align: center;
+  margin-bottom: 24px;
+  color: #000;
+  font-weight: 500;
+}
+.password-all .tit-box p{
+  text-align: center;
+  margin-bottom: 64px;
+  color: #333;
+}
+.password-all .input-outer-box{
+  margin-top: 12px;
+  margin-bottom: 90px;
+}
+/* E: find_password , change_password , change_password02 페이지 공통 */
+
+/* S: find_password 페이지 */
+.find-password .tit-box h3{
+  margin-top: 184px;
+}
+.find-password label{
+  color: #333;
+  text-align: left;
+}
+/* E: find_password 페이지 */
+
+/* S: change_password 페이지 */
+.change-password .tit-box h3{
+  margin-top: 168px;
+}
+.change-password .new-pw{
+  margin-bottom: 32px;
+}
+/* E: change_password 페이지 */
+
+/* S: change_password02 페이지 */
+.change-password02{
+  width: 724px;
+  margin: 0 auto;
+}
+.change-password02 .tit-box h3{
+  margin-top: 106px;
+}
+.change-password02 .new-pw{
+  margin-bottom: 32px;
+}
+.change-password02 .pw-days{
+  color: #e63312;
+}
+.change-password02 .caution{
+  margin-top: 64px;
+}
+/* E: change_password02 페이지 */
+
+/* S: send_file , file_details , forward_file 페이지 공통*/
+.file-all .tit-box{
+  margin-top: 92px;
+  text-align: center;
+  margin-bottom: 106px;
+}
+.file-all .tit-box h2{
+  margin-bottom: 16px;
+  color: #333;
+}
+.file-all .calendar{
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+.file-all .calendar label{
+  font-size: 16px;
+  font-weight: 500;
+}
+.file-all .check-group span{
+  color: #333;
+}
+.file-all .cta-outer{
+  margin-top: 80px;
+}
+/* E: send_file , file_details , forward_file 페이지 공통*/
+
+/* S: file_details 페이지 */
+.send-file .textarea-box{
+  margin-bottom: 40px;
+}
+/* E: file_details 페이지 */
+
+/* S: file_details 페이지 */
+.file-details .file-download-end{
+  margin-top: 16px;
+  color: #777;
+}
+/* E: file_details 페이지 */
+
+/* S: forward_file 페이지 */
+.forward-file input::placeholder, .forward-file textarea::placeholder{
+  color: #333;
+}
+.forward-file .textarea-box{
+  margin-bottom: 40px;
+}
+/* E: forward_file 페이지 */

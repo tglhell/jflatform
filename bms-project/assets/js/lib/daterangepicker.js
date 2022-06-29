@@ -394,7 +394,7 @@
         }
 
         if ((typeof options.ranges === 'undefined' && !this.singleDatePicker) || this.alwaysShowCalendars) {
-            this.container.addClass('show-calendar');
+					this.container.addClass('show-calendar');
         }
 
         this.container.addClass('opens' + this.opens);

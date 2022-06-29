@@ -118,9 +118,6 @@
   padding-bottom: 120px;
   text-align: center;
 }
-.account-expiration .tit-box h1{
-  margin-bottom: 24px;
-}
 .account-expiration .tit-box .cont-text{
   color: #333;
 }
@@ -257,9 +254,6 @@
   text-align: center;
   padding-bottom:64px;
 }
-.account-activation .tit-box h1{
-  margin-bottom: 24px;
-}
 .account-activation .tit-box .cont-text{
   color: #333;
 }
@@ -278,12 +272,6 @@
   margin-top: 90px;
 }
 /* E: account activation 페이지 */
-
-/* S: support 공통 */
-.support-all .tit-box h1{
-  margin-bottom: 11px;
-}
-/* E: support 공통 */
 
 /* S: contact us 페이지 */
 .contactus .form-outer .form-title-area{
@@ -313,10 +301,9 @@
 }
 .glossary .search-outer,
 .glossary-nodata .search-outer {
-  padding-top: 48px;
   position: relative;
   max-width: 520px;
-  margin: 40px auto 0;
+  margin: 49px auto 0;
 }
 .glossary .search-error,
 .glossary-nodata .search-error{
@@ -364,10 +351,6 @@
   text-align: center;
   min-height: 0;
   padding-bottom: 72px;
-}
-.inquiry-list .tit-box h1,
-.inquiry-list-nodata .tit-box h1{
-  margin-bottom: 11px;
 }
 /* E: inquiry list, inquiry list nodata 공통페이지 */
 
@@ -432,9 +415,6 @@
 /* E: inquiry list nodata 페이지 */
 
 /* S: inquiry view 페이지 */
-.inquiry-view .tit-box h1 {
-  margin-bottom: 11px;
-}
 .inquiry-view .tbl-box th {
   text-align: left;
 }
@@ -505,9 +485,6 @@
 /* E: info modify 페이지 */
 
 /* S: account period extension 페이지 */
-.account-period-extension .tit-box h1{
-  margin-bottom: 11px;
-}
 .account-period-extension .cont-tit2{
   font-weight: 500;
   margin-bottom: 16px;
@@ -755,9 +732,6 @@
   max-width: 370px;
   margin: 0 auto;
 }
-.password-all .tit-box h1{
-  margin-bottom: 24px;
-}
 .password-all .tit-box p{
   margin-bottom: 64px;
 }
@@ -808,10 +782,64 @@
 }
 /* E: change_password03 페이지 */
 
-/* S: share_file_list, send_file , file_details , forward_file 페이지 공통*/
-.file-all .tit-box h1{
-  margin-bottom: 11px;
+/* S: training_video 페이지 */
+.training-video .video-outer .play{
+  height: 1080px;
+  margin-bottom: 160px;
+  position: relative;
+  background: #000;
+  display: flex;
+  align-items: center;
 }
+.training-video .video-outer .play p{
+  color: #fff;
+  font-weight: 500;
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  transition: .5s;
+}
+.training-video .video-outer .play-list{
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.training-video .video-outer .play-list li{
+  margin-right: 29px;
+}
+.training-video .video-outer .play-list li:last-child{
+  margin-right: 0;
+}
+.training-video .video-outer .play-list li .tit{
+  line-height: 26px;
+  font-weight: 500;
+  margin-top: 36px;
+}
+@media screen and (max-width: 1279px) {
+  .training-video .video-outer .play{
+    height: 720px;
+  }
+  .training-video .video-outer .play-list{
+    padding: 0 40px;
+  }
+}
+/* E: training_video 페이지 */
+
+/* S: e_learning 페이지 */
+.e-learning .tab-box-wrap .tab-box-list{
+  padding: 0 80px;
+}
+.e-learning .iframe-area{
+  height: 800px;
+}
+@media screen and (max-width: 1279px) {
+  .e-learning .tab-box-wrap .tab-box-list{
+    padding: 0 40px;
+  }
+}
+/* E: e_learning 페이지 */
+
+/* S: share_file_list, send_file , file_details , forward_file 페이지 공통*/
 .file-all .calendar{
   margin-top: 56px;
   margin-bottom: 60px;
@@ -888,9 +916,6 @@
 /* E: popup employees */
 
 /* S: bts_list , gbim_list 페이지 공통 */
-.brandreport-list .tit-box h1 {
-  margin-bottom: 11px;
-}
 .brandreport-list .brandreport-list-form .brandreport-list-tit {
   display: flex;
   justify-content: space-between;
@@ -898,6 +923,15 @@
 }
 .brandreport-list .brandreport-list-form .brandreport-list-tit h2 {
   font-weight: 500;
+}
+.brandreport-list .edit-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 48px;
+}
+.brandreport-list .edit-box img {
+  margin-left: 13px;
+  width: 15.5px;
 }
 .brandreport-list .list-contents-all {
   font-weight: 500;
@@ -914,6 +948,111 @@
 }
 .brandreport-list .checking-list .list div .list-contents-volume {
   color: #999;
-  margin-right: 60px;
+  margin-right: 74px;
+}
+.brandreport-list .checking-list .list div a {
+  position: relative;
+}
+.brandreport-list .checking-list .list div a:after {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  width: 14px;
+  height: 19px;
+  background: url(../../assets/images/common/ico_btn_download.svg) no-repeat;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.brandreport-list .checking-list-box .chk-box {
+  display: none;
+  margin-bottom: 48px;
+}
+.brandreport-list .checking-list-box .chk-box div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+.brandreport-list .checking-list-box .chk-box div > div,
+.brandreport-list .checking-list-box .chk-box a {
+  display: flex;
+  align-items: center;
+}
+.brandreport-list .checking-list-box .chk-box div > div img{
+  width: 15.5px;
+  margin-left: 13px;
+}
+.brandreport-list .checking-list-box .chk-box a img {
+  width: 14px;
+  margin-left: 13px;
+}
+.brandreport-list .btn-cancel {
+  margin-left: 50.5px;
 }
 /* E: bts_list , gbim_list 페이지 공통 */
+
+/* S: about_hyundai_brand 페이지 */
+.hyundai-brand .brand-img-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.hyundai-brand .brand-img-wrap a {
+  margin-right: 30px;
+}
+.hyundai-brand .brand-img-wrap a:last-child {
+  margin-right: 0;
+}
+.hyundai-brand .brand-img-wrap a p {
+  margin-top: 36px;
+  color: #000;
+}
+/* E: about_hyundai_brand 페이지 */
+
+/* S: about_identity_system / about_brand_book / about_communication_guidelines 공통 페이지 */
+.about-brand .brand-pdf-viewer {
+  margin-bottom: 120px;
+}
+.about-brand .tbl-list-wrap .tbl-list-tit {
+  display: inline-block;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.about-brand .tbl-list .list {
+  display: flex;
+  justify-content: space-between;
+}
+.about-brand .tbl-list .list .list-contents-volume {
+  margin-right: 74px;
+  color: #999;
+}
+.about-brand .tbl-list .list a {
+  position: relative;
+}
+.about-brand .tbl-list .list a:after {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  width: 14px;
+  height: 19px;
+  background: url(../../assets/images/common/ico_btn_download.svg) no-repeat;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.about-brand .identity-img-wrap {
+  display: flex;
+  margin-top: 160px;
+}
+.about-brand .identity-img-wrap a {
+  position: relative;
+}
+.about-brand .identity-img-wrap a p {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+}
+/* E: about_identity_system / about_brand_book / about_communication_guidelines 공통 페이지 */

@@ -355,7 +355,40 @@
 
   <!-- footer -->
   <div class="bms-footer">
-    <img src="../../assets/images/temp/@footer.png" alt="">
+    <div class="footer-inner">
+      <div class="foot-logo">
+        <img src="../../assets/images/main/foot_logo.png" alt="logo">
+      </div>
+      <div class="foot-menu">
+        <ul>
+          <li class="cont-tit2">Sitemap</li>
+          <li class="cont-tit2">Newsletter</li>
+          <li class="cont-tit2">Glossary</li>
+        </ul>
+      </div>
+      <div class="foot-contact">
+        <p class="cont-tit2">Contact Us</p>
+        <div>
+          <p class="caption htr">Brand Design Support Seoul</p>
+          <p class="caption htr">+82 2 6410 8232</p>
+        </div>
+        <div>
+          <p class="caption htr">Brand Design Support Berlin</p>
+          <p class="caption htr">+49 30 22 06 62 390</p>
+        </div>
+        <div>
+          <p class="caption htr">Global E-mail</p>
+          <p class="caption htr email">guideline@hyundai.com</p>
+        </div>
+      </div>
+      <div class="foot-terms">
+        <div class="terms-list">
+          <p class="cont-text2">Terms of Use</p>
+          <p class="privacy cont-text2">Privacy Policy</p>
+        </div>
+        <p class="copy caption htr fc-color4">© 2022 Hyundai Motor Company</p>
+      </div>
+    </div>
   </div>
   <!--//footer -->
 
@@ -370,16 +403,23 @@
 
 <script>
 	function reviewManagementFunc () {
-		eDateTar = [$('.review-list-filter .text'), $('.daterange'), $('.slt-date-range .select-items'), $('.search-date')];
+		eDateTar = [$('.review-list-filter .text'), $('.daterange'), $('.slt-date-range .select-items'), $('.search-date'), $('html, body')];
 		prntDateTar = [$('.review-filter-outer'), $('.review-list-filter'), $('.review-filter-form')];
 		sltMon = parseInt(eDateTar[2].find('li.selected').text());
+		const eDateTarWid = eDateTar[4].width();
 		eDateTar[0].on('click', function () {
+			rScrPos = $(document).scrollTop();
 			$(this).closest(prntDateTar[1]).addClass('on');
 			$(this).closest(prntDateTar[0]).find(prntDateTar[2]).addClass('active');
+			eDateTar[4].css({'position':'fixed', 'top':-rScrPos, 'width':eDateTarWid});
 		});
 		$('.btn-search-close').on('click', function () {
 			$(this).closest(prntDateTar[0]).find(prntDateTar[1]).removeClass('on');
 			$(this).closest(prntDateTar[0]).find(prntDateTar[2]).removeClass('active');
+			setObj(function () {
+				eDateTar[4].removeAttr('style');
+				eDateTar[4].scrollTop(rScrPos);
+			}, secVal[4]);
 		});
 		eDateTar[2].on('click', 'li', function () {
 			const chkMon = parseInt($(this).text());
@@ -388,11 +428,18 @@
 		});
 		$('.bms-wrap').on('click', function (e) {
 			if(!$('.filter-top-area').has(e.target).length) {
-				$('.review-filter-form').removeClass('active');
-				$('.review-list-filter').removeClass('on');
+				if (prntDateTar[2].hasClass('active'))
+				setObj(function () {
+					eDateTar[4].removeAttr('style');
+					eDateTar[4].scrollTop(rScrPos);
+				}, secVal[4]);
+				prntDateTar[1].removeClass('on');
+				prntDateTar[2].removeClass('active');
 			}
 		});
 		eDateTar[1].on('focusin', function () {
+			let mPosVal = -parseInt($('html').css('top')) + twoDig[0];
+			$('.daterangepicker').css('margin-top', mPosVal);
 			eDateTar[1].on('apply.daterangepicker', function(ev, picker) {
 				const sltBoxTar = $(this).closest('.review-filter-form').find('.slt-date-range');
 				const sltBoxTxt = sltBoxTar.find('li:nth-child(1)').text();

@@ -259,6 +259,14 @@
 	margin-right: 12px;
 }
 
+@media screen and (max-width: 1279px) {
+	/* breadclumb */
+	.breadclumb-outer {
+		padding: 0 80px;
+		padding: 0 4.16667vw;
+	}
+}
+
 
 
 

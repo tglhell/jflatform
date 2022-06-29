@@ -17,7 +17,7 @@
 
 
 
-    .checking-list-box .chk-box {
+    .checking-list-box2 .chk-box {
       display: none;
     }
   </style>
@@ -29,7 +29,34 @@
 
 <script>
   $(function() {
+    $('.checking-list-box2 .btn-edit').on('click', (e) => {
+      const $chkBox = $(e.currentTarget).parents('.checking-list-box2').find('.chk-box')
+      const $editBox = $(e.currentTarget).parents('.checking-list-box2').find('.edit-box')
+      const $listContentsTxt = $(e.currentTarget).parents('.checking-list-box2').find('.list-contents')
+      let chkHtml = "<label class='chk'>";
+      chkHtml += "<input name='chkList' type='checkbox'>";
+      chkHtml += '<span>';
+      chkHtml += '</span>';
+      chkHtml += '</label>';
 
+      $chkBox.show();
+      $editBox.hide();
+      $listContentsTxt.prepend(chkHtml);
+
+      $('.checking-list-box2 .btn-select-all').on('click', () => {
+        ($("input:checkbox[name='chkList']:checked").length === $("input:checkbox[name='chkList']").length) ? $("input:checkbox[name='chkList']").prop("checked",false) : $("input:checkbox[name='chkList']").prop("checked",true);
+      });
+
+      $('.checking-list-box2 .btn-delete').on('click', () => {
+        $("input:checkbox[name='chkList']:checked").parents('.list').remove();
+      });
+
+      $('.checking-list-box2 .btn-cancel').on('click', () => {
+        $editBox.show();
+        $chkBox.hide();
+        $listContentsTxt.children('.chk').remove();
+      });
+    });
   })();
 </script>
 <body>
@@ -49,66 +76,64 @@
   <div id="bmsContainer" class="bms-container"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
     <div class="bms-content">
 
-      <div class="cont-outer form">
+      <div class="cont-outer">
 
         <!--S: checking list-->
-        <div class="checking-list-box">
+        <div class="checking-list-box2">
           <div class="btn-area">
             <div class="edit-box">
-              <button class="btn-txt btn-edit fc-color3 btn-file">File 선택</button>
+              <button class="btn-txt btn-edit">Edit</button>
             </div>
             <div class="chk-box">
               <div>
                 <div>
-                  <span class="cont-text2 fc-color3 btn-file">선택된 File (<strong></strong>)</span>
-                  <button class="btn-txt btn-cancel fc-color3">선택 취소</button>
+                  <button class="btn-txt btn-select-all">Select All</button>
+                  <button class="btn-txt btn-cancel">Cancel</button>
+                  <button class="btn-txt btn-delete">Delete</button>
+                  <a href="" class="btn-download">
+                    <span class="cont-text2 fc-color3">선택 일괄 다운로드</span>
+                  </a>
                 </div>
-                <a href="">
-                  <span class="cont-text2 fc-color3 btn-download">선택 일괄 다운로드</span>
-                </a>
+              </div>
+            </div>
+            <div class="toggle-box">
+              <div class="select-box list-select-box">
+                <p class="selected-value">12개 노출</p>
+                <ul class="select-items">
+                  <li>option1</li>
+                  <li>option2</li>
+                  <li>option3</li>
+                </ul>
+              </div>
+              <div class="common-toggle-btns">
+                <p class="gallery-btn active"></p>
+                <p class="list-btn"></p>
               </div>
             </div>
           </div>
-          <ul class="checking-list-all"> <!-- 상위 checkbox 가 있을 경우에만 .checking-list-all 클래스명 사용 -->
+          <ul class="checking-list cont-type gallery-type thumbnail-gallery column3 active">
+            <li class="list gallery-box"><span class="list-contents"><div class="img-box" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></div></span></li>
+            <li class="list gallery-box"><span class="list-contents"><div class="img-box" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></div></span></li>
+            <li class="list gallery-box"><span class="list-contents"><div class="img-box" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></div></span></li>
+            <li class="list gallery-box"><span class="list-contents"><div class="img-box" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></div></span></li>
+            <li class="list gallery-box"><span class="list-contents"><div class="img-box" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></div></span></li>
+            <li class="list gallery-box"><span class="list-contents"><div class="img-box" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></div></span></li>
+          </ul>
+          <ul class="checking-list tbl-list cont-type list-type">
             <li class="list">
-              <span class="list-contents-all">option1</span><!-- 상위 checkbox 가 있을 경우에만 list-contents-all 클래스명 사용 -->
-              <ul class="checking-list tbl-list"><!-- 단일 checkbox list 일 경우에는 .checking-list 클래스명 사용 -->
-                <li class="list"><span class="list-contents">option1-1</span></li>
-                <li class="list"><span class="list-contents">option1-2</span></li>
-                <li class="list"><span class="list-contents">option1-3</span></li>
-              </ul>
+              <span class="list-contents">option1</span>
             </li>
             <li class="list">
-              <span class="list-contents-all">option2</span><!-- 상위 checkbox 가 있을 경우에만 list-contents-all 클래스명 사용 -->
-              <ul class="checking-list tbl-list">
-                <li class="list"><span class="list-contents">option2-1</span></li>
-                <li class="list"><span class="list-contents">option2-2</span></li>
-                <li class="list"><span class="list-contents">option2-3</span></li>
-              </ul>
+              <span class="list-contents">option2</span>
             </li>
             <li class="list">
-              <span class="list-contents-all">option3</span><!-- 상위 checkbox 가 있을 경우에만 list-contents-all 클래스명 사용 -->
-              <ul class="checking-list tbl-list">
-                <li class="list"><span class="list-contents">option2-1</span></li>
-                <li class="list"><span class="list-contents">option2-2</span></li>
-                <li class="list"><span class="list-contents">option2-3</span></li>
-              </ul>
+              <span class="list-contents">option3</span>
             </li>
             <li class="list">
-              <span class="list-contents-all">option4</span><!-- 상위 checkbox 가 있을 경우에만 list-contents-all 클래스명 사용 -->
-              <ul class="checking-list tbl-list">
-                <li class="list"><span class="list-contents">option2-1</span></li>
-                <li class="list"><span class="list-contents">option2-2</span></li>
-                <li class="list"><span class="list-contents">option2-3</span></li>
-              </ul>
+              <span class="list-contents">option4</span>
             </li>
             <li class="list">
-              <span class="list-contents-all">option5</span><!-- 상위 checkbox 가 있을 경우에만 list-contents-all 클래스명 사용 -->
-              <ul class="checking-list tbl-list">
-                <li class="list"><span class="list-contents">option2-1</span></li>
-                <li class="list"><span class="list-contents">option2-2</span></li>
-                <li class="list"><span class="list-contents">option2-3</span></li>
-              </ul>
+              <span class="list-contents">option5</span>
             </li>
           </ul>
         </div>
