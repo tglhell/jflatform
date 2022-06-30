@@ -86,20 +86,30 @@ $(function(){
 
 		$chkBox.show();
 		$editBox.hide();
-		$listContentsTxt.prepend(chkHtml);
-		$listContentsTxtAll.prepend(chkHtmlAll);
+		$listContentsTxt.prepend(chkHtml).addClass('active');
+		$listContentsTxtAll.prepend(chkHtmlAll).addClass('active');
 		$length.text('0');
 
-		$('.checking-list-box .btn-cancel').on('click', () => {
+		$('.checking-list-box .btn-cancel, .checking-list-box .common-toggle-btns, .checking-list-box2 .common-toggle-btns ').on('click', () => {
 			$editBox.show();
 			$chkBox.hide();
-			$listContentsTxt.children('.chk').remove();
-			$listContentsTxtAll.children('.chk').remove();
+			$listContentsTxt.removeClass('active').children('.chk').remove();
+			$listContentsTxtAll.removeClass('active').children('.chk').remove();
 			$length.text('0');
 		});
 		$('.checking-list-box li').on('click', () => {
-			const length = $(".checking-list input:checkbox[name='chkList']:checked").length
+			let length = $(".checking-list input:checkbox[name='chkList']:checked").length
 			$length.text(length);
+		});
+		$('.checking-list-box input:checkbox').on('click', function() {
+			const _this = $(this)
+			const _list = $(this).closest('.list')
+			if( _this.is(':checked') ) {
+				_list.addClass('dimm');
+			}
+			else {
+				_list.removeClass('dimm');
+			}
 		});
 		$('.checking-list-box .chkAll').on('click', function() {
 			const _this = $(this)

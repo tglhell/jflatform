@@ -28,20 +28,26 @@
   <!--//header -->
 
   <!-- container -->
-  <div id="bmsContainer" class="bms-container cookie"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+  <div id="bmsContainer" class="bms-container"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 --><!-- 220629 cookie 클래스 제거 -->
     <div class="bms-content">
-      <!-- S: cookie-pop -->
-      <div class="cookie-pop">
-        <div class="text-outer">
-          <h4 class="title">We uses Cookies</h4>
-          <p class="text cont-tit2">In order to give you a better service BMS uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.</p>
-        </div>
-        <button class="btn"><span>Got it</span></button>
-      </div>
-      <!-- E: cookie-pop -->
+      <!-- 220629 cookie-pop 영역 제거 -->
     </div>
   </div>
   <!--//container -->
+
+  <!-- S: 220629 cookie-pop 영역 이동 -->
+  <!-- S: cookie-pop -->
+  <div class="cookie">
+    <div class="cookie-pop">
+      <div class="text-outer">
+        <h4 class="title">We uses Cookies</h4>
+        <p class="text cont-tit2">In order to give you a better service BMS uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.</p>
+      </div>
+      <button class="btn"><span>Got it</span></button>
+    </div>
+  </div>
+  <!-- E: cookie-pop -->
+  <!-- E: 220629 cookie-pop 영역 이동 -->
 
   <!-- S: 220629 footer 수정 -->
   <!-- footer -->
@@ -52,13 +58,13 @@
       </div>
       <div class="foot-menu">
         <ul>
-          <li class="cont-tit2">Sitemap</li>
-          <li class="cont-tit2">Newsletter</li>
-          <li class="cont-tit2">Glossary</li>
+          <li class="cont-tit2"><a href="#">Sitemap</a></li>
+          <li class="cont-tit2"><a href="#">Newsletter</a></li>
+          <li class="cont-tit2"><a href="#">Glossary</a></li>
         </ul>
       </div>
       <div class="foot-contact">
-        <p class="cont-tit2">Contact Us</p>
+        <p class="cont-tit2"><a href="#">Contact Us</a></p>
         <div>
           <p class="caption htr">Brand Design Support Seoul</p>
           <p class="caption htr">+82 2 6410 8232</p>
@@ -74,8 +80,8 @@
       </div>
       <div class="foot-terms">
         <div class="terms-list">
-          <p class="cont-text2">Terms of Use</p>
-          <p class="privacy cont-text2">Privacy Policy</p>
+          <p class="cont-text2"><a href="#">Terms of Use</a></p>
+          <p class="privacy cont-text2"><a href="#">Privacy Policy</a></p>
         </div>
         <p class="copy caption htr fc-color4">© 2022 Hyundai Motor Company</p>
       </div>
