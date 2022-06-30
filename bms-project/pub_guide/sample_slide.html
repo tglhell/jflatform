@@ -53,31 +53,43 @@
       display: none;
     }
 
-    /*basic-slide*/
-    .basic-slide-wrap {
-      padding: 0 80px;
-    }
+    /*basic-slide*/ /* 220630 swiper css 수정 */
     .basic-slide .swiper-wrapper{
-      padding-top: 61px;
+      padding-top: 60px;
     }
-    .basic-slide .swiper-slide {
-      width: 31.333333%;
+    .slide-wrap .swiper-slide > a > img{
+      margin-bottom: 16px;
+      width: 100%;
     }
-    .basic-slide .swiper-button-prev:after , .basic-slide .swiper-button-next:after {
+    .slide-wrap .swiper-slide .cont-tit2{
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #333;
+      font-weight: 500;
+    }
+    .swiper-button-next.swiper-button-disabled,
+    .swiper-button-prev.swiper-button-disabled{
+      opacity: 1;
+    }
+    .basic-slide .swiper-button-prev:after ,
+    .basic-slide .swiper-button-next:after{
       display: none;
     }
     .basic-slide .swiper-button-prev {
-      top: 9px;
+      top: 15px;
       left: unset;
-      right: 32px;
+      right: 30px;
       justify-content: flex-end;
     }
     .basic-slide .swiper-button-next {
-      top: 9px;
+      top: 15px;
       right: 0;
       justify-content: flex-end;
     }
-    .basic-slide .swiper-button-prev img , .basic-slide .swiper-button-next img{
+    .basic-slide .swiper-button-prev img ,
+    .basic-slide .swiper-button-next img{
       width: 9px;
       height: 18px;
     }
@@ -163,7 +175,7 @@
         </div>
         <!-- //slide type1 -->
 
-        <!-- slide type2 -->
+        <!-- slide type2 --> <!-- 220630 swiper 구조 수정 -->
         <div class="basic-slide-wrap">
           <div class="slide-wrap basic-slide">
             <!-- Slider main container -->
@@ -172,33 +184,48 @@
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                  <img src="../assets/images/sample/sample-slide-img04.png">
-                  <p>Logo</p>
+                  <a href="#">
+                    <img src="../assets/images/library/img_media_slide01.png" alt="slideImg01">
+                    <p class="cont-tit2">20 Hyundai x BTS Global Hydrogen Campaign</p>
+                  </a>
                 </div>
                 <div class="swiper-slide">
-                  <img src="../assets/images/sample/sample-slide-img05.png">
-                  <p>Font</p>
+                  <a href="#">
+                    <img src="../assets/images/library/img_media_slide02.png" alt="slideImg02">
+                    <p class="cont-tit2">브랜드 비전 컨텐츠</p>
+                  </a>
                 </div>
                 <div class="swiper-slide">
-                  <img src="../assets/images/sample/sample-slide-img06.png">
-                  <p>Image</p>
+                  <a href="#">
+                    <img src="../assets/images/library/img_media_slide03.png" alt="slideImg03">
+                    <p class="cont-tit2">COVID 19 Contents</p>
+                  </a>
                 </div>
                 <div class="swiper-slide">
-                  <img src="../assets/images/sample/sample-slide-img04.png">
-                  <p>Image</p>
+                  <a href="#">
+                    <img src="../assets/images/library/img_media_slide04.png" alt="slideImg04">
+                    <p class="cont-tit2">Guidelines</p>
+                  </a>
                 </div>
                 <div class="swiper-slide">
-                  <img src="../assets/images/sample/sample-slide-img04.png">
-                  <p>Image</p>
+                  <a href="#">
+                    <img src="../assets/images/library/img_media_slide01.png" alt="slideImg01">
+                    <p class="cont-tit2">20 Hyundai x BTS Global Hydrogen Campaign</p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="../assets/images/library/img_media_slide02.png" alt="slideImg02">
+                    <p class="cont-tit2">브랜드 비전 컨텐츠</p>
+                  </a>
                 </div>
               </div>
-
               <!-- If we need navigation buttons -->
               <div class="swiper-button-prev">
-                <img src="../assets/images/sample/button/slide02-carousel-left.png">
+                <img src="../assets/images/sample/button/slide02-carousel-left.png" alt="prevButton">
               </div>
               <div class="swiper-button-next">
-                <img src="../assets/images/sample/button/slide02-carousel-right.png">
+                <img src="../assets/images/sample/button/slide02-carousel-right.png" alt="nextButton">
               </div>
             </div>
           </div>
@@ -287,18 +314,39 @@
   });
 
 
-  //basic-slider js
-  const basic = new Swiper('.basic-swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    slidesPerView: "3",
-    spaceBetween: 10,
+  //basic-slider js -> 220630 swiper js 수정
+  function viewSwiper(){
+    const basic = new Swiper('.basic-swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      slidesPerView: "4",
+      spaceBetween: 30,
 
-    // Navigation arrows
-    navigation: {
-      nextEl: '.basic-slide .swiper-button-next',
-      prevEl: '.basic-slide .swiper-button-prev',
-    },
+      // Navigation arrows
+      navigation: {
+        nextEl: '.basic-slide .swiper-button-next',
+        prevEl: '.basic-slide .swiper-button-prev',
+      },
+    });
+  }
+  viewSwiper();
+  $(window).on('resize', function(){
+    if (window.matchMedia("(min-width: 1279px)").matches) {
+      viewSwiper();
+    }  else {
+      const basic = new Swiper('.basic-swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        slidesPerView: "3",
+        spaceBetween: 30,
+
+        // Navigation arrows
+        navigation: {
+          nextEl: '.basic-slide .swiper-button-next',
+          prevEl: '.basic-slide .swiper-button-prev',
+        },
+      });
+    }
   });
 
 </script>

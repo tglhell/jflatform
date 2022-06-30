@@ -83,6 +83,81 @@
     .bms-footer .inner-content .foot-area p {
       width: 33%;
     }
+
+    .search-area {
+      padding: 257px 80px;
+    }
+    .search-inner {
+      padding: 0 420px 0 426px;
+    }
+    .search-inner .tit {
+      padding-bottom: 56px;
+    }
+    .search-inner input {
+      width: 100%;
+      height: 100px;
+      font-size: 100px;
+      border: none;
+      background-color: transparent;
+    }
+    .search-inner input:focus {
+      outline: none;
+    }
+    .btn-area {
+      padding: 0 80px;
+      font-size: 0;
+      display: flex;
+    }
+    .btn-area .btn {
+      position: relative;
+      width: 50%;
+      height: 140px;
+      justify-content: left;
+      transition: width 0.3s ease-in-out;
+    }
+    .btn-area .btn:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 48px;
+      transform: translateY(-50%);
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: url('../assets/images/prototype/arr_02.png') no-repeat 0 0;
+    }
+    .btn-area .btn.active {
+      width: 90%;
+    }
+    .btn-area .btn.left {
+      padding-left: 88px;
+      background-color: #F6F3F2;
+    }
+    .btn-area .btn.left span {
+      color: #000;
+    }
+    .btn-area .btn.right {
+      padding-right: 88px;
+      justify-content: right;
+    }
+    .btn-area .btn.right:before {
+      left: auto;
+      right: 48px;
+      background-image: url('../assets/images/prototype/arr_03.png');
+    }
+    .btn-area .btn:hover {
+      background-color: #002C5F;
+    }
+    .btn-area .btn:hover span {
+      text-decoration: underline;
+    }
+    .btn-area .btn.left:hover {
+      background-color: #F6F3F2;
+    }
+    .btn-area .btn span {
+      font-size: 26px;
+      font-weight: 500;
+    }
   </style>
 </head>
 
@@ -109,7 +184,19 @@
       <!-- S: cont-outer -->
       <div class="cont-outer fullcase">
         <div class="cont-inner">
-          <img src="../assets/images/prototype/main_typeB.jpg" alt="">
+          <div class="search-area">
+            <div class="search-inner">
+              <p class="tit"><img src="../assets/images/prototype/main_typeB_txt.png" alt=""></p>
+              <input type="text" placeholder="Hyundai Guidelines">
+            </div>
+          </div>
+          <div class="btn-area">
+            <a href="" class="btn left"><span>Latest content</span></a>
+            <a href="" class="btn right"><span>New Design Review Submission</span></a>
+          </div>
+          <div id="mainContent">
+            <img src="../assets/images/prototype/main_typeB.png" alt="">
+          </div>
         </div>
       </div>
       <!-- E: cont-outer -->
@@ -140,6 +227,20 @@
           $('.bms-header').removeClass('fixed');
         }
       });
+
+      $('.search-inner input').focus();
+
+      $('.btn-area .btn').on('mouseover', (e) => {
+        $(e.currentTarget).addClass('active').siblings().removeClass('active');
+      });
+      $('.btn-area').on('mouseleave', (e) => {
+        $('.btn-area .btn').removeClass('active');
+      });
+      $('.btn-area .btn.left').on('click', (e) => {
+        const _top = $('#mainContent').position().top + 50
+        $('html, body').animate({scrollTop: _top}, 500);
+        return false;
+      })
     })
   </script>
 

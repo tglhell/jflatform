@@ -396,6 +396,44 @@ function popupOpen (target) {
 	});
 }
 
+function designReview () {
+	maxItemLeng = 9; // 체크박스 체크된 최대 갯수
+	swtParent = $('.js-switch-outer');
+	$('.js-switch, .switch-placeholder').on('click', function () {
+		$(this).closest(swtParent).toggleClass('active');
+		chkLeng ($(this));
+	});
+	$('.switch-btm-box .chk').on('click', 'input', function () {
+		const thisTxt = $(this).parent().find('span').text();
+		$(this).parent().toggleClass('on');
+		chkLeng ($(this));
+		if ($(this).parent().hasClass('on')) {
+			let chkItemIdx = [$(this).closest('.check-box').index(), $(this).parent().index()];
+			let chkSwtTxt = [$(this).closest('.check-box').find('>label').text(), $(this).parent().find('span').text()];
+			$(this).closest(swtParent).find('ul').prepend('<li data-label="' + chkSwtTxt[1] + '"><strong><span>' + chkItemIdx[0] + '</span>'
+			+ chkSwtTxt[0] + '</strong> - <span>' + chkItemIdx[1] + '</span>' + chkSwtTxt[1] + '<button class="btn-item-del"></button></li>');
+			let swtItems = $(this).closest(swtParent).find('ul').children('li').get();
+			swtItems.sort(function (a, b) {
+				let swtLi = [$(a).text(), $(b).text()];
+				return(swtLi[lastY] < swtLi[irNum[lastY]])? - irNum[lastY]:(swtLi[lastY] > swtLi[irNum[lastY]])?irNum[lastY]:lastY;
+			});
+			$.each(swtItems, function (index, obj) {
+				$(this).closest(swtParent).find('ul').append(obj);
+			});
+			$('.btn-item-del').on('click', function () {
+				const dataChkTxt = $(this).parent().attr('data-label');
+				const chkCnt = $(this).closest('.switch-cont');
+				const tarInp = chkCnt.find('.chk input');
+				$(this).parent().remove();
+				chkCnt.find('.chk span:contains(' + dataChkTxt + ')').parent().removeClass('on').find('input').prop('checked', false);
+				chkLeng (tarInp);
+			});
+		} else {
+			$(this).closest(swtParent).find('ul').find('li[data-label="' + thisTxt + '"]').remove();
+		}
+	});
+}
+
 function popClose (target) {
 	target.fadeOut(secVal[3]);
 	target.find(popCont).fadeOut(secVal[3]).parent().removeAttr('style');
@@ -436,4 +474,32 @@ function cookiePop() {
 // 휴대전화번호 체크
 function telInputCheck(num){
 	num.value = num.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1'); // 숫자만
+}
+
+function chkLeng (elem) {
+	const tarSwtPrnt = elem.closest(swtParent);
+	const swtCntVal = [tarSwtPrnt.find('ul').height(), parseInt(tarSwtPrnt.find('ul').css('margin-top')),
+	tarSwtPrnt.find('.chk input:checked').length, tarSwtPrnt.find('.chk input:not(:checked)'), 'disabled'];
+	const swtCntPd = [tarSwtPrnt.find('.switch-cont'), parseInt(tarSwtPrnt.find('.switch-cont').css('padding-top'))];
+	if (swtCntVal[2] !== 0) {
+		if (!swtCntPd[0].hasClass('active')) {
+			swtCntPd[0].addClass('active').prepend('<div class="switch-item-list"><ul></ul></div>');
+		}
+		tarSwtPrnt.addClass('on');
+		switch(swtCntVal[2]) {
+			case maxItemLeng :
+				swtCntVal[3].prop(swtCntVal[4], !chkSwitch);
+				break
+			default :
+				swtCntVal[3].prop(swtCntVal[4], chkSwitch);
+				break
+		}
+	} else {
+		tarSwtPrnt.removeClass('on').find('.switch-cont').removeClass('active');
+		tarSwtPrnt.removeAttr('style').find('.switch-item-list').remove();
+	}
+	if (tarSwtPrnt.hasClass('on')) {
+		tarSwtPrnt.removeAttr('style');
+		elem.closest('.js-switch-outer.on:not(.active)').css('height', (swtCntVal[0] + swtCntVal[1]) + (swtCntPd[1] * irNum[1]));
+	}
 }

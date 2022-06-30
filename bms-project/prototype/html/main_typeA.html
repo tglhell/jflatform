@@ -51,15 +51,6 @@
     .bms-container .bms-content .cont-outer.fullcase {
       max-width: 1920px;
     }
-    .bms-container .bms-content .cont-inner .btn01 {
-      position: absolute;
-      top: 21%;
-      left: 0;
-      display: block;
-      width: 100%;
-      height: 3%;
-      z-index: 5;
-    }
     .bms-footer {
       padding: 56px 0 56px;
       background-color: #000;
@@ -82,6 +73,78 @@
     }
     .bms-footer .inner-content .foot-area p {
       width: 33%;
+    }
+    
+    .search-area {
+      position: relative;
+      background: #F6F3F2;
+      height: calc(100vh - 70px);
+      padding-bottom: 116px;
+    }
+    .search-area .search-input {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .search-area .search-input .search-inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      vertical-align: middle;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+    .search-area .search-input .search-inner .tit {
+      font-size: 108px;
+      line-height: 120px;
+      font-weight: 500;
+      color: #333;
+      transition: color 0.2s;
+    }
+    .search-area .search-input .search-inner.focus .tit {
+      color: #E4DCD3;
+    }
+    .search-area .search-input .search-inner input {
+      width: 990px;
+      height: 120px;
+      font-size: 108px;
+      text-align: center;
+      border: none;
+      background-color: transparent;
+    }
+    .search-area .search-input .search-inner input:focus {
+      outline: none;
+    }
+    .search-area .search-input .search-inner .result {
+      position: absolute;
+      top: 220px;
+      left: 50%;
+      width: 1760px;
+      transform: translateX(-50%);
+      display: none;
+    }
+    .search-area .search-input .search-inner .result .btn-close {
+      position: absolute;
+      top: 68px;
+      right: 104px;
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+    .search-area .btn {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 116px;
+    }
+    .search-area .btn:hover {
+      background-color: #002C5F;
+    }
+    .search-area .btn span {
+      font-size: 32px;
+      line-height: 36px;
+      font-weight: 500;
     }
   </style>
 </head>
@@ -109,8 +172,20 @@
       <!-- S: cont-outer -->
       <div class="cont-outer fullcase">
         <div class="cont-inner">
-          <img src="../assets/images/prototype/main_typeA.jpg" alt="">
-          <a href="./sub01.html" class="btn01"></a>
+          <div class="search-area">
+            <div class="search-input">
+              <div class="search-inner">
+                <p class="tit">Searching for</p>
+                <input type="text" placeholder="Hyundai Guidelines">
+                <div class="result">
+                  <img src="../assets/images/prototype/main_typeA_search.png" alt="">
+                  <a href="" class="btn-close"></a>
+                </div>
+              </div>
+            </div>
+            <a href="./sub01.html" class="btn"><span>New Design Review Submission</span></a>
+          </div>
+          <img src="../assets/images/prototype/main_typeA.png" alt="">
         </div>
       </div>
       <!-- E: cont-outer -->
@@ -141,6 +216,24 @@
           $('.bms-header').removeClass('fixed');
         }
       });
+
+      $('.search-area .search-input .search-inner input').focus();
+
+      $('.search-area .search-input .search-inner input').on('keyup', () => {
+        if(!!$('.search-area .search-input .search-inner input').val()) {
+          $('.search-area .search-input .search-inner .tit').animate({'color':'#E4DCD3'}, 100);
+          $('.search-area .search-input .search-inner .result').show();
+        } else {
+          $('.search-area .search-input .search-inner .tit').animate({'color':'#333'}, 100);
+          $('.search-area .search-input .search-inner .result').hide();
+        }
+      });
+
+      $('.search-area .search-input .search-inner .result .btn-close').on('click', (e) => {
+        $(e.currentTarget).parent('.result').hide();
+        $('.search-area .search-input .search-inner input').focus();
+        return false;
+      })
     })
   </script>
 </div>

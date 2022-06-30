@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <title>BMS 2.0 Prototype</title>
+  <title>Gateway - BMS Prototype</title>
 
   <link rel="stylesheet" href="./assets/css/common.css">
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -27,12 +27,10 @@
       position: relative;
       max-width: 1920px;
       margin: 0 auto;
-      padding: 0 185px;
+      padding: 0 271px;
     }
     .bms-container .bms-content .cont-outer.fullcase .cont-inner .logo {
-      position: absolute;
-      top: 120px;
-      left: 185px;
+      padding-bottom: 60px;
     }
     .intro-cont {
       display: -webkit-inline-box;
@@ -41,12 +39,46 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      width: 100%;
     }
     .intro-cont .cta-outer {
       margin-top: 66px;
     }
     .intro-cont .cta-outer .btn {
       height: 56px;
+    }
+    .gateway-type-list {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width:100%;
+      z-index: 2;
+      margin-top: 82px;
+    }
+    .gateway-type-list li {
+      position: relative;
+      min-height: 60px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      padding-left: 220px;
+      box-sizing: border-box;
+    }
+    .gateway-type-list li img {
+      width: 100%;
+    }
+    .gateway-type-list li:first-child {
+      padding-left: 0;
+    }
+    .gateway-type-list li a {
+      display: block;
+    }
+    .gateway-type-list li p.txt {
+      margin-top: 27px;
+      font-size: 16px;
+      line-height: 20px;
     }
   </style>
 </head>
@@ -64,14 +96,24 @@
       <!-- S: cont-outer -->
       <div class="cont-outer fullcase">
         <div class="cont-inner">
-          <p class="logo"><img src="./assets/images/temp/logo.png" alt=""></p>
-
           <div class="intro-cont">
             <div class="inner">
-              <h1 class="h1-title">BrandHome 2.0 Renewal<br>Prototype</h1>
-              <div class="cta-outer align-l">
-                <a href="./html/login.html" class="btn"><span>시작하기</span></a>
-              </div>
+              <p class="logo"><img src="./assets/images/temp/logo.png" alt=""></p>
+              <p class="h3-title">BrandHome 2.0 Renewal<br>Prototype</p>
+              <ul class="gateway-type-list">
+                <li>
+                  <a href="./html/login_typeA.html" target="_blank">
+                    <img src="./assets/images/prototype/img_type_a.png" alt="">
+                    <p class="txt">Login<br>Main page<br>Submit Design Review<br>About Brand</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="./html/login_typeB.html" target="_blank">
+                    <img src="./assets/images/prototype/img_type_b.png" alt="">
+                    <p class="txt">Login<br>Main page</p>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
