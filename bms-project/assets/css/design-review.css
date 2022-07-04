@@ -164,6 +164,8 @@
 }
 .review-list-filter .btn-option .text {
 	display: block;
+	padding-right: 32px;
+	background: url(../images/designreview/advanced_search.svg) no-repeat right center;
 }
 .review-list-filter .btn-option .ico {
 	display: none;
