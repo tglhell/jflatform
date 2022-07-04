@@ -409,16 +409,26 @@
 		nDate = new Date();
 		dateRangeOptions = {};
 		chkDate = [nDate.getFullYear(), nDate.getMonth() + 1, nDate.getDate(), nDate.getMonth() + (sltMon + 1)];
-		chkDate[1] = chkDate[1] >= twoDig[0] ? chkDate[1] : '0' + chkDate[1];
-		chkDate[2]  = chkDate[2]  >= twoDig[0] ? chkDate[2] : '0' + chkDate[2];
+		chkDate[1] = String(chkDate[1]).padStart(2, '0');
+		chkDate[2] = String(chkDate[2]).padStart(2, '0');
 		sDateVal = chkDate[1] + '.' + chkDate[2] + '.' + chkDate[0];
+		sLastDate = new Date(chkDate[0], chkDate[1], 0).getDate();
 		if ((parseInt(chkDate[1]) + sltMon) > 12) {
 			let sum = 12 - (parseInt(chkDate[1]) + sltMon);
 			chkDate[3] = -sum;
 			chkDate[0]++;
 		}
+		eLastDate = new Date(chkDate[0], chkDate[3], 0).getDate();
 		chkDate[3] = String(chkDate[3]).padStart(2, '0');
-		eDateVal = chkDate[3] + '.' + chkDate[2] + '.' + chkDate[0];
+		if (chkDate[2] > eLastDate) {
+			eDateVal = chkDate[3] + '.' + eLastDate + '.' + chkDate[0];
+		} else if (chkDate[2] >= sLastDate) {
+			if (sLastDate < eLastDate) {
+				eDateVal = chkDate[3] + '.' + eLastDate + '.' + chkDate[0];
+			}
+		} else {
+			eDateVal = chkDate[3] + '.' + chkDate[2] + '.' + chkDate[0];
+		}
 		actDateInp ();
 	}
 
