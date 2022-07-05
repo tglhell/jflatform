@@ -19,6 +19,33 @@
   <script type="text/javascript" src="../../assets/js/common.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/daterangepicker.js"></script>
+	<style>
+		.title {
+			text-align:center;
+			margin:auto;
+		}
+		.scroll-container{
+			scroll-behavior: smooth;
+			display: block;
+			text-align:center;
+			margin:auto;
+			overflow-y: scroll;
+			width: 350px;
+			height: 250px;
+		}
+
+		#section1 {
+			height: 100%;
+			padding-top:20px;
+			background-color: aliceblue;
+		}
+
+		#section2 {
+			height: 100%;
+			padding-top:20px;
+			background-color: yellow;
+		}
+	</style>
 </head>
 
 <body>
@@ -46,55 +73,122 @@
           <a class="breadclumb regular"><span>Review Management</span></a>
         </div>
       </div>
-      <!-- E: 20220531 cont-outer 분리(breadclumb-outer 포함)︎ -->
 
-      <!-- S: 20220531 cont-outer 분리(form 포함)︎ -->
       <div class="cont-outer fullcase">
-        <!-- S: [forward_file] -->
-				<h1 class="title">Smooth Anchor Scroll</h1>
-					<div class="scroll-container">
-						<div id="section1">
-							<h2>Section 1</h2>
-							<p>여기는 section 1입니다.</p>
-							<a href="#section2">Section 2로 부드럽게 이동해볼까요?</a>  
-						</div>
-
-						<div id="section2">
-							<h2>Section 2</h2>
-							<p>여기는 section 2입니다.</p>
-							<a href="#section1">Section 1으로 돌아가요!</a>
+				<div class="cont-outer-mid">
+					<div class="cont-mid">
+						<h1 class="title">Smooth Anchor Scroll</h1>
+						<div class="scroll-container">
+							<div id="section1">
+								<h2>Section 1</h2>
+								<p>여기는 section 1입니다.</p>
+								<a href="#section2">Section 2로 부드럽게 이동해볼까요?</a>  
+							</div>
+	
+							<div id="section2">
+								<h2>Section 2</h2>
+								<p>여기는 section 2입니다.</p>
+								<a href="#section1">Section 1으로 돌아가요!</a>
+							</div>
 						</div>
 					</div>
-        <!-- E: [forward_file] -->
-      </div>
-      <!-- E: 20220531 cont-outer 분리(form 포함)︎ -->
-    </div>
-  </div>
+	
+					<div class="right-cont-outer">
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+						<p>오른쪽</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<style>
-		.title {
-			text-align:center;
-			margin:auto;
+		.cont-outer-mid {
+			overflow: hidden;
+			display: flex;
 		}
-		.scroll-container{
-			scroll-behavior: smooth;
-			display: block;
-			text-align:center;
-			margin:auto;
-			overflow-y: scroll;
-			width: 350px;
-			height: 250px;
+		.cont-outer-mid .cont-mid {
+			min-width: 100%;
 		}
-
-		#section1 {
-			height: 100%;
-			padding-top:20px;
-			background-color: aliceblue;
-		}
-
-		#section2 {
-			height: 100%;
-			padding-top:20px;
-			background-color: yellow;
+		.cont-outer-mid .right-cont-outer {
+			position: relative;
+			left: -600px;
+			z-index: 2;
+			min-width: 600px;
+			text-align: center;
 		}
 	</style>
   <!--//container -->
