@@ -17,7 +17,6 @@
   <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
   <script type="text/javascript" src="../../assets/js/common.js"></script>
-  <script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/daterangepicker.js"></script>
 </head>
 
@@ -28,11 +27,13 @@
     <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
   </div>
 
-  <!-- header -->
   <div class="bms-header">
-    <img src="../../assets/images/temp/@header.png" alt="">
+    <div class="inner-content">
+        <p class="logo"><img src="../assets/images/temp/logo.png" alt=""></p>
+        <p class="menu"><img src="../assets/images/temp/menu.png" alt=""></p>
+        <p class="util"><img src="../assets/images/temp/util.png" alt=""></p>
+    </div>
   </div>
-  <!--//header -->
 
   <!-- container -->
   <div id="bmsContainer" class="bms-container">
@@ -239,8 +240,9 @@
 							</div>
 							<div class="cta-outer">
 								<button class="btn btn-middle-small btn-type2"><span>초기화</span></button>
-								<button class="btn btn-middle-small btn-search-close"><span>조회</span></button>
+								<button class="btn btn-middle-small"><span>조회</span></button>
 							</div>
+							<button class="btn-side-close btn-search-close"><img src="../../assets/images/designreview/popup_x.svg" alt="닫기"></button> <!-- 닫기 클래스 : btn-search-close -->
 						</div>
 						<style>
 							.review-list-filter.on .btn-option .text {
@@ -263,7 +265,7 @@
 							.review-outer-box {
 								display: flex;
 							}
-							.cont-mid {
+							.design-review-wrap.cont-mid {
 								min-width: 100%;
 							}
 							.design-review-side {
@@ -272,19 +274,19 @@
 								top: -120px;
 								right: 0;
 								z-index: 2;
-								min-width: 600px;
+								min-width: 647px;
 							}
 							.design-review-side.active {
 								transition: right .5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
-								right: 600px;
+								right: 647px;
 							}
 
 
 
 							.review-filter-form {
 								max-width: 100%;
-								height: calc(100% + 610px);
-								padding: 102px 60px;
+								height: 100%;
+								padding: 102px 80px;
 								border-left: 1px solid #e9e9e9;
 								background-color: #fff;
 							}
@@ -359,6 +361,11 @@
 							.review-filter-form .cta-outer {
 								margin-top: 64px;
 							}
+							.review-filter-form .btn-side-close {
+								position: absolute;
+								top: 104px;
+								right: 83px;
+							}
 							/* e : B type */
 						</style>
 					</div>
@@ -426,6 +433,7 @@
 		eDateTar[0].on('click', function () {
 			$(this).closest(prntDateTar[1]).addClass('on');
 			$(this).closest(prntDateTar[0]).find(prntDateTar[2]).addClass('active');
+			sideMenuHgt ($(this));
 		});
 		$('.btn-search-close').on('click', function () {
 			$(this).closest(prntDateTar[0]).find(prntDateTar[1]).removeClass('on');
@@ -506,6 +514,22 @@
 		eDateTar[1].eq(1).val(eDateVal);
 		eDateTar[3].eq(0).text(sDateVal);
 		eDateTar[3].eq(1).text(eDateVal);
+	}
+
+	function sideMenuHgt (elem) {
+		const topPosHgt =+ Math.round($('.bms-header').height() + parseInt($('.bms-container').css('padding-top')) + $('.breadclumb-outer').height());
+		const btmPosHgt =+ Math.round($('.bms-footer').height() + parseInt($('.bms-container').css('padding-bottom')) + $('.cont-mid > .cta-outer').outerHeight(true) + irNum[6]);
+		const _this = elem.closest('.review-outer-box');
+		_this.find('.design-review-side').css('top', -topPosHgt);
+		if ($(window).width() <= pc) {
+			_this.find('.review-filter-form').css('height', 'calc(100% + ' + btmPosHgt + 'px)');
+		} else {
+			_this.find('.review-filter-form').css('height', 'calc(100% + ' + btmPosHgt + 'px)');
+		}
+		console.log($('.cont-mid > .cta-outer').outerHeight(true));
+		console.log($('.bms-footer').height());
+		console.log(parseInt($('.bms-container').css('padding-bottom')));
+		console.log(btmPosHgt);
 	}
 
 	reviewManagementFunc ();
