@@ -329,6 +329,10 @@
 			$(this).closest(prntDateTar[1]).addClass('on');
 			$(this).closest(prntDateTar[0]).find(prntDateTar[2]).slideDown((secVal[2], 'easeInOutQuart'));
 		});
+		$('.btn-search-close').on('click', function () {
+			$(this).closest(prntDateTar[0]).find(prntDateTar[1]).removeClass('on');
+			$(this).closest(prntDateTar[0]).find(prntDateTar[2]).slideUp((secVal[2], 'easeInOutQuart'));
+		});
 		eDateTar[2].on('click', '.select-items', function () {
 			const _thisTar = [$(this).find('li.selected'), $('.slt-picker'), $(this).find('li.selected').text(), $(this).find('li:last-of-type').text()];
 			const chkMon = parseInt(_thisTar[0].text());
