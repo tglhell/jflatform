@@ -52,7 +52,7 @@
       <a href="coding_guide_table.html" title="TABLE">TABLE</a>
       <a href="coding_guide_tab.html" title="TAB">TAB</a>
       <!--			<a href="coding_guide_scroll.html" title="SCROLL">SCROLL</a>-->
-      <!--			<a href="coding_guide_swiper.html" title="SWIPER">SWIPER</a>-->
+      <a href="coding_guide_carousel.html" title="CAROUSEL">CAROUSEL</a>
       <a href="javascript:void(0);" title="POPUP" class="active">POPUP</a>
       <a href="coding_guide_etc.html" title="ETC">ETC</a>
     </div>
@@ -183,6 +183,265 @@
         </div>
       </div>
 
+      <h4 class="btm-border">- 툴팁 팝업</h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="tooltip-box">
+  <button class="tooltip-btn on"></button>
+  <button class="tooltip-btn off"></button>
+  <div class="tooltip">
+
+  </div>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <div class="conIn_tip">
+        .tooltip-box<br>
+        .tooltip-box의 상위 요소는 position: relative를 가지고 있어야 함.<br>
+        .tooltip-box의 상위 요소가 1column일때 .column1 클래스명 부여.<br>
+        .tooltip-box의 상위 요소가 2column일때 .column2 클래스명 부여.<br>
+        .tooltip-box의 상위 요소가 5column일때 .column5 클래스명 부여.
+      </div>
+
+
+      <div class="cont-outer">
+      <div style="width: 300px; height: 200px; position: relative; background-color: pink; display: inline-block" class="column1">
+        <div class="tooltip-box">
+          <button class="tooltip-btn on"></button>
+          <button class="tooltip-btn off"></button>
+          <div class="tooltip">
+            <div class="top-area">
+              <h4 class="cont-tit2">Asset 정보</h4>
+              <table cellpadding="0" cellspacing="0">
+                <colgroup>
+                  <col style="width:96px">
+                  <col>
+                </colgroup>
+                <tbody>
+                <tr>
+                  <th>Media 유형</th>
+                  <td>Image</td>
+                </tr>
+                <tr>
+                  <th>브랜드</th>
+                  <td>Hyundai</td>
+                </tr>
+                <tr>
+                  <th>파일명</th>
+                  <td>DSCF6902_외장 수정완y.jpg</td>
+                </tr>
+                <tr>
+                  <th>파일 크기</th>
+                  <td>5.92MB</td>
+                </tr>
+                <tr>
+                  <th>규격</th>
+                  <td>6240 x 4160px</td>
+                </tr>
+                <tr>
+                  <th>파일 추가 정보</th>
+                  <td>관련 가이드라인 정보<br>https://bms.hmc.co.kr/hyundai/manual/view/id/2735</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="bottom-area">
+              <h4 class="cont-tit2">저작권 정보</h4>
+              <table cellpadding="0" cellspacing="0">
+                <colgroup>
+                  <col style="width:96px">
+                  <col>
+                </colgroup>
+                <tbody>
+                <tr>
+                  <th>저작권 소유자</th>
+                  <td>Image</td>
+                </tr>
+                <tr>
+                  <th>이메일</th>
+                  <td>Hyundai</td>
+                </tr>
+                <tr>
+                  <th>유효기간</th>
+                  <td>DSCF6902_외장 수정완y.jpg</td>
+                </tr>
+                <tr>
+                  <th>제한 국가</th>
+                  <td>5.92MB</td>
+                </tr>
+                <tr>
+                  <th>저작권 추가 정보</th>
+                  <td>6240 x 4160px</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="cta-outer">
+              <button class="btn btn-type2"><span>자세한 정보</span></button>
+              <button class="btn"><span>다운로드</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="width: 300px; height: 200px; position: relative; background-color: pink; display: inline-block" class="column2">
+        <div class="tooltip-box">
+          <button class="tooltip-btn on"></button>
+          <button class="tooltip-btn off"></button>
+          <div class="tooltip">
+            <div class="top-area">
+              <h4 class="cont-tit2">Asset 정보</h4>
+              <table cellpadding="0" cellspacing="0">
+                <colgroup>
+                  <col style="width:96px">
+                  <col>
+                </colgroup>
+                <tbody>
+                <tr>
+                  <th>Media 유형</th>
+                  <td>Image</td>
+                </tr>
+                <tr>
+                  <th>브랜드</th>
+                  <td>Hyundai</td>
+                </tr>
+                <tr>
+                  <th>파일명</th>
+                  <td>DSCF6902_외장 수정완y.jpg</td>
+                </tr>
+                <tr>
+                  <th>파일 크기</th>
+                  <td>5.92MB</td>
+                </tr>
+                <tr>
+                  <th>규격</th>
+                  <td>6240 x 4160px</td>
+                </tr>
+                <tr>
+                  <th>파일 추가 정보</th>
+                  <td>관련 가이드라인 정보<br>https://bms.hmc.co.kr/hyundai/manual/view/id/2735</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="bottom-area">
+              <h4 class="cont-tit2">저작권 정보</h4>
+              <table cellpadding="0" cellspacing="0">
+                <colgroup>
+                  <col style="width:96px">
+                  <col>
+                </colgroup>
+                <tbody>
+                <tr>
+                  <th>저작권 소유자</th>
+                  <td>Image</td>
+                </tr>
+                <tr>
+                  <th>이메일</th>
+                  <td>Hyundai</td>
+                </tr>
+                <tr>
+                  <th>유효기간</th>
+                  <td>DSCF6902_외장 수정완y.jpg</td>
+                </tr>
+                <tr>
+                  <th>제한 국가</th>
+                  <td>5.92MB</td>
+                </tr>
+                <tr>
+                  <th>저작권 추가 정보</th>
+                  <td>6240 x 4160px</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="cta-outer">
+              <button class="btn btn-type2"><span>자세한 정보</span></button>
+              <button class="btn"><span>다운로드</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="width: 300px; height: 200px; position: relative; background-color: pink; display: inline-block" class="column5">
+        <div class="tooltip-box">
+          <button class="tooltip-btn on"></button>
+          <button class="tooltip-btn off"></button>
+          <div class="tooltip">
+            <div class="top-area">
+              <h4 class="cont-tit2">Asset 정보</h4>
+              <table cellpadding="0" cellspacing="0">
+                <colgroup>
+                  <col style="width:96px">
+                  <col>
+                </colgroup>
+                <tbody>
+                <tr>
+                  <th>Media 유형</th>
+                  <td>Image</td>
+                </tr>
+                <tr>
+                  <th>브랜드</th>
+                  <td>Hyundai</td>
+                </tr>
+                <tr>
+                  <th>파일명</th>
+                  <td>DSCF6902_외장 수정완y.jpg</td>
+                </tr>
+                <tr>
+                  <th>파일 크기</th>
+                  <td>5.92MB</td>
+                </tr>
+                <tr>
+                  <th>규격</th>
+                  <td>6240 x 4160px</td>
+                </tr>
+                <tr>
+                  <th>파일 추가 정보</th>
+                  <td>관련 가이드라인 정보<br>https://bms.hmc.co.kr/hyundai/manual/view/id/2735</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="bottom-area">
+              <h4 class="cont-tit2">저작권 정보</h4>
+              <table cellpadding="0" cellspacing="0">
+                <colgroup>
+                  <col style="width:96px">
+                  <col>
+                </colgroup>
+                <tbody>
+                <tr>
+                  <th>저작권 소유자</th>
+                  <td>Image</td>
+                </tr>
+                <tr>
+                  <th>이메일</th>
+                  <td>Hyundai</td>
+                </tr>
+                <tr>
+                  <th>유효기간</th>
+                  <td>DSCF6902_외장 수정완y.jpg</td>
+                </tr>
+                <tr>
+                  <th>제한 국가</th>
+                  <td>5.92MB</td>
+                </tr>
+                <tr>
+                  <th>저작권 추가 정보</th>
+                  <td>6240 x 4160px</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="cta-outer">
+              <button class="btn btn-type2"><span>자세한 정보</span></button>
+              <button class="btn"><span>다운로드</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
       <!-- //layer popup -->
 
     </div>

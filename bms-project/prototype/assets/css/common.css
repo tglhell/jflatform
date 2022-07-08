@@ -281,7 +281,7 @@ body::-webkit-scrollbar-track,
   background-color: rgba(0,0,0,0);
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1280px) {
   .pc-only {
     display: none;
   }
@@ -329,7 +329,7 @@ body::-webkit-scrollbar-track,
 .skip-nav a:active {
   top: 0;
 }
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1280px) {
   .skip-nav {
     display: none;
   }
@@ -377,7 +377,7 @@ body::-webkit-scrollbar-track,
   display: table-cell;
   vertical-align: middle;
 }
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1280px) {
   .bms-container .bms-content .cont-outer {
     max-width: none;
     padding: 0;

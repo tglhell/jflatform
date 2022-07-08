@@ -17,6 +17,144 @@
   <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
   <script type="text/javascript" src="../../assets/js/common.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
+	<style>
+    .bms-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      height: 70px;
+    }
+    .bms-header.fixed {
+      background-color: #fff;
+    }
+    .bms-header .inner-content {
+      position: relative;
+      max-width: 1920px;
+      margin: 0 auto;
+      padding: 0 80px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .bms-header .inner-content .logo {
+      position: absolute;
+      top: 24px;
+      left: 80px;
+    }
+    .bms-header .inner-content .menu {
+      padding-top: 20px;
+    }
+    .bms-header .inner-content .util {
+      position: absolute;
+      top: 22px;
+      right: 80px;
+    }
+    .bms-container {
+      padding-top: 70px;
+    }
+    .bms-container .bms-content .cont-outer.fullcase {
+      max-width: 1920px;
+    }
+    .bms-footer {
+      padding: 56px 0 56px;
+      background-color: #000;
+    }
+    .bms-footer .inner-content {
+      position: relative;
+      max-width: 1920px;
+      margin: 0 auto;
+      padding: 0 80px;
+      box-sizing: border-box;
+    }
+    .bms-footer .inner-content .foot-logo {
+      position: absolute;
+      top: 0;
+      left: 80px;
+    }
+    .bms-footer .inner-content .foot-area {
+      padding-left: 25%;
+      display: flex;
+    }
+    .bms-footer .inner-content .foot-area p {
+      width: 33%;
+    }
+    
+    .search-area {
+      position: relative;
+      background: #F6F3F2;
+      height: calc(100vh - 70px);
+      padding-bottom: 116px;
+    }
+    .search-area .search-input {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .search-area .search-input .search-inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      vertical-align: middle;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+    .search-area .search-input .search-inner .tit {
+      font-size: 108px;
+      line-height: 120px;
+      font-weight: 500;
+      color: #333;
+      transition: color 0.2s;
+    }
+    .search-area .search-input .search-inner.focus .tit {
+      color: #E4DCD3;
+    }
+    .search-area .search-input .search-inner input {
+      width: 990px;
+      height: 120px;
+      font-size: 108px;
+      border: none;
+      background-color: transparent;
+      font-weight: 500;
+    }
+    .search-area .search-input .search-inner input::placeholder {
+      color: #E4DCD3;
+    }
+    .search-area .search-input .search-inner input:focus {
+      outline: none;
+    }
+    .search-area .search-input .search-inner .result {
+      position: absolute;
+      top: 220px;
+      left: 50%;
+      width: 1760px;
+      transform: translateX(-50%);
+      display: none;
+    }
+    .search-area .search-input .search-inner .result .btn-close {
+      position: absolute;
+      top: 68px;
+      right: 104px;
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+    .search-area .btn {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 116px;
+    }
+    .search-area .btn:hover {
+      background-color: #002C5F;
+    }
+    .search-area .btn span {
+      font-size: 32px;
+      line-height: 36px;
+      font-weight: 500;
+    }
+  </style>
 </head>
 
 <body>
@@ -28,7 +166,11 @@
 
   <!-- header -->
   <div class="bms-header">
-    <img src="../../assets/images/temp/@header.png" alt="">
+    <div class="inner-content">
+        <p class="logo"><img src="../../assets/images/temp/@logo.png" alt=""></p>
+        <p class="menu"><img src="../../assets/images/temp/@menu.png" alt=""></p>
+        <p class="util"><img src="../../assets/images/temp/@util.png" alt=""></p>
+    </div>
   </div>
   <!--//header -->
 
@@ -177,7 +319,7 @@
 								<div class="switch-cont">
 									<div class="switch-btm-box">
 										<div class="input-outer-box row-type check-box">
-											<label for="rvTgChk4">Hyundai</label>
+											<label for="rvTgChk9">Hyundai</label>
 											<div class="check-group"><!-- 에러시 + val-error -->
 												<label class="chk"><input type="checkbox"><span>Accent(RB)</span></label>
 												<label class="chk"><input type="checkbox"><span>Aslan(AG)</span></label>
@@ -330,6 +472,18 @@
 <script>
 	designReview ();
 	customSelect ();
+</script>
+<script>
+	$(function(){
+		$(window).scroll(function(){
+			if ( $(this).scrollTop() > 0 ){
+				$('.bms-header').addClass('fixed');
+			}
+			else {
+				$('.bms-header').removeClass('fixed');
+			}
+		});
+	})
 </script>
 
 </html>

@@ -1,16 +1,3 @@
-jQuery.event.add(window, 'load', function () {
-	// masonry
-	if($('.masonry').length !== 0) {
-		$('.masonry .grid').masonry({
-			itemSelector: '.grid-item',
-			// columnWidth: '.grid-sizer',
-			gutter: 15,
-			percentPosition: true,
-			horizontalOrder: true
-		});
-	}
-});
-
 $(function(){
 	const tabTar = $('.js-tab');
 	const inpItem = $('.input-item');
@@ -96,6 +83,7 @@ $(function(){
 			$listContentsTxt.removeClass('active').children('.chk').remove();
 			$listContentsTxtAll.removeClass('active').children('.chk').remove();
 			$length.text('0');
+			$('.checking-list-box .list').removeClass('dimm');
 		});
 		$('.checking-list-box li').on('click', () => {
 			let length = $(".checking-list input:checkbox[name='chkList']:checked").length
@@ -123,15 +111,64 @@ $(function(){
 		});
 	});
 
+	$(document).on('click','.checking-list-box3 .btn-edit', (e) => {
+		const $chkBox = $(e.currentTarget).parents('.checking-list-box3').find('.chk-box')
+		const $editBox = $(e.currentTarget).parents('.checking-list-box3').find('.edit-box')
+		const $listContentsTxt = $(e.currentTarget).parents('.checking-list-box3').find('.swiper-slide')
+		const $length = $chkBox.find('strong');
+		let chkHtml = "<label class='chk'>";
+		chkHtml += "<input name='chkList' type='checkbox'>";
+		chkHtml += '<span>';
+		chkHtml += '</span>';
+		chkHtml += '</label>';
+
+		$chkBox.show();
+		$editBox.hide();
+		$listContentsTxt.prepend(chkHtml).addClass('active');
+		$length.text('0');
+
+		$('.checking-list-box3 .btn-cancel, .checking-list-box3 .common-toggle-btns').on('click', () => {
+			$editBox.show();
+			$chkBox.hide();
+			$listContentsTxt.removeClass('active').children('.chk').remove();
+			$length.text('0');
+			// $('.checking-list-box3 .swiper-slide a').removeClass('dimm');
+		});
+		$('.checking-list-box3 .swiper-wrapper').on('click', () => {
+			let length = $(".checking-list-box3  input:checkbox[name='chkList']:checked").length
+			$length.text(length);
+		});
+		$('.checking-list-box3 input:checkbox').on('click', function() {
+			const _this = $(this)
+			const _list = $(this).closest('.swiper-slide')
+			if( _this.is(':checked') ) {
+				_list.addClass('dimm');
+			}
+			else {
+				_list.removeClass('dimm');
+			}
+		});
+		// $('.checking-list-box .chkAll').on('click', function() {
+		// 	const _this = $(this)
+		// 	const _chk = $(this).parents('.list-contents-all').siblings('.checking-list').find('input:checkbox')
+		// 	if( _this.is(':checked') ) {
+		// 		_chk.prop('checked',true)
+		// 	}
+		// 	else {
+		// 		_chk.prop('checked',false)
+		// 	}
+		// });
+	});
+
 	// 갤러리&리스트 토글
 	$('.checking-list-box .common-toggle-btns p, .checking-list-box2 .common-toggle-btns p').on('click', function(e){
 		const $checkingList = $(e.currentTarget).parents('.checking-list-box, .checking-list-box2')
 		if( $(this).index() === 0){
-			$checkingList.find('.cont-type:nth-child(3)').hide().siblings('.cont-type').show();
+			$checkingList.find('.list-type').hide().siblings('.cont-type').show();
 			$(this).addClass('active').siblings().removeClass('active');
 		}
 		else {
-			$checkingList.find('.cont-type:nth-child(2)').hide().siblings('.cont-type').show();
+			$checkingList.find('.gallery-type').hide().siblings('.cont-type').show();
 			$(this).addClass('active').siblings().removeClass('active');
 		}
 	});
@@ -202,6 +239,36 @@ $(function(){
 		});
 	}
 	autocomplete();
+
+	// tooltip-box
+	function tooltip () {
+		$('.tooltip-btn.on').on('click', function(){
+			const width = $('.cont-outer').width() / 2
+			const offsetL = $(this).offset().left
+			const _this = $(this)
+			if( width < offsetL ) {
+				_this.siblings('.tooltip').css({"right":"0","display":"block"});
+			}
+			else {
+				_this.siblings('.tooltip').css({"left":"0","display":"block"});
+			}
+			_this.hide();
+			_this.siblings('.tooltip-btn.off').show();
+			_this.parents().siblings().find('.tooltip, .tooltip-btn.off').hide();
+			_this.parents().siblings().find('.tooltip-btn.on').show();
+		});
+		$('.tooltip-btn.off').on('click', function(){
+			const _this = $(this)
+			_this.hide();
+			_this.siblings('.tooltip').hide();
+			_this.siblings('.tooltip-btn.on').show();
+		});
+		$('.swiper-button-next, .swiper-button-prev, .checking-list-box3 .btn-area').on('click', () => {
+			$('.tooltip, .tooltip-btn.off').hide();
+			$('.tooltip-btn.on').show();
+		});
+	}
+	tooltip();
 
 	// training video
 	function trainingVideo(){
@@ -294,6 +361,7 @@ function designSelect(select) {
 		});
 	});
 }
+
 
 function customSelect() {
 	designSelect($('div.select-box'));
@@ -503,3 +571,6 @@ function chkLeng (elem) {
 		elem.closest('.js-switch-outer.on:not(.active)').css('height', (swtCntVal[0] + swtCntVal[1]) + (swtCntPd[1] * irNum[1]));
 	}
 }
+
+
+

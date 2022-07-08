@@ -88,7 +88,8 @@
       padding: 257px 80px;
     }
     .search-inner {
-      padding: 0 420px 0 426px;
+      width: 950px;
+      margin: 0 auto;
     }
     .search-inner .tit {
       padding-bottom: 56px;
@@ -98,7 +99,11 @@
       height: 100px;
       font-size: 100px;
       border: none;
+      font-weight: 500;
       background-color: transparent;
+    }
+    .search-inner input::placeholder {
+      color: #F6F3F2;
     }
     .search-inner input:focus {
       outline: none;
@@ -113,7 +118,12 @@
       width: 50%;
       height: 140px;
       justify-content: left;
-      transition: width 0.3s ease-in-out;
+      background-color: #F6F3F2;
+      transition: all 0.3s ease-in-out;
+    }
+    .btn-area .btn span {
+      color: #000;
+      transition: all 0.3s ease-in-out;
     }
     .btn-area .btn:before {
       content: '';
@@ -125,16 +135,13 @@
       width: 24px;
       height: 24px;
       background: url('../assets/images/prototype/arr_02.png') no-repeat 0 0;
+      transition: all 0.3s ease-in-out;
     }
     .btn-area .btn.active {
       width: 90%;
     }
     .btn-area .btn.left {
       padding-left: 88px;
-      background-color: #F6F3F2;
-    }
-    .btn-area .btn.left span {
-      color: #000;
     }
     .btn-area .btn.right {
       padding-right: 88px;
@@ -145,18 +152,22 @@
       right: 48px;
       background-image: url('../assets/images/prototype/arr_03.png');
     }
+    .btn-area .btn span {
+      font-size: 26px;
+      font-weight: 500;
+    }
     .btn-area .btn:hover {
       background-color: #002C5F;
     }
     .btn-area .btn:hover span {
       text-decoration: underline;
+      color: #fff;
     }
-    .btn-area .btn.left:hover {
-      background-color: #F6F3F2;
+    .btn-area .btn:hover:before {
+      background-image: url('../assets/images/prototype/arr_02_hover.png');
     }
-    .btn-area .btn span {
-      font-size: 26px;
-      font-weight: 500;
+    .btn-area .btn.right:hover:before {
+      background-image: url('../assets/images/prototype/arr_03_hover.png');
     }
   </style>
 </head>

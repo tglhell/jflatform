@@ -1,9 +1,4 @@
 /* design_review_01 */
-.design-review-wrap .tit-box .cont-text2 {
-	margin-top: 11px;
-	color: #333;
-	text-align: center;
-}
 .row-type.radio-box > label {
 	display: inline-block;
 }
@@ -119,3 +114,5 @@
 .design-review-wrap .complete-outer {
 	margin-top: 120px;
 }
+
+/* design_review_03 */
