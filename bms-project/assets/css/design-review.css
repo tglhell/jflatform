@@ -213,6 +213,9 @@
 .review-filter-form.date-fix-type > .input-outer-box {
 	flex-wrap: wrap;
 }
+.review-filter-form.date-fix-type .input-outer-box.row-type:first-child {
+	width: 33.34%;
+}
 .review-filter-form.date-fix-type .input-outer-box.row-type {
 	justify-content: flex-start;
 	width: 33.33%;
@@ -237,16 +240,9 @@
 	margin: 0 auto;
 }
 .review-list-box .review-list-item {
-	padding: 51px 0 50px;
+	padding: 51px 80px 50px;
+	padding: 51px 4.16667vw 50px;
 	border-bottom: 1px solid #ddd;
-}
-.review-list-box .review-list-item .list-type {
-	padding: 0 83px;
-	padding: 0 4.32291vw;
-}
-.review-list-box .review-list-item .list-type .ico {
-	display: inline-block;
-	margin-right: 42px;
 }
 .review-list-box .review-list-item .list-type span {
 	display: inline-block;
@@ -254,10 +250,6 @@
 	font-weight: 700;
 	line-height: 20px;
 	vertical-align: middle;
-}
-.review-list-box .review-list-item .list-text-area {
-	padding: 0 147px;
-	padding: 0 7.65625vw;
 }
 .review-list-box .review-list-item .list-text-area .list-tit {
 	font-size: 46px;
