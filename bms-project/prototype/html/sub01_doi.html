@@ -40,7 +40,7 @@
       padding: 24px 0;
     }
     .bms-header .inner-content .menu {
-      padding: 20px 271px 0 271px;
+      padding-top: 20px;
       text-align: left;
     }
     .bms-header .inner-content .menu > ul {
@@ -114,9 +114,10 @@
     }
     .bms-header .inner-content .menu .sub-menu .sub-inner > .cont-text2 {
       display: block;
-      margin-bottom: 27px;
+      margin-bottom: 24px;
       font-weight: 500;
       line-height: 16px;
+      color: #000;
     }
     .bms-header .inner-content .menu .sub-menu .sub-inner .sub-inner-contwrap {
       display: flex;
@@ -141,6 +142,8 @@
       display: block;
       width: fit-content;
       position: relative;
+      color: #000;
+      line-height: 16px;
     }
     .bms-header .inner-content .menu .sub-menu .sub-inner-contwrap li a:hover {
       color: #00AAD2 !important;
@@ -154,6 +157,9 @@
       left: 0;
       bottom: 3px;
       background-color: #00aad2;
+    }
+    .bms-header .inner-content .menu .sub-menu .sub-inner-contwrap li li + li {
+      margin-top: 12px;
     }
     .bms-header .inner-content .menu .sub-menu > div .btn-sub {
       position: absolute;
@@ -179,7 +185,7 @@
       position: relative;
       display: block;
       margin-top: 27px;
-      margin-right: 51px;
+      margin-right: 35px;
     }
     .bms-header .inner-content .util .gnb-bookmark:after {
       position: absolute;
@@ -188,52 +194,69 @@
       height: 24px;
       top: 0;
       left: 0;
-      background: url("../../assets/images/main/header_bookmark.svg") no-repeat;
+      background: url("../../assets/images/common/ico_bookmark02.svg") no-repeat;
     }
-    .bms-header .inner-content .util .language-menu {
-      margin-top: 14px;
-      width: 70px;
+    .bms-header .inner-content .util .select-lang {
+      margin-top: 17px;
+      min-width: 0;
+      width: 72px;
       height: 40px;
-      overflow-y: hidden;
-      border: 1px solid #ccc;
-      cursor: pointer;
-      background-color: #fff;
-      position: relative;
       z-index: 11;
     }
-    .bms-header .inner-content .util .language-menu.active {
-      height: auto;
-      overflow: unset;
-    }
-    .bms-header .inner-content .util .language-menu li {
-      display: inline-block;
-      width: 100%;
-      padding: 9px 32px 7px 18px;
-    }
-    .bms-header .inner-content .util .language-menu li a {
-      display: inline-block;
+    .bms-header .inner-content .util .select-lang.select-box .selected-value {
       position: relative;
-      color: #777;
-    }
-    .bms-header .inner-content .util .language-menu li a:hover {
-      color: #00AAD2;
-    }
-    .bms-header .inner-content .util .language-menu li a.select {
+      height: 40px;
+      padding:9px 32px 7px 16px;
       color: #333;
+      font-size: 16px;
+      border: none;
     }
-    .bms-header .inner-content .util .language-menu li:first-child a:after {
+    .bms-header .inner-content .util .select-lang.select-box.active .selected-value:before {
+      content:'';
       position: absolute;
-      content: '';
-      top: 50%;
-      right: -16px;
-      transform: translateY(-50%);
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 40px;
+      border: 1px solid #ccc;
+      border-bottom: none;
+      box-sizing: border-box;
+    }
+    .bms-header .inner-content .util .select-lang.select-box .selected-value::after {
+      top: 17px;
+      right: 16px;
       width: 7px;
       height: 3.5px;
-      background: url("../../assets/images/main/ico_gnb_language_bar.svg") no-repeat center;
+      background: url("../../assets/images/common/ico_gnb_language_bar.svg") no-repeat center;
     }
-    .bms-header .inner-content .util .logout {
+    .bms-header .inner-content .util .select-lang.select-box .select-items {
+      top: 40px;
+      border-color: #ccc;
+      background-color: transparent;
+    }
+    .bms-header .inner-content .util .select-lang.select-box .select-items li {
+      height: 40px;
+      background-color: #fff;
+      padding: 9px 0 7px 16px;
+      min-height: 0;
+      font-size: 16px;
+      text-align: left;
+      color: #777;
+    }
+    .bms-header .inner-content .util .select-lang.select-box .select-items li:hover {
+      color: #00AAD2;
+      font-weight: 400;
+    }
+    .bms-header .inner-content .util .select-lang.select-box .select-items li + li {
+      border-top: none;
+    }
+    .bms-header .inner-content .util .select-lang.select-box .select-items li.selected {
+      display: none;
+    }
+    .bms-header .inner-content .util .link-login {
       display: inline-block;
-      margin-left: 32px;
+      margin-left: 16px;
       margin-top: 24px;
     }
     .bms-header .inner-content .util .gnb-hamburger {
@@ -269,7 +292,7 @@
 
     .bms-header .right-gnb {
       position: fixed;
-      top: 70px;
+      top: 0;
       right: -100%;
       width: 100%;
       height: 100%;
@@ -279,143 +302,7 @@
       border-bottom: 1px solid #e9e9e9;
       transition: all 0.3s;
       overflow-y: scroll;
-    }
-    .bms-header .right-gnb.active {
-      right: 0;
-    }
-    .bms-header .right-gnb .right-gnb-close {
-      position: absolute;
-      top: 26px;
-      right: 80px;
-    }
-    .bms-header .right-gnb .right-gnb-close:after {
-      position: absolute;
-      content: '';
-      top: 0;
-      left: 0;
-      width: 24px;
-      height: 24px;
-      background: url("../../assets/images/common/ico_close4.svg") no-repeat center;
-    }
-    .bms-header .right-gnb .right-gnb-wrap {
-      padding-top: 66px;
-    }
-    .bms-header .right-gnb .right-gnb-content {
-      display: flex;
-      width: 100%;
-      margin-bottom: 88px;
-    }
-    .bms-header .right-gnb .right-gnb-content h5 {
-      min-width: 362px;
-    }
-    .bms-header .right-gnb .right-gnb-content > div {
-      width: 100%;
-    }
-    .bms-header .right-gnb .right-gnb-content > div > ul {
-      width: calc((100% - 100px) / 3);
-      float: left;
-    }
-    .bms-header .right-gnb .right-gnb-content:nth-child(2) {
-      margin-bottom: unset;
-    }
-    .bms-header .right-gnb .right-gnb-content:nth-child(2) div > div {
-      margin-bottom: 40px;
-    }
-    .bms-header .right-gnb .right-gnb-content:nth-child(2) .dcm-box {
-      width: 100px;
-    }
-    .bms-header .right-gnb .right-gnb-content:nth-child(2) .dcm:after {
-      position: absolute;
-      content: '';
-      top: 50%;
-      right: -18px;
-      transform: translateY(-50%);
-      width: 14px;
-      height: 14px;
-      background: url("../../assets/images/main/ico_gnb_link.svg") no-repeat;
-    }
-    .bms-header .right-gnb .copyright-box {
-      width: fit-content;
-      padding-left: 362px;
-      margin-bottom: 88px;
-    }
-    .bms-header .right-gnb .right-gnb-content ul li {
-      overflow: hidden;
-    }
-    .bms-header .right-gnb .right-gnb-content ul li a {
-      position: relative;
-      display: inline-block;
-    }
-    .bms-header .right-gnb .right-gnb-accordion {
-      width: calc((100% - 100px) / 3);
-      float: left;
-    }
-    .bms-header .right-gnb .right-gnb-accordion .menu-more:after {
-      position: absolute;
-      top: 50%;
-      right: -14px;
-      transform: translateY(-50%);
-      content: '';
-      width: 12px;
-      height: 12px;
-      background: url("../../assets/images/main/ico_gnb_more.svg") no-repeat;
-      margin-left: 7px;
-    }
-    .bms-header .right-gnb .right-gnb-accordion .menu-more.active:after {
-      background: url("../../assets/images/main/ico_gnb_hide.svg") no-repeat center;
-    }
-    .bms-header .right-gnb .right-gnb-content .menu-more-content {
-      height: 0;
-    }
-    .bms-header .right-gnb .right-gnb-content .menu-more-content li {
-      padding-left: 11px;
-    }
-    .bms-header .right-gnb .right-gnb-accordion .menu-more-content.active{
-      height: auto;
-      margin-bottom: 26px;
-    }
-    .bms-header .right-gnb .right-gnb-content .menu-more-content li a:hover {
-      color: #00AAD2 !important;
-    }
-    .bms-header .right-gnb .right-gnb-content .menu-more-content li a:hover:before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      bottom: 0;
-      left: 0;
-      background-color: #00aad2;
-    }
-    .bms-header .right-gnb .right-gnb-content div .right-gnb-hover {
-      margin-bottom: 12px;
-    }
-    .bms-header .right-gnb .right-gnb-content div .right-gnb-hover:hover {
-      color: #00AAD2 !important;
-    }
-    .bms-header .right-gnb .right-gnb-content div .right-gnb-hover:hover:before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      bottom: 0;
-      left: 0;
-      background-color: #00aad2;
-    }
-    .bms-header .right-gnb .right-gnb-bold {
-      font-weight: 500;
-      margin-bottom: 24px;
-      position: relative;
-    }
-
-    @media screen and (min-width: 1980px) {
-      .bms-header .inner-content .menu {
-        padding: 20px 261px 0 261px;
-      }
-    }
-    @media screen and (max-width: 1900px) {
-      .bms-header .inner-content .menu {
-        padding: 20px 95px 0;
-      }
+      z-index: 20;
     }
 
     @media screen and (max-width: 1580px) {
@@ -431,8 +318,135 @@
       .bms-header .inner-content .util .gnb-hamburger {
         display: block;
       }
+
+      .bms-header .right-gnb.active {
+        right: 0;
+      }
+      .bms-header .right-gnb .right-gnb-close {
+        position: absolute;
+        top: 26px;
+        right: 80px;
+      }
+      .bms-header .right-gnb .right-gnb-close:after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        background: url("../../assets/images/common/ico_close4.svg") no-repeat center;
+      }
+      .bms-header .right-gnb .right-gnb-wrap {
+        padding-top: 66px;
+      }
+      .bms-header .right-gnb .right-gnb-content {
+        display: flex;
+        width: 100%;
+        margin-bottom: 88px;
+      }
+      .bms-header .right-gnb .right-gnb-content h5 {
+        min-width: 362px;
+      }
+      .bms-header .right-gnb .right-gnb-content > div {
+        width: 100%;
+      }
+      .bms-header .right-gnb .right-gnb-content > div > ul {
+        width: calc((100% - 100px) / 3);
+        float: left;
+      }
+      .bms-header .right-gnb .right-gnb-content:nth-child(2) {
+        margin-bottom: unset;
+      }
       .bms-header .right-gnb .right-gnb-content:nth-child(2) div {
         margin-bottom: 40px;
+      }
+      .bms-header .right-gnb .right-gnb-content:nth-child(2) div > div {
+        margin-bottom: 40px;
+      }
+      .bms-header .right-gnb .right-gnb-content:nth-child(2) .dcm-box {
+        width: 100px;
+      }
+      .bms-header .right-gnb .right-gnb-content:nth-child(2) .dcm:after {
+        position: absolute;
+        content: '';
+        top: 50%;
+        right: -18px;
+        transform: translateY(-50%);
+        width: 14px;
+        height: 14px;
+        background: url("../../assets/images/main/ico_gnb_link.svg") no-repeat;
+      }
+      .bms-header .right-gnb .copyright-box {
+        width: fit-content;
+        padding-left: 362px;
+        margin-bottom: 88px;
+      }
+      .bms-header .right-gnb .right-gnb-content ul li {
+        overflow: hidden;
+      }
+      .bms-header .right-gnb .right-gnb-content ul li a {
+        position: relative;
+        display: inline-block;
+      }
+      .bms-header .right-gnb .right-gnb-accordion {
+        width: calc((100% - 100px) / 3);
+        float: left;
+      }
+      .bms-header .right-gnb .right-gnb-accordion .menu-more:after {
+        position: absolute;
+        top: 50%;
+        right: -14px;
+        transform: translateY(-50%);
+        content: '';
+        width: 12px;
+        height: 12px;
+        background: url("../../assets/images/main/ico_gnb_more.svg") no-repeat;
+        margin-left: 7px;
+      }
+      .bms-header .right-gnb .right-gnb-accordion .menu-more.active:after {
+        background: url("../../assets/images/main/ico_gnb_hide.svg") no-repeat center;
+      }
+      .bms-header .right-gnb .right-gnb-content .menu-more-content {
+        height: 0;
+      }
+      .bms-header .right-gnb .right-gnb-content .menu-more-content li {
+        padding-left: 11px;
+      }
+      .bms-header .right-gnb .right-gnb-accordion .menu-more-content.active{
+        height: auto;
+        margin-bottom: 26px;
+      }
+      .bms-header .right-gnb .right-gnb-content .menu-more-content li a:hover {
+        color: #00AAD2 !important;
+      }
+      .bms-header .right-gnb .right-gnb-content .menu-more-content li a:hover:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #00aad2;
+      }
+      .bms-header .right-gnb .right-gnb-content div .right-gnb-hover {
+        margin-bottom: 12px;
+      }
+      .bms-header .right-gnb .right-gnb-content div .right-gnb-hover:hover {
+        color: #00AAD2 !important;
+      }
+      .bms-header .right-gnb .right-gnb-content div .right-gnb-hover:hover:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #00aad2;
+      }
+      .bms-header .right-gnb .right-gnb-bold {
+        font-weight: 500;
+        margin-bottom: 24px;
+        position: relative;
       }
     }
 
@@ -447,6 +461,9 @@
         display: inline-block;
       }
       .bms-header .right-gnb .right-gnb-content div > ul {
+        width: 278px;
+      }
+      .bms-header .right-gnb .right-gnb-accordion {
         width: 278px;
       }
       .bms-header .right-gnb .right-gnb-content:nth-child(2) .dcm-box {
@@ -511,74 +528,74 @@
   <!-- header -->
   <div class="bms-header">
     <div class="inner-content">
-      <a href="" class="logo" target="self"><img src="../assets/images/temp/logo.png" alt=""></a>
+      <a href="" class="logo"><img src="../../assets/images/common/logo.png" alt=""></a>
       <div class="menu">
         <ul>
           <li class="menu-first-li">
             <a href="">Brand Guidelines</a>
             <ul class="sub-menu">
               <li class="sub-inner">
-                <a href="" class="cont-text2" target="self">About Brand</a>
+                <a href="" class="cont-text2">About Brand</a>
                 <ul class="sub-inner-contwrap">
-                  <li><a href="" class="cont-text2" target="self">Hyundai brand</a></li>
-                  <li><a href="" class="cont-text2" target="self">N brand</a></li>
-                  <li><a href="" class="cont-text2" target="self">Truck & Bus</a></li>
+                  <li><a href="" class="cont-text2">Hyundai brand</a></li>
+                  <li><a href="" class="cont-text2">N brand</a></li>
+                  <li><a href="" class="cont-text2">Truck & Bus</a></li>
                 </ul>
               </li>
               <li class="sub-inner">
-                <a href="" class="cont-text2" target="self">Brand Image Guidelines</a>
+                <a href="" class="cont-text2">Brand Image Guidelines</a>
                 <ul class="sub-inner-contwrap">
                   <li>
-                    <a href="" class="cont-text2 sub-inner-bold" target="self">Hyundai</a>
+                    <a href="" class="cont-text2 sub-inner-bold">Hyundai</a>
                     <ul>
-                      <li><a href="" class="cont-text2 fc-color4" target="self">Guidelines</a></li>
-                      <li><a href="" class="cont-text2 fc-color4" target="self">Brand Assets</a></li>
-                      <li><a href="" class="cont-text2 fc-color4" target="self">Templates</a></li>
+                      <li><a href="" class="cont-text2 fc-color4">Guidelines</a></li>
+                      <li><a href="" class="cont-text2 fc-color4">Brand Assets</a></li>
+                      <li><a href="" class="cont-text2 fc-color4">Templates</a></li>
                     </ul>
                   </li>
                   <li>
-                    <a href="" class="cont-text2 sub-inner-bold" target="self">N</a>
+                    <a href="" class="cont-text2 sub-inner-bold">N</a>
                     <ul>
-                      <li><a href="" class="cont-text2 fc-color4" target="self">Guidelines</a></li>
-                      <li><a href="" class="cont-text2 fc-color4" target="self">Brand Assets</a></li>
-                      <li><a href="" class="cont-text2 fc-color4" target="self">Templates</a></li>
+                      <li><a href="" class="cont-text2 fc-color4">Guidelines</a></li>
+                      <li><a href="" class="cont-text2 fc-color4">Brand Assets</a></li>
+                      <li><a href="" class="cont-text2 fc-color4">Templates</a></li>
                     </ul>
                   </li>
                   <li>
-                     <a href="" class="cont-text2 sub-inner-bold" target="self">Truck & Bus</a>
+                     <a href="" class="cont-text2 sub-inner-bold">Truck & Bus</a>
                     <ul>
-                      <li><a href="" class="cont-text2 fc-color4" target="self">Guidelines</a></li>
-                      <li><a href="" class="cont-text2 fc-color4" target="self">Brand Assets</a></li>
-                      <li><a href="" class="cont-text2 fc-color4" target="self">Templates</a></li>
+                      <li><a href="" class="cont-text2 fc-color4">Guidelines</a></li>
+                      <li><a href="" class="cont-text2 fc-color4">Brand Assets</a></li>
+                      <li><a href="" class="cont-text2 fc-color4">Templates</a></li>
                     </ul>
                   </li>
                   <li class="sub-hyundai-motor">
-                    <a href="" class="cont-text2 sub-inner-bold" target="self">Hyundai Motor Studio</a>
+                    <a href="" class="cont-text2 sub-inner-bold">Hyundai Motor Studio</a>
                     <ul>
-                      <li><a href="" class="cont-text2 fc-color4" target="self">Guidelines</a></li>
-                      <li><a href="" class="cont-text2 fc-color4" target="self">Brand Assets</a></li>
-                      <li><a href="" class="cont-text2 fc-color4" target="self">Templates</a></li>
+                      <li><a href="" class="cont-text2 fc-color4">Guidelines</a></li>
+                      <li><a href="" class="cont-text2 fc-color4">Brand Assets</a></li>
+                      <li><a href="" class="cont-text2 fc-color4">Templates</a></li>
                     </ul>
                   </li>
                   <li>
-                    <a href="" class="cont-text2 sub-inner-bold" target="self">Space</a>
+                    <a href="" class="cont-text2 sub-inner-bold">Space</a>
                     <ul>
-                      <li><a href="" class="cont-text2 fc-color4" target="self">Guidelines</a></li>
+                      <li><a href="" class="cont-text2 fc-color4">Guidelines</a></li>
                     </ul>
                   </li>
                   <li>
-                    <a href="" class="cont-text2 sub-inner-bold" target="self">Others</a>
+                    <a href="" class="cont-text2 sub-inner-bold">Others</a>
                     <ul>
-                      <li><a href="" class="cont-text2 fc-color4" target="self">Guidelines</a></li>
+                      <li><a href="" class="cont-text2 fc-color4">Guidelines</a></li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li class="sub-inner">
-                <a href="" class="cont-text2" target="self">Training Program</a>
+                <a href="" class="cont-text2">Training Program</a>
                 <ul class="sub-inner-contwrap">
-                  <li><a href="" class="cont-text2" target="self">Training Video</a></li>
-                  <li><a href="" class="cont-text2" target="self">E-Learning</a></li>
+                  <li><a href="" class="cont-text2">Training Video</a></li>
+                  <li><a href="" class="cont-text2">E-Learning</a></li>
                 </ul>
               </li>
             </ul>
@@ -587,37 +604,37 @@
             <a href=""> Library</a>
             <ul class="sub-menu">
               <li class="sub-inner">
-                <a href="" class="cont-text2" target="self">Contents</a>
+                <a href="" class="cont-text2">Contents</a>
                 <ul class="sub-inner-contwrap sub-inner-first">
-                  <li><a href="" class="cont-text2" target="self">Brand Campaign</a></li>
-                  <li><a href="" class="cont-text2" target="self">Brand Space</a></li>
-                  <li><a href="" class="cont-text2" target="self">Brand Collection</a></li>
-                  <li><a href="" class="cont-text2" target="self">Global Launching Assets</a></li>
-                  <li><a href="" class="cont-text2" target="self">Social Media</a></li>
-                  <li><a href="" class="cont-text2" target="self">Event</a></li>
+                  <li><a href="" class="cont-text2">Brand Campaign</a></li>
+                  <li><a href="" class="cont-text2">Brand Space</a></li>
+                  <li><a href="" class="cont-text2">Brand Collection</a></li>
+                  <li><a href="" class="cont-text2">Global Launching Assets</a></li>
+                  <li><a href="" class="cont-text2">Social Media</a></li>
+                  <li><a href="" class="cont-text2">Event</a></li>
                 </ul>
               </li>
               <li class="sub-inner">
-                <a href="" class="cont-text2" target="self">Media</a>
+                <a href="" class="cont-text2">Media</a>
                 <ul class="sub-inner-contwrap">
-                  <li><a href="" class="cont-text2" target="self">Image</a></li>
-                  <li><a href="" class="cont-text2" target="self">Video</a></li>
-                  <li><a href="" class="cont-text2" target="self">Sound</a></li>
-                  <li><a href="" class="cont-text2" target="self">Others</a></li>
+                  <li><a href="" class="cont-text2">Image</a></li>
+                  <li><a href="" class="cont-text2">Video</a></li>
+                  <li><a href="" class="cont-text2">Sound</a></li>
+                  <li><a href="" class="cont-text2">Others</a></li>
                 </ul>
               </li>
               <li class="sub-inner">
-                <a href="" class="cont-text2" target="self">Best Practice</a>
+                <a href="" class="cont-text2">Best Practice</a>
                 <ul class="sub-inner-contwrap">
-                  <li><a href="" class="cont-text2" target="self">GMA</a></li>
-                  <li><a href="" class="cont-text2" target="self">Local Campaigns</a></li>
+                  <li><a href="" class="cont-text2">GMA</a></li>
+                  <li><a href="" class="cont-text2">Local Campaigns</a></li>
                 </ul>
               </li>
               <li class="sub-inner">
-                <a href="" class="cont-text2 dcm" target="self">DCM</a>
+                <a href="" class="cont-text2 dcm">DCM</a>
               </li>
               <li class="sub-inner">
-                <a href="" class="cont-text2" target="self">Copyright Expired Contents</a>
+                <a href="" class="cont-text2">Copyright Expired Contents</a>
               </li>
             </ul>
           </li>
@@ -625,17 +642,17 @@
             <a href="">Review Tools</a>
             <ul class="sub-menu">
               <li class="sub-inner">
-                <a href="" class="cont-text2" target="_self">Design Review</a>
+                <a href="" class="cont-text2">Design Review</a>
                 <ul class="sub-inner-contwrap">
-                  <li><a href="" class="cont-text2" target="self">New Design Review Submission</a></li>
-                  <li><a href="" class="cont-text2" target="self">Review Management</a></li>
+                  <li><a href="" class="cont-text2">New Design Review Submission</a></li>
+                  <li><a href="" class="cont-text2">Review Management</a></li>
                 </ul>
               </li>
               <li class="sub-inner">
-                <a href="" class="cont-text2" target="_self">Library Contents Review</a>
+                <a href="" class="cont-text2">Library Contents Review</a>
                 <ul class="sub-inner-contwrap">
-                  <li><a href="" class="cont-text2" target="self">Create New Library Content Page</a></li>
-                  <li><a href="" class="cont-text2 sub-inner-bold" target="self">Review Management</a></li>
+                  <li><a href="" class="cont-text2">Create New Library Content Page</a></li>
+                  <li><a href="" class="cont-text2 sub-inner-bold">Review Management</a></li>
                 </ul>
               </li>
             </ul>
@@ -643,31 +660,31 @@
           <li class="menu-first-li">
             <a href="">Brand Reports</a>
             <ul class="sub-menu">
-              <li class="sub-inner"><a href="" class="cont-text2" target="_self">BTS Reports</a></li>
-              <li class="sub-inner"><a href="" class="cont-text2" target="_self">GBIM Reports</a></li>
+              <li class="sub-inner"><a href="" class="cont-text2">BTS Reports</a></li>
+              <li class="sub-inner"><a href="" class="cont-text2">GBIM Reports</a></li>
             </ul>
           </li>
           <li class="menu-first-li">
             <a href="">My BMS</a>
             <ul class="sub-menu">
               <li class="sub-inner">
-                <a href="" class="cont-text2" target="_self">File Sharing</a>
+                <a href="" class="cont-text2">File Sharing</a>
                 <ul class="sub-inner-contwrap">
-                  <li><a href="" class="cont-text2" target="self">Send New Files</a></li>
-                  <li><a href="" class="cont-text2" target="self">Sent & Received Files Management</a></li>
+                  <li><a href="" class="cont-text2">Send New Files</a></li>
+                  <li><a href="" class="cont-text2">Sent & Received Files Management</a></li>
                 </ul>
               </li>
               <li class="sub-inner">
-                <a href="" class="cont-text2" target="_self">My Activity</a>
+                <a href="" class="cont-text2">My Activity</a>
                 <ul class="sub-inner-contwrap">
-                  <li><a href="" class="cont-text2" target="self">Favorites</a></li>
-                  <li><a href="" class="cont-text2" target="self">Inquiries</a></li>
+                  <li><a href="" class="cont-text2">Favorites</a></li>
+                  <li><a href="" class="cont-text2">Inquiries</a></li>
                 </ul>
               </li>
               <li class="sub-inner">
-                <a href="" class="cont-text2" target="_self">Account</a>
+                <a href="" class="cont-text2">Account</a>
                 <ul class="sub-inner-contwrap">
-                  <li><a href="" class="cont-text2" target="self">Manage Your Account</a></li>
+                  <li><a href="" class="cont-text2">Manage Your Account</a></li>
                 </ul>
               </li>
             </ul>
@@ -676,12 +693,15 @@
       </div>
       <div class="util">
         <a href="" class="gnb-bookmark"></a>
-         <ul class="language-menu">
-           <li><a class="select">EN</a></li>
-           <li><a>KR</a></li>
-           <li><a>CH</a></li>
-         </ul>
-        <a href="" class="logout">Logout</a>
+        <div class="select-box select-lang">
+          <p class="selected-value">EN</p>
+          <ul class="select-items">
+            <li class="selected"><a href="javascript:;">EN</a></li>
+            <li><a href="javascript:;">KR</a></li>
+            <li><a href="javascript:;">CH</a></li>
+          </ul>
+        </div>
+        <a href="" class="link-login">Logout</a>
         <a href="" class="gnb-hamburger"></a>
       </div>
     </div>
@@ -694,25 +714,25 @@
           <div>
             <ul>
               <li class="cont-text2">
-                <a href="" class="right-gnb-bold" target="_self">About Brand</a>
+                <a href="" class="right-gnb-bold">About Brand</a>
                 <ul>
-                  <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Hyundai Brand</a></li>
-                  <li><a href="" class="cont-text2 right-gnb-hover" target="_self">N Brand</a></li>
-                  <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Truck & Bus</a></li>
+                  <li><a href="" class="cont-text2 right-gnb-hover">Hyundai Brand</a></li>
+                  <li><a href="" class="cont-text2 right-gnb-hover">N Brand</a></li>
+                  <li><a href="" class="cont-text2 right-gnb-hover">Truck & Bus</a></li>
                 </ul>
               </li>
             </ul>
             <div class="right-gnb-accordion">
               <ul>
                 <li class="cont-text2">
-                  <a href="" class="right-gnb-bold" target="_self">Brand Image Guidelines</a>
+                  <a href="" class="right-gnb-bold">Brand Image Guidelines</a>
                   <ul>
                     <li>
-                      <a href="" class="cont-text2 menu-more right-gnb-hover" target="self">Hyundai</a>
+                      <a href="" class="cont-text2 menu-more right-gnb-hover">Hyundai</a>
                       <ul class="menu-more-content">
-                        <li><a href="" class="cont-text2 fc-color4 right-gnb-hover" target="self">Guidelines</a></li>
-                        <li><a href="" class="cont-text2 fc-color4 right-gnb-hover" target="self">Brand Assets</a></li>
-                        <li><a href="" class="cont-text2 fc-color4 right-gnb-hover" target="self">Templates</a></li>
+                        <li><a href="" class="cont-text2 fc-color4 right-gnb-hover">Guidelines</a></li>
+                        <li><a href="" class="cont-text2 fc-color4 right-gnb-hover">Brand Assets</a></li>
+                        <li><a href="" class="cont-text2 fc-color4 right-gnb-hover">Templates</a></li>
                       </ul>
                     </li>
                   </ul>
@@ -720,55 +740,55 @@
               </ul>
               <ul>
                 <li>
-                  <a href="" class="cont-text2 menu-more right-gnb-hover" target="self">N</a>
+                  <a href="" class="cont-text2 menu-more right-gnb-hover">N</a>
                   <ul class="menu-more-content">
-                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover" target="self">Guidelines</a></li>
-                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover" target="self">Brand Assets</a></li>
-                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover" target="self">Templates</a></li>
+                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover">Guidelines</a></li>
+                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover">Brand Assets</a></li>
+                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover">Templates</a></li>
                   </ul>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <a href="" class="cont-text2 menu-more right-gnb-hover" target="self">Truck & Bus</a>
+                  <a href="" class="cont-text2 menu-more right-gnb-hover">Truck & Bus</a>
                   <ul class="menu-more-content">
-                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover" target="self">Guidelines</a></li>
-                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover" target="self">Brand Assets</a></li>
-                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover" target="self">Templates</a></li>
+                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover">Guidelines</a></li>
+                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover">Brand Assets</a></li>
+                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover">Templates</a></li>
                   </ul>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <a href="" class="cont-text2 menu-more right-gnb-hover" target="self">Hyundai Motor Studio</a>
+                  <a href="" class="cont-text2 menu-more right-gnb-hover">Hyundai Motor Studio</a>
                   <ul class="menu-more-content">
-                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover" target="self">Guidelines</a></li>
-                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover" target="self">Brand Assets</a></li>
-                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover" target="self">Templates</a></li>
+                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover">Guidelines</a></li>
+                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover">Brand Assets</a></li>
+                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover">Templates</a></li>
                   </ul>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <a href="" class="cont-text2 menu-more right-gnb-hover" target="self">Space</a>
+                  <a href="" class="cont-text2 menu-more right-gnb-hover">Space</a>
                   <ul class="menu-more-content">
-                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover" target="self">Guidelines</a></li>
+                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover">Guidelines</a></li>
                   </ul>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <a href="" class="cont-text2 menu-more right-gnb-hover" target="self">Others</a>
+                  <a href="" class="cont-text2 menu-more right-gnb-hover">Others</a>
                   <ul class="menu-more-content">
-                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover" target="self">Guidelines</a></li>
+                    <li><a href="" class="cont-text2 fc-color4 right-gnb-hover">Guidelines</a></li>
                   </ul>
                 </li>
               </ul>
             </div>
             <ul>
                 <li><a href="" class="cont-text2 right-gnb-bold">Traning Program</a></li>
-                <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Training Video</a></li>
-                <li><a href="" class="cont-text2 right-gnb-hover" target="_self">E-Learning</a></li>
+                <li><a href="" class="cont-text2 right-gnb-hover">Training Video</a></li>
+                <li><a href="" class="cont-text2 right-gnb-hover">E-Learning</a></li>
             </ul>
           </div>
         </div>
@@ -777,59 +797,60 @@
           <div>
             <ul>
               <li class="cont-text2">
-                <a href="" class="right-gnb-bold" target="_self">Contents</a>
+                <a href="" class="right-gnb-bold">Contents</a>
                 <ul>
-                  <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Brand Campaign</a></li>
-                  <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Brand Space</a></li>
-                  <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Brand Collection</a></li>
-                  <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Global Launching Assets</a></li>
-                  <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Social Media</a></li>
-                  <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Event</a></li>
+                  <li><a href="" class="cont-text2 right-gnb-hover">Brand Campaign</a></li>
+                  <li><a href="" class="cont-text2 right-gnb-hover">Brand Space</a></li>
+                  <li><a href="" class="cont-text2 right-gnb-hover">Brand Collection</a></li>
+                  <li><a href="" class="cont-text2 right-gnb-hover">Global Launching Assets</a></li>
+                  <li><a href="" class="cont-text2 right-gnb-hover">Social Media</a></li>
+                  <li><a href="" class="cont-text2 right-gnb-hover">Event</a></li>
                 </ul>
               </li>
             </ul>
             <ul>
               <li class="cont-text2">
-                <a href="" class="right-gnb-bold" target="_self">Media</a>
+                <a href="" class="right-gnb-bold">Media</a>
                 <ul>
-                  <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Image</a></li>
-                  <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Video</a></li>
-                  <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Sound</a></li>
-                  <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Others</a></li>
+                  <li><a href="" class="cont-text2 right-gnb-hover">Image</a></li>
+                  <li><a href="" class="cont-text2 right-gnb-hover">Video</a></li>
+                  <li><a href="" class="cont-text2 right-gnb-hover">Sound</a></li>
+                  <li><a href="" class="cont-text2 right-gnb-hover">Others</a></li>
                 </ul>
               </li>
             </ul>
             <ul>
               <li class="cont-text2">
-                <a href="" class="right-gnb-bold" target="_self">Best Practice</a>
+                <a href="" class="right-gnb-bold">Best Practice</a>
                 <ul>
-                  <li><a href="" class="cont-text2 right-gnb-hover" target="_self">GMA</a></li>
-                  <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Local Campaigns</a></li>
+                  <li><a href="" class="cont-text2 right-gnb-hover">GMA</a></li>
+                  <li><a href="" class="cont-text2 right-gnb-hover">Local Campaigns</a></li>
                 </ul>
               </li>
             </ul>
             <ul class="dcm-box"><li><a href="" class="cont-text2 right-gnb-bold dcm">DCM</a></li></ul>
           </div>
+          <!-- 220708 copyright 위치 이동 -->
+          <ul class="copyright-box"><li><a href="" class="cont-text2 right-gnb-bold">Copyright Expired Contents</a></li></ul>
         </div>
-        <ul class="copyright-box"><li><a href="" class="cont-text2 right-gnb-bold">Copyright Expired Contents</a></li></ul>
         <div class="right-gnb-content">
           <h5 class="h5-title">Review Tools</h5>
           <div>
               <ul>
                 <li class="cont-text2">
-                  <a href="" class="right-gnb-bold" target="_self">Design Review</a>
+                  <a href="" class="right-gnb-bold">Design Review</a>
                   <ul>
-                    <li><a href="" class="cont-text2 right-gnb-hover" target="_self">New Design Review<br> Submission</a></li>
-                    <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Review Management</a></li>
+                    <li><a href="" class="cont-text2 right-gnb-hover">New Design Review<br> Submission</a></li>
+                    <li><a href="" class="cont-text2 right-gnb-hover">Review Management</a></li>
                   </ul>
                 </li>
               </ul>
               <ul>
                   <li class="cont-text2">
-                    <a href="" class="right-gnb-bold" target="_self">Library Contents Review</a>
+                    <a href="" class="right-gnb-bold">Library Contents Review</a>
                     <ul>
-                      <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Create New Library Content<br> Page</a></li>
-                      <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Review Management</a></li>
+                      <li><a href="" class="cont-text2 right-gnb-hover">Create New Library Content<br> Page</a></li>
+                      <li><a href="" class="cont-text2 right-gnb-hover">Review Management</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -847,27 +868,27 @@
           <div>
               <ul>
                 <li class="cont-text2">
-                  <a href="" class="right-gnb-bold" target="_self">File Sharing</a>
+                  <a href="" class="right-gnb-bold">File Sharing</a>
                   <ul>
-                    <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Send New Files</a></li>
-                    <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Sent & Received<br> Files Management</a></li>
+                    <li><a href="" class="cont-text2 right-gnb-hover">Send New Files</a></li>
+                    <li><a href="" class="cont-text2 right-gnb-hover">Sent & Received<br> Files Management</a></li>
                   </ul>
                 </li>
               </ul>
               <ul>
                 <li class="cont-text2">
-                  <a href="" class="right-gnb-bold" target="_self">My Activity</a>
+                  <a href="" class="right-gnb-bold">My Activity</a>
                   <ul>
-                    <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Favorites</a></li>
-                    <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Inquiries</a></li>
+                    <li><a href="" class="cont-text2 right-gnb-hover">Favorites</a></li>
+                    <li><a href="" class="cont-text2 right-gnb-hover">Inquiries</a></li>
                   </ul>
                 </li>
               </ul>
               <ul>
                 <li class="cont-text2">
-                  <a href="" class="right-gnb-bold" target="_self">Account</a>
+                  <a href="" class="right-gnb-bold">Account</a>
                   <ul>
-                    <li><a href="" class="cont-text2 right-gnb-hover" target="_self">Manage Your Account</a></li>
+                    <li><a href="" class="cont-text2 right-gnb-hover">Manage Your Account</a></li>
                   </ul>
                 </li>
               </ul>
@@ -923,17 +944,16 @@
       });
 
       $('.bms-header .menu').on('mouseover', function(){
-        $('.bms-header .sub-menu').stop().animate({height: '513px', padding: '48px 0 110px'},300);
+        $('.bms-header .sub-menu').stop().animate({height: '513px', paddingTop: '48px'},300);
         $('.bms-header .inner-content-bg').stop().animate({height: '514px'},300);
         $('.bms-header .inner-content-bg').removeClass('bd-hidden');
         $('.bms-header').addClass('menu-open');
       })
 
-      $('.bms-header .menu .menu-first-li').on('mouseover',function(){
-        $('.bms-header .menu .menu-first-li > a').not(this).removeClass('hover');
-        $(this).find('a').addClass('hover');
-        $('.bms-header .sub-menu').not(this).hide();
-        $(this).children('.sub-menu').show();
+      $('.bms-header .menu .menu-first-li > a').on('mouseover',function(){
+        $(this).addClass('hover').parent('li').siblings('li').find('> a').removeClass('hover');
+        $('.bms-header .sub-menu').hide();
+        $(this).next('.sub-menu').show().parent('li').siblings('li').find('.sub-menu').hide();
       })
 
       $('.bms-header .menu').on('mouseleave',function(){
@@ -944,18 +964,16 @@
         $('.bms-header .inner-content-bg').addClass('bd-hidden');
       })
 
-      $('.bms-header .language-menu').on('click', function(){
-        $(this).toggleClass('active');
-      })
-
       $('.bms-header .gnb-hamburger').on('click', (e) => {
         e.preventDefault();
         $('.bms-header .right-gnb').addClass('active');
+        $('html, body').css('overflow-y', 'hidden');
       })
 
       $('.bms-header .right-gnb .right-gnb-close').on('click', (e) => {
         e.preventDefault();
         $('.bms-header .right-gnb').removeClass('active');
+        $('html, body').css('overflow-y', 'auto');
       })
 
       $('.bms-header .right-gnb-accordion .menu-more').on('click', (e) => {

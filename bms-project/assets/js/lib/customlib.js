@@ -53,12 +53,26 @@ jQuery.event.add(window, 'load', function () {
       horizontalOrder: true
     });
   }
+
+  const outerW = $('.tab-carousel').innerWidth() - 172;
+  const innerW = ($('.tab-carousel .tab-box-list li').width() + 32) * $('.tab-carousel .tab-box-list li').length;
+  // const innerW = ($('.tab-carousel .tab-box-list').innerWidth());
+  console.log('content :' + outerW);
+  console.log('ul : ' + innerW);
+
+  if(innerW >= outerW){
+    tabCarousel();
+    $('.tab-carousel').removeClass('minitab');
+  }
+  else {
+    $('.tab-carousel').addClass('minitab');
+  }
 });
 
 // Carousel
 // carousel-type1
 function carouselType1(){
-  if($('.slide-swiper').length > 0) {
+  if($('.carousel-type1').length > 0) {
     const carouselType1 = new Swiper('.carousel-type1 .slide-swiper', {
       // Optional parameters
       direction: 'horizontal',
@@ -81,8 +95,8 @@ carouselType1();
 
 // carousel-type2
 function carouselType2(){
-  if($('.slide-swiper').length > 0) {
-    if (window.matchMedia("(min-width: 1279px)").matches) {
+  if($('.carousel-type2').length > 0) {
+    if (window.matchMedia("(min-width: 1280px)").matches) {
       const carouselType2 = new Swiper('.carousel-type2 .slide-swiper', {
         // Optional parameters
         direction: 'horizontal',
@@ -118,8 +132,8 @@ $(window).on('resize', function(){
 
 // carousel-type3
 function carouselType3(){
-  if($('.slide-swiper').length > 0) {
-    if (window.matchMedia("(min-width: 1279px)").matches) {
+  if($('.carousel-type3').length > 0) {
+    if (window.matchMedia("(min-width: 1280px)").matches) {
       const carouselType2 = new Swiper('.carousel-type3 .slide-swiper', {
         // Optional parameters
         direction: 'horizontal',
@@ -154,10 +168,11 @@ $(window).on('resize', function(){
 });
 
 function carouselType4(){
-  if($('.slide-swiper').length > 0) {
+  if($('.carousel-type4').length > 0) {
     const carouselType4 = new Swiper('.carousel-type4 .slide-swiper', {
       // Optional parameters
       direction: 'horizontal',
+      autoHeight: true,
 
       //pagination
       pagination: {
@@ -174,3 +189,26 @@ function carouselType4(){
   }
 }
 carouselType4();
+
+function tabCarousel(){
+  if($('.tab-carousel').length > 0) {
+    const  tabCarousel = new Swiper('.tab-carousel .slide-swiper', {
+      // Optional parameters
+      slidesPerView: "auto",
+      direction: 'horizontal',
+
+
+      //pagination
+      pagination: {
+        el: ".tab-carousel .swiper-pagination",
+        type: "fraction",
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.tab-carousel .swiper-button-next',
+        prevEl: '.tab-carousel .swiper-button-prev',
+      },
+    });
+  }
+}
