@@ -36,10 +36,15 @@ $(function(){
 		$('html, body').css('overflow-y', 'auto');
 	})
 
-	$('.bms-header .right-gnb-accordion .menu-more').on('click', (e) => {
+	$('.bms-header .right-gnb .right-gnb-content .menu-depth03 > li').each(function(){
+		if($(this).find('ul').length > 0) {
+			$(this).addClass('have-ul');
+		}
+	})
+	$('.bms-header .right-gnb .right-gnb-content .menu-depth03 > li.have-ul > a').on('click', (e) => {
 		e.preventDefault();
-		$(e.currentTarget).next('.menu-more-content').toggleClass('active');
-		$(e.currentTarget).toggleClass('active');
+		$(e.currentTarget).next('ul').toggle().parent('li').siblings('li').find('ul').hide();
+		$(e.currentTarget).toggleClass('active').parent('li').siblings('li').find('> a').removeClass('active');
 	})
 
 	inpItem.on('keyup', function () {
@@ -361,42 +366,46 @@ $(function(){
 });
 
 function jsTab() {
-	$('.js-tab .tab-box-list > li').on('click', function (e) {
-		const tabRoot = $(this).closest('.js-tab');
-		const tabBoxItem = $('.js-tab-cont > div');
-		let tabIdx = $(this).index();
+	$('.js-tab').each(function(){
+		const $this = $(this);
 
-		if( $(this).children('a').attr('href') == "#" ){
-			e.preventDefault();
-		}
-		$(this).addClass('active').siblings().removeClass('active');
-		tabRoot.find(tabBoxItem).removeClass('active').eq(tabIdx).addClass('active');
+		$this.find('.tab-box-list > li').on('click', function(e){
+			const tabRoot = $(this).closest('.js-tab');
+			const tabBoxItem = $(this).closest('.js-tab').find('> .tab-box-cont > div');
+			let tabIdx = $(this).index();
 
-		// tabScrCenter($(this));
-		// function tabScrCenter (target) {
-			const target = $(this);
-			const tabScrBox = target.closest('.js-tab.x-scroll').find('.tab-box-list');
-			const tabScrBoxItem = tabScrBox.find('li');
-			let tabScrBoxHarf = tabScrBox.width() / irNum[1];
-			let tabScrPos;
-			let tabListWidth = 0;
-			let tabTarLeft = 0;
-			let tabPdValue = parseInt(tabScrBoxItem.parent().css('padding-left'));
-			tabScrBoxItem.each(function () {
-				tabListWidth += $(this).outerWidth();
-			});
-			for (let i = 0; i < target.index(); i++) tabTarLeft += tabScrBoxItem.eq(i).outerWidth();
-			let tabTarPos = (tabTarLeft + target.outerWidth() / irNum[1] + tabPdValue);
-			if (tabTarPos <= tabScrBoxHarf) {
-				tabScrPos = 0;
-			} else if (tabListWidth - tabTarPos <= tabScrBoxHarf) {
-				tabScrPos = tabListWidth - tabScrBox.width() + (tabPdValue * irNum[1]);
-			} else {
-				tabScrPos = tabTarPos - tabScrBoxHarf;
+			if( $(this).children('a').attr('href') == "#" ){
+				e.preventDefault();
 			}
-			tabScrBox.stop().animate({scrollLeft:tabScrPos}, secVal[2]);
-		// }
-	});
+			$(this).addClass('active').siblings().removeClass('active');
+			tabBoxItem.removeClass('active').eq(tabIdx).addClass('active');
+
+			// tabScrCenter($(this));
+			// function tabScrCenter (target) {
+			// const target = $(this);
+			// const tabScrBox = target.closest('.js-tab.x-scroll').find('.tab-box-list');
+			// const tabScrBoxItem = tabScrBox.find('li');
+			// let tabScrBoxHarf = tabScrBox.width() / irNum[1];
+			// let tabScrPos;
+			// let tabListWidth = 0;
+			// let tabTarLeft = 0;
+			// let tabPdValue = parseInt(tabScrBoxItem.parent().css('padding-left'));
+			// tabScrBoxItem.each(function () {
+			// 	tabListWidth += $(this).outerWidth();
+			// });
+			// for (let i = 0; i < target.index(); i++) tabTarLeft += tabScrBoxItem.eq(i).outerWidth();
+			// let tabTarPos = (tabTarLeft + target.outerWidth() / irNum[1] + tabPdValue);
+			// if (tabTarPos <= tabScrBoxHarf) {
+			// 	tabScrPos = 0;
+			// } else if (tabListWidth - tabTarPos <= tabScrBoxHarf) {
+			// 	tabScrPos = tabListWidth - tabScrBox.width() + (tabPdValue * irNum[1]);
+			// } else {
+			// 	tabScrPos = tabTarPos - tabScrBoxHarf;
+			// }
+			// tabScrBox.stop().animate({scrollLeft:tabScrPos}, secVal[2]);
+			// }
+		})
+	})
 
  };
 

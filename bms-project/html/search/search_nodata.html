@@ -7,8 +7,9 @@
   <title>BMS 2.0</title>
 
   <link rel="stylesheet" href="../../assets/css/common.css">
-  <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
   <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
   <script type="text/javascript" src="../../assets/js/common.js"></script>
@@ -68,51 +69,64 @@
   <!-- container -->
   <div id="bmsContainer" class="bms-container">
     <div class="bms-content">
-      <!-- S: 20220531 cont-outer 분리(breadclumb-outer 포함)︎ -->
       <div class="cont-outer">
         <div class="breadclumb-outer">
-          <span class="breadclumb"><em>Home</em></span> <!-- 220527 태그 수정 -->
-          <span class="breadclumb"><em>Support</em></span> <!-- 220527 태그 수정 -->
-          <span class="breadclumb regular"><em>Glossary</em></span> <!-- 220527 태그 수정 -->
+          <span class="breadclumb"><em>Home</em></span>
+          <span class="breadclumb"><em>Library</em></span>
+          <span class="breadclumb"><em>Contents</em></span>
+          <span class="breadclumb regular"><em>Brand Campaign</em></span>
         </div>
       </div>
-      <!-- E: 20220531 cont-outer 분리(breadclumb-outer 포함)︎ -->
-      <!-- S: 20220531 cont-outer 분리(컨텐츠 포함)︎ -->
-      <div class="cont-outer">
-        <!-- S: [glossary-nodata] -->
-        <div class="support-all glossary-nodata"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 --><!-- 220711 클래스 순서 변경 -->
-          <!-- S: tit-box -->
-          <div class="tit-box">
-            <h1 class="h1-title">Glossary</h1><!-- 220621 h1 태그로 변경 및 h1-title 클래스 추가 -->
-            <p class="cont-text">Brand Management System에서 사용하는 다양한 용어들에 대한 설명 자료입니다.</p><!-- 220621 cont-text2 -> cont-text 클래스 변경 -->
-          </div>
-          <!-- E: tit-box -->
-          <!-- S: search -->
-          <div class="input-outer-box search-outer">
-            <div class="input-box val-error">
-              <input type="text" class="input-item inp-search" placeholder="검색어를 입력해주세요.">
-              <button class="btn-reset"></button>
-              <button class="btn-search"><span>search</span></button>
+      <!-- S: cont-outer -->
+      <div class="cont-outer fullcase">
+        <!-- S: [search-result] -->
+        <div class="search-nodata"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+          <div class="cont-outer">
+            <div class="tit-box">
+              <h1 class="h1-title">검색결과</h1>
+              <p class="cont-text">Hyundai의 비전과 철학을 담은 Brand Campaign입니다.</p>
             </div>
-            <p class="error-msg">error text</p><!-- 유효성 검사시 앞선 형제요소에 val-error 클래스 추가 -->
+            <div class="tab-box-wrap js-tab">
+              <div class="tab-box-outer">
+                <ul class="tab-box-list">
+                  <li class="active"><a href="#"><span>All<sup>150</sup></span></a></li>
+                  <li><a href="#"><span>Brand Guidelines<sup>90</sup></span></a></li>
+                  <li><a href="#"><span>Library<sup>36</sup></span></a></li>
+                  <li><a href="#"><span>Brand Reports<sup>24</sup></span></a></li>
+                </ul>
+              </div>
+              <div class="tab-box-cont js-tab-cont">
+                <!-- S: search all-->
+                <div class="tab-box-item search-all active">
+                  <div class="nodata-area">
+                    <p class="cont-tit">'<strong class="fc-color">Mightt</strong>'에 대한 검색 결과가 없습니다.</p>
+                    <p class="cont-text">검색어의 철자가 정확한지 확인해주세요. <br>검색어의 단어 수를 줄이거나 보다 일반적인 검색어로 검색해 입력해보세요.</p>
+                    <div class="cta-outer">
+                      <button class="btn btn-type2"><span>Brand Home</span></button>
+                    </div>
+                  </div>
+                </div>
+                <!-- E: search all-->
+                <!-- S: search brand guidelines-->
+                <div class="tab-box-item search-brand"></div>
+                <!-- E: search brand guidelines-->
+                <!-- S: search library-->
+                <div class="tab-box-item search-library"></div>
+                <!-- E: search library-->
+                <!-- S: search brand report -->
+                <div class="tab-box-item search-report"></div>
+                <!-- E: search brand report -->
+              </div>
+            </div>
           </div>
-          <!-- E: search -->
-          <!-- S: nodata-area -->
-          <div class="nodata-area"><!-- 220712 no-data-outer -> nodata-area 클래스명 변경 -->
-            <!-- 220712 div.nodata 제거 -->
-            <p class="cont-tit">‘<strong class="fc-color">Mightt</strong>’에 대한 검색 결과가 없습니다.</p><!-- 220712 tit -> cont-tit 클래스명 변경 / span -> strong 태그 변경 -->
-            <p class="cont-text">검색어의 철자가 정확한지 확인해주세요. <br/>검색어의 단어 수를 줄이거나 보다 일반적인 검색어로 검색해 입력해보세요.</p><!-- 220712 desc -> cont-text 클래스명 변경 -->
-          </div>
-          <!-- E: nodata-area -->
         </div>
-        <!-- E: [glossary-nodata] -->
+        <!-- E: [search-result] -->
       </div>
-      <!-- E: 20220531 cont-outer 분리(컨텐츠 포함)︎ -->
+      <!-- E: cont-outer -->
     </div>
   </div>
   <!--//container -->
 
-  <!-- S: 220629 footer 수정 -->
   <!-- footer -->
   <div class="bms-footer">
     <div class="footer-inner">
@@ -151,7 +165,6 @@
     </div>
   </div>
   <!--//footer -->
-  <!-- E: 220629 footer 수정 -->
 
   <div class="btn-top-box">
     <button title="move to top" role="button" class="btn-top">

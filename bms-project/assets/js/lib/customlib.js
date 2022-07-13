@@ -1,3 +1,21 @@
+Date.prototype.calculate = function (str) {
+  const opt = (str + '').charAt(0) === '+' ? 1 : -1;
+  const value = parseInt((str + '').replace(/[^0-9]/gi, ''));
+  switch ((str + '').charAt(str.length - 1).toLowerCase()) {
+    case 'd':
+      this.setDate(this.getDate() + opt * value);
+      break;
+    case 'm':
+      this.setMonth(this.getMonth() + opt * value);
+      break;
+    case 'y':
+      this.setFullYear(this.getFullYear() + opt * value);
+      break;
+  }
+
+  return this;
+}
+
 $(function () {
   //모든 datepicker에 대한 공통 옵션 설정
   $.datepicker.setDefaults({
@@ -26,13 +44,22 @@ $(function () {
   });
 
   //input을 datepicker로 선언
-  $('.date-picker').datepicker({
-    onSelect : function() {
-      if( $('.date-picker table').find('.ui-datepicker-current-day')){
-        // $('.date-picker table').find('.ui-datepicker-today').removeClass('ui-datepicker-today');
-      }
+  $('.date-picker').each((idx, dp) => {
+    const $dp = $(dp);
+    const datePickerOpt = {
+      onSelect : function() {
+        if( $('.date-picker table').find('.ui-datepicker-current-day')){
+          // $('.date-picker table').find('.ui-datepicker-today').removeClass('ui-datepicker-today');
+        }
 
-    }
+      },
+    };
+    if ($dp.data('minDate') !== undefined) datePickerOpt.minDate = new Date().calculate($dp.data('minDate'));
+    if ($dp.data('maxDate') !== undefined) datePickerOpt.maxDate = new Date().calculate($dp.data('maxDate'));
+
+    console.log(datePickerOpt);
+    $dp.datepicker(datePickerOpt);
+console.log(new Date().calculate('+30d'))
   });
 
   //From의 초기값을 오늘 날짜로 설정
