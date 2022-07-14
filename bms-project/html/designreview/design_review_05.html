@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="../../assets/css/common.css">
   <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="../../assets/css/lib/swiper.min.css">
   <link rel="stylesheet" href="../../assets/css/lib/jquery-ui.css">
   <link rel="stylesheet" href="../../assets/css/lib/daterangepicker.css">
   <link rel="stylesheet" href="../../assets/css/lib/customlib.css">
@@ -16,12 +17,13 @@
 
   <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../../assets/js/lib/swiper.min.js"></script>
   <script type="text/javascript" src="../../assets/js/common.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/daterangepicker.js"></script>
 </head>
 
-<body>
+<body style="overflow: hidden;">
 
 <div class="bms-wrap">
   <div class="skip-nav">
@@ -434,248 +436,140 @@
 						</div>
           </div>
 
-					<div class="review-filter-outer">
-						<div class="review-list-filter">
-							<div class="search-option-box">
-								<span class="search-date">04.25.2022</span>
-								<span class="inp-hpn">~</span>
-								<span class="search-date">06.25.2022</span>
-							</div>
-							<button class="btn-option">
-								<span class="text">조회설정</span>
-								<span class="ico btn-search-close">조회닫기<span><img src="../../assets/images/common/ico_close3.svg" alt="닫기"></span></span>
-							</button>
-						</div>
-
-						<div class="review-filter-form date-fix-type">
-							<div class="input-outer-box">
-								<div class="input-outer-box row-type">
-									<label for="inpNum01_01">기간</label>
-									<div class="select-box slt-date on"><!-- 유효성체크 val-error -->
-										<p class="selected-value">6개월</p>
-										<ul class="select-items">
-											<li>3개월</li>
-											<li class="selected">6개월</li>
-											<li>9개월</li>
-											<li>12개월</li>
-											<li>직접 설정</li>
-										</ul>
-									</div>
-									<div class="inp-area slt-picker"><input type="text" id="inpDateRange_01" class="input-item daterange" placeholder="MM.DD.YYYY - MM.DD.YYYY"></div>
-								</div>
-
-								<div class="input-outer-box row-type">
-									<label for="inpNum01_02">브랜드</label>
-									<div class="select-box"><!-- 유효성체크 val-error -->
-										<p class="selected-value">전체</p>
-										<ul class="select-items">
-											<li>전체</li>
-											<li>Hyundai</li>
-											<li>N</li>
-											<li>Truck &amp; Bus</li>
-										</ul>
-									</div>
-								</div>
-
-								<div class="input-outer-box row-type">
-									<label for="inpNum01_03">진행상태</label>
-									<div class="select-box"><!-- 유효성체크 val-error -->
-										<p class="selected-value">검토요청</p>
-										<ul class="select-items">
-											<li>검토중</li>
-											<li>승인</li>
-											<li>검토종료</li>
-										</ul>
-									</div>
-								</div>
-
-								<div class="input-outer-box row-type">
-									<label for="inpNum01_04">미디어 타입</label>
-									<div class="select-box"><!-- 유효성체크 val-error -->
-										<p class="selected-value">전체</p>
-										<ul class="select-items">
-											<li>Film</li>
-											<li>Print</li>
-											<li>Digital</li>
-											<li>Merchandise</li>
-											<li>Space</li>
-											<li>Uniform</li>
-											<li>사내 제작물</li>
-											<li>Others</li>
-										</ul>
-									</div>
-								</div>
-
-								<div class="input-outer-box row-type">
-									<label for="inpNum01_05">차량코드</label>
-									<div class="select-box"><!-- 유효성체크 val-error -->
-										<p class="selected-value">전체</p>
-										<ul class="select-items">
-											<li>Accent(RB)</li>
-											<li>Aslan(AG)</li>
-											<li>Avante / Elantra(AD)</li>
-											<li>Eon(HA)</li>
-											<li>Grand i10(BA)</li>
-											<li>Grandeur / Azera(IG)</li>
-											<li>Sonata(DN)</li>
-											<li>Sonata(DN8)</li>
-											<li>Others</li>
-										</ul>
-									</div>
-								</div>
-
-								<div class="input-outer-box row-type">
-									<label for="inpNum01_06">제목</label>
-									<div class="input-box">
-										<input type="text" id="inpNum01_011" class="input-item inp-type-box" placeholder="제목을 입력해주세요.">
-										<button class="btn-reset"></button>
-									</div>
-								</div>
-							</div>
-							
-							<div class="cta-outer">
-								<button class="btn btn-middle-small btn-type2"><span>초기화</span></button>
-								<button class="btn btn-middle-small btn-search-close"><span>조회</span></button>
-							</div>
-						</div>
-
-						<div class="review-list-top">
-							<p class="list-total-num">Total <strong class="num-val">30</strong></p>
-						</div>
-						<div class="review-list-box">
-							<ul>
-								<li>
-									<div class="review-list-item">
-										<div class="list-type">
-											<span class="list-cate">Hyundai</span>
-											<span class="list-date">06.25.2022</span>
-										</div>
-										<div class="list-text-area">
-											<p class="list-tit"><a href="#">Technical Video for Customer Education Technical Video for Customer Education Technical Video for Customer Education Technical Video for Customer Education</a></p>
-											<ul class="status-info">
-												<li class="fc-color4">검토요청</li>
-												<li class="fc-color">피드백 대기</li>
-											</ul>
-											<div class="write-info-box">
-												<dl class="write-info">
-													<dt>미디어 타입</dt>
-													<dd>Film - TVC, Digital - Mobile/APP, Merchandise - Brand Item</dd>
-												</dl>
-												<dl class="write-info">
-													<dt>차량 코드</dt>
-													<dd>Creta(GS), Sonata(DN), Creta(GS), Sonata(DN)</dd>
-												</dl>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="review-list-item">
-										<div class="list-type">
-											<span class="list-cate">Hyundai</span>
-											<span class="list-date">06.25.2022</span>
-										</div>
-										<div class="list-text-area">
-											<p class="list-tit"><a href="#">Technical Video for Customer Education</a></p>
-											<ul class="status-info">
-												<li class="fc-color4">검토 종료</li>
-											</ul>
-											<div class="write-info-box">
-												<dl class="write-info">
-													<dt>미디어 타입</dt>
-													<dd>Film - TVC, Digital - Mobile/APP, Merchandise - Brand Item</dd>
-												</dl>
-												<dl class="write-info">
-													<dt>차량 코드</dt>
-													<dd>Creta(GS), Sonata(DN), Creta(GS), Sonata(DN)</dd>
-												</dl>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="review-list-item">
-										<div class="list-type">
-											<span class="list-cate">N</span>
-											<span class="list-date">06.25.2022</span>
-										</div>
-										<div class="list-text-area">
-											<p class="list-tit"><a href="#">Technical Video for Customer Education</a></p>
-											<ul class="status-info">
-												<li class="fc-color4">검토요청</li>
-												<li class="fc-color">수정대기</li>
-											</ul>
-											<div class="write-info-box">
-												<dl class="write-info">
-													<dt>미디어 타입</dt>
-													<dd>Film - TVC, Digital - Mobile/APP, Merchandise - Brand Item</dd>
-												</dl>
-												<dl class="write-info">
-													<dt>차량 코드</dt>
-													<dd>Creta(GS), Sonata(DN), Creta(GS), Sonata(DN)</dd>
-												</dl>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="review-list-item">
-										<div class="list-type">
-											<span class="list-cate">Hyundai</span>
-											<span class="list-date">06.25.2022</span>
-										</div>
-										<div class="list-text-area">
-											<p class="list-tit"><a href="#">Technical Video for Customer Education Technical Video for Customer Education Technical Video for Customer Education Technical Video for Customer Education</a></p>
-											<ul class="status-info">
-												<li class="fc-color4">검토요청</li>
-												<li class="fc-color">수정대기</li>
-											</ul>
-											<div class="write-info-box">
-												<dl class="write-info">
-													<dt>미디어 타입</dt>
-													<dd>Film - TVC, Digital - Mobile/APP, Merchandise - Brand Item</dd>
-												</dl>
-												<dl class="write-info">
-													<dt>차량 코드</dt>
-													<dd>Creta(GS), Sonata(DN), Creta(GS), Sonata(DN)</dd>
-												</dl>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="review-list-item">
-										<div class="list-type">
-											<span class="list-cate">Truck &amp; Bus</span>
-											<span class="list-date">06.25.2022</span>
-										</div>
-										<div class="list-text-area">
-											<p class="list-tit"><a href="#">Technical Video for Customer Education</a></p>
-											<ul class="status-info">
-												<li class="fc-color4">검토요청</li>
-												<li class="fc-color">수정대기</li>
-											</ul>
-											<div class="write-info-box">
-												<dl class="write-info">
-													<dt>미디어 타입</dt>
-													<dd>Film - TVC, Digital - Mobile/APP, Merchandise - Brand Item</dd>
-												</dl>
-												<dl class="write-info">
-													<dt>차량 코드</dt>
-													<dd>Creta(GS), Sonata(DN), Creta(GS), Sonata(DN)</dd>
-												</dl>
-											</div>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="cta-outer">
-						<button class="btn btn-type2"><span>More</span></button>
+					<div class="review-lib-cont">
+						<ul class="steps step1">
+							<li><p></p><span>라이브러리 콘텐츠<br>정보 입력</span></li>
+							<li><p></p><span>Media, Documents, <br>상세 정보 입력</span></li>
+							<li><p></p><span>리뷰 등록 완료</span></li>
+						</ul>
 					</div>
         </div>
+
+				<div class="cont-outer form">
+					<div class="design-review-wrap">
+						<div class="review-lib-cont">
+							<div class="review-lib-tit">
+								<h2 class="h4-title">라이브러리 콘텐츠 파일 등록</h2>
+								<p class="cont-text2">
+									라이브러리 콘텐츠 입력 시 사용할 Media(Image, Video, Sound)와 BMS 사용자에게 소개할 프로젝트 Documents를 일괄 등록해주세요.
+								</p>
+							</div>
+
+							<div class="input-outer-box row-type">
+								<label>첨부파일 <span class="required">*</span></label>
+								<div data-upload-id="uploadId1" class="upload-container file-uploader">
+									<div class="button-container blind">
+										<input type="file" name="file" hidden="">
+									</div>
+									<div class="file-box">
+										<div class="file-byte">
+											<span>0</span>개, <span>0</span> byte 추가됨
+										</div>
+										<div class="table-area">
+											<table cellpadding="0" cellspacing="0">
+												<colgroup>
+													<col style="width:50px">
+													<col>
+													<col style="width: 160px">
+													<col style="width: 160px">
+												</colgroup>
+												<thead>
+												<tr>
+													<th class="file-chk"><label class="chk"><input type="checkbox"><span></span></label></th>
+													<th class="name">파일 이름</th>
+													<th class="file-percent">진행률</th>
+													<th class="file-size">파일크기</th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+													<td class="upload-guide" colspan="4">
+														<div class="upload-file-area"> <!-- 파일업로드 영역 없을 시에는 no-upload 클래스 추가 -->
+															<p class="upload-guide-txt"><span>이곳을 더블클릭 또는 파일을 드래그하세요.</span></p>
+															<div class="upload-file-list">
+															<div class="table-area">
+																<table cellpadding="0" cellspacing="0">
+																	<colgroup>
+																		<col style="width:50px">
+																		<col>
+																		<col style="width: 160px">
+																		<col style="width: 160px">
+																	</colgroup>
+																	<tbody></tbody>
+																</table>
+															</div>
+														</div>
+														</div>
+													</td>
+												</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="caution-area">
+											<p class="caution">첨부파일은 총 10GB를 초과할 수 없습니다.</p>
+											<p class="caution">Image(jpg, gif, png, tiff, raw), Video(mp4, avi, wmv, mkv, mov, webm), Sound(mp3), Documents(pdf, docx, pptx, excel, txt),<br>
+												압축파일(zip, 7z) 형식만 업로드 할 수 있습니다.</p>
+										</div>
+										<div class="button-area">
+											<button class="btn btn-type2 btn-small upload-delete-line" disabled=""><span>선택 항목 제거</span></button>
+											<button class="btn btn-type2 btn-small upload-delete-all" disabled=""><span>초기화</span></button>
+											<button class="btn btn-type3 btn-small upload-start"><span>파일 저장</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="right-guide-outer active">
+							<h3 class="cont-tit2">라이브러리 콘텐츠 리뷰 스텝별 가이드</h3>
+
+							<div class="review-guide-step">
+								<div class="carousel-box carousel-type1">
+									<div class="swiper slide-swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<img src="../../assets/images/designreview/img_guide_step01.jpg">
+											</div>
+											<div class="swiper-slide">
+												<img src="../../assets/images/designreview/img_guide_step02.jpg">
+											</div>
+											<div class="swiper-slide">
+												<img src="../../assets/images/designreview/img_guide_step03.jpg">
+											</div>
+										</div>
+										<div class="swiper-button-prev"></div>
+										<div class="swiper-button-next"></div>
+										<div class="swiper-pagination"></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="guide-step-info">
+								<h4 class="cont-text2">Step 1. 라이브러리 콘텐츠 정보 입력 - 파일 등록</h4>
+								<p class="step-info-text">라이브러리 콘텐츠 입력 시 사용할 Media, BMS 사용자에게 소개할 모든 파일을<br>
+									등록해주세요. 등록한 파일을 사용하여 라이브러리 콘텐츠를 입력합니다.
+									</p>
+							</div>
+
+							<h3 class="cont-tit2">파일 등록 가이드</h3>
+							<ul class="guide-info-list">
+								<li>더블클릭 또는 파일을 드래그하여 BMS 사용자에게 소개할 프로젝트<br>Media, Documents을 일괄 등록해주세요.</li>
+								<li>Image(jpg, gif, png, tiff, raw), Video(mp4, avi, wmv, mkv, mov,<br>webm), Sound(mp3), Documents(pdf, docx, pptx, xlsx, txt), 압축<br>파일(zip)을 업로드할 수 있습니다.</li>
+								<li>Editor로 콘텐츠 입력 시, zip파일 내에 있는 미디어 파일은 사용할 수 없으<br>니, 파일을 개별로 업로드해주세요.​</li>
+								<li>첨부파일은 총 10GB를 초과할 수 없습니다.</li>
+							</ul>
+
+							<h3 class="cont-tit2">Editor 가이드</h3>
+							<ul class="guide-info-list">
+								<li>Editor 상단에 있는 버튼을 클릭하여 텍스트, 이미지, 비디오, 표 등으로 라<br>이브러리 콘텐츠를 입력하세요.</li>
+							</ul>
+						</div>
+
+						<div class="btm-fix-box">
+							<button class="btn-guide"><span>가이드 열기</span></button>
+						</div>
+					</div>
+				</div>
         <!-- E: [forward_file] -->
       </div>
       <!-- E: 20220531 cont-outer 분리(form 포함)︎ -->
@@ -732,89 +626,39 @@
 </body>
 
 <script>
-	function reviewManagementFunc () {
-		eDateTar = [$('.review-list-filter .text'), $('.daterange'), $('.date-fix-type .slt-date'), $('.search-date')];
-		prntDateTar = [$('.review-filter-outer'), $('.review-list-filter'), $('.review-filter-form')];
-		sltMon = parseInt(eDateTar[2].find('li.selected').text());
-		eDateTar[0].on('click', function () {
-			$(this).closest(prntDateTar[1]).addClass('on');
-			$(this).closest(prntDateTar[0]).find(prntDateTar[2]).slideDown((secVal[2], 'easeInOutQuart'));
-		});
-		$('.btn-search-close').on('click', function () {
-			$(this).closest(prntDateTar[0]).find(prntDateTar[1]).removeClass('on');
-			$(this).closest(prntDateTar[0]).find(prntDateTar[2]).slideUp((secVal[2], 'easeInOutQuart'));
-		});
-		eDateTar[2].on('click', '.select-items', function () {
-			const _thisTar = [$(this).find('li.selected'), $('.slt-picker'), $(this).find('li.selected').text(), $(this).find('li:last-of-type').text()];
-			const chkMon = parseInt(_thisTar[0].text());
-			sltMon = chkMon;
-			switch(_thisTar[2]) {
-				case _thisTar[3] :
-					_thisTar[1].show().find('.daterange').val('');
-					break
-				default :
-					_thisTar[1].hide();
-					dateInp ();
-					break
-			}
-		});
-		eDateTar[1].on('focusin', function () {
-			eDateTar[1].on('apply.daterangepicker', function(ev, picker) {
-				sDateVal = picker.startDate.format('MM.DD.YYYY');
-				eDateVal = picker.endDate.format('MM.DD.YYYY');
-				eDateTar[2].find('input').prop('checked', chkSwitch);
-				actDateInp ();
+	function btmFixBoxFunc () {
+		const dsFixBoxTar = [$('.btm-fix-box'), $('.bms-footer')];
+		const dsFixBoxPos = parseInt(dsFixBoxTar[0].css('bottom'));
+		if (dsFixBoxTar[0].length !== 0) {
+			$(window).on('scroll', function () {
+				let dsScrPos = $(this).scrollTop();
+				let dsScrPosSum = ($(document).height() - $(window).height()) - dsFixBoxTar[1].outerHeight(true);
+				if (dsScrPos >= dsScrPosSum) {
+					dsFixBoxTar[0].css('bottom', (dsScrPos - dsScrPosSum) + dsFixBoxPos);
+				} else {
+					dsFixBoxTar[0].css('bottom', dsFixBoxPos);
+				}
 			});
-		});
-		dateInp ();
+		}
 	}
 
-	function dateInp () {
-		nDate = new Date();
-		dateRangeOptions = {};
-		chkDate = [nDate.getFullYear(), nDate.getMonth() + irNum[0], nDate.getDate(), nDate.getMonth() + (sltMon + irNum[0])];
-		chkDate[1] = String(chkDate[1]).padStart(2, '0');
-		chkDate[2] = String(chkDate[2]).padStart(2, '0');
-		sDateVal = chkDate[1] + '.' + chkDate[2] + '.' + chkDate[0];
-		sLastDate = new Date(chkDate[0], chkDate[1], 0).getDate();
-		if ((parseInt(chkDate[1]) + sltMon) > 12) {
-			let sum = 12 - (parseInt(chkDate[1]) + sltMon);
-			chkDate[3] = -sum;
-			chkDate[0]++;
-		}
-		eLastDate = new Date(chkDate[0], chkDate[3], 0).getDate();
-		chkDate[3] = String(chkDate[3]).padStart(2, '0');
-		if (chkDate[2] > eLastDate) {
-			eDateVal = chkDate[3] + '.' + eLastDate + '.' + chkDate[0];
-		} else if (chkDate[2] >= sLastDate) {
-			if (sLastDate < eLastDate) {
-				eDateVal = chkDate[3] + '.' + eLastDate + '.' + chkDate[0];
-			}
-		} else { 
-			eDateVal = chkDate[3] + '.' + chkDate[2] + '.' + chkDate[0];
-		}
-		actDateInp ();
-	}
-
-	function actDateInp () {
-		dateRangeOptions = {
-			startDate: sDateVal,
-			endDate: eDateVal,
-			autoUpdateInput: false,
-			locale: {
-				"firstDay": 1,
-				"daysOfWeek": [ "S", "M", "T", "W", "T", "F", "S"],
-			},
-			autoApply: true,
-		}
-		eDateTar[1].daterangepicker(dateRangeOptions);
-		eDateTar[1].val(sDateVal + ' - ' + eDateVal);
-		eDateTar[3].eq(0).text(sDateVal);
-		eDateTar[3].eq(1).text(eDateVal);
-	}
-
-	reviewManagementFunc ();
-	// simplebar scroll : 커스텀 스크롤 참고
-	// https://github.com/Grsmto/simplebar
+	btmFixBoxFunc ();
+	function carouselType1 () {
+  if($('.review-guide-step').length > 0) {
+    const carouselType1 = new Swiper('.review-guide-step .slide-swiper', {
+      direction: 'horizontal',
+      pagination: {
+        el: ".review-guide-step .swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: '.review-guide-step .swiper-button-next',
+        prevEl: '.review-guide-step .swiper-button-prev',
+      },
+			loop: true,
+    });
+  }
+}
+carouselType1 ();
 </script>
 </html>
