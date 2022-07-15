@@ -750,7 +750,12 @@
 			sltMon = chkMon;
 			switch(_thisTar[2]) {
 				case _thisTar[3] :
-					_thisTar[1].show().find('.daterange').val('');
+					if ($(this).find('li:last-child').hasClass('selected')) {
+						sDateVal = chkDate[1] + '.' + chkDate[2] + '.' + chkDate[0];
+						eDateVal = sDateVal;
+						actDateInp ();
+						_thisTar[1].show().find('.daterange').val('');
+					}
 					break
 				default :
 					_thisTar[1].hide();
