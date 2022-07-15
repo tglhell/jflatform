@@ -749,14 +749,14 @@
 				initialSlide: 0,
 				on: {
 					slideChangeTransitionStart: function () {
-						const swpLinkTar = [$('.guide-step-info > ul'), $('.guide-step2-info > ul')];
+						const swpLinkTar = [$('.guide-step-info > ul').find('> li'), $('.guide-step2-info > ul').find('> li')];
 						let swpChpIdx = $('.review-guide-step .swiper-slide-active').attr('data-swiper-slide-index');
 						let swpStepLeng = $('.guide-step2-info > ul').find('> li').length;
-						swpLinkTar[0].find('> li').removeAttr('class').eq(swpChpIdx).addClass('on');
+						swpLinkTar[0].removeAttr('class').eq(swpChpIdx).addClass('on');
 						if (swpChpIdx < swpStepLeng) {
-							swpLinkTar[1].find('> li').removeAttr('class').eq(swpStepLeng - swpStepLeng).addClass('on');
+							swpLinkTar[1].removeAttr('class').eq(swpStepLeng - swpStepLeng).addClass('on');
 						} else {
-							swpLinkTar[1].find('> li').removeAttr('class').eq(swpStepLeng - irNum[0]).addClass('on');
+							swpLinkTar[1].removeAttr('class').eq(swpStepLeng - irNum[0]).addClass('on');
 						}
 					}
 				}
