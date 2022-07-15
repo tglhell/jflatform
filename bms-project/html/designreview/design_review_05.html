@@ -741,18 +741,27 @@
 				},
 				loop: true,
 				// initialSlide: 2,
+				on: {
+					slideChangeTransitionStart: function () {
+						swpActChange ();
+					}
+				}
 			});
 		}
 		$('[class*="swiper-button"]').on('click', function () {
-			const swpChpIdx = $('.review-guide-step .swiper-slide-active').attr('data-swiper-slide-index');
-			const swpStepLeng = $('.guide-step2-info > ul').find('> li').length;
-			$('.guide-step-info > ul').find('> li').removeAttr('class').eq(swpChpIdx).addClass('on');
-			if (swpChpIdx < swpStepLeng) {
-				$('.guide-step2-info > ul').find('> li').removeAttr('class').eq(swpStepLeng - swpStepLeng).addClass('on');
-			} else {
-				$('.guide-step2-info > ul').find('> li').removeAttr('class').eq(swpStepLeng - irNum[0]).addClass('on');
-			}
+			swpActChange ();
 		});
+	}
+
+	function swpActChange () {
+		const swpChpIdx = $('.review-guide-step .swiper-slide-active').attr('data-swiper-slide-index');
+		const swpStepLeng = $('.guide-step2-info > ul').find('> li').length;
+		$('.guide-step-info > ul').find('> li').removeAttr('class').eq(swpChpIdx).addClass('on');
+		if (swpChpIdx < swpStepLeng) {
+			$('.guide-step2-info > ul').find('> li').removeAttr('class').eq(swpStepLeng - swpStepLeng).addClass('on');
+		} else {
+			$('.guide-step2-info > ul').find('> li').removeAttr('class').eq(swpStepLeng - irNum[0]).addClass('on');
+		}
 	}
 	carouselType1 ();
 </script>
