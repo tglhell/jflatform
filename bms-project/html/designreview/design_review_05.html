@@ -19,7 +19,6 @@
   <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
 	<script type="text/javascript" src="../../assets/js/lib/swiper.min.js"></script>
   <script type="text/javascript" src="../../assets/js/common.js"></script>
-  <script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/daterangepicker.js"></script>
 </head>
 
@@ -691,38 +690,45 @@
 
 <script>
 	function btmFixBoxFunc () {
-		const dsFixBoxTar = [$('.btm-fix-box'), $('.bms-footer'), $('.right-guide-outer')];
-		const dsFixBoxPos = parseInt(dsFixBoxTar[0].css('bottom'));
+		const dsFixBoxTar = [$('.btm-fix-box'), $('.bms-footer'), $('.right-guide-outer'), $('.btn-top-box'), $('.bms-header, body')];
+		const dsFixBoxPos = [parseInt(dsFixBoxTar[0].css('bottom')), parseInt(dsFixBoxTar[3].css('right'))];
 		if (dsFixBoxTar[0].length !== 0) {
 			$(window).on('scroll', function () {
 				let dsScrPos = $(this).scrollTop();
 				let dsScrPosSum = ($(document).height() - $(window).height()) - dsFixBoxTar[1].outerHeight(true);
 				if (dsScrPos >= dsScrPosSum) {
-					dsFixBoxTar[0].css('bottom', (dsScrPos - dsScrPosSum) + dsFixBoxPos);
+					dsFixBoxTar[0].css('bottom', (dsScrPos - dsScrPosSum) + dsFixBoxPos[0]);
 				} else {
-					dsFixBoxTar[0].css('bottom', dsFixBoxPos);
+					dsFixBoxTar[0].css('bottom', dsFixBoxPos[0]);
 				}
 			});
-			dsFixBoxTar[0].on('click', '.btn-right-guide', function (e) {
-				const bsWsize = $('body').css('overflow', 'hidden').width();
-				$('body').removeAttr('style');
-				const dsWinW = $(window).width();
-				rightPos = parseInt($(this).parent().css('right'));
+			dsFixBoxTar[0].on('click', '.btn-right-guide', function () {
+				const dsWsize = [$(window).outerWidth(), $(window).width()];
+				rightFixPos = [parseInt($(this).parent().css('right')), (dsWsize[0] - dsWsize[1])];
 				dsFixBoxTar[2].toggleClass('active');
 				if (dsFixBoxTar[2].hasClass('active')) {
-					$('.bms-header, body').css({'overflow':'hidden', 'width':dsWinW});
-					$(this).parent().css('right', rightPos + (bsWsize - dsWinW));
+					dsFixBoxTar[4].css({'overflow':'hidden', 'width':dsWsize[1]});
+					$(this).parent().css('right', rightFixPos[0] + rightFixPos[1]);
+					dsFixBoxTar[3].css('right', dsFixBoxPos[1] + rightFixPos[1]);
 				}
-				$('.bms-wrap').on('click', function (e) {
-					if(!$('.btn-right-guide, .right-guide-cont').has(e.target).length) {
-						dsFixBoxTar[2].removeClass('active');
-						dsFixBoxTar[0].css('right', rightPos);
-						setObj(function () {
-							$('.bms-header, body').removeAttr('style');
-						}, secVal[4]);
-					}
-				});
 			});
+		}
+		$(document).on('click', function (e) {
+			const dsReFixTar = $('.btn-right-guide *, .right-guide-outer, .right-guide-outer *')
+			if(!$(e.target).is(dsReFixTar)) {
+				dsRboxClose ();
+			}
+		});
+		$('.btn-guide-close').on('click',function () {
+			dsRboxClose ();
+		});
+		function dsRboxClose () {
+			dsFixBoxTar[2].removeClass('active');
+			dsFixBoxTar[0].css('right', rightFixPos[0]);
+			dsFixBoxTar[3].removeAttr('style');
+			setObj(() => {
+				dsFixBoxTar[4].removeAttr('style');
+			}, secVal[4]);
 		}
 	}
 	btmFixBoxFunc ();
@@ -740,27 +746,21 @@
 					prevEl: '.review-guide-step .swiper-button-prev',
 				},
 				loop: true,
-				// initialSlide: 2,
+				initialSlide: 0,
 				on: {
 					slideChangeTransitionStart: function () {
-						swpActChange ();
+						const swpLinkTar = [$('.guide-step-info > ul'), $('.guide-step2-info > ul')];
+						let swpChpIdx = $('.review-guide-step .swiper-slide-active').attr('data-swiper-slide-index');
+						let swpStepLeng = $('.guide-step2-info > ul').find('> li').length;
+						swpLinkTar[0].find('> li').removeAttr('class').eq(swpChpIdx).addClass('on');
+						if (swpChpIdx < swpStepLeng) {
+							swpLinkTar[1].find('> li').removeAttr('class').eq(swpStepLeng - swpStepLeng).addClass('on');
+						} else {
+							swpLinkTar[1].find('> li').removeAttr('class').eq(swpStepLeng - irNum[0]).addClass('on');
+						}
 					}
 				}
 			});
-		}
-		$('[class*="swiper-button"]').on('click', function () {
-			swpActChange ();
-		});
-	}
-
-	function swpActChange () {
-		const swpChpIdx = $('.review-guide-step .swiper-slide-active').attr('data-swiper-slide-index');
-		const swpStepLeng = $('.guide-step2-info > ul').find('> li').length;
-		$('.guide-step-info > ul').find('> li').removeAttr('class').eq(swpChpIdx).addClass('on');
-		if (swpChpIdx < swpStepLeng) {
-			$('.guide-step2-info > ul').find('> li').removeAttr('class').eq(swpStepLeng - swpStepLeng).addClass('on');
-		} else {
-			$('.guide-step2-info > ul').find('> li').removeAttr('class').eq(swpStepLeng - irNum[0]).addClass('on');
 		}
 	}
 	carouselType1 ();
