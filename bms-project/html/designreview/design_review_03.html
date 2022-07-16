@@ -17,7 +17,6 @@
   <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
   <script type="text/javascript" src="../../assets/js/common.js"></script>
-  <script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/daterangepicker.js"></script>
 </head>
 
@@ -750,12 +749,9 @@
 			sltMon = chkMon;
 			switch(_thisTar[2]) {
 				case _thisTar[3] :
-					if ($(this).find('li:last-child').hasClass('selected')) {
-						sDateVal = chkDate[1] + '.' + chkDate[2] + '.' + chkDate[0];
-						eDateVal = sDateVal;
-						actDateInp ();
-						_thisTar[1].show().find('.daterange').val('');
-					}
+					dateInp ();
+					eDateTar[3].eq(1).text(sDateVal);
+					_thisTar[1].show().find('.daterange').val('');
 					break
 				default :
 					_thisTar[1].hide();
