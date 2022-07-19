@@ -39,6 +39,9 @@
 /* e : custom select item scroll */
 
 /* s : common custom */
+.position-r {
+	position: relative;
+}
 .design-review-wrap .steps {
 	height: 90px;
 	margin-bottom: 140px;
@@ -110,16 +113,23 @@
 .slide-switch-box.on:not(.active) .switch-top .switch-placeholder {
 	display: none;
 }
+.switch-cont .row-type.check-box > label {
+	margin: 0 0 16px;
+}
+.switch-cont .row-type.check-box .check-group {
+	font-size: 0;
+}
 .switch-cont .row-type.check-box div label {
 	display: inline-block;
-	min-width: 216px;
+	width: 25%;
+	margin: 0 0 16px;
 }
 .slide-switch-box .switch-cont {
-	padding: 64px 32px 18px;
+	padding: 64px 32px 24px;
 }
 .slide-switch-box.active .switch-cont,
 .slide-switch-box.on:not(.active) .switch-cont {
-	padding-top: 18px;
+	padding-top: 24px;
 }
 .switch-item-list {
 	margin-bottom: 60px;
@@ -154,7 +164,7 @@
 	margin-top: 40px;
 }
 .design-review-wrap .cta-outer {
-	margin-top: 60px;
+	margin-top: 90px;
 }
 .noti .underline {
 	text-decoration: underline;
@@ -490,5 +500,27 @@
 }
 .guide-btm-image {
 	margin-top: 24px;
+}
+.design-review-wrap .write-save-toast {
+	transition: bottom .5s, opacity .5s, z-index 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	transform: translateX(-50%);
+	position: absolute;
+	bottom: -100px;
+	left: 50%;
+	z-index: -1;
+	opacity: 0;
+	padding: 15px 42px 14px;
+	border: 1px solid var(--cm-color-green);
+	background-color: var(--cm-color-white);
+	font-family: 'HyundaiSansTextKR', sans-serif;
+	font-size: 14px;
+	color: var(--cm-color-green);
+	line-height: 21px;
+}
+.design-review-wrap .write-save-toast.active {
+	transition: bottom .5s, opacity .5s, z-index 0s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	bottom: -80px;
+	z-index: 80;
+	opacity: 1;
 }
 /* e : design_review_05 */
