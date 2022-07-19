@@ -63,9 +63,12 @@
 .switch-cont .row-type.check-box > label {
 	margin: 0 0 16px;
 }
+.switch-cont .row-type.check-box .check-group {
+	font-size: 0;
+}
 .switch-cont .row-type.check-box div label {
 	display: inline-block;
-	min-width: 216px;
+	width: 25%;
 	margin: 0 0 16px;
 }
 .slide-switch-box .switch-cont {
