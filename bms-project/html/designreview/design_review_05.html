@@ -445,7 +445,7 @@
         </div>
 
 				<div class="cont-outer form">
-					<div class="design-review-wrap">
+					<div class="design-review-wrap position-r">
 						<div class="review-lib-cont">
 							<div class="review-lib-tit">
 								<h2 class="h4-title">라이브러리 콘텐츠 파일 등록</h2>
@@ -628,6 +628,8 @@
 							<button class="btn-guide-close"><img src="../../assets/images/designreview/popup_x.svg" alt="닫기"></button>
 						</div>
 
+						<p class="write-save-toast">임시저장이 완료되었습니다. (<span class="toast-check-time">07.08.2022 17:08</span>)</p>
+
 						<div class="btm-fix-box">
 							<button class="btn-right-guide"><span>가이드 열기</span></button>
 						</div>
@@ -711,24 +713,24 @@
 					$(this).parent().css('right', rightFixPos[0] + rightFixPos[1]);
 					dsFixBoxTar[3].css('right', dsFixBoxPos[1] + rightFixPos[1]);
 				}
+				$(document).on('click', function (e) {
+					const dsReFixTar = $('.btn-right-guide *, .right-guide-outer, .right-guide-outer *');
+					if(!$(e.target).is(dsReFixTar)) {
+						dsRboxClose ();
+					}
+				});
+				$('.btn-guide-close').on('click',function () {
+					dsRboxClose ();
+				});
+				function dsRboxClose () {
+					dsFixBoxTar[2].removeClass('active');
+					dsFixBoxTar[0].css('right', rightFixPos[0]);
+					dsFixBoxTar[3].removeAttr('style');
+					setObj(() => {
+						dsFixBoxTar[4].removeAttr('style');
+					}, secVal[4]);
+				}
 			});
-		}
-		$(document).on('click', function (e) {
-			const dsReFixTar = $('.btn-right-guide *, .right-guide-outer, .right-guide-outer *');
-			if(!$(e.target).is(dsReFixTar)) {
-				dsRboxClose ();
-			}
-		});
-		$('.btn-guide-close').on('click',function () {
-			dsRboxClose ();
-		});
-		function dsRboxClose () {
-			dsFixBoxTar[2].removeClass('active');
-			dsFixBoxTar[0].css('right', rightFixPos[0]);
-			dsFixBoxTar[3].removeAttr('style');
-			setObj(() => {
-				dsFixBoxTar[4].removeAttr('style');
-			}, secVal[4]);
 		}
 	}
 	btmFixBoxFunc ();
@@ -764,5 +766,16 @@
 		}
 	}
 	carouselType1 ();
+
+	function dsSaveToast () {
+		setInterval(function () {
+			$('.write-save-toast').addClass('active');
+			setTimeout(function () {
+				$('.write-save-toast').removeClass('active');
+			}, secVal[2] * twoDig[0]);
+		// }, secVal[8] * secVal[1]);
+		}, 10000);
+	}
+	dsSaveToast ();
 </script>
 </html>
