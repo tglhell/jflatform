@@ -502,7 +502,7 @@
 	transition: bottom .5s, opacity .5s, z-index 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 	transform: translateX(-50%);
 	position: absolute;
-	bottom: -110px;
+	bottom: -100px;
 	left: 50%;
 	z-index: -1;
 	opacity: 0;

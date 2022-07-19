@@ -774,8 +774,7 @@
 		nDate = new Date();
 		dateRangeOptions = {};
 		chkDate = [nDate.getFullYear(), nDate.getMonth() + irNum[0], nDate.getDate(), nDate.getMonth() + (sltMon + irNum[0])];
-		chkDate[1] = String(chkDate[1]).padStart(2, '0');
-		chkDate[2] = String(chkDate[2]).padStart(2, '0');
+		for (i = 1; i <= 2; i++) chkDate[i] = String(chkDate[i]).padStart(2, '0');
 		sDateVal = chkDate[1] + '.' + chkDate[2] + '.' + chkDate[0];
 		sLastDate = new Date(chkDate[0], chkDate[1], 0).getDate();
 		if ((parseInt(chkDate[1]) + sltMon) > 12) {

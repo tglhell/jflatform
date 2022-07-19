@@ -455,7 +455,7 @@
 							</div>
 
 							<div class="input-outer-box row-type">
-								<label>첨부파일 <span class="required">*</span></label>
+								<label>첨부파일</label>
 								<div data-upload-id="uploadId1" class="upload-container file-uploader">
 									<div class="button-container blind">
 										<input type="file" name="file" hidden="">
@@ -505,14 +505,12 @@
 											</table>
 										</div>
 										<div class="caution-area">
-											<p class="caution">첨부파일은 총 10GB를 초과할 수 없습니다.</p>
-											<p class="caution">Image(jpg, gif, png, tiff, raw), Video(mp4, avi, wmv, mkv, mov, webm), Sound(mp3), Documents(pdf, docx, pptx, excel, txt),<br>
-												압축파일(zip, 7z) 형식만 업로드 할 수 있습니다.</p>
+											<p class="caution">첨부파일은 10GB를 초과할 수 없습니다.</p>
 										</div>
 										<div class="button-area">
-											<button class="btn btn-type2 btn-small upload-delete-line" disabled=""><span>선택 항목 제거</span></button>
-											<button class="btn btn-type2 btn-small upload-delete-all" disabled=""><span>초기화</span></button>
-											<button class="btn btn-type3 btn-small upload-start"><span>파일 저장</span></button>
+											<button class="btn btn-type2 btn-middle-small upload-delete-line" disabled><span>선택 항목 제거</span></button>
+											<button class="btn btn-type2 btn-middle-small upload-delete-all" disabled><span>초기화</span></button>
+											<button class="btn btn-type3 btn-middle-small upload-start"><span>파일 저장</span></button>
 										</div>
 									</div>
 								</div>
@@ -774,8 +772,18 @@
 				$('.write-save-toast').removeClass('active');
 			}, secVal[2] * twoDig[0]);
 		// }, secVal[8] * secVal[1]);
+		dateInp ();
 		}, 10000);
 	}
 	dsSaveToast ();
+
+	function dateInp () {
+		const nDate = new Date();
+		const chkDate = [nDate.getFullYear(), nDate.getMonth() + irNum[0], nDate.getDate(), nDate.getHours(), nDate.getMinutes()];
+		const chkDateLeng = chkDate.slice(1, 5).length;
+		for (i = 1; i <= chkDateLeng; i++) chkDate[i] = String(chkDate[i]).padStart(2, '0');
+		let sDateVal = chkDate[1] + '.' + chkDate[2] + '.' + chkDate[0] + ' ' + chkDate[3] + ':' + chkDate[4];
+		$('.toast-check-time').text(sDateVal);
+	}
 </script>
 </html>
