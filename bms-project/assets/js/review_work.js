@@ -1,4 +1,4 @@
-// design_review_03
+// s : design_review_03
 function reviewManagementFunc () {
 	eDateTar = [$('.review-list-filter .text'), $('.daterange'), $('.date-fix-type .slt-date'), $('.search-date')];
 	prntDateTar = [$('.review-filter-outer'), $('.review-list-filter'), $('.review-filter-form')];
@@ -37,33 +37,20 @@ function reviewManagementFunc () {
 	});
 	dateInp ();
 }
-
 function dateInp () {
-	nDate = new Date();
-	dateRangeOptions = {};
-	chkDate = [nDate.getFullYear(), nDate.getMonth() + irNum[0], nDate.getDate(), nDate.getMonth() + (sltMon + irNum[0])];
-	for (i = 1; i <= 2; i++) chkDate[i] = String(chkDate[i]).padStart(2, '0');
-	sDateVal = chkDate[1] + '.' + chkDate[2] + '.' + chkDate[0];
-	sLastDate = new Date(chkDate[0], chkDate[1], 0).getDate();
-	if ((parseInt(chkDate[1]) + sltMon) > 12) {
-		let sum = 12 - (parseInt(chkDate[1]) + sltMon);
-		chkDate[3] = -sum;
-		chkDate[0]++;
-	}
-	eLastDate = new Date(chkDate[0], chkDate[3], 0).getDate();
-	chkDate[3] = String(chkDate[3]).padStart(2, '0');
-	if (chkDate[2] > eLastDate) {
-		eDateVal = chkDate[3] + '.' + eLastDate + '.' + chkDate[0];
-	} else if (chkDate[2] >= sLastDate) {
-		if (sLastDate < eLastDate) {
-			eDateVal = chkDate[3] + '.' + eLastDate + '.' + chkDate[0];
-		}
-	} else { 
-		eDateVal = chkDate[3] + '.' + chkDate[2] + '.' + chkDate[0];
-	}
-	actDateInp ();
+	eval(
+		(function (t, i, c, k) {
+			while (c--) {
+				if (k[c]) {
+					t = t.replace(new RegExp("\\b" + c.toString(i) + "\\b", "g"), k[c]);
+				}
+			}
+			return t;
+		})(
+			"5=8 d();s={};4=[5.o(),5.f()+g[0],5.b(),5.f()+(c+g[0]),5.p(),5.n()];q(i=1;i<=2;i++)4[i]=m(4[i]).l(2,'0');t=4[1]+'.'+4[2]+'.'+4[0];9=8 d(4[0],4[1],0).b();7((h(4[1])+c)>e){r j=e-(h(4[1])+c);4[3]=-j;4[0]++}6=8 d(4[0],4[3],0).b();4[3]=m(4[3]).l(2,'0');7(4[2]>6){a=4[3]+'.'+6+'.'+4[0]}k 7(4[2]>=9){7(9<6){a=4[3]+'.'+6+'.'+4[0]}}k{a=4[3]+'.'+4[2]+'.'+4[0]}u();", 31, 31, "||||chkDate|nDate|eLastDate|if|new|sLastDate|eDateVal|getDate|sltMon|Date|12|getMonth|irNum|parseInt||sum|else|padStart|String|getMinutes|getFullYear|getHours|for|let|dateRangeOptions|sDateVal|actDateInp".split("|")
+		)
+	);
 }
-
 function actDateInp () {
 	dateRangeOptions = {
 		startDate: sDateVal,
@@ -76,55 +63,57 @@ function actDateInp () {
 		autoApply: true,
 	}
 	eDateTar[1].daterangepicker(dateRangeOptions);
-	eDateTar[1].val(sDateVal + ' - ' + eDateVal);
-	eDateTar[3].eq(0).text(sDateVal);
-	eDateTar[3].eq(1).text(eDateVal);
+	eval(
+		(function (g, u, o, y) {
+			while (o--) {
+				if (y[o]) {
+					g = g.replace(new RegExp("\\b" + o + "\\b", "g"), y[o]);
+				}
+			}
+			return g;
+		})("2[1].8(4+' - '+5);2[3].6(0).7(4);2[3].6(1).7(5);", 9, 9, "||eDateTar||sDateVal|eDateVal|eq|text|val".split("|"))
+	);
 }
+// e : design_review_03
 
-// design_review_05
+// s : design_review_05
 function btmFixBoxFunc () {
 	const dsFixBoxTar = [$('.btm-fix-box'), $('.bms-footer'), $('.right-guide-outer'), $('.btn-top-box'), $('.bms-header, body')];
 	const dsFixBoxPos = [parseInt(dsFixBoxTar[0].css('bottom')), parseInt(dsFixBoxTar[3].css('right'))];
 	if (dsFixBoxTar[0].length !== 0) {
-		$(window).on('scroll', function () {
-			let dsScrPos = $(this).scrollTop();
-			let dsScrPosSum = ($(document).height() - $(window).height()) - dsFixBoxTar[1].outerHeight(true);
-			if (dsScrPos >= dsScrPosSum) {
-				dsFixBoxTar[0].css('bottom', (dsScrPos - dsScrPosSum) + dsFixBoxPos[0]);
-			} else {
-				dsFixBoxTar[0].css('bottom', dsFixBoxPos[0]);
-			}
-		});
-		dsFixBoxTar[0].on('click', '.btn-right-guide', function () {
-			const dsWsize = [$(window).outerWidth(), $(window).width()];
-			rightFixPos = [parseInt($(this).parent().css('right')), (dsWsize[0] - dsWsize[1])];
-			dsFixBoxTar[2].toggleClass('active');
-			if (dsFixBoxTar[2].hasClass('active')) {
-				dsFixBoxTar[4].css({'overflow':'hidden', 'width':dsWsize[1]});
-				$(this).parent().css('right', rightFixPos[0] + rightFixPos[1]);
-				dsFixBoxTar[3].css('right', dsFixBoxPos[1] + rightFixPos[1]);
-			}
-			$(document).on('click', function (e) {
-				const dsReFixTar = $('.btn-right-guide *, .right-guide-outer, .right-guide-outer *');
-				if(!$(e.target).is(dsReFixTar)) {
-					dsRboxClose ();
+		eval(
+			(function (s, u, c, k) {
+				while (c--) {
+					if (k[c]) {
+						s = s.replace(new RegExp("\\b" + c.toString(u) + "\\b", "g"), k[c]);
+					}
 				}
-			});
-			$('.btn-guide-close').on('click',function () {
-				dsRboxClose ();
-			});
-			function dsRboxClose () {
-				dsFixBoxTar[2].removeClass('active');
-				dsFixBoxTar[0].css('right', rightFixPos[0]);
-				dsFixBoxTar[3].removeAttr('style');
-				setObj(() => {
-					dsFixBoxTar[4].removeAttr('style');
-				}, secVal[4]);
-			}
+				return s;
+			})(
+				"$(a).d('c',e(){8 2=$(f).b();8 4=($(i).6()-$(a).6())-3[1].g(h);k(2>=4){3[0].5('9',(2-4)+7[0])}j{3[0].5('9',7[0])}});", 21, 21, "||dsScrPos|dsFixBoxTar|dsScrPosSum|css|height|dsFixBoxPos|let|bottom|window|scrollTop|scroll|on|function|this|outerHeight|true|document|else|if".split("|")
+			)
+		);
+		dsFixBoxTar[0].on('click', '.btn-right-guide', function () {
+			eval(
+				(function (p, a, c, k, e, d) {
+					e = function (c) {
+						return (c < a ? "" : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36));
+					};
+					while (c--) {
+						if (k[c]) {
+							p = p.replace(new RegExp("\\b" + e(c) + "\\b", "g"), k[c]);
+						}
+					}
+					return p;
+				})(
+					"l a=[$(i).A(),$(i).m()];8=[E($(j).k().7('6')),(a[0]-a[1])];5[2].F('b');g(5[2].u('b')){5[4].7({'D':'x','m':a[1]});$(j).k().7('6',8[0]+8[1]);5[3].7('6',s[1]+8[1])}$(w).r('p',d(e){l f=$('.n-6-9 *, .6-9-h, .6-9-h *');g(!$(e.B).z(f)){c()}});$('.n-9-t').r('p',d(){c()});d c(){5[2].y('b');5[0].7('6',8[0]);5[3].o('q');v(()=>{5[4].o('q')},C[4])}", 42, 42, "|||||dsFixBoxTar|right|css|rightFixPos|guide|dsWsize|active|dsRboxClose|function||dsReFixTar|if|outer|window|this|parent|const|width|btn|removeAttr|click|style|on|dsFixBoxPos|close|hasClass|setObj|document|hidden|removeClass|is|outerWidth|target|secVal|overflow|parseInt|toggleClass".split(
+						"|"
+					)
+				)
+			);
 		});
 	}
 }
-
 function reviewCarousel () {
 	if($('.review-guide-step').length > 0) {
 		const carouselType1 = new Swiper('.review-guide-step .slide-swiper', {
@@ -155,23 +144,29 @@ function reviewCarousel () {
 		});
 	}
 }
-
 function dsSaveToast () {
 	setInterval(function () {
 		$('.write-save-toast').addClass('active');
 		setTimeout(function () {
 			$('.write-save-toast').removeClass('active');
 		}, secVal[2] * twoDig[0]);
-		dsSaveDateInp ();
+		dsSavedateInp ();
 	}, 10000);
 	// }, secVal[8] * secVal[1]);
 }
-
-function dsSaveDateInp () {
-	const nDate = new Date();
-	const chkDate = [nDate.getFullYear(), nDate.getMonth() + irNum[0], nDate.getDate(), nDate.getHours(), nDate.getMinutes()];
-	const chkDateLeng = chkDate.slice(1, 5).length;
-	for (i = 1; i <= chkDateLeng; i++) chkDate[i] = String(chkDate[i]).padStart(2, '0');
-	let sDateVal = chkDate[1] + '.' + chkDate[2] + '.' + chkDate[0] + ' ' + chkDate[3] + ':' + chkDate[4];
-	$('.toast-check-time').text(sDateVal);
+function dsSavedateInp () {
+	eval(
+		(function (r, e, s, t) {
+			while (s--) {
+				if (t[s]) {
+					r = r.replace(new RegExp("\\b" + s.toString(e) + "\\b", "g"), t[s]);
+				}
+			}
+			return r;
+		})(
+			"8 7=g f();8 6=[7.h(),7.j()+l[0],7.e(),7.m(),7.b()];8 a=6.d(1,5).c;k(i=1;i<=a;i++)6[i]=n(6[i]).t(2,'0');r 9=6[1]+'.'+6[2]+'.'+6[0]+' '+6[3]+':'+6[4];$('.p-o-q').s(9);", 30, 30,
+			"||||||chkDate|nDate|const|sDateVal|chkDateLeng|getMinutes|length|slice|getDate|Date|new|getFullYear||getMonth|for|irNum|getHours|String|check|toast|time|let|text|padStart".split("|")
+		)
+	);
 }
+// e : design_review_05
