@@ -97,7 +97,7 @@ function btmFixBoxFunc () {
 		});
 		dsFixBoxTar[0].on('click', '.btn-right-guide', function () {
 			const dsWsize = [$(window).outerWidth(), $(window).width()];
-			rightFixPos = [parseInt($(this).parent().css('right')), (dsWsize[0] - dsWsize[1])];
+			const rightFixPos = [parseInt($(this).parent().css('right')), (dsWsize[0] - dsWsize[1])];
 			dsFixBoxTar[2].toggleClass('active');
 			if (dsFixBoxTar[2].hasClass('active')) {
 				dsFixBoxTar[4].css({'overflow':'hidden', 'width':dsWsize[1]});
