@@ -18,6 +18,7 @@
   <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
   <script type="text/javascript" src="../../assets/js/common.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/daterangepicker.js"></script>
+  <script type="text/javascript" src="../../assets/js/review.js"></script>
 </head>
 
 <body>
@@ -731,91 +732,6 @@
 </body>
 
 <script>
-	function reviewManagementFunc () {
-		eDateTar = [$('.review-list-filter .text'), $('.daterange'), $('.date-fix-type .slt-date'), $('.search-date')];
-		prntDateTar = [$('.review-filter-outer'), $('.review-list-filter'), $('.review-filter-form')];
-		sltMon = parseInt(eDateTar[2].find('li.selected').text());
-		eDateTar[0].on('click', function () {
-			$(this).closest(prntDateTar[1]).addClass('on');
-			$(this).closest(prntDateTar[0]).find(prntDateTar[2]).slideDown((secVal[2], 'easeInOutQuart'));
-		});
-		$('.btn-search-close').on('click', function () {
-			$(this).closest(prntDateTar[0]).find(prntDateTar[1]).removeClass('on');
-			$(this).closest(prntDateTar[0]).find(prntDateTar[2]).slideUp((secVal[2], 'easeInOutQuart'));
-		});
-		eDateTar[2].on('click', '.select-items', function () {
-			const _thisTar = [$(this).find('li.selected'), $('.slt-picker'), $(this).find('li.selected').text(), $(this).find('li:last-of-type').text()];
-			const chkMon = parseInt(_thisTar[0].text());
-			sltMon = chkMon;
-			switch(_thisTar[2]) {
-				case _thisTar[3] :
-					dateInp ();
-					eDateTar[3].eq(1).text(sDateVal);
-					_thisTar[1].show().find('.daterange').val('');
-					break
-				default :
-					dateInp ();
-					_thisTar[1].hide();
-					break
-			}
-		});
-		eDateTar[1].on('focusin', function () {
-			eDateTar[1].on('apply.daterangepicker', function(ev, picker) {
-				sDateVal = picker.startDate.format('MM.DD.YYYY');
-				eDateVal = picker.endDate.format('MM.DD.YYYY');
-				eDateTar[2].find('input').prop('checked', chkSwitch);
-				actDateInp ();
-			});
-		});
-		dateInp ();
-	}
-
-	function dateInp () {
-		nDate = new Date();
-		dateRangeOptions = {};
-		chkDate = [nDate.getFullYear(), nDate.getMonth() + irNum[0], nDate.getDate(), nDate.getMonth() + (sltMon + irNum[0])];
-		for (i = 1; i <= 2; i++) chkDate[i] = String(chkDate[i]).padStart(2, '0');
-		sDateVal = chkDate[1] + '.' + chkDate[2] + '.' + chkDate[0];
-		sLastDate = new Date(chkDate[0], chkDate[1], 0).getDate();
-		if ((parseInt(chkDate[1]) + sltMon) > 12) {
-			let sum = 12 - (parseInt(chkDate[1]) + sltMon);
-			chkDate[3] = -sum;
-			chkDate[0]++;
-		}
-		eLastDate = new Date(chkDate[0], chkDate[3], 0).getDate();
-		chkDate[3] = String(chkDate[3]).padStart(2, '0');
-		if (chkDate[2] > eLastDate) {
-			eDateVal = chkDate[3] + '.' + eLastDate + '.' + chkDate[0];
-		} else if (chkDate[2] >= sLastDate) {
-			if (sLastDate < eLastDate) {
-				eDateVal = chkDate[3] + '.' + eLastDate + '.' + chkDate[0];
-			}
-		} else { 
-			eDateVal = chkDate[3] + '.' + chkDate[2] + '.' + chkDate[0];
-		}
-		actDateInp ();
-	}
-
-	function actDateInp () {
-		dateRangeOptions = {
-			startDate: sDateVal,
-			endDate: eDateVal,
-			autoUpdateInput: false,
-			locale: {
-				"firstDay": 1,
-				"daysOfWeek": [ "S", "M", "T", "W", "T", "F", "S"],
-			},
-			autoApply: true,
-		}
-		eDateTar[1].daterangepicker(dateRangeOptions);
-		eDateTar[1].val(sDateVal + ' - ' + eDateVal);
-		eDateTar[3].eq(0).text(sDateVal);
-		eDateTar[3].eq(1).text(eDateVal);
-	}
-
 	reviewManagementFunc ();
-	// simplebar scroll : 커스텀 스크롤 참고
-	// https://github.com/Grsmto/simplebar
-	// https://202psj.tistory.com/1604 코드 암호화
 </script>
 </html>
