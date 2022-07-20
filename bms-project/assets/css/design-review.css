@@ -14,6 +14,7 @@
 	--cm-color-navy: #002c5f;
 	--cm-color-black0: #000;
 	--cm-color-black3: #333;
+	--fs-text-kr: 'HyundaiSansTextKR', sans-serif;
 	--fb-bold-lg: 500;
 	--fb-bold-xl: 700;
 }
@@ -459,7 +460,7 @@
 }
 .guide-step-info ul > li .step-info-text {
 	margin-top: 8px;
-	font-family: 'HyundaiSansTextKR', sans-serif;
+	font-family: var(--fs-text-kr);
 	font-size: 14px;
 	color: var(--cm-color-dark-gray);
 	line-height: 21px;
@@ -512,7 +513,7 @@
 	padding: 15px 42px 14px;
 	border: 1px solid var(--cm-color-green);
 	background-color: var(--cm-color-white);
-	font-family: 'HyundaiSansTextKR', sans-serif;
+	font-family: var(--fs-text-kr);
 	font-size: 14px;
 	color: var(--cm-color-green);
 	line-height: 21px;
