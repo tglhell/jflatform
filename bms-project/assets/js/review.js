@@ -170,8 +170,8 @@ function dsSaveToast () {
 function dsSaveDateInp () {
 	const nDate = new Date();
 	const chkDate = [nDate.getFullYear(), nDate.getMonth() + irNum[0], nDate.getDate(), nDate.getHours(), nDate.getMinutes()];
-	const chkDateLeng = chkDate.slice(1, 5).length;
-	for (i = 1; i <= chkDateLeng; i++) chkDate[i] = String(chkDate[i]).padStart(2, '0');
+	const chkDateLeng = chkDate.length;
+	for (i = 1; i < chkDateLeng; i++) chkDate[i] = String(chkDate[i]).padStart(2, '0');
 	let sDateVal = chkDate[1] + '.' + chkDate[2] + '.' + chkDate[0] + ' ' + chkDate[3] + ':' + chkDate[4];
 	$('.toast-check-time').text(sDateVal);
 }

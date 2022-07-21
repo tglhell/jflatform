@@ -160,14 +160,26 @@ function dsSaveToast () {
 }
 function dsSavedateInp () {
 	new Function (
-		(function (r, e, s, t) {
-			while (s--) {
-				if (t[s]) {
-					r = r.replace(new RegExp("\\b" + s.toString(e) + "\\b", "g"), t[s]);
-				}
+		(function (o, r, a, c, l, e) {
+			l = function (c) {
+				return c.toString(r);
+			};
+			if (!"".replace(/^/, String)) {
+				while (a--) e[l(a)] = c[a] || l(a);
+				c = [
+					function (l) {
+						return e[l];
+					},
+				];
+				l = function () {
+					return "\\w+";
+				};
+				a = 1;
 			}
-			return r;
-		})("8 7=g f();8 6=[7.h(),7.j()+l[0],7.e(),7.m(),7.b()];8 a=6.d(1,5).c;k(i=1;i<=a;i++)6[i]=n(6[i]).t(2,'0');r 9=6[1]+'.'+6[2]+'.'+6[0]+' '+6[3]+':'+6[4];$('.p-o-q').s(9);", 30, 30, "||||||chkDate|nDate|const|sDateVal|chkDateLeng|getMinutes|length|slice|getDate|Date|new|getFullYear||getMonth|for|irNum|getHours|String|check|toast|time|let|text|padStart".split("|"))
+			while (a--) if (c[a]) o = o.replace(new RegExp("\\b" + l(a) + "\\b", "g"), c[a]);
+			return o;
+		})("7 6=a b();7 5=[6.c(),6.d()+e[0],6.f(),6.g(),6.h()];7 8=5.j;k(i=1;i<8;i++)5[i]=l(5[i]).m(2,'0');n 9=5[1]+'.'+5[2]+'.'+5[0]+' '+5[3]+':'+5[4];$('.o-p-q').r(9);", 28, 28, "|||||chkDate|nDate|const|chkDateLeng|sDateVal|new|Date|getFullYear|getMonth|irNum|getDate|getHours|getMinutes||length|for|String|padStart|let|toast|check|time|text".split("|"), 0, {}
+		)
 	)();
 }
 // e : design_review_05
