@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* @import '/guide/assets/docs/base.css'; */
+/* @import '/hckang/guide/assets/docs/base.css'; */
 :root {
 	--cm-title-white: #fff;
 	--cm-title-black: #444;
@@ -31,22 +31,22 @@ body::-webkit-scrollbar-track {
 
 @font-face {
 	font-family: 'genesis-head-light';
-	src: url(/guide/assets/fonts/GenesisSansHeadKRLight.woff2) format("woff2"),
-		url(/guide/assets/fonts/GenesisSansHeadKRLight.woff) format("woff");
+	src: url(/hckang/guide/assets/fonts/GenesisSansHeadKRLight.woff2) format("woff2"),
+		url(/hckang/guide/assets/fonts/GenesisSansHeadKRLight.woff) format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'genesis-head-regular';
-	src: url(/guide/assets/fonts/GenesisSansHeadKRRegular.woff2) format("woff2"),
-		url(/guide/assets/fonts/GenesisSansHeadKRRegular.woff) format("woff");
+	src: url(/hckang/guide/assets/fonts/GenesisSansHeadKRRegular.woff2) format("woff2"),
+		url(/hckang/guide/assets/fonts/GenesisSansHeadKRRegular.woff) format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'genesis-text-regular';
-	src: url(/guide/assets/fonts/GenesisSansTextKRRegular.woff2) format("woff2"),
-		url(/guide/assets/fonts/GenesisSansTextKRRegular.woff) format("woff");
+	src: url(/hckang/guide/assets/fonts/GenesisSansTextKRRegular.woff2) format("woff2"),
+		url(/hckang/guide/assets/fonts/GenesisSansTextKRRegular.woff) format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
@@ -74,7 +74,7 @@ strong {
 	scroll-behavior: smooth;
 }
 .header {
-	background: url(/guide/assets/images/bg_header.jpg) no-repeat center bottom;
+	background: url(/hckang/guide/assets/images/bg_header.jpg) no-repeat center bottom;
 	background-size: cover;
 	color: #fff;
 }
@@ -105,7 +105,7 @@ strong {
 	left: 0;
 	right: 0;
 	z-index: -1;
-	background: url(/guide/assets/images/bg_white_img4.jpg) repeat center center;
+	background: url(/hckang/guide/assets/images/bg_white_img4.jpg) repeat center center;
 	background-size: cover;
 }
 .guide_container:after {
@@ -369,7 +369,7 @@ header.guide_header h1 {
 
 .guide_container .box_content.type3:before {
 	opacity: .5;
-	background: url(/guide/assets/images/bg_white_img.jpg) no-repeat center bottom;
+	background: url(/hckang/guide/assets/images/bg_white_img.jpg) no-repeat center bottom;
 	background-size: cover;
 }
 
@@ -595,7 +595,7 @@ header.guide_header h1 {
 
 .cont_codGuide .contents_infor .conIn_tip:before {
 	opacity: .5;
-	background: url(/guide/assets/images/bg_white_img3.jpg) no-repeat center bottom;
+	background: url(/hckang/guide/assets/images/bg_white_img3.jpg) no-repeat center bottom;
 	background-size: cover;
 }
 
