@@ -1,0 +1,120 @@
+/* design_review_01 */
+.row-type.radio-box > label {
+	display: inline-block;
+}
+.row-type.radio-box div label {
+	display: inline-block;
+	margin: 0 75px 16px 0;
+}
+.slide-switch-box {
+	transition: border-color .3s ease-in-out;
+	position: relative;
+	overflow: hidden;
+	height: 46px;
+	border: 1px solid #ccc;
+	border-color: #ccc;
+}
+.slide-switch-box.active {
+	height: auto;
+}
+.slide-switch-box .btn-switch {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10;
+	min-height: 46px;
+	font-size: 0;
+	line-height: 0;
+}
+.slide-switch-box .btn-switch span {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 46px;
+	height: 46px;
+	background: url(../images/common/ico_slt_box_off.svg) no-repeat center center;
+	background-size: 23px auto;
+}
+.slide-switch-box.active {
+	transition: border-color .3s ease-in-out;
+	border-color: #00aad2;
+}
+.slide-switch-box.active .btn-switch span {
+	background-image: url(../images/common/ico_slt_box_on.svg);
+}
+.slide-switch-box .switch-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	min-height: 46px;
+}
+.slide-switch-box .switch-top .switch-placeholder {
+	padding: 11px 46px 11px 16px;
+	font-size: 16px;
+	color: #ccc;
+	line-height: 24px;
+	cursor: pointer;
+}
+.slide-switch-box.active .switch-top .switch-placeholder,
+.slide-switch-box.on:not(.active) .switch-top .switch-placeholder {
+	display: none;
+}
+.switch-cont .row-type.check-box > label {
+	margin: 0 0 16px;
+}
+.switch-cont .row-type.check-box div label {
+	display: inline-block;
+	min-width: 216px;
+	margin: 0 0 16px;
+}
+.slide-switch-box .switch-cont {
+	padding: 64px 32px 24px;
+}
+.slide-switch-box.active .switch-cont,
+.slide-switch-box.on:not(.active) .switch-cont {
+	padding-top: 24px;
+}
+.switch-item-list {
+	margin-bottom: 60px;
+	padding-right: 20px;
+}
+.switch-item-list ul {
+	overflow: hidden;
+	margin: -12px -10px 0 0;
+}
+.switch-item-list ul li {
+	display: inline-block;
+	margin: 12px 10px 0 0;
+	padding: 7px 4px 7px 14px;
+	background-color: #f6f3f2;
+}
+.switch-item-list ul li span {
+	display: none;
+}
+.switch-item-list ul li:last-child {
+	margin-right: 0;
+}
+.switch-item-list ul li .btn-item-del {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	margin-left: 10px;
+	background: url(../images/common/ico_close2.svg)no-repeat;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.design-review-wrap p.noti {
+	margin-top: 40px;
+}
+.design-review-wrap .cta-outer {
+	margin-top: 90px;
+}
+.noti .underline {
+	text-decoration: underline;
+}
+
+/* design_review_02 */
+.design-review-wrap .complete-outer {
+	margin-top: 120px;
+}
