@@ -572,7 +572,7 @@ header.guide_header h1 {
 	-webkit-backdrop-filter: blur(150px);
 	backdrop-filter: blur(150px);
 	padding: 8px 12px;
-	font-size: 14px;
+	font-size: 13px;
 	line-height: 17px;
 }
 
@@ -587,8 +587,8 @@ header.guide_header h1 {
 
 .cont_codGuide .contents_infor .conIn_tip em {
 	font-family: var(--cm-font-family-head-regular);
-	font-size: 13px;
 	font-style: normal;
+	color: #018496;
 	text-decoration: underline;
 	text-underline-position: under;
 }
