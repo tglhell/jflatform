@@ -526,8 +526,8 @@ header.guide_header h1 {
 .cont_codGuide .tab a:after {
 	content: attr(title);
 	transition: all .6s cubic-bezier(0.755, 0.05, 0.855, 0.06);
-	-ms-transform-origin: 50% 80% -20px;
-	transform-origin: 50% 80% -20px;
+	-ms-transform-origin: 50% 50% -20px;
+	transform-origin: 50% 50% -20px;
 	position: absolute;
 	top: 0;
 	bottom: 0;
