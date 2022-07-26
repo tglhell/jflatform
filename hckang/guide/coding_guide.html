@@ -42,15 +42,15 @@
 						if (!tabParentTar.is(':animated')) {
 							$(e.target).addClass('active').siblings().removeAttr('class');
 							if (tabIdx[0] > tabIdx[1]) {
-								tabParentTar.animate({'left':'-50%', 'opacity':'0'}, 300, () => {
-									tabParentTar.css({'left':'auto', 'right':'-50%'});
+								tabParentTar.animate({'left':'-25%', 'opacity':'0'}, 300, () => {
+									tabParentTar.css({'left':'auto', 'right':'-25%'});
 									tabParentTar.animate({'right':'0', 'left':'auto', 'opacity':'1'}, 500, 'easeInOutExpo', () => {
 										$('.contents_infor.guide-content').removeAttr('style').addClass('tab-slide');
 									});
 								});
 							} else {
-								tabParentTar.animate({'right':'-50%', 'opacity':'0'}, 300, () => {
-									tabParentTar.css({'right':'auto', 'left':'-50%'});
+								tabParentTar.animate({'right':'-25%', 'opacity':'0'}, 300, () => {
+									tabParentTar.css({'right':'auto', 'left':'-25%'});
 									tabParentTar.animate({'left':'0', 'right':'auto', 'opacity':'1'}, 500, 'easeInOutExpo', () => {
 										$('.contents_infor.guide-content').removeAttr('style').addClass('tab-slide');
 									});

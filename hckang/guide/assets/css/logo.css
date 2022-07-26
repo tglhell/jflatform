@@ -63,7 +63,7 @@
 }
 
 .fill {
-	fill: #666;
+	fill: #000;
 	fill-opacity: 0;
 	-webkit-animation: fill_offset 6s infinite;
 	animation: fill_offset 6s infinite;
