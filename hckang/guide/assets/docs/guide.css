@@ -74,7 +74,9 @@ strong {
 	scroll-behavior: smooth;
 }
 .header {
-	position: relative;
+	position: sticky;
+	top: 0;
+	z-index: 200;
 	background: url(/hckang/guide/assets/images/bg_header.jpg) no-repeat center bottom;
 	background-size: cover;
 	color: #fff;
@@ -500,7 +502,9 @@ header.guide_header h1 {
 }
 
 .cont_codGuide .tab {
-	overflow: hidden;
+	position: sticky;
+	top: 60px;
+	z-index: 200;
 	display: flex;
 	border-bottom: 1px solid var(--cm-opacity-color-black);
 }
