@@ -506,7 +506,7 @@ header.guide_header h1 {
 }
 
 .cont_codGuide .tab a {
-	transition: all .6s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+	transition: all .6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 	position: relative;
 	display: inline-block;
 	width: 100%;
@@ -525,7 +525,7 @@ header.guide_header h1 {
 .cont_codGuide .tab a:before,
 .cont_codGuide .tab a:after {
 	content: attr(title);
-	transition: all .6s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+	transition: all .6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 	-ms-transform-origin: 50% 50% -20px;
 	transform-origin: 50% 50% -20px;
 	position: absolute;
