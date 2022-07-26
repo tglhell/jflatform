@@ -17,8 +17,8 @@
 	stroke-dasharray: 0 250;
 	stroke-opacity: 1;
 	fill: none;
-	-webkit-animation: stroke_offset 8s infinite;
-	animation: stroke_offset 8s infinite;
+	-webkit-animation: stroke_offset 6s infinite;
+	animation: stroke_offset 6s infinite;
 	-webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 	animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 	animation-direction: alternate;
@@ -65,8 +65,8 @@
 .fill {
 	fill: #666;
 	fill-opacity: 0;
-	-webkit-animation: fill_offset 8s infinite;
-	animation: fill_offset 8s infinite;
+	-webkit-animation: fill_offset 6s infinite;
+	animation: fill_offset 6s infinite;
 	-webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 	animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }

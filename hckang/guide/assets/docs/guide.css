@@ -74,6 +74,7 @@ strong {
 	scroll-behavior: smooth;
 }
 .header {
+	position: relative;
 	background: url(/hckang/guide/assets/images/bg_header.jpg) no-repeat center bottom;
 	background-size: cover;
 	color: #fff;
@@ -92,6 +93,11 @@ strong {
 	font-family: var(--cm-font-family-head-light);
 	font-style: normal;
 	color: #3fb0fc;
+}
+.header .btn-status-home {
+	position: absolute;
+	top: 12px;
+	right: 20px;;
 }
 
 .guide_container {
@@ -314,14 +320,9 @@ header.guide_header h1 {
 	min-height: calc(100vh - 98px);
 }
 
-.guide_container .contents_infor.guide-content.tab-right {
+.guide_container .contents_infor.guide-content.tab-slide {
 	left: auto;
 	right: 0;
-}
-
-.guide_container .contents_infor.guide-content.tab-left {
-	left: 0;
-	right: auto;
 }
 
 .guide_container .box_content {
@@ -350,8 +351,8 @@ header.guide_header h1 {
 	background: none;
 	padding: 10px;
 	margin-bottom: 30px;
-	border-radius: 3px;
-	border: 1px solid rgba(68, 68, 68, .3);
+	border: 1px solid var(--cm-opacity-color-black);
+	border-radius: 0;
 	font-size: 14px;
 	color: #666;
 }
@@ -505,7 +506,7 @@ header.guide_header h1 {
 }
 
 .cont_codGuide .tab a {
-	transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+	transition: all .6s cubic-bezier(0.755, 0.05, 0.855, 0.06);
 	position: relative;
 	display: inline-block;
 	width: 100%;
@@ -524,7 +525,7 @@ header.guide_header h1 {
 .cont_codGuide .tab a:before,
 .cont_codGuide .tab a:after {
 	content: attr(title);
-	transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+	transition: all .6s cubic-bezier(0.755, 0.05, 0.855, 0.06);
 	-ms-transform-origin: 50% 80% -20px;
 	transform-origin: 50% 80% -20px;
 	position: absolute;
@@ -600,7 +601,7 @@ header.guide_header h1 {
 }
 
 .cont_codGuide .contents_infor .conIn_tip:after {
-	background-color: rgba(255, 255, 255, .6);
+	background-color: rgba(255, 255, 255, .5);
 }
 
 .cont_codGuide .contents_infor .conIn_tip p {

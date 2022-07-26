@@ -34,28 +34,32 @@
 				const tabParentTar = $('.contents_infor.guide-content');
 				const tabIdx = [$(this).index(), $('.tab a.active').index()];
 				e.preventDefault();
-				$(e.target).addClass('active').siblings().removeAttr('class');
 				$.ajax({
 					type: 'get',
 					url: '/hckang/guide/html/coding_guide_' + tabTitTxt + '.html',
 					dataType : 'html',
 					success: function(data) {
-						if (tabIdx[0] > tabIdx[1]) {
-							tabParentTar.animate({'left':'-100%'}, 0, 'linear', () => {
-								tabParentTar.css({'left':'auto', 'right':'-100%'});
-							});
-							tabParentTar.animate({'right':'0'}, 800, 'easeInOutExpo', () => {
-								$('.contents_infor.guide-content').removeAttr('style').removeClass('tab-left').addClass('tab-right');
-							});
-						} else {
-							tabParentTar.animate({'right':'-100%'}, 0, 'linear', () => {
-								tabParentTar.css({'right':'auto', 'left':'-100%'});
-							});
-							tabParentTar.animate({'left':'0'}, 800, 'easeInOutExpo', () => {
-								$('.contents_infor.guide-content').removeAttr('style').removeClass('tab-right').addClass('tab-left');
-							});
+						if (!tabParentTar.is(':animated')) {
+							$(e.target).addClass('active').siblings().removeAttr('class');
+							if (tabIdx[0] > tabIdx[1]) {
+								tabParentTar.animate({'left':'-50%', 'opacity':'0'}, 300, () => {
+									tabParentTar.css({'left':'auto', 'right':'-50%'});
+									tabParentTar.animate({'right':'0', 'left':'auto', 'opacity':'1'}, 500, 'easeInOutExpo', () => {
+										$('.contents_infor.guide-content').removeAttr('style').addClass('tab-slide');
+									});
+								});
+							} else {
+								tabParentTar.animate({'right':'-50%', 'opacity':'0'}, 300, () => {
+									tabParentTar.css({'right':'auto', 'left':'-50%'});
+									tabParentTar.animate({'left':'0', 'right':'auto', 'opacity':'1'}, 500, 'easeInOutExpo', () => {
+										$('.contents_infor.guide-content').removeAttr('style').addClass('tab-slide');
+									});
+								});
+							}
+							setTimeout(() => {
+								tabParentTar.html(data);
+							}, 300);
 						}
-						tabParentTar.html(data);
 					}
 				});
 			});
@@ -82,6 +86,7 @@
 <div class="wrap" id="codingGiuide">
   <div class="header">
     <h1 class="header-tit"><em>Project Name</em> project coding guide</h1>
+		<a href="/hckang/status.html" class="btn-status-home"><img src="/hckang/guide/assets/images/img_home.png" alt="Home"></a>
   </div>
 
   <div class="cont_codGuide guide_container">

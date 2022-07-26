@@ -1,11 +1,11 @@
 new Function (
-  (function (p, a, c, k, e, r) {
-    e = String;
+  (function (a, b, c, d, m, o) {
+    m = String;
     if (!"".replace(/^/, String)) {
-      while (c--) r[c] = k[c] || c;
-      k = [
-        function (e) {
-          return r[e];
+      while (c--) o[c] = d[c] || c;
+      d = [
+        function (m) {
+          return o[m];
         },
       ];
       e = function () {
@@ -13,7 +13,7 @@ new Function (
       };
       c = 1;
     }
-    while (c--) if (k[c]) p = p.replace(new RegExp("\\b" + e(c) + "\\b", "g"), k[c]);
-    return p;
-  })("$.1('/2/3/0/4-5.0');", 6, 6, "js|getScript|guide|assets|p|func".split("|"), 0, {})
+    while (c--) if (d[c]) a = a.replace(new RegExp("\\b" + e(c) + "\\b", "g"), d[c]);
+    return a;
+  })("$.1('/2/3/4/0/5-6.0');", 7, 7, "js|getScript|hckang|guide|assets|p|func".split("|"), 0, {})
 )();
