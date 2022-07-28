@@ -16,12 +16,11 @@ body {
 	overflow-y: scroll;
 }
 body::-webkit-scrollbar {
-	width: 10px;
+	width: 6px;
 }
 body::-webkit-scrollbar-thumb {
-	border-radius: 10px;
+	border-radius: 3px;
 	background: rgba(102, 102, 102, .5);
-	border: 2px solid #fff;
 }
 body::-webkit-scrollbar-thumb:hover {
 	background: rgba(102, 102, 102, .7);
@@ -74,6 +73,8 @@ strong {
 .wrap {
 	scroll-behavior: smooth;
 }
+
+
 .header {
 	position: sticky;
 	top: 0;
@@ -85,7 +86,7 @@ strong {
 .header .header-tit {
 	-webkit-backdrop-filter: blur(80px);
 	backdrop-filter: blur(80px);
-	padding: 10px 20px;
+	padding: 10px 20px 10px 60px;
 	font-family: var(--cm-font-family-head-light);
 	font-size: 26px;
 	font-weight: 400;
@@ -98,9 +99,18 @@ strong {
 	color: #3fb0fc;
 }
 .header .btn-status-home {
+	overflow: hidden;
 	position: absolute;
-	top: 12px;
-	right: 20px;;
+	top: 10px;
+	left: 10px;
+}
+.header .btn-status-home img {
+	transition: .3s ease-in-out;
+	transform: scale(1);
+}
+.header .btn-status-home:hover img {
+	transition: .3s ease-in-out;
+	transform: scale(1.2);
 }
 
 .guide_container {
@@ -189,14 +199,6 @@ strong {
 	color: #FFF;
 	display: block;
 	padding: 7px 5px;
-}
-
-.mt10 {
-	margin-top: 10px;
-}
-
-.mt30 {
-	margin-top: 30px !important;
 }
 
 .toolbar {
