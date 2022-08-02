@@ -1,0 +1,439 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0 CODING GUIDE</title>
+
+  <!-- 코딩 가이드용 -->
+  <link rel="stylesheet" href="docs/guide.css">
+  <link rel="stylesheet" href="docs/prism.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <script type="text/javascript" src="docs/prism.js"></script>
+  <script type="text/javascript" src="docs/plugin.js"></script>
+  <!-- //코딩 가이드용 -->
+
+  <link rel="stylesheet" href="../assets/css/lib/swiper.min.css">
+  <link rel="stylesheet" href="../assets/css/lib/customlib.css">
+  <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../assets/js/common.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/swiper.min.js"></script>
+  <!-- <script type="text/javascript" src="../assets/js/lib/customlib.js"></script> -->
+  <style>
+    .sample-wrap {
+      overflow: hidden;
+    }
+    .sample-cont {
+      overflow: hidden;
+      min-height: 800px;
+      padding: 20px 10px;
+      border: 1px solid #000;
+      background-color: #f4f4f4;
+    }
+    .sample-cont + .sample-cont {
+      margin-top: 100px;
+    }
+    .sample-cont .sample-img-outer {
+      margin-top: 30px;
+      font-size: 0;
+    }
+    .sample-cont .sample-img {
+      display: inline-block;
+      width: 25%;
+    }
+    .sample-cont .sample-img img {
+      width: 100%;
+    }
+    .btn {
+      margin-top: 30px;
+    }
+
+    /* sample-swiper 02 */
+    .sample-swiper-num02 img {
+      width: 50%;
+    }
+    .sample-swiper-num02 .swiper-info-cont {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      padding: 30px;
+    }
+    .sample-swiper-num02 .swiper-info-cont p {
+      font-size: 14px;
+    }
+    .sample-swiper-num02 .swiper-info-cont .s-info-text {
+      margin-top: 20px;
+    }
+    .sample-swiper-num02 [data-ir-idx="9"] {
+      transition-delay: .2s;
+    }
+    .sample-swiper-num02 [data-ir-idx="10"] {
+      transition-delay: .7s;
+    }
+    .sample-swiper-num02 [data-ir-idx="11"] {
+      transition-delay: 1.2s;
+    }
+    .sample-swiper-num02 .swiper-slide.ir-animate[data-ir] {
+      -webkit-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+    }
+    .sample-swiper-num02 .swiper-slide.ir-animate img[data-ir],
+    .sample-swiper-num02 .swiper-slide.ir-animate .s-info-tit[data-ir],
+    .sample-swiper-num02 .swiper-slide.ir-animate .s-info-text[data-ir] {
+      -webkit-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+      -webkit-transform: translateY(100px);
+      transform: translateY(100px);
+    }
+    .sample-swiper-num02 .swiper-slide.ir-animate img[data-ir-idx],
+    .sample-swiper-num02 .swiper-slide.ir-animate .s-info-tit[data-ir-idx],
+    .sample-swiper-num02 .swiper-slide.ir-animate .s-info-text[data-ir-idx] {
+      -webkit-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+    .sample-swiper-num02 .swiper-slide.ir-animate.swiper-slide-active img[data-ir-idx="9"] {
+      transition-delay: .2s;
+    }
+    .sample-swiper-num02 .swiper-slide.ir-animate.swiper-slide-active .swiper-info-cont [data-ir-idx="10"] {
+      transition-delay: .7s;
+    }
+    .sample-swiper-num02 .swiper-slide.ir-animate.swiper-slide-active .swiper-info-cont [data-ir-idx="11"] {
+      transition-delay: 1.2s;
+    }
+    .sample-swiper-num02 .swiper-slide:not(.ir-animate) img.ir-animate,
+    .sample-swiper-num02 .swiper-slide:not(.ir-animate) .s-info-tit.ir-animate,
+    .sample-swiper-num02 .swiper-slide:not(.ir-animate) .s-info-text.ir-animate,
+    .sample-swiper-num02 .swiper-slide img.ir-animate[data-ir-idx="9"],
+    .sample-swiper-num02 .swiper-slide .s-info-tit.ir-animate[data-ir-idx="10"],
+    .sample-swiper-num02 .swiper-slide .s-info-text.ir-animate[data-ir-idx="11"] {
+      -webkit-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+      -webkit-transform: translateY(100px);
+      transform: translateY(100px);
+    }
+    .sample-swiper-num02 .swiper-slide:not(.ir-animate).swiper-slide-active img.ir-animate,
+    .sample-swiper-num02 .swiper-slide:not(.ir-animate).swiper-slide-active .s-info-tit.ir-animate,
+    .sample-swiper-num02 .swiper-slide:not(.ir-animate).swiper-slide-active .s-info-text.ir-animate,
+    .sample-swiper-num02 .swiper-slide.swiper-slide-active img.ir-animate[data-ir-idx="9"],
+    .sample-swiper-num02 .swiper-slide.swiper-slide-active .s-info-tit.ir-animate[data-ir-idx="10"],
+    .sample-swiper-num02 .swiper-slide.swiper-slide-active .s-info-text.ir-animate[data-ir-idx="11"] {
+      -webkit-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+    .sample-swiper-num02 .swiper-slide:not(.ir-animate).swiper-slide-active .s-info-tit.ir-animate,
+    .sample-swiper-num02 .swiper-slide.swiper-slide-active .s-info-tit.ir-animate[data-ir-idx="10"] {
+      transition-delay: .5s;
+    }
+    .sample-swiper-num02 .swiper-slide:not(.ir-animate).swiper-slide-active .s-info-text.ir-animate,
+    .sample-swiper-num02 .swiper-slide.swiper-slide-active .s-info-text.ir-animate[data-ir-idx="11"] {
+      transition-delay: 1s;
+    }
+  </style>
+  <script>
+    $(function(){
+      $('.view_code').on('click', function(){
+        $(this).next('.code-toolbar').toggleClass('open');
+      });
+    });
+  </script>
+</head>
+<body>
+<div class="wrap" id="codingGiuide">
+  <div class="header">
+    <div><em>BMS 2.0</em> project coding guide</div>
+    <h1><img src="images/logo_header.png" alt="로고"></h1>
+  </div>
+
+  <div class="cont_codGuide guide_container">
+
+
+    <div class="tab">
+      <a href="coding_guide_default.html" title="DEFAULT">DEFAULT</a>
+      <a href="coding_guide_naming.html" title="NAMING">NAMING</a>
+      <a href="coding_guide_box.html" title="BOX">BOX</a>
+      <a href="coding_guide_button.html" title="BUTTON">BUTTON</a>
+      <a href="coding_guide_form.html" title="FORM">FORM</a>
+      <a href="coding_guide_font.html" title="FONT">FONT</a>
+      <a href="coding_guide_table.html" title="TABLE">TABLE</a>
+      <a href="coding_guide_tab.html" title="TAB">TAB</a>
+      <a href="javascript:void(0);" title="SCROLL" class="active">SCROLL</a>
+      <a href="coding_guide_carousel.html" title="CAROUSEL">CAROUSEL</a>
+      <a href="coding_guide_popup.html" title="POPUP">POPUP</a>
+      <a href="coding_guide_etc.html" title="ETC">ETC</a>
+    </div>
+
+    <div class="contents_infor guide-content">
+
+      <h2 class="title">SCROLL A TYPE</h2>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--
+<div class="sample-wrap">
+	<div class="sample-cont ir-animate">
+		This page is a sample page 1.
+	</div>
+	<div class="sample-cont ir-animate">
+		This page is a sample page 2.
+	</div>
+	<div class="sample-cont ir-animate">
+		This page is a sample page 3.
+		<div class="sample-img-outer ir-count ir-animate">
+			<div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample01.jpg" alt="sample01"></div>
+			<div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample02.jpg" alt="sample02"></div>
+			<div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample03.jpg" alt="sample03"></div>
+			<div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample04.jpg" alt="sample04"></div>
+		</div>
+	</div>
+	<div class="sample-cont ir-animate">
+		This page is a sample page 4.
+		<div class="sample-img-outer ir-count ir-type2 ir-animate">
+			<div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample01.jpg" alt="sample01"></div>
+			<div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample02.jpg" alt="sample02"></div>
+			<div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample03.jpg" alt="sample03"></div>
+			<div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample04.jpg" alt="sample04"></div>
+		</div>
+	</div>
+</div>
+
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <div class="conIn_tip">
+        해당되는 곳에 클래스 "<strong>ir-animate</strong>"를 붙이면 하나, 복수여도 인덱싱 되면서 순차별로 작동 됨. 같은X축에 있는 요소들은 감싸는 요소에 클래스 "<strong>ir-counter, ir-animate</strong>"를 붙이고 자식 요소에 클래스 "<strong>ir-item</strong>"을 붙이면 순차별 카운팅이 적용 됨.<br>클래스 "<strong>ir-type2</strong>"를 붙이면 2번째 효과가 동작함.
+
+      </div>
+
+      <!-- scroll position -->
+      <div>
+        작성코드<br><br>
+
+        <div class="sample-wrap">
+          <div class="sample-cont">
+            This page is a sample page 1.
+          </div>
+          <div class="sample-cont ir-animate">
+            This page is a sample page 2.
+            <div class="cta-outer">
+              <a href="sample_landing.html" class="btn btn-type3"><span>일반 진입</span></a>
+              <a href="sample_landing.html?page=1" class="btn btn-type2"><span>더보기로 진입</span></a>
+            </div>
+          </div>
+          <div class="sample-cont ir-animate">
+            This page is a sample page 3.
+            <div class="sample-img-outer ir-count ir-animate">
+              <div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample01.jpg" alt="sample01"></div>
+              <div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample02.jpg" alt="sample02"></div>
+              <div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample03.jpg" alt="sample03"></div>
+              <div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample04.jpg" alt="sample04"></div>
+            </div>
+          </div>
+          <div class="sample-cont ir-animate">
+            This page is a sample page 4.
+            <div class="sample-img-outer ir-count ir-type2 ir-animate">
+              <div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample01.jpg" alt="sample01"></div>
+              <div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample02.jpg" alt="sample02"></div>
+              <div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample03.jpg" alt="sample03"></div>
+              <div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample04.jpg" alt="sample04"></div>
+            </div>
+          </div>
+          <div class="sample-cont ir-animate">
+            This page is a sample page 5.
+            <div class="sample-img-outer ir-count ir-type2 ir-animate">
+              <div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample01.jpg" alt="sample01"></div>
+              <div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample02.jpg" alt="sample02"></div>
+              <div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample03.jpg" alt="sample03"></div>
+              <div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample04.jpg" alt="sample04"></div>
+              <div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample01.jpg" alt="sample01"></div>
+              <div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample02.jpg" alt="sample02"></div>
+              <div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample03.jpg" alt="sample03"></div>
+              <div class="sample-img ir-item"><img src="../assets/images/@img_scroll_sample04.jpg" alt="sample04"></div>
+            </div>
+          </div>
+          <div class="sample-cont ir-animate">
+            This page is a sample page 6.
+            <div class="sample-img-outer">
+              <div class="swiper-outer-box sample-swiper-num02">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide ir-animate">
+                      <img class="ir-animate" src="../assets/images/@img_scroll_sample01.jpg" alt="sample01">
+                      <div class="swiper-info-cont">
+                        <p class="s-info-tit ir-animate">swiper title</p>
+                        <p class="s-info-text ir-animate">swiper cont text</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <img  class="ir-animate" src="../assets/images/@img_scroll_sample02.jpg" alt="sample02">
+                      <div class="swiper-info-cont">
+                        <p class="s-info-tit ir-animate">swiper title</p>
+                        <p class="s-info-text ir-animate">swiper cont text</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="ir-animate" src="../assets/images/@img_scroll_sample03.jpg" alt="sample03">
+                      <div class="swiper-info-cont">
+                        <p class="s-info-tit ir-animate">swiper title</p>
+                        <p class="s-info-text ir-animate">swiper cont text</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="ir-animate" src="../assets/images/@img_scroll_sample04.jpg" alt="sample04">
+                      <div class="swiper-info-cont">
+                        <p class="s-info-tit ir-animate">swiper title</p>
+                        <p class="s-info-text ir-animate">swiper cont text</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <div class="sample-cont ir-animate">
+            This page is a sample page 7.
+          </div>
+          <div class="sample-cont ir-animate">
+            This page is a sample page 8.
+            <div class="cta-outer">
+              <button class="btn pop-open scr-fix-btn" data-pop-idx="1"><span>Run from current location</span></button>
+            </div>
+          </div>
+          <div class="sample-cont ir-animate">
+            This page is a sample page 9.
+          </div>
+        </div>
+      </div>
+      <!-- //scroll position -->
+
+    </div>
+    <!-- //contents_infor -->
+
+    <!-- layer 1-->
+    <div class="layer-popup-wrap" data-pop-idx="1">
+      <div class="layer-popup-body">
+        <div class="layer-popup-cont">
+          <h1 class="layer-title">Layer Title 1</h1>
+          <div class="layer-cont">
+            <p>this page is sample page. this page is sample page. this page is sample page. this page is sample page. this page is sample page.</p>
+            <div class="swiper-outer-box sample-swiper-num01">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="../assets/images/@img_scroll_sample01.jpg" alt="sample01">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="../assets/images/@img_scroll_sample02.jpg" alt="sample02">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="../assets/images/@img_scroll_sample03.jpg" alt="sample03">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="../assets/images/@img_scroll_sample04.jpg" alt="sample04">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <button class="btn-close-popup btn-close">close</button>
+        </div>
+      </div>
+    </div>
+    <!-- //layer 1-->
+  </div>
+</div>
+<div class="btn-top-box">
+  <a href="#" title="move to top" role="button" class="btn-top">
+    <span>top</span>
+  </a>
+</div>
+
+
+<script>
+  $(function(){
+    if ($('.sample-swiper-num01').length == 1) {
+      let swpOpt = {},
+          slideLength = $('.sample-swiper-num01 .swiper-slide').length;
+      if (slideLength == 1) {
+        swpOpt = {
+          allowSlidePrev: false,
+          allowSlideNext: false,
+          simulateTouch: false
+        }
+        $('.sample-swiper-num01 [class*="swiper-button"]').hide();
+      } else {
+        swpOpt = {
+          navigation: {
+            nextEl: '.sample-swiper-num01 .swiper-button-next',
+            prevEl: '.sample-swiper-num01 .swiper-button-prev',
+          },
+          pagination: {
+            el: '.sample-swiper-num01 .swiper-pagination',
+            clickable: true,
+          },
+          // slidesPerView: 'auto',
+          // centeredSlides: true,
+          freeMode: true,
+          mousewheel: {
+            releaseOnEdges: true,
+          },
+          simulateTouch: true,
+          speed: 300,
+          loop: false,
+          spaceBetween: 0,
+          observer: true,
+          observeParents: true,
+        }
+      }
+      let sampleSwp = new Swiper('.sample-swiper-num01 .swiper-container', swpOpt);
+
+      sampleSwp.on('reachEnd', function(){
+        setObj(function(){
+          $('.btn-close-popup').trigger('click');
+        }, secVal[4]);
+      });
+    }
+
+    if ($('.sample-swiper-num02').length == 1) {
+      let swpOpt2 = {},
+          slideLength2 = $('.sample-swiper-num02 .swiper-slide').length;
+      if (slideLength2 == 1) {
+        swpOpt2 = {
+          allowSlidePrev: false,
+          allowSlideNext: false,
+          simulateTouch: false
+        }
+        $('.sample-swiper-num02 [class*="swiper-button"]').hide();
+      } else {
+        swpOpt2 = {
+          navigation: {
+            nextEl: '.sample-swiper-num02 .swiper-button-next',
+            prevEl: '.sample-swiper-num02 .swiper-button-prev',
+          },
+          pagination: {
+            el: '.sample-swiper-num02 .swiper-pagination',
+            clickable: true,
+          },
+          // slidesPerView: 'auto',
+          // centeredSlides: true,
+          simulateTouch: true,
+          speed: 300,
+          loop: false,
+          spaceBetween: 0,
+          observer: true,
+          observeParents: true,
+        }
+      }
+      let sampleSwp2 = new Swiper('.sample-swiper-num02 .swiper-container', swpOpt2);
+    }
+  });
+</script>
+</body>
+</html>

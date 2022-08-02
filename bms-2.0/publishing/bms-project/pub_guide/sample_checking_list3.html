@@ -1,0 +1,720 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0</title>
+
+  <link rel="stylesheet" href="../assets/css/lib/swiper.min.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <style>
+    .cont-outer > p, .cont-outer.fullcase, .cont-center, .cont-right > p {height:100px; background-color: rgb(205, 206, 182);}
+    .cont-outer {margin-bottom: 20px !important}
+    .test .bms-container .bms-content .cont-outer.fullcase {
+      background-color: #f4f4f4;
+    }
+
+
+
+    .checking-list-box .chk-box {
+      display: none;
+    }
+    .swiper-wrapper {
+      z-index: 1000;
+    }
+  </style>
+
+  <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/customlib.js"></script>
+  <script type="text/javascript" src="../assets/js/common.js"></script>
+</head>
+
+<script>
+
+</script>
+<body>
+
+<div class="bms-wrap">
+  <div class="skip-nav">
+    <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
+  </div>
+
+  <!-- header -->
+  <div class="bms-header">
+    <img src="../assets/images/temp/@header.png" alt="">
+  </div>
+  <!--//header -->
+
+  <!-- container -->
+  <div id="bmsContainer" class="bms-container"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+    <div class="bms-content">
+
+      <div class="cont-outer">
+<!--        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
+        <!--S: checking list-->
+        <div class="checking-list-box3 column5">
+          <div class="btn-area">
+            <div class="edit-box">
+              <button class="btn-txt btn-icon2 btn-edit btn-file">파일 선택</button>
+            </div>
+            <div class="chk-box">
+              <div>
+                <div>
+                  <span class="cont-text2 btn-txt btn-icon2 btn-file" disabled="disabled">선택된 파일 (<strong></strong>)</span>
+                  <button class="btn-txt btn-cancel">선택 취소</button>
+                  <a href="" title="download" class="btn-txt btn-icon">선택 일괄 다운로드</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-box carousel-type3">
+            <!-- Slider main container -->
+            <div class="swiper slide-swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img-box">
+                      <div class="img-box-inner">
+                        <img src="../../assets/images/sample/sample-slide-img01.png">
+                        <button class="tooltip-btn on"></button>
+                        <button class="tooltip-btn off"></button>
+                      </div>
+                      <div class="tooltip-box">
+                        <div class="tooltip">
+                          <div class="top-area">
+                            <h4 class="cont-tit2">Asset 정보</h4>
+                            <table cellpadding="0" cellspacing="0">
+                              <colgroup>
+                                <col style="width:96px">
+                                <col>
+                              </colgroup>
+                              <tbody>
+                              <tr>
+                                <th>Media 유형</th>
+                                <td>Image</td>
+                              </tr>
+                              <tr>
+                                <th>브랜드</th>
+                                <td>Hyundai</td>
+                              </tr>
+                              <tr>
+                                <th>파일명</th>
+                                <td>DSCF6902_외장 수정완y.jpg</td>
+                              </tr>
+                              <tr>
+                                <th>파일 크기</th>
+                                <td>5.92MB</td>
+                              </tr>
+                              <tr>
+                                <th>규격</th>
+                                <td>6240 x 4160px</td>
+                              </tr>
+                              <tr>
+                                <th>파일 추가 정보</th>
+                                <td>관련 가이드라인 정보<br>https://bms.hmc.co.kr/hyundai/manual/view/id/2735</td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="bottom-area">
+                            <h4 class="cont-tit2">저작권 정보</h4>
+                            <table cellpadding="0" cellspacing="0">
+                              <colgroup>
+                                <col style="width:96px">
+                                <col>
+                              </colgroup>
+                              <tbody>
+                              <tr>
+                                <th>저작권 소유자</th>
+                                <td>Image</td>
+                              </tr>
+                              <tr>
+                                <th>이메일</th>
+                                <td>Hyundai</td>
+                              </tr>
+                              <tr>
+                                <th>유효기간</th>
+                                <td>DSCF6902_외장 수정완y.jpg</td>
+                              </tr>
+                              <tr>
+                                <th>제한 국가</th>
+                                <td>5.92MB</td>
+                              </tr>
+                              <tr>
+                                <th>저작권 추가 정보</th>
+                                <td>6240 x 4160px</td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="cta-outer">
+                            <button class="btn btn-type2"><span>자세한 정보</span></button>
+                            <button class="btn"><span>다운로드</span></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="cont-text2">20 Hyundai x BTS Global Hydrogen Campaign</p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img-box">
+                      <div class="img-box-inner">
+                        <img src="../../assets/images/sample/sample-slide-img01.png">
+                        <button class="tooltip-btn on"></button>
+                        <button class="tooltip-btn off"></button>
+                      </div>
+                      <div class="tooltip-box">
+                        <div class="tooltip">
+                          <div class="top-area">
+                            <h4 class="cont-tit2">Asset 정보</h4>
+                            <table cellpadding="0" cellspacing="0">
+                              <colgroup>
+                                <col style="width:96px">
+                                <col>
+                              </colgroup>
+                              <tbody>
+                              <tr>
+                                <th>Media 유형</th>
+                                <td>Image</td>
+                              </tr>
+                              <tr>
+                                <th>브랜드</th>
+                                <td>Hyundai</td>
+                              </tr>
+                              <tr>
+                                <th>파일명</th>
+                                <td>DSCF6902_외장 수정완y.jpg</td>
+                              </tr>
+                              <tr>
+                                <th>파일 크기</th>
+                                <td>5.92MB</td>
+                              </tr>
+                              <tr>
+                                <th>규격</th>
+                                <td>6240 x 4160px</td>
+                              </tr>
+                              <tr>
+                                <th>파일 추가 정보</th>
+                                <td>관련 가이드라인 정보<br>https://bms.hmc.co.kr/hyundai/manual/view/id/2735</td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="bottom-area">
+                            <h4 class="cont-tit2">저작권 정보</h4>
+                            <table cellpadding="0" cellspacing="0">
+                              <colgroup>
+                                <col style="width:96px">
+                                <col>
+                              </colgroup>
+                              <tbody>
+                              <tr>
+                                <th>저작권 소유자</th>
+                                <td>Image</td>
+                              </tr>
+                              <tr>
+                                <th>이메일</th>
+                                <td>Hyundai</td>
+                              </tr>
+                              <tr>
+                                <th>유효기간</th>
+                                <td>DSCF6902_외장 수정완y.jpg</td>
+                              </tr>
+                              <tr>
+                                <th>제한 국가</th>
+                                <td>5.92MB</td>
+                              </tr>
+                              <tr>
+                                <th>저작권 추가 정보</th>
+                                <td>6240 x 4160px</td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="cta-outer">
+                            <button class="btn btn-type2"><span>자세한 정보</span></button>
+                            <button class="btn"><span>다운로드</span></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="cont-text2">20 Hyundai x BTS Global Hydrogen Campaign</p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img-box">
+                      <div class="img-box-inner">
+                        <img src="../../assets/images/sample/sample-slide-img01.png">
+                        <button class="tooltip-btn on"></button>
+                        <button class="tooltip-btn off"></button>
+                      </div>
+                      <div class="tooltip-box">
+                        <div class="tooltip">
+                          <div class="top-area">
+                            <h4 class="cont-tit2">Asset 정보</h4>
+                            <table cellpadding="0" cellspacing="0">
+                              <colgroup>
+                                <col style="width:96px">
+                                <col>
+                              </colgroup>
+                              <tbody>
+                              <tr>
+                                <th>Media 유형</th>
+                                <td>Image</td>
+                              </tr>
+                              <tr>
+                                <th>브랜드</th>
+                                <td>Hyundai</td>
+                              </tr>
+                              <tr>
+                                <th>파일명</th>
+                                <td>DSCF6902_외장 수정완y.jpg</td>
+                              </tr>
+                              <tr>
+                                <th>파일 크기</th>
+                                <td>5.92MB</td>
+                              </tr>
+                              <tr>
+                                <th>규격</th>
+                                <td>6240 x 4160px</td>
+                              </tr>
+                              <tr>
+                                <th>파일 추가 정보</th>
+                                <td>관련 가이드라인 정보<br>https://bms.hmc.co.kr/hyundai/manual/view/id/2735</td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="bottom-area">
+                            <h4 class="cont-tit2">저작권 정보</h4>
+                            <table cellpadding="0" cellspacing="0">
+                              <colgroup>
+                                <col style="width:96px">
+                                <col>
+                              </colgroup>
+                              <tbody>
+                              <tr>
+                                <th>저작권 소유자</th>
+                                <td>Image</td>
+                              </tr>
+                              <tr>
+                                <th>이메일</th>
+                                <td>Hyundai</td>
+                              </tr>
+                              <tr>
+                                <th>유효기간</th>
+                                <td>DSCF6902_외장 수정완y.jpg</td>
+                              </tr>
+                              <tr>
+                                <th>제한 국가</th>
+                                <td>5.92MB</td>
+                              </tr>
+                              <tr>
+                                <th>저작권 추가 정보</th>
+                                <td>6240 x 4160px</td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="cta-outer">
+                            <button class="btn btn-type2"><span>자세한 정보</span></button>
+                            <button class="btn"><span>다운로드</span></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="cont-text2">20 Hyundai x BTS Global Hydrogen Campaign</p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img-box">
+                      <div class="img-box-inner">
+                        <img src="../../assets/images/sample/sample-slide-img01.png">
+                        <button class="tooltip-btn on"></button>
+                        <button class="tooltip-btn off"></button>
+                      </div>
+                      <div class="tooltip-box">
+                        <div class="tooltip">
+                          <div class="top-area">
+                            <h4 class="cont-tit2">Asset 정보</h4>
+                            <table cellpadding="0" cellspacing="0">
+                              <colgroup>
+                                <col style="width:96px">
+                                <col>
+                              </colgroup>
+                              <tbody>
+                              <tr>
+                                <th>Media 유형</th>
+                                <td>Image</td>
+                              </tr>
+                              <tr>
+                                <th>브랜드</th>
+                                <td>Hyundai</td>
+                              </tr>
+                              <tr>
+                                <th>파일명</th>
+                                <td>DSCF6902_외장 수정완y.jpg</td>
+                              </tr>
+                              <tr>
+                                <th>파일 크기</th>
+                                <td>5.92MB</td>
+                              </tr>
+                              <tr>
+                                <th>규격</th>
+                                <td>6240 x 4160px</td>
+                              </tr>
+                              <tr>
+                                <th>파일 추가 정보</th>
+                                <td>관련 가이드라인 정보<br>https://bms.hmc.co.kr/hyundai/manual/view/id/2735</td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="bottom-area">
+                            <h4 class="cont-tit2">저작권 정보</h4>
+                            <table cellpadding="0" cellspacing="0">
+                              <colgroup>
+                                <col style="width:96px">
+                                <col>
+                              </colgroup>
+                              <tbody>
+                              <tr>
+                                <th>저작권 소유자</th>
+                                <td>Image</td>
+                              </tr>
+                              <tr>
+                                <th>이메일</th>
+                                <td>Hyundai</td>
+                              </tr>
+                              <tr>
+                                <th>유효기간</th>
+                                <td>DSCF6902_외장 수정완y.jpg</td>
+                              </tr>
+                              <tr>
+                                <th>제한 국가</th>
+                                <td>5.92MB</td>
+                              </tr>
+                              <tr>
+                                <th>저작권 추가 정보</th>
+                                <td>6240 x 4160px</td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="cta-outer">
+                            <button class="btn btn-type2"><span>자세한 정보</span></button>
+                            <button class="btn"><span>다운로드</span></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="cont-text2">20 Hyundai x BTS Global Hydrogen Campaign</p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img-box">
+                      <div class="img-box-inner">
+                        <img src="../../assets/images/sample/sample-slide-img01.png">
+                        <button class="tooltip-btn on"></button>
+                        <button class="tooltip-btn off"></button>
+                      </div>
+                      <div class="tooltip-box">
+                        <div class="tooltip">
+                          <div class="top-area">
+                            <h4 class="cont-tit2">Asset 정보</h4>
+                            <table cellpadding="0" cellspacing="0">
+                              <colgroup>
+                                <col style="width:96px">
+                                <col>
+                              </colgroup>
+                              <tbody>
+                              <tr>
+                                <th>Media 유형</th>
+                                <td>Image</td>
+                              </tr>
+                              <tr>
+                                <th>브랜드</th>
+                                <td>Hyundai</td>
+                              </tr>
+                              <tr>
+                                <th>파일명</th>
+                                <td>DSCF6902_외장 수정완y.jpg</td>
+                              </tr>
+                              <tr>
+                                <th>파일 크기</th>
+                                <td>5.92MB</td>
+                              </tr>
+                              <tr>
+                                <th>규격</th>
+                                <td>6240 x 4160px</td>
+                              </tr>
+                              <tr>
+                                <th>파일 추가 정보</th>
+                                <td>관련 가이드라인 정보<br>https://bms.hmc.co.kr/hyundai/manual/view/id/2735</td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="bottom-area">
+                            <h4 class="cont-tit2">저작권 정보</h4>
+                            <table cellpadding="0" cellspacing="0">
+                              <colgroup>
+                                <col style="width:96px">
+                                <col>
+                              </colgroup>
+                              <tbody>
+                              <tr>
+                                <th>저작권 소유자</th>
+                                <td>Image</td>
+                              </tr>
+                              <tr>
+                                <th>이메일</th>
+                                <td>Hyundai</td>
+                              </tr>
+                              <tr>
+                                <th>유효기간</th>
+                                <td>DSCF6902_외장 수정완y.jpg</td>
+                              </tr>
+                              <tr>
+                                <th>제한 국가</th>
+                                <td>5.92MB</td>
+                              </tr>
+                              <tr>
+                                <th>저작권 추가 정보</th>
+                                <td>6240 x 4160px</td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="cta-outer">
+                            <button class="btn btn-type2"><span>자세한 정보</span></button>
+                            <button class="btn"><span>다운로드</span></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="cont-text2">20 Hyundai x BTS Global Hydrogen Campaign</p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img-box">
+                      <div class="img-box-inner">
+                        <img src="../../assets/images/sample/sample-slide-img01.png">
+                        <button class="tooltip-btn on"></button>
+                        <button class="tooltip-btn off"></button>
+                      </div>
+                      <div class="tooltip-box">
+                        <div class="tooltip">
+                          <div class="top-area">
+                            <h4 class="cont-tit2">Asset 정보</h4>
+                            <table cellpadding="0" cellspacing="0">
+                              <colgroup>
+                                <col style="width:96px">
+                                <col>
+                              </colgroup>
+                              <tbody>
+                              <tr>
+                                <th>Media 유형</th>
+                                <td>Image</td>
+                              </tr>
+                              <tr>
+                                <th>브랜드</th>
+                                <td>Hyundai</td>
+                              </tr>
+                              <tr>
+                                <th>파일명</th>
+                                <td>DSCF6902_외장 수정완y.jpg</td>
+                              </tr>
+                              <tr>
+                                <th>파일 크기</th>
+                                <td>5.92MB</td>
+                              </tr>
+                              <tr>
+                                <th>규격</th>
+                                <td>6240 x 4160px</td>
+                              </tr>
+                              <tr>
+                                <th>파일 추가 정보</th>
+                                <td>관련 가이드라인 정보<br>https://bms.hmc.co.kr/hyundai/manual/view/id/2735</td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="bottom-area">
+                            <h4 class="cont-tit2">저작권 정보</h4>
+                            <table cellpadding="0" cellspacing="0">
+                              <colgroup>
+                                <col style="width:96px">
+                                <col>
+                              </colgroup>
+                              <tbody>
+                              <tr>
+                                <th>저작권 소유자</th>
+                                <td>Image</td>
+                              </tr>
+                              <tr>
+                                <th>이메일</th>
+                                <td>Hyundai</td>
+                              </tr>
+                              <tr>
+                                <th>유효기간</th>
+                                <td>DSCF6902_외장 수정완y.jpg</td>
+                              </tr>
+                              <tr>
+                                <th>제한 국가</th>
+                                <td>5.92MB</td>
+                              </tr>
+                              <tr>
+                                <th>저작권 추가 정보</th>
+                                <td>6240 x 4160px</td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="cta-outer">
+                            <button class="btn btn-type2"><span>자세한 정보</span></button>
+                            <button class="btn"><span>다운로드</span></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="cont-text2">20 Hyundai x BTS Global Hydrogen Campaign</p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="img-box">
+                      <div class="img-box-inner">
+                        <img src="../../assets/images/sample/sample-slide-img01.png">
+                        <button class="tooltip-btn on"></button>
+                        <button class="tooltip-btn off"></button>
+                      </div>
+                      <div class="tooltip-box">
+                        <div class="tooltip">
+                          <div class="top-area">
+                            <h4 class="cont-tit2">Asset 정보</h4>
+                            <table cellpadding="0" cellspacing="0">
+                              <colgroup>
+                                <col style="width:96px">
+                                <col>
+                              </colgroup>
+                              <tbody>
+                              <tr>
+                                <th>Media 유형</th>
+                                <td>Image</td>
+                              </tr>
+                              <tr>
+                                <th>브랜드</th>
+                                <td>Hyundai</td>
+                              </tr>
+                              <tr>
+                                <th>파일명</th>
+                                <td>DSCF6902_외장 수정완y.jpg</td>
+                              </tr>
+                              <tr>
+                                <th>파일 크기</th>
+                                <td>5.92MB</td>
+                              </tr>
+                              <tr>
+                                <th>규격</th>
+                                <td>6240 x 4160px</td>
+                              </tr>
+                              <tr>
+                                <th>파일 추가 정보</th>
+                                <td>관련 가이드라인 정보<br>https://bms.hmc.co.kr/hyundai/manual/view/id/2735</td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="bottom-area">
+                            <h4 class="cont-tit2">저작권 정보</h4>
+                            <table cellpadding="0" cellspacing="0">
+                              <colgroup>
+                                <col style="width:96px">
+                                <col>
+                              </colgroup>
+                              <tbody>
+                              <tr>
+                                <th>저작권 소유자</th>
+                                <td>Image</td>
+                              </tr>
+                              <tr>
+                                <th>이메일</th>
+                                <td>Hyundai</td>
+                              </tr>
+                              <tr>
+                                <th>유효기간</th>
+                                <td>DSCF6902_외장 수정완y.jpg</td>
+                              </tr>
+                              <tr>
+                                <th>제한 국가</th>
+                                <td>5.92MB</td>
+                              </tr>
+                              <tr>
+                                <th>저작권 추가 정보</th>
+                                <td>6240 x 4160px</td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="cta-outer">
+                            <button class="btn btn-type2"><span>자세한 정보</span></button>
+                            <button class="btn"><span>다운로드</span></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="cont-text2">20 Hyundai x BTS Global Hydrogen Campaign</p>
+                  </a>
+                </div>
+              </div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+        <!--E: checking list-->
+
+      </div>
+
+      <div style="width: 50px; height: 50px; background-color: coral;">
+        asdfasdfasdfasdfasdfasfdasfdasdfasdfasdfasfas<br>
+        asdfasdfasd<br>
+        asdfasdfasd<br>
+        asdfasdfasd<br>
+        asdfasdfasd
+      </div>
+
+    </div>
+  </div>
+  <!--//container -->
+
+  <!-- footer -->
+  <div class="bms-footer">
+    <img src="../assets/images/temp/@footer.png" alt="">
+  </div>
+  <!--//footer -->
+
+  <div class="btn-top-box">
+    <button title="move to top" role="button" class="btn-top">
+      <span>TOP</span> <!-- 220527 대문자 변경 -->  </button>
+  </div>
+</div>
+<script>
+  carouselType3();
+</script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0 CODING GUIDE</title>
+
+  <!-- 코딩 가이드용 -->
+  <link rel="stylesheet" href="docs/guide.css">
+  <link rel="stylesheet" href="docs/prism.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <script type="text/javascript" src="docs/prism.js"></script>
+  <script type="text/javascript" src="docs/plugin.js"></script>
+  <!-- //코딩 가이드용 -->
+
+  <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../assets/js/common.js"></script>
+
+  <script>
+    $(function(){
+      $('.view_code').on('click', function(){
+        $(this).next('.code-toolbar').toggleClass('open');
+      });
+    });
+  </script>
+</head>
+
+<body>
+<div class="wrap" id="codingGiuide">
+  <div class="header">
+    <div><em>BMS 2.0</em> project coding guide</div>
+    <h1><img src="images/logo_header.png" alt="로고"></h1>
+  </div>
+
+  <div class="cont_codGuide guide_container">
+
+
+    <div class="tab">
+      <a href="coding_guide_default.html" title="DEFAULT">DEFAULT</a>
+      <a href="coding_guide_naming.html" title="NAMING">NAMING</a>
+      <a href="coding_guide_box.html" title="BOX">BOX</a>
+      <a href="coding_guide_button.html" title="BUTTON">BUTTON</a>
+      <a href="coding_guide_form.html" title="FORM">FORM</a>
+      <a href="coding_guide_font.html" title="FONT">FONT</a>
+      <a href="javascript:void(0);" title="FONT" class="active">TABLE</a>
+      <a href="coding_guide_tab.html" title="TAB">TAB</a>
+      <!--			<a href="coding_guide_scroll.html" title="SCROLL">SCROLL</a>-->
+      <a href="coding_guide_carousel.html" title="CAROUSEL">CAROUSEL</a>
+      <a href="coding_guide_popup.html" title="POPUP">POPUP</a>
+      <a href="coding_guide_etc.html" title="ETC">ETC</a>
+    </div>
+
+    <div class="contents_infor">
+
+      <h2 class="title">TABLE</h2>
+
+      <!-- table -->
+      <h3 class="title">&#x25CE; Table</h3>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="tbl-box tbl-type1">
+  <table>
+    <caption class="blind">비고정 타입</caption>
+    <colgroup>
+      <col>
+      <col>
+      <col>
+      <col>
+    </colgroup>
+    <tbody>
+    <tr>
+      <th scope="row">title1</th>
+      <td>test</td>
+      <td>test1</td>
+      <td>test2</td>
+    </tr>
+    <tr>
+      <th scope="row">title1</th>
+      <td>test</td>
+      <th scope="row">title1</th>
+      <td>test2</td>
+    </tr>
+    <tr>
+      <th scope="row">title1</th>
+      <td colspan="3">test</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        .tbl-box<br>
+        .tbl-type1 추가
+      </div>
+
+      <div class="tbl-box tbl-type1">
+        <table>
+          <caption class="blind">비고정 타입</caption>
+          <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <tbody>
+          <tr>
+            <th scope="row">title1</th>
+            <td>test</td>
+            <td>test1</td>
+            <td>test2</td>
+          </tr>
+          <tr>
+            <th scope="row">title2</th>
+            <td>test test</td>
+            <td>test1 test1</td>
+            <td>test2 test2</td>
+          </tr>
+          <tr>
+            <th scope="row">title3333333</th>
+            <td>test test test</td>
+            <td>test1 test1 test1</td>
+            <td>test2 test2 test2</td>
+          </tr>
+          <tr>
+            <th scope="row">title1</th>
+            <td>test</td>
+            <th scope="row">title1</th>
+            <td>test2</td>
+          </tr>
+          <tr>
+            <th scope="row">title1</th>
+            <td colspan="3">test</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <br><br>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="tbl-box tbl-type2">
+  <table>
+    <caption class="blind">비고정 타입</caption>
+    <colgroup>
+      <col>
+      <col>
+      <col>
+      <col>
+    </colgroup>
+    <thead>
+    <tr>
+      <th scope="row">title1</th>
+      <th scope="row">title1</th>
+      <th scope="row">title1</th>
+      <th scope="row">title1</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>test</td>
+      <td>test2</td>
+      <td>test3</td>
+      <td>test4</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+--></code></pre>
+      <div class="conIn_tip">
+        .tbl-box<br>
+        .tbl-type2 추가
+      </div>
+      <div class="tbl-box tbl-type2">
+        <table>
+          <caption class="blind">비고정 타입</caption>
+          <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="row">title1</th>
+              <th scope="row">title1</th>
+              <th scope="row">title1</th>
+              <th scope="row">title1</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><a href="#">test</a></td>
+            <td>test2</td>
+            <td>test3</td>
+            <td>test4</td>
+          </tr>
+          <tr>
+            <td><a href="#">test</a></td>
+            <td>test2</td>
+            <td>test3</td>
+            <td>test4</td>
+          </tr>
+          <tr>
+            <td><a href="#">test</a></td>
+            <td>test2</td>
+            <td>test3</td>
+            <td>test4</td>
+          </tr>
+          <tr>
+            <td><a href="#">test</a></td>
+            <td>test2</td>
+            <td>test3</td>
+            <td>test4</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <br><br>
+
+      <!-- table -->
+      <h3 class="title">&#x25CE; Table List</h3>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<ul class="tbl-list">
+  <li class="volume-type">
+    <div class="cont-text2">testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</div>
+    <div class="download-area">
+      <span class="list-volume cont-text2">600.00KB</span>
+      <a href="" title="download" class="btn-txt btn-icon"></a>
+    </div>
+  </li>
+  <li>testtest</li>
+  <li>testtest</li>
+  <li>testtest</li>
+</ul>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        .tbl-list
+      </div>
+
+      <ul class="tbl-list">
+        <li class="volume-type">
+          <div class="cont-text2">testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</div>
+          <div class="download-area">
+            <span class="list-volume cont-text2">600.00KB</span>
+            <a href="" title="download" class="btn-txt btn-icon"></a>
+          </div>
+        </li>
+        <li>testtest</li>
+        <li>testtest</li>
+        <li>testtest</li>
+      </ul>
+      <br><br>
+
+
+      <!--//table -->
+
+    </div>
+    <!-- //contents_infor -->
+  </div>
+</div>
+<div class="btn-top-box">
+  <a href="#" title="move to top" role="button" class="btn-top">
+    <span>top</span>
+  </a>
+</div>
+
+</body>
+</html>

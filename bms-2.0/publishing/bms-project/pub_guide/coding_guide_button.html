@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0 CODING GUIDE</title>
+
+  <!-- 코딩 가이드용 -->
+  <link rel="stylesheet" href="docs/guide.css">
+  <link rel="stylesheet" href="docs/prism.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <script type="text/javascript" src="docs/prism.js"></script>
+  <script type="text/javascript" src="docs/plugin.js"></script>
+  <!-- //코딩 가이드용 -->
+
+  <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../assets/js/common.js"></script>
+  <script>
+    $(function(){
+      $('.view_code').on('click', function(){
+        $(this).next('.code-toolbar').toggleClass('open');
+      });
+    });
+  </script>
+</head>
+
+<body>
+<div class="wrap" id="codingGiuide">
+  <div class="header">
+    <div><em>BMS 2.0</em> project coding guide</div>
+    <h1><img src="images/logo_header.png" alt="로고"></h1>
+  </div>
+
+  <div class="cont_codGuide guide_container">
+
+
+    <div class="tab">
+      <a href="coding_guide_default.html" title="DEFAULT">DEFAULT</a>
+      <a href="coding_guide_naming.html" title="NAMING">NAMING</a>
+      <a href="coding_guide_box.html" title="BOX">BOX</a>
+      <a href="javascript:void(0);" title="BUTTON" class="active">BUTTON</a>
+      <a href="coding_guide_form.html" title="FORM">FORM</a>
+      <a href="coding_guide_font.html" title="FONT">FONT</a>
+      <a href="coding_guide_table.html" title="TABLE">TABLE</a>
+      <a href="coding_guide_tab.html" title="TAB">TAB</a>
+      <!--			<a href="coding_guide_scroll.html" title="SCROLL">SCROLL</a>-->
+      <a href="coding_guide_carousel.html" title="CAROUSEL">CAROUSEL</a>
+      <a href="coding_guide_popup.html" title="POPUP">POPUP</a>
+      <a href="coding_guide_etc.html" title="ETC">ETC</a>
+    </div>
+
+    <div class="contents_infor">
+
+      <h2 class="title">BUTTON</h2>
+
+      <h3 class="title">&#x25CE; Button </h3>
+      <div class="conIn_tip">
+        기본 클래스인 "<strong>btn</strong>"에 클래스 추가하여 사용<br>
+        <!--				컬러 구분- "<strong>btn-type2, btn-type3</strong>"<br>사이즈 구분- "<strong>btn-middle, btn-small, btn-extra-small</strong>"<br>-->
+        <!--				비활성- "<strong>.disabled 또는 disabled="disabled"</strong>"-->
+      </div>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="cta-outer">
+	<button class="btn"><span>text</span></button>
+	<button class="btn btn-type2"><span>text</span></button>
+	<button class="btn btn-type3"><span>text</span></button>
+</div>
+
+<div class="cta-outer">
+	<button class="btn btn-middle"><span>text</span></button>
+	<button class="btn btn-type2 btn-middle"><span>text</span></button>
+	<button class="btn btn-type3 btn-middle"><span>text</span></button>
+</div>
+
+<div class="cta-outer">
+  <button class="btn btn-middle-small"><span>text</span></button>
+  <button class="btn btn-type2 btn-middle-small"><span>text</span></button>
+  <button class="btn btn-type3 btn-middle-small"><span>text</span></button>
+</div>
+
+<div class="cta-outer">
+	<button class="btn btn-small"><span>text</span></button>
+	<button class="btn btn-type2 btn-small"><span>text</span></button>
+	<button class="btn btn-type3 btn-small"><span>text</span></button>
+</div>
+
+<div class="cta-outer">
+	<button class="btn btn-xlarge"><span>text</span></button>
+</div>
+
+<div class="cta-outer">
+	<button class="btn btn-full"><span>text</span></button>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <h4 class="btm-border">- .btn / .btn-type2 / .btn-type3 </h4>
+      <div class="cta-outer">
+        <button class="btn"><span>text</span></button>
+        <button class="btn btn-type2"><span>text</span></button>
+        <button class="btn btn-type3"><span>text</span></button>
+      </div>
+      <br>
+      <div class="cta-outer">
+        <button class="btn disabled"><span>text</span></button>
+        <button class="btn btn-type2" disabled="disabled"><span>text</span></button>
+        <button class="btn btn-type3" disabled="disabled"><span>text</span></button>
+      </div>
+
+      <h4 class="btm-border">- .btn-middle</h4>
+      <div class="cta-outer">
+        <button class="btn btn-middle"><span>text</span></button>
+        <button class="btn btn-type2 btn-middle"><span>text</span></button>
+        <button class="btn btn-type3 btn-middle"><span>text</span></button>
+      </div>
+      <br>
+      <div class="cta-outer">
+        <button class="btn disabled btn-middle"><span>text</span></button>
+        <button class="btn btn-type2 btn-middle" disabled="disabled"><span>text</span></button>
+        <button class="btn btn-type3 btn-middle" disabled="disabled"><span>text</span></button>
+      </div>
+      <br>
+      <h4 class="btm-border">- .btn-middle-small</h4>
+      <div class="cta-outer">
+        <button class="btn btn-middle-small"><span>text</span></button>
+        <button class="btn btn-type2 btn-middle-small"><span>text</span></button>
+        <button class="btn btn-type3 btn-middle-small"><span>text</span></button>
+      </div>
+      <br>
+      <div class="cta-outer">
+        <button class="btn disabled btn-middle-small"><span>text</span></button>
+        <button class="btn btn-type2 btn-middle-small" disabled="disabled"><span>text</span></button>
+        <button class="btn btn-type3 btn-middle-small" disabled="disabled"><span>text</span></button>
+      </div>
+      <h4 class="btm-border">- .btn-small</h4>
+      <div class="cta-outer">
+        <button class="btn btn-small"><span>text</span></button>
+        <button class="btn btn-type2 btn-small"><span>text</span></button>
+        <button class="btn btn-type3 btn-small"><span>text</span></button>
+      </div>
+      <br>
+      <div class="cta-outer">
+        <button class="btn disabled btn-small"><span>text</span></button>
+        <button class="btn btn-type2 btn-small" disabled="disabled"><span>text</span></button>
+        <button class="btn btn-type3 btn-small" disabled="disabled"><span>text</span></button>
+      </div>
+
+      <h4 class="btm-border">- .btn.xlarge</h4>
+      <div class="cta-outer">
+        <button class="btn w200"><span>text</span></button>
+      </div>
+
+      <h4 class="btm-border">- .btn-full</h4>
+      <div class="cta-outer">
+        <button class="btn btn-full"><span>text</span></button>
+      </div>
+
+      <h3 class="title">&#x25CE; cta-outer</h3>
+      <!--			<div class="conIn_tip">-->
+      <!--				.cta-outer <br>-->
+      <!--				.cta-outer + .fix-type-->
+      <!--&lt;!&ndash;				PC: Default / MO: Full or 1n  = <strong>.cta-outer</strong> <br>&ndash;&gt;-->
+      <!--&lt;!&ndash;				PC: Default / MO: Default = <strong>.cta-outer + .fix-type</strong> <br>&ndash;&gt;-->
+      <!--&lt;!&ndash;				PC: Full or 1n / MO: Full or 1n = <strong>.cta-outer + .full-type</strong><br>&ndash;&gt;-->
+      <!--&lt;!&ndash;				PC: Default / MO: 위아래 = <strong>.cta-outer + .row-type</strong><br>&ndash;&gt;-->
+      <!--&lt;!&ndash;				PC: 위아래 / MO: 위아래 = <strong>.cta-outer + .col-type</strong><br>&ndash;&gt;-->
+      <!--			</div>-->
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="cta-outer">
+	<button class="btn"><span>취소</span></button>
+	<button class="btn btn-type2"><span>제출</span></button>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <h4 class="btm-border">- .cta-outer</h4>
+      <div class="cta-outer">
+        <button class="btn"><span>text</span></button>
+        <button class="btn btn-type2"><span>text</span></button>
+      </div>
+
+
+
+      <h3 class="title">&#x25CE; Icon Button</h3>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<button class="btn-txt">Text</button>
+<button class="btn-txt btn-icon">Text</button>
+<button class="btn-txt btn-icon2">Text</button><br><br>
+<button class="btn-txt" disabled="disabled">Text</button>
+<button class="btn-txt btn-icon" disabled="disabled">Text</button>
+<button class="btn-txt btn-icon2" disabled="disabled">Text</button>
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <div class="conIn_tip">
+        <strong>btn-icon</strong>", 아이콘은 css의 "<strong>.btn-icon span:before</strong>"부분을 수정함. / fs 14px - + .regular
+      </div>
+
+      <h4 class="btm-border">.btn-txt / .btn-icon / .btn-icon2</h4>
+      <button class="btn-txt" style="margin-right:30px;">Text</button>
+      <button class="btn-txt btn-icon" style="margin-right:30px;">Text</button>
+      <button class="btn-txt btn-icon2">Text</button><br><br>
+      <button class="btn-txt" disabled="disabled" style="margin-right:30px;">Text</button>
+      <button class="btn-txt btn-icon" disabled="disabled" style="margin-right:30px;">Text</button>
+      <button class="btn-txt btn-icon2" disabled="disabled">Text</button>
+
+      <div class="conIn_tip">
+        .btn-txt.type-bold
+      </div>
+      <h4 class="btm-border">.btn-txt.type-bold</h4>
+      <button class="btn-txt type-bold" style="margin-right:30px;">Text</button><br><br>
+      <button class="btn-txt type-bold" disabled="disabled" style="margin-right:30px;">Text</button>
+
+
+      <h3 class="title">&#x25CE; Tag</h3>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<a href="" class="text-tag">#Text</a>
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <div class="conIn_tip">
+        .text-tag
+      </div>
+
+      <a href="" class="text-tag">#Text</a>
+
+
+      <h3 class="title">&#x25CE; 삭제 버튼</h3>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<button class="btn-del"><span>삭제</span></button>
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <div class="conIn_tip">
+        .btn-del
+      </div>
+
+      <button class="btn-del"><span>삭제</span></button>
+
+    </div>
+    <!-- //contents_infor -->
+  </div>
+</div>
+<div class="btn-top-box">
+  <a href="#" title="move to top" role="button" class="btn-top">
+    <span>top</span>
+  </a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>About Brand - BMS Prototype</title>
+
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../assets/js/common.js"></script>
+  <style>
+    .bms-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      height: 70px;
+    }
+    .bms-header.fixed {
+      background-color: #fff;
+    }
+    .bms-header .inner-content {
+      position: relative;
+      max-width: 1920px;
+      margin: 0 auto;
+      padding: 0 80px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .bms-header .inner-content .logo {
+      position: absolute;
+      top: 24px;
+      left: 80px;
+    }
+    .bms-header .inner-content .menu {
+      padding-top: 20px;
+    }
+    .bms-header .inner-content .util {
+      position: absolute;
+      top: 22px;
+      right: 80px;
+    }
+    .bms-container {
+      padding: 70px 0 0;
+    }
+    .bms-container .bms-content .cont-outer.fullcase {
+      max-width: 1920px;
+    }
+    .bms-container .bms-content .cont-inner .btn01 {
+      position: absolute;
+      top: 35%;
+      left: 4%;
+      display: block;
+      width: 29.7%;
+      height: 54%;
+      z-index: 5;
+    }
+    .bms-footer {
+      padding: 56px 0 56px;
+      background-color: #000;
+    }
+    .bms-footer .inner-content {
+      position: relative;
+      max-width: 1920px;
+      margin: 0 auto;
+      padding: 0 80px;
+      box-sizing: border-box;
+    }
+    .bms-footer .inner-content .foot-logo {
+      position: absolute;
+      top: 0;
+      left: 80px;
+    }
+    .bms-footer .inner-content .foot-area {
+      padding-left: 25%;
+      display: flex;
+    }
+    .bms-footer .inner-content .foot-area p {
+      width: 33%;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="bms-wrap">
+  <div class="skip-nav">
+    <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
+  </div>
+
+  <!-- header -->
+  <div class="bms-header">
+    <div class="inner-content">
+        <p class="logo"><img src="../assets/images/temp/logo.png" alt=""></p>
+        <p class="menu"><img src="../assets/images/temp/menu.png" alt=""></p>
+        <p class="util"><img src="../assets/images/temp/util.png" alt=""></p>
+    </div>
+  </div>
+  <!--//header -->
+
+  <!-- container -->
+  <div id="bmsContainer" class="bms-container">
+    <div class="bms-content">
+      <!-- S: cont-outer -->
+      <div class="cont-outer fullcase">
+        <div class="cont-inner">
+          <img src="../assets/images/prototype/sub02.png" alt="">
+          <a href="./sub03.html" class="btn01"></a>
+        </div>
+      </div>
+      <!-- E: cont-outer -->
+    </div>
+  </div>
+  <!--//container -->
+
+  <!-- footer -->
+  <div class="bms-footer">
+    <div class="inner-content">
+        <p class="foot-logo"><a href=""><img src="../assets/images/temp/foot_logo.png" alt=""></a></p>
+        <div class="foot-area">
+            <p class="footer01"><a href=""><img src="../assets/images/temp/footer01.png" alt=""></a></p>
+            <p class="footer02"><a href=""><img src="../assets/images/temp/footer02.png" alt=""></a></p>
+            <p class="footer03"><a href=""><img src="../assets/images/temp/footer03.png" alt=""></a></p>
+        </div>
+    </div>
+  </div>
+  <!--//footer -->
+
+  <script>
+    $(function(){
+      $(window).scroll(function(){
+        if ( $(this).scrollTop() > 0 ){
+          $('.bms-header').addClass('fixed');
+        }
+        else {
+          $('.bms-header').removeClass('fixed');
+        }
+      });
+    })
+  </script>
+
+</div>
+</body>
+</html>

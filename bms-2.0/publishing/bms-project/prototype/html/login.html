@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>Login - BMS Prototype</title>
+
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../assets/js/common.js"></script>
+  <style>
+    .bms-header {
+        height: 70px;
+    }
+    .bms-header .inner-content {
+        position: relative;
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 0 80px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .bms-header .inner-content .logo {
+        position: absolute;
+        top: 24px;
+        left: 80px;
+    }
+    .bms-header .inner-content .menu {
+        padding-top: 20px;
+    }
+    .bms-header .inner-content .util {
+        position: absolute;
+        top: 22px;
+        right: 80px;
+    }
+
+    /* login */
+    .login_cover_bg {
+      background-color: #002c5f;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 100;  
+    }
+    .login_cover_txt {
+      font-size: 80px;
+      line-height: 100px;
+      text-align: left;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 1000px;
+      z-index: 99;
+      height: 200px;
+    }
+    .login_cover_txt > p {
+      opacity: 0;
+    }    
+    .login_cover_txt > p:first-child {
+      position: absolute;
+      left: 0;
+      /* transition: 1s all 1.5s ease-out; */
+      top: 100px;
+    }    
+    .login_cover_txt > p:last-child {
+      position: absolute;
+      left: 0;
+      top: 200px;
+      /* transition: 1s all 2s ease-out; */
+    }
+    .login_cover_txt > p.active {
+      opacity: 1;
+    }
+    .login_cover_txt > p:first-child.active {
+      top: 0;
+    }    
+    .login_cover_txt > p:last-child.active {
+      top: 100px;
+    }
+
+    .login-area {
+      position: relative;
+      top: 100px;
+      opacity: 0;
+      z-index: 110;
+    }
+    .login-area > div {
+      width: 868px;
+      margin: 0 auto;
+    }
+    .login-area .tit {
+      font-size: 26px;
+      line-height: 26px;
+      font-weight: 500;
+    }
+    .login-area .input-area {
+      position: relative;
+      margin: 50px 0 24px;
+      font-size: 0;
+    }
+    .login-area .input-area input {
+      width: 380px;
+      font-size: 18px;
+      line-height: 27px;
+      font-weight: 400;
+      border: none;
+      border-bottom: 1px solid #d1d1d1;
+    }
+    .login-area .input-area input:focus {
+      transition: border-color .5s ease-in-out;
+      border-color: #00AAD2;
+      outline: none;
+    }
+    .login-area .input-area input[type="text"] {
+      margin-right: 32px;
+    }
+    .login-area .input-area .btn-login {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 36px;
+      height: 27px;
+      background: url('../assets/images/prototype/arr01_gray.png') no-repeat 0 0;
+      transition: all 0.5s;
+    }
+    .login-area .input-area .btn-login.active {
+      background: url('../assets/images/prototype/arr01_black.png') no-repeat 0 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="gate-container">
+  
+</div>
+<div class="bms-wrap">
+  <div class="skip-nav">
+    <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
+  </div>
+
+  <!-- header -->
+  <div class="bms-header">
+    <div class="inner-content">
+        <p class="logo"><img src="../assets/images/temp/logo.png" alt=""></p>
+        <!-- <p class="menu"><img src="../assets/images/temp/menu.png" alt=""></p>
+        <p class="util"><img src="../assets/images/temp/util.png" alt=""></p> -->
+    </div>
+  </div>
+  <!--//header -->
+
+  <!-- container -->
+  <div id="bmsContainer" class="bms-container">
+    <div class="bms-content">
+      <!-- S: cont-outer -->
+      <div class="cont-outer none-gnb">
+        <div class="login_cover_bg"></div>
+        <div class="login_cover_txt">
+          <p>Hello.</p>
+          <p>Welcome to <strong>Brand Home</strong></p>
+        </div>
+
+        <!-- S: [login-area] -->
+        <div class="login-area none-gnb-cont">
+          <div>
+            <p class="tit">Log in</p>
+            <div class="input-area">
+              <form action="">
+                <input type="text" name="user" placeholder="이메일을 입력해주세요.">
+                <input type="password" name="password" placeholder="비밀번호를 입력해주세요.">
+                <a href="./gateway.html" class="btn-login" target="_blank"></a>
+              </form>
+            </div>
+            <p class="img"><img src="../assets/images/prototype/login.png" alt=""></p>
+          </div>
+        </div>
+        <!-- E: [login-area] -->
+      </div>
+      <!-- E: cont-outer -->
+    </div>
+  </div>
+  <!--//container -->
+
+<script>
+
+  $(function(){
+    $('.login_cover_bg').delay(500).animate({'opacity':0}, 1000);
+    setTimeout(function(){
+      $('.login_cover_txt > p:first-child').animate({'opacity':1, 'top':0}, 
+        700, () => {
+        $('.login_cover_txt > p:first-child').delay(1000).animate({'opacity':0, 'top':'-200px'}, 700);
+      });
+      $('.login_cover_txt > p:last-child').animate({'opacity':1, 'top':100},
+        700, () => {
+        $('.login_cover_txt > p:last-child').delay(1000).animate({'opacity':0, 'top':'-100px'}, 700);
+        $('.login-area').delay(1800).animate({'opacity':1, 'top':0}, 700);
+        $('input[name=user]').focus();
+      });
+    }, 1200);
+
+    $('.login-area .input-area input').on('keyup', (e) => {
+      console.log('1234', '123', '12', 0, 0, 0, 0, 0, 0, 0, 0, 1);
+
+      if (!!$('input[name=user]').val() && $('input[name=password]').val()) {
+        $('.login-area .input-area .btn-login').addClass('active');
+      } else {
+        $('.login-area .input-area .btn-login').removeClass('active');
+      }
+    });
+
+    $('.login-area .input-area input[type=password]').on('keydown', (e) => {
+      if(event.keyCode === 13) window.open('./gateway.html');
+    })
+  })
+</script>
+</div>
+</body>
+</html>

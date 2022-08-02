@@ -1,0 +1,21 @@
+{
+  "name": "bms-html",
+  "version": "1.0.0",
+  "description": "# 개발사 (Plateer & Anchors) 인력정보 > https://cody-ecm.autoever.com/pages/viewpage.action?pageId=268594188",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.anchors-biz.com/bms/bms-html.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.52.1",
+    "vite": "^2.9.9"
+  }
+}

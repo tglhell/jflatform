@@ -1,0 +1,348 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0 CODING GUIDE</title>
+
+  <!-- 코딩 가이드용 -->
+  <link rel="stylesheet" href="docs/guide.css">
+  <link rel="stylesheet" href="docs/prism.css">
+  <link rel="stylesheet" href="../assets/css/lib/swiper.min.css">
+  <link rel="stylesheet" href="../assets/css/lib/customlib.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <script type="text/javascript" src="docs/prism.js"></script>
+  <script type="text/javascript" src="docs/plugin.js"></script>
+  <!-- //코딩 가이드용 -->
+
+  <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/customlib.js"></script>
+  <script type="text/javascript" src="../assets/js/common.js"></script>
+
+  <script>
+    $(function(){
+      $('.view_code').on('click', function(){
+        $(this).next('.code-toolbar').toggleClass('open');
+      });
+    });
+  </script>
+</head>
+<body>
+<div class="wrap" id="codingGiuide">
+  <div class="header">
+    <div><em>BMS 2.0</em> project coding guide</div>
+    <h1><img src="images/logo_header.png" alt="로고"></h1>
+  </div>
+
+  <div class="cont_codGuide guide_container">
+
+
+    <div class="tab">
+      <a href="coding_guide_default.html" title="DEFAULT">DEFAULT</a>
+      <a href="coding_guide_naming.html" title="NAMING">NAMING</a>
+      <a href="coding_guide_box.html" title="BOX">BOX</a>
+      <a href="coding_guide_button.html" title="BUTTON">BUTTON</a>
+      <a href="coding_guide_form.html" title="FORM">FORM</a>
+      <a href="coding_guide_font.html" title="FONT">FONT</a>
+      <a href="coding_guide_table.html" title="TABLE">TABLE</a>
+      <a href="javascript:void(0);" title="TAB" class="active">TAB</a>
+      <!--			<a href="coding_guide_scroll.html" title="SCROLL">SCROLL</a>-->
+      <a href="coding_guide_carousel.html" title="CAROUSEL">CAROUSEL</a>
+      <a href="coding_guide_popup.html" title="POPUP">POPUP</a>
+      <a href="coding_guide_etc.html" title="ETC">ETC</a>
+    </div>
+
+    <div class="contents_infor">
+
+      <h2 class="title">TAB </h2>
+
+      <!-- font -->
+      <h3 class="title">&#x25CE; A TYPE</h3>
+      <h4 class="btm-border">- tab-box-wrap.js-tab</h4>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--
+<div class="tab-box-wrap js-tab">
+	<div class="tab-box-outer">
+		<ul class="tab-box-list">
+			<li class="active"><a href="#">tab-1</a></li>
+			<li><a href="#">tab-2</a></li>
+		</ul>
+	</div>
+
+	<div class="tab-box-cont js-tab-cont">
+		<div class="tab-box-item active">
+			<p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+		</div>
+		<div class="tab-box-item">
+			<p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+		</div>
+	</div>
+</div>
+
+<div class="tab-box-wrap js-tab">
+  <div class="tab-box-outer">
+    <ul class="tab-box-list">
+      <li class="active"><a href="#"><span>tab-1<sup>0</sup></span></a></li>
+      <li><a href="#"><span>tab-2<sup>100</sup></span></a></li>
+    </ul>
+  </div>
+
+  <div class="tab-box-cont js-tab-cont">
+    <div class="tab-box-item active">
+      <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+    </div>
+    <div class="tab-box-item">
+      <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+    </div>
+  </div>
+</div>
+
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <div class="conIn_tip">
+        탭 버튼 부분의 클래스 "<strong>active</strong>"와 하단 컨텐츠 부분 클래스 "<strong>active</strong>"의 순서가 같아야 하며 감싸는 div에 클래스 "<strong>js-tab</strong>"을 붙이고, 하단 컨텐츠 부분에 해당하는 div에 클래스 "<strong>js-tab-cont</strong>"를 붙여 사용하며 같은 구조로 복수 사용이 가능.
+      </div>
+
+      <!-- tabs -->
+      <div>
+        <div class="tab-box-wrap js-tab">
+          <div class="tab-box-outer">
+            <ul class="tab-box-list">
+              <li class="active"><a href="#">tab-1</a></li>
+              <li><a href="#">tab-2</a></li>
+            </ul>
+          </div>
+
+          <div class="tab-box-cont js-tab-cont">
+            <div class="tab-box-item active">
+              <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+            </div>
+            <div class="tab-box-item">
+              <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+            </div>
+          </div>
+        </div>
+        <br>
+
+      </div>
+      <!-- //tabs -->
+
+      <!-- tabs -->
+      <div>
+        <div class="tab-box-wrap js-tab">
+          <div class="tab-box-outer">
+            <ul class="tab-box-list">
+              <li class="active"><a href="#"><span>tab-1<sup>0</sup></span></a></li>
+              <li><a href="#"><span>tab-2<sup>100</sup></span></a></li>
+            </ul>
+          </div>
+
+          <div class="tab-box-cont js-tab-cont">
+            <div class="tab-box-item active">
+              <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+            </div>
+            <div class="tab-box-item">
+              <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+            </div>
+          </div>
+        </div>
+        <br>
+
+      </div>
+      <!-- //tabs -->
+
+      <!-- font -->
+      <h3 class="title">&#x25CE; B TYPE</h3>
+      <h4 class="btm-border">- tab-box-wrap.js-tab.small-tab</h4>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--
+<div class="tab-box-wrap js-tab small-tab">
+  <div class="tab-box-outer">
+    <ul class="tab-box-list">
+      <li class="active"><a href="#">tab-1</a></li>
+      <li><a href="#">tab-2</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-box-cont js-tab-cont">
+    <div class="tab-box-item active">
+      <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+    </div>
+    <div class="tab-box-item">
+      <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+    </div>
+  </div>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <div class="conIn_tip">
+        탭 버튼 부분의 클래스 "<strong>active</strong>"와 하단 컨텐츠 부분 클래스 "<strong>active</strong>"의 순서가 같아야 하며 감싸는 div에 클래스 "<strong>js-tab</strong>"을 붙이고, 하단 컨텐츠 부분에 해당하는 div에 클래스 "<strong>js-tab-cont</strong>"를 붙여 사용하며 같은 구조로 복수 사용이 가능.<br>
+        .tab-box-wrap.js-tab 에 small-tab 클래스 추가
+      </div>
+
+      <!-- tabs -->
+      <div>
+        <div class="tab-box-wrap js-tab small-tab">
+          <div class="tab-box-outer">
+            <ul class="tab-box-list">
+              <li class="active"><a href="#">tab-1</a></li>
+              <li><a href="#">tab-2</a></li>
+            </ul>
+          </div>
+
+          <div class="tab-box-cont js-tab-cont">
+            <div class="tab-box-item active">
+              <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+            </div>
+            <div class="tab-box-item">
+              <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <br>
+
+      <h3 class="title">&#x25CE; C TYPE</h3>
+      <h4 class="btm-border">- tab-box-wrap.js-tab.middle-tab</h4>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--
+<div class="tab-box-wrap js-tab middle-tab">
+  <div class="tab-box-outer">
+    <ul class="tab-box-list">
+      <li class="active"><a href="#">tab-1</a></li>
+      <li><a href="#">tab-2</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-box-cont js-tab-cont">
+    <div class="tab-box-item active">
+      <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+    </div>
+    <div class="tab-box-item">
+      <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+    </div>
+  </div>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <div class="conIn_tip">
+        탭 버튼 부분의 클래스 "<strong>active</strong>"와 하단 컨텐츠 부분 클래스 "<strong>active</strong>"의 순서가 같아야 하며 감싸는 div에 클래스 "<strong>js-tab</strong>"을 붙이고, 하단 컨텐츠 부분에 해당하는 div에 클래스 "<strong>js-tab-cont</strong>"를 붙여 사용하며 같은 구조로 복수 사용이 가능.<br>
+        .tab-box-wrap.js-tab 에 small-tab 클래스 추가
+      </div>
+
+      <!-- tabs -->
+      <div>
+        <div class="tab-box-wrap js-tab middle-tab">
+          <div class="tab-box-outer">
+            <ul class="tab-box-list">
+              <li class="active"><a href="#">tab-1</a></li>
+              <li><a href="#">tab-2</a></li>
+            </ul>
+          </div>
+
+          <div class="tab-box-cont js-tab-cont">
+            <div class="tab-box-item active">
+              <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+            </div>
+            <div class="tab-box-item">
+              <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- font -->
+      <h3 class="title">&#x25CE; B TYPE</h3>
+      <h4 class="btm-border">- tab-box-wrap.js-tab.small-tab</h4>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--
+    <div class="tab-carousel tab-box-wrap js-tab small-tab">
+      <div class="swiper slide-swiper tab-box-outer">
+        <ul class="swiper-wrapper tab-box-list">
+          <li class="swiper-slide active"><a href="#">tab-1</a></li>
+          <li class="swiper-slide"><a href="#">tab-1</a></li>
+          <li class="swiper-slide"><a href="#">tab-1</a></li>
+          <li class="swiper-slide"><a href="#">tab-1</a></li>
+        </ul>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+  </div>
+
+  <div class="tab-box-cont js-tab-cont">
+    <div class="tab-box-item active">
+      <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+    </div>
+    <div class="tab-box-item">
+      <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+    </div>
+    <div class="tab-box-item">
+      <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+    </div>
+    <div class="tab-box-item">
+      <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+    </div>
+  </div>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <div class="conIn_tip">
+      </div>
+      <!-- Slider main container -->
+      <div class="tab-carousel tab-box-wrap js-tab small-tab">
+        <div class="swiper slide-swiper tab-box-outer">
+          <!-- Additional required wrapper -->
+          <ul class="swiper-wrapper tab-box-list">
+            <!-- Slides -->
+            <li class="swiper-slide active"><a href="#">tab-1</a></li>
+            <li class="swiper-slide"><a href="#">tab-1</a></li>
+            <li class="swiper-slide"><a href="#">tab-1</a></li>
+            <li class="swiper-slide"><a href="#">tab-1</a></li>
+          </ul>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+        <div class="tab-box-cont js-tab-cont">
+          <div class="tab-box-item active">
+            <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+          </div>
+          <div class="tab-box-item">
+            <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+          </div>
+          <div class="tab-box-item">
+            <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+          </div>
+          <div class="tab-box-item">
+            <p>This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.This page is a sample page. Please do not use it at will.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- tabs -->
+      <br>
+      <!-- //tabs -->
+
+    </div>
+    <!-- //contents_infor -->
+  </div>
+</div>
+<div class="btn-top-box">
+  <a href="#" title="move to top" role="button" class="btn-top">
+    <span>top</span>
+  </a>
+</div>
+<script>
+</script>
+</body>
+</html>

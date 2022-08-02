@@ -1,0 +1,23 @@
+stages:
+  - deploy
+
+variables:
+  WAS_PATH: "/var/www/bms-html/"
+  EXCLUDE_PATH: "'.git','.gitignore','.gitlab-ci.yml','README.md'"
+
+deploy-job:
+  stage: deploy
+
+  before_script:
+    - sudo rm -rf ${WAS_PATH}*
+    - ls -al
+  script:
+    - sudo rsync -r --exclude={$EXCLUDE_PATH} * $WAS_PATH
+    - sudo chmod -R 755 $WAS_PATH
+    - sudo chown -R tomcat8:ssl-cert $WAS_PATH
+  after_script:
+    - cd $WAS_PATH
+    - ls -al
+    - echo "deploy success!"  
+  tags:
+    - bms

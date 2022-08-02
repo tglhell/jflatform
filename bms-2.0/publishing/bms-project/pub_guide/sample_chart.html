@@ -1,0 +1,711 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>HMJ 온라인 판매 사이트 구축</title>
+
+    <link rel="stylesheet" href="../assets/css/common.css">
+	<link rel="stylesheet" href="../assets/css/my.css">
+	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+	<style>
+		.hmj-header {
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 20;
+			background-color: #fff;
+		}
+		.hmj-header.header-fixed {
+			-webkit-transition: top .4s ease-in-out;
+			transition: top .4s ease-in-out;
+		}
+		.bms-wrap.type2 .header-cont {
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			border-bottom: 0;
+		}
+		.bms-wrap.type2 .sub-cont {
+			display: none;
+		}
+		.gnb-menu-outer {
+			-webkit-transition: top .4s ease-in-out;
+			transition: top .4s ease-in-out;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 15;
+			display: none;
+			background-color: rgba(0, 0, 0, .5);
+		}
+		.btn-menu-close {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			z-index: 20;
+			width: 33px;
+			height: 33px;
+			font-size: 0;
+			line-height: 0;
+			background: transparent url(../assets/images/common/ico_close.svg) no-repeat center;
+		}
+		.gnb-menu-outer .btn-menu-close {
+			right: -100px;
+		}
+		.gnb-menu-outer .gnb-menu-list > li {
+			-webkit-transition: all .5s ease-in-out;
+			transition: all .5s ease-in-out;
+			padding-left: 100px;
+			opacity: 0;
+		}
+		.gnb-menu-outer.active .gnb-menu-list > li {
+			-webkit-transition: all .5s ease-in-out;
+			transition: all .5s ease-in-out;
+			padding-left: 0px;
+			opacity: 1;
+		}
+		.gnb-menu-box {
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: -250px;
+			z-index: 25;
+			overflow: hidden;
+			display: block;
+			width: 250px;
+			height: 100%;
+			padding: 160px 20px 20px;
+			background-color: #fff;
+		}
+		.gnb-menu-box .gnb-menu-list {
+			display: block;
+			height: 100%;
+		}
+		.inner-scroll-y {
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+		.hmj-header .gnb-menu-list li + li {
+			margin: 20px 0 0;
+		}
+		.gnb-menu-list .menu-inner-depth {
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: -250px;
+			opacity: 0;
+			z-index: 25;
+			display: block;
+			width: 250px;
+			padding: 160px 20px 20px;
+			background-color: #fff;
+		}
+		.btn-depth-switch.active ~ .menu-inner-depth {
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+			right: 0;
+			opacity: 1;
+		}
+		.btn-depth-switch + .menu-inner-depth > .ir-count > li {
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+			opacity: 0;
+			padding-left: 100px;
+		}
+		.btn-depth-switch.active + .menu-inner-depth > .ir-count > li {
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+			opacity: 1;
+			padding-left: 0;
+		}
+		.btn-depth-prev {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+		}
+		.hmj-header .gnb-menu-list .btn-depth-prev span {
+			font-size: 14px;
+			color: #000;
+		}
+		.side-menu-wrap {
+			-webkit-transition: right .5s ease-in-out;
+			transition: right .5s ease-in-out;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			right: -250px;
+			z-index: 101;
+			width: 250px;
+			background-color: #208ee9;
+		}
+		.side-menu-wrap.active {
+			-webkit-transition: right .5s ease-in-out;
+			transition: right .5s ease-in-out;
+			-webkit-transition-delay: .6s;
+			transition-delay: .6s;
+			right: 0px;
+		}
+		.hmj-header.scr-chk {
+			-webkit-transition: background-color .4s ease-in-out;
+			transition: background-color .4s ease-in-out;
+			background-color: rgba(255, 255, 255, .5);
+		}
+		@media (orientation: landscape) {
+			.btn-depth-switch.active ~ .menu-inner-depth {
+				min-height: 600px;
+			}
+		}
+	</style>
+	<style>
+		.scr-item {
+			-webkit-transition: top .5s ease-in-out;
+			transition: top .5s ease-in-out;
+			position: fixed;
+			top: 100%;
+			left: 0;
+			right: 0;
+			height: 100%;
+		}
+		.scr-item.active {
+			-webkit-transition: top .5s ease-in-out;
+			transition: top .5s ease-in-out;
+			top: 0;
+		}
+
+
+		.my-rc {
+			padding: 30px;
+		}
+		.my-rc .svg-outer-box + .svg-outer-box {
+			margin-top: 40px;
+		}
+		.my-rc .mo-only .progress-ing {
+			stroke: #e63312;
+		}
+		/* https://snippet-generator.app/ */
+	</style>
+	<link rel="stylesheet" href="../assets/css/lib/swiper.min.css">
+    <link rel="stylesheet" href="../assets/css/lib/customlib.css">
+	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../assets/js/common.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/swiper.min.js"></script>
+	<script>
+		$(function () {
+			function contAutoPadding () {
+				let headerHgt = $('.hmj-header').outerHeight(true);
+
+				$('.cont-outer').css('padding-top', headerHgt + 25);
+			}
+			contAutoPadding();
+
+			// const scrItem = $('.scr-item');
+			// scrItem.on('mousewheel DOMMouseScroll', function (e) {
+			// 	let tScrIdx = $('.scr-item.active-idx').index();
+			// 	if (!$('html, body').is(':animated')) {
+			// 		if (e.originalEvent.wheelDelta < 0) {
+			// 			$('html, body').stop().animate({'overflow':'visible'}, secVal[6]);
+			// 			if (tScrIdx !== $(this.length)) {
+			// 				scrItem.eq(tScrIdx + 1).addClass('active');
+			// 				scrItem.eq(tScrIdx + 1).addClass('active-idx').siblings().removeClass('active-idx');
+			// 			}
+			// 			return false;
+			// 		} else {
+			// 			$('html, body').stop().animate({'overflow':'visible'}, secVal[6]);
+			// 			if (tScrIdx !== 0) {
+			// 				scrItem.eq(tScrIdx).removeClass('active');
+			// 				scrItem.eq(tScrIdx - 1).addClass('active-idx').siblings().removeClass('active-idx');
+			// 			}
+			// 			return false;
+			// 		}
+			// 	} else {
+			// 		e.stopPropagation();
+			// 		return false;
+			// 	}
+			// });
+
+			let numVal = 1; //소비된 일수
+			function progress() {
+				let progressItem = [$('.progress-top') , $('.progress-bottom'), $('.progress-ing'), $('.progress-num')];
+				let svgLeng = $('.svg-outer-box').length;
+				let circumference = [irNum[1] * Math.PI * radius[0], irNum[1] * Math.PI * radius[1]];
+				let progress = numVal / day;
+				let dashoffset = [circumference[0] * (irNum[0] - progress), circumference[1] * (irNum[0] - progress)];
+				let dayCntNum = day - numVal;
+				for (let i = day; i >= dayCntNum; i--) {
+					$(function (i) {
+						setObj(function () {
+							progressItem[3].text((day + dayCntNum) - i + '日');
+						}, (decimalVal * twoDig[0]) * i);
+					}(i));
+				}
+				setObj(function () {
+					for (let j = 0; j < svgLeng; j++ ) {
+						let svgItem = $('.svg-outer-box:nth-child(' + (j + irNum[0]) + ')');
+						for (let i = 1; i <= 2; i++ ) progressItem[i].css('stroke-dasharray', circumference[j]);
+						if (!$('html').hasClass('ios')) {
+							svgItem.find(progressItem[0]).css('stroke-dasharray', circumference[j] + 16);
+							svgItem.find(progressItem[1]).css('stroke-dashoffset', (dashoffset[j] - circumference[j]) + irNum[1]);
+							svgItem.find(progressItem[2]).animate({strokeDashoffset:dashoffset[j] - circumference[j]}, ((numVal / secVal[0]) * decimalVal) * mSecond);
+						} else {
+							svgItem.find(progressItem[0]).css('stroke-dasharray', circumference[j] + 11);
+							svgItem.find(progressItem[1]).css('stroke-dashoffset', (circumference[j] - dashoffset[j]) - irNum[1]);
+							svgItem.find(progressItem[2]).animate({strokeDashoffset:circumference[j] - dashoffset[j]}, ((numVal / secVal[0]) * decimalVal) * mSecond);
+						}
+					}
+				}, ((day - numVal) / secVal[0] * decimalVal) * mSecond);
+				setObj(function () {
+					switch(numVal) {
+						case day:
+							for (let i = 0; i <= 1; i++ ) progressItem[i].fadeOut(secVal[1]);
+						break;
+					}
+				}, ((numVal / secVal[0]) * decimalVal) * mSecond);
+			}
+			setObj(function () {
+				progress();
+			}, secVal[4]);
+		});
+	</script>
+</head>
+
+<body>
+
+<div class="bms-wrap"><!-- mo header가 2단이고, 풋터가 있는 타입 : 기본 / mo header가 1단이고, 풋터가 없는 타입: type2 -->
+	<div class="skip-nav">
+		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
+	</div>
+
+	<!-- header -->
+	<div class="hmj-header">
+		<!-- header -->
+		<div class="header-outer">
+			<div class="header-cont">
+				<h1><a href="bms_layout.html"><img src="../assets/images/common/ico_header_logo.svg" alt="Hyundai Logo"></a></h1>
+
+				<div class="gnb-menu-outer">
+					<div class="gnb-menu-box blur">
+						<!-- 로그인 전 -->
+						<!-- <div class="account-box">
+							<button class="btn-account">Account</button>
+							<button class="btn-sign-in">Sign in</button>
+						</div> -->
+						<!-- // 로그인 전 -->
+						<!-- 로그인 후 -->
+						<div class="account-box login">
+							<button class="btn-account">Account</button>
+							<button class="btn-sign-in">木村 拓哉 様</button>
+							<a href="#a" class="btn-alarm">
+								<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
+								<div class="num"><span>2</span></div>
+							</a>
+						</div>
+						<!-- // 로그인 후 -->
+						<ul class="gnb-menu-list ir-count inner-scroll-y">
+							<li class="ir-item">
+								<a href="#">IONIQ 5</a>
+							</li>
+							<li class="ir-item">
+								<a href="#">NEXO</a>
+							</li>
+							<li class="ir-item">
+								<a href="#">SHOW ROOM</a>
+							</li>
+							<li class="ir-item">
+								<button class="btn-depth-switch inner-depth"><span>PURCHASE</span></button>
+								<div class="menu-inner-depth">
+									<button class="btn-depth-prev"><span>Back</span></button>
+									<p class="inner-depth-tit">PURCHASE</p>
+									<ul class="ir-count inner-scroll-y">
+										<li class="ir-item">
+											<button class="btn-depth-switch toggle-menu"><span>購入ガイド</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">オンライン購入のご案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">今月の購入特典</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">政府補助金</a>
+												</li>
+											</ul>
+										</li>
+										<li class="ir-item">
+											<button class="btn-depth-switch toggle-menu"><span>見積/試乗</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">オンライン購入のご案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">今月の購入特典</a>
+												</li>
+											</ul>
+										</li>
+										<li class="ir-item">
+											<a href="#">購入相談申込</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">仕様百科</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">ダウンロード</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">My Referralプログラム</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">ブランド拠点</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="ir-item">
+								<button class="btn-depth-switch inner-depth"><span>SERVICE</span></button>
+								<div class="menu-inner-depth">
+									<button class="btn-depth-prev"><span>Back</span></button>
+									<p class="inner-depth-tit">SERVICE</p>
+									<ul class="ir-count inner-scroll-y">
+										<li class="ir-item">
+											<a href="#">Hyundaiサービス</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">充電サービス</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">Hyundaiロードサイド・アシスタンス</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">整備予約</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">リコール情報</a>
+										</li>
+										<li class="ir-item">
+											<button class="btn-depth-switch toggle-menu"><span>BLUELINK</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">ご利用案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+											</ul>
+										</li>
+										<li class="ir-item">
+											<button class="btn-depth-switch toggle-menu"><span>ビルトインカメラ</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">ご利用案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+											</ul>
+										</li>
+										<li class="ir-item">
+											<a href="#">ナビ/カメラアップデート</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">提携サービス</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">アプリ設置</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="ir-item">
+								<button class="btn-depth-switch inner-depth"><span>BRAND</span></button>
+								<div class="menu-inner-depth">
+									<button class="btn-depth-prev"><span>Back</span></button>
+									<p class="inner-depth-tit">BRAND</p>
+									<ul class="ir-count inner-scroll-y">
+										<li class="ir-item">
+											<a href="#">購入ガイド</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">見積/試乗</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">購入相談申込</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="ir-item">
+								<a href="#">MOCEAN</a>
+							</li>
+							<li class="ir-item">
+								<a href="#">SHOP</a>
+							</li>
+						</ul>
+						<button class="btn-menu-close"><span>close</span></button>
+					</div>
+				</div>
+
+				<div class="gnb-mid-menu">
+					<ul class="mid-list">
+						<li><a href="#"><span>IONIQ 5</span></a></li>
+						<li><a href="#"><span>NEXO</span></a></li>
+						<li><a href="#"><span>SHOW ROOM</span></a></li>
+					</ul>
+				</div>
+
+				<div class="gnb-right-menu">
+					<ul class="gnb-right-list">
+						<li>
+							<button class="btn-cart pc-only"><span><img src="../assets/images/common/ico_cart.svg" alt="cart"></span></button>
+						</li>
+						<li>
+							<button class="btn-search"><span><img src="../assets/images/common/ico_search.svg" alt="search"></span></button>
+							<div class="gnb-search-dim">
+								<div class="search-outer-box">
+									<div class="search-cont">
+										<div class="input-outer-box">
+											<div class="input-box">
+												<input type="text" class="input-item" placeholder="検索キーワードを入力してください。">
+												<button class="btn-reset"></button>
+											</div>
+										</div>
+										<div class="btn-box">
+											<button class="btn-search-inner">검색</button>
+											<button class="btn-search-close">검색 종료</button>
+										</div>
+									</div>
+									<div class="keyword-box">
+										<div class="top-info">
+											
+										</div>
+										<ul>
+											<li></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button class="btn-menu"><span><img src="../assets/images/common/ico_menu.svg" alt="menu"></span></button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //header -->
+	</div>
+	<!--//header -->
+
+	<!-- container -->
+	<div id="hmjContainer" class="hmj-container"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+		<div class="hmj-content">
+			<div class="cont-outer fullcase scr-item active active-idx">
+				<div class="main-outer">
+					<div class="my-rc">
+						<div class="svg-outer-box pc-only">
+							<svg class="progress" width="104" height="104" viewbox="0 0 104 104">
+								<circle class="progress-meter" cx="52" cy="52" r="47" stroke-width="9" />
+								<circle class="progress-bottom" cx="52" cy="52" r="47" stroke-width="10" />
+								<circle class="progress-top" cx="52" cy="52" r="47" stroke-width="10" />
+								<circle class="progress-ing" cx="52" cy="52" r="47" stroke-width="10" />
+							</svg>
+							<strong class="progress-num">120日</strong>
+						</div>
+						<div class="svg-outer-box mo-only" style="display: block;">
+							<svg class="progress" width="120" height="120" viewbox="0 0 120 120">
+								<circle class="progress-meter" cx="60" cy="60" r="55" stroke-width="9" />
+								<circle class="progress-bottom" cx="60" cy="60" r="55" stroke-width="10" />
+								<circle class="progress-top" cx="60" cy="60" r="55" stroke-width="10" />
+								<circle class="progress-ing" cx="60" cy="60" r="55" stroke-width="10" />
+							</svg>
+							<strong class="progress-num">120日</strong>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="scr-item">
+				<div class="swiper-outer-box sample-swiper-num01">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="../assets/images/@img_scroll_sample01.jpg" alt="sample01">
+							</div>
+							<div class="swiper-slide">
+								<img src="../assets/images/@img_scroll_sample02.jpg" alt="sample02">
+							</div>
+							<div class="swiper-slide">
+								<img src="../assets/images/@img_scroll_sample03.jpg" alt="sample03">
+							</div>
+							<div class="swiper-slide">
+								<img src="../assets/images/@img_scroll_sample04.jpg" alt="sample04">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//container -->
+
+	<!-- footer -->
+	<div class="hmj-footer" style="display: none;">
+		<div class="footer-top">
+			<ul>
+				<li>
+					<ul>
+						<li><a href="#">Virtual ShowRoom</a></li>
+						<li><a href="#">IONIQ 5</a></li>
+						<li><a href="#">NEXO</a></li>
+						<li><a href="#">브랜드 거점</a></li>
+						<li><a href="#">MOCEAN</a></li>
+					</ul>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Purchase</button>
+						<ul class="cont">
+							<li><a href="#">온라인 구매방법 안내</a></li>
+							<li><a href="#">이달의 구매 혜택</a></li>
+							<li><a href="#">정부보조금 정책</a></li>
+							<li><a href="#">온라인 계약</a></li>
+							<li><a href="#">견적내기</a></li>
+							<li><a href="#">테스트 드라이브</a></li>
+							<li><a href="#">구매상담 신청</a></li>
+							<li><a href="#">사양백과</a></li>
+							<li><a href="#">카탈로그 다운로드</a></li>
+							<li><a href="#">가격표 다운로드</a></li>
+							<li><a href="#">Referral code 이용안내</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Service</button>
+						<ul class="cont">
+							<li><a href="#">서비스 네트워크</a></li>
+							<li><a href="#">충전소 안내</a></li>
+							<li><a href="#">긴급출동서비스</a></li>
+							<li><a href="#">정비예약</a></li>
+							<li><a href="#">리콜정보</a></li>
+							<li><a href="#">BLUELINK</a></li>
+							<li><a href="#">빌트인캠</a></li>
+							<li><a href="#">네비게이션/빌트인캠 업데이트</a></li>
+							<li><a href="#">제휴 서비스</a></li>
+							<li><a href="#">앱 설치 안내</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Brand Story</button>
+						<ul class="cont">
+							<li><a href="#">IONIQ 5</a></li>
+							<li><a href="#">IONIQ 5 Teasing</a></li>
+							<li><a href="#">Mini 45EV</a></li>
+							<li><a href="#">IONIQ</a></li>
+							<li><a href="#">Hyundai X BTS</a></li>
+							<li><a href="#">#Thisisus</a></li>
+							<li><a href="#">Hyundai X BBC</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">SHOP</a></li>
+						<li><a href="#">이벤트</a></li>
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">1:1 상담</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<img src="../assets/images/@footer.jpg" alt="footer">
+		</div>
+	</div>
+	<!--//footer -->
+</div>
+
+<div class="side-menu-wrap">
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul>
+	<button class="btn-menu-close"><span>close</span></button>
+</div>
+
+<div class="btn-top-box">
+	<button title="active side menu" role="button" class="btn-side-menu">
+		<span>Side</span>
+	</button>
+	<button title="move to top" role="button" class="btn-top">
+		<span>top</span>
+	</button>
+</div>
+</body>
+<script>
+	$(function(){
+		if ($('.sample-swiper-num01').length == 1) {
+			let swpOpt = {},
+			slideLength = $('.sample-swiper-num01 .swiper-slide').length;
+			if (slideLength == 1) {
+				swpOpt = {
+					allowSlidePrev: false,
+					allowSlideNext: false,
+					simulateTouch: false
+				}
+			} else {
+				swpOpt = {
+					navigation: {
+						nextEl: '.sample-swiper-num01 .swiper-button-next',
+						prevEl: '.sample-swiper-num01 .swiper-button-prev',
+					},
+					freeMode: true,
+					mousewheel: {
+						releaseOnEdges: true,
+					},
+					simulateTouch: true,
+					speed: 300,
+					loop: false,
+					spaceBetween: 0,
+					observer: true,
+					observeParents: true,
+				}
+			}
+			let sampleSwp = new Swiper('.sample-swiper-num01 .swiper-container', swpOpt);
+		}
+	});
+</script>
+</html>

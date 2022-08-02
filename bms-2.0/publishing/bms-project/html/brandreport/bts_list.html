@@ -1,0 +1,446 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0</title>
+
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../../assets/js/common.js"></script>
+</head>
+
+<body>
+
+<div class="bms-wrap">
+  <div class="skip-nav">
+    <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
+  </div>
+
+  <!-- header -->
+  <div class="bms-header">
+    <!-- 상단 gnb -->
+    <div class="gnb-menu">
+      <div class="inner-content">
+        <a href="" class="logo"><img src="../../assets/images/common/logo.png" alt=""></a>
+        <div class="menu">
+          <ul>
+            <li class="menu-first-li">
+              <a href="">Brand Guidelines</a>
+            </li>
+            <li class="menu-first-li">
+              <a href=""> Library</a>
+            </li>
+            <li class="menu-first-li">
+              <a href="">Review Tools</a>
+            </li>
+            <li class="menu-first-li">
+              <a href="">Brand Reports</a>
+            </li>
+            <li class="menu-first-li">
+              <a href="">My BMS</a>
+            </li>
+          </ul>
+        </div>
+        <div class="util">
+          <a href="" class="gnb-bookmark"></a>
+          <div class="select-box select-lang">
+            <p class="selected-value">EN</p>
+            <ul class="select-items">
+              <li class="selected"><a href="javascript:;">EN</a></li>
+              <li><a href="javascript:;">KR</a></li>
+              <li><a href="javascript:;">CH</a></li>
+            </ul>
+          </div>
+          <a href="" class="link-login">Logout</a>
+          <a href="" class="gnb-hamburger"></a>
+        </div>
+      </div>
+    </div>
+    <!-- right megamenu (햄버거메뉴 클릭 시 노출 화면) -->
+  </div>
+  <!--//header -->
+
+  <!-- container -->
+  <div id="bmsContainer" class="bms-container">
+    <div class="bms-content">
+      <div class="cont-outer">
+        <div class="breadclumb-outer">
+          <span class="breadclumb"><em>Home</em></span>
+          <span class="breadclumb"><em>Brand Reports</em></span>
+          <span class="breadclumb regular"><em>BTS Reports</em></span>
+        </div>
+      </div>
+      <!-- S: cont-outer -->
+      <div class="cont-outer fullcase">
+        <div class="brandreport-list bts-list"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+          <div class="cont-outer middlecase">
+            <div class="tit-box">
+              <h1 class="h1-title">BTS 보고서</h1>
+              <p class="cont-text">Brand Tracking Study 보고서입니다.</p>
+            </div>
+            <div class="brandreport-list-form">
+              <div class="brandreport-list-tit">
+                <h2 class="h3-title">2021 BTS 보고서</h2>
+                <div class="select-box">
+                  <p class="selected-value">2021</p>
+                  <ul class="select-items">
+                    <li>option1</li>
+                    <li>option2</li>
+                    <li>option3</li>
+                  </ul>
+                </div>
+              </div>
+              <!--S: checking list-->
+              <div class="checking-list-box">
+                <div class="btn-area"> <!--220701 btn-area 구조 수정-->
+                  <div class="edit-box">
+                    <button class="btn-txt btn-icon2 btn-edit btn-file">파일 선택</button>
+                  </div>
+                  <div class="chk-box">
+                    <div>
+                      <div>
+                        <span class="cont-text2 btn-txt btn-icon2 btn-file" disabled="disabled">선택된 파일 (<strong></strong>)</span>
+                        <button class="btn-txt btn-cancel">선택 취소</button>
+                        <a href="" title="download" class="btn-txt btn-icon">선택 일괄 다운로드</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ul class="checking-list-all"> <!-- 상위 checkbox 가 있을 경우에만 .checking-list-all 클래스명 사용 -->
+                  <li class="list"> <!--220701 이전 구조 삭제 및 전체 구조 수정-->
+                    <span class="cont-tit list-contents-all">Korea</span> <!-- 상위 checkbox 가 있을 경우에만 list-contents-all 클래스명 사용 -->
+                    <ul class="tbl-list checking-list"> <!-- 단일 checkbox list 일 경우에는 .checking-list 클래스명 사용 -->
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="list">
+                    <span class="cont-tit list-contents-all">China</span> <!-- 상위 checkbox 가 있을 경우에만 list-contents-all 클래스명 사용 -->
+                    <ul class="tbl-list checking-list"> <!-- 단일 checkbox list 일 경우에는 .checking-list 클래스명 사용 -->
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="list">
+                    <span class="cont-tit list-contents-all">India</span> <!-- 상위 checkbox 가 있을 경우에만 list-contents-all 클래스명 사용 -->
+                    <ul class="tbl-list checking-list"> <!-- 단일 checkbox list 일 경우에는 .checking-list 클래스명 사용 -->
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="list">
+                    <span class="cont-tit list-contents-all">Europe</span> <!-- 상위 checkbox 가 있을 경우에만 list-contents-all 클래스명 사용 -->
+                    <ul class="tbl-list checking-list"> <!-- 단일 checkbox list 일 경우에는 .checking-list 클래스명 사용 -->
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="list">
+                    <span class="cont-tit list-contents-all">Asia & Pacific</span> <!-- 상위 checkbox 가 있을 경우에만 list-contents-all 클래스명 사용 -->
+                    <ul class="tbl-list checking-list"> <!-- 단일 checkbox list 일 경우에는 .checking-list 클래스명 사용 -->
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="list">
+                    <span class="cont-tit list-contents-all">Africa & Middle East</span> <!-- 상위 checkbox 가 있을 경우에만 list-contents-all 클래스명 사용 -->
+                    <ul class="tbl-list checking-list"> <!-- 단일 checkbox list 일 경우에는 .checking-list 클래스명 사용 -->
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="list">
+                    <span class="cont-tit list-contents-all">Russia</span> <!-- 상위 checkbox 가 있을 경우에만 list-contents-all 클래스명 사용 -->
+                    <ul class="tbl-list checking-list"> <!-- 단일 checkbox list 일 경우에는 .checking-list 클래스명 사용 -->
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="list">
+                    <span class="cont-tit list-contents-all">North America</span> <!-- 상위 checkbox 가 있을 경우에만 list-contents-all 클래스명 사용 -->
+                    <ul class="tbl-list checking-list"> <!-- 단일 checkbox list 일 경우에는 .checking-list 클래스명 사용 -->
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="list">
+                    <span class="cont-tit list-contents-all">Central & South America</span> <!-- 상위 checkbox 가 있을 경우에만 list-contents-all 클래스명 사용 -->
+                    <ul class="tbl-list checking-list"> <!-- 단일 checkbox list 일 경우에는 .checking-list 클래스명 사용 -->
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                      <li class="volume-type list-contents"><!--20220701 list-contents 클래스명 하위 divdptj volum-type이랑 동등위치로 이동-->
+                        <div class="cont-text2">2021 BTS Report_Korea.pptx</div>
+                        <div class="download-area">
+                          <span class="list-volume cont-text2">7.76 MB</span>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <!--E: checking list-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- E: cont-outer -->
+    </div>
+  </div>
+  <!--//container -->
+
+  <!-- S: 220629 footer 수정-->
+  <!-- footer -->
+  <div class="bms-footer">
+    <div class="footer-inner">
+      <div class="foot-logo">
+        <img src="../../assets/images/main/foot_logo.png" alt="logo">
+      </div>
+      <div class="foot-menu">
+        <ul>
+          <li class="cont-tit2"><a href="#">Sitemap</a></li>
+          <li class="cont-tit2"><a href="#">Newsletter</a></li>
+          <li class="cont-tit2"><a href="#">Glossary</a></li>
+        </ul>
+      </div>
+      <div class="foot-contact">
+        <p class="cont-tit2"><a href="#">Contact Us</a></p>
+        <div>
+          <p class="caption htr">Brand Design Support Seoul</p>
+          <p class="caption htr">+82 2 6410 8232</p>
+        </div>
+        <div>
+          <p class="caption htr">Brand Design Support Berlin</p>
+          <p class="caption htr">+49 30 22 06 62 390</p>
+        </div>
+        <div>
+          <p class="caption htr">Global E-mail</p>
+          <p class="caption htr email">guideline@hyundai.com</p>
+        </div>
+      </div>
+      <div class="foot-terms">
+        <div class="terms-list">
+          <p class="cont-text2"><a href="#">Terms of Use</a></p>
+          <p class="privacy cont-text2"><a href="#">Privacy Policy</a></p>
+        </div>
+        <p class="copy caption htr fc-color4">© 2022 Hyundai Motor Company</p>
+      </div>
+    </div>
+  </div>
+  <!--//footer -->
+  <!-- E: 220629 footer 수정-->
+
+  <div class="btn-top-box">
+    <button title="move to top" role="button" class="btn-top">
+      <span>TOP</span> <!-- 220527 대문자 변경 -->
+    </button>
+  </div>
+</div>
+
+</body>
+</html>

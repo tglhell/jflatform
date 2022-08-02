@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0 CODING GUIDE</title>
+
+  <!-- 코딩 가이드용 -->
+  <link rel="stylesheet" href="docs/guide.css">
+  <link rel="stylesheet" href="docs/prism.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <script type="text/javascript" src="docs/prism.js"></script>
+  <script type="text/javascript" src="docs/plugin.js"></script>
+  <!-- //코딩 가이드용 -->
+
+  <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../assets/js/common.js"></script>
+
+  <script>
+    $(function(){
+      $('.view_code').on('click', function(){
+        $(this).next('.code-toolbar').toggleClass('open');
+      });
+    });
+  </script>
+  <style>
+    /* .ex-wrap .tit-btn {
+      height: 40px;
+      line-height: 40px;
+      padding-left: 10px;
+      background-color: #f3f3f3;
+      border-bottom: 1px solid #dcdcdc;
+    } */
+    /* .ex-wrap .tit-btn::after {
+      content: '';
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-right: 1px solid #333;
+      border-bottom: 1px solid #333;
+      transform: rotate(45deg);
+      position: absolute;
+      right: 10px;
+      top: 12px;
+      transition: all 0.5s ease;
+    }
+    .ex-wrap .active .tit-btn::after {
+      transform: rotate(-135deg);
+      top: 16px
+    } */
+    .bgTest {
+      background: url('../assets/images/@key_img01.jpg') no-repeat center;
+      width: 1120px;
+      height: 384px;
+      background-size: cover;
+    }
+    @media screen and (max-width: 1119px) {
+      .bgTest {
+        width: 100%;
+        height: 224px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap" id="codingGiuide">
+  <div class="header">
+    <div><em>BMS 2.0</em> project coding guide</div>
+    <h1><img src="images/logo_header.png" alt="로고"></h1>
+  </div>
+
+  <div class="cont_codGuide guide_container">
+
+
+    <div class="tab">
+      <a href="coding_guide_default.html" title="DEFAULT">DEFAULT</a>
+      <a href="coding_guide_naming.html" title="NAMING">NAMING</a>
+      <a href="javascript:void(0);" title="BOX" class="active">BOX</a>
+      <a href="coding_guide_button.html" title="BUTTON">BUTTON</a>
+      <a href="coding_guide_form.html" title="FORM">FORM</a>
+      <a href="coding_guide_font.html" title="FONT">FONT</a>
+      <a href="coding_guide_table.html" title="TABLE">TABLE</a>
+      <a href="coding_guide_tab.html" title="TAB">TAB</a>
+      <!--			<a href="coding_guide_scroll.html" title="SCROLL">SCROLL</a>-->
+      <a href="coding_guide_carousel.html" title="CAROUSEL">CAROUSEL</a>
+      <a href="coding_guide_popup.html" title="POPUP">POPUP</a>
+      <a href="coding_guide_etc.html" title="ETC">ETC</a>
+    </div>
+
+    <div class="contents_infor">
+
+
+      <h2 class="title mt30">Accordion</h2>
+
+      <h3 class="title">&#x25CE; Accordion </h3>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<ul class="accordion">
+	<li class="item active">
+		<p class="tit-btn">Accordion-Menu1</p>
+		<div class="cont">
+			cont<br>
+			cont<br>
+			cont<br>
+			cont
+		</div>
+	</li>
+	<li class="item">
+		<p class="tit-btn">Accordion-Menu2</p>
+		<div class="cont">
+			cont<br>
+			cont<br>
+			cont<br>
+			cont
+		</div>
+	</li>
+	<li class="item">
+		<p class="tit-btn">Accordion-Menu3</p>
+		<div class="cont">
+			cont<br>
+			cont<br>
+			cont<br>
+			cont
+		</div>
+	</li>
+</ul>
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <div class="conIn_tip">
+        다른게 열리면 열려있던것 닫힘 / 스스로 닫기도 가능 <br>
+        .accordion &lt; .item &lt; .tit-btn + .cont <br>
+        기본스타일에서 커스텀이 필요한경우 개별 class로 스타일 추가 <strong>.accordion은 변경하지 않음</strong><br>
+      </div>
+
+      <ul class="accordion">
+        <li class="item active">
+          <p class="tit-btn">Accordion-Menu1</p>
+          <div class="cont">
+            cont<br>
+            cont<br>
+            cont<br>
+            cont
+          </div>
+        </li>
+        <li class="item">
+          <p class="tit-btn">Accordion-Menu2</p>
+          <div class="cont">
+            cont<br>
+            cont<br>
+            cont<br>
+            cont
+          </div>
+        </li>
+        <li class="item">
+          <p class="tit-btn">Accordion-Menu3</p>
+          <div class="cont">
+            cont<br>
+            cont<br>
+            cont<br>
+            cont
+          </div>
+        </li>
+      </ul>
+      <!-- //accordion -->
+
+      <div class="bgTest">
+
+      </div>
+
+    </div>
+    <!-- //contents_infor -->
+  </div>
+</div>
+<div class="btn-top-box">
+  <a href="#" title="move to top" role="button" class="btn-top">
+    <span>top</span>
+  </a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0</title>
+
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../../assets/css/lib/jquery-ui.css">
+  <link rel="stylesheet" href="../../assets/css/lib/customlib.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../../assets/js/common.js"></script>
+  <script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
+</head>
+
+<body>
+
+<div class="bms-wrap">
+  <div class="skip-nav">
+    <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
+  </div>
+
+  <!-- header -->
+  <div class="bms-header">
+    <!-- 상단 gnb -->
+    <div class="gnb-menu">
+      <div class="inner-content">
+        <a href="" class="logo"><img src="../../assets/images/common/logo.png" alt=""></a>
+        <div class="menu">
+          <ul>
+            <li class="menu-first-li">
+              <a href="">Brand Guidelines</a>
+            </li>
+            <li class="menu-first-li">
+              <a href=""> Library</a>
+            </li>
+            <li class="menu-first-li">
+              <a href="">Review Tools</a>
+            </li>
+            <li class="menu-first-li">
+              <a href="">Brand Reports</a>
+            </li>
+            <li class="menu-first-li">
+              <a href="">My BMS</a>
+            </li>
+          </ul>
+        </div>
+        <div class="util">
+          <a href="" class="gnb-bookmark"></a>
+          <div class="select-box select-lang">
+            <p class="selected-value">EN</p>
+            <ul class="select-items">
+              <li class="selected"><a href="javascript:;">EN</a></li>
+              <li><a href="javascript:;">KR</a></li>
+              <li><a href="javascript:;">CH</a></li>
+            </ul>
+          </div>
+          <a href="" class="link-login">Logout</a>
+          <a href="" class="gnb-hamburger"></a>
+        </div>
+      </div>
+    </div>
+    <!-- right megamenu (햄버거메뉴 클릭 시 노출 화면) -->
+  </div>
+  <!--//header -->
+
+  <!-- container -->
+  <div id="bmsContainer" class="bms-container">
+    <div class="bms-content">
+      <!-- S: 20220531 cont-outer 분리(breadclumb-outer 포함)︎ -->
+      <div class="cont-outer">
+        <div class="breadclumb-outer">
+          <a class="breadclumb"><span>Home</span></a>
+          <a class="breadclumb"><span>My BMS</span></a>
+          <a class="breadclumb"><span>File Sharing</span></a>
+          <a class="breadclumb regular"><span>Send New Files</span></a>
+        </div>
+      </div>
+      <!-- E: 20220531 cont-outer 분리(breadclumb-outer 포함)︎ -->
+
+      <!-- S: 20220531 cont-outer 분리(form 포함)︎ -->
+      <div class="cont-outer form">
+        <!-- S: [send-file] -->
+        <div class="file-all send-file"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+          <div class="tit-box">
+            <h1 class="h1-title">Send New Files</h1><!--220622 h1 태그로 변경 및 h1-title 클래스 추가-->
+            <p class="cont-text"><!--220622 cont-text2 -> cont-text로 수정-->
+              BMS 회원에게 파일을 공유할 수 있습니다.
+            </p>
+          </div>
+          <div>
+            <div class="input-outer-box row-type">
+              <label for="inpTxt01">제목 <span class="required">*</span></label>
+              <div class="input-box val-error">
+                <input type="text" id="inpTxt01" class="input-item" placeholder="제목을 입력해 주세요." maxlength="100">
+                <button class="btn-reset"></button>
+                <p class="typing"><span>0</span>/100</p>
+              </div>
+              <p class="error-msg">error text</p>
+            </div>
+            <div class="input-outer-box row-type">
+              <label for="inpTxt02">수신자 <span class="required">*</span></label>
+              <div class="autocomplete-wrap">
+                <ul class="autocomplete-area">
+                  <li class="input-area">
+                    <input id="inpTxt02" type="email" class="input-email" placeholder="수신자를 입력해주세요."/>
+                  </li>
+                </ul>
+                <div class="autocomplete">
+                  <ul>
+                    <li>hyundai@hyundai.com1</li>
+                    <li>hyundai@hyundai.com2</li>
+                    <li>hyundai@hyundai.com3</li>
+                    <li>hyundai@hyundai.com4</li>
+                    <li>hyundai@hyundai.com5</li>
+                    <li>hyundai@hyundai.com6</li>
+                    <li>hyundai@hyundai.com7</li>
+                    <li>hyundai@hyundai.com8</li>
+                    <li>hyundai@hyundai.com9</li>
+                  </ul>
+                  <div>
+                    파일을 공유할 BMS 회원을 선택해주세요.
+                    <button></button>
+                  </div>
+                </div>
+              </div>
+              <p class="error-msg">error text</p>
+            </div>
+            <div class="input-outer-box row-type">
+              <label for="inpTxt03">메시지</label>
+              <div class="textarea-box">
+                <textarea id="inpTxt03" name="name" rows="8" placeholder="메시지를 입력해주세요."></textarea>
+                <span class="bite"><em>0</em>/1000</span>
+              </div>
+              <p class="error-msg">error text</p>
+            </div>
+            <!-- S: uploader - 220630 구조수정(Contact Us와 동일구조) -->
+            <div class="uploader-outer">
+              <div class="input-outer-box row-type">
+                <label>첨부파일</label>
+                <div data-upload-id="uploadId1" class="upload-container file-uploader">
+                  <div class="button-container blind">
+                    <input type="file" name="file" hidden="">
+                  </div>
+                  <div class="file-box">
+                    <div class="file-byte">
+                      <span>0</span>개, <span>0</span> byte 추가됨
+                    </div>
+                    <div class="table-area">
+                      <table cellpadding="0" cellspacing="0">
+                        <colgroup>
+                          <col style="width:50px">
+                          <col>
+                          <col style="width: 160px">
+                          <col style="width: 160px">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                          <th class="file-chk"><label class="chk"><input type="checkbox"><span></span></label></th>
+                          <th class="name">파일 이름</th>
+                          <th class="file-percent">진행률</th>
+                          <th class="file-size">파일크기</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td class="upload-guide" colspan="4">
+                            <div class="upload-file-area">
+                              <p class="upload-guide-txt"><span>이곳을 더블클릭 또는 파일을 드래그하세요.</span></p>
+                              <div class="upload-file-list">
+                                <div class="table-area">
+                                  <table cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                      <col style="width:50px">
+                                      <col>
+                                      <col style="width: 160px">
+                                      <col style="width: 160px">
+                                    </colgroup>
+                                    <tbody></tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="caution-area">
+                      <p class="caution">대외비 이상의 파일 공유 시 회사의 보안 규정을 따르며, 외부에 노출되지 않도록 주의하여 공유 바랍니다.</p>
+                      <p class="caution">첨부파일은 총 2GB를 초과할 수 없으며 최대 3개까지 업로드 가능합니다.</p>
+                      <p class="caution">이미지, 비디오, 음성, 문서 형식만 업로드 할 수 있습니다.</p>
+                      <p class="caution">파일을 첨부한 후 ‘파일 저장' 버튼을 클릭해야 서버에 정상 업로드가 됩니다.</p>
+                    </div>
+                    <div class="button-area">
+                      <button class="btn btn-type2 btn-middle-small upload-delete-line" disabled><span>선택 항목 제거</span></button><!-- 220622 btn-small -> btn-middle-small 클래스명 변경 -->
+                      <button class="btn btn-type2 btn-middle-small upload-delete-all" disabled><span>초기화</span></button><!-- 220622 btn-small -> btn-middle-small 클래스명 변경 -->
+                      <button class="btn btn-type3 btn-middle-small upload-start"><span>파일 저장</span></button><!-- 220622 btn-small -> btn-middle-small 클래스명 변경 -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- E: uploader - 220630 구조수정(Contact Us와 동일구조) -->
+            <div class="input-outer-box row-type calendar">
+              <label for="inpTxt04">파일 만료 기한 <span class="required">*</span></label>
+              <div class="inp-slice-box">
+                <input id="inpTxt04" type="text" class="input-item date-picker" placeholder="30일 이내의 파일 만료 기한을 입력해주세요." data-min-date="0" data-max-date="+1m"> <!-- 220712 수정 (d,m,y 단위로 사용가능) -->
+              </div>
+              <p class="error-msg">error text</p>
+            </div>
+            <ul class="check-group">
+              <li><label class="chk"><input type="checkbox"><span>나에게도 다운로드 링크를 보내는 것을 동의합니다.</span></label></li>
+              <li><label class="chk"><input type="checkbox"><span>상대방이 파일을 다운로드 완료하면 알림 메일 받는 것을 동의합니다.</span></label></li>
+            </ul>
+            <p class="error-msg">error text</p>
+            <div class="cta-outer">
+              <button class="btn btn-type2 btn-xlarge"><span>취소</span></button><!--220622 btn-xlarge 클래스 추가-->
+              <button class="btn btn-xlarge"><span>보내기</span></button><!--220622 btn-xlarge 클래스 추가-->
+            </div>
+          </div>
+        </div>
+        <!-- E: [send-file] -->
+      </div>
+      <!-- E: 20220531 cont-outer 분리(form 포함)︎ -->
+    </div>
+  </div>
+  <!--//container -->
+
+  <!-- S: 220629 footer 수정 -->
+  <!-- footer -->
+  <div class="bms-footer">
+    <div class="footer-inner">
+      <div class="foot-logo">
+        <img src="../../assets/images/main/foot_logo.png" alt="logo">
+      </div>
+      <div class="foot-menu">
+        <ul>
+          <li class="cont-tit2"><a href="#">Sitemap</a></li>
+          <li class="cont-tit2"><a href="#">Newsletter</a></li>
+          <li class="cont-tit2"><a href="#">Glossary</a></li>
+        </ul>
+      </div>
+      <div class="foot-contact">
+        <p class="cont-tit2"><a href="#">Contact Us</a></p>
+        <div>
+          <p class="caption htr">Brand Design Support Seoul</p>
+          <p class="caption htr">+82 2 6410 8232</p>
+        </div>
+        <div>
+          <p class="caption htr">Brand Design Support Berlin</p>
+          <p class="caption htr">+49 30 22 06 62 390</p>
+        </div>
+        <div>
+          <p class="caption htr">Global E-mail</p>
+          <p class="caption htr email">guideline@hyundai.com</p>
+        </div>
+      </div>
+      <div class="foot-terms">
+        <div class="terms-list">
+          <p class="cont-text2"><a href="#">Terms of Use</a></p>
+          <p class="privacy cont-text2"><a href="#">Privacy Policy</a></p>
+        </div>
+        <p class="copy caption htr fc-color4">© 2022 Hyundai Motor Company</p>
+      </div>
+    </div>
+  </div>
+  <!--//footer -->
+  <!-- E: 220629 footer 수정 -->
+
+  <div class="btn-top-box">
+    <button title="move to top" role="button" class="btn-top">
+      <span>top</span>
+    </button>
+  </div>
+</div>
+
+<script type="text/javascript" src="../../assets/js/file-upload-core.js"></script>
+<script>
+  $('#sampleDatePicker').datepicker({
+    minDate: '0'
+  });
+</script>
+</body>
+</html>

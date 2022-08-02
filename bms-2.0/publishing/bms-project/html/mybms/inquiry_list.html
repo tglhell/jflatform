@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0</title>
+
+  <link rel="stylesheet" href="../../assets/css/lib/jquery-ui.css">
+  <link rel="stylesheet" href="../../assets/css/lib/customlib.css">
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+  <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
+  <script type="text/javascript" src="../../assets/js/common.js"></script>
+</head>
+
+<body>
+
+<div class="bms-wrap">
+  <div class="skip-nav">
+    <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
+  </div>
+
+  <!-- header -->
+  <div class="bms-header">
+    <!-- 상단 gnb -->
+    <div class="gnb-menu">
+      <div class="inner-content">
+        <a href="" class="logo"><img src="../../assets/images/common/logo.png" alt=""></a>
+        <div class="menu">
+          <ul>
+            <li class="menu-first-li">
+              <a href="">Brand Guidelines</a>
+            </li>
+            <li class="menu-first-li">
+              <a href=""> Library</a>
+            </li>
+            <li class="menu-first-li">
+              <a href="">Review Tools</a>
+            </li>
+            <li class="menu-first-li">
+              <a href="">Brand Reports</a>
+            </li>
+            <li class="menu-first-li">
+              <a href="">My BMS</a>
+            </li>
+          </ul>
+        </div>
+        <div class="util">
+          <a href="" class="gnb-bookmark"></a>
+          <div class="select-box select-lang">
+            <p class="selected-value">EN</p>
+            <ul class="select-items">
+              <li class="selected"><a href="javascript:;">EN</a></li>
+              <li><a href="javascript:;">KR</a></li>
+              <li><a href="javascript:;">CH</a></li>
+            </ul>
+          </div>
+          <a href="" class="link-login">Logout</a>
+          <a href="" class="gnb-hamburger"></a>
+        </div>
+      </div>
+    </div>
+    <!-- right megamenu (햄버거메뉴 클릭 시 노출 화면) -->
+  </div>
+  <!--//header -->
+
+  <!-- container -->
+  <div id="bmsContainer" class="bms-container">
+    <div class="bms-content">
+      <!-- S: 20220531 cont-outer 분리(breadclumb-outer 포함)︎ -->
+      <div class="cont-outer">
+        <div class="breadclumb-outer">
+          <span class="breadclumb"><em>Home</em></span> <!-- 220527 태그 수정 -->
+          <span class="breadclumb"><em>My BMS</em></span> <!-- 220527 태그 수정 -->
+          <span class="breadclumb"><em>MY Activity</em></span> <!-- 220527 태그 수정 -->
+          <span class="breadclumb regular"><em>문의내역</em></span> <!-- 220527 태그 수정 -->
+        </div>
+      </div>
+      <!-- E: 20220531 cont-outer 분리(breadclumb-outer 포함)︎ -->
+
+      <!-- S: 20220531 cont-outer 분리(form 포함)︎ -->
+      <div class="cont-outer form">
+        <!-- S: [inquiry-list] -->
+        <div class="inquiry-list"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+          <!-- S: tit-box-->
+          <div class="tit-box">
+            <h1 class="h1-title">문의내역</h1><!-- 220621 h1 태그로 변경 및 h1-title 클래스 추가 -->
+            <p class="cont-text">등록하신 문의 내역의 내용 및 답변을 확인하실 수 있습니다.</p><!-- 220621 cont-text2 -> cont-text 클래스 변경 / fc-color4, htr 클래스 삭제 -->
+          </div>
+          <!-- E: tit-box-->
+          <!-- S: calendar box -->
+          <div class="inp-outer-box calendar box">
+            <div class="inp-slice-box">
+              <label>조회기간</label>
+              <div class="inp-area"><input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY"></div>
+              <span class="inp-hpn">~</span>
+              <div class="inp-area"><input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY"></div>
+              <button class="btn btn-type3 btn-middle btn-search"><span>조회</span></button>
+            </div>
+          </div>
+          <!-- E: calendar box -->
+          <!-- S: list table -->
+          <div class="tbl-box">
+            <table>
+              <caption class="blind">비고정 타입</caption>
+              <colgroup>
+                <col style="width: 76px">
+                <col style="width: 160px">
+                <col>
+                <col style="width: 160px">
+                <col style="width: 160px">
+              </colgroup>
+              <thead>
+              <tr>
+                <th scope="row">번호</th>
+                <th scope="row">문의 유형</th>
+                <th scope="row">제목</th>
+                <th scope="row">등록일</th>
+                <th scope="row">답변상태</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td class="td-num">80</td>
+                <td class="td-type">가이드라인</td>
+                <td class="td-tit"><a href="" title="">가이드 라인에 대한 질문입니다.</a></td> <!--20220622 td 내 a태그 추가-->
+                <td class="td-date">MM.DD.YYYY</td>
+                <td class="td-state"><span class="state-receipt">접수</span></td>
+              </tr>
+              <tr>
+                <td class="td-num">79</td>
+                <td class="td-type">회원인</td>
+                <td class="td-tit"><a href="" title="">회원 정보 변경에 대한 질문입니다.</a></td><!--20220622 td 내 a태그 추가-->
+                <td class="td-date">MM.DD.YYYY</td>
+                <td class="td-state"><span class=" state-waiting">답변 대기</span></td>
+              </tr>
+              <tr>
+                <td class="td-num">78</td>
+                <td class="td-type">시스템 오류</td>
+                <td class="td-tit"><a href="" title="">Admin 사이트 접근 시, 접근할 수 없는 페이지로 이동이 됩니다. Admin 사이트 접근을 하려면</a></td><!--20220622 td 내 a태그 추가-->
+                <td class="td-date">MM.DD.YYYY</td>
+                <td class="td-state"><span class="state-complete">답변 완료</span></td>
+              </tr>
+              <tr>
+                <td class="td-num">77</td>
+                <td class="td-type">디자인 리뷰</td>
+                <td class="td-tit"><a href="" title="">디자인 리뷰 관련하여 질문 드립니다.</a></td><!--20220622 td 내 a태그 추가-->
+                <td class="td-date">MM.DD.YYYY</td>
+                <td class="td-state"><span class="state-complete">답변 완료</span></td>
+              </tr>
+              <tr>
+                <td class="td-num">76</td>
+                <td class="td-type">기타</td>
+                <td class="td-tit"><a href="" title="">질문이 있습니다.</a></td><!--20220622 td 내 a태그 추가-->
+                <td class="td-date">MM.DD.YYYY</td>
+                <td class="td-state"><span class="state-complete">답변 완료</span></td>
+              </tr>
+              <tr>
+                <td class="td-num">75</td>
+                <td class="td-type">기타</td>
+                <td class="td-tit"><a href="" title="">기타 질문입니다.</a></td><!--20220622 td 내 a태그 추가-->
+                <td class="td-date">MM.DD.YYYY</td>
+                <td class="td-state"><span class="state-complete">답변 완료</span></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- E: list table -->
+          <!-- S: pagination -->
+          <div class="pagination">
+            <a href="#" class="btn-page-first"></a>
+            <a href="#" class="btn-page-prev"></a>
+            <a href="#" class="btn-page-num active">1</a>
+            <a href="#" class="btn-page-num">2</a>
+            <a href="#" class="btn-page-num">3</a>
+            <a href="#" class="btn-page-num">4</a>
+            <a href="#" class="btn-page-num">5</a>
+            <a href="#" class="btn-page-next">더보기 <span>(<em>1</em>/<em>3</em>)</span></a>
+            <a href="#" class="btn-page-last"></a>
+          </div>
+          <!-- E: pagination -->
+        </div>
+        <!-- E: [inquiry-list] -->
+      </div>
+      <!-- E: 20220531 cont-outer 분리(form 포함)︎ -->
+    </div>
+  </div>
+  <!--//container -->
+
+  <!-- S: 220629 footer 수정 -->
+  <!-- footer -->
+  <div class="bms-footer">
+    <div class="footer-inner">
+      <div class="foot-logo">
+        <img src="../../assets/images/main/foot_logo.png" alt="logo">
+      </div>
+      <div class="foot-menu">
+        <ul>
+          <li class="cont-tit2"><a href="#">Sitemap</a></li>
+          <li class="cont-tit2"><a href="#">Newsletter</a></li>
+          <li class="cont-tit2"><a href="#">Glossary</a></li>
+        </ul>
+      </div>
+      <div class="foot-contact">
+        <p class="cont-tit2"><a href="#">Contact Us</a></p>
+        <div>
+          <p class="caption htr">Brand Design Support Seoul</p>
+          <p class="caption htr">+82 2 6410 8232</p>
+        </div>
+        <div>
+          <p class="caption htr">Brand Design Support Berlin</p>
+          <p class="caption htr">+49 30 22 06 62 390</p>
+        </div>
+        <div>
+          <p class="caption htr">Global E-mail</p>
+          <p class="caption htr email">guideline@hyundai.com</p>
+        </div>
+      </div>
+      <div class="foot-terms">
+        <div class="terms-list">
+          <p class="cont-text2"><a href="#">Terms of Use</a></p>
+          <p class="privacy cont-text2"><a href="#">Privacy Policy</a></p>
+        </div>
+        <p class="copy caption htr fc-color4">© 2022 Hyundai Motor Company</p>
+      </div>
+    </div>
+  </div>
+  <!--//footer -->
+  <!-- E: 220629 footer 수정 -->
+
+  <div class="btn-top-box">
+    <button title="move to top" role="button" class="btn-top">
+      <span>top</span>
+    </button>
+  </div>
+</div>
+<script>
+  $('#sampleDatePicker').datepicker({
+    minDate: '0'
+  });
+</script>
+</body>
+</html>

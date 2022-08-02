@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0 CODING GUIDE</title>
+
+  <!-- 코딩 가이드용 -->
+  <link rel="stylesheet" href="docs/guide.css">
+  <link rel="stylesheet" href="docs/prism.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <style>
+    .guide-layout-link {
+      color: #20b9ff;
+      text-decoration: underline;
+      text-underline-position: under;
+    }
+  </style>
+  <script type="text/javascript" src="docs/prism.js"></script>
+  <script type="text/javascript" src="docs/plugin.js"></script>
+  <!-- //코딩 가이드용 -->
+
+  <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+
+  <script>
+    $(function(){
+      $('.view_code').on('click', function(){
+        $(this).next('.code-toolbar').toggleClass('open');
+      });
+    });
+  </script>
+</head>
+
+<body>
+<div class="wrap" id="codingGiuide">
+  <div class="header">
+    <div><em>BMS 2.0</em> project coding guide</div>
+    <h1><img src="images/logo_header.png" alt="로고"></h1>
+  </div>
+
+  <div class="cont_codGuide guide_container">
+
+
+    <div class="tab">
+      <a href="javascript:void(0);" title="TYPE" class="active">DEFAULT</a>
+      <a href="coding_guide_naming.html" title="NAMING">NAMING</a>
+      <a href="coding_guide_box.html" title="BOX">BOX</a>
+      <a href="coding_guide_button.html" title="BUTTON">BUTTON</a>
+      <a href="coding_guide_form.html" title="FORM">FORM</a>
+      <a href="coding_guide_font.html" title="FONT">FONT</a>
+      <a href="coding_guide_table.html" title="TABLE">TABLE</a>
+      <a href="coding_guide_tab.html" title="TAB">TAB</a>
+      <!--			<a href="coding_guide_scroll.html" title="SCROLL">SCROLL</a>-->
+      <a href="coding_guide_carousel.html" title="CAROUSEL">CAROUSEL</a>
+      <a href="coding_guide_popup.html" title="POPUP">POPUP</a>
+      <a href="coding_guide_etc.html" title="ETC">ETC</a>
+    </div>
+
+    <div class="contents_infor guide-content">
+
+      <h2 class="title">웹 스타일 가이드 정의</h2>
+      <div class="conIn_tip">
+        신규 페이지 생성시 DOCTYPE은 HTML5이며, 파일 인코딩은 <em>UTF-8</em>로 생성한다.<br>
+        본 프로젝트는 <em>PC/Tablet 반응형</em>으로 퍼블진행되었으며 페이지 생성 및 유지보수 진행시 화면 레이아웃은 하단 코드를 참고하여 진행한다.<br>
+        javascript파일은 css 보다 하단에 위치한다.
+      </div>
+
+      <h2 class="title">Sample Guide</h2>
+      <div class="conIn_tip">
+<!--         Layout All (GNB / My LNB) - <a href="bms_layout.html" class="guide-layout-link" target="_blank">bms_layout.html</a><br> -->
+        Sample- loadingbar - <a href="../html/etc/loadingbar.html" class="guide-layout-link" target="_blank">loadingbar.html</a><br>
+        Sample- masonry - <a href="../pub_guide/sample_masonry.html" class="guide-layout-link" target="_blank">sample_masonry.html</a><br>
+        Sample- checking_list1- <a href="sample_checking_list1.html" class="guide-layout-link" target="_blank">sample_checking_list1.html</a><br>
+      </div>
+
+      <h2 class="title">Css Rule</h2>
+      <div class="conIn_tip">
+        Default - common.css (with font) <br>
+        Spacial - lib/customlib.css , lib/jquery-ui.css, lib/swiper.min.css <br>
+      </div>
+
+      <h2 class="title">javascript  정의 - 진행중</h2>
+      <div class="conIn_tip">
+        UI 스크립트는 jquery 3.4.1 파일을 사용<br>
+        화면에 필요한 스크립트는 common.js<br>
+        API 커스텀 스크립트는 lib/customlib.js
+      </div>
+
+      <h2 class="title">주석처리</h2>
+      <div class="conIn_tip">
+        마크업진행시 주석처리 정의 : 주석은 HTML 작업시 해당 section 구분마다 주석처리를 해주며, 수정및 ISSUE발생시 주석처리를 한다. <br>
+        주석 문구의 경우 특별한 정의는 없으며, 주석처리시 해당하는 부분에 <em>시작과 종료를 함께 작성</em> 및 <em>수정및 ISSUE 주석의 경우 날짜 기입을 원칙</em>으로 한다.<br>
+        <span class="fc-color">한 줄 주석 : 수정및 ISSUE 주석의 경우 날짜 기입을 원칙</span><br>
+        <span class="fc-color">여러 줄 주석 : 시작과 종료를 함께 작성 (ex. 시작주석 S: 날짜, 수정내용 / 종료주석 : E: 날짜 수정내용)</span>
+      </div>
+
+      <h2 class="title">작업 환경</h2>
+      <div class="conIn_tip">
+        동일한 산출물을 위해 파일작성은 Webstorm 또는 Visual Studio Code를 사용하고, Tab Size는 2로 통일한다.
+      </div>
+
+
+    </div>
+    <!-- //contents_infor -->
+  </div>
+</div>
+<div class="btn-top-box">
+  <a href="#" title="move to top" role="button" class="btn-top">
+    <span>top</span>
+  </a>
+</div>
+
+</body>
+</html>

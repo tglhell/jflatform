@@ -1,0 +1,805 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0 CODING GUIDE</title>
+
+  <!-- 코딩 가이드용 -->
+  <link rel="stylesheet" href="docs/guide.css">
+  <link rel="stylesheet" href="docs/prism.css">
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <script type="text/javascript" src="docs/prism.js"></script>
+  <script type="text/javascript" src="docs/plugin.js"></script>
+  <!-- //코딩 가이드용 -->
+
+  <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../assets/js/common.js"></script>
+
+  <script>
+    $(function(){
+      $('.view_code').on('click', function(){
+        $(this).next('.code-toolbar').toggleClass('open');
+      });
+    });
+  </script>
+</head>
+
+<body>
+<div class="wrap" id="codingGiuide">
+  <div class="header">
+    <div><em>BMS 2.0</em> project coding guide</div>
+    <h1><img src="images/logo_header.png" alt="로고"></h1>
+  </div>
+
+  <div class="cont_codGuide guide_container">
+
+
+    <div class="tab">
+      <a href="coding_guide_default.html" title="DEFAULT">DEFAULT</a>
+      <a href="coding_guide_naming.html" title="NAMING">NAMING</a>
+      <a href="coding_guide_box.html" title="BOX">BOX</a>
+      <a href="coding_guide_button.html" title="BUTTON">BUTTON</a>
+      <a href="coding_guide_form.html" title="FORM">FORM</a>
+      <a href="coding_guide_font.html" title="FONT">FONT</a>
+      <a href="coding_guide_table.html" title="TABLE">TABLE</a>
+      <a href="coding_guide_tab.html" title="TAB">TAB</a>
+      <!--			<a href="coding_guide_scroll.html" title="SCROLL">SCROLL</a>-->
+      <a href="coding_guide_carousel.html" title="CAROUSEL">CAROUSEL</a>
+      <a href="coding_guide_popup.html" title="POPUP">POPUP</a>
+      <a href="javascript:void(0);" title="ETC" class="active">ETC</a>
+    </div>
+
+    <div class="contents_infor">
+
+      <h2 class="title">ETC</h2>
+      <h3 class="title">&#x25CE; 유의사항</h3>
+
+      <h4 class="btm-border">- 기본 (header없는타입)</h4>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<p class="caution">유의사항 단독사용</p>
+
+<div class="caution">
+	<ul>
+		<li>비밀번호는 8~32자의 영문 대/소문자, 숫자, 특수문자를 조합하여 사용하실 수 있습니다.</li>
+		<li>쉬운 비밀번호나 자주 쓰는 사이트의 비밀번호가 같을 경우, 도용되기 쉬워 주기적으로 변경하여 사용하는 것이 좋습니다.</li>
+	</ul>
+</div>
+
+<p class="noti">현재 프로젝트 담당자가 아닐 경우, 담당자 정보를 수정해주세요.</p>
+<p class="noti center">현재 프로젝트 담당자가 아닐 경우, 담당자 정보를 수정해주세요.</p>
+
+<div class="noti">현재 프로젝트 담당자가 아닐 경우, 담당자 정보를 수정해주세요.</div>
+<div class="noti center">현재 프로젝트 담당자가 아닐 경우, 담당자 정보를 수정해주세요.</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <!--			<div class="conIn_tip">-->
+      <!--				텍스트 일부 컬러 구분은 클래스 fc-color 시리즈 활용-->
+      <!--			</div>-->
+
+
+      <h4 class="btm-border">- p.caution</h4>
+      <p class="caution">유의사항 단독사용</p>
+
+      <h4 class="btm-border">- div.caution</h4>
+      <div class="caution">
+        <ul>
+          <li>비밀번호는 8~32자의 영문 대/소문자, 숫자, 특수문자를 조합하여 사용하실 수 있습니다.</li>
+          <li>쉬운 비밀번호나 자주 쓰는 사이트의 비밀번호가 같을 경우, 도용되기 쉬워 주기적으로 변경하여 사용하는 것이 좋습니다.</li>
+        </ul>
+      </div>
+
+      <h4 class="btm-border">- p.noti / p.noti + .center</h4>
+      <p class="noti">현재 프로젝트 담당자가 아닐 경우, 담당자 정보를 수정해주세요.</p>
+      <p class="noti center">현재 프로젝트 담당자가 아닐 경우, 담당자 정보를 수정해주세요.</p>
+
+      <h4 class="btm-border">- div.noti / div.noti + .center</h4>
+      <div class="noti">현재 프로젝트 담당자가 아닐 경우, 담당자 정보를 수정해주세요.</div>
+      <div class="noti center">현재 프로젝트 담당자가 아닐 경우, 담당자 정보를 수정해주세요.</div>
+
+
+      <!-- pagination -->
+      <h3 class="title">&#x25CE; Pagination</h3>
+      <h4 class="btm-border">- 페이지 </h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="pagination">
+	<a href="#" class="btn-page-first"></a>
+	<a href="#" class="btn-page-prev"></a>
+	<a href="#" class="btn-page-num active">1</a>
+	<a href="#" class="btn-page-num">2</a>
+	<a href="#" class="btn-page-num">3</a>
+	<a href="#" class="btn-page-num">4</a>
+	<a href="#" class="btn-page-num">5</a>
+	<a href="#" class="btn-page-next"></a>
+	<a href="#" class="btn-page-last"></a>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        .pagination<br>.btn-page-prev, .btn-page-next에 클래스 "<strong>disabled</strong>" 추가함.
+      </div>
+
+      <div class="pagination">
+        <a href="#" class="btn-page-first"></a>
+        <a href="#" class="btn-page-prev"></a>
+        <a href="#" class="btn-page-num active">1</a>
+        <a href="#" class="btn-page-num">2</a>
+        <a href="#" class="btn-page-num">3</a>
+        <a href="#" class="btn-page-num">4</a>
+        <a href="#" class="btn-page-num">5</a>
+        <a href="#" class="btn-page-next"></a>
+        <a href="#" class="btn-page-last"></a>
+      </div>
+
+      <h3 class="title">&#x25CE; Breadclumb</h3>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="breadclumb-outer">
+	<span class="breadclumb"><em>자세히보기</em></span>
+	<span class="breadclumb"><em>자세히보기</em></span>
+	<span class="breadclumb regular"><em>자세히보기</em></span>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <div class="conIn_tip">
+        마지막 a태그에 "regular" 클래스명 추가함.
+      </div>
+
+      <h4 class="btm-border">- .breadclumb </h4>
+      <div class="breadclumb-outer">
+        <span class="breadclumb"><em>자세히보기</em></span> <!-- 220527 태그 수정 -->
+        <span class="breadclumb"><em>자세히보기</em></span> <!-- 220527 태그 수정 -->
+        <span class="breadclumb regular"><em>자세히보기</em></span> <!-- 220527 태그 수정 -->
+      </div>
+
+
+      <h3 class="title">&#x25CE; Title Box</h3>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="tit-box">
+  <span class="bookmark"></span>
+  <h1 class="h1-title">title</h1>
+  <p class="cont-text">subtitle</p>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <div class="conIn_tip">
+        필요없는 영역 걷어내서 사용하면 됨.<br>
+        bookmark 아이콘이 있을 경우에만 span.bookmark 추가
+      </div>
+
+      <h4 class="btm-border">- .tit-box </h4>
+      <div class="tit-box">
+        <span class="bookmark"></span>
+        <h1 class="h1-title">title</h1>
+        <p class="cont-text">subtitle</p>
+        <p class="cont-text2">MAY. 2022</p>
+      </div>
+
+      <h3 class="title">&#x25CE; Search Area</h3>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="search-area">
+  <div class="input-outer-box row-type">
+    <div class="input-group-box">
+      <div class="select-box">
+        <p class="selected-value">브랜드 전체</p>
+        <ul class="select-items">
+          <li>option1</li>
+          <li>option2</li>
+          <li>option3</li>
+        </ul>
+      </div>
+      <div class="input-box">
+        <input type="text" class="input-item inp-search" placeholder="검색어를 입력해 주세요.">
+        <button class="btn-reset"></button>
+        <button class="btn-search"><span>search</span></button>
+      </div>
+    </div>
+  </div>
+  <div class="tag-area">
+    <strong class="tag-tit cont-text2">추천 태그</strong>
+    <a href="" class="text-tag">#Product</a>
+    <a href="" class="text-tag">#Calendar</a>
+    <a href="" class="text-tag">#Interior</a>
+    <a href="" class="text-tag">#Keyvisual</a>
+    <a href="" class="text-tag">#Winter</a>
+  </div>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <div class="conIn_tip">
+        .search-area
+      </div>
+
+
+      <div class="search-area">
+        <div class="input-outer-box row-type">
+          <div class="input-group-box">
+            <div class="select-box">
+              <p class="selected-value">브랜드 전체</p>
+              <ul class="select-items">
+                <li>option1</li>
+                <li>option2</li>
+                <li>option3</li>
+              </ul>
+            </div>
+            <div class="input-box">
+              <input type="text" class="input-item inp-search" placeholder="검색어를 입력해 주세요.">
+              <button class="btn-reset"></button>
+              <button class="btn-search"><span>search</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="tag-area">
+          <strong class="tag-tit cont-text2">추천 태그</strong>
+          <a href="" class="text-tag">#Product</a>
+          <a href="" class="text-tag">#Calendar</a>
+          <a href="" class="text-tag">#Interior</a>
+          <a href="" class="text-tag">#Keyvisual</a>
+          <a href="" class="text-tag">#Winter</a>
+        </div>
+      </div>
+
+      <h3 class="title">&#x25CE; Search Complete Area</h3>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="search-complete-area">
+  <p class="cont-tit">'<strong class="fc-color">Mighty</strong>'에 대한 검색 결과입니다.</p>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <div class="conIn_tip">
+        .search-complete-area<br>
+        bold 텍스트의 경우 strong 태그에 담아 색상 클래스 추가.
+      </div>
+      <div class="search-complete-area">
+        <p class="cont-tit">'<strong class="fc-color">Mighty</strong>'에 대한 검색 결과입니다.</p>
+      </div>
+
+      <h3 class="title">&#x25CE; Steps</h3>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<ul class="steps step1">
+	<li><p></p><span>Text</span></li>
+	<li><p></p><span>Text</span></li>
+	<li><p></p><span>Text</span></li>
+</ul>
+
+<ul class="steps step2">
+	<li><p></p><span>Text</span></li>
+	<li><p></p><span>Text</span></li>
+	<li><p></p><span>Text</span></li>
+</ul>
+
+<ul class="steps step3">
+	<li><p></p><span>Text</span></li>
+	<li><p></p><span>Text</span></li>
+	<li><p></p><span>Text</span></li>
+</ul>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <h4 class="btm-border">- .steps / .steps + .step1</h4>
+      <ul class="steps step1">
+        <li><p></p><span>Text</span></li>
+        <li><p></p><span>Text</span></li>
+        <li><p></p><span>Text</span></li>
+      </ul>
+      <h4 class="btm-border">- .steps / .steps + .step2</h4>
+      <ul class="steps step2">
+        <li><p></p><span>Text</span></li>
+        <li><p></p><span>Text</span></li>
+        <li><p></p><span>Text</span></li>
+      </ul>
+      <h4 class="btm-border">- .steps / .steps + .step3</h4>
+      <ul class="steps step3">
+        <li><p></p><span>Text</span></li>
+        <li><p></p><span>Text</span></li>
+        <li><p></p><span>Text</span></li>
+      </ul>
+
+
+      <h3 class="title">&#x25CE; Indicator</h3>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<ul class="indicator">
+  <li class="indicator-prev">
+    <a href="#" title="prev">
+      <span>Prev</span>
+      <strong>Text</strong>
+    </a>
+  </li>
+  <li class="indicator-next">
+    <a href="#" title="next">
+      <span>Next</span>
+      <strong>Text</strong>
+    </a>
+  </li>
+</ul>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <h4 class="btm-border">- .indicator</h4>
+      <ul class="indicator">
+        <li class="indicator-prev">
+          <a href="#" title="prev">
+            <span>Prev</span>
+            <strong>Text</strong>
+          </a>
+        </li>
+        <li class="indicator-next">
+          <a href="#" title="next">
+            <span>Next</span>
+            <strong>Text</strong>
+          </a>
+        </li>
+      </ul>
+
+
+
+      <h3 class="title">&#x25CE; No Data</h3>
+      <h4 class="btm-border">- Nodata </h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="nodata-area">
+  <p class="cont-tit">'<strong class="fc-color">런칭</strong>'에 대한 검색 결과가 '<strong class="fc-color">Image</strong>'에서 <strong class="fc-color">0</strong>건이 검색되었습니다.</p>
+  <p class="cont-text">검색어의 철자가 정확한지 확인해주세요. <br>검색어의 단어 수를 줄이거나 보다 일반적인 검색어로 검색해 입력해보세요.</p>
+  <div class="cta-outer">
+    <button class="btn btn-type2"><span>text</span></button>
+  </div>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        .nodata-area
+      </div>
+
+      <div class="nodata-area">
+        <p class="cont-tit">'<strong class="fc-color">런칭</strong>'에 대한 검색 결과가 '<strong class="fc-color">Image</strong>'에서 <strong class="fc-color">0</strong>건이 검색되었습니다.</p>
+        <p class="cont-text">검색어의 철자가 정확한지 확인해주세요. <br>검색어의 단어 수를 줄이거나 보다 일반적인 검색어로 검색해 입력해보세요.</p>
+      </div>
+      <br><br><br>
+      <div class="nodata-area">
+        <p class="cont-tit">'<strong class="fc-color">런칭</strong>'에 대한 검색 결과가 '<strong class="fc-color">Image</strong>'에서 <strong class="fc-color">0</strong>건이 검색되었습니다.</p>
+        <p class="cont-text">검색어의 철자가 정확한지 확인해주세요. <br>검색어의 단어 수를 줄이거나 보다 일반적인 검색어로 검색해 입력해보세요.</p>
+        <div class="cta-outer">
+          <button class="btn btn-type2"><span>text</span></button>
+        </div>
+      </div>
+
+
+      <h3 class="title">&#x25CE; Complete Area</h3>
+      <h4 class="btm-border">- .complete-area </h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="complete-area">
+	<p class="tit">페이지를 찾을 수 없습니다.</p>
+	<p class="desc">페이지가 존재하지 않거나, 사용할 수 없는 페이지입니다. <br>입력하신 주소가 정확한지 다시 한 번 확인해주세요.</p>
+	<div class="cta-outer">
+		<button class="btn btn-type2 btn-xlarge"><span>text</span></button>
+		<button class="btn btn-xlarge"><span>text</span></button>
+	</div>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        .complete-area <br>
+        .cta-outer은 임의로 추가 삭제 가능함.
+      </div>
+
+      <div class="complete-area">
+        <p class="tit">페이지를 찾을 수 없습니다.</p>
+        <p class="desc">페이지가 존재하지 않거나, 사용할 수 없는 페이지입니다. <br>입력하신 주소가 정확한지 다시 한 번 확인해주세요.</p>
+        <div class="cta-outer">
+          <button class="btn btn-type2 btn-xlarge"><span>text</span></button>
+          <button class="btn btn-xlarge"><span>text</span></button>
+        </div>
+      </div>
+
+      <h4 class="btm-border">- .complete-area.box </h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="complete-area box">
+	<p class="tit">페이지를 찾을 수 없습니다.</p>
+	<p class="desc">페이지가 존재하지 않거나, 사용할 수 없는 페이지입니다. <br>입력하신 주소가 정확한지 다시 한 번 확인해주세요.</p>
+	<div class="cta-outer">
+		<button class="btn"><span>text</span></button>
+	</div>
+</div>
+--></code></pre>
+
+      <div class="conIn_tip">
+        .complete-area.box
+      </div>
+
+      <div class="complete-area box">
+        <p class="tit">페이지를 찾을 수 없습니다.</p>
+        <p class="desc">페이지가 존재하지 않거나, 사용할 수 없는 페이지입니다. <br>입력하신 주소가 정확한지 다시 한 번 확인해주세요.</p>
+        <div class="cta-outer">
+          <button class="btn"><span>text</span></button>
+        </div>
+      </div>
+
+      <h3 class="title">&#x25CE; Form Title Area</h3>
+      <h4 class="btm-border">- .form-title-area </h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="form-title-area">
+	<p class="tit">문의 내용</p>
+	<label><span class="required">*</span> 필수 입력항목</label>
+</div>
+
+<div class="form-title-area">
+  <p class="tit">문의 내용</p>
+  <button class="btn-txt btn-icon">Text</button>
+</div>
+--></code></pre>
+
+      <div class="conIn_tip">
+        .form-title-area
+      </div>
+
+      <div class="form-title-area">
+        <p class="tit">문의 내용</p>
+        <label><span class="required">*</span> 필수 입력항목</label>
+      </div>
+
+      <div class="form-title-area">
+        <p class="tit">문의 내용</p>
+        <button class="btn-txt btn-icon">Text</button>
+      </div>
+
+      <br><br>
+
+      <h3 class="title">&#x25CE; Thumbnail List</h3>
+      <h4 class="btm-border">- .thumbnail-list </h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="thumbnail-list">
+  <ul class="thumbnail-list-inner">
+    <li class="thumbnail-list-li">
+      <div class="thumbnail-list-imgBox">
+        <img src="https://via.placeholder.com/100.jpg" alt=""/>
+      </div>
+      <div class="thumbnail-list-txtBox">
+        <div class="thumbnail-list-breadclumb">
+          <span>Brand Guidelines</span>
+          <span>Brand Guidelines</span>
+          <span>Brand Guidelines</span>
+        </div>
+        <p class="thumbnail-list-txt">
+          Introduction
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
+--></code></pre>
+
+      <div class="conIn_tip">
+        .thumbnail-list-li를 추가하여 리스트 추가
+      </div>
+
+      <div class="thumbnail-list">
+        <ul class="thumbnail-list-inner">
+          <li class="thumbnail-list-li">
+            <div class="thumbnail-list-imgBox">
+              <img src="https://via.placeholder.com/100.jpg" alt=""/>
+            </div>
+            <div class="thumbnail-list-txtBox">
+              <div class="thumbnail-list-breadclumb">
+                <span>Brand Guidelines</span>
+                <span>Brand Guidelines</span>
+                <span>Brand Guidelines</span>
+              </div>
+              <p class="thumbnail-list-txt">
+                Introduction
+              </p>
+            </div>
+          </li>
+          <li class="thumbnail-list-li">
+            <div class="thumbnail-list-imgBox">
+              <img src="https://via.placeholder.com/100.jpg" alt=""/>
+            </div>
+            <div class="thumbnail-list-txtBox">
+              <div class="thumbnail-list-breadclumb">
+                <span>Brand Guidelines</span>
+                <span>Brand Guidelines</span>
+                <span>Brand Guidelines</span>
+              </div>
+              <p class="thumbnail-list-txt">
+                Introduction
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <br><br>
+
+      <h3 class="title">&#x25CE; Thumbnail Gallery</h3>
+      <h4 class="btm-border">- .thumbnail-gallery </h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="thumbnail-gallery column2">
+  <div class="gallery-box">
+    <img src="https://via.placeholder.com/500x400.jpg" alt=""/>
+  </div>
+  <div class="gallery-box">
+    <img src="https://via.placeholder.com/500x400.jpg" alt=""/>
+  </div>
+  <div class="gallery-box">
+    <img src="https://via.placeholder.com/500x400.jpg" alt=""/>
+  </div>
+  <div class="gallery-box">
+    <img src="https://via.placeholder.com/500x400.jpg" alt=""/>
+  </div>
+</div>
+--></code></pre>
+
+      <div class="conIn_tip">
+        .thumbnail-gallery.column2
+      </div>
+
+      <div class="thumbnail-gallery column2">
+        <div class="gallery-box">
+          <img src="https://via.placeholder.com/500x400.jpg" alt=""/>
+        </div>
+        <div class="gallery-box">
+          <img src="https://via.placeholder.com/500x400.jpg" alt=""/>
+        </div>
+        <div class="gallery-box">
+          <img src="https://via.placeholder.com/500x400.jpg" alt=""/>
+        </div>
+      </div>
+
+      <div class="conIn_tip">
+        .thumbnail-gallery.column3
+      </div>
+
+      <div class="thumbnail-gallery column3">
+        <div class="gallery-box">
+          <img src="https://via.placeholder.com/500x400.jpg" alt=""/>
+        </div>
+        <div class="gallery-box">
+          <img src="https://via.placeholder.com/500x400.jpg" alt=""/>
+        </div>
+        <div class="gallery-box">
+          <img src="https://via.placeholder.com/500x400.jpg" alt=""/>
+        </div>
+        <div class="gallery-box">
+          <img src="https://via.placeholder.com/500x400.jpg" alt=""/>
+        </div>
+      </div>
+
+      <div class="conIn_tip">
+        .thumbnail-gallery.column4
+      </div>
+
+      <div class="thumbnail-gallery column4">
+        <div class="gallery-box">
+          <img src="https://via.placeholder.com/500x400.jpg" alt=""/>
+        </div>
+        <div class="gallery-box">
+          <img src="https://via.placeholder.com/500x400.jpg" alt=""/>
+        </div>
+        <div class="gallery-box">
+          <img src="https://via.placeholder.com/500x400.jpg" alt=""/>
+        </div>
+        <div class="gallery-box">
+          <img src="https://via.placeholder.com/500x400.jpg" alt=""/>
+        </div>
+        <div class="gallery-box">
+          <img src="https://via.placeholder.com/500x400.jpg" alt=""/>
+        </div>
+        <div class="gallery-box">
+          <img src="https://via.placeholder.com/500x400.jpg" alt=""/>
+        </div>
+      </div>
+
+      <br><br>
+
+      <h3 class="title">&#x25CE; No Image</h3>
+      <h4 class="btm-border">- .no-image </h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div style="width: 488px; height: 252px;">
+  <div class="no-image-area"></div>
+</div>
+<br><br>
+
+<ul>
+  <li style="width: 100px; height: 100px;">
+    <div class="no-image-area type-small"></div>
+  </li>
+</ul>
+--></code></pre>
+
+      <div class="conIn_tip">
+        .no-image-area <br>
+        썸네일이 작을 경우 "type-small" 클래스 추가 <br>
+        부모 영역에 css로 width, height 값 지정
+      </div>
+
+      <div style="width: 488px; height: 252px;">
+        <div class="no-image-area"></div>
+      </div>
+      <br><br>
+
+      <ul>
+        <li style="width: 100px; height: 100px;">
+          <div class="no-image-area type-small"></div>
+        </li>
+      </ul>
+
+      <br><br>
+      <h4 class="btm-border">- .no-contents </h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div style="width: 488px; height: 252px;">
+        <div class="no-contents-area"></div>
+      </div>
+      <br><br>
+
+      <ul>
+        <li style="width: 100px; height: 100px;">
+          <div class="no-contents-area type-small"></div>
+        </li>
+      </ul>
+--></code></pre>
+
+      <div class="conIn_tip">
+        .no-contents-area
+      </div>
+
+      <div style="width: 488px; height: 252px;">
+        <div class="no-contents-area"></div>
+      </div>
+      <br><br>
+
+      <ul>
+        <li style="width: 100px; height: 100px;">
+          <div class="no-contents-area type-small"></div>
+        </li>
+      </ul>
+
+      <br><br>
+      <h4 class="btm-border">- .sound-area </h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div style="width: 488px; height: 252px;">
+        <div class="sound-area"></div>
+      </div>
+      <br><br>
+
+      <ul>
+        <li style="width: 100px; height: 100px;">
+          <div class="sound-area type-small"></div>
+        </li>
+      </ul>
+--></code></pre>
+
+      <div class="conIn_tip">
+        .sound-area-area
+      </div>
+
+      <div style="width: 488px; height: 252px;">
+        <div class="sound-area"></div>
+      </div>
+      <br><br>
+
+      <ul>
+        <li style="width: 100px; height: 100px;">
+          <div class="sound-area type-small"></div>
+        </li>
+      </ul>
+
+      <br><br>
+
+      <h3 class="title">&#x25CE; Info Table</h3>
+      <h4 class="btm-border">- .info-table </h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="info-table">
+  <table>
+    <tr>
+      <th>title</th>
+      <td>text</td>
+    </tr>
+  </table>
+</div>
+--></code></pre>
+
+      <div class="conIn_tip">
+        .info-table
+      </div>
+
+      <div class="info-table">
+        <table>
+          <tr>
+            <th>title</th>
+            <td>text</td>
+          </tr>
+          <tr>
+            <th>title</th>
+            <td>text</td>
+          </tr>
+          <tr>
+            <th>title</th>
+            <td>text</td>
+          </tr>
+          <tr>
+            <th>title</th>
+            <td>text</td>
+          </tr>
+          <tr>
+            <th>title</th>
+            <td>text</td>
+          </tr>
+        </table>
+      </div>
+
+      <br><br>
+
+      <h3 class="title">&#x25CE; Key Visual</h3>
+      <h4 class="btm-border">- .key-visual-box </h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="key-visual-box img-type">
+  <img src="https://via.placeholder.com/1760x1760.jpg" >
+</div>
+
+<div class="key-visual-box video-type">
+  <img src="https://via.placeholder.com/1760x1760.jpg" >
+</div>
+--></code></pre>
+
+      <div class="conIn_tip">
+        .key-visual-box.img-type
+      </div>
+
+      <div class="key-visual-box img-type">
+        <img src="https://via.placeholder.com/1760x1760.jpg" >
+      </div>
+
+      <div class="conIn_tip">
+        .key-visual-box.video-type
+      </div>
+      <div class="key-visual-box video-type">
+        <img src="https://via.placeholder.com/1760x1760.jpg" >
+      </div>
+
+      <!-- //contents_infor -->
+    </div>
+  </div>
+  <div class="btn-top-box">
+    <a href="#" title="move to top" role="button" class="btn-top">
+      <span>top</span>
+    </a>
+  </div>
+</div>
+</body>
+</html>

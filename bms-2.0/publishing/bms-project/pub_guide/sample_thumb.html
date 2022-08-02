@@ -1,0 +1,654 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>HMJ 온라인 판매 사이트 구축</title>
+
+	<link rel="stylesheet" href="../assets/css/lib/swiper.min.css">
+	<link rel="stylesheet" href="../assets/css/lib/customlib.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+	<style>
+		.test-slider-outer {
+			position: relative;
+			margin: 40px 0;
+		}
+		.test-slider {
+			height: 2px;
+			background-color: #e5e5e5;
+		}
+		.test-slider .ui-slider-handle {
+			-webkit-transition: box-shadow .2s ease-out;
+			transition: box-shadow .2s ease-out;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-indeX: 5;
+			width: 30px;
+			height: 30px;
+			margin: -14px 0 0 -14px;
+			border-radius: 50%;
+			box-shadow: 0 0 1px 2px transparent;
+			background-color: #00aad2;
+		}
+		.test-slider-outer .test-slider .ui-slider-range-min {
+			height: 2px;
+			background-color: #00aad2;
+		}
+	</style>
+
+	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/swiper.min.js"></script>
+	<script type="text/javascript" src="../assets/js/common.js"></script>
+</head>
+
+<body>
+
+<div class="bms-wrap"><!-- mo header가 2단이고, 풋터가 있는 타입 : 기본 / mo header가 1단이고, 풋터가 없는 타입: type2 -->
+	<div class="skip-nav">
+		<a href="#hmjContainer"><span>컨텐츠 바로가기</span></a>
+	</div>
+
+	<!-- header -->
+	<div class="hmj-header">
+		<!-- header -->
+		<div class="header-outer">
+			<div class="header-cont">
+				<h1><a href="bms_layout.html"><img src="../../assets/images/common/ico_header_logo.svg" alt="Hyundai Logo"></a></h1>
+
+				<div class="gnb-menu-outer">
+					<div class="gnb-menu-box blur">
+						<!-- 로그인 전 -->
+						<!-- <div class="account-box">
+							<span class="btn-account">Account</span>
+							<a href="#" class="btn-sign-in">Sign in</a>
+						</div> -->
+						<!-- // 로그인 전 -->
+						<!-- 로그인 후 -->
+						<div class="account-box login">
+							<span class="btn-account">Account</span>
+							<a href="#" class="btn-sign-link">
+								<span class="btn-sign-in">木村 拓哉 様</span>
+								<span class="btn-alarm">
+									<img src="../../assets/images/common/ico_alarm.svg" alt="alarm">
+									<span class="num"><span>2</span></span>
+								</span>
+							</a>
+						</div>
+						<!-- // 로그인 후 -->
+						<ul class="gnb-menu-list ir-count inner-scroll-y">
+							<li class="ir-item">
+								<a href="#">IONIQ 5</a>
+							</li>
+							<li class="ir-item">
+								<a href="#">NEXO</a>
+							</li>
+							<li class="ir-item">
+								<a href="#">SHOW ROOM</a>
+							</li>
+							<li class="ir-item">
+								<button class="btn-depth-switch inner-depth"><span>PURCHASE</span></button>
+								<div class="menu-inner-depth">
+									<button class="btn-depth-prev"><span>Back</span></button>
+									<p class="inner-depth-tit">PURCHASE</p>
+									<ul class="ir-count inner-scroll-y">
+										<li class="ir-item">
+											<button class="btn-depth-switch toggle-menu"><span>購入ガイド</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">オンライン購入のご案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">今月の購入特典</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">政府補助金</a>
+												</li>
+											</ul>
+										</li>
+										<li class="ir-item">
+											<button class="btn-depth-switch toggle-menu"><span>見積/試乗</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">オンライン購入のご案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">今月の購入特典</a>
+												</li>
+											</ul>
+										</li>
+										<li class="ir-item">
+											<a href="#">購入相談申込</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">仕様百科</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">ダウンロード</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">My Referralプログラム</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">ブランド拠点</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="ir-item">
+								<button class="btn-depth-switch inner-depth"><span>SERVICE</span></button>
+								<div class="menu-inner-depth">
+									<button class="btn-depth-prev"><span>Back</span></button>
+									<p class="inner-depth-tit">SERVICE</p>
+									<ul class="ir-count inner-scroll-y">
+										<li class="ir-item">
+											<a href="#">Hyundaiサービス</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">充電サービス</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">Hyundaiロードサイド・アシスタンス</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">整備予約</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">リコール情報</a>
+										</li>
+										<li class="ir-item">
+											<button class="btn-depth-switch toggle-menu"><span>BLUELINK</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">ご利用案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+											</ul>
+										</li>
+										<li class="ir-item">
+											<button class="btn-depth-switch toggle-menu"><span>ビルトインカメラ</span></button>
+											<ul class="toggle-cont">
+												<li class="ir-item">
+													<a href="#">ご利用案内</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+												<li class="ir-item">
+													<a href="#">サービス紹介</a>
+												</li>
+											</ul>
+										</li>
+										<li class="ir-item">
+											<a href="#">ナビ/カメラアップデート</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">提携サービス</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">アプリ設置</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="ir-item">
+								<button class="btn-depth-switch inner-depth"><span>BRAND</span></button>
+								<div class="menu-inner-depth">
+									<button class="btn-depth-prev"><span>Back</span></button>
+									<p class="inner-depth-tit">BRAND</p>
+									<ul class="ir-count inner-scroll-y">
+										<li class="ir-item">
+											<a href="#">購入ガイド</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">見積/試乗</a>
+										</li>
+										<li class="ir-item">
+											<a href="#">購入相談申込</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="ir-item">
+								<a href="#">MOCEAN</a>
+							</li>
+							<li class="ir-item">
+								<a href="#">SHOP</a>
+							</li>
+						</ul>
+						<div class="btn-box">
+							<button class="btn-sign-out"><span>Sign out</span></button>
+							<button class="btn-setting mo-only"><span>Settings</span></button>
+						</div>
+						<button class="btn-menu-close"><span>close</span></button>
+					</div>
+				</div>
+
+				<div class="gnb-mid-menu">
+					<ul class="mid-list">
+						<li><a href="#"><span>IONIQ 5</span></a></li>
+						<li><a href="#"><span>NEXO</span></a></li>
+						<li><a href="#"><span>SHOW ROOM</span></a></li>
+					</ul>
+				</div>
+
+				<div class="gnb-right-menu">
+					<ul class="gnb-right-list">
+						<li>
+							<button class="btn-cart pc-only"><span><img src="../../assets/images/common/ico_cart.svg" alt="cart"></span></button>
+						</li>
+						<li>
+							<button class="btn-search"><span><img src="../../assets/images/common/ico_search.svg" alt="search"></span></button>
+							<div class="gnb-search-dim">
+								<div class="search-outer-box">
+									<div class="search-cont">
+										<div class="input-outer-box">
+											<div class="input-box">
+												<input type="text" class="input-item" placeholder="検索キーワードを入力してください。">
+												<button class="btn-reset"></button>
+											</div>
+										</div>
+										<div class="btn-box">
+											<button class="btn-search-inner">검색</button>
+											<button class="btn-search-close">검색 종료</button>
+										</div>
+									</div>
+									<div class="keyword-box">
+										<p class="top-text">最近検索ワード</p>
+										<!-- 키워드가 없을 경우 -->
+										<!-- <p class="top-text">最近検索ワードがありません。</p> -->
+										<!-- // 키워드가 없을 경우 -->
+										<ul>
+											<li>モデル <button class="btn-del">삭제</button></li>
+											<li>IONIQ 5 <button class="btn-del">삭제</button></li>
+											<li>NEXO <button class="btn-del">삭제</button></li>
+											<li>恵沢 <button class="btn-del">삭제</button></li>
+											<li>イベント <button class="btn-del"></button></li>
+										</ul>
+										<button class="btn-keyword-del">すべて削除</button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button class="btn-menu"><span><img src="../../assets/images/common/ico_menu.svg" alt="menu"></span></button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="sub-cont">
+			<div class="history">
+				<a href="#">HOME</a>
+				<a href="#">MY</a>
+				<a href="#">クーポン</a>
+				<span class="page-title">マイリファラルコード </span>
+			</div>
+			<button type="button" class="back-page">Back page</button>
+		</div>
+		<!-- //header -->
+	</div>
+	<!--//header -->
+
+	<!-- container -->
+	<div id="hmjContainer" class="hmj-container"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+		<div class="hmj-content">
+			<div class="cont-outer fullcase">
+				<div class="top-visual-sample align-c">
+					<picture>
+						<source srcset="../assets/images/main/@img_top_bg_sample.png" media="(min-width: 1120px)">
+						<source srcset="../assets/images/main/@img_top_bg_sample_mo.png" media="(max-width: 1119px)">
+						<img src="../assets/images/main/@img_top_bg_sample.png" alt="top image">
+					</picture>
+				</div>
+				<div class="swiper-outer-box main-item-swiper">
+					<div class="swiper-container car-item-outer">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide car-cont">
+								<div class="car-space-box">
+									<div class="car-item-text">
+										<strong class="item-tit">IONIQ 5</strong>
+										<p class="item-desc">A new generation<br>of cabin styling.</p>
+									</div>
+									<div class="car-item">
+										<img src="../assets/images/main/@img_main_sample_new.png" class="Car Image">
+									</div>
+									<div class="btn-box">
+										<span class="btn-desc">Discover the IONIQ 5</span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide car-cont">
+								<div class="car-space-box">
+									<div class="car-item-text">
+										<strong class="item-tit">NEXO</strong>
+										<p class="item-desc">A new generation<br>of cabin styling.</p>
+									</div>
+									<div class="car-item">
+										<img src="../assets/images/main/@img_main_sample_new2.png" class="Car Image">
+									</div>
+									<div class="btn-box">
+										<span class="btn-desc">Discover the NEXO</span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide car-cont">
+								<div class="car-space-box">
+									<div class="car-item-text">
+										<strong class="item-tit">IONIQ 6</strong>
+										<p class="item-desc">A new generation<br>of cabin styling.</p>
+									</div>
+									<div class="car-item">
+										<img src="../assets/images/main/@img_main_sample_new.png" class="Car Image">
+									</div>
+									<div class="btn-box">
+										<span class="btn-desc">Discover the IONIQ 6</span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide car-cont">
+								<div class="car-space-box">
+									<div class="car-item-text">
+										<strong class="item-tit">IONIQ 7</strong>
+										<p class="item-desc">A new generation<br>of cabin styling.</p>
+									</div>
+									<div class="car-item">
+										<img src="../assets/images/main/@img_main_sample_new.png" class="Car Image">
+									</div>
+									<div class="btn-box">
+										<span class="btn-desc">Discover the IONIQ 7</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<script>
+					$(function(){
+						const iNum = 14;
+						$('.car-item-outer').on('mouseenter mouseleave', '.car-cont', function (e) {
+							const _this = $(this);
+							if ($(window).width() >= pc) {
+								carItemWid = _this.find('.car-item').width();
+							} else {
+								carItemWid = _this.find('.car-item').width() + irNum[4];
+							}
+							carItemWidRes = secVal[0] * carItemWid / $(window).width();
+							if ($(window).width() > tbl) {
+								if (e.type == 'mouseenter') {
+									if (!$(this).is(':animated')) {
+										$(this).stop().animate({'overflow':'visible'}, secVal[4]);
+										setObj(function () {
+											for (i = irNum[0]; i < iNum; i++) {
+												$(function(i){
+													setObj(function(){
+														_this.find('.car-item img').css('transform', 'translate3d(-' + (carItemWidRes * i) + 'vw, 0, 0)');
+													}, twoDig[3] * i);
+												}(i));
+											}
+										}, secVal[1]);
+										$('.car-cont').removeClass('focus-in focus');
+										$(this).addClass('focus-in').siblings().addClass('focus');
+									}
+								} else {
+									setObj(function () {
+										for (i = iNum; i > 0 ; i--) {
+											$(function(i){
+												setObj(function(){
+													if (!_this.hasClass('focus focus-in')) {
+														_this.find('img').css('transform', 'translate3d(-' + (carItemWidRes * (iNum - i)) + 'vw, 0, 0)');
+													}
+												}, twoDig[1] * i);
+											}(i));
+										}
+									}, secVal[4]);
+									$('.car-cont').removeClass('focus-in focus');
+								}
+							}
+						});
+					});
+				</script>
+			</div>
+		</div>
+	</div>
+	<!--//container -->
+
+	<!-- footer -->
+	<div class="hmj-footer">
+		<div class="footer-top">
+			<ul>
+				<li>
+					<ul>
+						<li><a href="#">SHOW ROOM</a></li>
+						<li><a href="#">IONIQ 5</a></li>
+						<li><a href="#">NEXO</a></li>
+						<li><a href="#">ブランド拠点</a></li>
+						<li><a href="#">MOCEAN</a></li>
+					</ul>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Purchase</button>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">オンライン購入のご案内</a></li>
+								<li><a href="#">今月の購入特典</a></li>
+								<li><a href="#">政府補助金</a></li>
+								<li><a href="#">オンライン契約</a></li>
+								<li><a href="#">見積シミュレーション</a></li>
+								<li><a href="#">試乗</a></li>
+								<li><a href="#">購入相談申込</a></li>
+								<li><a href="#">仕様百科</a></li>
+								<li><a href="#">カタログダウンロード</a></li>
+								<li><a href="#">価格表ダウンロード</a></li>
+								<li><a href="#">Referral code</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Service</button>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">サービスネットワーク</a></li>
+								<li><a href="#">充電スポット</a></li>
+								<li><a href="#">RSAサービス</a></li>
+								<li><a href="#">整備予約</a></li>
+								<li><a href="#">リコール情報</a></li>
+								<li><a href="#">BLUELINK</a></li>
+								<li><a href="#">ビルトインカメラ</a></li>
+								<li><a href="#">ナビ/カメラアップデート</a></li>
+								<li><a href="#">提携サービス</a></li>
+								<li><a href="#">アプリ設置</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="mo-toggle">
+					<div class="item">
+						<button class="tit-btn">Brand Story</button>
+						<div class="toggle-outer-cont">
+							<ul class="cont">
+								<li><a href="#">IONIQ 5</a></li>
+								<li><a href="#">IONIQ 5 Teasing</a></li>
+								<li><a href="#">Mini 45EV</a></li>
+								<li><a href="#">IONIQ</a></li>
+								<li><a href="#">Hyundai X BTS</a></li>
+								<li><a href="#">#Thisisus</a></li>
+								<li><a href="#">Hyundai X BBC</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">SHOP</a></li>
+						<li><a href="#">イベント</a></li>
+						<li><a href="#">お知らせ</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">1:1お問合せ</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<div class="left-logo"><img src="../../assets/images/common/ico_footer_logo.svg" alt="Hyundai Logo"></div>
+			<div class="center-text">
+				<ul>
+					<li><a href="#">プライバシーポリシー</a></li>
+					<li><a href="#">利用規約</a></li>
+					<li><a href="#">Cookieポリシー </a></li>
+					<li class="lang-jp"><a href="#"><span class="ico"><img src="../../assets/images/common/ico_country_jp.png" alt="japan"></span>日本語</a></li>
+				</ul>
+				<p class="copyright">COPYRIGHT &#x24D2; HYUNDAI. ALL RIGHTS RESERVED.</p>
+			</div>
+			<div class="right-sns">
+				<ul>
+					<li><a href="#"><img src="../../assets/images/common/ico_youtube.svg" alt="youtube"></a></li>
+					<li><a href="#"><img src="../../assets/images/common/ico_twitter.svg" alt="twitter"></a></li>
+					<li><a href="#"><img src="../../assets/images/common/ico_instagram.svg" alt="instagram"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--//footer -->
+
+	<div class="btn-top-box">
+		<div class="side-menu-wrap">
+			<div class="inner-floating-box">
+				<div class="img-banner"><a href="#"><img src="../assets/images/main/@img_floating_banner.jpg" alt="상단 배너"></a></div>
+				<ul>
+					<li><span><img src="../assets/images/main/ico_floating_01.svg" alt="icon01"></span><a href="#">見積シミュレーション</a></li>
+					<li><span><img src="../assets/images/main/ico_floating_01.svg" alt="icon01"></span><a href="#">購入ガイド</a></li>
+					<li><span><img src="../assets/images/main/ico_floating_01.svg" alt="icon01"></span><a href="#">仕様百科</a></li>
+					<li><span><img src="../assets/images/main/ico_floating_01.svg" alt="icon01"></span><a href="#">試乗予約</a></li>
+					<li><span><img src="../assets/images/main/ico_floating_01.svg" alt="icon01"></span><a href="#">イベント</a></li>
+				</ul>
+			</div>
+		</div>
+		<button title="active side menu" role="button" class="btn-side-menu">
+			<span>Side</span>
+		</button>
+		<button title="move to top" role="button" class="btn-top">
+			<span>top</span>
+		</button>
+	</div>
+</div>
+
+<script>
+	$(function () {
+		if ($('.main-item-swiper').length == 1) {
+			let menuTitArr = [];
+			let swpOpt = {},
+			slideLength = $('.main-item-swiper .swiper-slide').length;
+			const _this = $(this);
+			const iNum = 14;
+			carItemWid = _this.find('.car-item').width();
+			carItemWidRes = secVal[0] * carItemWid / $(window).width();
+			for (let i = 0; i < slideLength; i++) {
+				menuItem = $('.main-item-swiper .swiper-slide').eq(i).find('.item-tit').text();
+				menuTitArr.push(menuItem);
+			}
+			if (slideLength == 1) {
+				swpOpt = {
+					allowSlidePrev: false,
+					allowSlideNext: false,
+					simulateTouch: false
+				}
+				$('.main-item-swiper [class*="swiper-button"]').hide();
+			} else {
+				swpOpt = {
+					navigation: {
+						nextEl: '.main-item-swiper .swiper-button-next',
+						prevEl: '.main-item-swiper .swiper-button-prev',
+					},
+					pagination: {
+						el: '.main-item-swiper .swiper-pagination',
+						clickable: true,
+						renderBullet: function (index, className) {
+							return '<span class="' + className + '">' + (menuTitArr[index]) + '</span>';
+						},
+					},
+					// slidesPerView: 'auto',
+					// centeredSlides: true,
+					simulateTouch: false,
+					speed: 500,
+					loop: true,
+					slidesPerView: 'auto',
+					spaceBetween: 0,
+					observer: true,
+					observeParents: true,
+					on: {
+						slideChange: function () {
+							if ($(window).width() <= tbl) {
+								if ($('.main-item-swiper .car-cont').hasClass('swiper-slide-active')) {
+									offIr = setTimeout(function () {
+										for (i = iNum; i > 0 ; i--) {
+											$(function(i){
+												setTimeout(function(){
+													$('.car-cont:not(.swiper-slide-active)').find('img').css('transform', 'translate3d(-' + (carItemWidRes * (iNum - i)) + 'vw, 0, 0)');
+												}, twoDig[1] * i);
+											}(i));
+										}
+										$('.car-cont').removeClass('focus-in');
+									}, secVal[0]);
+									onIr = setTimeout(function () {
+										clearTimeout(onIr);
+										clearTimeout(offIr);
+										for (i = irNum[0]; i < iNum; i++) {
+											$(function(i){
+												testT = setTimeout(function(){
+													$('.swiper-slide-active').find('.car-item img').css('transform', 'translate3d(-' + (carItemWidRes * i) + 'vw, 0, 0)');
+												}, twoDig[3] * i);
+											}(i));
+										}
+										$('.swiper-slide-active').addClass('focus-in');
+									}, secVal[1]);
+								}
+							}
+						}
+					}
+				}
+			}
+			let sampleSwp = new Swiper('.main-item-swiper .swiper-container', swpOpt);
+
+			// $('[class*="swiper-button"],').on('click touchend', function () {
+			// 	swpArrowText();
+			// });
+			
+			// function swpArrowText () {
+			// 	const swpItemPrevTit = $('.main-item-swiper .swiper-slide-active').prev().find('.item-tit').text();
+			// 	const swpItemNextTit = $('.main-item-swiper .swiper-slide-next').next().find('.item-tit').text();
+			// 	$('.main-item-swiper .swiper-button-prev').attr('data-title', swpItemPrevTit);
+			// 	$('.main-item-swiper .swiper-button-next').attr('data-title', swpItemNextTit);
+			// }
+			// swpArrowText();
+		}
+	});
+</script>
+
+</body>
+
+</html>

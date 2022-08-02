@@ -1,0 +1,1685 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0 CODING GUIDE</title>
+
+  <!-- 코딩 가이드용 -->
+  <link rel="stylesheet" href="docs/guide.css">
+  <link rel="stylesheet" href="docs/prism.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <script type="text/javascript" src="docs/prism.js"></script>
+  <script type="text/javascript" src="docs/plugin.js"></script>
+  <!-- //코딩 가이드용 -->
+
+  <link rel="stylesheet" href="../assets/css/lib/jquery-ui.css">
+  <link rel="stylesheet" href="../assets/css/lib/customlib.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+
+  <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/customlib.js"></script>
+  <script type="text/javascript" src="../assets/js/common.js"></script>
+  <script>
+    $(function(){
+      $('.view_code').on('click', function(){
+        $(this).next('.code-toolbar').toggleClass('open');
+      });
+    });
+  </script>
+</head>
+
+<body>
+<div class="wrap bms-wrap" id="codingGiuide">
+  <div class="header">
+    <div><em>BMS 2.0</em> project coding guide</div>
+    <h1><img src="images/logo_header.png" alt="로고"></h1>
+  </div>
+
+  <div class="cont_codGuide guide_container">
+
+
+    <div class="tab">
+      <a href="coding_guide_default.html" title="DEFAULT">DEFAULT</a>
+      <a href="coding_guide_naming.html" title="NAMING">NAMING</a>
+      <a href="coding_guide_box.html" title="BOX">BOX</a>
+      <a href="coding_guide_button.html" title="BUTTON">BUTTON</a>
+      <a href="javascript:void(0);" title="FORM" class="active">FORM</a>
+      <a href="coding_guide_font.html" title="FONT">FONT</a>
+      <a href="coding_guide_table.html" title="TABLE">TABLE</a>
+      <a href="coding_guide_tab.html" title="TAB">TAB</a>
+      <!--			<a href="coding_guide_scroll.html" title="SCROLL">SCROLL</a>-->
+      <a href="coding_guide_carousel.html" title="CAROUSEL">CAROUSEL</a>
+      <a href="coding_guide_popup.html" title="POPUP">POPUP</a>
+      <a href="coding_guide_etc.html" title="ETC">ETC</a>
+    </div>
+
+    <div class="contents_infor">
+
+      <h2 class="title">FORM</h2>
+
+      <!-- form -->
+
+      <!-- input 텍스트 타입 -->
+      <h3 class="title">&#x25CE; INPUT</h3>
+      <h4 class="btm-border">- 텍스트 타입</h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="input-outer-box short-type">
+	<label for="inpTxt01">이름 <span class="required">*</span></label>
+	<div class="input-box">
+		<input type="text" id="inpTxt01" class="input-item" placeholder="이름을 입력해 주세요.">
+		<button class="btn-reset"></button>
+	</div>
+</div>
+
+<div class="input-outer-box short-type input-group-box">
+	<label for="inpTxt01">이름 <span class="required">*</span></label>
+	<div class="input-box">
+		<input type="text" id="inpTxt01" class="input-item" placeholder="이름을 입력해 주세요.">
+		<button class="btn-reset"></button>
+	</div>
+	<button class="btn btn-middle btn-type2"><span>text</span></button>
+</div>
+
+<div class="direct-input">
+  <div class="input-outer-box short-type check-direct">
+    <div class="input-box">
+      <label class="chk"><input type="checkbox"><span>직접입력</span></label>
+    </div>
+  </div>
+  <div class="input-outer-box short-type">
+    <label for="joinStaffName">이름 <span class="required">*</span></label>
+    <div class="input-box">
+      <input type="text" id="joinStaffName" class="input-item" placeholder="정조영" disabled>
+      <button class="btn-reset"></button>
+    </div>
+    <p class="error-msg coltype">error text</p>
+  </div>
+  <div class="input-outer-box short-type">
+    <label for="joinStaffEmail02">이메일 <span class="required">*</span></label>
+    <div class="input-box">
+      <input type="text" id="joinStaffEmail02" class="input-item" placeholder="jochung@hyundai.com" disabled>
+      <button class="btn-reset"></button>
+    </div>
+    <p class="error-msg coltype">error text</p>
+  </div>
+  <div class="input-outer-box short-type">
+    <label>법인/사업장 <span class="required">*</span></label>
+    <div class="select-box disabled">
+      <p class="selected-value">현대자동차</p>
+      <ul class="select-items">
+        <li>option1</li>
+        <li>option2</li>
+        <li>option3</li>
+      </ul>
+    </div>
+    <p class="error-msg coltype">error text</p>
+  </div>
+</div>
+
+<div class="input-outer-box">
+	<label for="inpTxt01">제목 <span class="required">*</span></label>
+	<div class="input-box">
+		<input type="text" id="inpTxt01" class="input-item" placeholder="제목을 입력해 주세요.">
+		<button class="btn-reset"></button>
+	</div>
+</div>
+
+<div class="input-outer-box">
+	<label for="inpTxt01">제목 <span class="required">*</span></label>
+	<div class="select-box">
+		<p class="selected-value">Text</p>
+		<ul class="select-items">
+			<li>option1</li>
+			<li>option2</li>
+			<li>option3</li>
+		</ul>
+	</div>
+</div>
+
+<div class="input-outer-box input-group-box">
+	<label for="inpTxt01">제목 <span class="required">*</span></label>
+	<div class="input-box">
+		<input type="text" id="inpTxt01" class="input-item" placeholder="제목을 입력해 주세요.">
+		<button class="btn-reset"></button>
+	</div>
+	<div class="input-box">
+		<input type="text" id="inpTxt01" class="input-item" placeholder="제목을 입력해 주세요.">
+		<button class="btn-reset"></button>
+	</div>
+</div>
+
+<div class="input-outer-box input-group-box">
+	<label for="inpTxt01">제목 <span class="required">*</span></label>
+	<div class="select-box">
+		<p class="selected-value">Text</p>
+		<ul class="select-items">
+			<li>option1</li>
+			<li>option2</li>
+			<li>option3</li>
+		</ul>
+	</div>
+	<div class="input-box">
+		<input type="text" id="inpTxt01" class="input-item" placeholder="제목을 입력해 주세요.">
+		<button class="btn-reset"></button>
+	</div>
+</div>
+
+<div class="input-outer-box">
+	<label for="inpTxt01">제목 <span class="required">*</span></label>
+	<div class="input-box">
+		<input type="text" id="inpTxt01" class="input-item" placeholder="제목을 입력해 주세요." maxlength="100">
+		<button class="btn-reset"></button>
+		<p class="typing"><span>0</span>/100</p>
+	</div>
+</div>
+
+<div class="input-outer-box input-group-box">
+	<label for="inpTxt01">제목 <span class="required">*</span></label>
+	<div class="input-box">
+		<input type="text" id="inpTxt01" class="input-item" placeholder="제목을 입력해 주세요.">
+		<button class="btn-reset"></button>
+	</div>
+	<button class="btn btn-middle btn-type3"><span>text</span></button>
+</div>
+
+<div class="input-outer-box">
+  <label for="inpTxt01">제목 <span class="required">*</span></label>
+  <div class="radio-group">
+    <label class="radio"><input type="radio" name="radio1" id="radioChk04"><span>선택 A</span></label>
+    <label class="radio"><input type="radio" checked="checked" name="radio1" id="radioChk05"><span>선택 B</span></label>
+    <label class="radio"><input type="radio" name="radio1" id="radioChk06"><span>선택 선택 선택 선택 선택 선택 선택 선택 선택 C</span></label>
+  </div>
+</div>
+
+<div class="input-outer-box">
+  <label for="inpTxt01">제목 <span class="required">*</span></label>
+  <div class="check-group">
+    <label class="chk"><input type="checkbox"><span>선택1</span></label>
+    <label class="chk"><input type="checkbox" checked="checked"><span>선택2</span></label>
+    <label class="chk"><input type="checkbox"><span>Text Text Text Text Text Text Text Text Text Text Text Text</span></label>
+  </div>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        validation check error 메세지는 .input-outer-box에 클래스 "<strong>val-error</strong>"를 추가.<br>
+<!--        input box 좌측에 label이 있는 경우는 .error-msg에 클래스 "<strong>lbl-type</strong>"를 추가함.<br>-->
+        클래스 "<strong>input-outer-box</strong>"안에 label과 input부분을 넣어서 사용함.<br>
+        input-group-box 중 짧은 input 쪽에 너비 지정해서 사용함.
+      </div>
+
+      <!-- text input :: 단일 짧은 타입  -->
+      <div class="input-outer-box short-type">
+        <label for="inpTxt01">이름 <span class="required">*</span></label>
+        <div class="input-box">
+          <input type="text" id="inpTxt01" class="input-item" placeholder="이름을 입력해 주세요.">
+          <button class="btn-reset"></button>
+        </div>
+      </div>
+
+      <!-- text input :: 단일 짧은 타입 : 버튼타입  -->
+      <div class="input-outer-box short-type input-group-box">
+        <label for="inpTxt01">이름 <span class="required">*</span></label>
+        <div class="input-box">
+          <input type="text" id="inpTxt01" class="input-item" placeholder="이름을 입력해 주세요.">
+          <button class="btn-reset"></button>
+        </div>
+        <button class="btn btn-middle btn-type2"><span>text</span></button>
+      </div>
+
+      <!-- 직접입력 -->
+      <div class="direct-input">
+        <div class="input-outer-box short-type check-direct">
+          <div class="input-box">
+            <label class="chk"><input type="checkbox"><span>직접입력</span></label>
+          </div>
+        </div>
+        <div class="input-outer-box short-type">
+          <label for="joinStaffName">이름 <span class="required">*</span></label>
+          <div class="input-box">
+            <input type="text" id="joinStaffName" class="input-item" placeholder="정조영" disabled>
+            <button class="btn-reset"></button>
+          </div>
+          <p class="error-msg coltype">error text</p><!-- 유효성 검사시 앞선 형제요소에 val-error 클래스 추가 -->
+        </div>
+        <div class="input-outer-box short-type">
+          <label for="joinStaffEmail02">이메일 <span class="required">*</span></label>
+          <div class="input-box">
+            <input type="text" id="joinStaffEmail02" class="input-item" placeholder="jochung@hyundai.com" disabled>
+            <button class="btn-reset"></button>
+          </div>
+          <p class="error-msg coltype">error text</p><!-- 유효성 검사시 앞선 형제요소에 val-error 클래스 추가 -->
+        </div>
+        <div class="input-outer-box short-type">
+          <label>법인/사업장 <span class="required">*</span></label>
+          <div class="select-box disabled">
+            <p class="selected-value">현대자동차</p>
+            <ul class="select-items">
+              <li>option1</li>
+              <li>option2</li>
+              <li>option3</li>
+            </ul>
+          </div>
+          <p class="error-msg coltype">error text</p><!-- 유효성 검사시 앞선 형제요소에 val-error 클래스 추가 -->
+        </div>
+      </div>
+
+      <!-- text input :: 단일 긴 타입 -->
+      <div class="input-outer-box">
+        <label for="inpTxt01">제목 <span class="required">*</span></label>
+        <div class="input-box">
+          <input type="text" id="inpTxt01" class="input-item" placeholder="제목을 입력해 주세요.">
+          <button class="btn-reset"></button>
+        </div>
+      </div>
+
+      <!-- text input :: 단일 긴 타입 셀렉트박스 타입 -->
+      <div class="input-outer-box">
+        <label for="inpTxt01">제목 <span class="required">*</span></label>
+        <div class="select-box">
+          <p class="selected-value">Text</p>
+          <ul class="select-items">
+            <li>option1</li>
+            <li>option2</li>
+            <li>option3</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- text input :: 2컬럼 긴 타입 -->
+      <div class="input-outer-box input-group-box">
+        <label for="inpTxt01">제목 <span class="required">*</span></label>
+        <div class="input-box">
+          <input type="text" id="inpTxt01" class="input-item" placeholder="제목을 입력해 주세요.">
+          <button class="btn-reset"></button>
+        </div>
+        <div class="input-box">
+          <input type="text" id="inpTxt01" class="input-item" placeholder="제목을 입력해 주세요.">
+          <button class="btn-reset"></button>
+        </div>
+      </div>
+
+      <!-- text input :: 2컬럼 한쪽 셀렉트박스 타입 -->
+      <div class="input-outer-box input-group-box">
+        <label for="inpTxt01">제목 <span class="required">*</span></label>
+        <div class="select-box">
+          <p class="selected-value">Text</p>
+          <ul class="select-items">
+            <li>option1</li>
+            <li>option2</li>
+            <li>option3</li>
+          </ul>
+        </div>
+        <div class="input-box">
+          <input type="text" id="inpTxt01" class="input-item" placeholder="제목을 입력해 주세요.">
+          <button class="btn-reset"></button>
+        </div>
+      </div>
+
+      <!-- text input :: 단일 긴 타입 , 글자수 제한 -->
+      <div class="input-outer-box">
+        <label for="inpTxt01">제목 <span class="required">*</span></label>
+        <div class="input-box">
+          <input type="text" id="inpTxt01" class="input-item" placeholder="제목을 입력해 주세요." maxlength="100">
+          <button class="btn-reset"></button>
+          <p class="typing"><span>0</span>/100</p>
+        </div>
+      </div>
+
+      <!-- text input :: 2컬럼 한쪽 버튼 타입 -->
+      <div class="input-outer-box input-group-box">
+        <label for="inpTxt01">제목 <span class="required">*</span></label>
+        <div class="input-box">
+          <input type="text" id="inpTxt01" class="input-item" placeholder="제목을 입력해 주세요.">
+          <button class="btn-reset"></button>
+        </div>
+        <button class="btn btn-middle btn-type3"><span>text</span></button>
+      </div>
+
+      <!-- text input :: 단일 타입 : radio 타입 -->
+      <div class="input-outer-box">
+        <label for="inpTxt01">제목 <span class="required">*</span></label>
+        <div class="radio-group">
+          <label class="radio"><input type="radio" name="radio1" id="radioChk04"><span>선택 A</span></label>
+          <label class="radio"><input type="radio" checked="checked" name="radio1" id="radioChk05"><span>선택 B</span></label>
+          <label class="radio"><input type="radio" name="radio1" id="radioChk06"><span>선택 선택 선택 선택 선택 선택 선택 선택 선택 C</span></label>
+        </div>
+      </div>
+
+      <!-- text input :: 단일 타입 : chk 타입 -->
+      <div class="input-outer-box">
+        <label for="inpTxt01">제목 <span class="required">*</span></label>
+        <div class="check-group">
+          <label class="chk"><input type="checkbox"><span>선택1</span></label>
+          <label class="chk"><input type="checkbox" checked="checked"><span>선택2</span></label>
+          <label class="chk"><input type="checkbox"><span>Text Text Text Text Text Text Text Text Text Text Text Text</span></label>
+        </div>
+      </div>
+
+      <br>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="input-outer-box row-type">
+    <label for="inpNum01_031">인증번호</label>
+    <div class="input-box">
+      <input type="text" id="inpNum01_031" class="input-item inp-type-box" placeholder="인증번호">
+      <button class="btn-reset"></button>
+    </div>
+</div>
+
+<div class="input-outer-box row-type">
+  <label for="inpName01_021">이름</label>
+  <div class="input-group-box">
+    <div class="input-box">
+      <input type="text" id="inpName01_021" class="input-item inp-type-box" placeholder="이름">
+      <button class="btn-reset"></button>
+    </div>
+    <div class="input-box">
+      <input type="text" id="inpName01_012" class="input-item inp-type-box" placeholder="성">
+      <button class="btn-reset"></button>
+    </div>
+  </div>
+</div>
+
+<div class="input-outer-box row-type">
+  <div class="input-group-box">
+    <div class="input-box"><label for="inpName01_021">이름</label></div>
+    <div class="input-box"><label for="inpName01_021">이름</label></div>
+  </div>
+  <div class="input-group-box">
+    <div class="input-box">
+      <input type="text" id="inpName01_021" class="input-item inp-type-box" placeholder="이름">
+      <button class="btn-reset"></button>
+    </div>
+    <div class="input-box">
+      <input type="text" id="inpName01_012" class="input-item inp-type-box" placeholder="성">
+      <button class="btn-reset"></button>
+    </div>
+  </div>
+</div>
+
+<div class="input-outer-box row-type">
+  <label for="inpNum01_031">인증번호</label>
+  <div class="textarea-box">
+    <textarea name="name" rows="8" placeholder="Please enter content of your inquiry."></textarea>
+    <span class="bite"><em>0</em>/100</span>
+  </div>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <div class="conIn_tip">
+        클래스 "<strong>input-outer-box</strong>" <strong>row-type</strong>"를 추가.
+      </div>
+
+      <!-- text input :: [row] 단일 긴 타입 (box)  -->
+      <div class="input-outer-box row-type"><!-- 유효성체크 val-error -->
+        <label for="inpNum01_031">인증번호</label>
+        <div class="input-box">
+          <input type="text" id="inpNum01_031" class="input-item inp-type-box" placeholder="인증번호">
+          <button class="btn-reset"></button>
+        </div>
+      </div>
+
+      <!-- text input :: [row] 2컬럼 단일타이틀 타입 (box)  -->
+      <div class="input-outer-box row-type"><!-- 유효성체크 val-error -->
+        <label for="inpName01_021">이름</label>
+        <div class="input-group-box">
+          <div class="input-box">
+            <input type="text" id="inpName01_021" class="input-item inp-type-box" placeholder="이름">
+            <button class="btn-reset"></button>
+          </div>
+          <div class="input-box">
+            <input type="text" id="inpName01_012" class="input-item inp-type-box" placeholder="성">
+            <button class="btn-reset"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- text input :: [row] 2컬럼 2타이틀 타입 (box)  -->
+      <div class="input-outer-box row-type"><!-- 유효성체크 val-error -->
+        <div class="input-group-box">
+          <div class="input-box"><label for="inpName01_021">이름</label></div>
+          <div class="input-box"><label for="inpName01_021">이름</label></div>
+        </div>
+        <div class="input-group-box">
+          <div class="input-box">
+            <input type="text" id="inpName01_021" class="input-item inp-type-box" placeholder="이름">
+            <button class="btn-reset"></button>
+          </div>
+          <div class="input-box">
+            <input type="text" id="inpName01_012" class="input-item inp-type-box" placeholder="성">
+            <button class="btn-reset"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- text input :: [row] 단일 긴 타입 (box) textarea타입  -->
+      <div class="input-outer-box row-type"><!-- 유효성체크 val-error -->
+        <label for="inpNum01_031">인증번호</label>
+        <div class="textarea-box">
+          <textarea name="name" rows="8" placeholder="Please enter content of your inquiry."></textarea>
+          <span class="bite"><em>0</em>/100</span>
+        </div>
+      </div>
+
+
+      <br>
+      <h4 class="btm-border">- 버튼 타입</h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="input-outer-box">
+	<div class="input-box">
+		<input type="text" class="input-item inp-search" placeholder="텍스트를 입력해 주세요.">
+		<button class="btn-reset"></button>
+		<button class="btn-search"><span>search</span></button>
+	</div>
+
+	<div class="input-outer-box">
+		<div class="input-box">
+			<input type="text" class="input-item inp-search" placeholder="disabled" disabled>
+			<button class="btn-reset"></button>
+			<button class="btn-search"><span>search</span></button>
+		</div>
+	</div>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="input-outer-box">
+        <div class="input-box">
+          <input type="text" class="input-item inp-search" placeholder="텍스트를 입력해 주세요.">
+          <button class="btn-reset"></button>
+          <button class="btn-search"><span>search</span></button>
+        </div>
+      </div>
+
+      <div class="input-outer-box">
+        <div class="input-box">
+          <input type="text" class="input-item inp-search" placeholder="disabled" disabled>
+          <button class="btn-reset"></button>
+          <button class="btn-search"><span>search</span></button>
+        </div>
+      </div>
+
+
+      <br>
+      <h4 class="btm-border">- 노멀 타입</h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="input-outer-box">
+  <div class="input-outer-box val-error">
+    <div class="input-box">
+      <input type="text" class="input-item" placeholder="텍스트를 입력해 주세요.">
+      <button class="btn-reset"></button>
+    </div>
+  </div>
+  <p class="error-msg">error text</p>
+</div>
+
+<div class="input-outer-box">
+	<div class="input-box">
+		<input type="text" class="input-item" placeholder="Disabled" disabled>
+		<button class="btn-reset"></button>
+	</div>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <div class="conIn_tip">
+        단일 input만 사용함.<br>
+        <strong>disabled/class="disabled"</strong> 둘다 사용가능
+      </div>
+
+      <div class="input-outer-box">
+        <div class="input-outer-box val-error">
+          <div class="input-box">
+            <input type="text" class="input-item" placeholder="텍스트를 입력해 주세요.">
+            <button class="btn-reset"></button>
+          </div>
+        </div>
+        <p class="error-msg">error text</p>
+      </div>
+      <div class="input-outer-box">
+        <div class="input-box">
+          <input type="text" class="input-item" placeholder="Disabled" disabled>
+          <button class="btn-reset"></button>
+        </div>
+      </div>
+
+      <hr>
+      <h3 class="title">&#x25CE; Select</h3>
+      <h4 class="btm-border">- Custom Select</h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="select-box">
+  <p class="selected-value">Text</p>
+  <ul class="select-items">
+    <li>option1</li>
+    <li>option2</li>
+    <li>option3</li>
+  </ul>
+</div>
+
+<div class="select-box disabled">
+  <p class="selected-value">Text</p>
+  <ul class="select-items">
+    <li>option1</li>
+    <li>option2</li>
+    <li>option3</li>
+  </ul>
+</div>
+<div class="input-outer-box">
+  <div class="select-box val-error">
+    <p class="selected-value">Text</p>
+    <ul class="select-items">
+      <li>option1</li>
+      <li>option2</li>
+      <li>option3</li>
+    </ul>
+  </div>
+  <p class="error-msg">error</p>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <div class="conIn_tip">
+        .select-box
+      </div>
+
+      <h4 class="btm-border">- Custom Select</h4>
+
+      <div class="select-box">
+        <p class="selected-value">Text</p>
+        <ul class="select-items">
+          <li>option1</li>
+          <li>option2</li>
+          <li>option3</li>
+        </ul>
+      </div>
+
+      <div class="select-box disabled">
+        <p class="selected-value">Text</p>
+        <ul class="select-items">
+          <li>option1</li>
+          <li>option2</li>
+          <li>option3</li>
+        </ul>
+      </div>
+      <div class="input-outer-box">
+        <div class="select-box val-error">
+          <p class="selected-value">Text</p>
+          <ul class="select-items">
+            <li>option1</li>
+            <li>option2</li>
+            <li>option3</li>
+          </ul>
+        </div>
+        <p class="error-msg">error</p>
+      </div>
+
+      <!-- input 라디오박스 타입 -->
+      <h3 class="title">&#x25CE; Radio</h3>
+      <h4 class="btm-border">- 라디오박스 기본스타일</h4>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<label class="radio"><input type="radio" name="radio" id="radioChk01"><span>Default</span></label>
+<label class="radio"><input type="radio" checked="checked" name="radio" id="radioChk02"><span>Checked</span></label>
+<label class="radio"><input type="radio" disabled="disabled" name="radio" id="radioChk03"><span>Disabled</span></label>
+<label class="radio"><input type="radio" checked="checked" disabled="disabled"><span>Checked+Disabled</span></label>
+<label class="radio error-radio"><input type="radio" name="radio" id="radioChk05"><span>Error</span></label>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        .radio &gt; input+span
+      </div>
+
+      <label class="radio"><input type="radio" name="radio" id="radioChk01"><span>Default</span></label>
+      <label class="radio"><input type="radio" checked="checked" name="radio" id="radioChk02"><span>Checked</span></label>
+      <label class="radio"><input type="radio" disabled="disabled" name="radio" id="radioChk03"><span>Disabled</span></label>
+      <label class="radio"><input type="radio" checked="checked" disabled="disabled"><span>Checked+Disabled</span></label>
+      <label class="radio error-radio"><input type="radio" name="radio" id="radioChk05"><span>Error</span></label>
+
+      <div class="conIn_tip">
+        .chk.type2 &gt; input + span<br>Text Bold & Display Block
+      </div>
+
+      <label class="radio type2"><input type="radio" name="radio" id="radioChk01_1"><span>Default</span></label>
+
+
+
+      <h4 class="btm-border">- 라디오 그룹</h4>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="radio-group">
+	<label class="radio"><input type="radio" name="radio1" id="radioChk04"><span>선택 A</span></label>
+	<label class="radio"><input type="radio" checked="checked" name="radio1" id="radioChk05"><span>선택 B</span></label>
+	<label class="radio"><input type="radio" name="radio1" id="radioChk06"><span>선택 선택 선택 선택 선택 선택 선택 선택 선택 C</span></label>
+</div>
+<p class="error-msg">error text</p>
+
+<ul class="radio-group">
+	<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk01" checked="checked"><span>LINE PAY</span></label></li>
+	<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk02"><span>Card</span></label></li>
+	<li><label class="radio"><input type="radio" name="radioGroup" id="radioChk03"><span>Bank Transfer</span></label></li>
+</ul>
+<p class="error-msg ">error text</p>
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <div class="conIn_tip">
+        div.radio-group &gt; .radio + .radio
+      </div>
+      <div class="radio-group"><!-- 에러시 val-error -->
+        <label class="radio"><input type="radio" name="radio1" id="radioChk04"><span>선택 A</span></label>
+        <label class="radio"><input type="radio" checked="checked" name="radio1" id="radioChk05"><span>선택 B</span></label>
+        <label class="radio"><input type="radio" name="radio1" id="radioChk06"><span>선택 선택 선택 선택 선택 선택 선택 선택 선택 C</span></label>
+      </div>
+      <p class="error-msg">error text</p>
+
+      <div class="conIn_tip">
+        ul.radio-group &gt; li + li
+      </div>
+      <ul class="radio-group">
+        <li><label class="radio"><input type="radio" name="radioGroup" id="radioChk07" checked="checked"><span>LINE PAY</span></label></li>
+        <li><label class="radio"><input type="radio" name="radioGroup" id="radioChk08"><span>Card</span></label></li>
+        <li><label class="radio"><input type="radio" name="radioGroup" id="radioChk09"><span>Bank Transfer</span></label></li>
+      </ul>
+      <p class="error-msg">error text</p>
+
+
+
+      <h3 class="title">&#x25CE; Checkbox</h3>
+      <h4 class="btm-border">- 체크박스 기본스타일 / 타이틀타입</h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<label class="chk"><input type="checkbox"><span>Default</span></label>
+<label class="chk"><input type="checkbox" checked="checked"><span>Checked</span></label>
+<label class="chk"><input type="checkbox" disabled="disabled"><span>Disabled</span></label>
+<label class="chk"><input type="checkbox" checked="checked" disabled="disabled"><span>Checked+Disabled</span></label>
+<label class="chk error-chk"><input type="checkbox"><span>Error</span></label>
+<label class="chk type2"><input type="checkbox"><span>Bold Text Type</span></label>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        .chk &gt; input + span <br>
+      </div>
+      <label class="chk"><input type="checkbox"><span>Default</span></label>
+      <label class="chk"><input type="checkbox" checked="checked"><span>Checked</span></label>
+      <label class="chk"><input type="checkbox" disabled="disabled"><span>Disabled</span></label>
+      <label class="chk"><input type="checkbox" checked="checked" disabled="disabled"><span>Checked+Disabled</span></label>
+      <label class="chk error-chk"><input type="checkbox"><span>Error</span></label>
+
+
+      <div class="conIn_tip">
+        .chk.type2 &gt; input + span
+      </div>
+      <label class="chk type2"><input type="checkbox"><span>Bold Text Type</span></label>
+      <h4 class="btm-border">- 체크박스 그룹</h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="check-group">
+	<label class="chk"><input type="checkbox"><span>선택1</span></label>
+	<label class="chk"><input type="checkbox" checked="checked"><span>선택2</span></label>
+	<label class="chk"><input type="checkbox"><span>Text Text Text Text Text Text Text Text Text Text Text Text</span></label>
+</div>
+<p class="error-msg">error text</p>
+
+<ul class="check-group">
+	<li><label class="chk"><input type="checkbox"><span>선택1</span></label></li>
+	<li><label class="chk"><input type="checkbox" checked="checked"><span>선택2</span></label></li>
+	<li><label class="chk"><input type="checkbox"><span>Text Text Text Text Text Text Text Text Text Text Text Text</span></label></li>
+</ul>
+<p class="error-msg">error text</p>
+--></code></pre>
+      <!-- //코드 삽입 -->
+      <div class="conIn_tip">
+        div.check-group &gt; .chk + .chk<br>
+        ul.check-group &gt; li + li
+      </div>
+      <div class="check-group"><!-- 에러시 + val-error -->
+        <label class="chk"><input type="checkbox"><span>선택1</span></label>
+        <label class="chk"><input type="checkbox" checked="checked"><span>선택2</span></label>
+        <label class="chk"><input type="checkbox"><span>Text Text Text Text Text Text Text Text Text Text Text Text</span></label>
+      </div>
+      <p class="error-msg">error text</p>
+      <br>
+      <ul class="check-group"><!-- 에러시 + val-error -->
+        <li><label class="chk"><input type="checkbox"><span>선택1</span></label></li>
+        <li><label class="chk"><input type="checkbox" checked="checked"><span>선택2</span></label></li>
+        <li><label class="chk"><input type="checkbox"><span>Text Text Text Text Text Text Text Text Text Text Text Text</span></label></li>
+      </ul>
+      <p class="error-msg">error text</p>
+
+
+      <h3 class="title">&#x25CE; Date Picker</h3>
+      <h4 class="btm-border">- 기본</h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="input-outer-box calendar">
+	<div class="inp-slice-box">
+		<input type="text" class="input-item date-picker" placeholder="MM/DD/YYYY">
+	</div>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        .inp-item에 클래스 "<strong>date-picker</strong>"를 추가함.
+      </div>
+
+      <div class="input-outer-box calendar">
+        <div class="inp-slice-box">
+          <input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY">
+        </div>
+      </div>
+
+      <h4 class="btm-border">- 2개</h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="input-outer-box calendar">
+	<div class="inp-slice-box">
+		<div class="inp-area"><input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY"></div>
+		<span class="inp-hpn">~</span>
+		<div class="inp-area"><input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY"></div>
+		<button class="btn btn-middle btn-search"><span>조회</span></button>
+	</div>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        .inp-slice-box안에 .inp-area + span + .inp-area
+      </div>
+
+      <div class="input-outer-box calendar">
+        <div class="inp-slice-box">
+          <div class="inp-area"><input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY"></div>
+          <span class="inp-hpn">~</span>
+          <div class="inp-area"><input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY"></div>
+          <button class="btn btn-type3 btn-middle btn-search"><span>조회</span></button>
+        </div>
+      </div>
+
+      <h4 class="btm-border">- 2개 box형</h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="inp-outer-box calendar box">
+  <div class="inp-slice-box">
+    <label>조회기간</label>
+    <div class="inp-area"><input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY"></div>
+    <span class="inp-hpn">~</span>
+    <div class="inp-area"><input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY"></div>
+    <button class="btn btn-type3 btn-middle btn-search"><span>조회</span></button>
+  </div>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        .input-outer-box에 .box 추가함.<br>
+        .inp-slice-box안에 .inp-area + span + .inp-area
+      </div>
+
+      <div class="inp-outer-box calendar box">
+        <div class="inp-slice-box">
+          <label>조회기간</label>
+          <div class="inp-area"><input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY"></div>
+          <span class="inp-hpn">~</span>
+          <div class="inp-area"><input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY"></div>
+          <button class="btn btn-type3 btn-middle btn-search"><span>조회</span></button>
+        </div>
+      </div>
+
+
+      <!-- Textarea 텍스트입력 -->
+      <h3 class="title">&#x25CE; Textarea</h3>
+      <h4 class="btm-border">- 텍스트입력</h4>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="input-outer-box">
+  <div class="textarea-box">
+    <textarea name="name" rows="8" placeholder="Please enter content of your inquiry."></textarea>
+    <span class="bite"><em>0</em>/100</span>
+  </div>
+</div>
+
+<div class="input-outer-box">
+  <div class="textarea-box val-error">
+    <textarea name="name" rows="8" placeholder="Please enter content of your inquiry."></textarea>
+    <span class="bite"><em>0</em>/100</span>
+  </div>
+  <p class="error-msg">error text</p>
+</div>
+
+<div class="input-outer-box">
+  <div class="textarea-box disabled">
+    <textarea name="name" rows="8" placeholder="Please enter content of your inquiry."></textarea>
+    <span class="bite"><em>0</em>/100</span>
+  </div>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        .textarea-box &lt; textarea <br>
+        row조절가능 / error-msg
+      </div>
+
+      <div class="input-outer-box">
+        <div class="textarea-box">
+          <textarea name="name" rows="8" placeholder="Please enter content of your inquiry."></textarea>
+          <span class="bite"><em>0</em>/100</span>
+        </div>
+      </div>
+      <br><br>
+      <div class="input-outer-box">
+        <div class="textarea-box val-error">
+          <textarea name="name" rows="8" placeholder="Please enter content of your inquiry."></textarea>
+          <span class="bite"><em>0</em>/100</span>
+        </div>
+        <p class="error-msg">error text</p>
+      </div>
+      <br><br>
+      <div class="input-outer-box">
+        <div class="textarea-box disabled">
+          <textarea name="name" rows="8" placeholder="Please enter content of your inquiry."></textarea>
+          <span class="bite"><em>0</em>/100</span>
+        </div>
+      </div>
+
+
+
+      <!-- Textarea 텍스트입력 -->
+
+
+
+
+
+      <!-- Textarea 텍스트입력 -->
+      <h3 class="title">&#x25CE; Input Email Autocomplete</h3>
+      <h4 class="btm-border">- input 이메일 자동완성 타입</h4>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="autocomplete-wrap">
+  <ul class="autocomplete-area">
+    <li class="input-area">
+      <input type="email" class="input-email" placeholder="수신자를 입력해주세요."/>
+  </li>
+  </ul>
+  <div class="autocomplete">
+    <ul>
+      <li>hyundai@hyundai.com1</li>
+      <li>hyundai@hyundai.com2</li>
+      <li>hyundai@hyundai.com3</li>
+      <li>hyundai@hyundai.com4</li>
+      <li>hyundai@hyundai.com5</li>
+      <li>hyundai@hyundai.com6</li>
+      <li>hyundai@hyundai.com7</li>
+      <li>hyundai@hyundai.com8</li>
+      <li>hyundai@hyundai.com9</li>
+    </ul>
+    <div>
+      파일을 공유할 BMS 회원을 선택해주세요.
+      <button></button>
+    </div>
+  </div>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">.autocomplete-wrap</div>
+
+      <div class="autocomplete-wrap">
+        <ul class="autocomplete-area">
+          <li class="input-area"><!-- 자동완성 입력 화면 -->
+            <input type="email" class="input-email" placeholder="수신자를 입력해주세요."/>
+          </li>
+        </ul>
+        <div class="autocomplete"> <!-- 자동완성 view 영역 -->
+          <ul><!-- li 안의 값은 자동완성 값이 들어가야함 -->
+            <li>hyundai@hyundai.com1</li>
+            <li>hyundai@hyundai.com2</li>
+            <li>hyundai@hyundai.com3</li>
+            <li>hyundai@hyundai.com4</li>
+            <li>hyundai@hyundai.com5</li>
+            <li>hyundai@hyundai.com6</li>
+            <li>hyundai@hyundai.com7</li>
+            <li>hyundai@hyundai.com8</li>
+            <li>hyundai@hyundai.com9</li>
+          </ul>
+          <div>
+            파일을 공유할 BMS 회원을 선택해주세요.
+            <button></button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <h3 class="title">&#x25CE; File Uploader</h3>
+      <h4 class="btm-border">- file upload 기본화면</h4>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="input-outer-box row-type">
+  <label>첨부파일</label>
+  <div data-upload-id="uploadId1" class="upload-container file-uploader">
+    <div class="button-container blind">
+      <input type="file" name="file" hidden="">
+    </div>
+    <div class="file-box">
+      <div class="file-byte">
+        <span>0</span>개, <span>0</span> byte 추가됨
+      </div>
+      <div class="table-area">
+        <table cellpadding="0" cellspacing="0">
+          <colgroup>
+            <col style="width:50px">
+            <col>
+            <col style="width: 160px">
+            <col style="width: 160px">
+          </colgroup>
+          <thead>
+          <tr>
+            <th class="file-chk"><label class="chk"><input type="checkbox"><span></span></label></th>
+            <th class="name">파일 이름</th>
+            <th class="file-percent">진행률</th>
+            <th class="file-size">파일크기</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="upload-guide" colspan="4">
+              <div class="upload-file-area">
+                <p class="upload-guide-txt"><span>이곳을 더블클릭 또는 파일을 드래그하세요.</span></p>
+                <div class="upload-file-list">
+                <div class="table-area">
+                  <table cellpadding="0" cellspacing="0">
+                    <colgroup>
+                      <col style="width:50px">
+                      <col>
+                      <col style="width: 160px">
+                      <col style="width: 160px">
+                    </colgroup>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="caution-area">
+        <p class="caution">파일을 첨부한 후 파일 전송하기를 클릭해야 정상 업로드가 됩니다.</p>
+        <p class="caution">첨부파일은 20MB를 초과할 수 없으며 최대 3개까지 가능합니다.</p>
+      </div>
+      <div class="button-area">
+        <button class="btn btn-type2 btn-middle-small upload-delete-line" disabled><span>선택 항목 제거</span></button>
+        <button class="btn btn-type2 btn-middle-small upload-delete-all" disabled><span>초기화</span></button>
+        <button class="btn btn-type3 btn-middle-small upload-start"><span>파일 저장</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        .file-uploader : css 적용 class명 <br>
+        .upload-container : script 적용 class명 <br>
+        .upload-container에 data-upload-id="uploadId1" 추가
+      </div>
+
+      <div class="input-outer-box row-type">
+        <label>첨부파일</label>
+        <div data-upload-id="uploadId1" class="upload-container file-uploader">
+          <div class="button-container blind">
+            <input type="file" name="file" hidden="">
+          </div>
+          <div class="file-box">
+            <div class="file-byte">
+              <span>0</span>개, <span>0</span> byte 추가됨
+            </div>
+            <div class="table-area">
+              <table cellpadding="0" cellspacing="0">
+                <colgroup>
+                  <col style="width:50px">
+                  <col>
+                  <col style="width: 160px">
+                  <col style="width: 160px">
+                </colgroup>
+                <thead>
+                <tr>
+                  <th class="file-chk"><label class="chk"><input type="checkbox"><span></span></label></th>
+                  <th class="name">파일 이름</th>
+                  <th class="file-percent">진행률</th>
+                  <th class="file-size">파일크기</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td class="upload-guide" colspan="4">
+                    <div class="upload-file-area"> <!-- 파일업로드 영역 없을 시에는 no-upload 클래스 추가 -->
+                      <p class="upload-guide-txt"><span>이곳을 더블클릭 또는 파일을 드래그하세요.</span></p>
+                      <div class="upload-file-list">
+                      <div class="table-area">
+                        <table cellpadding="0" cellspacing="0">
+                          <colgroup>
+                            <col style="width:50px">
+                            <col>
+                            <col style="width: 160px">
+                            <col style="width: 160px">
+                          </colgroup>
+                          <tbody></tbody>
+                        </table>
+                      </div>
+                    </div>
+                    </div>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="caution-area">
+              <p class="caution">파일을 첨부한 후 파일 전송하기를 클릭해야 정상 업로드가 됩니다.</p>
+              <p class="caution">첨부파일은 20MB를 초과할 수 없으며 최대 3개까지 가능합니다.</p>
+            </div>
+            <div class="button-area">
+              <button class="btn btn-type2 btn-middle-small upload-delete-line" disabled><span>선택 항목 제거</span></button>
+              <button class="btn btn-type2 btn-middle-small upload-delete-all" disabled><span>초기화</span></button>
+              <button class="btn btn-type3 btn-middle-small upload-start"><span>파일 저장</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <h4 class="btm-border">- file upload 파일 다운로드</h4>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="input-outer-box row-type">
+    <label>첨부파일</label>
+    <div data-upload-id="uploadId2" class="upload-container file-uploader">
+      <div class="file-box">
+        <div class="file-byte">
+          <span>0</span>개, <span>0</span> byte 추가됨
+        </div>
+        <div class="table-area">
+          <table cellpadding="0" cellspacing="0">
+            <colgroup>
+              <col style="width:50px">
+              <col>
+              <col style="width: 160px">
+              <col style="width: 160px">
+            </colgroup>
+            <thead>
+            <tr>
+              <th class="file-chk"><label class="chk"><input type="checkbox"><span></span></label></th>
+              <th class="name" colspan="2">파일 이름</th>
+              <th class="file-size">파일크기</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="upload-guide" colspan="3">
+                <div class="upload-file-area no-upload">
+                  <div class="upload-file-list">
+                    <div class="table-area">
+                      <table cellpadding="0" cellspacing="0">
+                        <colgroup>
+                          <col style="width:50px">
+                          <col>
+                          <col style="width: 160px">
+                        </colgroup>
+                        <tbody>
+                        <tr id="uploadId1">
+                          <td class="file-chk"><label class="chk"><input type="checkbox"><span></span></label></td>
+                          <td class="name" colspan="2">Hyundai Guideline.pdf</td>
+                          <td class="file-size">45M</td>
+                        </tr>
+                        <tr id="uploadId2">
+                          <td class="file-chk"><label class="chk"><input type="checkbox"><span></span></label></td>
+                          <td class="name" colspan="2">Truck&Bus Guideline.pdf</td>
+                          <td class="file-size">2.35 MB</td>
+                        </tr>
+                        <tr id="uploadId3">
+                          <td class="file-chk"><label class="chk"><input type="checkbox"><span></span></label></td>
+                          <td class="name" colspan="2">N Guideline.pdf</td>
+                          <td class="file-size">3.35 MB</td>
+                        </tr>
+                        <tr id="uploadId4">
+                          <td class="file-chk"><label class="chk"><input type="checkbox"><span></span></label></td>
+                          <td class="name" colspan="2">N Guideline.pdf</td>
+                          <td class="file-size">3.35 MB</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="caution-area">
+        <p class="fc-color4">파일 다운로드 기한 만료 시, 다운로드가 불가합니다.</p>
+      </div>
+      <div class="button-area">
+        <button class="btn btn-type2 btn-small"><span>다운로드</span></button>
+        <button class="btn btn-type2 btn-small"><span>전체 다운로드</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        .upload-file-area에 .no-upload 추가
+      </div>
+
+      <div class="input-outer-box row-type">
+        <label>첨부파일</label>
+        <div data-upload-id="uploadId2" class="upload-container file-uploader">
+          <div class="file-box">
+            <div class="file-byte">
+              <span>0</span>개, <span>0</span> byte 추가됨
+            </div>
+            <div class="table-area">
+              <table cellpadding="0" cellspacing="0">
+                <colgroup>
+                  <col style="width:50px">
+                  <col>
+                  <col style="width: 160px">
+                  <col style="width: 160px">
+                </colgroup>
+                <thead>
+                <tr>
+                  <th class="file-chk"><label class="chk"><input type="checkbox"><span></span></label></th>
+                  <th class="name" colspan="2">파일 이름</th>
+                  <th class="file-size">파일크기</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td class="upload-guide" colspan="4">
+                    <div class="upload-file-area no-upload"> <!-- 파일업로드 영역 없을 시에는 no-upload 클래스 추가 -->
+                      <div class="upload-file-list">
+                        <div class="table-area">
+                          <table cellpadding="0" cellspacing="0">
+                            <colgroup>
+                              <col style="width:50px">
+                              <col>
+                              <col style="width: 160px">
+                              <col style="width: 160px">
+                            </colgroup>
+                            <tbody>
+                            <tr id="uploadId1">
+                              <td class="file-chk"><label class="chk"><input type="checkbox"><span></span></label></td>
+                              <td class="name" colspan="2">Hyundai Guideline.pdf</td>
+                              <td class="file-size">45M</td>
+                            </tr>
+                            <tr id="uploadId2">
+                              <td class="file-chk"><label class="chk"><input type="checkbox"><span></span></label></td>
+                              <td class="name" colspan="2">Truck&Bus Guideline.pdf</td>
+                              <td class="file-size">2.35 MB</td>
+                            </tr>
+                            <tr id="uploadId3">
+                              <td class="file-chk"><label class="chk"><input type="checkbox"><span></span></label></td>
+                              <td class="name" colspan="2">N Guideline.pdf</td>
+                              <td class="file-size">3.35 MB</td>
+                            </tr>
+                            <tr id="uploadId4">
+                              <td class="file-chk"><label class="chk"><input type="checkbox"><span></span></label></td>
+                              <td class="name" colspan="2">N Guideline.pdf</td>
+                              <td class="file-size">3.35 MB</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="caution-area">
+              <p class="fc-color4">파일 다운로드 기한 만료 시, 다운로드가 불가합니다.</p>
+            </div>
+            <div class="button-area">
+              <button class="btn btn-type2 btn-small"><span>다운로드</span></button>
+              <button class="btn btn-type2 btn-small"><span>전체 다운로드</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <h4 class="btm-border">- file upload 파일 리스트</h4>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="input-outer-box row-type">
+<label>첨부파일</label>
+<div data-upload-id="uploadId3" class="upload-container file-uploader">
+  <div class="file-box">
+    <div class="file-byte">
+      <span>0</span>개, <span>0</span> byte 추가됨
+    </div>
+    <div class="table-area">
+      <table cellpadding="0" cellspacing="0">
+        <colgroup>
+          <col style="width: 50px">
+          <col>
+          <col style="width: 160px">
+          <col style="width: 160px">
+        </colgroup>
+        <thead>
+        <tr>
+          <th class="name" colspan="3">파일 이름</th>
+          <th class="file-size">파일크기</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="upload-guide" colspan="4">
+            <div class="upload-file-area no-upload">
+              <div class="upload-file-list">
+                <div class="table-area">
+                  <table cellpadding="0" cellspacing="0">
+                    <colgroup>
+                      <col style="width: 50px">
+                      <col>
+                      <col style="width: 160px">
+                      <col style="width: 160px">
+                    </colgroup>
+                    <tbody>
+                    <tr id="uploadId1">
+                      <td class="name" colspan="3">Hyundai Guideline.pdf</td>
+                      <td class="file-size">85.29 MB</td>
+                    </tr>
+                    <tr id="uploadId2">
+                      <td class="name" colspan="3">Truck&Bus Guideline.pdf</td>
+                      <td class="file-size">2.35 MB</td>
+                    </tr>
+                    <tr id="uploadId3">
+                      <td class="name" colspan="3">N Guideline.pdf</td>
+                      <td class="file-size">3.35 MB</td>
+                    </tr>
+                    <tr id="uploadId4">
+                      <td class="name" colspan="3">N Guideline.pdf</td>
+                      <td class="file-size">3.35 MB</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        .upload-file-area에 .no-upload 추가
+      </div>
+
+      <div class="input-outer-box row-type">
+        <label>첨부파일</label>
+        <div data-upload-id="uploadId3" class="upload-container file-uploader">
+          <div class="file-box">
+            <div class="file-byte">
+              <span>0</span>개, <span>0</span> byte 추가됨
+            </div>
+            <div class="table-area">
+              <table cellpadding="0" cellspacing="0">
+                <colgroup>
+                  <col style="width: 50px">
+                  <col>
+                  <col style="width: 160px">
+                  <col style="width: 160px">
+                </colgroup>
+                <thead>
+                <tr>
+                  <th class="name" colspan="3">파일 이름</th>
+                  <th class="file-size">파일크기</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td class="upload-guide" colspan="4">
+                    <div class="upload-file-area no-upload"> <!-- 파일업로드 영역 없을 시에는 no-upload 클래스 추가 -->
+                      <div class="upload-file-list">
+                        <div class="table-area">
+                          <table cellpadding="0" cellspacing="0">
+                            <colgroup>
+                              <col style="width: 50px">
+                              <col>
+                              <col style="width: 160px">
+                              <col style="width: 160px">
+                            </colgroup>
+                            <tbody>
+                            <tr id="uploadId1">
+                              <td class="name" colspan="3">Hyundai Guideline.pdf</td>
+                              <td class="file-size">85.29 MB</td>
+                            </tr>
+                            <tr id="uploadId2">
+                              <td class="name" colspan="3">Truck&Bus Guideline.pdf</td>
+                              <td class="file-size">2.35 MB</td>
+                            </tr>
+                            <tr id="uploadId3">
+                              <td class="name" colspan="3">N Guideline.pdf</td>
+                              <td class="file-size">3.35 MB</td>
+                            </tr>
+                            <tr id="uploadId4">
+                              <td class="name" colspan="3">N Guideline.pdf</td>
+                              <td class="file-size">3.35 MB</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <h3 class="title">&#x25CE; etc</h3>
+      <h4 class="btm-border">- .error-msg</h4>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!-- <div class="input-outer-box">
+  <div class="input-box val-error">
+    <input type="text" class="input-item" placeholder="텍스트를 입력해 주세요.">
+    <button class="btn-reset"></button>
+  </div>
+  <p class="error-msg">error text</p>
+</div>
+
+<div class="input-outer-box">
+  <label for="inpTxt01">이름 <span class="required">*</span></label>
+  <div class="input-box val-error">
+    <input type="text" id="inpTxt01" class="input-item" placeholder="이름을 입력해 주세요.">
+    <button class="btn-reset"></button>
+  </div>
+  <p class="error-msg coltype">error text</p>
+</div>
+
+<div class="input-outer-box input-group-box">
+  <label for="inpTxt01">제목 <span class="required">*</span></label>
+  <div class="input-box val-error">
+    <input type="text" id="inpTxt01" class="input-item" placeholder="제목을 입력해 주세요.">
+    <button class="btn-reset"></button>
+  </div>
+  <p class="error-msg coltype">error text</p>
+  <div class="input-box val-error last-input">
+    <input type="text" id="inpTxt01" class="input-item" placeholder="제목을 입력해 주세요.">
+    <button class="btn-reset"></button>
+  </div>
+  <p class="error-msg coltype msg2">error text</p>
+</div>
+
+<div class="input-outer-box row-type">
+  <label for="inpNum01_031">인증번호</label>
+  <div class="input-box val-error">
+    <input type="text" id="inpNum01_031" class="input-item inp-type-box" placeholder="인증번호">
+    <button class="btn-reset"></button>
+  </div>
+  <p class="error-msg">error text</p>
+</div>
+
+<div class="input-outer-box row-type">
+  <label for="inpName01_021">이름</label>
+  <div class="input-group-box mo-full">
+    <div class="input-box val-error">
+      <input type="text" id="inpName01_021" class="input-item inp-type-box" placeholder="이름">
+      <button class="btn-reset"></button>
+    </div>
+    <p class="error-msg">error text</p>
+    <div class="input-box val-error last-input">
+      <input type="text" id="inpName01_012" class="input-item inp-type-box" placeholder="성">
+      <button class="btn-reset"></button>
+    </div>
+    <p class="error-msg msg2">error text</p>
+  </div>
+</div>
+
+<div class="input-outer-box row-type">
+  <div class="input-group-box">
+    <div class="input-box"><label for="inpName01_021">이름</label></div>
+    <div class="input-box"><label for="inpName01_021">이름</label></div>
+  </div>
+  <div class="input-group-box">
+    <div class="input-box val-error">
+      <input type="text" id="inpName01_021" class="input-item inp-type-box" placeholder="이름">
+      <button class="btn-reset"></button>
+    </div>
+    <p class="error-msg">error text</p>
+    <div class="input-box val-error last-input">
+      <input type="text" id="inpName01_012" class="input-item inp-type-box" placeholder="성">
+      <button class="btn-reset"></button>
+    </div>
+    <p class="error-msg msg2">error text</p>
+  </div>
+</div>
+
+<div class="input-outer-box">
+  <div class="textarea-box val-error">
+    <textarea name="name" rows="8" placeholder="Please enter content of your inquiry."></textarea>
+    <span class="bite"><em>0</em>/100</span>
+  </div>
+  <p class="error-msg">error text</p>
+</div>
+
+<div class="input-outer-box row-type">
+  <label for="inpNum01_031">인증번호</label>
+  <div class="textarea-box val-error">
+    <textarea name="name" rows="8" placeholder="Please enter content of your inquiry."></textarea>
+    <span class="bite"><em>0</em>/100</span>
+  </div>
+    <p class="error-msg">error text</p>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        .input-outer-box영역으로 꼭 감싸야함.(input-outer-box가 없다면 error-msg의 부모요소의 position: relative; 적용)<br>
+        앞선 형제요소에 .val-error 클래스명을 추가해야 .error-msg 노출 가능함.<br>
+        좌측 라벨과 나란히 있는 타입일 경우 .coltype 클래스명을 추가해야 함.<br>
+        input이 두가지이상일 경우 .msg2 추가하여 임의로 위치 조정해야 함. (기본값은 50%씩)<br>
+        .success-msg, .assisitive-msg도 동일한 구조임.
+      </div>
+      <div class="input-outer-box">
+        <div class="input-box val-error">
+          <input type="text" class="input-item" placeholder="텍스트를 입력해 주세요.">
+          <button class="btn-reset"></button>
+        </div>
+        <p class="error-msg">error text</p>
+      </div>
+
+      <div class="input-outer-box">
+        <label for="inpTxt01">이름 <span class="required">*</span></label>
+        <div class="input-box val-error">
+          <input type="text" id="inpTxt01" class="input-item" placeholder="이름을 입력해 주세요.">
+          <button class="btn-reset"></button>
+        </div>
+        <p class="error-msg coltype">error text</p>
+      </div>
+
+      <div class="input-outer-box input-group-box">
+        <label for="inpTxt01">제목 <span class="required">*</span></label>
+        <div class="input-box val-error">
+          <input type="text" id="inpTxt01" class="input-item" placeholder="제목을 입력해 주세요.">
+          <button class="btn-reset"></button>
+        </div>
+        <p class="error-msg coltype">error text</p>
+        <div class="input-box val-error last-input">
+          <input type="text" id="inpTxt01" class="input-item" placeholder="제목을 입력해 주세요.">
+          <button class="btn-reset"></button>
+        </div>
+        <p class="error-msg coltype msg2">error text</p>
+      </div>
+
+      <div class="input-outer-box row-type">
+        <label for="inpNum01_031">인증번호</label>
+        <div class="input-box val-error">
+          <input type="text" id="inpNum01_031" class="input-item inp-type-box" placeholder="인증번호">
+          <button class="btn-reset"></button>
+        </div>
+        <p class="error-msg">error text</p>
+      </div>
+
+      <div class="input-outer-box row-type">
+        <label for="inpName01_021">이름</label>
+        <div class="input-group-box mo-full">
+          <div class="input-box val-error">
+            <input type="text" id="inpName01_021" class="input-item inp-type-box" placeholder="이름">
+            <button class="btn-reset"></button>
+          </div>
+          <p class="error-msg">error text</p>
+          <div class="input-box val-error last-input">
+            <input type="text" id="inpName01_012" class="input-item inp-type-box" placeholder="성">
+            <button class="btn-reset"></button>
+          </div>
+          <p class="error-msg msg2">error text</p>
+        </div>
+      </div>
+
+      <div class="input-outer-box row-type">
+        <div class="input-group-box">
+          <div class="input-box"><label for="inpName01_021">이름</label></div>
+          <div class="input-box"><label for="inpName01_021">이름</label></div>
+        </div>
+        <div class="input-group-box">
+          <div class="input-box val-error">
+            <input type="text" id="inpName01_021" class="input-item inp-type-box" placeholder="이름">
+            <button class="btn-reset"></button>
+          </div>
+          <p class="error-msg">error text</p>
+          <div class="input-box val-error last-input">
+            <input type="text" id="inpName01_012" class="input-item inp-type-box" placeholder="성">
+            <button class="btn-reset"></button>
+          </div>
+          <p class="error-msg msg2">error text</p>
+        </div>
+      </div>
+
+      <div class="input-outer-box">
+        <div class="textarea-box val-error">
+          <textarea name="name" rows="8" placeholder="Please enter content of your inquiry."></textarea>
+          <span class="bite"><em>0</em>/100</span>
+        </div>
+        <p class="error-msg">error text</p>
+      </div>
+
+      <div class="input-outer-box row-type">
+        <label for="inpNum01_031">인증번호</label>
+        <div class="textarea-box val-error">
+          <textarea name="name" rows="8" placeholder="Please enter content of your inquiry."></textarea>
+          <span class="bite"><em>0</em>/100</span>
+        </div>
+        <p class="error-msg">error text</p>
+      </div>
+
+      <h4 class="btm-border">- .success-msg</h4>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="input-box val-success">
+  <input type="text" class="input-item" placeholder="텍스트를 입력해 주세요.">
+  <button class="btn-reset"></button>
+</div>
+<p class="success-msg">success text</p>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        .input-outer-box영역으로 꼭 감싸야함.(input-outer-box가 없다면 error-msg의 부모요소의 position: relative; 적용)<br>
+        앞선 형제요소에 .val-error 클래스명을 추가해야 .error-msg 노출 가능함.<br>
+        좌측 라벨과 나란히 있는 타입일 경우 .coltype 클래스명을 추가해야 함.<br>
+        input이 두가지이상일 경우 .msg2 추가하여 임의로 위치 조정해야 함. (기본값은 50%씩)
+      </div>
+      <div class="input-outer-box">
+        <div class="input-box val-success">
+          <input type="text" class="input-item" placeholder="텍스트를 입력해 주세요.">
+          <button class="btn-reset"></button>
+        </div>
+        <p class="success-msg">success text</p>
+      </div>
+
+      <h4 class="btm-border">- .assistive-msg</h4>
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="input-outer-box">
+  <div class="input-box val-assistive">
+    <input type="text" class="input-item" placeholder="텍스트를 입력해 주세요.">
+    <button class="btn-reset"></button>
+  </div>
+  <p class="assistive-msg">assistive text</p>
+</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        .input-outer-box영역으로 꼭 감싸야함.(input-outer-box가 없다면 error-msg의 부모요소의 position: relative; 적용)<br>
+        앞선 형제요소에 .val-error 클래스명을 추가해야 .error-msg 노출 가능함.<br>
+        좌측 라벨과 나란히 있는 타입일 경우 .coltype 클래스명을 추가해야 함.<br>
+        input이 두가지이상일 경우 .msg2 추가하여 임의로 위치 조정해야 함. (기본값은 50%씩)
+      </div>
+      <div class="input-outer-box">
+        <div class="input-box val-assistive">
+          <input type="text" class="input-item" placeholder="텍스트를 입력해 주세요.">
+          <button class="btn-reset"></button>
+        </div>
+        <p class="assistive-msg">assistive text</p>
+      </div>
+
+
+      <br><br><br><br><br><br><br><br>
+    </div>
+  </div>
+  <div class="btn-top-box">
+    <a href="#" title="move to top" role="button" class="btn-top">
+      <span>top</span>
+    </a>
+  </div>
+
+</div>
+  <script>
+    $('#sampleDatePicker').datepicker({
+      minDate: '0'
+    });
+  </script>
+  <script type="text/javascript" src="../assets/js/file-upload-core.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0</title>
+
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <style>
+    .cont-outer > p, .cont-outer.fullcase, .cont-center, .cont-right > p {height:100px; background-color: rgb(205, 206, 182);}
+    .cont-outer {margin-bottom: 20px !important}
+    .test .bms-container .bms-content .cont-outer.fullcase {
+      background-color: #f4f4f4;
+    }
+
+
+
+    .checking-list-box .chk-box {
+      display: none;
+    }
+  </style>
+
+  <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../assets/js/common.js"></script>
+</head>
+
+<script>
+  $(function() {
+
+  })();
+</script>
+<body>
+
+<div class="bms-wrap">
+  <div class="skip-nav">
+    <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
+  </div>
+
+  <!-- header -->
+  <div class="bms-header">
+    <img src="../assets/images/temp/@header.png" alt="">
+  </div>
+  <!--//header -->
+
+  <!-- container -->
+  <div id="bmsContainer" class="bms-container"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+    <div class="bms-content">
+
+      <div class="cont-outer">
+
+        <!--S: checking list-->
+        <div class="checking-list-box">
+          <div class="btn-area">
+            <div class="edit-box">
+              <button class="btn-txt btn-icon2 btn-edit btn-file">파일 선택</button>
+            </div>
+            <div class="chk-box">
+              <div>
+                <div>
+                  <span class="cont-text2 btn-txt btn-icon2 btn-file" disabled="disabled">선택된 파일 (<strong></strong>)</span>
+                  <button class="btn-txt btn-cancel">선택 취소</button>
+                  <a href="" title="download" class="btn-txt btn-icon">선택 일괄 다운로드</a>
+                </div>
+              </div>
+            </div>
+            <div class="toggle-box">
+              <div class="select-box list-select-box">
+                <p class="selected-value">12개 노출</p>
+                <ul class="select-items">
+                  <li>option1</li>
+                  <li>option2</li>
+                  <li>option3</li>
+                </ul>
+              </div>
+              <div class="common-toggle-btns">
+                <p class="gallery-btn active"></p>
+                <p class="list-btn"></p>
+              </div>
+            </div>
+          </div>
+          <ul class="checking-list cont-type gallery-type thumbnail-gallery column3 active">
+            <li class="list gallery-box"><span class="list-contents"><div class="img-box" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></div></span></li>
+            <li class="list gallery-box"><span class="list-contents"><div class="img-box" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></div></span></li>
+            <li class="list gallery-box"><span class="list-contents"><div class="img-box" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></div></span></li>
+            <li class="list gallery-box"><span class="list-contents"><div class="img-box" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></div></span></li>
+            <li class="list gallery-box"><span class="list-contents"><div class="img-box" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></div></span></li>
+            <li class="list gallery-box"><span class="list-contents"><div class="img-box" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></div></span></li>
+          </ul>
+          <ul class="checking-list-all cont-type list-type"> <!-- 상위 checkbox 가 있을 경우에만 .checking-list-all 클래스명 사용 -->
+            <li class="list">
+              <span class="list-contents-all">option1</span><!-- 상위 checkbox 가 있을 경우에만 list-contents-all 클래스명 사용 -->
+              <ul class="checking-list tbl-list"><!-- 단일 checkbox list 일 경우에는 .checking-list 클래스명 사용 -->
+                <li class="list">
+                  <div class="list-contents">
+                    option1-1
+                  </div>
+                </li>
+                <li class="list">
+                  <div class="list-contents">
+                    option1-1
+                  </div>
+                </li>
+                <li class="list">
+                  <div class="list-contents">
+                    option1-1
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="list">
+              <span class="list-contents-all">option2</span><!-- 상위 checkbox 가 있을 경우에만 list-contents-all 클래스명 사용 -->
+              <ul class="checking-list tbl-list">
+                <li class="list">
+                  <div class="list-contents">
+                    option1-1
+                  </div>
+                </li>
+                <li class="list">
+                  <div class="list-contents">
+                    option1-1
+                  </div>
+                </li>
+                <li class="list">
+                  <div class="list-contents">
+                    option1-1
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="list">
+              <span class="list-contents-all">option3</span><!-- 상위 checkbox 가 있을 경우에만 list-contents-all 클래스명 사용 -->
+              <ul class="checking-list tbl-list">
+                <li class="list">
+                  <div class="list-contents">
+                    option1-1
+                  </div>
+                </li>
+                <li class="list">
+                  <div class="list-contents">
+                    option1-1
+                  </div>
+                </li>
+                <li class="list">
+                  <div class="list-contents">
+                    option1-1
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="list">
+              <span class="list-contents-all">option4</span><!-- 상위 checkbox 가 있을 경우에만 list-contents-all 클래스명 사용 -->
+              <ul class="checking-list tbl-list">
+                <li class="list">
+                  <div class="list-contents">
+                    option1-1
+                  </div>
+                </li>
+                <li class="list">
+                  <div class="list-contents">
+                    option1-1
+                  </div>
+                </li>
+                <li class="list">
+                  <div class="list-contents">
+                    option1-1
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="list">
+              <span class="list-contents-all">option5</span><!-- 상위 checkbox 가 있을 경우에만 list-contents-all 클래스명 사용 -->
+              <ul class="checking-list tbl-list">
+                <li class="list">
+                  <div class="list-contents">
+                    option1-1
+                  </div>
+                </li>
+                <li class="list">
+                  <div class="list-contents">
+                    option1-1
+                  </div>
+                </li>
+                <li class="list">
+                  <div class="list-contents">
+                    option1-1
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!--E: checking list-->
+
+      </div>
+
+    </div>
+  </div>
+  <!--//container -->
+
+  <!-- footer -->
+  <div class="bms-footer">
+    <img src="../assets/images/temp/@footer.png" alt="">
+  </div>
+  <!--//footer -->
+
+  <div class="btn-top-box">
+    <button title="move to top" role="button" class="btn-top">
+      <span>TOP</span> <!-- 220527 대문자 변경 -->  </button>
+  </div>
+</div>
+<script>
+</script>
+</body>
+</html>

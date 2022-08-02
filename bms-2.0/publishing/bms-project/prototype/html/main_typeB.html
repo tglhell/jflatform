@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>Main Type B - BMS Prototype</title>
+
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../assets/js/common.js"></script>
+  <style>
+    .bms-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      height: 70px;
+    }
+    .bms-header.fixed {
+      background-color: #fff;
+    }
+    .bms-header .inner-content {
+      position: relative;
+      max-width: 1920px;
+      margin: 0 auto;
+      padding: 0 80px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .bms-header .inner-content .logo {
+      position: absolute;
+      top: 24px;
+      left: 80px;
+    }
+    .bms-header .inner-content .menu {
+      padding-top: 20px;
+    }
+    .bms-header .inner-content .util {
+      position: absolute;
+      top: 22px;
+      right: 80px;
+    }
+    .bms-container {
+      padding: 70px 0 0;
+    }
+    .bms-container .bms-content .cont-outer.fullcase {
+      max-width: 1920px;
+    }
+    .bms-container .bms-content .cont-inner .btn01 {
+      position: absolute;
+      top: 964px;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 116px;
+      z-index: 5;
+    }
+    .bms-footer {
+      padding: 56px 0 56px;
+      background-color: #000;
+    }
+    .bms-footer .inner-content {
+      position: relative;
+      max-width: 1920px;
+      margin: 0 auto;
+      padding: 0 80px;
+      box-sizing: border-box;
+    }
+    .bms-footer .inner-content .foot-logo {
+      position: absolute;
+      top: 0;
+      left: 80px;
+    }
+    .bms-footer .inner-content .foot-area {
+      padding-left: 25%;
+      display: flex;
+    }
+    .bms-footer .inner-content .foot-area p {
+      width: 33%;
+    }
+
+    .search-area {
+      padding: 257px 80px;
+    }
+    .search-inner {
+      width: 950px;
+      margin: 0 auto;
+    }
+    .search-inner .tit {
+      padding-bottom: 56px;
+    }
+    .search-inner input {
+      width: 100%;
+      height: 100px;
+      font-size: 100px;
+      border: none;
+      font-weight: 500;
+      background-color: transparent;
+    }
+    .search-inner input::placeholder {
+      color: #F6F3F2;
+    }
+    .search-inner input:focus {
+      outline: none;
+    }
+    .btn-area {
+      padding: 0 80px;
+      font-size: 0;
+      display: flex;
+    }
+    .btn-area .btn {
+      position: relative;
+      width: 50%;
+      height: 140px;
+      justify-content: left;
+      background-color: #F6F3F2;
+      transition: all 0.3s ease-in-out;
+    }
+    .btn-area .btn span {
+      color: #000;
+      transition: all 0.3s ease-in-out;
+    }
+    .btn-area .btn:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 48px;
+      transform: translateY(-50%);
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: url('../assets/images/prototype/arr_02.png') no-repeat 0 0;
+      transition: all 0.3s ease-in-out;
+    }
+    .btn-area .btn.active {
+      width: 90%;
+    }
+    .btn-area .btn.left {
+      padding-left: 88px;
+    }
+    .btn-area .btn.right {
+      padding-right: 88px;
+      justify-content: right;
+    }
+    .btn-area .btn.right:before {
+      left: auto;
+      right: 48px;
+      background-image: url('../assets/images/prototype/arr_03.png');
+    }
+    .btn-area .btn span {
+      font-size: 26px;
+      font-weight: 500;
+    }
+    .btn-area .btn:hover {
+      background-color: #002C5F;
+    }
+    .btn-area .btn:hover span {
+      text-decoration: underline;
+      color: #fff;
+    }
+    .btn-area .btn:hover:before {
+      background-image: url('../assets/images/prototype/arr_02_hover.png');
+    }
+    .btn-area .btn.right:hover:before {
+      background-image: url('../assets/images/prototype/arr_03_hover.png');
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="bms-wrap">
+  <div class="skip-nav">
+    <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
+  </div>
+
+  <!-- header -->
+  <div class="bms-header">
+    <div class="inner-content">
+        <p class="logo"><img src="../assets/images/temp/logo.png" alt=""></p>
+        <p class="menu"><img src="../assets/images/temp/menu.png" alt=""></p>
+        <p class="util"><img src="../assets/images/temp/util.png" alt=""></p>
+    </div>
+  </div>
+  <!--//header -->
+
+  <!-- container -->
+  <div id="bmsContainer" class="bms-container">
+    <div class="bms-content">
+      <!-- S: cont-outer -->
+      <div class="cont-outer fullcase">
+        <div class="cont-inner">
+          <div class="search-area">
+            <div class="search-inner">
+              <p class="tit"><img src="../assets/images/prototype/main_typeB_txt.png" alt=""></p>
+              <input type="text" placeholder="Hyundai Guidelines">
+            </div>
+          </div>
+          <div class="btn-area">
+            <a href="" class="btn left"><span>Latest content</span></a>
+            <a href="" class="btn right"><span>New Design Review Submission</span></a>
+          </div>
+          <div id="mainContent">
+            <img src="../assets/images/prototype/main_typeB.png" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- E: cont-outer -->
+    </div>
+  </div>
+  <!--//container -->
+
+  <!-- footer -->
+  <div class="bms-footer">
+    <div class="inner-content">
+        <p class="foot-logo"><a href=""><img src="../assets/images/temp/foot_logo.png" alt=""></a></p>
+        <div class="foot-area">
+            <p class="footer01"><a href=""><img src="../assets/images/temp/footer01.png" alt=""></a></p>
+            <p class="footer02"><a href=""><img src="../assets/images/temp/footer02.png" alt=""></a></p>
+            <p class="footer03"><a href=""><img src="../assets/images/temp/footer03.png" alt=""></a></p>
+        </div>
+    </div>
+  </div>
+  <!--//footer -->
+
+  <script>
+    $(function(){
+      $(window).scroll(function(){
+        if ( $(this).scrollTop() > 0 ){
+          $('.bms-header').addClass('fixed');
+        }
+        else {
+          $('.bms-header').removeClass('fixed');
+        }
+      });
+
+      $('.search-inner input').focus();
+
+      $('.btn-area .btn').on('mouseover', (e) => {
+        $(e.currentTarget).addClass('active').siblings().removeClass('active');
+      });
+      $('.btn-area').on('mouseleave', (e) => {
+        $('.btn-area .btn').removeClass('active');
+      });
+      $('.btn-area .btn.left').on('click', (e) => {
+        const _top = $('#mainContent').position().top + 50
+        $('html, body').animate({scrollTop: _top}, 500);
+        return false;
+      })
+    })
+  </script>
+
+</div>
+</body>
+</html>

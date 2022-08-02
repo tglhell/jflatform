@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0 CODING GUIDE</title>
+
+  <!-- 코딩 가이드용 -->
+  <link rel="stylesheet" href="docs/guide.css">
+  <link rel="stylesheet" href="docs/prism.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <script type="text/javascript" src="docs/prism.js"></script>
+  <script type="text/javascript" src="docs/plugin.js"></script>
+  <!-- //코딩 가이드용 -->
+
+  <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../assets/js/common.js"></script>
+
+  <script>
+    $(function(){
+      $('.view_code').on('click', function(){
+        $(this).next('.code-toolbar').toggleClass('open');
+      });
+    });
+  </script>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="header">
+    <div><em>BMS 2.0</em> project coding guide</div>
+    <h1><img src="images/logo_header.png" alt="로고"></h1>
+  </div>
+
+  <div class="cont_codGuide guide_container">
+
+
+    <div class="tab">
+      <a href="coding_guide_default.html" title="DEFAULT">DEFAULT</a>
+      <a href="javascript:void(0);" title="NAMING" class="active">NAMING</a>
+      <a href="coding_guide_box.html" title="BOX">BOX</a>
+      <a href="coding_guide_button.html" title="BUTTON">BUTTON</a>
+      <a href="coding_guide_form.html" title="FORM">FORM</a>
+      <a href="coding_guide_font.html" title="FONT">FONT</a>
+      <a href="coding_guide_table.html" title="TABLE">TABLE</a>
+      <a href="coding_guide_tab.html" title="TAB">TAB</a>
+      <!--			<a href="coding_guide_scroll.html" title="SCROLL">SCROLL</a>-->
+      <a href="coding_guide_carousel.html" title="CAROUSEL">CAROUSEL</a>
+      <a href="coding_guide_popup.html" title="POPUP">POPUP</a>
+      <a href="coding_guide_etc.html" title="ETC">ETC</a>
+    </div>
+
+    <div class="contents_infor guide-content">
+
+      <h2 class="title">네임 정의</h2>
+      <div class="conIn_tip">
+        <p><strong>html</strong> 파일명 - 단어와 단어 사이에 "_" 언더바 사용, 화면내용을 암시할 수 있도록 네이밍한다. EX) upload_list.html</p>
+        <p><strong>class</strong> - 단어와 단어사이에 "-" 하이픈 사용, 숫자는 하이픈 없이 기본두자리수로 작성, 경우에따라 1은 생략할 수 도 있다. EX) btn-area, table-type, table-type02</p>
+        <p><strong>id</strong> - 기본적으로 camelCase사용한다.  EX)gnbToggle, searchEvent</p>
+        <p><strong>image</strong> - 언더스코어 "_"로 정의 한다. 숫자는 하이픈 없이 기본두자리수로 작성, 경우에따라 01은 생략할 수 도 있다.</p>
+      </div>
+      <!-- 코드 삽입 -->
+      <pre class="language-html"><code>
+</code></pre>
+      <!-- 코드 삽입 -->
+
+
+
+      <h2 class="title mt30">예약어 정의</h2>
+      <div class="conIn_tip">
+        사용된 클래스명 - <strong>bms-wrap,  bms-header,  bms-container,  bms-content, bms-footer,</strong>
+        cta-outer, cont-outer, bottom-fixed
+      </div>
+
+      <h2 class="title mt30">기본폴더 구조 - 작업중</h2>
+      <!-- tree 구조 start -->
+      <div class="example box_content type3">
+        <!--                 <ul class="jqueryFileTree"> -->
+        <!--                     <li class="directory"> -->
+        <!--                         bms-publish -->
+        <!--                         <ul class="jqueryFileTree"> -->
+        <!--                             <li class="directory">html -->
+        <!--                                 <ul class="jqueryFileTree"> -->
+        <!--                                     <li class="directory">model (IONIQ5, NEXO)</li> -->
+        <!--                                     <li class="directory">purchase (차량검색, 견적/시승, 구매안내)</li> -->
+        <!--                                     <li class="directory">services (Mocean, Bluelink, 빌트인캠, 충전서비스)</li> -->
+        <!--                                     <li class="directory">store</li> -->
+        <!--                                     <li class="directory">contents (Curation, 이벤트)</li> -->
+        <!--                                     <li class="directory">brand (브랜드스토리, 라이프스타일, 브랜드거점)</li> -->
+        <!--                                     <li class="directory">my</li> -->
+        <!--                                     <li class="directory">members (회원가입, 휴면계정, 로그인)</li>                                     -->
+        <!--                                     <li class="directory">email</li> -->
+        <!--                                     <li class="directory">order (장바구니, 주문서, 결제, 주문완료)</li> -->
+        <!--                                     <li class="directory">common (알림, 검색, 공유, 약관/방침, 쿠키사용동의, 에러)</li> -->
+        <!--                                 </ul> -->
+        <!--                             </li> -->
+        <!-- 							<li class="directory"> -->
+        <!--                                 assets -->
+        <!-- 								<ul class="jqueryFileTree"> -->
+        <!-- 									<li class="directory">css -->
+        <!--                                         <ul class="jqueryFileTree"> -->
+        <!-- 											<li class="directory">lib -->
+        <!-- 												<ul class="jqueryFileTree"> -->
+        <!-- 													<li class="file ext_txt">customlib.css (API Custom Style)</li> -->
+        <!-- 													<li class="file ext_txt">jquery-ui.css</li> -->
+        <!-- 													<li class="file ext_txt">swiper.min.css</li> -->
+        <!-- 												</ul> -->
+        <!-- 											</li> -->
+        <!-- 										</ul> -->
+        <!-- 										<ul class="jqueryFileTree"> -->
+        <!-- 											<li class="file ext_txt">common.css (font style, reset, layout, common style)</li> -->
+        <!-- 											<li class="file ext_txt">main.css</li> -->
+        <!-- 											<li class="file ext_txt">lnbMenu.css</li> -->
+        <!-- 											<li class="file ext_txt">brand.css</li> -->
+        <!-- 											<li class="file ext_txt">contents.css (Files in common diretory)</li> -->
+        <!-- 											<li class="file ext_txt">member.css</li> -->
+        <!-- 											<li class="file ext_txt">mocean.css</li> -->
+        <!-- 											<li class="file ext_txt">model.css</li> -->
+        <!-- 											<li class="file ext_txt">my.css</li> -->
+        <!-- 											<li class="file ext_txt">order.css</li> -->
+        <!-- 											<li class="file ext_txt">purchase.css</li> -->
+        <!-- 											<li class="file ext_txt">service.css</li> -->
+        <!-- 											<li class="file ext_txt">shop.css</li> -->
+        <!-- 										</ul> -->
+        <!-- 									</li> -->
+        <!-- 									<li class="directory">fonts -->
+        <!-- 										<ul class="jqueryFileTree"> -->
+        <!--                                             <li class="file ext_txt">HyundaiSansHeadJP-Medium</li> -->
+        <!--                                             <li class="file ext_txt">HyundaiSansHeadJP-Regular</li> -->
+        <!--                                             <li class="file ext_txt">HyundaiSansTextJP-Regular</li> -->
+        <!--                                         </ul> -->
+        <!-- 									</li> -->
+        <!-- 									<li class="directory">js -->
+        <!-- 										<ul class="jqueryFileTree"> -->
+        <!-- 											<li class="directory">lib -->
+        <!-- 												<ul class="jqueryFileTree"> -->
+        <!-- 													<li class="file ext_txt">common-lib.js (jquery 3.4.1, jquery-ui 1.12.1)</li> -->
+        <!-- 													<li class="file ext_txt">swiper.min.js (swiper 5.3.6, swiper.min.js.map)</li> -->
+        <!-- 													<li class="file ext_txt">variable.js</li> -->
+        <!-- 												</ul> -->
+        <!-- 											</li> -->
+        <!-- 										</ul> -->
+        <!-- 										<ul class="jqueryFileTree"> -->
+        <!-- 											<li class="file ext_txt">common.js</li> -->
+        <!-- 											<li class="file ext_txt">main.js</li> -->
+        <!-- 										</ul> -->
+        <!-- 									</li> -->
+        <!-- 									<li class="directory">images -->
+        <!-- 										<ul class="jqueryFileTree"> -->
+        <!-- 											<li class="directory">common</li> -->
+        <!-- 											<li class="directory">email</li> -->
+        <!-- 										</ul> -->
+        <!-- 									</li> -->
+        <!-- 								</ul> -->
+        <!--                             </li> -->
+        <!--                         </ul> -->
+        <!--                     </li> -->
+        <!--                 </ul> -->
+      </div>
+      <!--// tree 구조 end -->
+
+    </div>
+    <!-- //contents_infor -->
+  </div>
+</div>
+<div class="btn-top-box">
+  <a href="#" title="move to top" role="button" class="btn-top">
+    <span>top</span>
+  </a>
+</div>
+
+</body>
+</html>

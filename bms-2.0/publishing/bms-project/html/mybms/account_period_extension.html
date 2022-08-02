@@ -1,0 +1,338 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0</title>
+
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+  <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../../assets/js/common.js"></script>
+</head>
+
+<body>
+
+<div class="bms-wrap">
+  <div class="skip-nav">
+    <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
+  </div>
+
+  <!-- header -->
+  <div class="bms-header">
+    <!-- 상단 gnb -->
+    <div class="gnb-menu">
+      <div class="inner-content">
+        <a href="" class="logo"><img src="../../assets/images/common/logo.png" alt=""></a>
+        <div class="menu">
+          <ul>
+            <li class="menu-first-li">
+              <a href="">Brand Guidelines</a>
+            </li>
+            <li class="menu-first-li">
+              <a href=""> Library</a>
+            </li>
+            <li class="menu-first-li">
+              <a href="">Review Tools</a>
+            </li>
+            <li class="menu-first-li">
+              <a href="">Brand Reports</a>
+            </li>
+            <li class="menu-first-li">
+              <a href="">My BMS</a>
+            </li>
+          </ul>
+        </div>
+        <div class="util">
+          <a href="" class="gnb-bookmark"></a>
+          <div class="select-box select-lang">
+            <p class="selected-value">EN</p>
+            <ul class="select-items">
+              <li class="selected"><a href="javascript:;">EN</a></li>
+              <li><a href="javascript:;">KR</a></li>
+              <li><a href="javascript:;">CH</a></li>
+            </ul>
+          </div>
+          <a href="" class="link-login">Logout</a>
+          <a href="" class="gnb-hamburger"></a>
+        </div>
+      </div>
+    </div>
+    <!-- right megamenu (햄버거메뉴 클릭 시 노출 화면) -->
+  </div>
+  <!--//header -->
+
+  <!-- container -->
+  <div id="bmsContainer" class="bms-container">
+    <div class="bms-content">
+      <div class="cont-outer">
+        <!-- S: breadclumb -->
+        <div class="breadclumb-outer">
+          <span class="breadclumb"><em>Home</em></span>
+          <span class="breadclumb"><em>My BMS</em></span>
+          <span class="breadclumb"><em>Account</em></span>
+          <span class="breadclumb regular"><em>계정 사용기간 연장요청</em></span>
+        </div>
+        <!-- E: breadclumb -->
+      </div>
+      <!-- S: cont-outer -->
+      <div class="cont-outer form">
+        <!-- S: [account-period-extension] -->
+        <div class="account-period-extension"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+          <div class="tit-box">
+            <h1 class="h1-title">계정 사용기간 연장요청</h1>
+            <p class="cont-text">계정 사용기간 연장을 위해 지정된 담당 임직원의 승인이 필요합니다.<br/>아래 정보 확인 후 담당 임직원의 계정연장 요청을 진행해주세요.</p>
+          </div>
+          <div class="user-information">
+            <!-- S: account-info -->
+            <div class="tbl-box tbl-type1 account-info">
+              <div class="cont-tit2 fc-color3">계정 정보</div>
+              <table>
+                <caption class="blind">비고정 타입</caption>
+                <colgroup>
+                  <col width="256px">
+                  <col>
+                </colgroup>
+                <tbody>
+                <tr>
+                  <th scope="row">이메일</th>
+                  <td>brandhome@hyundai.com</td>
+                </tr>
+                <tr>
+                  <th scope="row">이름</th>
+                  <td>길동 홍</td>
+                </tr>
+                <tr>
+                  <th scope="row">권역</th>
+                  <td>Asia Pacific</td>
+                </tr>
+                <tr>
+                  <th scope="row">국가/지역</th>
+                  <td>Laos</td>
+                </tr>
+                <tr>
+                  <th scope="row">소속</th>
+                  <td>협력사</td>
+                </tr>
+                <tr>
+                  <th scope="row">회사명</th>
+                  <td>Anchors</td>
+                </tr>
+                <tr>
+                  <th scope="row">계정 사용기간</th>
+                  <td class="fc-color5">01.01.2022~ 04.15.2022</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- E: account-info -->
+            <!-- S: staff-incharge -->
+            <div class="staff-incharge">
+              <div class="cont-tit2 fc-color3">담당 임직원 정보</div>
+              <div>
+                <p class="cont-text2">임직원 조회 버튼을 클릭하시면<br>이름 / 이메일 검색을 통해 담당 임직원의 정보를 선택하실 수 있습니다.</p>
+                <button class="btn btn-type3 btn-middle-small pop-open" data-pop-idx="1"><span>임직원 조회</span></button><!-- 220622 btn-small -> btn-middle-small 클래스명 변경 -->
+              </div>
+              <div class="tbl-box tbl-type1">
+                <table>
+                  <caption class="blind"></caption>
+                  <colgroup>
+                    <col width="256px">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                  <tr>
+                    <th scope="row"><label for="inpTxt10">이름</label></th>
+                    <td>
+                      <div class="input-outer-box">
+                        <div class="input-box">
+                          <input type="text" id="inpTxt10" class="input-item" placeholder="정조영" maxlength="100" disabled>
+                          <button class="btn-reset"></button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><label for="inpTxt11">이메일</label></th>
+                    <td>
+                      <div class="input-outer-box">
+                        <div class="input-box">
+                          <input type="text" id="inpTxt11" class="input-item" placeholder="jochung@hyundai.com" maxlength="100" disabled>
+                          <button class="btn-reset"></button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><label for="inpTxt12">법인/사업장</label></th>
+                    <td>
+                      <div class="input-outer-box">
+                        <div class="input-box">
+                          <input type="text" id="inpTxt12" class="input-item" placeholder="현대자동차" maxlength="100" disabled>
+                          <button class="btn-reset"></button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- E: staff-incharge -->
+            <div class="input-outer-box row-type inp-type time-type text-box-outer">
+              <label>계정연장 사유 <span class="required">*</span></label>
+              <div class="inp-btn-box">
+                <div class="textarea-box">
+                  <textarea name="name" rows="8" placeholder="브랜드홈 사용 목적을 입력해주세요."></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="cta-outer">
+              <button class="btn btn-type2 btn-xlarge"><span>취소</span></button>
+              <button class="btn btn-xlarge"><span>계정연장 요청</span></button>
+            </div>
+          </div>
+        </div>
+        <!-- E: [account-period-extension] -->
+        <!-- S: layer popup -->
+        <div class="layer-popup-wrap pop-employees" data-pop-idx="1">
+          <div class="layer-popup-body">
+            <div class="layer-popup-cont">
+              <div class="layer-popup-cont-inner"> <!-- 20220622 class 명 변경 -->
+                <h4 class="layer-title">임직원 조회</h4>
+                <div class="layer-cont">
+                  <div class="layer-cont-inner">
+                    <div class="input-outer-box row-type">
+                      <div class="input-group-box">
+                        <div class="select-box">
+                          <p class="selected-value">이름</p>
+                          <ul class="select-items">
+                            <li>option1</li>
+                            <li>option2</li>
+                            <li>option3</li>
+                          </ul>
+                        </div>
+                        <div class="input-box">
+                          <input type="text" id="inpName01_012" class="input-item inp-type-box" placeholder="이름을 입력해주세요.">
+                          <button class="btn-reset"></button>
+                        </div>
+                        <button class="btn btn-middle btn-type3"><span>조회</span></button>
+                      </div>
+                    </div>
+                    <div class="tbl-box tbl-type2">
+                      <table>
+                        <caption class="blind">비고정 타입</caption>
+                        <colgroup>
+                          <col style="width: 180px">
+                          <col>
+                          <col style="width: 160px">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                          <th scope="row">이름</th>
+                          <th scope="row">이메일</th>
+                          <th scope="row">법인/사업장</th>
+                        </tr>
+                        <tr class="no-data"> <!-- 20220622 no-data 타입 추가 -->
+                          <td colspan="3">검색 결과가 없습니다.</td>
+                        </tr>
+                        <tr>
+                          <td><label class="radio"><input type="radio" name="radio" id="radioChk01"><span>정조영</span></label></td>
+                          <td>jochung@hyundai.com</td>
+                          <td>현대자동차</td>
+                        </tr>
+                        <tr>
+                          <td><label class="radio"><input type="radio" name="radio" id="radioChk02"><span>정조영</span></label></td>
+                          <td>jochung@hyundai.com</td>
+                          <td>현대자동차</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="pagination">
+                      <a href="#" class="btn-page-first"></a>
+                      <a href="#" class="btn-page-prev"></a>
+                      <a href="#" class="btn-page-num active">1</a>
+                      <a href="#" class="btn-page-num">2</a>
+                      <a href="#" class="btn-page-num">3</a>
+                      <a href="#" class="btn-page-num">4</a>
+                      <a href="#" class="btn-page-num">5</a>
+                      <a href="#" class="btn-page-next">더보기 <span>(<em>1</em>/<em>3</em>)</span></a>
+                      <a href="#" class="btn-page-last"></a>
+                    </div>
+                  </div>
+                  <div class="cta-outer">
+                    <button class="btn btn-middle btn-type2 btn-close"><span>취소</span></button>
+                    <button class="btn btn-middle"><span>적용</span></button>
+                  </div>
+                </div>
+              </div>
+              <button class="btn-close-popup btn-close">close</button>
+            </div>
+          </div>
+        </div>
+        <!-- E: layer popup -->
+      </div>
+      <!-- E: cont-outer -->
+    </div>
+  </div>
+  <!--//container -->
+
+  <!-- S: 220629 footer 수정 -->
+  <!-- footer -->
+  <div class="bms-footer">
+    <div class="footer-inner">
+      <div class="foot-logo">
+        <img src="../../assets/images/main/foot_logo.png" alt="logo">
+      </div>
+      <div class="foot-menu">
+        <ul>
+          <li class="cont-tit2"><a href="#">Sitemap</a></li>
+          <li class="cont-tit2"><a href="#">Newsletter</a></li>
+          <li class="cont-tit2"><a href="#">Glossary</a></li>
+        </ul>
+      </div>
+      <div class="foot-contact">
+        <p class="cont-tit2"><a href="#">Contact Us</a></p>
+        <div>
+          <p class="caption htr">Brand Design Support Seoul</p>
+          <p class="caption htr">+82 2 6410 8232</p>
+        </div>
+        <div>
+          <p class="caption htr">Brand Design Support Berlin</p>
+          <p class="caption htr">+49 30 22 06 62 390</p>
+        </div>
+        <div>
+          <p class="caption htr">Global E-mail</p>
+          <p class="caption htr email">guideline@hyundai.com</p>
+        </div>
+      </div>
+      <div class="foot-terms">
+        <div class="terms-list">
+          <p class="cont-text2"><a href="#">Terms of Use</a></p>
+          <p class="privacy cont-text2"><a href="#">Privacy Policy</a></p>
+        </div>
+        <p class="copy caption htr fc-color4">© 2022 Hyundai Motor Company</p>
+      </div>
+    </div>
+  </div>
+  <!--//footer -->
+  <!-- E: 220629 footer 수정 -->
+
+  <div class="btn-top-box">
+    <button title="move to top" role="button" class="btn-top">
+      <span>TOP</span> <!-- 220527 대문자 변경 -->
+    </button>
+  </div>
+</div>
+<script>
+  $('#sampleDatePicker').datepicker({
+    minDate: '0'
+  });
+
+</script>
+</body>
+</html>

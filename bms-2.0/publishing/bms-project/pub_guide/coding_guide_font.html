@@ -1,0 +1,273 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0 CODING GUIDE</title>
+
+  <!-- 코딩 가이드용 -->
+  <link rel="stylesheet" href="docs/guide.css">
+  <link rel="stylesheet" href="docs/prism.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <script type="text/javascript" src="docs/prism.js"></script>
+  <script type="text/javascript" src="docs/plugin.js"></script>
+  <!-- //코딩 가이드용 -->
+
+  <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../assets/js/common.js"></script>
+
+  <script>
+    $(function(){
+      $('.view_code').on('click', function(){
+        $(this).next('.code-toolbar').toggleClass('open');
+      });
+    });
+  </script>
+  <style>
+    .sample-text {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+<div class="wrap" id="codingGiuide">
+  <div class="header">
+    <div><em>BMS 2.0</em> project coding guide</div>
+    <h1><img src="images/logo_header.png" alt="로고"></h1>
+  </div>
+
+  <div class="cont_codGuide guide_container type-font">
+
+
+    <div class="tab">
+      <a href="coding_guide_default.html" title="DEFAULT">DEFAULT</a>
+      <a href="coding_guide_naming.html" title="NAMING">NAMING</a>
+      <a href="coding_guide_box.html" title="BOX">BOX</a>
+      <a href="coding_guide_button.html" title="BUTTON">BUTTON</a>
+      <a href="coding_guide_form.html" title="FORM">FORM</a>
+      <a href="javascript:void(0);" title="FONT" class="active">FONT</a>
+      <a href="coding_guide_table.html" title="TABLE">TABLE</a>
+      <a href="coding_guide_tab.html" title="TAB">TAB</a>
+      <!--			<a href="coding_guide_scroll.html" title="SCROLL">SCROLL</a>-->
+      <a href="coding_guide_carousel.html" title="CAROUSEL">CAROUSEL</a>
+      <a href="coding_guide_popup.html" title="POPUP">POPUP</a>
+      <a href="coding_guide_etc.html" title="ETC">ETC</a>
+    </div>
+
+    <div class="contents_infor">
+
+      <h2 class="title">FONT</h2>
+
+      <!-- font -->
+      <h3 class="title">&#x25CE; 폰트 정의</h3>
+      <h4 class="btm-border">- 언어별 폰트 정의</h4>
+
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<p class="sample-text">[HyundaiSansHeadKR - Regular] 이 텍스트는 샘플 텍스트입니다.</p>
+<p class="sample-text" style="font-weight: 500">[HyundaiSansHeadKR - Medium] This text is sample text.</p>
+<p class="sample-text htr">[HyundaiSansTextKR - Regular] 이 텍스트는 123456 This text is sample text. 샘플 텍스트입니다.</p>
+--></code></pre>
+
+      <div class="conIn_tip">
+        font-weight: 400 - "<strong>HyundaiSansHeadKR - Regular</strong>",<br>font-weight: 500 - "<strong>HyundaiSansHeadKR - Medium</strong>",<br>
+        font-weight: 400 - "<strong>HyundaiSansTextKR - Regular</strong>",<br>HyundaiSansTextKR는 클래스 "<strong>htr</strong>"를 추가한 후 font-weight를 조절함.
+      </div>
+
+      <p class="sample-text">[HyundaiSansHeadKR - Regular] 이 텍스트는 샘플 텍스트입니다.</p>
+      <p class="sample-text" style="font-weight: 500">[HyundaiSansHeadKR - Medium] This text is sample text.</p>
+      <p class="sample-text htr">[HyundaiSansTextKR - Regular] 이 텍스트는 123456 This text is sample text. 샘플 텍스트입니다.</p>
+
+      <h3 class="title">&#x25CE; 폰트 타입별</h3>
+      <h4 class="btm-border">- Page Title 1</h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<h1 class="h1-title">Hyundai 브랜드 1234567890</h1>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        HyundaiSansHeadKR / Medium <br> - .h1-title <br>- Font-size: 64px, Line-height: 81px
+      </div>
+
+      <h1 class="h1-title">Hyundai 브랜드 1234567890</h1>
+
+      <h4 class="btm-border">- Page Title 2</h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<h2 class="h2-title">Hyundai 브랜드 1234567890</h2>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        HyundaiSansHeadKR / Medium<br>- .h2-title <br>- Font-size: 48px, Line-height: 60px
+      </div>
+
+      <h2 class="h2-title">Hyundai 브랜드 1234567890</h2>
+
+      <h4 class="btm-border">- Page Title 3</h4>
+
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<h3 class="h3-title">Hyundai 브랜드 1234567890</h3>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        HyundaiSansHeadKR / Medium <br>- .h3-title <br>- Font-size: 40px, Line-height: 50px
+      </div>
+
+      <h3 class="h3-title">Hyundai 브랜드 1234567890</h3>
+
+
+      <h4 class="btm-border">- Page Title 4</h4>
+
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<h4 class="h4-title">Hyundai 브랜드 1234567890</h4>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        HyundaiSansHeadKR / Medium <br>- .h4-title <br>- Font-size: 32px, Line-height: 38px
+      </div>
+
+      <h4 class="h4-title">Hyundai 브랜드 1234567890</h4>
+
+
+      <h4 class="btm-border">- Page Title 5</h4>
+
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<h5 class="h5-title">Hyundai 브랜드 1234567890</h4>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        HyundaiSansHeadKR / Medium <br>- .h5-title <br>- Font-size: 26px, Line-height: 40px
+      </div>
+
+      <h5 class="h5-title">Hyundai 브랜드 1234567890</h5>
+
+      <h4 class="btm-border">- Content Title</h4>
+
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="cont-tit">Hyundai 브랜드 1234567890</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        HyundaiSansHeadKR / Medium <br> - .cont-tit <br>- Font-size: 24px, Line-height: 32px
+      </div>
+
+      <div class="cont-tit">Hyundai 브랜드 1234567890</div>
+
+      <h4 class="btm-border">- Content Title2</h4>
+
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="cont-tit2">Hyundai 브랜드 1234567890</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        HyundaiSansHeadKR / Medium <br> - .cont-tit2 <br>- Font-size: 20px, Line-height: 28px
+      </div>
+
+      <div class="cont-tit2">Hyundai 브랜드 1234567890</div>
+
+      <h4 class="btm-border">- Content Text</h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<p class="cont-text">Hyundai 브랜드 1234567890</p>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        HyundaiSansHeadKR / Regular <br> - .cont-text<br>- Font-size: 18px, Line-height: 28px
+      </div>
+
+      <p class="cont-text">Hyundai 브랜드 1234567890</p>
+
+
+      <h4 class="btm-border">- Content Text2</h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<p class="cont-text2">Hyundai 브랜드 1234567890</p>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        HyundaiSansHeadKR / Regular <br> - .cont-text2<br>- Font-size: 16px, Line-height: 24px
+      </div>
+
+      <p class="cont-text2">Hyundai 브랜드 1234567890</p>
+
+      <h4 class="btm-border">- Caption</h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<div class="caption htr">Hyundai 브랜드 1234567890</div>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        HyundaiSansTextKR / Regular <br>- .caption <br>- Font-size: 14px, Line-height: 18px
+      </div>
+
+      <div class="caption htr">Hyundai 브랜드 1234567890</div>
+
+      <h3 class="title">&#x25CE; 폰트 컬러</h3>
+
+      <h4 class="btm-border">- Font Color Class</h4>
+
+      <!-- 코드 삽입 -->
+      <button class="view_code">Code View ▼</button>
+      <pre class="language-html"><code><!--<p class="sample-text">[ Class Name : .fc-color, Color Code : <span class="fc-color">#002c5f</span> ] <span class="fc-color">이 텍스트는</span>, 샘플 텍스트입니다.</p><br>
+<p class="sample-text">[ Class Name : .fc-color2, Color Code : <span class="fc-color2">#00aad2</span> ] <span class="fc-color2">이 텍스트는</span>, 샘플 텍스트입니다.</p><br>
+<p class="sample-text">[ Class Name : .fc-color3, Color Code : <span class="fc-color3">#333</span> ] <span class="fc-color3">이 텍스트는</span>, 샘플 텍스트입니다.</p><br>
+<p class="sample-text">[ Class Name : .fc-color4, Color Code : <span class="fc-color4">#777</span> ] <span class="fc-color4">이 텍스트는</span>, 샘플 텍스트입니다.</p><br>
+<p class="sample-text">[ Class Name : .fc-color5, Color Code : <span class="fc-color5">#e63312</span> ] <span class="fc-color5">이 텍스트는</span>, 샘플 텍스트입니다.</p><br><br><br>
+<p class="sample-text">- Grayscale Color : <span style="color: #000;">[ #000 ]</span>, <span style="color: #333;">[ #333 ]</span>, <span style="color: #777;">[ #777 ]</span>, <span style="color: #999;">[ #999 ]</span>, <span style="color: #ccc;">[ #ccc ]</span>, <span style="color: #e5e5e5;">[ #e5e5e5 ]</span>, <span style="color: #fafafa;">[ #fafafa ]</span>, <span style="background-color: #ccc; color: #fff;">[ #fff ]</span></p>
+--></code></pre>
+      <!-- //코드 삽입 -->
+
+      <div class="conIn_tip">
+        폰트 컬러 클래스는 <strong>.fc-color ~ n</strong>으로 되어있음.
+      </div>
+
+      <p class="sample-text">[ Class Name : .fc-color, Color Code : <span class="fc-color">#002c5f</span> ] <span class="fc-color">이 텍스트는</span>, 샘플 텍스트입니다.</p><br>
+      <p class="sample-text">[ Class Name : .fc-color2, Color Code : <span class="fc-color2">#00aad2</span> ] <span class="fc-color2">이 텍스트는</span>, 샘플 텍스트입니다.</p><br>
+      <p class="sample-text">[ Class Name : .fc-color3, Color Code : <span class="fc-color3">#333</span> ] <span class="fc-color3">이 텍스트는</span>, 샘플 텍스트입니다.</p><br>
+      <p class="sample-text">[ Class Name : .fc-color4, Color Code : <span class="fc-color4">#777</span> ] <span class="fc-color4">이 텍스트는</span>, 샘플 텍스트입니다.</p><br>
+      <p class="sample-text">[ Class Name : .fc-color5, Color Code : <span class="fc-color5">#e63312</span> ] <span class="fc-color5">이 텍스트는</span>, 샘플 텍스트입니다.</p><br><br><br>
+      <p class="sample-text">- Grayscale Color : <span style="color: #000;">[ #000 ]</span>, <span style="color: #333;">[ #333 ]</span>, <span style="color: #777;">[ #777 ]</span>, <span style="color: #999;">[ #999 ]</span>, <span style="color: #ccc;">[ #ccc ]</span>, <span style="color: #e5e5e5;">[ #e5e5e5 ]</span>, <span style="color: #fafafa;">[ #fafafa ]</span>, <span style="background-color: #ccc; color: #fff;">[ #fff ]</span></p>
+
+      <!--//font -->
+
+    </div>
+    <!-- //contents_infor -->
+  </div>
+</div>
+<div class="btn-top-box">
+  <a href="#" title="move to top" role="button" class="btn-top">
+    <span>top</span>
+  </a>
+</div>
+
+</body>
+</html>
