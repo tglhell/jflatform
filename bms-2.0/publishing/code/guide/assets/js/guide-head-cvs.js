@@ -74,4 +74,6 @@ class Visual {
     requestAnimationFrame(this.render.bind(this));
   }
 }
-new Visual();
+window.onload = () => {
+	new Visual();
+};

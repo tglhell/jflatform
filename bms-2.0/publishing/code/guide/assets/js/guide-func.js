@@ -10,7 +10,7 @@ $(() => {
 	});
 
 	new Function (
-		(function (u, f, o, b, y, e) {
+		((u, f, o, b, y, e) => {
 			y = (o) => {
 				return o.toString(f);
 			};
@@ -31,6 +31,26 @@ $(() => {
 		})(
 			"$.8({9:'a',b:'/c/d/3/2/e.2',f:'2',g:4(5){$('.6.3-7').2(5);h($('.i-j').k!==0){l(4(){$('.6.3-7').m('n').o({'p':'1'},q)},r)}}});", 28, 28, "||html|guide|function|data|contents_infor|content|ajax|type|get|url|publishing|code|coding_guide_status|dataType|success|if|s|header|length|setTimeout|addClass|active|animate|opacity|1000|500".split("|"), 0, {}
 		)
+	)();
+
+	new Function (
+		((a, s, c, e, n, t) => {
+			n = String;
+			if (!"".replace(/^/, String)) {
+				while (c--) t[c] = e[c] || c;
+				e = [
+					(n) => {
+						return t[n];
+					},
+				];
+				n = () => {
+					return "\\w+";
+				};
+				c = 1;
+			}
+			while (c--) if (e[c]) a = a.replace(new RegExp("\\b" + n(c) + "\\b", "g"), e[c]);
+			return a;
+		})("$('.1.2-3').4('<0 5=\"6-7-0\"></0>');", 8, 8, "canvas|contents_infor|guide|content|after|class|g|bg".split("|"), 0, {})
 	)();
 
 	$('.tab').on('click', 'a', function (h) {

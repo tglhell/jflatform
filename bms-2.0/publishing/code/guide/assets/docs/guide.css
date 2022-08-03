@@ -98,6 +98,7 @@ strong {
 	text-transform: uppercase;
 }
 .header .header-tit em {
+	margin-right: 5px;
 	font-family: var(--cm-font-family-head-light);
 	font-style: normal;
 	color: #16a0f0;
@@ -117,7 +118,7 @@ strong {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	opacity: .7;
+	opacity: .8;
 	z-index: 2;
 }
 
@@ -287,8 +288,9 @@ header.guide_header h1 {
 .guide_container:not(.type-font) h2:not(.s-title) {
 	margin-bottom: 10px;
 	color: var(--cm-title-black);
-	font-family: var(--cm-font-family-head-regular);
+	font-family: var(--cm-font-family-head-light);
 	font-size: 16px;
+	font-weight: 700;
 }
 .guide_container h2.title ~ h2.title{
 	margin-top: 30px;
@@ -538,7 +540,7 @@ header.guide_header h1 {
 	width: 100%;
 	padding: 5px 10px;
 	background-color: var(--cm-title-black);
-	font-family: var(--cm-font-family-head-regular);
+	font-family: var(--cm-font-family-head-light);
 	font-size: 16px;
 	color: #fff;
 	text-align: center;
@@ -607,6 +609,7 @@ header.guide_header h1 {
 
 .cont_codGuide .contents_infor .conIn_tip {
 	position: relative;
+	opacity: .9;
 	overflow: hidden;
 	margin-top: 10px;
 	border: 1px solid var(--cm-opacity-color-black);
@@ -637,7 +640,6 @@ header.guide_header h1 {
 .cont_codGuide .contents_infor .conIn_tip p {
 	-webkit-backdrop-filter: blur(150px);
 	backdrop-filter: blur(150px);
-	opacity: .9;
 	padding: 8px 12px;
 	border-radius: 7px;
 	font-size: 13px;

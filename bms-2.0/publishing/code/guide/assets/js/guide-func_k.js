@@ -23,6 +23,8 @@ $(() => {
 		}
 	});
 
+	$('.contents_infor.guide-content').after('<div class="g-bg-canvas"></div>');
+
 	$('.tab').on('click', 'a', (e) => {
 		const tabTitTxt = $(e.target).attr('data-label');
 		const tabIdx = [$(this).index(), $('.tab a.active').index()];

@@ -209,20 +209,18 @@ body.js .section .content {
 }
 
 .fcR {
-	position: relative;
-	display: inline-block;
 	color: #d90202;
 }
 
+.fcRb {
+	color: rebeccapurple;
+}
+
 .fcB {
-	position: relative;
-	display: inline-block;
 	color: #2280ff;
 }
 
 .fcG {
-	position: relative;
-	display: inline-block;
 	color: #0ba31f;
 }
 
@@ -313,11 +311,11 @@ body.js .section .content {
 }
 
 table td.state {
-	color: #109e1c;
+	color: palevioletred;
 }
 
 table td.worker {
-	color: #d90287;
+	color: cornflowerblue;
 	text-align: center;
 }
 
