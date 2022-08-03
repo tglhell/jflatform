@@ -64,7 +64,7 @@ table a:active:before {
 	width: 3px;
 	height: 3px;
 	border-radius: 50%;
-	background-color: #16a0f0;
+	background-color: rgba(22, 160, 240, .6);
 }
 
 .s-header h1 {
@@ -236,6 +236,10 @@ body.js .section .content {
 	font-size: 0;
 }
 
+.btn-box button + button {
+	margin-left: 10px;
+}
+
 .btn-box .btn-aem-64 {
 	display: inline-block;
 	font: 12px/1.5 'genesis-head-light', sans-serif;
@@ -384,7 +388,7 @@ td:last-child {
 	left: 0;
 	right: 0;
 	padding: 10px;
-	background: rgba(187, 187, 187, .5);
+	background: rgba(212, 211, 211, 0.8);
 	text-align: center;
 	font-size: 20px;
 	font-weight: 400;
@@ -515,3 +519,154 @@ td:last-child {
 		min-width: 100%;
 	}
 }
+
+/* s : custom button */
+.custom-btn {
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  padding: 5px 25px;
+  border-radius: 5px;
+	box-shadow:inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+	7px 7px 20px 0px rgba(0, 0, 0, .1),
+	2px 2px 2px 0px rgba(0, 0, 0, .1);
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+.custom-btn span {
+	transition: all .3s ease;
+  position: relative;
+}
+.custom-btn:hover span {
+	color: #16a0f0;
+}
+.custom-btn span:active:hover,
+.custom-btn span:focus:hover {
+	color: #16a0f0;
+}
+.custom-btn:active span:after,
+.custom-btn:focus span:after {
+  content: '';
+	position: absolute;
+	top: 0;
+	right: -9px;
+	width: 3px;
+	height: 3px;
+	background-color: rgba(68, 68, 68, .5);
+}
+.custom-btn:active:hover span:after,
+.custom-btn:focus:hover span:after {
+	background-color: rgba(22, 160, 240, 0.5);
+}
+/* style 1 */
+.btn-1 {
+  border: none;
+  color: #444;
+}
+.btn-1:after {
+	content: '';
+  direction: rtl;
+	transition: all 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 0;
+  height: 100%;
+  box-shadow:
+		-7px -7px 20px 0px #fff9,
+		-4px -4px 5px 0px #fff9,
+		7px 7px 20px 0px rgba(0, 0, 0, 0.045),
+		2px 2px 2px 0px rgba(0, 0, 0, 0.045);
+}
+.btn-1:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.btn-1:focus,
+.btn-1:active {
+  top: 1px;
+	color: #444;
+}
+/* style 2 */
+.btn-2 {
+  background: rgb(247, 150, 192);
+	background: radial-gradient(circle, rgba(247, 150, 192, 1) 0%, rgba(118, 174, 241, 1) 100%);
+  line-height: 36px;
+  padding: 0;
+  border: none;
+}
+.btn-2 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-2:before,
+.btn-2:after {
+  position: absolute;
+  content: "";
+  height: 0%;
+  width: 1px;
+	box-shadow:
+		-1px -1px 20px 0px rgba(255, 255, 255, 1),
+		-4px -4px 5px 0px rgba(255, 255, 255, 1),
+		7px 7px 20px 0px rgba(0, 0, 0, .4),
+		4px 4px 5px 0px rgba(0, 0, 0, .3);
+}
+.btn-2:before {
+  right: 0;
+  top: 0;
+  transition: all 500ms ease;
+}
+.btn-2:after {
+  left: 0;
+  bottom: 0;
+  transition: all 500ms ease;
+}
+.btn-2:hover{
+  background: transparent;
+  color: #76aef1;
+  box-shadow: none;
+}
+.btn-2:hover:before {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-2:hover:after {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-2 span:before,
+.btn-2 span:after {
+  position: absolute;
+  content: "";
+  box-shadow:
+		-1px -1px 20px 0px rgba(255, 255, 255, 1),
+		-4px -4px 5px 0px rgba(255, 255, 255, 1),
+		7px 7px 20px 0px rgba(0, 0, 0, .4),
+		4px 4px 5px 0px rgba(0, 0, 0, .3);
+}
+.btn-2 span:before {
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: .5px;
+  transition: all 500ms ease;
+}
+.btn-2 span:after {
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: .5px;
+  transition: all 500ms ease;
+}
+.btn-2 span:hover:before {
+  width: 100%;
+}
+.btn-2 span:hover:after {
+  width: 100%;
+}
+/* e : custom button */

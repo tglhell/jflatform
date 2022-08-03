@@ -1,3 +1,30 @@
+@import 'review.css'; /* 이 css에 취합 예정 */
+
+/* s : initializing css variable value */
+.design-review-wrap *,
+.design-review-wrap :where(*, :before, :after),
+.design-review-view *,
+.design-review-view :where(*, :before, :after) {
+	--pc-l-r-padding: 0 80px;
+	--tbl-l-r-padding: 0 40px;
+	--cm-color-dark-white: #fafafa;
+	--cm-color-dark-white2: #f6f3f2;
+	--cm-color-white: #fff;
+	--cm-color-dark-gray: #777;
+	--cm-color-dark-gray2: #999;
+	--cm-color-light-gray: #e9e9e9;
+	--cm-color-gray: #ccc;
+	--cm-color-green: #00aad2;
+	--cm-color-navy: #002c5f;
+	--cm-color-black0: #000;
+	--cm-color-black3: #333;
+	--fs-text-kr: 'HyundaiSansTextKR', sans-serif;
+	--fb-bold-lg: 500;
+	--fb-bold-xl: 700;
+}
+/* e : initializing css variable value */
+/* e : 취합 후 삭제할 부분 */
+
 .no-pd,
 .no-pd .bms-content .cont-outer {
     padding: 0;

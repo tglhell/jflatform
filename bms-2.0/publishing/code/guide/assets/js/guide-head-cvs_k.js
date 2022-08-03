@@ -224,3 +224,5 @@ new Visual();
 /* https://wsss.tistory.com/1283 */
 /* https://wsss.tistory.com/1070?category=701824 */
 /* https://snskeyboard.com/specialfont/ */
+/* http://tuxsudo.com/code/project/letterfx */
+/* https://inpa.tistory.com/entry/CSS-%F0%9F%92%8D-%EB%B2%84%ED%8A%BC-%EB%94%94%EC%9E%90%EC%9D%B8-%EB%AA%A8%EC%9D%8C */
