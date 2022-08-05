@@ -1,6 +1,6 @@
 $(() => {
-	$('.view_code').on('click', () => {
-		const _thisTar = $(this).next('.code-toolbar');
+	$(document).on('click', '.view_code', (e) => {
+		const _thisTar = $(e.target).next();
 		_thisTar.toggleClass('open');
 		if (_thisTar.hasClass('open')) {
 			_thisTar.slideDown();

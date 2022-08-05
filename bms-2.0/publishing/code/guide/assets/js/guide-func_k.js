@@ -27,7 +27,7 @@ $(() => {
 
 	$('.tab').on('click', 'a', (e) => {
 		const tabTitTxt = $(e.target).attr('data-label');
-		const tabIdx = [$(this).index(), $('.tab a.active').index()];
+		const tabIdx = [$(this).index(), $('.tab a span.active').parent().index()];
 		e.preventDefault();
 		$.ajax({
 			type: 'get',
@@ -35,7 +35,7 @@ $(() => {
 			dataType : 'html',
 			success: function(data) {
 				if (!$('.contents_infor.guide-content').is(':animated')) {
-					$(e.target).addClass('active').siblings().removeAttr('class');
+					$(e.target).parent().addClass('active').siblings().removeAttr('class');
 					if (tabIdx[0] > tabIdx[1]) {
 						$('.contents_infor.guide-content').animate({'left':'-25%', 'opacity':'0'}, 300, () => {
 							$('.contents_infor.guide-content').css({'left':'auto', 'right':'-25%'});

@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* @import '/publishing/code/guide/assets/docs/base.css'; */
+@import '/publishing/code/guide/assets/css/button.css';
 :root {
 	--cm-title-white: #fff;
 	--cm-title-black: #444;
@@ -287,7 +287,7 @@ header.guide_header h1 {
 }
 
 .guide_container:not(.type-font) h2:not(.s-title) {
-	margin-bottom: 10px;
+	margin-bottom: 12px;
 	color: var(--cm-title-black);
 	font-family: var(--cm-font-family-head-light);
 	font-size: 16px;
@@ -531,7 +531,6 @@ header.guide_header h1 {
 	top: 60px;
 	z-index: 200;
 	display: flex;
-	border-bottom: 1px solid var(--cm-opacity-color-black);
 	background-color: var(--cm-title-black);
 }
 
@@ -617,6 +616,10 @@ header.guide_header h1 {
 	border-radius: 7px;
 }
 
+.cont_codGuide .contents_infor .view_code ~ .conIn_tip {
+	margin-top: 0;
+}
+
 .cont_codGuide .contents_infor .conIn_tip:before,
 .cont_codGuide .contents_infor .conIn_tip:after {
 	content: '';
@@ -638,7 +641,7 @@ header.guide_header h1 {
 	background-color: rgba(255, 255, 255, .4);
 }
 
-.cont_codGuide .contents_infor .conIn_tip p {
+.cont_codGuide .contents_infor .conIn_tip .inner-cont {
 	-webkit-backdrop-filter: blur(150px);
 	backdrop-filter: blur(150px);
 	padding: 8px 12px;
@@ -669,11 +672,11 @@ header.guide_header h1 {
 }
 
 .cont_codGuide .view_code {
-	color: #FFF;
-	background-color: #111;
-	padding: 5px;
-	display: block;
-	font-size: 12px
+	margin-bottom: 10px;
+}
+
+.cont_codGuide .import-code {
+	margin-top: 20px;
 }
 
 table.guide_list {
@@ -809,22 +812,23 @@ UL.jqueryFileTree A:hover {
 	color: #fff;
 	cursor: pointer;
 }
-
+.btn-top span {
+	font-family: 'genesis-head-light', sans-serif;
+}
 .btn-top:before {
-	content: '∧';
+	content: '⤻';
 	position: absolute;
 	top: 7px;
 	left: 18px;
 	width: 5px;
 	height: 5px;
+	font-size: 16px;
 }
-
 .btn-top.active {
 	transition: all .5s ease-in-out;
 	opacity: 1;
 	z-index: 10;
 }
-
 .btn-top:active,
 .btn-top:focus {
 	outline: none;
