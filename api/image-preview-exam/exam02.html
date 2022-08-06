@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>exam02</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <style>
+			p{
+                clear:both;
+                margin:0;
+                padding:.5em 0;
+            }
+
+            /* Preview Gallery */
+			#preview{
+				z-index: 99;
+				position:absolute;
+				border:1px solid #ccc;
+				background:#333;
+				padding:5px;
+				display:none;
+				color:#fff;
+			}
+		</style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>이미지 미리보기</h1>
+            <div class="row">
+                <div class="col-lg-10">
+                    <table class="table border">
+                        <thead>
+                            <tr>
+                                <th colspan="2"> &num; mouseover 시, Image Preview Gallery 생성</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th width="200px">without Caption</th>
+                                <td>
+                                    <img src="./image/wallpaper.jpg" class="gallery" height="50px" alt="small_image" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>with Caption</th>
+                                <td>
+                                    <img src="./image/wallpaper.jpg" class="gallery" height="50px" data-image="window10_wallpaper" alt="small_image" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var xOffset = 10;
+                var yOffset = 30;
+
+                //마우스 오버시 preview 생성
+                $(document).on("mouseover",".gallery",function(e){
+                    var image_data = $(this).data("image");
+                    var add_caption = (image_data != undefined) ? "<br/>" + image_data : "" ;
+                    $("body").append("<p id='preview'><img src='"+ $(this).attr("src") +"' width='400px' />"+ add_caption +"</p>");
+                    $("#preview")
+                        .css("top",(e.pageY - xOffset) + "px")
+                        .css("left",(e.pageX + yOffset) + "px")
+                        .fadeIn("fast");
+                });
+                
+                //마우스 이동시 preview 이동
+                $(document).on("mousemove",".gallery",function(e){
+                    $("#preview")
+                        .css("top",(e.pageY - xOffset) + "px")
+                        .css("left",(e.pageX + yOffset) + "px");
+                });
+                
+                //마우스 아웃시 preview 제거
+                $(document).on("mouseout",".gallery",function(){
+                    $("#preview").remove();
+                });
+              
+            });
+        </script>
+    </body>
+</html>
