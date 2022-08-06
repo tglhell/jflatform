@@ -3,6 +3,7 @@
 	transition: all .3s ease;
   position: relative;
 	border: 0;
+	font-family: var(--cm-font-family-text-regular);
   cursor: pointer;
   outline: none;
 }

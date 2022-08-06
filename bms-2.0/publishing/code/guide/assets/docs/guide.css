@@ -681,7 +681,7 @@ header.guide_header h1 {
 .cont_codGuide .contents_infor .conIn_tip em {
 	font-family: var(--cm-font-family-head-regular);
 	font-style: normal;
-	color: #018496;
+	color: #000;
 	text-decoration: underline;
 	text-underline-position: under;
 }
