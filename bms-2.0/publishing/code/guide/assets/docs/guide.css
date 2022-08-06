@@ -9,6 +9,7 @@
 	--cm-font-family-head-light: 'genesis-head-light', sans-serif;
 	--cm-font-family-head-regular: 'genesis-head-regular', sans-serif;
 	--cm-font-family-text-regular: 'genesis-text-regular', sans-serif;
+	--cm-font-family-nanum-gothic-regular: 'Nanum Gothic', sans-serif;
 }
 
 body {
@@ -55,11 +56,29 @@ body::-webkit-scrollbar-track,
 	font-weight: 400;
 	font-style: normal;
 }
+@font-face {
+  font-family:'Nanum Gothic';
+  font-style:normal;
+  font-weight:400;
+  src:url(/publishing/code/guide/assets/fonts/NanumGothicR.eot);
+  src:url(/publishing/code/guide/assets/fonts/NanumGothicR.eot?#iefix) format('embedded-opentype'),
+			url(/publishing/code/guide/assets/fonts/NanumGothicR.woff) format('woff'),
+			url(/publishing/code/guide/assets/fonts/NanumGothicR.ttf) format('truetype');
+}
+@font-face {
+  font-family:'Nanum Gothic';
+  font-style:bold;
+  font-weight:700;
+  src:url(/publishing/code/guide/assets/fonts/NanumGothicB.eot);
+  src:url(/publishing/code/guide/assets/fonts/NanumGothicB.eot?#iefix) format('embedded-opentype'),
+			url(/publishing/code/guide/assets/fonts/NanumGothicB.woff) format('woff'),
+			url(/publishing/code/guide/assets/fonts/NanumGothicB.ttf) format('truetype');
+}
 
 * {
 	padding: 0;
 	margin: 0;
-	font-family: var(--cm-font-family-text-regular);
+	font-family: var(--cm-font-family-nanum-gothic-regular);
 	list-style: none;
 	text-decoration: none;
 	box-sizing: border-box;
@@ -646,8 +665,8 @@ header.guide_header h1 {
 	backdrop-filter: blur(150px);
 	padding: 8px 12px;
 	border-radius: 7px;
-	font-size: 13px;
-	line-height: 17px;
+	font-size: 12px;
+	line-height: 16px;
 }
 
 .cont_codGuide .contents_infor .conIn_tip a {
