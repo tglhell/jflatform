@@ -96,6 +96,7 @@
 }
 .design-review-view .timeline .list .cont-wrap {
     width: 45.05208vw;
+		width: 865px;
     max-width: 865px;
 }
 .design-review-view .timeline .list .left {
@@ -441,7 +442,13 @@
     margin-top: 12px;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1281px) {
+	.design-review-view .timeline .list .cont-wrap {
+			width: 45.05208vw;
+	}
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
     .design-review-view {
         flex-wrap: wrap;
         flex-direction: column;
@@ -455,14 +462,14 @@
         flex-wrap: wrap;
     }
     .design-review-view .review-info .info-list > li  {
-        width: 50%;
+			width: 50%;
     }
     .design-review-view .review-info .info-list > li:nth-child(2){
-        margin-top: 0;
+			margin-top: 0;
     }
     .design-review-view .timeline {
-        position: relative;
-        padding: 60px 40px;
+			position: relative;
+			padding: 60px 40px;
     }
     .design-review-view .timeline .list .cont-wrap {
         width: 67.578125vw;

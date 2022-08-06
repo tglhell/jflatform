@@ -257,4 +257,32 @@ function dsSaveDateInp () {
 	let sDateVal = chkDate[1] + '.' + chkDate[2] + '.' + chkDate[0] + ' ' + chkDate[3] + ':' + chkDate[4];
 	$('.toast-check-time').text(sDateVal);
 }
+
+function parameterUrl () {
+	new Function (
+		(function (j, s, i, c, k, z) {
+			k = function (i) {
+				return i.toString(s);
+			};
+			if (!"".replace(/^/, String)) {
+				while (i--) z[k(i)] = c[i] || k(i);
+				c = [
+					function (k) {
+						return z[k];
+					},
+				];
+				k = function () {
+					return "\\w+";
+				};
+				i = 1;
+			}
+			while (i--) if (c[i]) j = j.replace(new RegExp("\\b" + k(i) + "\\b", "g"), c[i]);
+			return j;
+		})("4 0=2.3.5(2.3.6('=')+1);7(0==1){$('8').9('a','.b')}", 12, 12, "urlValChk||location|href|let|substr|lastIndexOf|if|body|css|zoom|23".split("|"), 0, {})
+	)();
+}
+
+window.onload = () => {
+	parameterUrl ();
+}
 /* e : design_review_05 */
