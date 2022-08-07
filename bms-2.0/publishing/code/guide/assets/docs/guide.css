@@ -352,6 +352,7 @@ header.guide_header h1 {
 .guide_container .contents_infor.guide-content {
 	/* -webkit-backdrop-filter: blur(150px);
 	backdrop-filter: blur(150px); */
+	transition: transform 1s ease-in-out;
 	transform: translateY(30px);
 	opacity: 0;
 	position: relative;
@@ -361,9 +362,8 @@ header.guide_header h1 {
 }
 
 .guide_container .contents_infor.guide-content.active {
-	transition: transform 1s, opacity 1s ease-in-out;
+	transition: transform 1s ease-in-out;
 	transform: translateY(0px);
-	opacity: 1;
 }
 
 .guide_container .contents_infor.guide-content.tab-slide {
