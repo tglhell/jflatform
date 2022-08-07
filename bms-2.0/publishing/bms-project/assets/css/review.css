@@ -22,6 +22,19 @@
 	--fb-bold-lg: 500;
 	--fb-bold-xl: 700;
 }
+.cg-preview.position-r {
+	position: relative;
+}
+.cg-preview {
+	zoom: .23;
+}
+.cg-preview .bms-footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 30;
+}
 /* e : initializing css variable value */
 
 /* s : custom select item scroll */

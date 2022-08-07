@@ -17,7 +17,7 @@ $(() => {
 			$('.contents_infor.guide-content').html(data);
 			if ($('.s-header').length !== 0) {
 				setTimeout(function () {
-					$('.contents_infor.guide-content').addClass('active').animate({'opacity':'1'}, 1000);;
+					$('.contents_infor.guide-content').addClass('active');
 				}, 500);
 			}
 		}

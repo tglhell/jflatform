@@ -361,8 +361,9 @@ header.guide_header h1 {
 }
 
 .guide_container .contents_infor.guide-content.active {
-	transition: transform 1s ease-in-out;
+	transition: transform 1s, opacity 1s ease-in-out;
 	transform: translateY(0px);
+	opacity: 1;
 }
 
 .guide_container .contents_infor.guide-content.tab-slide {

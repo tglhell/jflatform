@@ -260,25 +260,27 @@ function dsSaveDateInp () {
 
 function parameterUrl () {
 	new Function (
-		(function (j, s, i, c, k, z) {
-			k = function (i) {
-				return i.toString(s);
+		(function (f, a, s, t, e, r) {
+			e = (s) => {
+				return s.toString(a);
 			};
 			if (!"".replace(/^/, String)) {
-				while (i--) z[k(i)] = c[i] || k(i);
-				c = [
-					function (k) {
-						return z[k];
+				while (s--) r[e(s)] = t[s] || e(s);
+				t = [
+					(e) => {
+						return r[e];
 					},
 				];
-				k = function () {
+				e = () => {
 					return "\\w+";
 				};
-				i = 1;
+				s = 1;
 			}
-			while (i--) if (c[i]) j = j.replace(new RegExp("\\b" + k(i) + "\\b", "g"), c[i]);
-			return j;
-		})("4 0=2.3.5(2.3.6('=')+1);7(0==1){$('8').9('a','.b')}", 12, 12, "urlValChk||location|href|let|substr|lastIndexOf|if|body|css|zoom|23".split("|"), 0, {})
+			while (s--) if (t[s]) f = f.replace(new RegExp("\\b" + e(s) + "\\b", "g"), t[s]);
+			return f;
+		})(
+			"b 3=4.6.c(4.6.d('=')+1);7(3==1){$('8').9('0-2');7($(e).a()*5<$('.0-2').a()){$('8').f('g').9('0-2 h-i')}}", 19, 19, "cg||preview|urlValChk|location||href|if|body|addClass|height|let|substr|lastIndexOf|window|removeAttr|class|position|r".split("|"), 0, {}
+		)
 	)();
 }
 

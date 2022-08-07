@@ -9,8 +9,9 @@ $(() => {
 		}
 	});
 
+
 	new Function (
-		((u, f, o, b, y, e) => {
+		(function (u, f, o, b, y, e) {
 			y = (o) => {
 				return o.toString(f);
 			};
@@ -29,7 +30,8 @@ $(() => {
 			while (o--) if (b[o]) u = u.replace(new RegExp("\\b" + y(o) + "\\b", "g"), b[o]);
 			return u;
 		})(
-			"$.8({9:'a',b:'/c/d/3/2/e.2',f:'2',g:4(5){$('.6.3-7').2(5);h($('.i-j').k!==0){l(4(){$('.6.3-7').m('n').o({'p':'1'},q)},r)}}});", 28, 28, "||html|guide|function|data|contents_infor|content|ajax|type|get|url|publishing|code|coding_guide_status|dataType|success|if|s|header|length|setTimeout|addClass|active|animate|opacity|1000|500".split("|"), 0, {}
+			"$.7({8:'9',a:'/b/c/2/1/d.1',e:'1',f:3(4){$('.5.2-6').1(4);g($('.h-i').j!==0){k(3(){$('.5.2-6').l('m')},n)}}});", 24, 24,
+			"|html|guide|function|data|contents_infor|content|ajax|type|get|url|publishing|code|coding_guide_status|dataType|success|if|s|header|length|setTimeout|addClass|active|500".split("|"), 0, {}
 		)
 	)();
 

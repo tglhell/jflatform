@@ -1,0 +1,20 @@
+/* s : code preview */
+.code-preview {
+	position: absolute;
+	z-index: 30;
+	/* width: 480px;
+	height: 270px; */
+	pointer-events: none;
+}
+.code-preview iframe {
+	width: 100%;
+	border: 0;
+	box-shadow:
+		-17px -17px 20px 0px rgba(241, 241, 241, .9),
+		-14px -14px 5px 0px rgba(241, 241, 241, .9),
+		17px 17px 20px 0px rgba(0, 0, 0, 0.145),
+		14px 14px 5px 0px rgba(0, 0, 0, 0.145);
+	background-color: rgba(255, 255, 255, .8);
+	zoom: .25;
+}
+/* e : code preview */
