@@ -18,22 +18,11 @@
 	--cm-color-navy: #002c5f;
 	--cm-color-black0: #000;
 	--cm-color-black3: #333;
+	--fs-head-kr: 'HyundaiSansHeadKR', sans-serif;
 	--fs-text-kr: 'HyundaiSansTextKR', sans-serif;
+	--fb-normal: 400;
 	--fb-bold-lg: 500;
 	--fb-bold-xl: 700;
-}
-.cg-preview.position-r {
-	position: relative;
-}
-.cg-preview {
-	zoom: .23;
-}
-.cg-preview .bms-footer {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: 30;
 }
 /* e : initializing css variable value */
 
@@ -181,7 +170,7 @@
 	margin-top: 40px;
 }
 .design-review-wrap .cta-outer {
-	margin-top: 90px;
+	margin-top: 48px;
 }
 .noti .underline {
 	text-decoration: underline;
@@ -197,7 +186,7 @@
 /* s : design_review_03 */
 .review-list-filter {
 	position: relative;
-	margin: 107px 0 56px;
+	margin-bottom: 56px;
 	padding: var(--pc-l-r-padding);
 }
 .review-list-filter .search-option-box > span {
@@ -255,6 +244,8 @@
 }
 .review-filter-form.date-fix-type > .input-outer-box {
 	flex-wrap: wrap;
+	width: calc(100% + 30px);
+	margin: -32px 0 0 -30px;
 }
 .review-filter-form.date-fix-type .input-outer-box.row-type:first-child {
 	width: 33.34%;
@@ -262,14 +253,12 @@
 .review-filter-form.date-fix-type .input-outer-box.row-type {
 	justify-content: flex-start;
 	width: 33.33%;
-	margin: 0;
-	padding-right: 30px;
+	margin: 32px 0 0;
+	padding-left: 30px;
 }
-.review-filter-form.date-fix-type .input-outer-box.row-type:nth-child(n+4) {
-	margin-top: 32px;
-}
-.review-filter-form.date-fix-type .input-outer-box.row-type:nth-child(3n) {
-	padding-right: 0;
+.review-filter-form.date-fix-type.type2 .input-outer-box.row-type:first-child,
+.review-filter-form.date-fix-type.type2 .input-outer-box.row-type {
+	width: 25%;
 }
 .review-filter-form.date-fix-type .input-outer-box.row-type .slt-picker {
 	display: none;
@@ -319,13 +308,14 @@
 	display: flex;
 }
 .review-list-box .review-list-item .list-text-area .status-info li {
-	padding: 3px 8px;
+	padding: 5px 11px;
 	background-color: var(--cm-color-navy);
-	font-weight: var(--fb-bold-lg);
+	font-size: 18px;
 	color: var(--cm-color-white);
+	line-height: 22px;
 }
 .review-list-box .review-list-item .list-text-area .status-info li.st-box2 {
-	background-color: var(--cm-color-black3);
+	background-color: var(--cm-color-black0);
 }
 .review-list-box .review-list-item .list-text-area .status-info li.st-box3 {
 	background-color: var(--cm-color-green);
@@ -366,6 +356,10 @@
 	}
 	.review-list-filter .btn-option {
 		right: 40px;
+	}
+	.review-filter-form.date-fix-type.type2 .input-outer-box.row-type:first-child,
+	.review-filter-form.date-fix-type.type2 .input-outer-box.row-type {
+		width: 50%;
 	}
 }
 /* e : design_review_03 */
@@ -551,3 +545,40 @@
 	opacity: 1;
 }
 /* e : design_review_05 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* s : html 미리보기용 css - 반영시 이 부분은 제외 */
+.cg-preview.position-r {
+	position: relative;
+}
+.cg-preview {
+	zoom: .23;
+}
+.cg-preview .bms-footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 30;
+}
+/* e : html 미리보기용 css - 반영시 이 부분은 제외 */

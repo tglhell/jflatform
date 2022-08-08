@@ -142,6 +142,9 @@ function dateInp () {
 			eDateVal = chkDate[3] + '.' + eLastDate + '.' + chkDate[0];
 		}
 	}
+	if ($('.select-items li:last-of-type').hasClass('selected')) {
+		eDateVal = sDateVal;
+	}
 	actDateInp ();
 }
 

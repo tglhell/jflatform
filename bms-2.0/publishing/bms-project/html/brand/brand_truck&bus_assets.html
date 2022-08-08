@@ -6,12 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <title>BMS 2.0</title>
 
+  <link rel="stylesheet" href="../../assets/css/lib/swiper.min.css">
   <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/lib/customlib.css">
   <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="../../assets/css/style.css">
 
+  <script type="text/javascript" src="../../assets/js/lib/swiper.min.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
   <script type="text/javascript" src="../../assets/js/common.js"></script>
 </head>
 
@@ -98,30 +102,7 @@
               </div>
             </div>
             <div class="checking-list-box">
-              <div class="btn-area">
-                <div class="edit-box">
-                  <button class="btn-txt btn-icon2 btn-edit btn-file">파일 선택</button>
-                </div>
-                <div class="chk-box">
-                  <div>
-                    <div>
-                      <span class="cont-text2 btn-txt btn-icon2 btn-file" disabled="disabled">선택된 Asset (<strong></strong>)</span>
-                      <button class="btn-txt btn-cancel">선택 취소</button>
-                      <a href="" title="download" class="btn-txt btn-icon">선택 일괄 다운로드</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="toggle-box">
-                  <div class="select-box list-select-box">
-                    <p class="selected-value">12개 노출</p>
-                    <ul class="select-items">
-                      <li>option1</li>
-                      <li>option2</li>
-                      <li>option3</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <!-- 220726 btn-area 삭제 -->
               <div class="asset-content-wrap">
                 <h3 class="h3-title">로고</h3>
                 <div class="cont-type gallery-type active">
@@ -167,109 +148,113 @@
               </div>
               <div class="asset-content-wrap">
                 <h3 class="h3-title">폰트</h3>
-                <ul class="checking-list cont-type gallery-type thumbnail-gallery column4 active">
-                  <li class="list gallery-box">
-                    <div class="list-contents">
-                      <div class="img-box">
-                        <a href="" title="" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></a>
+                <div class="cont-type gallery-type active"> <!-- 20220714 div 구조 추가-->
+                  <ul class="checking-list thumbnail-gallery column4">
+                    <li class="list gallery-box">
+                      <div class="list-contents">
+                        <div class="img-box">
+                          <a href="" title="" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></a>
+                        </div>
+                        <div class="txt-box">
+                          <p class="cont-tit2"><a href="" title="">Hyundai Sans Head Webfont</a></p>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                        <p class="caption htr">Hyundai Sans Head Webfont.zip (3.79 MB)</p>
                       </div>
-                      <div class="txt-box">
-                        <p class="cont-tit2"><a href="" title="">Hyundai Sans Head Webfont</a></p>
-                        <a href="" title="download" class="btn-txt btn-icon"></a>
+                    </li>
+                    <li class="list gallery-box">
+                      <div class="list-contents">
+                        <div class="img-box">
+                          <a href="" title="" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></a>
+                        </div>
+                        <div class="txt-box">
+                          <p class="cont-tit2"><a href="" title="">Hyundai Sans Text Webfont</a></p>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                        <p class="caption htr">Hyundai Sans Text Webfont.zip (10.8 MB)</p>
                       </div>
-                      <p class="caption htr">Hyundai Sans Head Webfont.zip (3.79 MB)</p>
-                    </div>
-                  </li>
-                  <li class="list gallery-box">
-                    <div class="list-contents">
-                      <div class="img-box">
-                        <a href="" title="" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></a>
+                    </li>
+                    <li class="list gallery-box">
+                      <div class="list-contents">
+                        <div class="img-box">
+                          <a href="" title="" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></a>
+                        </div>
+                        <div class="txt-box">
+                          <p class="cont-tit2"><a href="" title="">Hyundai Sans Head KR 2.0</a></p>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                        <p class="caption htr">Hyundai Sans Head KR 2.0.zip (10.1 MB)</p>
                       </div>
-                      <div class="txt-box">
-                        <p class="cont-tit2"><a href="" title="">Hyundai Sans Text Webfont</a></p>
-                        <a href="" title="download" class="btn-txt btn-icon"></a>
+                    </li>
+                    <li class="list gallery-box">
+                      <div class="list-contents">
+                        <div class="img-box">
+                          <a href="" title="" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></a>
+                        </div>
+                        <div class="txt-box">
+                          <p class="cont-tit2"><a href="" title="">Hyundai Sans Text KR 2.0</a></p>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                        <p class="caption htr">Hyundai Sans Text KR 2.0.zip (843 KB)</p>
                       </div>
-                      <p class="caption htr">Hyundai Sans Text Webfont.zip (10.8 MB)</p>
-                    </div>
-                  </li>
-                  <li class="list gallery-box">
-                    <div class="list-contents">
-                      <div class="img-box">
-                        <a href="" title="" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></a>
-                      </div>
-                      <div class="txt-box">
-                        <p class="cont-tit2"><a href="" title="">Hyundai Sans Head KR 2.0</a></p>
-                        <a href="" title="download" class="btn-txt btn-icon"></a>
-                      </div>
-                      <p class="caption htr">Hyundai Sans Head KR 2.0.zip (10.1 MB)</p>
-                    </div>
-                  </li>
-                  <li class="list gallery-box">
-                    <div class="list-contents">
-                      <div class="img-box">
-                        <a href="" title="" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></a>
-                      </div>
-                      <div class="txt-box">
-                        <p class="cont-tit2"><a href="" title="">Hyundai Sans Text KR 2.0</a></p>
-                        <a href="" title="download" class="btn-txt btn-icon"></a>
-                      </div>
-                      <p class="caption htr">Hyundai Sans Text KR 2.0.zip (843 KB)</p>
-                    </div>
-                  </li>
-                </ul>
+                    </li>
+                  </ul> <!-- 20220714 class 명 수정-->
+                </div>
               </div>
               <div class="asset-content-wrap">
                 <h3 class="h3-title">그래픽시스템</h3>
-                <ul class="checking-list cont-type gallery-type thumbnail-gallery column4 active">
-                  <li class="list gallery-box">
-                    <div class="list-contents">
-                      <div class="img-box">
-                        <a href="" title="" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></a>
+                <div class="cont-type gallery-type active"> <!-- 20220714 div 구조 추가-->
+                  <ul class="checking-list thumbnail-gallery column4">
+                    <li class="list gallery-box">
+                      <div class="list-contents">
+                        <div class="img-box">
+                          <a href="" title="" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></a>
+                        </div>
+                        <div class="txt-box">
+                          <p class="cont-tit2"><a href="" title="">그래픽시스템 레이어 조합 가이드</a></p>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                        <p class="caption htr">HYU_Logo_Print.zip (3.79 MB)</p>
                       </div>
-                      <div class="txt-box">
-                        <p class="cont-tit2"><a href="" title="">그래픽시스템 레이어 조합 가이드</a></p>
-                        <a href="" title="download" class="btn-txt btn-icon"></a>
+                    </li>
+                    <li class="list gallery-box">
+                      <div class="list-contents">
+                        <div class="img-box">
+                          <a href="" title="" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></a>
+                        </div>
+                        <div class="txt-box">
+                          <p class="cont-tit2"><a href="" title="">그래픽시스템 레이아웃 유연성 가이드</a></p>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                        <p class="caption htr">Hyundai Sans Latin 2.002_Windows.zip (843 KB)</p>
                       </div>
-                      <p class="caption htr">HYU_Logo_Print.zip (3.79 MB)</p>
-                    </div>
-                  </li>
-                  <li class="list gallery-box">
-                    <div class="list-contents">
-                      <div class="img-box">
-                        <a href="" title="" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></a>
+                    </li>
+                    <li class="list gallery-box">
+                      <div class="list-contents">
+                        <div class="img-box">
+                          <a href="" title="" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></a>
+                        </div>
+                        <div class="txt-box">
+                          <p class="cont-tit2"><a href="" title="">그래픽시스템 브랜드 표현 범위 가이드</a></p>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                        <p class="caption htr">211227_HyundaiSans_Webfont.zip (10.8 MB)</p>
                       </div>
-                      <div class="txt-box">
-                        <p class="cont-tit2"><a href="" title="">그래픽시스템 레이아웃 유연성 가이드</a></p>
-                        <a href="" title="download" class="btn-txt btn-icon"></a>
+                    </li>
+                    <li class="list gallery-box">
+                      <div class="list-contents">
+                        <div class="img-box">
+                          <a href="" title="" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></a>
+                        </div>
+                        <div class="txt-box">
+                          <p class="cont-tit2"><a href="" title="">그래픽시스템 인쇄용 - 측정 단위 및 화면<br> 구축 가이드 (권장)</a></p>
+                          <a href="" title="download" class="btn-txt btn-icon"></a>
+                        </div>
+                        <p class="caption htr">Hyundai Sans Latin 2.002_Windows.zip (843 KB)</p>
                       </div>
-                      <p class="caption htr">Hyundai Sans Latin 2.002_Windows.zip (843 KB)</p>
-                    </div>
-                  </li>
-                  <li class="list gallery-box">
-                    <div class="list-contents">
-                      <div class="img-box">
-                        <a href="" title="" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></a>
-                      </div>
-                      <div class="txt-box">
-                        <p class="cont-tit2"><a href="" title="">그래픽시스템 브랜드 표현 범위 가이드</a></p>
-                        <a href="" title="download" class="btn-txt btn-icon"></a>
-                      </div>
-                      <p class="caption htr">211227_HyundaiSans_Webfont.zip (10.8 MB)</p>
-                    </div>
-                  </li>
-                  <li class="list gallery-box">
-                    <div class="list-contents">
-                      <div class="img-box">
-                        <a href="" title="" style="background-image:url(https://via.placeholder.com/300x100.jpg);"></a>
-                      </div>
-                      <div class="txt-box">
-                        <p class="cont-tit2"><a href="" title="">그래픽시스템 인쇄용 - 측정 단위 및 화면<br> 구축 가이드 (권장)</a></p>
-                        <a href="" title="download" class="btn-txt btn-icon"></a>
-                      </div>
-                      <p class="caption htr">Hyundai Sans Latin 2.002_Windows.zip (843 KB)</p>
-                    </div>
-                  </li>
-                </ul>
+                    </li>
+                  </ul> <!-- 20220714 class 명 수정-->
+                </div>
               </div>
               <ul class="indicator">
                 <li class="indicator-prev">

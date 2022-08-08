@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0</title>
+
+  <link rel="stylesheet" href="../../assets/css/lib/swiper.min.css">
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/lib/customlib.css">
+  <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <script type="text/javascript" src="../../assets/js/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
+  <script type="text/javascript" src="../../assets/js/common.js"></script>
+</head>
+
+<body>
+
+<div class="bms-wrap">
+  <div class="skip-nav">
+    <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
+  </div>
+
+  <!-- header -->
+  <div class="bms-header">
+    <!-- 상단 gnb -->
+    <div class="gnb-menu">
+      <div class="inner-content">
+        <a href="" class="logo"><img src="../../assets/images/common/logo.png" alt=""></a>
+        <div class="menu">
+          <ul>
+            <li class="menu-first-li">
+              <a href="">Brand Guidelines</a>
+            </li>
+            <li class="menu-first-li">
+              <a href=""> Library</a>
+            </li>
+            <li class="menu-first-li">
+              <a href="">Review Tools</a>
+            </li>
+            <li class="menu-first-li">
+              <a href="">Brand Reports</a>
+            </li>
+            <li class="menu-first-li">
+              <a href="">My BMS</a>
+            </li>
+          </ul>
+        </div>
+        <div class="util">
+          <a href="" class="gnb-bookmark"></a>
+          <div class="select-box select-lang">
+            <p class="selected-value">EN</p>
+            <ul class="select-items">
+              <li class="selected"><a href="javascript:;">EN</a></li>
+              <li><a href="javascript:;">KR</a></li>
+              <li><a href="javascript:;">CH</a></li>
+            </ul>
+          </div>
+          <a href="" class="link-login">Logout</a>
+          <a href="" class="gnb-hamburger"></a>
+        </div>
+      </div>
+    </div>
+    <!-- right megamenu (햄버거메뉴 클릭 시 노출 화면) -->
+  </div>
+  <!--//header -->
+
+  <!-- container -->
+  <div id="bmsContainer" class="bms-container">
+    <div class="bms-content">
+      <!-- S: cont-outer -->
+      <div class="cont-outer fullcase">
+        <div class="main">
+          <div class="search-area">
+            <div class="search-input">
+              <div class="search-inner">
+                <p class="tit">Searching for</p>
+                <input type="text" placeholder="Hyundai Guidelines">
+                <div class="result">
+                  <div class="title-area">
+                    <p class="cont-tit2">최근 검색어</p>
+                    <a href="" class="btn-close"></a>
+                  </div>
+                  <div class="tag-area">
+                    <p>Eartth day</p>
+                    <p>IONIQ6</p>
+                    <p>Eartth day</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="btn review-btn"><span>New Design Review Submission</span></a>
+          </div>
+        </div>
+      </div>
+      <!-- E: cont-outer -->
+    </div>
+  </div>
+  <!--//container -->
+
+  <!-- footer -->
+  <div class="bms-footer">
+    <div class="footer-inner">
+      <div class="foot-logo">
+        <img src="../../assets/images/main/foot_logo.png" alt="logo">
+      </div>
+      <div class="foot-menu">
+        <ul>
+          <li class="cont-tit2"><a href="#">Sitemap</a></li>
+          <li class="cont-tit2"><a href="#">Newsletter</a></li>
+          <li class="cont-tit2"><a href="#">Glossary</a></li>
+        </ul>
+      </div>
+      <div class="foot-contact">
+        <p class="cont-tit2"><a href="#">Contact Us</a></p>
+        <div>
+          <p class="caption htr">Brand Design Support Seoul</p>
+          <p class="caption htr">+82 2 6410 8232</p>
+        </div>
+        <div>
+          <p class="caption htr">Brand Design Support Berlin</p>
+          <p class="caption htr">+49 30 22 06 62 390</p>
+        </div>
+        <div>
+          <p class="caption htr">Global E-mail</p>
+          <p class="caption htr email">guideline@hyundai.com</p>
+        </div>
+      </div>
+      <div class="foot-terms">
+        <div class="terms-list">
+          <p class="cont-text2"><a href="#">Terms of Use</a></p>
+          <p class="privacy cont-text2"><a href="#">Privacy Policy</a></p>
+        </div>
+        <p class="copy caption htr fc-color4">© 2022 Hyundai Motor Company</p>
+      </div>
+    </div>
+  </div>
+  <!--//footer -->
+
+  <script>
+    $(function(){
+      $(window).scroll(function(){
+        if ( $(this).scrollTop() > 0 ){
+          $('.bms-header').addClass('fixed');
+        }
+        else {
+          $('.bms-header').removeClass('fixed');
+        }
+      });
+    })
+  </script>
+</div>
+</body>
+</html>

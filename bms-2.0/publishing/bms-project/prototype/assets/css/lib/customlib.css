@@ -14,7 +14,7 @@
 .ui-datepicker {
   width: auto;
   max-width: 240px;
-  font-family: 'HyundaiSansHeadJP', sans-serif;
+  font-family: 'HyundaiSansHeadKR';
   border-color: #ccc !important;
   padding: 15px;
   box-sizing: border-box;
@@ -190,7 +190,7 @@ a.ui-state-default {
   width: 20px;
   color:#333;
   line-height:normal;
-  font-family:'HyundaiSansTextJP', sans-serif;
+  font-family:'HyundaiSansTextKR';
   font-size:10px;
   line-height: 16px;
 }

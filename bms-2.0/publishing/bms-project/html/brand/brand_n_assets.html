@@ -6,12 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <title>BMS 2.0</title>
 
+  <link rel="stylesheet" href="../../assets/css/lib/swiper.min.css">
   <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/lib/customlib.css">
   <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="../../assets/css/style.css">
 
+  <script type="text/javascript" src="../../assets/js/lib/swiper.min.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
   <script type="text/javascript" src="../../assets/js/common.js"></script>
 </head>
 
@@ -98,30 +102,7 @@
               </div>
             </div>
             <div class="checking-list-box">
-              <div class="btn-area">
-                <div class="edit-box">
-                  <button class="btn-txt btn-icon2 btn-edit btn-file">파일 선택</button>
-                </div>
-                <div class="chk-box">
-                  <div>
-                    <div>
-                      <span class="cont-text2 btn-txt btn-icon2 btn-file" disabled="disabled">선택된 Asset (<strong></strong>)</span>
-                      <button class="btn-txt btn-cancel">선택 취소</button>
-                      <a href="" title="download" class="btn-txt btn-icon">선택 일괄 다운로드</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="toggle-box">
-                  <div class="select-box list-select-box">
-                    <p class="selected-value">12개 노출</p>
-                    <ul class="select-items">
-                      <li>option1</li>
-                      <li>option2</li>
-                      <li>option3</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <!-- 220726 btn-area 삭제 -->
               <div class="asset-content-wrap">
                 <h3 class="h3-title">로고</h3>
                 <div class="cont-type gallery-type active">
@@ -167,7 +148,8 @@
               </div>
               <div class="asset-content-wrap">
                 <h3 class="h3-title">폰트</h3>
-                <ul class="checking-list cont-type gallery-type thumbnail-gallery column4 active">
+                <div class="cont-type gallery-type active"> <!-- 20220714 div 구조 추가-->
+                 <ul class="checking-list thumbnail-gallery column4">
                   <li class="list gallery-box">
                     <div class="list-contents">
                       <div class="img-box">
@@ -216,11 +198,13 @@
                       <p class="caption htr">Hyundai Sans Text KR 2.0.zip (843 KB)</p>
                     </div>
                   </li>
-                </ul>
+                </ul> <!-- 20220714 class 명 수정-->
+                </div>
               </div>
               <div class="asset-content-wrap">
                 <h3 class="h3-title">그래픽시스템</h3>
-                <ul class="checking-list cont-type gallery-type thumbnail-gallery column4 active">
+                <div class="cont-type gallery-type active"> <!-- 20220714 div 구조 추가-->
+                  <ul class="checking-list thumbnail-gallery column4">
                   <li class="list gallery-box">
                     <div class="list-contents">
                       <div class="img-box">
@@ -269,7 +253,8 @@
                       <p class="caption htr">Hyundai Sans Latin 2.002_Windows.zip (843 KB)</p>
                     </div>
                   </li>
-                </ul>
+                </ul> <!-- 20220714 class 명 수정-->
+                </div>
               </div>
               <ul class="indicator">
                 <li class="indicator-prev">

@@ -4,17 +4,17 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>BMS 2.0 CODING GUIDE - LIST PAGE</title>
+	<title>BMS 2.0 CODING GUIDE - LIST PAGE</title>
 
-    <!-- 코딩 가이드용 -->
-    <link rel="stylesheet" href="docs/guide.css">
-    <link rel="stylesheet" href="docs/prism.css">
-    <link rel="stylesheet" href="../assets/css/common.css">
+	<!-- 코딩 가이드용 -->
+	<link rel="stylesheet" href="docs/guide.css">
+	<link rel="stylesheet" href="docs/prism.css">
+	<link rel="stylesheet" href="../assets/css/common.css">
 	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
 	<script type="text/javascript" src="docs/prism.js"></script>
 	<script type="text/javascript" src="docs/plugin.js"></script>
 	<!-- //코딩 가이드용 -->
-	
+
 	<script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/variable.js"></script>
 	<script type="text/javascript" src="../assets/js/common.js"></script>
@@ -32,7 +32,7 @@
 				$('#listHead').removeClass('fixed')
 			}
 		})
-	</script>	
+	</script>
 </head>
 
 <body>
@@ -67,12 +67,12 @@
 			<!-- [20220503] 현재 작업된 페이지만 노출 ▶︎ 페이지 작업 후 주석 해제 -->
 			<!--
 			<li><a href="#Main">Main</a></li>
-			<li><a href="#Search">Search</a></li>
 			-->
+			<li><a href="#Search">Search</a></li>
 			<li><a href="#Login">로그인/회원가입</a></li>
-			<!--
 			<li><a href="#Guideline">Brand Guidelines</a></li>
 			<li><a href="#Library">Library</a></li>
+			<!--
 			<li><a href="#Review">Design Review</a></li>
 			-->
 			<li><a href="#Report">Brand Report</a></li>
@@ -87,6 +87,7 @@
 				<col style="width:10%;">
 				<col style="width:10%;">
 				<col style="width:10%;">
+				<col style="width:10%;">
 				<col style="width:15%;">
 				<col style="width:7%;">
 				<col style="width:7%;">
@@ -98,6 +99,7 @@
 				<th>2Depth</th>
 				<th>3Depth</th>
 				<th>4Depth</th>
+				<th>5Depth</th>
 				<th>ID or Page name</th>
 				<th>State</th>
 				<th>Design<br>Sign Off</th>
@@ -108,683 +110,1097 @@
 		</table>
 
 		<table class="guide_list">
-		<colgroup>
-			<col style="width:10%;">
-			<col style="width:10%;">
-			<col style="width:10%;">
-			<col style="width:15%;">
-			<col style="width:7%;">
-			<col style="width:7%;">
-			<col style="width:8%;">
-			<col>
-		</colgroup>
-		<tbody>	
-		<tr>
-			<th colspan="8">공통</th>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">Templete</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">layout</td>
-			<td></td>
-			<td></td>
-			<td><a href="../pub_guide/bms_layout.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<!-- Main -->
-		<!--
-		<tr>
-			<th colspan="8" id="Main">Main</th>
-		</tr>	
-		<tr>
-			<td class="txtLeft">Main</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">index</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/index.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		-->
-		<!-- Search -->
-		<!--
-		<tr>
-			<th colspan="8" id="Search">검색</th>
-		</tr>
-		<tr>
-			<td class="txtLeft">검색</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">search</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/search/search.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft">검색결과 있음</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">search_result</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/search/search_result.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft">검색결과 없음</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">search_no_result</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/search/search_no_result.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		-->
-		<!-- Login -->
-		<tr>
-			<th colspan="8" id="Login">로그인/회원가입</th>
-		</tr>
-		<tr>
-			<td class="txtLeft">로그인</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">login</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/login/login.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">OTP 입력</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">login_otp</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/login/login_otp.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">계정 승인 대기</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">account_approval</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/login/account_approval.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<!--
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">계정 승인 보류</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">account_approval_pending</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/login/account_approval_pending.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		-->
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">계정 승인 거절</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">account_approval_reject</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/login/account_approval_reject.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">사용자 계정 비활성화(180일 미접속)</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">account_disabled</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/login/account_disabled.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">사용자 계정 만료</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">account_expiration</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/login/account_expiration.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft">회원가입</td>
-			<td class="txtLeft">회원정보 입력</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">join</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/login/join.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">회원가입 완료</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">join_complete</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/login/join_complete.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft">계정활성화</td>
-			<td class="txtLeft">계정활성화</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">account_activation</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/login/account_activation.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">이미 활성화된 계정</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">account_activation02</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/login/account_activation02.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft">통합회원 전환</td>
-			<td class="txtLeft">Step1. 약관동의</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">conversion_step01</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/login/conversion_step01.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">Step2. 추가정보 입력</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">conversion_step02</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/login/conversion_step02.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">인포메이션 출력되는 경우</td>
-			<td class="txtLeft">conversion_step02_02</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/login/conversion_step02_02.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">Step3. 전환완료</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">conversion_step03</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/login/conversion_step03.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft">비밀번호 찾기 & 재설정</td>
-			<td class="txtLeft">비밀번호 찾기</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">find_password</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/login/find_password.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">비밀번호 재설정</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">change_password</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/login/change_password.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">비밀번호 재설정<br>(180일동안 비밀번호 변경 X)</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">change_password02</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/login/change_password02.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">비밀번호 재설정<br>(90일동안 비밀번호 변경 X)</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">change_password03</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/login/change_password03.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<!-- Guideline -->
-		<tr>
-			<th colspan="8" id="Guideline">Brand Guidelines</th>
-		</tr>
-		<!--
-		<tr>
-			<td class="txtLeft">About Brand</td>
-			<td class="txtLeft">Hyundai Brand</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">abount_hyundai_brand</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/brand/abount_hyundai_brand.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">N Brand</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">about_n_brand</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/brand/about_n_brand.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">Truck&Bus</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">about_truck_bus</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/brand/about_truck_bus.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft">Brand Image Guidelines</td>
-			<td class="txtLeft">Hyundai</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">brand_hyundai</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/brand/brand_hyundai.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">N</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">brand_n</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/brand/brand_n.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">Truck&Bus</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">brand_truck_bus</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/brand/brand_truck_bus.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">Space</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">brand_space</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/brand/brand_space.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">Hyundai Motor Studio</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">brand_hyundai_motor</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/brand/brand_hyundai_motor.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">Others</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">brand_other</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/brand/brand_other.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		-->
-		<tr>
-			<td class="txtLeft">Training Program</td>
-			<td class="txtLeft">Training Video</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">training_video</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/brand/training_video.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">E-Learning</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">e_learning</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/brand/e_learning.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<!--
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">Brand Image</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">brand_image</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/brand/brand_image.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		-->
-		<!-- Library -->
-		<tr>
-			<th colspan="8" id="Library">Library</th>
-		</tr><!--
-		<tr>
-			<td class="txtLeft">Contents Type</td>
-			<td class="txtLeft">Brand Campaign</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">brand_campaign</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/library/brand_campaign.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">Brand Space</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">brand_space</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/library/brand_space.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">Brand collection</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">brand_collection</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/library/brand_collection.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">Product Launching</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">product_launching</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/library/product_launching.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">Social Media</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">social_media</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/library/social_media.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">Event</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">event</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/library/event.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>-->
-		<tr>
-			<td class="txtLeft">Media Type</td>
-			<td class="txtLeft">Image</td>
-			<td class="txtLeft">list</td>
-			<td class="txtLeft">media_image_list</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/library/media_image_list.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">View</td>
-			<td class="txtLeft">media_image_view</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/library/media_image_view.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">No Data</td>
-			<td class="txtLeft">media_image_nodata</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/library/media_image_nodata.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">Video</td>
-			<td class="txtLeft">List</td>
-			<td class="txtLeft">media_video_list</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/library/media_video_list.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">View</td>
-			<td class="txtLeft">media_video_view</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/library/media_video_view.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">No Data</td>
-			<td class="txtLeft">media_video_nodata</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/library/media_video_nodata.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">Sound</td>
-			<td class="txtLeft">List</td>
-			<td class="txtLeft">media_sound_list</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/library/media_sound_list.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">View</td>
-			<td class="txtLeft">media_sound_view</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/library/media_sound_view.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">No Data</td>
-			<td class="txtLeft">media_sound_nodata</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/library/media_sound_nodata.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">Others</td>
-			<td class="txtLeft">List</td>
-			<td class="txtLeft">media_other_list</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/library/media_other_list.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">View</td>
-			<td class="txtLeft">media_other_view</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/library/media_other_view.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">No Data</td>
-			<td class="txtLeft">media_other_nodata</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/library/media_other_nodata.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft">Best Practice</td>
-			<td class="txtLeft">GMA</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">gma</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/library/gma.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">Local Campaigns</td>
-			<td class="txtLeft">List</td>
-			<td class="txtLeft">local_campaigns_list</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/library/local_campaigns_list.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">View</td>
-			<td class="txtLeft">local_campaigns_view</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/library/local_campaigns_view.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft">저작권 만료 컨텐츠</td>
-			<td class="txtLeft">List</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">copyright_expired_list</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/library/copyright_expired_list.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">View</td>
-			<td class="txtLeft">Image</td>
-			<td class="txtLeft">opyright_expired_image_view</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/library/copyright_expired_image_view.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">View</td>
-			<td class="txtLeft">Video</td>
-			<td class="txtLeft">copyright_expired_video_view</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/library/copyright_expired_video_view.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">View</td>
-			<td class="txtLeft">Sound</td>
-			<td class="txtLeft">copyright_expired_sound_view</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/library/copyright_expired_sound_view.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">View</td>
-			<td class="txtLeft">Others</td>
-			<td class="txtLeft">copyright_expired_other_view</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/library/copyright_expired_other_view.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">No Data</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">copyright_expired_nodata</td>
-			<td class="fc-color2">완료</td>
-			<td>O</td>
-			<td><a href="../html/library/copyright_expired_nodata.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr><!--
+			<colgroup>
+				<col style="width:10%;">
+				<col style="width:10%;">
+				<col style="width:10%;">
+				<col style="width:10%;">
+				<col style="width:15%;">
+				<col style="width:7%;">
+				<col style="width:7%;">
+				<col style="width:8%;">
+				<col>
+			</colgroup>
+			<tbody>
+			<tr>
+				<th colspan="9">공통</th>
+			</tr>
+			<tr>
+				<td class="txtLeft">Templete</td>
+				<td class="txtLeft">layout</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td></td>
+				<td></td>
+				<td><a href="../pub_guide/bms_layout.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<!-- Main -->
+			<!--
+      <tr>
+        <th colspan="9" id="Main">Main</th>
+      </tr>
+      <tr>
+        <td class="txtLeft">Main</td>
+        <td class="txtLeft"></td>
+        <td class="txtLeft"></td>
+        <td class="txtLeft"></td>
+        <td class="txtLeft">index</td>
+        <td></td>
+        <td></td>
+        <td><a href="../html/index.html" target="_blank">View</a></td>
+        <td class="txtLeft"></td>
+      </tr>
+      -->
+			<!-- Search -->
+			<tr>
+				<th colspan="9" id="Search">검색</th>
+			</tr>
+			<tr>
+				<td class="txtLeft">검색</td>
+				<td class="txtLeft">All</td>
+				<td class="txtLeft">result</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">search_all</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/search/search_all.html" target="_blank">View</a></td>
+				<td class="txtLeft">- 상단 검색 영역 제외 작업 완료</td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">Brand Guidelines</td>
+				<td class="txtLeft">result</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">search_brand</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/search/search_brand.html" target="_blank">View</a></td>
+				<td class="txtLeft">- 상단 검색 영역 제외 작업 완료</td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">Library</td>
+				<td class="txtLeft">result</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">search_library</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/search/search_library.html" target="_blank">View</a></td>
+				<td class="txtLeft">- 상단 검색 영역 제외 작업 완료</td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">Brand Reports</td>
+				<td class="txtLeft">result</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">search_report</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/search/search_report.html" target="_blank">View</a></td>
+				<td class="txtLeft">- 상단 검색 영역 제외 작업 완료</td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">No Data</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">search__nodata</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/search/search_nodata.html" target="_blank">View</a></td>
+				<td class="txtLeft">- 상단 검색 영역 제외 작업 완료</td>
+			</tr>
+			<!-- Login -->
+			<tr>
+				<th colspan="9" id="Login">로그인/회원가입</th>
+			</tr>
+			<tr>
+				<td class="txtLeft">로그인</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">login</td>
+				<td>완료</td>
+				<td></td>
+				<td><a href="../html/login/login.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">OTP 입력</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">login_otp</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/login/login_otp.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">계정 승인 대기</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">account_approval</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/login/account_approval.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<!--
+      <tr>
+        <td class="txtLeft"></td>
+        <td class="txtLeft">계정 승인 보류</td>
+        <td class="txtLeft"></td>
+        <td class="txtLeft"></td>
+        <td class="txtLeft">account_approval_pending</td>
+        <td>완료</td>
+        <td></td>
+        <td><a href="../html/login/account_approval_pending.html" target="_blank">View</a></td>
+        <td class="txtLeft"></td>
+      </tr>
+      -->
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">계정 승인 거절</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">account_approval_reject</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/login/account_approval_reject.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">사용자 계정 비활성화(180일 미접속)</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">account_disabled</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/login/account_disabled.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">사용자 계정 만료</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">account_expiration</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/login/account_expiration.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">회원가입</td>
+				<td class="txtLeft">회원정보 입력</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">join</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/login/join.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">회원가입 완료</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">join_complete</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/login/join_complete.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">계정활성화</td>
+				<td class="txtLeft">계정활성화</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">account_activation</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/login/account_activation.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">이미 활성화된 계정</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">account_activation02</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/login/account_activation02.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">통합회원 전환</td>
+				<td class="txtLeft">Step1. 약관동의</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">conversion_step01</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/login/conversion_step01.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">Step2. 추가정보 입력</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">conversion_step02</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/login/conversion_step02.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">인포메이션 출력되는 경우</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">conversion_step02_02</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/login/conversion_step02_02.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">Step3. 전환완료</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">conversion_step03</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/login/conversion_step03.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">비밀번호 찾기 & 재설정</td>
+				<td class="txtLeft">비밀번호 찾기</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">find_password</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/login/find_password.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">비밀번호 재설정</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">change_password</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/login/change_password.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">비밀번호 재설정<br>(180일동안 비밀번호 변경 X)</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">change_password02</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/login/change_password02.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">비밀번호 재설정<br>(90일동안 비밀번호 변경 X)</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">change_password03</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/login/change_password03.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<!-- Guideline -->
+			<tr>
+				<th colspan="9" id="Guideline">Brand Guidelines</th>
+			</tr>
+			<tr>
+				<td class="txtLeft">About Brand</td>
+				<td class="txtLeft">Hyundai Brand</td>
+				<td class="txtLeft">list</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">about_hyundai_brand_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/about_hyundai_brand_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">view</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">about_identity_system_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/about_identity_system_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">about_brand_book_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/about_brand_book_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">about_communication_guidelines_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/about_communication_guidelines_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">Brand Image Guidelines</td>
+				<td class="txtLeft">Hyundai</td>
+				<td class="txtLeft">guidelines</td>
+				<td class="txtLeft">list</td>
+				<td class="txtLeft">brand_hyundai_guidelines_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_hyundai_guidelines_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">view</td>
+				<td class="txtLeft">brand_hyundai_guidelines_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_hyundai_guidelines_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">brand assets</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">brand_hyundai_assets</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_hyundai_assets.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">templates</td>
+				<td class="txtLeft">list</td>
+				<td class="txtLeft">brand_hyundai_templates_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_hyundai_templates_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">view</td>
+				<td class="txtLeft">brand_hyundai_templates_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_hyundai_templates_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">nodata</td>
+				<td class="txtLeft">brand_hyundai_templates_nodata</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_hyundai_templates_nodata.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">N</td>
+				<td class="txtLeft">guidelines</td>
+				<td class="txtLeft">list</td>
+				<td class="txtLeft">brand_n_guidelines_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_n_guidelines_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">view</td>
+				<td class="txtLeft">brand_n_guidelines_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_n_guidelines_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">brand assets</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">brand_n_assets</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_n_assets.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">templates</td>
+				<td class="txtLeft">list</td>
+				<td class="txtLeft">brand_n_templates_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_n_templates_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">view</td>
+				<td class="txtLeft">brand_n_templates_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_n_templates_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">nodata</td>
+				<td class="txtLeft">brand_n_templates_nodata</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_n_templates_nodata.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">Truck&Bus</td>
+				<td class="txtLeft">guidelines</td>
+				<td class="txtLeft">list</td>
+				<td class="txtLeft">brand_truck&bus_guidelines_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_truck&bus_guidelines_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">view</td>
+				<td class="txtLeft">brand_truck&bus_guidelines_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_truck&bus_guidelines_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">brand assets</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">brand_truck&bus_assets</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_truck&bus_assets.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">templates</td>
+				<td class="txtLeft">list</td>
+				<td class="txtLeft">brand_truck&bus_templates_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_truck&bus_templates_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">view</td>
+				<td class="txtLeft">brand_truck&bus_templates_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_truck&bus_templates_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">nodata</td>
+				<td class="txtLeft">brand_truck&bus_templates_nodata</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_truck&bus_templates_nodata.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">Hyundai Motor Studio</td>
+				<td class="txtLeft">guidelines</td>
+				<td class="txtLeft">list</td>
+				<td class="txtLeft">brand_motor_guidelines_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_motor_guidelines_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">view</td>
+				<td class="txtLeft">brand_motor_guidelines_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_motor_guidelines_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">brand assets</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">brand_motor_assets</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_motor_assets.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">templates</td>
+				<td class="txtLeft">list</td>
+				<td class="txtLeft">brand_motor_templates_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_motor_templates_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">view</td>
+				<td class="txtLeft">brand_motor_templates_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_motor_templates_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">nodata</td>
+				<td class="txtLeft">brand_motor_templates_nodata</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_motor_templates_nodata.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">Space</td>
+				<td class="txtLeft">guidelines</td>
+				<td class="txtLeft">list</td>
+				<td class="txtLeft">brand_space_guidelines_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_space_guidelines_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">view</td>
+				<td class="txtLeft">brand_space_guidelines_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_space_guidelines_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">Others</td>
+				<td class="txtLeft">guidelines</td>
+				<td class="txtLeft">list</td>
+				<td class="txtLeft">brand_others_guidelines_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_others_guidelines_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">view</td>
+				<td class="txtLeft">brand_others_guidelines_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/brand_others_guidelines_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">Training Program</td>
+				<td class="txtLeft">Training Video</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">training_video</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/training_video.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">E-Learning</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">e_learning</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brand/e_learning.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<!--
+      <tr>
+        <td class="txtLeft"></td>
+        <td class="txtLeft">Brand Image</td>
+        <td class="txtLeft"></td>
+        <td class="txtLeft"></td>
+        <td class="txtLeft">brand_image</td>
+        <td></td>
+        <td></td>
+        <td><a href="../html/brand/brand_image.html" target="_blank">View</a></td>
+        <td class="txtLeft"></td>
+      </tr>
+      -->
+			<!-- Library -->
+
+			<tr>
+				<th colspan="9" id="Library">Library</th>
+			</tr>
+			<tr>
+				<td class="txtLeft">Contents Type</td>
+				<td class="txtLeft">Brand Campaign</td>
+				<td class="txtLeft">list</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">brand_campaign</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/brand_campaign.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">view</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">brand_campaign_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/brand_campaign_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">Brand Space</td>
+				<td class="txtLeft">list</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">brand_space</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/brand_space.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">view</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">brand_space_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/brand_space_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">Brand Collection</td>
+				<td class="txtLeft">list</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">brand_collection</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/brand_collection.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">view</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">brand_collection_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/brand_collection_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">Global Launching Asset</td>
+				<td class="txtLeft">list</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">global_launching_asset</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/global_launching_asset.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">view</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">brand_collection_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/global_launching_asset_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">Social Media</td>
+				<td class="txtLeft">list</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">social_media</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/social_media.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">view</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">social_media_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/social_media_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">Event</td>
+				<td class="txtLeft">list</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">event</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/event.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">view</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">event_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/event_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">Media Type</td>
+				<td class="txtLeft">Image</td>
+				<td class="txtLeft">list</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">media_image_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/media_image_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">View</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">media_image_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/media_image_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">No Data</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">media_image_nodata</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/media_image_nodata.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">Video</td>
+				<td class="txtLeft">List</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">media_video_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/media_video_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">View</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">media_video_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/media_video_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">No Data</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">media_video_nodata</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/media_video_nodata.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">Sound</td>
+				<td class="txtLeft">List</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">media_sound_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/media_sound_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">View</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">media_sound_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/media_sound_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">No Data</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">media_sound_nodata</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/media_sound_nodata.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">Others</td>
+				<td class="txtLeft">List</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">media_other_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/media_other_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">View</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">media_other_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/media_other_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">No Data</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">media_other_nodata</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/media_other_nodata.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">Best Practice</td>
+				<td class="txtLeft">GMA</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">gma</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/gma.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">Local Campaigns</td>
+				<td class="txtLeft">List</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">local_campaigns_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/local_campaigns_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">View</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">local_campaigns_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/local_campaigns_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">저작권 만료 컨텐츠</td>
+				<td class="txtLeft">List</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">copyright_expired_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/copyright_expired_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">View</td>
+				<td class="txtLeft">Image</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">copyright_expired_image_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/copyright_expired_image_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">View</td>
+				<td class="txtLeft">Video</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">copyright_expired_video_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/copyright_expired_video_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">View</td>
+				<td class="txtLeft">Sound</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">copyright_expired_sound_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/copyright_expired_sound_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">View</td>
+				<td class="txtLeft">Others</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">copyright_expired_other_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/copyright_expired_other_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">No Data</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">copyright_expired_nodata</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/library/copyright_expired_nodata.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">에디터 템플릿</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">edit_template</td>
+				<td class="txtLeft"></td>
+				<td>O</td>
+				<td><a href="../html/library/edit_template.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr><!--
 		<tr>
 			<td class="txtLeft">Request to upload</td>
 			<td class="txtLeft">STEP 01_정보입력</td>
+			<td class="txtLeft"></td>
 			<td class="txtLeft"></td>
 			<td class="txtLeft">upload_step01</td>
 			<td></td>
@@ -796,6 +1212,7 @@
 			<td class="txtLeft"></td>
 			<td class="txtLeft">STEP 02_업로드</td>
 			<td class="txtLeft"></td>
+			<td class="txtLeft"></td>
 			<td class="txtLeft">upload_step02</td>
 			<td></td>
 			<td></td>
@@ -803,561 +1220,705 @@
 			<td class="txtLeft"></td>
 		</tr>
 		-->
-		<!-- Report -->
-		<tr>
-			<th colspan="8" id="Report">Brand Report</th>
-		</tr>
-		<tr>
-			<td class="txtLeft">BTS Reports</td>
-			<td class="txtLeft">List</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">bts_list</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/brandreport/bts_list.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft">GBIM Reports</td>
-			<td class="txtLeft">List</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">gbim_list</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/brandreport/gbim_list.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<!-- Support -->
-		<tr>
-			<th colspan="8" id="Support">Support</th>
-		</tr>
-		<tr>
-			<td class="txtLeft">Contact us</td>
-			<td class="txtLeft">Write</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">contactus</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/support/contactus.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">completion</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">contactus_complete</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/support/contactus_complete.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<!--
-		<tr>
-			<td class="txtLeft">Newsletters</td>
-			<td class="txtLeft">list</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">newsletter_list</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/support/newsletter_list.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">view</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">newsletter_view</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/support/newsletter_view.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		-->
-		<tr>
-			<td class="txtLeft">Glossary</td>
-			<td class="txtLeft">List/View</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">glossary</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/support/glossary.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">List Nodata</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">glossary_nodata</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/support/glossary_nodata.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<!-- Mybms -->
-		<tr>
-			<th colspan="8" id="Mybms">My BMS</th>
-		</tr>
-		<!--
-		<tr>
-			<td class="txtLeft">Overview</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">overview</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/mybms/overview.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>-->
-		<tr>
-			<td class="txtLeft">Send & Receive Files</td>
-			<td class="txtLeft">공유 파일 내역</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">share_file_list</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/mybms/share_file_list.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
+			<!-- Review -->
 
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">파일 보내기</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">send_file</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/mybms/send_file.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">파일 상세</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">file_details</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/mybms/file_details.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">파일 전달</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">forward_file</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/mybms/forward_file.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<!--
-		<tr>
-			<td class="txtLeft">My Activity</td>
-			<td class="txtLeft">Favorites</td>
-			<td class="txtLeft">List</td>
-			<td class="txtLeft">favorites_list</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/mybms/favorites_list.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">List Nodata</td>
-			<td class="txtLeft">favorites_list_nodata</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/mybms/favorites_list_nodata.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">Project</td>
-			<td class="txtLeft">list</td>
-			<td class="txtLeft">project_list</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/mybms/project_list.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">view</td>
-			<td class="txtLeft">project_view</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/mybms/project_view.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		-->
-		<tr>
-			<td class="txtLeft">My Activity</td>
-			<td class="txtLeft">문의내역</td>
-			<td class="txtLeft">List</td>
-			<td class="txtLeft">inquiry_list</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/mybms/inquiry_list.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">List Nodata</td>
-			<td class="txtLeft">inquiry_list_nodata</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/mybms/inquiry_list_nodata.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">View</td>
-			<td class="txtLeft">inquiry_view</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/mybms/inquiry_view.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">Account</td>
-			<td class="txtLeft">비밀번호 재확인</td>
-			<td class="txtLeft">reconfirm_password</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/mybms/reconfirm_password.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">비밀번호 재설정</td>
-			<td class="txtLeft">reset_password</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/mybms/reset_password.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">회원정보 수정</td>
-			<td class="txtLeft">info_modify</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/mybms/info_modify.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">계정 사용기간 연장요청</td>
-			<td class="txtLeft">account_period_extension</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/mybms/account_period_extension.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<!-- Footer -->
-		<tr>
-			<th colspan="8" id="Footer">Footer</th>
-		</tr>
-		<tr>
-			<td class="txtLeft">이용약관</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">terms</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/footer/terms.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft">개인정보취급방침</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">privacy</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/footer/privacy.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft">쿠키</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">cookie</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/footer/cookie.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<!--
-		<tr>
-			<td class="txtLeft">사이트맵</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">sitemap</td>
-			<td></td>
-			<td></td>
-			<td><a href="../html/footer/sitemap.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		-->
-		<!-- etc -->
-		<tr>
-			<th colspan="8" id="etc">Etc</th>
-		</tr>
-		<tr>
-			<td class="txtLeft">404 error</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">error_404</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/etc/error_404.html" target="_blank">View</a></td>
-			<td class="txtLeft">- 403 에러의 경우에도 404 에러화면 출력함</td>
-		</tr>
-		<tr>
-			<td class="txtLeft">500 error</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">error_500</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/etc/error_500.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft">Network Error</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">error_network</td>
-			<td>완료</td>
-			<td>O</td>
-			<td><a href="../html/etc/error_network.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<!-- Email -->
-		<tr>
-			<th colspan="8" id="Email">이메일템플릿</th>
-		</tr>
-		<tr>
-			<td class="txtLeft">계정</td>
-			<td class="txtLeft">계정 승인 신청</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">account_approval</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/email/account_approval.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">계정활성화</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">account_activation</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/email/account_activation.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">비밀번호 재설정</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">password_reset</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/email/password_reset.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">OTP 번호 발급 완료</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">otp</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/email/otp.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">사용자 계정 만료예정 안내</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">account_expiration</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/email/account_expiration.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">계정 만료 연장 요청 메일</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">account_extension</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/email/account_extension.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<!--
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">계정 승인 보류</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">account_approval_pending</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/email/account_approval_pending.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		-->
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">계정 승인 반려</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">account_approval_reject</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/email/account_approval_reject.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft">디자인 리뷰</td>
-			<td class="txtLeft">리뷰 요청</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">design_review</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/email/design_review.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">새로운 코멘트 알림</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">design_feedback</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/email/design_feedback.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">리뷰 승인</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">review_approval</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/email/review_approval.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">프로젝트 종료</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">review_end</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/email/review_end.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">리마인드 알림 메일</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">review_remind</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/email/review_remind.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft">라이브러리 콘텐츠 업로드</td>
-			<td class="txtLeft">프로젝트 업로드 요청</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">request</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/email/request.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">새로운 코멘트 알림</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">request_feedback</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/email/request_feedback.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">프로젝트 업로드 승인</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">request_approval</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/email/request_approval.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">프로젝트 업로드 반려</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">request_companion</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/email/request_companion.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft">Contact Us</td>
-			<td class="txtLeft">문의 답변 알림</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">inquiry_answer</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/email/inquiry_answer.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft">Newsletter</td>
-			<td class="txtLeft">뉴스레터</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">newsletter</td>
-			<td>진행중</td>
-			<td></td>
-			<td><a href="../html/email/newsletter.html" target="_blank">View</a></td>
-			<td class="txtLeft">- 상세 디자인 변경 후 수정예정</td>
-		</tr>
-		<tr>
-			<td class="txtLeft">파일 공유</td>
-			<td class="txtLeft">파일 공유</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">file_share</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/email/file_share.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		<tr>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">파일 저작권 만료</td>
-			<td class="txtLeft"></td>
-			<td class="txtLeft">file_expires</td>
-			<td>완료</td>
-			<td></td>
-			<td><a href="../html/email/file_expires.html" target="_blank">View</a></td>
-			<td class="txtLeft"></td>
-		</tr>
-		</tbody>
+			<tr>
+				<th colspan="9" id="Review">Design Review</th>
+			</tr>
+			<tr>
+				<td class="txtLeft">Submit Design Reviews</td>
+				<td class="txtLeft">Write</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">submit_design_write</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/review/submit_design_write.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">View</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">review_request_complete</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/review/review_request_complete.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">Manage Design Reviews</td>
+				<td class="txtLeft">List</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">manage_design_list</td>
+				<td></td>
+				<td></td>
+				<td><a href="../html/review/manage_design_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">view</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">manage_design_view</td>
+				<td></td>
+				<td></td>
+				<td><a href="../html/review/manage_design_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+
+			<!-- Report -->
+			<tr>
+				<th colspan="9" id="Report">Brand Report</th>
+			</tr>
+			<tr>
+				<td class="txtLeft">BTS Reports</td>
+				<td class="txtLeft">List</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">bts_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brandreport/bts_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">GBIM Reports</td>
+				<td class="txtLeft">List</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">gbim_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/brandreport/gbim_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<!-- Support -->
+			<tr>
+				<th colspan="9" id="Support">Support</th>
+			</tr>
+			<tr>
+				<td class="txtLeft">Contact us</td>
+				<td class="txtLeft">Write</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">contactus</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/support/contactus.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">completion</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">contactus_complete</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/support/contactus_complete.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">Newsletters</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">newsletter_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/support/newsletter_list.html" target="_blank">View</a></td>
+				<td class="txtLeft">- 상세내용 제외 작업 완료</td>
+			</tr>
+			<!--
+      <tr>
+        <td class="txtLeft"></td>
+        <td class="txtLeft">view</td>
+        <td class="txtLeft"></td>
+        <td class="txtLeft"></td>
+        <td class="txtLeft">newsletter_view</td>
+        <td></td>
+        <td></td>
+        <td><a href="../html/support/newsletter_view.html" target="_blank">View</a></td>
+        <td class="txtLeft"></td>
+      </tr>
+      -->
+			<tr>
+				<td class="txtLeft">Glossary</td>
+				<td class="txtLeft">List/View</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">glossary</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/support/glossary.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">List Nodata</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">glossary_nodata</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/support/glossary_nodata.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<!-- Mybms -->
+			<tr>
+				<th colspan="9" id="Mybms">My BMS</th>
+			</tr>
+			<!--
+      <tr>
+        <td class="txtLeft">Overview</td>
+        <td class="txtLeft"></td>
+        <td class="txtLeft"></td>
+        <td class="txtLeft"></td>
+        <td class="txtLeft">overview</td>
+        <td></td>
+        <td></td>
+        <td><a href="../html/mybms/overview.html" target="_blank">View</a></td>
+        <td class="txtLeft"></td>
+      </tr>-->
+			<tr>
+				<td class="txtLeft">Send & Receive Files</td>
+				<td class="txtLeft">공유 파일 내역</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">share_file_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/mybms/share_file_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">파일 보내기</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">send_file</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/mybms/send_file.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">파일 상세</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">file_details</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/mybms/file_details.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">파일 전달</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">forward_file</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/mybms/forward_file.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">My Activity</td>
+				<td class="txtLeft">Favorites</td>
+				<td class="txtLeft">List</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">favorites_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/mybms/favorites_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">List Nodata</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">favorites_list_nodata</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/mybms/favorites_list_nodata.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+
+			<!--
+      <tr>
+        <td class="txtLeft"></td>
+        <td class="txtLeft">Project</td>
+        <td class="txtLeft">list</td>
+        <td class="txtLeft"></td>
+        <td class="txtLeft">project_list</td>
+        <td></td>
+        <td></td>
+        <td><a href="../html/mybms/project_list.html" target="_blank">View</a></td>
+        <td class="txtLeft"></td>
+      </tr>
+      <tr>
+        <td class="txtLeft"></td>
+        <td class="txtLeft"></td>
+        <td class="txtLeft">view</td>
+        <td class="txtLeft"></td>
+        <td class="txtLeft">project_view</td>
+        <td></td>
+        <td></td>
+        <td><a href="../html/mybms/project_view.html" target="_blank">View</a></td>
+        <td class="txtLeft"></td>
+      </tr>-->
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">문의내역</td>
+				<td class="txtLeft">List</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">inquiry_list</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/mybms/inquiry_list.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">List Nodata</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">inquiry_list_nodata</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/mybms/inquiry_list_nodata.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">View</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">inquiry_view</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/mybms/inquiry_view.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">Account</td>
+				<td class="txtLeft">비밀번호 재확인</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">reconfirm_password</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/mybms/reconfirm_password.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">비밀번호 재설정</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">reset_password</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/mybms/reset_password.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">회원정보 수정</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">info_modify</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/mybms/info_modify.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">계정 사용기간 연장요청</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">account_period_extension</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/mybms/account_period_extension.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<!-- Footer -->
+			<tr>
+				<th colspan="9" id="Footer">Footer</th>
+			</tr>
+			<tr>
+				<td class="txtLeft">이용약관</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">terms</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/footer/terms.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">개인정보취급방침</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">privacy</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/footer/privacy.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">쿠키</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">cookie</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/footer/cookie.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">사이트맵</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">sitemap</td>
+				<td class="fc-color2">완료</td>
+				<td>O</td>
+				<td><a href="../html/footer/sitemap.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<!-- etc -->
+			<tr>
+				<th colspan="9" id="etc">Etc</th>
+			</tr>
+			<tr>
+				<td class="txtLeft">404 error</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">error_404</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/etc/error_404.html" target="_blank">View</a></td>
+				<td class="txtLeft">- 403 에러의 경우에도 404 에러화면 출력함</td>
+			</tr>
+			<tr>
+				<td class="txtLeft">500 error</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">error_500</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/etc/error_500.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">Network Error</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">error_network</td>
+				<td>완료</td>
+				<td>O</td>
+				<td><a href="../html/etc/error_network.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<!-- Email -->
+			<tr>
+				<th colspan="9" id="Email">이메일템플릿</th>
+			</tr>
+			<tr>
+				<td class="txtLeft">계정</td>
+				<td class="txtLeft">계정 승인 신청</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">account_approval</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/account_approval.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">계정활성화</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">account_activation</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/account_activation.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">비밀번호 재설정</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">password_reset</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/password_reset.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">OTP 번호 발급 완료</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">otp</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/otp.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">사용자 계정 만료예정 안내</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">account_expiration</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/account_expiration.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">계정 만료 연장 요청 메일</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">account_extension</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/account_extension.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<!--
+      <tr>
+        <td class="txtLeft"></td>
+        <td class="txtLeft">계정 승인 보류</td>
+        <td class="txtLeft"></td>
+        <td class="txtLeft"></td>
+        <td class="txtLeft">account_approval_pending</td>
+        <td class="fc-color2">완료</td>
+        <td></td>
+        <td><a href="../html/email/account_approval_pending.html" target="_blank">View</a></td>
+        <td class="txtLeft"></td>
+      </tr>
+      -->
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">계정 승인 반려</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">account_approval_reject</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/account_approval_reject.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">디자인 리뷰</td>
+				<td class="txtLeft">리뷰 요청</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">design_review</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/design_review.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">새로운 코멘트 알림</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">design_feedback</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/design_feedback.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">리뷰 승인</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">review_approval</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/review_approval.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">프로젝트 종료</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">review_end</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/review_end.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">리마인드 알림 메일</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">review_remind</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/review_remind.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">리뷰 업로드 알림 메일</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">review_upload</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/review_upload.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">라이브러리 콘텐츠 업로드</td>
+				<td class="txtLeft">프로젝트 업로드 요청</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">request</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/request.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">새로운 코멘트 알림</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">request_feedback</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/request_feedback.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">프로젝트 업로드 승인</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">request_approval</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/request_approval.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">프로젝트 업로드 반려</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">request_companion</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/request_companion.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">프로젝트 리마인드 알림 메일</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">request_remind</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/request_remind.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">디자인 리뷰 업로드 알림 메일</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">design_review_upload</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/design_review_upload.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">Contact Us</td>
+				<td class="txtLeft">문의 답변 알림</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">inquiry_answer</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/inquiry_answer.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft">Newsletter</td>
+				<td class="txtLeft">뉴스레터</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">newsletter</td>
+				<td class="fc-color2">진행중</td>
+				<td></td>
+				<td><a href="../html/email/newsletter.html" target="_blank">View</a></td>
+				<td class="txtLeft">이미지 엑박관련 현업 피드백 확인 후 추후 작업 진행 예정</td>
+			</tr>
+			<tr>
+				<td class="txtLeft">파일 공유</td>
+				<td class="txtLeft">파일 공유</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">file_share</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/file_share.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">파일 다운로드 완료</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">file_complete</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/file_complete.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			<tr>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">파일 저작권 만료</td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft"></td>
+				<td class="txtLeft">file_expires</td>
+				<td class="fc-color2">완료</td>
+				<td></td>
+				<td><a href="../html/email/file_expires.html" target="_blank">View</a></td>
+				<td class="txtLeft"></td>
+			</tr>
+			</tbody>
 		</table>
 	</div>
 </div>

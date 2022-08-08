@@ -6,124 +6,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <title>BMS 2.0</title>
 
+  <link rel="stylesheet" href="../../assets/css/lib/swiper.min.css">
   <link rel="stylesheet" href="../../assets/css/common.css">
-  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/lib/customlib.css">
   <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <script type="text/javascript" src="../../assets/js/lib/swiper.min.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
   <script type="text/javascript" src="../../assets/js/common.js"></script>
 </head>
 
 <body>
 
+<div class="gate-container">
+  
+</div>
 <div class="bms-wrap">
   <div class="skip-nav">
     <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
   </div>
 
-  <!-- header -->
-  <div class="bms-header">
-    <!-- 상단 gnb -->
-    <div class="gnb-menu">
-      <div class="inner-content">
-        <a href="" class="logo"><img src="../../assets/images/common/logo.png" alt=""></a>
-        <div class="menu">
-          <ul>
-            <li class="menu-first-li">
-              <a href="">Brand Guidelines</a>
-            </li>
-            <li class="menu-first-li">
-              <a href=""> Library</a>
-            </li>
-            <li class="menu-first-li">
-              <a href="">Review Tools</a>
-            </li>
-            <li class="menu-first-li">
-              <a href="">Brand Reports</a>
-            </li>
-            <li class="menu-first-li">
-              <a href="">My BMS</a>
-            </li>
-          </ul>
-        </div>
-        <div class="util">
-          <a href="" class="gnb-bookmark"></a>
-          <div class="select-box select-lang">
-            <p class="selected-value">EN</p>
-            <ul class="select-items">
-              <li class="selected"><a href="javascript:;">EN</a></li>
-              <li><a href="javascript:;">KR</a></li>
-              <li><a href="javascript:;">CH</a></li>
-            </ul>
-          </div>
-          <a href="" class="link-login">Logout</a>
-          <a href="" class="gnb-hamburger"></a>
-        </div>
-      </div>
-    </div>
-    <!-- right megamenu (햄버거메뉴 클릭 시 노출 화면) -->
-  </div>
-  <!--//header -->
-
   <!-- container -->
   <div id="bmsContainer" class="bms-container">
     <div class="bms-content">
       <!-- S: cont-outer -->
-      <div class="cont-outer">
-        <!-- S: [login] -->
-        <div class="login login-all"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
-          <div class="tit-box">
-            <h3>Welcome to Brand Home</h3>
-          </div>
-          <!-- S: form -->
-          <div class="form-outer">
-            <!-- S: 20220513 .row-type input 구조 수정 ▶︎ input-box를 감싸는 div.inp-btn-box 제거 -->
-            <div class="input-outer-box row-type"><!-- 20220513 .input-outer-box.row-type 외 클래스명 삭제 -->
-              <label for="loginEmail">이메일</label>
-              <div class="input-box val-error">
-                <input type="text" id="loginEmail" class="input-item inp-type-box" placeholder="Place Holder">
-                <button class="btn-reset"></button>
+      <div class="cont-outer none-gnb login">
+        <div class="login_cover_bg"></div>
+        <div class="login_cover_txt">
+          <p><img src="../../assets/images/common/ico_logo.svg"/></p>
+        </div>
+
+        <!-- S: [login-area] -->
+        <div class="login-area none-gnb-cont">
+          <div>
+            <p class="tit">Log in</p>
+            <div class="input-area">
+              <div class="input-outer-box row-type">
+                <div class="input-group-box mo-full">
+                  <div class="input-box val-error"> <!-- error message 노출시 val-error 클래스명 추가 -->
+                    <input type="text" id="user" name="user" class="input-item inp-type-box" placeholder="이메일을 입력해주세요.">
+                    <button class="btn-reset"></button>
+                  </div>
+                  <p class="error-msg">error text</p>
+                  <div class="input-box val-error last-input"> <!-- error message 노출시 val-error 클래스명 추가 -->
+                    <input type="password" id="password" name="password" class="input-item inp-type-box" placeholder="비밀번호를 입력해주세요.">
+                    <button class="btn-reset"></button>
+                  </div>
+                  <p class="error-msg msg2">error text</p>
+                  <a href="#" class="btn-login" target="_blank"></a>
+                </div>
               </div>
-              <p class="error-msg">error text</p><!-- 유효성 검사시 앞선 형제요소에 val-error 클래스 추가 -->
-            </div>
-            <div class="input-outer-box row-type password"><!-- 20220513 .input-outer-box.row-type.password 외 클래스명 삭제 -->
-              <label for="loginPassword">비밀번호</label>
-              <div class="input-box">
-                <input type="password" id="loginPassword" class="input-item inp-type-box" placeholder="Place Holder">
-                <button class="btn-reset"></button>
+              <div class="cta-outer">
+                <button class="btn-txt">비밀번호 찾기</button>
+                <button class="btn-txt">계정 생성</button>
+                <a href="#" class="btn-txt">계정생성 가이드</a>
               </div>
-              <p class="error-msg">error text</p><!-- 유효성 검사시 앞선 형제요소에 val-error 클래스 추가 -->
             </div>
-            <!-- E: 20220513 .row-type input 구조 수정 ▶︎ input-box를 감싸는 div.inp-btn-box 제거 -->
-            <button class="btn btn-full"><span>Log In</span></button>
-            <div class="login-opt">
-              <p class="fc-color4"><a href="../../html/login/find_password.html">비밀번호 찾기</a></p>
-              <p class="fc-color2"><a href="../../html/login/join.html">계정생성</a></p>
-            </div>
-          </div>
-          <!-- E: form -->
-          <div class="download-btn">
-            <span class="fc-color4 cont-text2">계정생성 가이드</span><img src="../../assets/images/common/ico_btn_download.svg" alt="다운로드아이콘" />
           </div>
         </div>
-        <!-- E: [login] -->
+        <!-- E: [login-area] -->
       </div>
       <!-- E: cont-outer -->
     </div>
   </div>
   <!--//container -->
-
-  <!-- footer -->
-  <div class="bms-footer">
-    <img src="../../assets/images/temp/@footer.png" alt="">
-  </div>
-  <!--//footer -->
-
-  <div class="btn-top-box">
-    <button title="move to top" role="button" class="btn-top">
-      <span>TOP</span> <!-- 220527 대문자 변경 -->
-    </button>
-  </div>
 </div>
 </body>
 </html>

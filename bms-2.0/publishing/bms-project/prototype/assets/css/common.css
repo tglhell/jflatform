@@ -545,7 +545,7 @@ div.select-box select {
   cursor: pointer;
   user-select: none;
   overflow: hidden;
-  word-break: break-all;
+  word-break: break-word;
   /*line-height: 20px;*/
   font-family: 'HyundaiSansTextKR' ;
 }

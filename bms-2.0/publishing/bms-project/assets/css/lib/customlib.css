@@ -14,9 +14,10 @@
 .ui-datepicker {
   width: auto;
   max-width: 334px;
-  font-family: 'HyundaiSansHeadJP', sans-serif;
+  font-family: 'HyundaiSansHeadKR';
   border-color: #ccc !important;
   padding: 30px 35px;
+  border-radius: 0px !important;
   box-sizing: border-box;
 }
 .ui-datepicker table {
@@ -26,6 +27,7 @@
 .ui-datepicker .ui-datepicker-header {
   padding:0;
   height:24px;
+  color: #000;
 }
 .ui-datepicker.ui-datepicker-inline {
   margin: 0;
@@ -192,7 +194,7 @@ a.ui-state-default {
   width: 20px;
   color:#333;
   line-height:normal;
-  font-family:'HyundaiSansTextJP', sans-serif;
+  font-family:'HyundaiSansTextKR';
   font-size:10px;
   line-height: 16px;
 }
@@ -329,112 +331,4 @@ a.ui-button:active,
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
   right: -50px;
-}
-
-/* sample swiper */
-.sample-swiper-num01 .swiper-container .swiper-slide {
-  width: 100%;
-  border: 1px solid #000;
-  background: rgba(0, 0, 0, .03);
-  box-sizing: border-box;
-}
-.sample-swiper-num01 .swiper-container .swiper-slide:hover {
-  background: rgba(0, 0, 0, .08);
-  text-shadow: 1px 2px 0 rgba(0, 0, 0, .1);
-}
-.sample-swiper-num01 img {
-  width: 100%;
-}
-
-.sample-swiper-num02 .swiper-container .swiper-slide {
-  width: 100%;
-  border: 1px solid #000;
-  background: rgba(0, 0, 0, .03);
-  box-sizing: border-box;
-}
-.sample-swiper-num02 .swiper-container .swiper-slide:hover {
-  background: rgba(0, 0, 0, .08);
-  text-shadow: 1px 2px 0 rgba(0, 0, 0, .1);
-}
-.sample-swiper-num02 img {
-  width: 100%;
-}
-
-/* mocean swiper */
-.main-swiper-num01 .swiper-button-outer {
-  position: absolute;
-  bottom: 55px;
-  right: 260px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 100%;
-}
-.main-swiper-num01 .swiper-container .swiper-slide {
-  height: 100vh;
-}
-.main-swiper-num01 .swiper-container .swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.main-swiper-num01 .swiper-button-outer .swiper-button-next {
-  left: 50px;
-}
-.main-swiper-num01 .swiper-button-outer [class*="swiper-button"] {
-  position: static;
-  width: 32px;
-  height: 32px;
-  margin-top: 0;
-  border: 1px solid #fff;
-  border-radius: 50%;
-}
-.main-swiper-num01 .swiper-button-outer [class*="swiper-button"]:after {
-  font-size: 20px;
-  color: #fff;
-}
-.main-swiper-num01 .swiper-button-outer .swiper-button-prev:after {
-  margin-left: -3px;
-}
-.main-swiper-num01 .swiper-button-outer .swiper-button-next {
-  margin-left: 10px;
-}
-.main-swiper-num01 .swiper-button-outer .swiper-button-next:after {
-  margin-right: -3px;
-}
-.main-swiper-num01 .swiper-pagination {
-  position: static;
-  width: 200px;
-  height: 1px;
-  margin-left: 20px;
-  background-color: rgba(255, 255, 255, .5);
-}
-.main-swiper-num01 .swiper-pagination > span {
-  display: none;
-}
-.main-swiper-num01 .swiper-pagination:before {
-  content: attr(data-swp-idx);
-  position: absolute;
-  top: -10px;
-  right: -50px;
-  font-size: 16px;
-  color: #fff;
-}
-.main-swiper-num01 .swiper-pagination:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 100%;
-  z-index: 3px;
-  height: 1px;
-  background-color: #fff;
-}
-.main-swiper-num01 .swiper-pagination[class*="swp-prs"]:after {
-  -webkit-transition: right 4s linear;
-  transition: right 4s linear;
-  right: 0;
 }

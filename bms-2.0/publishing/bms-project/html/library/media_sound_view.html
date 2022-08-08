@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <title>BMS 2.0</title>
 
-  <link rel="stylesheet" href="../../assets/css/lib/swiper.min.css">
-  <link rel="stylesheet" href="../../assets/css/common.css">
-  <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/lib/swiper.min.css">
+<link rel="stylesheet" href="../../assets/css/common.css">
+<link rel="stylesheet" href="../../assets/css/lib/customlib.css">
+<link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="../../assets/css/style.css">
 
   <script type="text/javascript" src="../../assets/js/lib/swiper.min.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
@@ -87,11 +88,15 @@
           <div class="cont-outer">
             <div class="tit-box">
               <span class="bookmark"></span>
-              <h1 class="h1-title">Hyundai · Hyundai Sound Music<br class="mo-only"/> library<br class="pc-only"/>Track 01 The simple things</h1>
+              <h1 class="h1-title">Hyundai · Hyundai Sound Music library Track 01 The simple things</h1><!-- 220718 br.mo-only, br.pc-only 제거 -->
             </div>
-            <div class="view-cont-all view-cont-sound">
-              <audio src="../../assets/sound/sound01.wav" controls></audio>
-            </div>
+          </div>
+          <!-- S: 220721 기존 cont-outer 안에있던 div.view-cont-sound cont-outer 밖으로 분리 -->
+          <div class="key-visual-box sound-type"><!-- 220721 view-cont-all, view-cont-sound 클래스 제거 / key-visual-box, sound-type 클래스 추가 -->
+            <audio src="../../assets/sound/sound01.wav" controls></audio>
+          </div>
+          <!-- E: 220721 기존 cont-outer 안에있던 div.view-cont-sound cont-outer 밖으로 분리 -->
+          <div class="cont-outer">
             <!-- S: info-table-outer -->
             <div class="info-cont-outer">
               <div>
@@ -290,7 +295,7 @@
 </div>
 
 <script>
-  carouselType2();
+  // 220726 스크립트 삭제
 </script>
 </body>
 </html>

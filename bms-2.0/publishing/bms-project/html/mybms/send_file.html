@@ -97,9 +97,9 @@
             <div class="input-outer-box row-type">
               <label for="inpTxt01">제목 <span class="required">*</span></label>
               <div class="input-box val-error">
+                <p class="typing"><span>0</span>/100</p> <!-- 20220719 button하위에서 input상위로 위치 변경 -->
                 <input type="text" id="inpTxt01" class="input-item" placeholder="제목을 입력해 주세요." maxlength="100">
                 <button class="btn-reset"></button>
-                <p class="typing"><span>0</span>/100</p>
               </div>
               <p class="error-msg">error text</p>
             </div>
@@ -107,6 +107,10 @@
               <label for="inpTxt02">수신자 <span class="required">*</span></label>
               <div class="autocomplete-wrap">
                 <ul class="autocomplete-area">
+                  <li class="result-area has-error"> <!-- 20220714 에러일경우 has-error 클래스 부여 -->
+                    <span>hyundai</span>
+                    <button></button>
+                  </li>
                   <li class="input-area">
                     <input id="inpTxt02" type="email" class="input-email" placeholder="수신자를 입력해주세요."/>
                   </li>
@@ -154,7 +158,7 @@
                     <div class="table-area">
                       <table cellpadding="0" cellspacing="0">
                         <colgroup>
-                          <col style="width:50px">
+                          <col style="width:42px"> <!-- 220720 width값 변경 -->
                           <col>
                           <col style="width: 160px">
                           <col style="width: 160px">
@@ -176,7 +180,7 @@
                                 <div class="table-area">
                                   <table cellpadding="0" cellspacing="0">
                                     <colgroup>
-                                      <col style="width:50px">
+                                      <col style="width:42px"> <!-- 220720 width값 변경 -->
                                       <col>
                                       <col style="width: 160px">
                                       <col style="width: 160px">

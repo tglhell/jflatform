@@ -80,7 +80,7 @@
       <!-- S: 20220531 cont-outer 분리(form 포함)︎ -->
       <div class="cont-outer form">
         <!-- S: [contactus] -->
-        <div class="support-all contactus"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 --><!-- 220711 클래스 순서 변경 -->
+        <div class="support-all contactus"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
           <!-- S: tit-box -->
           <div class="tit-box">
             <h1 class="h1-title">Contact Us</h1><!-- 220621 h1 태그로 변경 및 h1-title 클래스 추가 -->
@@ -111,9 +111,9 @@
             <div class="input-outer-box row-type"><!-- 20220513 .input-outer-box.row-type 외 클래스명 삭제 -->
               <label for="contactTitle">제목 <span class="required">*</span></label>
               <div class="input-box">
+                <p class="typing"><span>0</span>/100</p> <!-- 20220719 button하위에서 input상위로 위치 변경 -->
                 <input type="text" id="contactTitle" class="input-item inp-type-box inp" placeholder="제목을 입력해주세요." maxlength="100">
                 <button class="btn-reset"></button>
-                <p class="typing"><span>0</span>/100</p>
               </div>
               <p class="error-msg">error text</p><!-- 유효성 검사시 앞선 형제요소에 val-error 클래스 추가 -->
             </div>
@@ -142,7 +142,7 @@
                     <div class="table-area">
                       <table cellpadding="0" cellspacing="0">
                         <colgroup>
-                          <col style="width:50px">
+                          <col style="width:42px"> <!-- 220720 width값 변경 -->
                           <col>
                           <col style="width: 160px">
                           <col style="width: 160px">
@@ -164,7 +164,7 @@
                                 <div class="table-area">
                                   <table cellpadding="0" cellspacing="0">
                                     <colgroup>
-                                      <col style="width:50px">
+                                      <col style="width:42px"> <!-- 220720 width값 변경 -->
                                       <col>
                                       <col style="width: 160px">
                                       <col style="width: 160px">

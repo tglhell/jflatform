@@ -67,6 +67,10 @@ console.log(new Date().calculate('+30d'))
   //To의 초기값을 내일로 설정
   // $('#datepicker2').datepicker('setDate', '+1D'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
 
+  carouselType1();
+  carouselType2();
+  carouselType3();
+  carouselType4();
 });
 
 jQuery.event.add(window, 'load', function () {
@@ -118,12 +122,11 @@ function carouselType1(){
     });
   }
 }
-carouselType1();
 
 // carousel-type2
 function carouselType2(){
   if($('.carousel-type2').length > 0) {
-    if (window.matchMedia("(min-width: 1280px)").matches) {
+    if (window.matchMedia("(min-width: 1281px)").matches) {
       const carouselType2 = new Swiper('.carousel-type2 .slide-swiper', {
         // Optional parameters
         direction: 'horizontal',
@@ -152,7 +155,6 @@ function carouselType2(){
     }
   }
 }
-carouselType2();
 $(window).on('resize', function(){
   carouselType2();
 });
@@ -160,7 +162,7 @@ $(window).on('resize', function(){
 // carousel-type3
 function carouselType3(){
   if($('.carousel-type3').length > 0) {
-    if (window.matchMedia("(min-width: 1280px)").matches) {
+    if (window.matchMedia("(min-width: 1281px)").matches) {
       const carouselType2 = new Swiper('.carousel-type3 .slide-swiper', {
         // Optional parameters
         direction: 'horizontal',
@@ -189,7 +191,6 @@ function carouselType3(){
     }
   }
 }
-carouselType3();
 $(window).on('resize', function(){
   carouselType3();
 });
@@ -215,7 +216,6 @@ function carouselType4(){
     });
   }
 }
-carouselType4();
 
 function tabCarousel(){
   if($('.tab-carousel').length > 0) {
