@@ -80,14 +80,14 @@ $(() => {
 	}
 
 	$(document).on('mouseenter mousemove mouseleave', '.status-wrap a', function (e) {
-		const xOffset = 170;
-		const yOffset = 50;
+		const xOffset = 625;
+		const yOffset = -625;
 		if (e.type == 'mouseenter') {
 			const wSize = $(window).width() / 5;
 			if (!$(this).prev().is('.code-preview')) {
 				const hSize = ($(window).height() + 230) / 5;
-				const pageNum = $(this).text() + '?page=1';
-				$(this).before('<p class="code-preview" style="visibility: hidden;width:' + wSize + 'px;height:' + hSize + 'px"><iframe src="/publishing/bms-project/html/designreview/' + pageNum + '" width="100%" height="100%"></iframe>');
+				const pageNum = $(this).text();
+				$(this).before('<p class="code-preview" style="visibility: hidden; width:' + wSize + 'px;height:' + hSize + 'px"><iframe src="/publishing/bms-project/html/designreview/' + pageNum + '" width="1920" height="1080"></iframe>');
 			}
 			$(this).parent().find('.code-preview').css({'top':(e.pageY - xOffset) + 'px', 'left':(e.pageX + yOffset) + 'px', 'pointer-events':'auto', 'visibility':'visible'});
 		} else if (e.type == 'mouseleave') {
