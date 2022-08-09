@@ -7,7 +7,6 @@
 	pointer-events: none;
 }
 .code-preview iframe {
-	width: 100%;
 	border: 0;
 	box-shadow:
 		-17px -17px 20px 0px rgba(241, 241, 241, .9),
