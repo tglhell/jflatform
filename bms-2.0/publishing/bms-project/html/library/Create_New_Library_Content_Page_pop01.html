@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0</title>
+
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/review.css">
+  <link rel="stylesheet" href="../../assets/css/create-pop-js.css">
+
+  <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+  <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../../assets/js/common.js"></script>
+	<script type="text/javascript" src="../../assets/js/review.js"></script>
+</head>
+
+<body>
+
+<div class="bms-wrap">
+  <div class="skip-nav">
+    <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
+  </div>
+
+  <!-- header -->
+  <div class="bms-header">
+    <!-- 상단 gnb -->
+    <div class="gnb-menu">
+      <div class="inner-content">
+        <a href="" class="logo"><img src="../../assets/images/common/logo.png" alt=""></a>
+        <div class="menu">
+          <ul>
+            <li class="menu-first-li">
+              <a href="">Brand Guidelines</a>
+            </li>
+            <li class="menu-first-li">
+              <a href=""> Library</a>
+            </li>
+            <li class="menu-first-li">
+              <a href="">Review Tools</a>
+            </li>
+            <li class="menu-first-li">
+              <a href="">Brand Reports</a>
+            </li>
+            <li class="menu-first-li">
+              <a href="">My BMS</a>
+            </li>
+          </ul>
+        </div>
+        <div class="util">
+          <a href="" class="gnb-bookmark"></a>
+          <div class="select-box select-lang">
+            <p class="selected-value">EN</p>
+            <ul class="select-items">
+              <li class="selected"><a href="javascript:;">EN</a></li>
+              <li><a href="javascript:;">KR</a></li>
+              <li><a href="javascript:;">CH</a></li>
+            </ul>
+          </div>
+          <a href="" class="link-login">Logout</a>
+          <a href="" class="gnb-hamburger"></a>
+        </div>
+      </div>
+    </div>
+    <!-- right megamenu (햄버거메뉴 클릭 시 노출 화면) -->
+  </div>
+  <!--//header -->
+
+  <!-- container -->
+  <div id="bmsContainer" class="bms-container">
+    <div class="bms-content">      
+      <div class="cont-outer">
+
+        <div class="cta-outer">
+          <button class="btn btn-small pop-open" data-pop-idx="1"><span>태그추가</span></button>
+        </div>
+        <div class="layer-popup-wrap" data-pop-idx="1">
+          <div class="layer-popup-body">
+            <div class="layer-popup-cont">
+              <div class="layer-popup-cont-inner">
+                <h1 class="layer-title">태그추가</h1>
+                <div class="layer-cont">
+                  <label for="">연관 태그 추가 (최대 10개) <span class="required">*</span></label>
+                  <div class="js-switch-outer">
+                    <div class="switch-cont add-tag">
+                      <div class="tag-select">
+                        <div class="input-outer-box">
+                          <div class="input-box">
+                            <input type="text" class="input-item inp-search" placeholder="텍스트를 입력해 주세요.">
+                            <button class="btn-reset"></button>
+                            <button class="btn-search"><span>search</span></button>
+                          </div>
+                        </div>
+                        <div class="result-outer">
+                          <div class="switch-btm-box">
+                            <div class="input-outer-box row-type check-box">
+                              <div class="check-group"><!-- 에러시 + val-error -->
+                                <label class="chk"><input type="checkbox"><span>Accent(RB)</span></label>
+                                <label class="chk"><input type="checkbox"><span>Aslan(AG)</span></label>
+                                <label class="chk"><input type="checkbox"><span>Avante / Elantra(AD)</span></label>
+                                <label class="chk"><input type="checkbox"><span>Eon(HA)</span></label>
+                                <label class="chk"><input type="checkbox"><span>Grand i10(BA)</span></label>
+                                <label class="chk"><input type="checkbox"><span>Grandeur / Azera(IG)</span></label>
+                                <label class="chk"><input type="checkbox"><span>Sonata(DN)</span></label>
+                                <label class="chk"><input type="checkbox"><span>Sonata(DN8)</span></label>
+                                <label class="chk"><input type="checkbox"><span>Others</span></label>
+                                <label class="chk"><input type="checkbox"><span>Others jsjs</span></label>
+                                <label class="chk"><input type="checkbox"><span>Others jsjs2</span></label>
+                                <label class="chk"><input type="checkbox"><span>Others jsjs3</span></label>
+                                <label class="chk"><input type="checkbox"><span>Others jsjs4</span></label>
+                                <label class="chk"><input type="checkbox"><span>Others jsjs5</span></label>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- S: 검색결과 없을시 -->
+                          <div class="no-data">
+                            <p class="txt">'<span class="word">love</span>'에 대한<br>검색 결과가 없습니다.</p>
+                          </div>
+                          <!-- E: 검색결과 없을시 -->
+                        </div>
+                      </div>
+                      <div class="switch-item-list">
+                        <p class="txt">태그를 선택해주세요.</p>
+                        <ul></ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cta-outer">
+                    <button class="btn btn-middle btn-type2 btn-close"><span>취소</span></button>
+                    <button class="btn btn-middle"><span>확인</span></button>
+                  </div>
+                </div>
+              </div>
+              <button class="btn-close-popup btn-close">close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--//container -->
+
+  <!-- footer -->
+  <div class="bms-footer">
+    <div class="footer-inner">
+      <div class="foot-logo">
+        <img src="../../assets/images/main/foot_logo.png" alt="logo">
+      </div>
+      <div class="foot-menu">
+        <ul>
+          <li class="cont-tit2">Sitemap</li>
+          <li class="cont-tit2">Newsletter</li>
+          <li class="cont-tit2">Glossary</li>
+        </ul>
+      </div>
+      <div class="foot-contact">
+        <p class="cont-tit2">Contact Us</p>
+        <div>
+          <p class="caption htr">Brand Design Support Seoul</p>
+          <p class="caption htr">+82 2 6410 8232</p>
+        </div>
+        <div>
+          <p class="caption htr">Brand Design Support Berlin</p>
+          <p class="caption htr">+49 30 22 06 62 390</p>
+        </div>
+        <div>
+          <p class="caption htr">Global E-mail</p>
+          <p class="caption htr email">guideline@hyundai.com</p>
+        </div>
+      </div>
+      <div class="foot-terms">
+        <div class="terms-list">
+          <p class="cont-text2">Terms of Use</p>
+          <p class="privacy cont-text2">Privacy Policy</p>
+        </div>
+        <p class="copy caption htr fc-color4">© 2022 Hyundai Motor Company</p>
+      </div>
+    </div>
+  </div>
+  <!--//footer -->
+</div>
+
+<script>
+  designReview ();
+
+	window.onload = () => {
+		$('.pop-open').trigger('click');
+	}
+</script>
+</body>
+</html>

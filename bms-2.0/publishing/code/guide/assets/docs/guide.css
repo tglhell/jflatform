@@ -357,7 +357,7 @@ header.guide_header h1 {
 	opacity: 0;
 	position: relative;
 	max-width: none;
-	min-height: calc(100vh - 98px);
+	min-height: calc(100vh - 96px);
 	z-index: 5;
 }
 

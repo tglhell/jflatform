@@ -9,14 +9,16 @@
   <link rel="stylesheet" href="../../assets/css/common.css">
   <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="../../assets/css/lib/jquery-ui.css">
+  <link rel="stylesheet" href="../../assets/css/lib/daterangepicker.css">
   <link rel="stylesheet" href="../../assets/css/lib/customlib.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../../assets/css/review.css">
 
   <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../../assets/js/lib/daterangepicker.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
   <script type="text/javascript" src="../../assets/js/common.js"></script>
-	<script type="text/javascript" src="../../assets/js/review.js"></script>
+  <script type="text/javascript" src="../../assets/js/review.js"></script>
 </head>
 
 <body>
@@ -411,22 +413,266 @@
       <div class="cont-outer">
         <div class="breadclumb-outer">
           <a class="breadclumb"><span>Home</span></a>
-          <a class="breadclumb"><span>Design Review</span></a>
-          <a class="breadclumb regular"><span>New Design Review Submission</span></a>
+          <a class="breadclumb"><span>Review Tools</span></a>
+          <a class="breadclumb"><span>Library Contents Review</span></a>
+          <a class="breadclumb regular"><span>Review Management</span></a>
         </div>
       </div>
       <!-- E: 20220531 cont-outer 분리(breadclumb-outer 포함)︎ -->
 
       <!-- S: 20220531 cont-outer 분리(form 포함)︎ -->
-      <div class="cont-outer">
+      <div class="cont-outer fullcase">
         <!-- S: [forward_file] -->
         <div class="design-review-wrap"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
-          <div class="complete-outer">
-            <div class="complete-area">
-              <p class="tit">디자인 리뷰 요청 완료​</p>
-              <p class="desc">작성해주신 리뷰 내용이 담당자에게 전달되었습니다.​<br>담당자 검토 후 피드백을 전달 드릴 예정입니다.​<br>파일을 제출한 날로부터 영업일 3일 안으로 피드백은 업로드됩니다.​</p>
-            </div>
+          <div class="review-tit-top">
+						<div class="tit-box">
+							<h1 class="h1-title">Review Management</h1>
+							<p class="cont-text">
+								디자인 리뷰는 크리에이티브한 피드백을 빠르고 손쉽게 제공합니다.<br>
+								파일 업로드가 완료되면 피드백 및 리뷰 과정을 확인할 수 있습니다.
+							</p>
+						</div>
           </div>
+
+					<div class="review-filter-outer">
+						<div class="review-list-filter">
+							<div class="search-option-box">
+								<span class="search-date">04.25.2022</span>
+								<span class="inp-hpn">~</span>
+								<span class="search-date">06.25.2022</span>
+							</div>
+							<button class="btn-option">
+								<span class="text">조회설정</span>
+								<span class="ico btn-search-close">조회닫기<span><img src="../../assets/images/common/ico_close3.svg" alt="닫기"></span></span>
+							</button>
+						</div>
+
+						<div class="review-filter-form date-fix-type">
+							<div class="input-outer-box">
+								<div class="input-outer-box row-type">
+									<label for="inpNum01_01">기간</label>
+									<div class="select-box slt-date"><!-- 유효성체크 val-error -->
+										<p class="selected-value">3개월</p>
+										<ul class="select-items">
+											<li class="selected">3개월</li>
+											<li>6개월</li>
+											<li>9개월</li>
+											<li>12개월</li>
+											<li>직접 설정</li>
+										</ul>
+									</div>
+									<div class="inp-area slt-picker"><input type="text" id="inpDateRange_01" class="input-item daterange" placeholder="MM.DD.YYYY - MM.DD.YYYY"></div>
+								</div>
+
+								<div class="input-outer-box row-type">
+									<label for="inpNum01_02">브랜드</label>
+									<div class="select-box"><!-- 유효성체크 val-error -->
+										<p class="selected-value">전체</p>
+										<ul class="select-items">
+											<li>전체</li>
+											<li>Hyundai</li>
+											<li>N</li>
+											<li>Truck &amp; Bus</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="input-outer-box row-type">
+									<label for="inpNum01_03">진행상태</label>
+									<div class="select-box on"><!-- 유효성체크 val-error -->
+										<p class="selected-value">검토 중</p>
+										<ul class="select-items">
+											<li>전체</li>
+											<li>신규</li>
+											<li>검토 중</li>
+											<li>승인 완료</li>
+											<li>프로세스 완료</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="input-outer-box row-type">
+									<label for="inpNum01_04">미디어 타입</label>
+									<div class="select-box"><!-- 유효성체크 val-error -->
+										<p class="selected-value">전체</p>
+										<ul class="select-items">
+											<li>Film</li>
+											<li>Print</li>
+											<li>Digital</li>
+											<li>Merchandise</li>
+											<li>Space</li>
+											<li>Uniform</li>
+											<li>사내 제작물</li>
+											<li>Others</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="input-outer-box row-type">
+									<label for="inpNum01_05">차량코드</label>
+									<div class="select-box"><!-- 유효성체크 val-error -->
+										<p class="selected-value">전체</p>
+										<ul class="select-items">
+											<li>Accent(RB)</li>
+											<li>Aslan(AG)</li>
+											<li>Avante / Elantra(AD)</li>
+											<li>Eon(HA)</li>
+											<li>Grand i10(BA)</li>
+											<li>Grandeur / Azera(IG)</li>
+											<li>Sonata(DN)</li>
+											<li>Sonata(DN8)</li>
+											<li>Others</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="input-outer-box row-type">
+									<label for="inpNum01_06">제목</label>
+									<div class="input-box">
+										<input type="text" id="inpNum01_011" class="input-item inp-type-box" placeholder="제목을 입력해주세요.">
+										<button class="btn-reset"></button>
+									</div>
+								</div>
+							</div>
+							
+							<div class="cta-outer">
+								<button class="btn btn-middle-small btn-type2"><span>초기화</span></button>
+								<button class="btn btn-middle-small"><span>조회</span></button>
+							</div>
+						</div>
+
+						<div class="review-list-top">
+							<p class="list-total-num">Total <strong class="num-val">30</strong></p>
+						</div>
+						<div class="review-list-box">
+							<ul>
+								<li>
+									<div class="review-list-item">
+										<div class="list-type">
+											<span class="list-cate">Hyundai</span>
+											<span class="list-date">06.25.2022</span>
+										</div>
+										<div class="list-text-area">
+											<p class="list-tit"><a href="#">Technical Video for Customer Education Technical Video for Customer Education Technical Video for Customer Education Technical Video for Customer Education</a></p>
+											<ul class="status-info">
+												<li class="st-box">신규</li>
+											</ul>
+											<div class="write-info-box">
+												<dl class="write-info">
+													<dt>미디어 타입</dt>
+													<dd>Film - TVC, Digital - Mobile/APP, Merchandise - Brand Item</dd>
+												</dl>
+												<dl class="write-info">
+													<dt>차량 코드</dt>
+													<dd>Creta(GS), Sonata(DN), Creta(GS), Sonata(DN)</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review-list-item">
+										<div class="list-type">
+											<span class="list-cate">Hyundai</span>
+											<span class="list-date">06.25.2022</span>
+										</div>
+										<div class="list-text-area">
+											<p class="list-tit"><a href="#">Technical Video for Customer Education</a></p>
+											<ul class="status-info">
+												<li class="st-box2">검토 중</li>
+											</ul>
+											<div class="write-info-box">
+												<dl class="write-info">
+													<dt>미디어 타입</dt>
+													<dd>Film - TVC, Digital - Mobile/APP, Merchandise - Brand Item</dd>
+												</dl>
+												<dl class="write-info">
+													<dt>차량 코드</dt>
+													<dd>Creta(GS), Sonata(DN), Creta(GS), Sonata(DN)</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review-list-item">
+										<div class="list-type">
+											<span class="list-cate">N</span>
+											<span class="list-date">06.25.2022</span>
+										</div>
+										<div class="list-text-area">
+											<p class="list-tit"><a href="#">Technical Video for Customer Education</a></p>
+											<ul class="status-info">
+												<li class="st-box3">승인 완료</li>
+											</ul>
+											<div class="write-info-box">
+												<dl class="write-info">
+													<dt>미디어 타입</dt>
+													<dd>Film - TVC, Digital - Mobile/APP, Merchandise - Brand Item</dd>
+												</dl>
+												<dl class="write-info">
+													<dt>차량 코드</dt>
+													<dd>Creta(GS), Sonata(DN), Creta(GS), Sonata(DN)</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review-list-item">
+										<div class="list-type">
+											<span class="list-cate">Hyundai</span>
+											<span class="list-date">06.25.2022</span>
+										</div>
+										<div class="list-text-area">
+											<p class="list-tit"><a href="#">Technical Video for Customer Education Technical Video for Customer Education Technical Video for Customer Education Technical Video for Customer Education</a></p>
+											<ul class="status-info">
+												<li class="st-box4">프로세스 완료</li>
+											</ul>
+											<div class="write-info-box">
+												<dl class="write-info">
+													<dt>미디어 타입</dt>
+													<dd>Film - TVC, Digital - Mobile/APP, Merchandise - Brand Item</dd>
+												</dl>
+												<dl class="write-info">
+													<dt>차량 코드</dt>
+													<dd>Creta(GS), Sonata(DN), Creta(GS), Sonata(DN)</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review-list-item">
+										<div class="list-type">
+											<span class="list-cate">Truck &amp; Bus</span>
+											<span class="list-date">06.25.2022</span>
+										</div>
+										<div class="list-text-area">
+											<p class="list-tit"><a href="#">Technical Video for Customer Education</a></p>
+											<ul class="status-info">
+												<li class="st-box2">검토 중</li>
+											</ul>
+											<div class="write-info-box">
+												<dl class="write-info">
+													<dt>미디어 타입</dt>
+													<dd>Film - TVC, Digital - Mobile/APP, Merchandise - Brand Item</dd>
+												</dl>
+												<dl class="write-info">
+													<dt>차량 코드</dt>
+													<dd>Creta(GS), Sonata(DN), Creta(GS), Sonata(DN)</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="cta-outer">
+						<button class="btn btn-type2"><span>More</span></button>
+					</div>
         </div>
         <!-- E: [forward_file] -->
       </div>
@@ -482,4 +728,8 @@
 </div>
 
 </body>
+
+<script>
+	reviewManagementFunc ();
+</script>
 </html>

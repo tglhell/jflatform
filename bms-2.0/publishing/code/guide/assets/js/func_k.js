@@ -81,17 +81,18 @@ $(() => {
 
 	$(document).on('mouseenter mousemove mouseleave', '.status-wrap a', function (e) {
 		const xOffset = 625;
-		const yOffset = -625;
+		const yOffset = -650;
 		if (e.type == 'mouseenter') {
 			const wSize = $(window).width() / 5;
 			if (!$(this).prev().is('.code-preview')) {
 				const hSize = ($(window).height() + 230) / 5;
+				const locationUrl = $(this).closest('td').prev().text();
 				const pageNum = $(this).text();
-				$(this).before('<p class="code-preview" style="visibility: hidden; width:' + wSize + 'px;height:' + hSize + 'px"><iframe src="/publishing/bms-project/html/designreview/' + pageNum + '" width="1920" height="1080"></iframe>');
+				$(this).before('<p class="code-preview" style="display: none; width:' + wSize + 'px; height:' + hSize + 'px"><iframe src="/publishing/bms-project/html' + locationUrl + pageNum + '" width="1920" height="1080"></iframe>');
 			}
-			$(this).parent().find('.code-preview').css({'top':(e.pageY - xOffset) + 'px', 'left':(e.pageX + yOffset) + 'px', 'pointer-events':'auto', 'visibility':'visible'});
+			$(this).parent().find('.code-preview').css({'top':(e.pageY - xOffset) + 'px', 'left':(e.pageX + yOffset) + 'px', 'display':'block'});
 		} else if (e.type == 'mouseleave') {
-			$('.code-preview').css({'visibility':'hidden', 'pointer-events':'none'});
+			$('.code-preview').css({'display':'none'});
 			// $('.code-preview').remove();
 		} else {
 			$(this).parent().find('.code-preview').css({'top':(e.pageY - xOffset) + 'px', 'left':(e.pageX + yOffset) + 'px'});
