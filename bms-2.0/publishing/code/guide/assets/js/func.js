@@ -100,7 +100,7 @@ $(() => {
 				while (c--) if (o[c]) h = h.replace(new RegExp("\\b" + n(c) + "\\b", "g"), o[c]);
 				return h;
 			})(
-				"1 7=w;1 8=-x;9(e.a=='y'){1 b=$(c).d()/5;9(!$(2).f().z('.4-6')){1 g=($(c).h()+A)/5;1 i=$(2).B('C').f().j();1 k=$(2).j();$(2).D('<p E=\"4-6\" F=\"l: G; d:'+b+'3; h:'+g+'3\"><m H=\"/I/J-K/L'+i+k+'\"></m>')}$(2).n().o('.4-6').q({'r':(e.s-7)+'3','t':(e.u+8)+'3','l':'M'}).N('O','0').P()}v 9(e.a=='Q'){$('.4-6').R()}v{$(2).n().o('.4-6').q({'r':(e.s-7)+'3','t':(e.u+8)+'3'})}", 54, 54, "|const|this|px|code||preview|xOffset|yOffset|if|type|wSize|window|width||prev|hSize|height|locationUrl|text|pageNum|display|iframe|parent|find||css|top|pageY|left|pageX|else|625|650|mouseenter|is|230|closest|td|before|class|style|none|src|publishing|bms|project|html|block|attr|tabindex|focus|mouseleave|remove".split("|"), 0, {}
+				"1 8=x;1 9=-(e.a*.6);b(e.c=='y'){1 d=$(f).g()/5;b(!$(2).h().z('.4-7')){1 i=($(f).j()+A)/5;1 k=$(2).B('C').h().l();1 m=$(2).l();$(2).D('<p E=\"4-7\" F=\"n: G; g:'+d+'3; j:'+i+'3\"><o H=\"/I/J-K/L'+k+m+'\"></o>')}$(2).q().r('.4-7').s({'t':(e.u-8)+'3','v':(e.a+9)+'3','n':'M'}).N('O','0').P()}w b(e.c=='Q'){$('.4-7').R()}w{$(2).q().r('.4-7').s({'t':(e.u-8)+'3','v':(e.a+9)+'3'})}", 54, 54, "|const|this|px|code|||preview|xOffset|yOffset|pageX|if|type|wSize||window|width|prev|hSize|height|locationUrl|text|pageNum|display|iframe||parent|find|css|top|pageY|left|else|580|mouseenter|is|230|closest|td|before|class|style|none|src|publishing|bms|project|html|block|attr|tabindex|focus|mouseleave|remove".split("|"), 0, {}
 			)
 		);
 	});

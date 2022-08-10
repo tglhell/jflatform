@@ -80,8 +80,8 @@ $(() => {
 	}
 
 	$(document).on('mouseenter mousemove mouseleave', '.status-wrap a', function (e) {
-		const xOffset = 625;
-		const yOffset = -650;
+		const xOffset = 580;
+		const yOffset = -(e.pageX * .6);
 		if (e.type == 'mouseenter') {
 			const wSize = $(window).width() / 5;
 			if (!$(this).prev().is('.code-preview')) {
