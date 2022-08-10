@@ -90,10 +90,9 @@ $(() => {
 				const pageNum = $(this).text();
 				$(this).before('<p class="code-preview" style="display: none; width:' + wSize + 'px; height:' + hSize + 'px"><iframe src="/publishing/bms-project/html' + locationUrl + pageNum + '" width="1920" height="1080"></iframe>');
 			}
-			$(this).parent().find('.code-preview').css({'top':(e.pageY - xOffset) + 'px', 'left':(e.pageX + yOffset) + 'px', 'display':'block'});
+			$(this).parent().find('.code-preview').css({'top':(e.pageY - xOffset) + 'px', 'left':(e.pageX + yOffset) + 'px', 'display':'block'}).attr('tabindex', '0').focus();
 		} else if (e.type == 'mouseleave') {
-			$('.code-preview').css({'display':'none'});
-			// $('.code-preview').remove();
+			$('.code-preview').remove();
 		} else {
 			$(this).parent().find('.code-preview').css({'top':(e.pageY - xOffset) + 'px', 'left':(e.pageX + yOffset) + 'px'});
 		}

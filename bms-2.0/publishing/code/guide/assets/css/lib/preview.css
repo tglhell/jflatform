@@ -4,6 +4,7 @@
 	z-index: 30;
 	width: 480px;
 	height: 270px;
+	outline: none;
 }
 .code-preview iframe {
 	border: 0;
