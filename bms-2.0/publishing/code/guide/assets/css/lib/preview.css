@@ -7,6 +7,8 @@
 	outline: none;
 }
 .code-preview iframe {
+	width: 100vw;
+	height: 100vh;
 	border: 0;
 	box-shadow:
 		-68px -68px 20px 0px rgba(241, 241, 241, .9),

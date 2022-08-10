@@ -88,7 +88,7 @@ $(() => {
 				const hSize = ($(window).height() + 230) / 5;
 				const locationUrl = $(this).closest('td').prev().text();
 				const pageNum = $(this).text();
-				$(this).before('<p class="code-preview" style="display: none; width:' + wSize + 'px; height:' + hSize + 'px"><iframe src="/publishing/bms-project/html' + locationUrl + pageNum + '" width="1920" height="1080"></iframe>');
+				$(this).before('<p class="code-preview" style="display: none; width:' + wSize + 'px; height:' + hSize + 'px"><iframe src="/publishing/bms-project/html' + locationUrl + pageNum + '"></iframe>');
 			}
 			$(this).parent().find('.code-preview').css({'top':(e.pageY - xOffset) + 'px', 'left':(e.pageX + yOffset) + 'px', 'display':'block'}).attr('tabindex', '0').focus();
 		} else if (e.type == 'mouseleave') {
