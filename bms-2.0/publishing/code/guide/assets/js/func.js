@@ -100,7 +100,7 @@ $(() => {
 				while (c--) if (o[c]) h = h.replace(new RegExp("\\b" + n(c) + "\\b", "g"), o[c]);
 				return h;
 			})(
-				"1 8=x;1 9=-(e.a*.6);b(e.c=='y'){1 d=$(f).g()/5;b(!$(2).h().z('.4-7')){1 i=($(f).j()+A)/5;1 k=$(2).B('C').h().l();1 m=$(2).l();$(2).D('<p E=\"4-7\" F=\"n: G; g:'+d+'3; j:'+i+'3\"><o H=\"/I/J-K/L'+k+m+'\"></o>')}$(2).q().r('.4-7').s({'t':(e.u-8)+'3','v':(e.a+9)+'3','n':'M'}).N('O','0').P()}w b(e.c=='Q'){$('.4-7').R()}w{$(2).q().r('.4-7').s({'t':(e.u-8)+'3','v':(e.a+9)+'3'})}", 54, 54, "|const|this|px|code|||preview|xOffset|yOffset|pageX|if|type|wSize||window|width|prev|hSize|height|locationUrl|text|pageNum|display|iframe||parent|find|css|top|pageY|left|else|580|mouseenter|is|230|closest|td|before|class|style|none|src|publishing|bms|project|html|block|attr|tabindex|focus|mouseleave|remove".split("|"), 0, {}
+				"1 a=$(2).3()/5;1 b=($(2).g()+w)/5;1 c=((e.x/$(2).3()*8)-(b/$(2).3())*8)-y;1 d=((e.z/$(2).3()*8)-(a/$(2).3())*8)-A;f(e.h=='B'){f(!$(4).i().C('.6-7')){1 j=$(4).D('E').i().k();1 l=$(4).k();$(4).F('<p G=\"6-7\" H=\"m: I; 3:'+a+'n; g:'+b+'n\"><o J=\"/K/L-M/N'+j+l+'\"></o>')}$(4).q().r('.6-7').s({'t':c+'9','u':d+'9','m':'O'}).P('Q','0').R()}v f(e.h=='S'){$('.6-7').T()}v{$(4).q().r('.6-7').s({'t':c+'9','u':d+'9'})}", 56, 56, "|const|window|width|this||code|preview|100|vw|wSize|hSize|posTopSum|posLeftSum||if|height|type|prev|locationUrl|text|pageNum|display|px|iframe||parent|find|css|top|left|else|250|pageY|17|pageX|12|mouseenter|is|closest|td|before|class|style|none|src|publishing|bms|project|html|block|attr|tabindex|focus|mouseleave|remove".split("|"), 0, {}
 			)
 		);
 	});
