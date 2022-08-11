@@ -100,7 +100,7 @@ $(() => {
 				while (c--) if (o[c]) h = h.replace(new RegExp("\\b" + n(c) + "\\b", "g"), o[c]);
 				return h;
 			})(
-				"1 a=$(2).3()/5;1 b=($(2).g()+w)/5;1 c=((e.x/$(2).3()*8)-(b/$(2).3())*8)-y;1 d=((e.z/$(2).3()*8)-(a/$(2).3())*8)-A;f(e.h=='B'){f(!$(4).i().C('.6-7')){1 j=$(4).D('E').i().k();1 l=$(4).k();$(4).F('<p G=\"6-7\" H=\"m: I; 3:'+a+'n; g:'+b+'n\"><o J=\"/K/L-M/N'+j+l+'\"></o>')}$(4).q().r('.6-7').s({'t':c+'9','u':d+'9','m':'O'}).P('Q','0').R()}v f(e.h=='S'){$('.6-7').T()}v{$(4).q().r('.6-7').s({'t':c+'9','u':d+'9'})}", 56, 56, "|const|window|width|this||code|preview|100|vw|wSize|hSize|posTopSum|posLeftSum||if|height|type|prev|locationUrl|text|pageNum|display|px|iframe||parent|find|css|top|left|else|250|pageY|17|pageX|12|mouseenter|is|closest|td|before|class|style|none|src|publishing|bms|project|html|block|attr|tabindex|focus|mouseleave|remove".split("|"), 0, {}
+				"5(e.6=='r'){5(!$(1).7().s('.3-4')){8 9=$(1).t('u').7().a();8 b=$(1).a();$(1).v('<p w=\"3-4\" x=\"c: y; z:'+'A'+'2; B:'+'C'+'2; D: E(.d, .d);\"><f F=\"/G/H-I/J'+9+b+'\"></f>')}$(1).g().h('.3-4').i({'j':(e.k-l)+'2','m':(e.n-o)+'2','c':'K'}).L('M','0').N()}q 5(e.6=='O'){$('.3-4').P()}q{$(1).g().h('.3-4').i({'j':(e.k-l)+'2','m':(e.n-o)+'2'})}", 52, 52, "|this|px|code|preview|if|type|prev|const|locationUrl|text|pageNum|display|25||iframe|parent|find|css|top|pageY|630|left|pageX|620||else|mouseenter|is|closest|td|before|class|style|none|width|1920|height|1080|transform|scale|src|publishing|bms|project|html|block|attr|tabindex|focus|mouseleave|remove".split("|"), 0, {}
 			)
 		);
 	});

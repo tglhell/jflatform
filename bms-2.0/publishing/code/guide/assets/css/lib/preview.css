@@ -2,13 +2,11 @@
 .code-preview {
 	position: absolute;
 	z-index: 30;
-	width: 480px;
-	height: 270px;
 	outline: none;
 }
 .code-preview iframe {
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	border: 0;
 	box-shadow:
 		-68px -68px 20px 0px rgba(241, 241, 241, .9),

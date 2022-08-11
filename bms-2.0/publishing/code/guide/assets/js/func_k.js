@@ -80,21 +80,17 @@ $(() => {
 	}
 
 	$(document).on('mouseenter mousemove mouseleave', '.status-wrap a', function (e) {
-		const wSize = $(window).width() / 5;
-		const hSize = ($(window).height() + 250) / 5;
-		const posTopSum = ((e.pageY / $(window).width() * 100) - (hSize / $(window).width()) * 100) - 17;
-		const posLeftSum = ((e.pageX / $(window).width() * 100) - (wSize / $(window).width()) * 100) - 12;
 		if (e.type == 'mouseenter') {
 			if (!$(this).prev().is('.code-preview')) {
 				const locationUrl = $(this).closest('td').prev().text();
 				const pageNum = $(this).text();
-				$(this).before('<p class="code-preview" style="display: none; width:' + wSize + 'px; height:' + hSize + 'px"><iframe src="/publishing/bms-project/html' + locationUrl + pageNum + '"></iframe>');
+				$(this).before('<p class="code-preview" style="display: none; width:' + '1920' + 'px; height:' + '1080' + 'px; transform: scale(.25, .25);"><iframe src="/publishing/bms-project/html' + locationUrl + pageNum + '"></iframe>');
 			}
-			$(this).parent().find('.code-preview').css({'top':posTopSum + 'vw', 'left':posLeftSum + 'vw', 'display':'block'}).attr('tabindex', '0').focus();
+			$(this).parent().find('.code-preview').css({'top':(e.pageY - 630) + 'px', 'left':(e.pageX - 620) + 'px', 'display':'block'}).attr('tabindex', '0').focus();
 		} else if (e.type == 'mouseleave') {
 			$('.code-preview').remove();
 		} else {
-			$(this).parent().find('.code-preview').css({'top':posTopSum + 'vw', 'left':posLeftSum + 'vw'});
+			$(this).parent().find('.code-preview').css({'top':(e.pageY - 630) + 'px', 'left':(e.pageX - 620) + 'px'});
 		}
 	});
 });

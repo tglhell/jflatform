@@ -1,4 +1,4 @@
-/* s : design_review_01 */
+/* s : submit_design_write */
 function designReview () {
 	maxItemLeng = 10; // 체크박스 체크된 최대 갯수
 	swtParent = $('.js-switch-outer');
@@ -78,9 +78,9 @@ function chkLeng (elem) {
 		elem.closest('.js-switch-outer.on:not(.active)').css('height', (swtCntVal[0] + swtCntVal[1]) + (swtCntPd[1] * irNum[1]));
 	}
 }
-/* e : design_review_01 */
+/* e : submit_design_write */
 
-/* s : design_review_03 */
+/* s : manage_design_list */
 function reviewManagementFunc () {
 	eDateTar = [$('.review-list-filter .text'), $('.daterange'), $('.date-fix-type .slt-date'), $('.search-date')];
 	prntDateTar = [$('.review-filter-outer'), $('.review-list-filter'), $('.review-filter-form')];
@@ -164,7 +164,147 @@ function actDateInp () {
 	eDateTar[3].eq(0).text(sDateVal);
 	eDateTar[3].eq(1).text(eDateVal);
 }
-/* e : design_review_03 */
+/* e : manage_design_list */
+
+/* s : manage desgin view */
+function review_management_view_set() {
+	$('.review-management').parents('html').addClass('management');
+	//top tab
+	$('.top-tab-menu').on('click', 'li', function() {
+		let i = $(this).index(),
+				tabContLi = $(this).parent('.top-tab-menu').next('.top-tab-cont').find('.top-tab-list');
+		$(this).parent().find('li').removeClass('active');
+		$(this).addClass('active');
+		tabContLi.removeClass('active');
+		tabContLi.eq(i).addClass('active');
+	})
+}
+
+// tooltip
+function nameTooltip() {
+	const targetName = $('.timeline').find('.writer');
+	targetName.on('click', function(e) {
+		let tooltip = $(this).next('.tooltip');
+		$(this).addClass('active');
+		tooltip.fadeIn();
+	})
+	targetName.next().find('.btn-close').on('click', function() {
+		$(this).parent().fadeOut().siblings('.writer').removeClass('active');
+	}) 
+}
+
+//text more
+function txtMore() {
+	let txtList = $('.timeline .list'),
+			txtCont = $('.timeline .txt-cont'),
+			txtContLen = txtCont.length,
+			txtContH,
+			txtContHArr = [],
+			listIdxArr =[],
+			minHeight = 241,
+			pushBtn = '<button type="button" class="btn-more"></button>',
+			btnTxt1 = 'More',
+			btnTxt2 = 'Close';
+
+	txtCont.each(function(){
+		txtContH = $(this).find('.txt').outerHeight();
+		txtContHArr.push(txtContH);
+	})
+
+	txtList.each(function(i) {
+		$(this).attr('data-idx',i);
+		listIdx = $(this).data('idx');
+		listIdxArr.push(listIdx);
+	})
+
+	for (let i=0; i<txtContLen; i++) {     
+		if (txtContHArr[i] >= minHeight){
+			txtCont.eq(i).append(pushBtn).addClass('short').find('.btn-more').text(btnTxt1);
+			txtCont.eq(i).find('.txt').css({height:minHeight-1});
+		} 
+	}
+
+	let btnMore = $('.timeline .btn-more');
+	btnMore.on('click', function() {
+		let thisTxtH = $(this).siblings().outerHeight(),
+				thisIdx = $(this).parents('.list').data('idx');
+
+		if (thisTxtH >= minHeight){
+			$(this).text(btnTxt1).parent().addClass('short');
+			$(this).siblings('.txt').stop().animate({height:minHeight-1});
+		} else {
+			$(this).text(btnTxt2).parent().removeClass('short');
+			$(this).siblings('.txt').stop().animate({height:txtContHArr[thisIdx]});
+		}
+	})
+}
+
+// comment file
+function commentFile() {
+	let addFile = $('.comment-box input[type="file"]');
+
+	addFile.on('change', function(){
+		let fileCont = $(this).parents('.inp-cont').next('.switch-item-list'),
+				filename;
+		if(!fileCont.children().is('ul')) {
+			fileCont.append('<ul></ul>');
+		}
+		if(window.FileReader){
+			filename = $(this)[0].files[0].name;
+		} else {
+			filename = $(this).val().split('/').pop().split('\\').pop();
+		}
+
+		let pushTag = '<li>'+filename+'<button class="btn-item-del"></button></li>';
+		fileCont.children('ul').append(pushTag);
+		$('.btn-item-del').on('click', function() {
+			let $this = $(this);
+			clearFile($this)
+		})
+	}); 
+}
+
+//clear file
+function clearFile($this) {
+	$this.parent().remove();
+	$('.inpfile').val('');
+	$this.parents('.comment-box').find('.inpfile').replaceWith($('.inpfile').clone(true));
+}
+
+//resize textarea
+function autoReTxt() {
+	$('.txtarea-resize textarea').on('keydown keyup', function() {
+		let inpBtn = $(this).parent().next('.btn');
+		if ($(this).val() == '') {
+			inpBtn.attr('disabled', true);
+		} else {
+			inpBtn.attr('disabled', false);
+		}
+		$(this).height(1).height( $(this).prop('scrollHeight') );	
+	})
+}
+/* e : manage design view */
+
+/* s : review management view */
+function review_management_set() {
+	$('.design-review-view').parents('html').addClass('view-wrap');
+	$('.view-wrap').find('.layer-popup-cont').width(1200);
+	if($(window).width() < 1281) {
+		$(window).on('scroll', function(){
+			$('.bms-header').removeClass('fixed');
+			let scroll = $(this).scrollTop(),
+					targetH = $('.view-wrap .timeline').offset().top,
+					headerH = $('.bms-header').height();
+			if(scroll > targetH - headerH) {
+				$('.bms-header').addClass('fixed')
+			} else {
+				$('.bms-header').removeClass('fixed')
+			}
+		})
+	}  
+}
+/* e : review management view */
+
 
 /* s : design_review_05 */
 function btmFixBoxFunc () {

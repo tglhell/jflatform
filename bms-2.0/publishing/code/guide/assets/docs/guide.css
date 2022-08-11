@@ -854,9 +854,3 @@ UL.jqueryFileTree A:hover {
 	outline: none;
 }
 /* e : btn-top */
-
-/* s : url preview */
-.code-preview iframe {
-	transform: scale(.25, .25);
-}
-/* e : url preview */

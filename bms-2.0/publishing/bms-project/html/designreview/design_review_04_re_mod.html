@@ -6,13 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <title>BMS 2.0</title>
 
+  <link rel="stylesheet" href="../../assets/css/lib/jquery-ui.css">
+  <link rel="stylesheet" href="../../assets/css/lib/customlib.css">
   <link rel="stylesheet" href="../../assets/css/common.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
-  <link rel="stylesheet" href="../../assets/css/review-js.css">
+  <link rel="stylesheet" href="../../assets/css/review.css">
 
   <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
   <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
   <script type="text/javascript" src="../../assets/js/common.js"></script>
 	<script type="text/javascript" src="../../assets/js/review.js"></script>
 </head>
@@ -88,174 +91,122 @@
           <ul class="top-tab-menu">
             <li class="active">콘텐츠 정보</li>
             <li>코멘트</li>
-          </ul>
+          </ul> 
           <div class="top-tab-cont">
             <div class="contents-info top-tab-list active">
               <h1 class="h1-title">Brand Vision Contents</h1>
               <p class="progress-txt">
-                <strong>[검토 중]</strong>담당자가 검토 중 입니다.
+                <strong>[검토 중]</strong>담당자가 피드백을 등록하였습니다. 라이브러리 콘텐츠 정보 수정 및<br>
+                저작권 정보 확인을 해주세요. 이후 피드백 대기를 선택하여 코멘트 전송 시 수정 내용이 관리자에게 전달됩니다.
               </p>
+              <div class="input-info-form">
+                <div class="input-outer-box fix-info">
+                  <strong class="tit">등록일</strong>
+                  <p>06.25.2022</p>
+                </div>
+                <div class="input-outer-box row-type">
+                  <label for="inpNum01">카테고리 구분</label>
+                  <div class="select-box">
+                    <p class="selected-value">선택</p>
+                    <ul class="select-items">
+                      <li>Brand Campaign</li>
+                      <li>Brand Space</li>
+                      <li>Brand Collection</li>
+                      <li>Global Launching Assets</li>
+                      <li>Social Media</li>
+                      <li>Event</li>
+                      <li>GMA</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="input-outer-box row-type">
+                  <div class="input-group-box">
+                    <div class="input-box"><label for="inpName01_021">대표 이미지</label></div>
+                    <div class="input-box side">
+                      <label for="inpName01_021">게시 기간 (KST 기준)</label>
+                      <div class="right">
+                        <label class="chk"><input type="checkbox"><span>기간 제한 없음</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-group-box">
+                    <div class="input-box img">
+                      <div class="img-box"><img src="" alt=""></div>
+                      <div class="right">
+                        <div class="input-box">
+                          <input type="text" class="input-item">
+                        </div>
+                        <ul class="txt">
+                          <li>용량은 최대 20MB 이하까지 가능합니다.</li>
+                          <li>이미지 형식(jpg, png) 파일만 업로드 가능합니다.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="input-box calendar">
+                      <div class="inp-slice-box">
+                        <div class="inp-area"><input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY"></div>
+                        <div class="inp-area"><input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-outer-box row-type selected-tag">
+                  <div class="top">
+                    <label for="inpNum01_031">연관 태그</label>
+                    <button class="btn btn-type3 btn-small"><span>태그 추가</span></button>
+                  </div>
+                  <div class="selected-box"></div>
+                </div>
+              </div>
               <div class="tab-box-wrap js-tab">
                 <div class="tab-box-outer">
                   <ul class="tab-box-list">
-                    <li class="active"><a href="#">라이브러리 콘텐츠 정보</a></li>
-                    <li><a href="#">파일/저작권 정보</a></li>
+                    <li class="active"><a href="#">영어</a></li>
+                    <li><a href="#">한국어</a></li>
+                    <li><a href="#">중국어</a></li>
                   </ul>
                 </div>
                 <div class="tab-box-cont js-tab-cont">
-                  <!-- S: 라이브러리 콘텐츠 정보 -->
+                  <!-- S: 영어 -->
                   <div class="tab-box-item active">
-                    <ul class="info-list">
-                      <li>
-                        <strong>등록일</strong>
-                        <p>05.20.2022</p>
-                      </li>
-                      <li>
-                        <strong>게시 기간</strong>
-                        <p>06.10.2022 ~ 08.20.2022</p>
-                      </li>
-                      <li>
-                        <strong>카테고리 구분</strong>
-                        <p>Brand Campaign</p>
-                      </li>
-                      <li>
-                        <strong>연관 태그</strong>
-                        <p>Media, Hyundai, Campaign, Media, Hyundai, Campaign</p>
-                      </li>
-                      <li>
-                        <strong>대표 이미지</strong>
-                        <div class="img-wrap">
-                          <div class="img"><img src="../../assets/images/designreview/img_rev_view_li01.png" alt="대표 이미지"></div>
-                          <p>brand_vision_contents_thumbnail.jpg</p>
-                        </div>
-                      </li>
-                    </ul>
-                    <div class="lib-wrap">
-                      <div class="top">
-                        <strong class="tit">라이브러리 콘텐츠</strong>
-                        <div class="select-box">
-                          <p class="selected-value">영어</p>
-                          <ul class="select-items">
-                            <li>영어</li>
-                            <li>한국어</li>
-                            <li>중국어</li>
-                          </ul>
+                    <div class="management-lang">
+                      <div class="cta-outer"> 
+                        <button class="btn btn-type3 btn-middle-small"><span>영어 콘텐츠 복제</span></button>
+                      </div>
+                      <div class="input-outer-box row-type">
+                        <label for="inpTxt0111">라이브러리 콘텐츠 <span class="required">*</span></label>
+                        <div class="input-box">
+                          <input type="text" id="inpTxt0111" class="input-item"
+                          maxlength="30">
                         </div>
                       </div>
-                      <div class="cont">
-                        <div class="editor-view">
-                          <img src="../../assets/images/designreview/img_revview_lib.png" alt="영어 콘텐츠">
-                        </div>
+                      <div class="editor-cont">
+                        에디터 영역
+                      </div>
+                      <div class="cta-outer">
+                        <button class="btn btn-middle"><span>저작권 정보 확인</span></button>
                       </div>
                     </div>
                   </div>
-                  <!-- E: 라이브러리 콘텐츠 정보 -->
-                  <!-- S: 파일/저작권 정보 -->
+                  <!-- E: 영어 -->
+                  <!-- S: 한국어 -->
                   <div class="tab-box-item">
-                    <div class="tbl-box tbl-file-info">
-                      <table>
-                        <caption class="blind">파일/저작권 정보</caption>
-                        <colgroup>
-                          <col style="width: 170px">
-                          <col>
-                          <col style="width: 38%">
-                        </colgroup>
-                        <thead>
-                        <tr>
-                          <th scope="row" colspan="2">파일</th>
-                          <th scope="row">저작권 담당자</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                          <td>
-                            <div class="img">
-                              <img src="../../assets/images/designreview/img_file_info_01.png" alt="Santa Fe external image">
-                            </div>
-                          </td>
-                          <td>
-                            <p>Santa Fe external image</p>
-                          </td>
-                          <td>
-                            <p class="name">길동 홍</p> <p class="team">브랜드디자인팀</p><br>
-                            <p class="email">hyundai@hyundai.com</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="img">
-                              <img src="../../assets/images/designreview/img_file_info_02.png" alt="Santa Fe launching video">
-                            </div>
-                          </td>
-                          <td>
-                            <p>Santa Fe launching video</p>
-                          </td>
-                          <td>
-                            <p class="name">길동 홍</p> <p class="team">브랜드디자인팀</p><br>
-                            <p class="email">hyundai@hyundai.com</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="img">
-                              <img src="../../assets/images/designreview/img_file_info_03.png" alt="Santa Fe launching">
-                            </div>
-                          </td>
-                          <td>
-                            <p>Santa Fe launching</p>
-                          </td>
-                          <td>
-                            <p class="name">길동 홍</p> <p class="team">브랜드디자인팀</p><br>
-                            <p class="email">hyundai@hyundai.com</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="img">
-                              <img src="../../assets/images/designreview/img_file_info_04.png" alt="Santa Fe brochure">
-                            </div>
-                          </td>
-                          <td>
-                            <p>Santa Fe brochure</p>
-                          </td>
-                          <td>
-                            <p class="name">길동 홍</p> <p class="team">브랜드디자인팀</p><br>
-                            <p class="email">hyundai@hyundai.com</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="img">
-                              <img src="../../assets/images/designreview/img_file_info_05.png" alt="Santa Fe launching contents">
-                            </div>
-                          </td>
-                          <td>
-                            <p>Santa Fe launching contents</p>
-                          </td>
-                          <td>
-                            <p class="name">길동 홍</p> <p class="team">브랜드디자인팀</p><br>
-                            <p class="email">hyundai@hyundai.com</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="img">
-                              <img src="../../assets/images/designreview/img_file_info_06.png" alt="Santa Fe launching sound">
-                            </div>
-                          </td>
-                          <td>
-                            <p>Santa Fe launching sound</p>
-                          </td>
-                          <td>
-                            <p class="name">길동 홍</p> <p class="team">브랜드디자인팀</p><br>
-                            <p class="email">hyundai@hyundai.com</p>
-                          </td>
-                        </tr>
-                        </tbody>
-                      </table>
+                    <div class="management-lang">
+                      <div class="cta-outer"> 
+                        <button class="btn btn-type3 btn-middle-small"><span>한국어 콘텐츠 복제</span></button>
+                      </div>
                     </div>
                   </div>
-                  <!-- E: 파일/저작권 정보 -->
+                  <!-- E: 한국어 -->
+                  <!-- S: 중국어 -->
+                  <div class="tab-box-item">
+                    <div class="management-lang">
+                      <div class="cta-outer"> 
+                        <button class="btn btn-type3 btn-middle-small"><span>중국어 콘텐츠 복제</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- E: 중국어 -->
                 </div>
               </div>
             </div>
@@ -488,6 +439,8 @@ $(function() {
     $(this).addClass('active');
     tabContLi.removeClass('active');
     tabContLi.eq(i).addClass('active');
+
+    txtMore();
   })
 
   // tooltip
@@ -596,8 +549,7 @@ $(function() {
       $(this).height(1).height( $(this).prop('scrollHeight') );	
     })
   }
-  autoReTxt();
-  
+  autoReTxt();  
 })
 </script>
 </body>

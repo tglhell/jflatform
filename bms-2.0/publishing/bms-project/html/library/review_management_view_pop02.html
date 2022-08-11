@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="../../assets/css/common.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
-  <link rel="stylesheet" href="../../assets/css/review-js.css"><!-- 취합예정 -->
+  <link rel="stylesheet" href="../../assets/css/review.css">
 
   <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
   <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
@@ -85,7 +85,7 @@
 							<div class="layer-popup-cont-inner">
 								<div class="layer-cont">
 									<div class="preview-file">
-										<img src="../../assets/images/designreview/img_preview.png" alt="IONIQ 5 KV">
+										<img src="../../assets/images/review/img_preview.png" alt="IONIQ 5 KV">
 									</div>
 								</div>
 							</div>
@@ -139,9 +139,7 @@
 </div>
 
 <script>
-  $('.design-review-view').parents('html').addClass('view-wrap');
-  $('.view-wrap').find('.layer-popup-cont').width(1200);
-  designReview ();
+  review_management_set();
 
 	window.onload = () => {
 		$('.pop-open').trigger('click');
