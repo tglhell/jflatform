@@ -1019,6 +1019,11 @@
 .management .bms-container {
 	padding-bottom: 0;
 }
+.management .comment-box {
+	position: fixed;
+	width: 33.333333vw;
+	max-width: 640px;
+}
 .review-management {
 	margin-top: 17px;
 }
@@ -1171,8 +1176,8 @@
 }
 .review-management .timeline .list-cont {
 	display: block;
-	height: calc(100% - 171px);
-	padding: 65px 80px 60px;
+	min-height: 100%;
+	padding: 65px 80px 400px;
 	margin-bottom: 0;
 	background-color: #fafafa;
 }
@@ -1619,6 +1624,7 @@
 	}
 	.review-management .timeline .list-cont {
 			display: flex;
+			min-height: auto;
 			padding: 65px 40px 60px;
 	}
 	.review-management .timeline .comment-box {
@@ -1635,6 +1641,12 @@
 	.review-management .timeline.top-tab-list .list .cont-wrap {
 			width: 61.71875vw;
 			max-width: 790px;
+	}
+	.management .comment-box {
+		position: sticky;
+		bottom: 0 !important;
+		width: 100%;
+		max-width: 100%;
 	}
 }
 /* e: view detail */
