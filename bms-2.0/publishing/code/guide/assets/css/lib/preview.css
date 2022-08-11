@@ -1,7 +1,10 @@
 /* s : code preview */
 .code-preview {
+	transform: matrix(.25, 0, 0, .25, 0, 0);
 	position: absolute;
 	z-index: 30;
+	width: 1920px;
+	height: 1080px;
 	outline: none;
 }
 .code-preview iframe {

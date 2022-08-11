@@ -84,7 +84,7 @@ $(() => {
 			if (!$(this).prev().is('.code-preview')) {
 				const locationUrl = $(this).closest('td').prev().text();
 				const pageNum = $(this).text();
-				$(this).before('<p class="code-preview" style="display: none; width:' + '1920' + 'px; height:' + '1080' + 'px; transform: scale(.25, .25);"><iframe src="/publishing/bms-project/html' + locationUrl + pageNum + '"></iframe>');
+				$(this).before('<p class="code-preview" style="display: none;"><iframe src="/publishing/bms-project/html' + locationUrl + pageNum + '"></iframe>');
 			}
 			$(this).parent().find('.code-preview').css({'top':(e.pageY - 630) + 'px', 'left':(e.pageX - 620) + 'px', 'display':'block'}).attr('tabindex', '0').focus();
 		} else if (e.type == 'mouseleave') {
