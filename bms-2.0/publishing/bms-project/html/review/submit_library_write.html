@@ -203,7 +203,7 @@
             <p class="selected-value">EN</p>
             <ul class="select-items">
               <li class="selected"><a href="javascript:;">EN</a></li>
-              <li><a href="javascript:;">KR</a></li>
+              <li><a href="javascript:;">KO</a></li><!-- 220817 텍스트 변경 KR -> KO -->
               <li><a href="javascript:;">CH</a></li>
             </ul>
           </div>
@@ -523,11 +523,8 @@
                   <!-- S: 영어 -->
                   <div class="tab-box-item active">
                     <div class="management-lang">
-                      <div class="cta-outer"> 
-                        <button class="btn btn-type3 btn-middle-small"><span>영어 콘텐츠 복제</span></button>
-                      </div>
                       <div class="input-outer-box row-type">
-                        <label for="inpTxt0111">라이브러리 콘텐츠</label>
+                        <label for="inpTxt0111">라이브러리 콘텐츠 <span class="required">*</span></label>
                         <div class="input-box">
                           <input type="text" id="inpTxt0111" class="input-item" placeholder="라이브러리 콘텐츠 제목을 입력해주세요." maxlength="30">
                         </div>
@@ -541,11 +538,11 @@
                   <!-- S: 한국어 -->
                   <div class="tab-box-item">
                     <div class="management-lang">
-                      <div class="cta-outer"> 
-                        <button class="btn btn-type3 btn-middle-small"><span>한국어 콘텐츠 복제</span></button>
-                      </div>
                       <div class="input-outer-box row-type">
-                        <label for="inpTxt0111">라이브러리 콘텐츠</label>
+                        <div class="tit-cont">
+                          <label for="inpTxt0112">라이브러리 콘텐츠</label>
+                          <button class="btn btn-type3 btn-middle-small"><span>영어 콘텐츠 복제</span></button>
+                        </div>
                         <div class="input-box">
                           <input type="text" id="inpTxt0112" class="input-item" placeholder="라이브러리 콘텐츠 제목을 입력해주세요." maxlength="30">
                         </div>
@@ -553,23 +550,29 @@
                       <div class="editor-cont">
                         에디터 영역
                       </div>
+                      <div class="cta-outer">
+                        <button class="btn btn-middle"><span>저작권 정보 확인</span></button>
+                      </div>
                     </div>
                   </div>
                   <!-- E: 한국어 -->
                   <!-- S: 중국어 -->
                   <div class="tab-box-item">
                     <div class="management-lang">
-                      <div class="cta-outer"> 
-                        <button class="btn btn-type3 btn-middle-small"><span>중국어 콘텐츠 복제</span></button>
-                      </div>
                       <div class="input-outer-box row-type">
-                        <label for="inpTxt0111">라이브러리 콘텐츠</label>
+                        <div class="tit-cont">
+                          <label for="inpTxt0113">라이브러리 콘텐츠</label>
+                          <button class="btn btn-type3 btn-middle-small"><span>영어 콘텐츠 복제</span></button>
+                        </div>
                         <div class="input-box">
                           <input type="text" id="inpTxt0113" class="input-item" placeholder="라이브러리 콘텐츠 제목을 입력해주세요." maxlength="30">
                         </div>
                       </div>
                       <div class="editor-cont">
                         에디터 영역
+                      </div>
+                      <div class="cta-outer">
+                        <button class="btn btn-middle"><span>저작권 정보 확인</span></button>
                       </div>
                     </div>
                   </div>
@@ -682,17 +685,13 @@
 								</div>
 	
 								<div class="cta-outer">
-									<button class="btn btn-middle"><span>임시저장</span></button>
+									<button class="btn btn-middle btn-tp-save"><span>임시저장</span></button>
 								</div>
 							</div>
 
 							<button class="btn-guide-close"><img src="../../assets/images/review/popup_x.svg" alt="닫기"></button>
 						</div>
-					</div>
-				</div>
 
-				<div class="cont-outer fullcase">
-					<div class="design-review-wrap">
 						<div class="btm-btn-fix">
 							<p class="write-save-toast">임시저장이 완료되었습니다.</p>
 							<div class="cta-outer">

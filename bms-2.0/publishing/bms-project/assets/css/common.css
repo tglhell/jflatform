@@ -523,7 +523,8 @@ body::-webkit-scrollbar-track,
 .bms-header .inner-content .menu .sub-menu .sub-inner .sub-inner-contwrap > li + li {
   margin-left: 50px;
 }
-.bms-header .inner-content .menu .sub-menu .sub-inner-contwrap li a {
+.bms-header .inner-content .menu .sub-menu .sub-inner-contwrap li a,
+.bms-header .inner-content .menu .sub-menu .sub-inner-contwrap li span {
   display: block;
   width: fit-content;
   position: relative;
@@ -753,12 +754,14 @@ body::-webkit-scrollbar-track,
   height: 14px;
   background: url("../../assets/images/main/ico_gnb_link.svg") no-repeat;
 }
-.bms-header .right-gnb .right-gnb-content .mega-depth02 > li > a {
+.bms-header .right-gnb .right-gnb-content .mega-depth02 > li > a,
+.bms-header .right-gnb .right-gnb-content .mega-depth02 > li > span {
   position: relative;
   display: block;
   color: #000;
   font-size: 16px;
   font-weight: 500;
+  line-height: 16px;
 }
 .bms-header .right-gnb .right-gnb-content .mega-depth02 > li > a:hover {
   color: #000;
@@ -774,11 +777,13 @@ body::-webkit-scrollbar-track,
 }
 .bms-header .right-gnb .right-gnb-content .menu-depth03 li ul li {
   margin-top: 8px;
+  line-height: 0;
   /* padding-left: 16px; */ /* 4depth 왼쪽 간격 삭제 */
 }
 .bms-header .right-gnb .right-gnb-content .menu-depth03 li ul li a {
   position: relative;
   color: #777;
+  line-height: 16px;
 }
 .bms-header .right-gnb .right-gnb-content .mega-depth02 > li.have-ul {
   width: calc(50% - 30px);
@@ -1563,8 +1568,12 @@ div.radio-group .radio {
 .input-outer-box .typing ~ .input-item {
   padding-right: 70px;
 }
+.input-outer-box .typing ~ .input-item + .btn-reset {
+  margin-right: 57px;
+}
 .input-outer-box .typing span {
   color: #333;
+  font-family: 'HyundaiSansTextKR';
 }
 .input-outer-box .select-box {
   width: 100%;
@@ -2331,7 +2340,7 @@ div.radio-group .radio {
 }
 .file-uploader .file-box table .upload-file-area {
   position: relative;
-  height: 148px;
+  height: 200px;
   color: #ccc;
   text-align: center;
 }
@@ -2341,7 +2350,7 @@ div.radio-group .radio {
 .file-uploader .file-box table .upload-file-area .upload-guide-txt {
   display: table;
   width: 100%;
-  height: 148px;
+  height: 200px;
 }
 .file-uploader .file-box table .upload-file-area .upload-guide-txt span {
   display: table-cell;
@@ -2939,7 +2948,7 @@ div.noti.center::before {
   color: #333;
   line-height: 24px;
   padding: 0 24px 40px;
-  font-family: 'HyundaiSansTextKR';
+  /*font-family: 'HyundaiSansTextKR';*/
 }
 .accordion .active .cont {
   height: auto;
@@ -3460,8 +3469,9 @@ div.noti.center::before {
 .layer-popup-body .layer-title {
 	text-align: center;
   padding-bottom: 50px;
-  padding: 10px 60px 30px 60px;
-  font-size: 28px;
+  padding: 10px 60px 60px 60px;
+  font-size: 26px;
+  font-weight: 500;
 }
 .layer-popup-body .layer-cont {
   -webkit-overflow-scrolling: touch;
@@ -3882,7 +3892,6 @@ div.noti.center::before {
   position:relative;
 }
 .checking-list-box .list-type .txt-box a {
-  width: 100%;
   text-overflow: ellipsis;
   overflow: hidden;
   word-break: break-word;
@@ -4205,13 +4214,13 @@ div.noti.center::before {
   box-sizing: border-box;
 }
 .column1 .tooltip {
-  bottom: 120px;
+  bottom: 36px;
 }
 .column2 .tooltip {
-  bottom: 88px;
+  bottom: 32px;
 }
 .column5 .tooltip {
-  bottom: 60px;
+  bottom: 20px;
 }
 .tooltip > div {
   padding: 40px 60px;
@@ -4246,6 +4255,21 @@ div.noti.center::before {
 .tooltip .cta-outer {
   display: flex;
   justify-content: space-between;
+}
+.tooltip .btn-close {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+.tooltip .btn-close:after {
+  width: 100%;
+  height: 100%;
+  display: block;
+  content: '';
+  background: url(/assets/images/common/ico_close3.svg)no-repeat;
+  background-size: 100% auto;
 }
 /* E: tooltip-box */
 

@@ -177,13 +177,10 @@ function review_management_view_set() {
 		$(this).addClass('active');
 		tabContLi.removeClass('active');
 		tabContLi.eq(i).addClass('active');
+		if (!$('.txt-cont').is('.short')) {
+			txtMore ();
+		}
 	}) 
-	if ($(this).parent('.top-tab-menu').siblings('.top-tab-cont').find('.top-tab-list').hasClass('timeline')) {
-		console.log('ddd')
-		// $('.top-tab-menu').one('click', 'li', function() {
-		// 	txtMore();
-		// })		
-	}
 }
 
 // tooltip
@@ -234,8 +231,6 @@ function txtMore() {
 	btnMore.on('click', function() {
 		let thisTxtH = $(this).siblings('.txt').outerHeight(),
 			thisIdx = $(this).parents('.list').data('idx');
-
-		console.log(txtContHArr)
 
 		if (thisTxtH >= minHeight){
 			$(this).text(btnTxt1).parent().addClass('short');
@@ -293,20 +288,18 @@ function commentFile() {
 			clearFile($this)
 		})
 	});
-
-	const cmFixBoxTar = [$('.comment-box:not(.cate-thumb-box)'), $('.bms-footer')];
-	const cmFixBoxPos = [parseInt(cmFixBoxTar[0].css('bottom'))];
-	if (cmFixBoxTar[0].length !== 0) {
-		$(window).on('scroll', function () {
-			let cmScrPos = $(this).scrollTop();
-			let cmScrPosSum = ($(document).height() - $(window).height()) - cmFixBoxTar[1].outerHeight(true);
-			if (cmScrPos >= cmScrPosSum) {
-				cmFixBoxTar[0].css('bottom', (cmScrPos - cmScrPosSum) + cmFixBoxPos[0]);
-			} else {
-				cmFixBoxTar[0].css('bottom', cmFixBoxPos[0]);
-			}
-		});
+	reSizeCmmt();
+	function reSizeCmmt() {
+		let reWinWid = ($(window).width() - 1920) / 2;
+		if ($(window).width() > 1920) {
+			$('.comment-box:not(.cate-thumb-box)').css('right',reWinWid);
+		} else {
+			$('.comment-box:not(.cate-thumb-box)').css('right', 0);
+		}
 	}
+	$(window).resize(function() {
+		reSizeCmmt();
+	})
 }
 
 function thumbReadUrl (input) {
@@ -364,14 +357,24 @@ function review_management_set() {
 
 /* s : submit_library_write */
 function btmFixBoxFunc () {
-	const dsFixBoxTar = [$('.btm-btn-fix'), $('.bms-footer'), $('.right-guide-outer'), $('.btn-top-box'), $('.bms-header, body')];
+	const dsFixBoxTar = [$('.btm-btn-fix, .comment-box:not(.cate-thumb-box)'), $('.bms-footer'), $('.right-guide-outer'), $('.btn-top-box'), $('.bms-header, body')];
 	const dsFixBoxPos = [parseInt(dsFixBoxTar[0].css('bottom')), parseInt(dsFixBoxTar[3].css('right'))];
+	$(window).on('scroll resize', function () {
+		let dsScrPos = $(this).scrollTop();
+		let dsScrPosSum = ($(document).height() - $(window).height()) - dsFixBoxTar[1].outerHeight(true);
+		if (dsScrPos >= dsScrPosSum) {
+			dsFixBoxTar[0].css('bottom', (dsScrPos - dsScrPosSum) + dsFixBoxPos[0]);
+		} else {
+			dsFixBoxTar[0].css('bottom', dsFixBoxPos[0]);
+		}
+	});
 	if (dsFixBoxTar[0].length !== 0) {
 		dsFixBoxTar[0].on('click', '.btn-right-guide', function () {
 			const dsWsize = [$(window).outerWidth(), $(window).width()];
 			const rightFixPos = [parseInt($(this).parent().css('right')), (dsWsize[0] - dsWsize[1])];
 			dsFixBoxTar[2].toggleClass('active');
 			if (dsFixBoxTar[2].hasClass('active')) {
+				dsFixBoxTar[0].css({'width':dsWsize[1]});
 				dsFixBoxTar[4].css({'overflow':'hidden', 'width':dsWsize[1]});
 				dsFixBoxTar[3].css('right', dsFixBoxPos[1] + rightFixPos[1]);
 			}
@@ -391,6 +394,7 @@ function btmFixBoxFunc () {
 				dsFixBoxTar[0].css('right', rightFixPos[0]);
 				dsFixBoxTar[3].removeAttr('style');
 				setObj(() => {
+					dsFixBoxTar[0].css({'width':'auto'});
 					dsFixBoxTar[4].removeAttr('style');
 				}, secVal[4]);
 			}
@@ -422,6 +426,7 @@ function rightGuideSwiper () {
 
 function dsSaveToast () {
 	$('.btn-tp-save').on('click', function () {
+		console.log('test');
 		$('.write-save-toast').addClass('active');
 		setTimeout(() => {
 			$('.write-save-toast').removeClass('active');
@@ -429,3 +434,12 @@ function dsSaveToast () {
 	});
 }
 /* e : submit_library_write */
+
+function noSroll() {
+	$('.file-detail-input .date-picker').focusin(function() {
+		$(this).parents('.layer-popup-cont-inner').css('overflow-y','hidden');
+	})
+	$('.file-detail-input .date-picker').focusout(function() {
+		$(this).parents('.layer-popup-cont-inner').css('overflow-y','auto');
+	})
+}

@@ -56,7 +56,7 @@
             <p class="selected-value">EN</p>
             <ul class="select-items">
               <li class="selected"><a href="javascript:;">EN</a></li>
-              <li><a href="javascript:;">KR</a></li>
+              <li><a href="javascript:;">KO</a></li><!-- 220817 텍스트 변경 KR -> KO -->
               <li><a href="javascript:;">CH</a></li>
             </ul>
           </div>
@@ -98,7 +98,7 @@
               <label for="inpTxt01">제목 <span class="required">*</span></label>
               <div class="input-box val-error">
                 <p class="typing"><span>0</span>/100</p> <!-- 20220719 button하위에서 input상위로 위치 변경 -->
-                <input type="text" id="inpTxt01" class="input-item" placeholder="제목을 입력해 주세요." maxlength="100">
+                <input type="text" id="inpTxt01" class="input-item" placeholder="제목을 입력해주세요." maxlength="100"> <!-- 220817 placeholder 텍스트 띄어쓰기 수정 -->
                 <button class="btn-reset"></button>
               </div>
               <p class="error-msg">error text</p>
@@ -288,6 +288,73 @@
 <script>
   $('#sampleDatePicker').datepicker({
     minDate: '0'
+  });
+  <!-- 220809 퍼블 산출물용 스크립트 (back단 적용 X) -->
+  $(function(){
+    // autocomplete
+    function autocomplete(){
+      $('.autocomplete-area .input-email').on({
+        keyup: function(){
+          let $this = $(this)
+          const $val = $(this).val();
+          if( $val.length >= 3 ){
+            autocompletePopOpen($this);
+          }
+        },
+        change: function(){
+          let $this = $(this)
+          const $val = $(this).val();
+          if( $val.length >= 3 ){
+            autocompletePopOpen($this);
+            $('html').on('click', function(e){
+              if( !($(e.target).parents().hasClass('autocomplete')) ){
+                if( $('.autocomplete').hasClass('active') ) {
+                  const inputText = $('.autocomplete-area .input-area input').val();
+                  let liItem = "<li class='result-area'>";
+                  liItem += "<span>"+inputText+"</span>";
+                  liItem += "<button></button>";
+                  liItem += "</li>";
+                  $('.autocomplete-area .input-area').before(liItem);
+                  // $('.autocomplete-area .input-area input').focus();
+                }
+                autocompletePopClose();
+              }
+            });
+          }
+        }
+      });
+      $('.autocomplete > ul li').on('click', function(){
+        const text = $(this).text();
+        let liItem = "<li class='result-area'>";
+        liItem += "<span>"+text+"</span>";
+        liItem += "<button></button>";
+        liItem += "</li>";
+        $('.autocomplete-area .input-area').before(liItem);
+        // $('.autocomplete-area .input-area input').focus();
+        autocompletePopClose();
+      });
+      $('.autocomplete button').on('click', function(){
+        autocompletePopClose();
+      });
+      $(document).on('click', '.autocomplete-area .result-area > button', function(){
+        $(this).parent().remove();
+      });
+    }
+    autocomplete();
+
+    function autocompletePopOpen(target) {
+      console.log(target)
+      const inputLeft = target.offset().left;
+      const inputTop = target.offset().top;
+      $('.autocomplete').addClass('active').offset({ left: inputLeft, top: inputTop + 30 });
+    }
+
+    function autocompletePopClose() {
+      $('.autocomplete').removeClass('active');
+      $('.autocomplete-area .input-email').val('').attr('placeholder','');
+      // $('.autocomplete-area .input-area input').focus();
+    }
+
   });
 </script>
 </body>

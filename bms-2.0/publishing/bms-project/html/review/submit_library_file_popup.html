@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="../../assets/css/common.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../../assets/css/review.css">
-  <link rel="stylesheet" href="../../assets/css/review-js.css">
 
   <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
   <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
@@ -60,7 +59,7 @@
 						<p class="selected-value">EN</p>
 						<ul class="select-items">
 							<li class="selected"><a href="javascript:;">EN</a></li>
-							<li><a href="javascript:;">KR</a></li>
+							<li><a href="javascript:;">KO</a></li><!-- 220817 텍스트 변경 KR -> KO -->
 							<li><a href="javascript:;">CH</a></li>
 						</ul>
 					</div>
@@ -83,6 +82,7 @@
 					</div>
 				</div>
 
+				<!-- S:파일 상세 · 저작권 정보 입력 -->
 				<div class="layer-popup-wrap w1200" data-pop-idx="1" style="display: block;">
 					<div class="layer-popup-body">
 						<div class="layer-popup-cont">
@@ -295,7 +295,7 @@
 												<div class="side">
 													<label for="inpTxt05">사용 제한 국가</label>
 													<div class="right">
-														<button class="btn btn-type3 btn-small"><span>추가</span></button>
+														<button class="btn btn-type3 btn-small pop-open" data-pop-idx="2"><span>추가</span></button>
 													</div>
 												</div>
 												<div class="selected-box"></div>
@@ -312,6 +312,47 @@
 						</div>
 					</div>
 				</div>
+				<!-- E:파일 상세 · 저작권 정보 입력 -->
+
+				<!-- S:사용제한국가 -->
+				<div class="layer-popup-wrap db-pop" data-pop-idx="2">
+					<div class="layer-popup-body">
+						<div class="layer-popup-cont">
+							<div class="layer-popup-cont-inner">
+								<h1 class="layer-title">사용 제한 국가</h1>
+								<div class="layer-cont">
+									<em class="pop-cont-tit">국가 선택</em>
+									<div class="country-select-wrap">
+										<ul class="check-group">
+											<li>
+												<label class="chk"><input type="checkbox"><span>North America</span></label>
+												<div class="check-group">
+													<label class="chk"><input type="checkbox"><span>USA</span></label>
+													<label class="chk"><input type="checkbox"><span>Canada</span></label>
+													<label class="chk"><input type="checkbox"><span>Mexico</span></label>
+												</div>
+											</li>
+											<li><label class="chk"><input type="checkbox"><span>Central & South America</span></label></li>
+											<li><label class="chk"><input type="checkbox"><span>Europe</span></label></li>
+											<li><label class="chk"><input type="checkbox"><span>Africa</span></label></li>
+											<li><label class="chk"><input type="checkbox"><span>Oceania</span></label></li>
+											<li><label class="chk"><input type="checkbox"><span>Asia</span></label></li>
+											<li><label class="chk"><input type="checkbox"><span>Asia</span></label></li>
+											<li><label class="chk"><input type="checkbox"><span>Asia</span></label></li>
+											<li><label class="chk"><input type="checkbox"><span>Asia</span></label></li>
+										</ul>
+									</div>
+									<div class="cta-outer">
+										<button class="btn btn-middle btn-type2 btn-close"><span>취소</span></button>
+										<button class="btn btn-middle"><span>확인</span></button>
+									</div>
+								</div>
+							</div>
+							<button class="btn-close-popup btn-close">close</button>
+						</div>
+					</div>
+				</div>
+				<!-- E:사용제한국가 -->
 			</div>
 		</div>
 	</div>
@@ -358,8 +399,10 @@
 </div>
 
 <script>
+	noSroll();
+
 	window.onload = () => {
-		$('.pop-open').trigger('click');
+		$('.pop-open').eq(0).trigger('click');
 	}
 </script>
 </body>

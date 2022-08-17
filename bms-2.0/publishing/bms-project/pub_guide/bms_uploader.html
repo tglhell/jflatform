@@ -1,0 +1,479 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>BMS 2.0</title>
+
+  <link rel="stylesheet" href="../assets/css/lib/swiper.min.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/lib/customlib.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <script type="text/javascript" src="../assets/js/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/common-lib.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/variable.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/customlib.js"></script>
+  <script type="text/javascript" src="../assets/js/common.js"></script>
+
+  <!-- 업로더 컴포넌트 사용시 필요한 CSS, JS 시작 -->
+  <script type="text/javascript">
+    const upDownConfig = {
+      containerId: 'anchors-uploader-root', // 화면에 업/다운 컴포넌트 위치할 div 컨테이너 ID
+      apiEndpointUrl: 'https://bms-admin.anchors-biz.com',  // API 서버 경로 : 페이지와 동일한 서버일 경우 생략
+      locale: 'ko-KR',  // 다국어 로케일: 'ko-KR' or 'en-US' 지원
+      uploadedFilesList: null,  // 백엔드 서비스 지정 스펙의 기존 업로드된 파일 리스트 데이터 적용
+      modifyUserName: '홍길동',  // 파일 삭제에 대한 변경 주체가 백엔드에 연동되어야 하므로, 현재 로그인된 사용자 이름을 입력
+      uploadPath: '/path/to/upload/files',
+      typesAccepted: [], // 업로드 가능한 파일 확장자 리스트, eg. ['.docx', '.xlsx', '.pptx', '.pdf', '.zip']. default: [] (빈 리스트)는 모든 확장자 업로드 가능을 의미합니다.
+      sizeLimit: '1GB', // 해당 업/다운 컴포넌트가 업로드 가능한 파일의 총 용량. default: '1GB'.
+      uploadOnly: false, // true 시 파일 업로드만 가능 (선택 다운로드, 전체 다운로드 버튼 표시 안됨)
+      downloadOnly: false, // true 시 파일 다운로드만 가능 (항목 제거, 초기화, 파일 전송하기 버튼 표시 안됨, DnD, 더블클릭 비활성화)
+      description: [
+        {'ko-KR': '첨부파일은 1GB를 초과할 수 없습니다.', 'en-US': 'This is a book', 'zh-CN': 'Zzangge go home'}, // 모든 언어에 대한 텍스트를 미리 지정하면 위에 locale에 따라 적절히 표기됩니다.
+        '문서(docx, xlsx, pptx, pdf), 압축파일 형식만 업로드 할 수 있습니다.', // 위에 locale이 변경되는 시점에 언어별 값만 문자열로 넣어도 됩니다.
+        {'en-US': '특정 언어에서만 셋째줄이 있을 경우는 다른 언어를 뺍니다.'},  // 특정 언어에서만 존재하는 행은 그 언어의 값만 추가합니다.
+      ],
+      onSave: (fileData) => { // 저장 완료 핸들러 : 저장 버튼을 눌러 업로드가 완료되면 업로드 및 삭제된 파일 데이터가 여기에 리턴된다.
+        console.log('AAAAAAAAAAAA', fileData);
+      },
+      onChange: (fileData) => { // 파일 추가/삭제시 핸들러 : 기존에 미리 업로드되어 위 uploadedFilesList로 지정하는 리스트에 대해서는 리턴하지 않는다.
+        console.log('BBBBBBBBBBBB', fileData);
+      }
+    };
+
+    window.Anchors = window.Anchors ?? {};
+    window.Anchors.uploader = window.Anchors.uploader ?? {};
+    window.Anchors.uploader.config = uploaderConfig;
+  </script>
+  <link rel="stylesheet" href="../assets/anchors-file-uploader/anchors-file-uploader.css">
+  <script type="module" crossorigin src="../assets/anchors-file-uploader/anchors-file-uploader.js"></script>
+  <!-- 업로더 컴포넌트 사용시 필요한 CSS, JS 끝 -->
+</head>
+
+<body>
+<style>
+  .cont-outer p {height:100px; background-color: rgb(205, 206, 182);}
+  .cont-outer {margin-bottom: 20px !important}
+  .test .bms-container .bms-content .cont-outer.fullcase {
+    background-color: #f4f4f4;
+  }
+</style>
+<div class="bms-wrap">
+  <div class="skip-nav">
+    <a href="#bmsContainer"><span>컨텐츠 바로가기</span></a>
+  </div>
+
+  <!-- header -->
+  <div class="bms-header">
+    <!-- 상단 gnb -->
+    <div class="gnb-menu">
+      <div class="inner-content">
+        <a href="" class="logo"><img src="../../assets/images/common/logo.png" alt=""></a>
+        <div class="menu">
+          <ul>
+            <li class="menu-first-li">
+              <a href="">Brand Guidelines</a>
+              <ul class="sub-menu">
+                <li class="sub-inner">
+                  <a href="" class="cont-text2">About Brand</a>
+                  <ul class="sub-inner-contwrap">
+                    <li><a href="" class="cont-text2">Hyundai brand</a></li>
+                    <li><a href="" class="cont-text2">N brand</a></li>
+                    <li><a href="" class="cont-text2">Truck & Bus</a></li>
+                  </ul>
+                </li>
+                <li class="sub-inner">
+                  <a href="" class="cont-text2">Brand Image Guidelines</a>
+                  <ul class="sub-inner-contwrap">
+                    <li>
+                      <a href="" class="cont-text2 sub-inner-bold">Hyundai</a>
+                      <ul>
+                        <li><a href="" class="cont-text2 fc-color4">Guidelines</a></li>
+                        <li><a href="" class="cont-text2 fc-color4">Brand Assets</a></li>
+                        <li><a href="" class="cont-text2 fc-color4">Templates</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="" class="cont-text2 sub-inner-bold">N</a>
+                      <ul>
+                        <li><a href="" class="cont-text2 fc-color4">Guidelines</a></li>
+                        <li><a href="" class="cont-text2 fc-color4">Brand Assets</a></li>
+                        <li><a href="" class="cont-text2 fc-color4">Templates</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="" class="cont-text2 sub-inner-bold">Truck & Bus</a>
+                      <ul>
+                        <li><a href="" class="cont-text2 fc-color4">Guidelines</a></li>
+                        <li><a href="" class="cont-text2 fc-color4">Brand Assets</a></li>
+                        <li><a href="" class="cont-text2 fc-color4">Templates</a></li>
+                      </ul>
+                    </li>
+                    <li> <!-- 220719 sub-hyundai-motor 클래스 삭제 -->
+                      <a href="" class="cont-text2 sub-inner-bold">Hyundai Motor Studio</a>
+                      <ul>
+                        <li><a href="" class="cont-text2 fc-color4">Guidelines</a></li>
+                        <li><a href="" class="cont-text2 fc-color4">Brand Assets</a></li>
+                        <li><a href="" class="cont-text2 fc-color4">Templates</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="" class="cont-text2 sub-inner-bold">Space</a>
+                      <ul>
+                        <li><a href="" class="cont-text2 fc-color4">Guidelines</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="" class="cont-text2 sub-inner-bold">Others</a>
+                      <ul>
+                        <li><a href="" class="cont-text2 fc-color4">Guidelines</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sub-inner">
+                  <a href="" class="cont-text2">Training Program</a>
+                  <ul class="sub-inner-contwrap">
+                    <li><a href="" class="cont-text2">Training Video</a></li>
+                    <li><a href="" class="cont-text2">E-Learning</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-first-li">
+              <a href=""> Library</a>
+              <ul class="sub-menu">
+                <li class="sub-inner">
+                  <a href="" class="cont-text2">Contents</a>
+                  <ul class="sub-inner-contwrap sub-inner-first">
+                    <li><a href="" class="cont-text2">Brand Campaign</a></li>
+                    <li><a href="" class="cont-text2">Brand Space</a></li>
+                    <li><a href="" class="cont-text2">Brand Collection</a></li>
+                    <li><a href="" class="cont-text2">Global Launching Assets</a></li>
+                    <li><a href="" class="cont-text2">Social Media</a></li>
+                    <li><a href="" class="cont-text2">Event</a></li>
+                  </ul>
+                </li>
+                <li class="sub-inner">
+                  <a href="" class="cont-text2">Media</a>
+                  <ul class="sub-inner-contwrap">
+                    <li><a href="" class="cont-text2">Image</a></li>
+                    <li><a href="" class="cont-text2">Video</a></li>
+                    <li><a href="" class="cont-text2">Sound</a></li>
+                    <li><a href="" class="cont-text2">Others</a></li>
+                  </ul>
+                </li>
+                <li class="sub-inner">
+                  <a href="" class="cont-text2">Best Practice</a>
+                  <ul class="sub-inner-contwrap">
+                    <li><a href="" class="cont-text2">GMA</a></li>
+                    <li><a href="" class="cont-text2">Local Campaigns</a></li>
+                  </ul>
+                </li>
+                <li class="sub-inner">
+                  <a href="" class="cont-text2 dcm">DCM</a>
+                </li>
+                <li class="sub-inner">
+                  <a href="" class="cont-text2">Copyright Expired Contents</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-first-li">
+              <a href="">Review Tools</a>
+              <ul class="sub-menu">
+                <li class="sub-inner">
+                  <a href="" class="cont-text2">Design Review</a>
+                  <ul class="sub-inner-contwrap">
+                    <li><a href="" class="cont-text2">New Design Review Submission</a></li>
+                    <li><a href="" class="cont-text2">Review Management</a></li>
+                  </ul>
+                </li>
+                <li class="sub-inner">
+                  <a href="" class="cont-text2">Library Contents Review</a>
+                  <ul class="sub-inner-contwrap">
+                    <li><a href="" class="cont-text2">Create New Library Content Page</a></li>
+                    <li><a href="" class="cont-text2">Review Management</a></li> <!-- 220719 sub-inner-bold 클래스 삭제 -->
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-first-li">
+              <a href="">Brand Reports</a>
+              <ul class="sub-menu">
+                <li class="sub-inner"><a href="" class="cont-text2">BTS Reports</a></li>
+                <li class="sub-inner"><a href="" class="cont-text2">GBIM Reports</a></li>
+              </ul>
+            </li>
+            <li class="menu-first-li">
+              <a href="">My BMS</a>
+              <ul class="sub-menu">
+                <li class="sub-inner">
+                  <a href="" class="cont-text2">File Sharing</a>
+                  <ul class="sub-inner-contwrap">
+                    <li><a href="" class="cont-text2">Send New Files</a></li>
+                    <li><a href="" class="cont-text2">Sent & Received Files Management</a></li>
+                  </ul>
+                </li>
+                <li class="sub-inner">
+                  <a href="" class="cont-text2">My Activity</a>
+                  <ul class="sub-inner-contwrap">
+                    <li><a href="" class="cont-text2">Favorites</a></li>
+                    <li><a href="" class="cont-text2">Inquiries</a></li>
+                  </ul>
+                </li>
+                <li class="sub-inner">
+                  <a href="" class="cont-text2">Account</a>
+                  <ul class="sub-inner-contwrap">
+                    <li><a href="" class="cont-text2">Manage Your Account</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="util">
+          <a href="" class="gnb-bookmark"></a>
+          <div class="select-box select-lang">
+            <p class="selected-value">EN</p>
+            <ul class="select-items">
+              <li class="selected"><a href="javascript:;">EN</a></li>
+              <li><a href="javascript:;">KO</a></li> <!-- 220727 수정 -->
+              <li><a href="javascript:;">CN</a></li> <!-- 220727 수정 -->
+            </ul>
+          </div>
+          <a href="" class="link-admin">Admin</a> <!-- 220727 추가 -->
+          <a href="" class="link-login">Logout</a>
+          <a href="" class="gnb-hamburger"></a>
+        </div>
+      </div>
+      <div class="inner-content-bg bd-hidden"></div> <!-- submenu bg -->
+    </div>
+    <!-- right megamenu (햄버거메뉴 클릭 시 노출 화면) -->
+    <div class="right-gnb">
+      <a href="" class="right-gnb-close"></a>
+      <!-- S: 220711 megamenu 구조 변경 -->
+      <div class="right-gnb-wrap">
+        <div class="right-gnb-content">
+          <p class="h5-title">Brand Guidelines</p>
+          <ul class="mega-depth02">
+            <li>
+              <a href="">About Brand</a>
+              <ul class="menu-depth03">
+                <li><a href="" class="cont-text2">Hyundai Brand</a></li>
+                <li><a href="" class="cont-text2">N Brand</a></li>
+                <li><a href="" class="cont-text2">Truck & Bus</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">Brand Image Guidelines</a>
+              <ul class="menu-depth03">
+                <li>
+                  <a href="" class="cont-text2">Hyundai</a>
+                  <ul>
+                    <li><a href="" class="cont-text2">Guidelines</a></li>
+                    <li><a href="" class="cont-text2">Brand Assets</a></li>
+                    <li><a href="" class="cont-text2">Templates</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="" class="cont-text2">N</a>
+                  <ul>
+                    <li><a href="" class="cont-text2">Guidelines</a></li>
+                    <li><a href="" class="cont-text2">Brand Assets</a></li>
+                    <li><a href="" class="cont-text2">Templates</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="" class="cont-text2">Truck & Bus</a>
+                  <ul>
+                    <li><a href="" class="cont-text2">Guidelines</a></li>
+                    <li><a href="" class="cont-text2">Brand Assets</a></li>
+                    <li><a href="" class="cont-text2">Templates</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="" class="cont-text2">Hyundai Motor Studio</a>
+                  <ul>
+                    <li><a href="" class="cont-text2">Guidelines</a></li>
+                    <li><a href="" class="cont-text2">Brand Assets</a></li>
+                    <li><a href="" class="cont-text2">Templates</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="" class="cont-text2">Space</a>
+                  <ul>
+                    <li><a href="" class="cont-text2">Guidelines</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="" class="cont-text2">Others</a>
+                  <ul>
+                    <li><a href="" class="cont-text2">Guidelines</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="">Traning Program</a>
+              <ul class="menu-depth03">
+                <li><a href="" class="cont-text2">Training Video</a></li>
+                <li><a href="" class="cont-text2">E-Learning</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="right-gnb-content">
+          <p class="h5-title">Library</p>
+          <ul class="mega-depth02">
+            <li>
+              <a href="">Contents</a>
+              <ul class="menu-depth03">
+                <li><a href="" class="cont-text2">Brand Campaign</a></li>
+                <li><a href="" class="cont-text2">Brand Space</a></li>
+                <li><a href="" class="cont-text2">Brand Collection</a></li>
+                <li><a href="" class="cont-text2">Global Launching Assets</a></li>
+                <li><a href="" class="cont-text2">Social Media</a></li>
+                <li><a href="" class="cont-text2">Event</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">Media</a>
+              <ul class="menu-depth03">
+                <li><a href="" class="cont-text2">Image</a></li>
+                <li><a href="" class="cont-text2">Video</a></li>
+                <li><a href="" class="cont-text2">Sound</a></li>
+                <li><a href="" class="cont-text2">Others</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">Best Practice</a>
+              <ul class="menu-depth03">
+                <li><a href="" class="cont-text2">GMA</a></li>
+                <li><a href="" class="cont-text2">Local Campaigns</a></li>
+              </ul>
+            </li>
+            <li><a href="">DCM<em class="ico-outlink"></em></a></li> <!-- 220719 short 클래스 삭제 -->
+            <li><a href="">Copyright Expired Contents</a></li>
+          </ul>
+        </div>
+        <div class="right-gnb-content">
+          <p class="h5-title">Review Tools</p>
+          <ul class="mega-depth02">
+            <li>
+              <a href="">Design Review</a>
+              <ul class="menu-depth03">
+                <li><a href="" class="cont-text2">New Design Review<br> Submission</a></li>
+                <li><a href="" class="cont-text2">Review Management</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">Library Contents Review</a>
+              <ul class="menu-depth03">
+                <li><a href="" class="cont-text2">Create New Library Content<br> Page</a></li>
+                <li><a href="" class="cont-text2">Review Management</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="right-gnb-content">
+          <p class="h5-title">Brand Reports</p>
+          <ul class="mega-depth02">
+            <li>
+              <a href="">BTS Reports</a>
+            </li>
+            <li>
+              <a href="">GBIM Reports</a>
+            </li>
+          </ul>
+        </div>
+        <div class="right-gnb-content">
+          <p class="h5-title">My BMS</p>
+          <ul class="mega-depth02">
+            <li>
+              <a href="">File Sharing</a>
+              <ul class="menu-depth03">
+                <li><a href="" class="cont-text2">Send New Files</a></li>
+                <li><a href="" class="cont-text2">Sent & Received<br> Files Management</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">My Activity</a>
+              <ul class="menu-depth03">
+                <li><a href="" class="cont-text2">Favorites</a></li>
+                <li><a href="" class="cont-text2">Inquiries</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">Account</a>
+              <ul class="menu-depth03">
+                <li><a href="" class="cont-text2">Manage Your Account</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- E: 220711 megamenu 구조 변경 -->
+    </div>
+  </div>
+  <!--//header -->
+
+  <!-- container -->
+  <div id="bmsContainer" class="bms-container"><!-- 별도 css 분리시 해당 파트 클래스 네이밍 부여 -->
+    <div class="bms-content">
+      <div id="anchors-uploader-root"></div>
+      <button onclick="Anchors.uploader.save()">저장하기</button>
+    </div>
+  </div>
+  <!--//container -->
+
+  <!-- footer -->
+  <div class="bms-footer">
+    <div class="footer-inner">
+      <div class="foot-logo">
+        <img src="../assets/images/main/foot_logo.png" alt="logo">
+      </div>
+      <div class="foot-menu">
+        <ul>
+          <li class="cont-tit2"><a href="#">Sitemap</a></li>
+          <li class="cont-tit2"><a href="#">Newsletter</a></li>
+          <li class="cont-tit2"><a href="#">Glossary</a></li>
+        </ul>
+      </div>
+      <div class="foot-contact">
+        <p class="cont-tit2"><a href="#">Contact Us</a></p>
+        <div>
+          <p class="caption htr">Brand Design Support Seoul</p>
+          <p class="caption htr">+82 2 6410 8232</p>
+        </div>
+        <div>
+          <p class="caption htr">Brand Design Support Berlin</p>
+          <p class="caption htr">+49 30 22 06 62 390</p>
+        </div>
+        <div>
+          <p class="caption htr">Global E-mail</p>
+          <p class="caption htr email">guideline@hyundai.com</p>
+        </div>
+      </div>
+      <div class="foot-terms">
+        <div class="terms-list">
+          <p class="cont-text2"><a href="#">Terms of Use</a></p>
+          <p class="privacy cont-text2"><a href="#">Privacy Policy</a></p>
+        </div>
+        <p class="copy caption htr fc-color4">© 2022 Hyundai Motor Company</p>
+      </div>
+    </div>
+  </div>
+  <!--//footer -->
+
+  <div class="btn-top-box">
+    <button title="move to top" role="button" class="btn-top">
+      <span>TOP</span> <!-- 220527 대문자 변경 -->
+    </button>
+  </div>
+</div>
+
+</body>
+</html>

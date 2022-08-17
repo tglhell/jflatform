@@ -74,5 +74,48 @@
   </div>
   <!--//container -->
 </div>
+<script> <!-- 220809 퍼블 산출물용 스크립트 (back단 적용 X) -->
+  $(function(){
+    function motionLogin () {
+      $('.login .login_cover_bg').delay(500).animate({'opacity':0}, 1000);
+      setTimeout(function(){
+        $('.login .login_cover_txt > p').animate({'opacity':1},
+            700, () => {
+              $('.login .login_cover_txt > p:first-child').delay(1000).fadeOut(700);
+              $('.login .login-area').delay(1800).animate({'opacity':1}, 700);
+            });
+      }, 1200);
+
+      $('.login .login-area .input-area input').on('keyup', (e) => {
+        if (!!$('input[name=user]').val() && $('input[name=password]').val()) {
+          $('.login .login-area .input-area .btn-login').addClass('active');
+        } else {
+          $('.login .login-area .input-area .btn-login').removeClass('active');
+        }
+      });
+      $('.login .login-area .input-area .btn-reset').on('click', (e) => {
+        $('.login .login-area .input-area .btn-login').removeClass('active');
+      });
+    }
+motionLogin();
+
+    function staticLogin () {
+      $('.login .login_cover_bg').css({"opacity":"0"});
+      $('.login-area').css({"opacity":"1"});
+
+      $('.login .login-area .input-area input').on('keyup', (e) => {
+        if (!!$('input[name=user]').val() && $('input[name=password]').val()) {
+          $('.login .login-area .input-area .btn-login').addClass('active');
+        } else {
+          $('.login .login-area .input-area .btn-login').removeClass('active');
+        }
+      });
+      $('.login .login-area .input-area .btn-reset').on('click', (e) => {
+        $('.login .login-area .input-area .btn-login').removeClass('active');
+      });
+    }
+// staticLogin();
+  });
+</script>
 </body>
 </html>
