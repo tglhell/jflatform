@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Support : Contact Us</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* support css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-supportpage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+<!-- #include virtual="/apps/components/common/event-alert-popup/@include_css.html" -->
+</head>
+<body>
+<div id="wrap">
+
+    <!-- component -->
+    <div class="type-light">
+        <div class="cp-contactus">
+            <div class="cp-contactus__inner">
+                <div class="cp-contactus__head">
+                    <div class="cp-contactus__title">
+                        <h2 class="el-title">Contact us</h2>
+                    </div>
+                    <div class="cp-contactus__desc">
+                        <p class="el-desc">Contact us with your inquiry and we'll help you find the solution.</p>
+                    </div>
+                </div>
+                <div class="cp-contactus__content">
+                    <!-- [D] 활성화 시 display:block 처리 -->
+                    <div class="cp-contactus__form" style="display:block">
+                        <form action="">
+                            <div class="cp-contactus__form-info">
+                                <span>Required fields* <span class="blind">marked with asterisk</span></span>
+                            </div>
+                            <div class="cp-contactus__form-fields">
+                                <div class="el-field field-category">
+                                    <div class="el-field-label">
+                                        <strong>Select a Category</strong><em class="el-required">*<span class="blind">Required field</span></em>
+                                    </div>
+                                    <div class="el-field-inputarea">
+                                        <!-- [D] 에러 시 : has-error 클래스 추가 -->
+                                        <div class="cm-input-wrap">
+                                            <div class="cm-select type2 js-select-wrap">
+                                                <a href="#" class="cm-select__placeholder" aria-expanded="false">
+                                                    <span>Category</span>
+                                                </a>
+                                                <div class="cm-select__options" role="listbox" style="display: none;">
+                                                    <ul role="presentation">
+                                                    <li role="presentation"><a href="#" role="option">option1</a></li>
+                                                    <li role="presentation"><a href="#" role="option">option2</a></li>
+                                                    <li role="presentation"><a href="#" role="option">option3</a></li>
+                                                    <li role="presentation"><a href="#" role="option">option4</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="cm-select type2 js-select-wrap">
+                                                <a href="#" class="cm-select__placeholder" aria-expanded="false">
+                                                    <span>Sub Category</span>
+                                                </a>
+                                                <div class="cm-select__options" role="listbox" style="display: none;">
+                                                    <ul role="presentation">
+                                                    <li role="presentation"><a href="#" role="option">option1</a></li>
+                                                    <li role="presentation"><a href="#" role="option">option2</a></li>
+                                                    <li role="presentation"><a href="#" role="option">option3</a></li>
+                                                    <li role="presentation"><a href="#" role="option">option4</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="cm-input-message">
+                                                <!-- [D] 에러/유효성 메세지 노출 시 : display:block 처리 -->
+                                                <p class="cm-message-error" style="display:none">Please select a category.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="el-field field-name">
+                                    <div class="el-field-label">
+                                        <strong>Name</strong><em class="el-required">*<span class="blind">Required field</span></em>
+                                    </div>
+                                    <div class="el-field-inputarea">
+                                        <!-- [D] 에러 시 : has-error 클래스 추가 -->
+                                        <div class="cm-input-wrap">
+                                            <div class="cm-input-text js-input-text-wrap">
+                                                <input type="text" id="inpName" name="inpName" class="cm-input-text__input">
+                                                <label for="inpName" class="cm-input-text__label">Name</label>
+                                            </div>
+                                            <div class="cm-input-message">
+                                                <!-- [D] 에러/유효성 메세지 노출 시 : display:block 처리 -->
+                                                <p class="cm-message-error" style="display:none">Please enter your name.</p>
+                                            </div>
+                                        </div>
+                                        <div class="cm-input-wrap">
+                                            <div class="el-field-radiogroup">
+                                                <!-- [D] 활성화 시 : is-checked 클래스 추가 및 input 요소에 checked 속셩 추가 -->
+                                                <div class="cm-radio js-radio-wrap is-checked">
+                                                    <input type="radio" id="rdoGender1" name="rdoGender" class="cm-radio__input" checked>
+                                                    <label for="rdoGender1" class="cm-radio__label">
+                                                        <span class="s-box"></span><span class="s-label">Male</span>
+                                                    </label>
+                                                </div>
+                                                <div class="cm-radio js-radio-wrap">
+                                                    <input type="radio" id="rdoGender2" name="rdoGender" class="cm-radio__input">
+                                                    <label for="rdoGender2" class="cm-radio__label">
+                                                        <span class="s-box"></span><span class="s-label">Female</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="el-field field-email">
+                                    <div class="el-field-label">
+                                        <strong>Your E-mail address</strong><em class="el-required">*<span class="blind">Required field</span></em>
+                                    </div>
+                                    <div class="el-field-inputarea">
+                                        <!-- [D] 에러 시 : has-error 클래스 추가 -->
+                                        <div class="cm-input-wrap">
+                                            <div class="cm-input-text js-input-text-wrap">
+                                                <input type="text" id="inpEmail1" name="inpEmail" class="cm-input-text__input">
+                                                <label for="inpEmail1" class="cm-input-text__label">Email</label>
+                                            </div>
+                                            <div class="cm-input-text js-input-text-wrap">
+                                                <input type="text" id="inpEmail2" name="inpEmail" class="cm-input-text__input">
+                                                <label for="inpEmail2" class="cm-input-text__label">Address</label>
+                                            </div>
+                                            <div class="cm-input-message">
+                                                <!-- [D] 에러/유효성 메세지 노출 시 : display:block 처리 -->
+                                                <p class="cm-message-error" style="display:none">Please enter a correct e-mail address.</p>
+                                            </div>
+                                        </div>
+                                        <div class="cm-input-wrap">
+                                            <div class="cm-select type2 js-select-wrap">
+                                                <!-- [F] 펼침 시 : aria-expanded값 true로 변경 -->
+                                                <a href="#" class="cm-select__placeholder" aria-expanded="false">
+                                                    <span>직접 입력</span>
+                                                </a>
+                                                <div class="cm-select__options" role="listbox" style="display: none;">
+                                                    <ul role="presentation">
+                                                    <li role="presentation"><a href="#" role="option">option1</a></li>
+                                                    <li role="presentation"><a href="#" role="option">option2</a></li>
+                                                    <li role="presentation"><a href="#" role="option">option3</a></li>
+                                                    <li role="presentation"><a href="#" role="option">option4</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="el-field field-region">
+                                    <div class="el-field-label">
+                                        <strong>Select your region</strong><em class="el-required">*<span class="blind">Required field</span></em>
+                                    </div>
+                                    <div class="el-field-inputarea">
+                                        <!-- [D] 에러 시 : has-error 클래스 추가 -->
+                                        <div class="cm-input-wrap">
+                                            <div class="cm-select type2 js-select-wrap">
+                                                <a href="#" class="cm-select__placeholder" aria-expanded="false">
+                                                    <span>Region</span>
+                                                </a>
+                                                <div class="cm-select__options" role="listbox" style="display: none;">
+                                                    <ul role="presentation">
+                                                    <li role="presentation"><a href="#" role="option">option1</a></li>
+                                                    <li role="presentation"><a href="#" role="option">option2</a></li>
+                                                    <li role="presentation"><a href="#" role="option">option3</a></li>
+                                                    <li role="presentation"><a href="#" role="option">option4</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="cm-select type2 js-select-wrap">
+                                                <a href="#" class="cm-select__placeholder" aria-expanded="false">
+                                                    <span>Country</span>
+                                                </a>
+                                                <div class="cm-select__options" role="listbox" style="display: none;">
+                                                    <ul role="presentation">
+                                                    <li role="presentation"><a href="#" role="option">option1</a></li>
+                                                    <li role="presentation"><a href="#" role="option">option2</a></li>
+                                                    <li role="presentation"><a href="#" role="option">option3</a></li>
+                                                    <li role="presentation"><a href="#" role="option">option4</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="cm-input-message">
+                                                <!-- [D] 에러/유효성 메세지 노출 시 : display:block 처리 -->
+                                                <p class="cm-message-error" style="display:none">Please select your region and country.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="el-field field-title">
+                                    <div class="el-field-label">
+                                        <strong>Title</strong><em class="el-required">*<span class="blind">Required field</span></em>
+                                    </div>
+                                    <div class="el-field-inputarea">
+                                        <!-- [D] 에러 시 : has-error 클래스 추가 -->
+                                        <div class="cm-input-wrap">
+                                            <div class="cm-input-text js-input-text-wrap">
+                                                <input type="text" id="inpTitle" name="inpTitle" class="cm-input-text__input">
+                                                <label for="inpTitle" class="cm-input-text__label">Title</label>
+                                            </div>
+                                            <div class="cm-input-message">
+                                                <!-- [D] 에러/유효성 메세지 노출 시 : display:block 처리 -->
+                                                <p class="cm-message-error" style="display:none">Please enter a title</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="el-field field-inquiry">
+                                    <div class="el-field-label">
+                                        <strong>Your inquiry</strong><em class="el-required">*<span class="blind">Required field</span></em>
+                                        <span class="el-field-count"><span class="count-num">0</span> / 1000 characters</span>
+                                    </div>
+                                    <div class="el-field-inputarea">
+                                        <!-- [D] 에러 시 : has-error 클래스 추가 -->
+                                        <div class="cm-input-wrap">
+                                            <div class="cm-input-textarea">
+                                                <textarea placeholder="Fill in your inquiry. (1000 characters or less)" id="txtareaInquiry" name="txtareaInquiry"></textarea>
+                                            </div>
+                                            <div class="cm-input-message">
+                                                <!-- [D] 에러/유효성 메세지 노출 시 : display:block 처리 -->
+                                                <p class="cm-message-error" style="display:none">Please fill in your inquiry</p>
+                                                <p class="cm-message-general">*Please enter English or numbers only.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="el-field field-confirm">
+                                    <div class="el-field-inputarea">
+                                         <!-- [D] 에러 시 : has-error 클래스 추가 -->
+                                         <div class="cm-input-wrap">
+                                            <div class="cm-checkbox js-chkbox-wrap">
+                                                <input type="checkbox" id="agreeCheck" name="agreeCheck" class="cm-checkbox__input">
+                                                <label for="agreeCheck" class="cm-checkbox__label"><span class="s-box"></span><span class="s-label">I confirm and agree to the collection and use of personal information.</span></label>
+                                            </div>
+                                            <div class="cm-input-message">
+                                                <!-- [D] 에러/유효성 메세지 노출 시 : display:block 처리 -->
+                                                <p class="cm-message-error" style="display:none">Please agree to the collection and use of pesonal information.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cp-contactus__form-cta">
+                                <button type="button" class="cm-btn js-layer-opener" data-layer-target="#event-alert-contactus-layer">
+                                    <span class="text">Submit</span>
+                                    <span class="masker"><span>Submit</span></span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- [D] 활성화 시 display:block 처리 -->
+                    <div class="cp-contactus__result" style="display:block">
+                        <div class="cp-contactus__result-info">
+                            <p>Thank you. <br>Your inquiry has been successfully submitted!</p>
+                        </div>
+                        <div class="cp-contactus__result-notice">
+                            <ul>
+                            <li>Our representative will respond to your inquiry as soon as possible.</li>
+                            <li>The answer to your inquiry will be sent to your e-mail.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //component -->
+
+    <!-- Popup -->
+    <!-- #include virtual="/apps/components/common/event-alert-popup/@include_html_contactus.html" -->
+
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* support js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-supportpage/js/main.js"></script>
+<!--/* component js */-->
+<!-- <script src="clientlibs/js/main.js"></script> -->
+
+<!--  마크업 검수용 코드 -->
+<style>
+.uio-box{position:fixed;top:80px;right:0;z-index:9999;width:120px;border-bottom:1px solid #999}
+.uio-box a{display:block;padding:4px 10px;margin-top:-1px;border:1px solid #999;border-width:1px 0 0 1px;background:rgba(0,0,0,0.7);color:#fff;font-size:13px;}
+.uio-box a:hover{background:rgba(255,255,255,0.6);color:#000;font-weight:bold}
+</style>
+<script>
+$(function () {
+    toggleError = function () {
+        $('.cm-input-wrap').toggleClass('has-error');
+        $('.cm-message-error').toggle();
+    };
+});
+</script>
+<div class="uio-box">
+<a href="javascript:void(0);" onclick="toggleError();">에러메세지 토글</a>
+</div>
+<!-- // 마크업 검수용 코드 -->
+
+</body>
+</html>

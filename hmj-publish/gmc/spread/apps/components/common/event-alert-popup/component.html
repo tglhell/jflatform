@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Event Alert Popup</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* support css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-supportpage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+
+<!-- 마크업 검수용 코드 -->
+<style>
+.sample-btn{ display:inline-block; padding: 10px 3px; font-size: 18px; }
+</style>
+<!-- // 마크업 검수용 코드 -->
+</head>
+<body>
+<div id="wrap">
+
+    <a href="#" class="sample-btn js-layer-opener" data-layer-target="#event-alert-layer01">[팝업 열기] 이미 이벤트 참여한 핸드폰</a> <br>
+    <a href="#" class="sample-btn js-layer-opener" data-layer-target="#event-alert-layer02">[팝업 열기] 신청취소 팝업</a> <br>
+    <a href="#" class="sample-btn js-layer-opener" data-layer-target="#event-alert-contactus-layer">[팝업 열기] Contact Us Validation Check</a>
+    <!-- component -->
+
+    <!-- POPUP : 이벤트 참여한 휴대전화 팝업 -->
+    <div class="cm-layer type-alert event-alert-popup js-cm-layer" id="event-alert-layer01">
+        <span class="cm-layer__dimmed"></span>
+        <div class="cm-layer__body">
+            <div class="cm-layer__wrapper" role="dialog">
+                <div class="cm-layer__title">
+                    <strong>이벤트</strong>
+                </div>
+                <div class="cm-layer__content">
+                    <div class="cm-layer__message">
+                        <p>이미 이벤트에 참여한 휴대전화 번호 입니다.</p>
+                    </div>
+                    <div class="cm-layer__cta">
+                        <button type="button" class="cm-btn">
+                            <span class="text">확인</span>
+                            <span class="masker"><span>확인</span></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="cm-layer__close-wrap">
+                    <button type="button" class="js-layer-closer">
+                        <span class="js-svg-icon" data-icon="svg-cross"></span>
+                        <span class="blind">Close popup</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // POPUP : 이벤트 참여한 휴대전화 팝업 -->
+
+    <!-- POPUP : 신청취소 팝업 -->
+    <div class="cm-layer type-alert event-alert-popup js-cm-layer" id="event-alert-layer02">
+        <span class="cm-layer__dimmed"></span>
+        <div class="cm-layer__body">
+            <div class="cm-layer__wrapper" role="dialog">
+                <div class="cm-layer__title">
+                    <strong>이벤트 신청현황</strong>
+                </div>
+                <div class="cm-layer__content">
+                    <div class="cm-layer__message">
+                        <p>신청을 취소 하시겠습니까?</p>
+                    </div>
+                    <div class="cm-layer__cta">
+                        <button type="button" class="cm-btn js-layer-closer js-layer-opener is-async" data-layer-target="#event-alert-layer03">
+                            <span class="text">확인</span>
+                            <span class="masker"><span>확인</span></span>
+                        </button>
+                        <button type="button" class="cm-btn type-white">
+                            <span class="text">취소</span>
+                            <span class="masker"><span>취소</span></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="cm-layer__close-wrap">
+                    <button type="button" class="js-layer-closer">
+                        <span class="js-svg-icon" data-icon="svg-cross"></span>
+                        <span class="blind">닫기</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // POPUP : 신청취소 팝업 -->
+
+    <!-- POPUP : 신청취소 팝업 -->
+    <div class="cm-layer type-alert event-alert-popup js-cm-layer" id="event-alert-layer03">
+        <span class="cm-layer__dimmed"></span>
+        <div class="cm-layer__body">
+            <div class="cm-layer__wrapper" role="dialog">
+                <div class="cm-layer__title">
+                    <strong>이벤트 신청현황</strong>
+                </div>
+                <div class="cm-layer__content">
+                    <div class="cm-layer__message">
+                        <p>취소가 완료 되었습니다.</p>
+                    </div>
+                    <div class="cm-layer__cta">
+                        <button type="button" class="cm-btn">
+                            <span class="text">확인</span>
+                            <span class="masker"><span>확인</span></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="cm-layer__close-wrap">
+                    <button type="button" class="js-layer-closer">
+                        <span class="js-svg-icon" data-icon="svg-cross"></span>
+                        <span class="blind">닫기</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // POPUP : 신청취소 팝업 -->
+
+    <!-- POPUP : Contact Us validation check -->
+    <div class="cm-layer type-alert event-alert-popup js-cm-layer" id="event-alert-contactus-layer">
+        <span class="cm-layer__dimmed"></span>
+        <div class="cm-layer__body">
+            <div class="cm-layer__wrapper" role="dialog">
+                <div class="cm-layer__title">
+                    <strong>Contact Us</strong>
+                </div>
+                <div class="cm-layer__content">
+                    <div class="cm-layer__message">
+                        <p>Would you like to confirm and submit your inquiry?</p>
+                    </div>
+                    <div class="cm-layer__cta">
+                        <button type="button" class="cm-btn">
+                            <span class="text">Ok</span>
+                            <span class="masker"><span>Ok</span></span>
+                        </button>
+                        <button type="button" class="cm-btn type-white">
+                            <span class="text">Cancel</span>
+                            <span class="masker"><span>Cancel</span></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="cm-layer__close-wrap">
+                    <button type="button" class="js-layer-closer">
+                        <span class="js-svg-icon" data-icon="svg-cross"></span>
+                        <span class="blind">Close popup</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // POPUP : Contact Us validation check -->
+
+    <!-- component -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* support js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-supportpage/js/main.js"></script>
+<!--/* component js */-->
+<!-- <script src="clientlibs/js/main.js"></script> -->
+
+<!--  마크업 검수용 코드 -->
+<script>
+$(function () {
+    $('[data-layer-target="#event-alert-layer03"].is-async').on('click', function () {
+        var _this = $(this);
+        _this.trigger('clickCustom');
+    });
+});
+</script>
+<!--  마크업 검수용 코드 -->
+
+</body>
+</html>

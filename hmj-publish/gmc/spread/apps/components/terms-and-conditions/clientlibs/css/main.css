@@ -1,0 +1,1040 @@
+@-webkit-keyframes border-ani {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes border-ani {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.cp-terms-conditions table {
+  width: 100%;
+  border-collapse: collapse;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.cp-terms-conditions table caption {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.cp-terms-conditions table th, .cp-terms-conditions table td {
+  height: 60px;
+  height: 6rem;
+  padding: 22px 42px 17px;
+  padding: 2.2rem 4.2rem 1.7rem;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 20px;
+  line-height: 2rem;
+  border-top: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+}
+
+.cp-terms-conditions table th:last-child, .cp-terms-conditions table td:last-child {
+  border-right: 0;
+}
+
+.cp-terms-conditions table th, .cp-terms-conditions table .bg {
+  background: #f8f8f8;
+}
+
+.cp-terms-conditions table th {
+  font-weight: normal;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cp-terms-conditions table td {
+  color: #262626;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cp-terms-conditions table tbody th {
+  border-right: 0;
+}
+
+.cp-terms-conditions table thead + tbody th {
+  border-right: 1px solid #e5e5e5;
+}
+
+.cp-terms-conditions .refer-txt {
+  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
+  font-size: 12px;
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+.cp-terms-conditions .talign-c {
+  text-align: center;
+}
+
+.cp-terms-conditions .txt-left {
+  text-align: left;
+}
+
+.cp-terms-conditions a {
+  color: #000;
+}
+
+.cp-terms-conditions .cm-btn-more:before {
+  width: 100%;
+}
+
+.cp-terms-conditions .cm-btn-more:hover span:before, .cp-terms-conditions .cm-btn-more:focus span:before {
+  -webkit-animation: border-ani 0.5s;
+  animation: border-ani 0.5s;
+}
+
+.cp-terms-conditions__inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 80px;
+  padding: 0 8rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cp-terms-conditions__header .terms-title {
+  font-family: "genesis-head-office-light", sans-serif;
+  font-weight: normal;
+  font-size: 56px;
+  font-size: 5.6rem;
+  letter-spacing: -0.025em;
+  line-height: 58px;
+  line-height: 5.8rem;
+}
+
+.cp-terms-conditions__tab {
+  margin-top: 25px;
+  margin-top: 2.5rem;
+}
+
+.cp-terms-conditions__tab-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  border-left: 1px solid #e5e5e5;
+}
+
+.cp-terms-conditions__tab-item {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 25%;
+  -ms-flex: 0 1 25%;
+  flex: 0 1 25%;
+  min-height: 55px;
+  min-height: 5.5rem;
+}
+
+.cp-terms-conditions__tab-item:nth-child(-n+4) {
+  border-top: 1px solid #e5e5e5;
+}
+
+.cp-terms-conditions__tab-item:first-child:nth-last-child(1),
+.cp-terms-conditions__tab-item:first-child:nth-last-child(1) ~ li {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.cp-terms-conditions__tab-item:first-child:nth-last-child(2),
+.cp-terms-conditions__tab-item:first-child:nth-last-child(2) ~ li {
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+}
+
+.cp-terms-conditions__tab-item:first-child:nth-last-child(3),
+.cp-terms-conditions__tab-item:first-child:nth-last-child(3) ~ li {
+  -webkit-flex-basis: 33.33333%;
+  -ms-flex-preferred-size: 33.33333%;
+  flex-basis: 33.33333%;
+}
+
+.cp-terms-conditions__tab-item .terms-tab-btn {
+  display: block;
+  position: relative;
+  height: 100%;
+  padding: 9px 10px 8px;
+  padding: 0.9rem 1rem 0.8rem;
+  border-bottom: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  background-color: #fff;
+  font-size: 0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cp-terms-conditions__tab-item .terms-tab-btn:before, .cp-terms-conditions__tab-item .terms-tab-btn span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.cp-terms-conditions__tab-item .terms-tab-btn:before {
+  height: 100%;
+  content: '';
+}
+
+.cp-terms-conditions__tab-item .terms-tab-btn span {
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: #000;
+  letter-spacing: -0.025em;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+
+.cp-terms-conditions__tab-item .terms-tab-btn:after {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  left: -1px;
+  bottom: -1px;
+  border: 1px solid transparent;
+  content: '';
+}
+
+.cp-terms-conditions__tab-item.is-selected .terms-tab-btn {
+  background-color: #111;
+}
+
+.cp-terms-conditions__tab-item.is-selected .terms-tab-btn span {
+  color: #fff;
+}
+
+.cp-terms-conditions__tab-item.is-selected .terms-tab-btn:after {
+  border-color: #111;
+}
+
+.cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item {
+  -webkit-flex-basis: 20%;
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+}
+
+.cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item:nth-child(-n+5) {
+  border-top: 1px solid #e5e5e5;
+}
+
+.cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item:first-child:nth-last-child(1),
+.cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item:first-child:nth-last-child(1) ~ li {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item:first-child:nth-last-child(2),
+.cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item:first-child:nth-last-child(2) ~ li {
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+}
+
+.cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item:first-child:nth-last-child(3),
+.cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item:first-child:nth-last-child(3) ~ li {
+  -webkit-flex-basis: 33.33333%;
+  -ms-flex-preferred-size: 33.33333%;
+  flex-basis: 33.33333%;
+}
+
+.cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item:first-child:nth-last-child(4),
+.cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item:first-child:nth-last-child(4) ~ li {
+  -webkit-flex-basis: 25%;
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+}
+
+.cp-terms-conditions__body {
+  margin-top: 105px;
+  margin-top: 10.5rem;
+}
+
+.cp-terms-conditions__body-header {
+  font-size: 0;
+}
+
+.cp-terms-conditions__body-header .terms-sub-title, .cp-terms-conditions__body-header .cm-select {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.cp-terms-conditions__body-header .terms-sub-title {
+  width: 77.7%;
+  padding-right: 10px;
+  padding-right: 1rem;
+  font-family: "genesis-head-office-light", sans-serif;
+  font-weight: normal;
+  font-size: 34px;
+  font-size: 3.4rem;
+  letter-spacing: -0.025em;
+  line-height: 38px;
+  line-height: 3.8rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cp-terms-conditions__body-header .cm-select {
+  width: 22.3%;
+  margin-bottom: 6px;
+  margin-bottom: 0.6rem;
+}
+
+.cp-terms-conditions__content {
+  margin-top: 19px;
+  margin-top: 1.9rem;
+}
+
+.cp-terms-conditions .cont-anchor {
+  padding: 55px 9.2% 50px;
+  padding: 5.5rem 9.2% 5rem;
+  background: #f8f8f8;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cp-terms-conditions .cont-anchor .lst-area {
+  margin-top: 45px;
+  margin-top: 4.5rem;
+}
+
+.cp-terms-conditions .cont-anchor .lst-area:first-child {
+  margin-top: 0;
+}
+
+.cp-terms-conditions .cont-anchor .lst-area strong {
+  display: block;
+  font-family: "genesis-text-office-bold", sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+
+.cp-terms-conditions .cont-anchor .lst-area strong + ol {
+  margin-top: 9px;
+  margin-top: 0.9rem;
+}
+
+.cp-terms-conditions .cont-anchor .lst-area ol {
+  margin: 0 -18px;
+  margin: 0 -1.8rem;
+  font-size: 0;
+}
+
+.cp-terms-conditions .cont-anchor .lst-area li {
+  display: inline-block;
+  width: 50%;
+  margin-top: 9px;
+  margin-top: 0.9rem;
+  padding: 0 18px;
+  padding: 0 1.8rem;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cp-terms-conditions .cont-anchor .lst-area li:nth-child(-n+2) {
+  margin-top: 0;
+}
+
+.cp-terms-conditions .cont-anchor .lst-area li a {
+  border-bottom: 1px solid transparent;
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #757575;
+  line-height: 24px;
+  line-height: 2.4rem;
+}
+
+.cp-terms-conditions .cont-anchor .lst-area li a:hover {
+  color: #262626;
+  border-color: #262626;
+}
+
+.cp-terms-conditions .cont-anchor .lst-area li a span {
+  width: 30px;
+  width: 3rem;
+  font-family: "genesis-head-office-light", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+.cp-terms-conditions .desc {
+  margin-top: 78px;
+  margin-top: 7.8rem;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+}
+
+.cp-terms-conditions .cont-wrap {
+  margin-top: 75px;
+  margin-top: 7.5rem;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #262626;
+  line-height: 24px;
+  line-height: 2.4rem;
+}
+
+.cp-terms-conditions .cont-wrap .con-lst-area {
+  margin-top: 107px;
+  margin-top: 10.7rem;
+}
+
+.cp-terms-conditions .cont-wrap .con-lst-area:first-child {
+  margin-top: 0;
+}
+
+.cp-terms-conditions .cont-wrap h3:empty, .cp-terms-conditions .cont-wrap h4:empty, .cp-terms-conditions .cont-wrap strong:empty, .cp-terms-conditions .cont-wrap p:empty {
+  display: none;
+}
+
+.cp-terms-conditions .cont-wrap h3 {
+  padding-bottom: 10px;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  font-family: "genesis-head-office-light", sans-serif;
+  font-weight: normal;
+  font-size: 28px;
+  font-size: 2.8rem;
+  color: #000;
+  letter-spacing: -0.025em;
+  line-height: 34px;
+  line-height: 3.4rem;
+}
+
+.cp-terms-conditions .cont-wrap h3 + div h4,
+.cp-terms-conditions .cont-wrap h3 + div title,
+.cp-terms-conditions .cont-wrap h3 + div .sub-title {
+  margin-top: 55px;
+  margin-top: 5.5rem;
+}
+
+.cp-terms-conditions .cont-wrap h4, .cp-terms-conditions .cont-wrap .title, .cp-terms-conditions .cont-wrap .sub-title {
+  margin-top: 46px;
+  margin-top: 4.6rem;
+  font-weight: normal;
+  font-size: 20px;
+  font-size: 2rem;
+  color: #000;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+
+.cp-terms-conditions .cont-wrap h4 + p,
+.cp-terms-conditions .cont-wrap h4 + .txt-list, .cp-terms-conditions .cont-wrap .title + p,
+.cp-terms-conditions .cont-wrap .title + .txt-list, .cp-terms-conditions .cont-wrap .sub-title + p,
+.cp-terms-conditions .cont-wrap .sub-title + .txt-list {
+  margin-top: 16px;
+  margin-top: 1.6rem;
+}
+
+.cp-terms-conditions .cont-wrap strong {
+  display: block;
+  font-weight: normal;
+}
+
+.cp-terms-conditions .cont-wrap > p, .cp-terms-conditions .cont-wrap .txt-list {
+  margin-top: 24px;
+  margin-top: 2.4rem;
+}
+
+.cp-terms-conditions .cont-wrap li > *:not(li):not(a):not(br):not(.connected-table):not(font) {
+  padding-left: 20px;
+  padding-left: 2rem;
+}
+
+.cp-terms-conditions .cont-wrap li .connected-table {
+  margin-bottom: 25px;
+  margin-bottom: 2.5rem;
+}
+
+.cp-terms-conditions .cont-wrap .connected-table {
+  margin-top: 21px;
+  margin-top: 2.1rem;
+}
+
+.cp-terms-conditions .cont-wrap .connected-table td {
+  text-align: left;
+}
+
+.cp-terms-conditions .cont-wrap .connected-table td.talign-c {
+  text-align: center;
+}
+
+.cp-terms-conditions .cont-wrap .cont-type02:not(.hide) {
+  margin-top: 50px;
+  margin-top: 5rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.cp-terms-conditions .terms-cont-in {
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #262626;
+  line-height: 24px;
+  line-height: 2.4rem;
+}
+
+.cp-terms-conditions .terms-cont-in, .cp-terms-conditions .terms-cont-in .policy-cont-in {
+  margin-bottom: 107px;
+  margin-bottom: 10.7rem;
+}
+
+.cp-terms-conditions .terms-cont-in:last-child, .cp-terms-conditions .terms-cont-in .policy-cont-in:last-child {
+  margin-bottom: 0;
+}
+
+.cp-terms-conditions .terms-cont-in .policy-li-wrap h3:first-child {
+  margin-top: 55px;
+  margin-top: 5.5rem;
+}
+
+.cp-terms-conditions .terms-cont-in h2 {
+  padding-bottom: 10px;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  font-family: "genesis-head-office-light", sans-serif;
+  font-weight: normal;
+  font-size: 28px;
+  font-size: 2.8rem;
+  color: #000;
+  letter-spacing: -0.025em;
+  line-height: 34px;
+  line-height: 3.4rem;
+}
+
+.cp-terms-conditions .terms-cont-in h3, .cp-terms-conditions .terms-cont-in .policy-strong01 {
+  margin-top: 46px;
+  margin-top: 4.6rem;
+  font-weight: normal;
+  font-size: 20px;
+  font-size: 2rem;
+  color: #000;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+
+.cp-terms-conditions .terms-cont-in h3 + strong,
+.cp-terms-conditions .terms-cont-in h3 + p,
+.cp-terms-conditions .terms-cont-in h3 + ol,
+.cp-terms-conditions .terms-cont-in h3 + ul, .cp-terms-conditions .terms-cont-in .policy-strong01 + strong,
+.cp-terms-conditions .terms-cont-in .policy-strong01 + p,
+.cp-terms-conditions .terms-cont-in .policy-strong01 + ol,
+.cp-terms-conditions .terms-cont-in .policy-strong01 + ul {
+  margin-top: 16px;
+  margin-top: 1.6rem;
+}
+
+.cp-terms-conditions .terms-cont-in strong, .cp-terms-conditions .terms-cont-in p, .cp-terms-conditions .terms-cont-in ol, .cp-terms-conditions .terms-cont-in ul {
+  margin-top: 24px;
+  margin-top: 2.4rem;
+}
+
+.cp-terms-conditions .terms-cont-in strong {
+  display: block;
+  font-weight: normal;
+}
+
+.cp-terms-conditions .terms-cont-in ol strong, .cp-terms-conditions .terms-cont-in ol p, .cp-terms-conditions .terms-cont-in ol ol, .cp-terms-conditions .terms-cont-in ol ul, .cp-terms-conditions .terms-cont-in ul strong, .cp-terms-conditions .terms-cont-in ul p, .cp-terms-conditions .terms-cont-in ul ol, .cp-terms-conditions .terms-cont-in ul ul {
+  margin-top: 0;
+}
+
+.cp-terms-conditions .terms-cont-in li img {
+  display: inline-block;
+  margin: 12px 6px 0 -19px;
+  margin: 1.2rem 0.6rem 0 -1.9rem;
+  vertical-align: top;
+}
+
+.cp-terms-conditions .terms-cont-in li > *:not(li):not(a):not(strong):not(br):not(.policy-span01):not(font) {
+  padding-left: 20px;
+  padding-left: 2rem;
+}
+
+.cp-terms-conditions .terms-cont-in table {
+  margin-top: 21px;
+  margin-top: 2.1rem;
+}
+
+.cp-terms-conditions .warranty-area, .cp-terms-conditions .warranty-cont {
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #262626;
+  line-height: 24px;
+  line-height: 2.4rem;
+}
+
+.cp-terms-conditions .warranty-area .warranty-cont-in, .cp-terms-conditions .warranty-area strong, .cp-terms-conditions .warranty-cont .warranty-cont-in, .cp-terms-conditions .warranty-cont strong {
+  margin-top: 107px;
+  margin-top: 10.7rem;
+}
+
+.cp-terms-conditions .warranty-area .warranty-cont-in:first-child, .cp-terms-conditions .warranty-area strong:first-child, .cp-terms-conditions .warranty-cont .warranty-cont-in:first-child, .cp-terms-conditions .warranty-cont strong:first-child {
+  margin-top: 0;
+}
+
+.cp-terms-conditions .warranty-area h2, .cp-terms-conditions .warranty-area strong, .cp-terms-conditions .warranty-cont h2, .cp-terms-conditions .warranty-cont strong {
+  padding-bottom: 10px;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  font-family: "genesis-head-office-light", sans-serif;
+  font-weight: normal;
+  font-size: 28px;
+  font-size: 2.8rem;
+  color: #000;
+  letter-spacing: -0.025em;
+  line-height: 34px;
+  line-height: 3.4rem;
+}
+
+.cp-terms-conditions .warranty-area h2 + .sml-tit, .cp-terms-conditions .warranty-area strong + .sml-tit, .cp-terms-conditions .warranty-cont h2 + .sml-tit, .cp-terms-conditions .warranty-cont strong + .sml-tit {
+  margin-top: 55px;
+  margin-top: 5.5rem;
+}
+
+.cp-terms-conditions .warranty-area strong, .cp-terms-conditions .warranty-cont strong {
+  display: block;
+}
+
+.cp-terms-conditions .warranty-area .sml-tit, .cp-terms-conditions .warranty-cont .sml-tit {
+  margin-top: 46px;
+  margin-top: 4.6rem;
+  font-weight: normal;
+  font-size: 20px;
+  font-size: 2rem;
+  color: #000;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+
+.cp-terms-conditions .warranty-area .sml-tit + p,
+.cp-terms-conditions .warranty-area .sml-tit + ol,
+.cp-terms-conditions .warranty-area .sml-tit + ul, .cp-terms-conditions .warranty-cont .sml-tit + p,
+.cp-terms-conditions .warranty-cont .sml-tit + ol,
+.cp-terms-conditions .warranty-cont .sml-tit + ul {
+  margin-top: 16px;
+  margin-top: 1.6rem;
+}
+
+.cp-terms-conditions .warranty-area p, .cp-terms-conditions .warranty-area ol, .cp-terms-conditions .warranty-area ul, .cp-terms-conditions .warranty-cont p, .cp-terms-conditions .warranty-cont ol, .cp-terms-conditions .warranty-cont ul {
+  margin-top: 24px;
+  margin-top: 2.4rem;
+}
+
+.cp-terms-conditions .warranty-area table, .cp-terms-conditions .warranty-cont table {
+  margin-top: 21px;
+  margin-top: 2.1rem;
+}
+
+.cp-terms-conditions .warranty-area table:not(.warranty-table-01):not(.warranty-table-02) tbody th, .cp-terms-conditions .warranty-cont table:not(.warranty-table-01):not(.warranty-table-02) tbody th {
+  background: none;
+}
+
+.cp-terms-conditions .warranty-area table:not(.warranty-table-01):not(.warranty-table-02) tbody th:empty, .cp-terms-conditions .warranty-cont table:not(.warranty-table-01):not(.warranty-table-02) tbody th:empty {
+  border-top: 0;
+}
+
+.cp-terms-conditions .warranty-area table:not(.warranty-table-01):not(.warranty-table-02) tbody th + td, .cp-terms-conditions .warranty-cont table:not(.warranty-table-01):not(.warranty-table-02) tbody th + td {
+  border-left: 1px solid #e5e5e5;
+}
+
+.cp-terms-conditions .warranty-area .warranty-table-01 td, .cp-terms-conditions .warranty-cont .warranty-table-01 td {
+  text-align: left;
+}
+
+.cp-terms-conditions .warranty-area .disclaimer, .cp-terms-conditions .warranty-cont .disclaimer {
+  position: relative;
+  padding-left: 20px;
+  padding-left: 2rem;
+}
+
+.cp-terms-conditions .warranty-area .disclaimer:after, .cp-terms-conditions .warranty-cont .disclaimer:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '\203B';
+}
+
+.cp-terms-conditions .warranty-area .disclaimer span, .cp-terms-conditions .warranty-cont .disclaimer span {
+  color: #996449;
+}
+
+.cp-terms-conditions .warranty-area .cm-btn-more, .cp-terms-conditions .warranty-cont .cm-btn-more {
+  margin-top: 10px;
+  margin-top: 1rem;
+}
+
+.cp-terms-conditions .warranty-area > p:first-child {
+  margin-top: 0;
+}
+
+.cp-terms-conditions .warranty-area + .warranty-cont {
+  margin-top: 75px;
+  margin-top: 7.5rem;
+}
+
+@media (max-width: 1023px) {
+  .cp-terms-conditions__inner {
+    padding: 0 58px;
+    padding: 0 5.8rem;
+  }
+  .cp-terms-conditions__tab-item {
+    min-height: 46px;
+    min-height: 4.6rem;
+  }
+  .cp-terms-conditions__tab-item .terms-tab-btn span {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cp-terms-conditions table th, .cp-terms-conditions table td {
+    padding: 17px 19px 16px;
+    padding: 1.7rem 1.9rem 1.6rem;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+  }
+  .cp-terms-conditions .terms-table {
+    overflow-x: auto;
+  }
+  .cp-terms-conditions__inner {
+    padding: 0 30px;
+    padding: 0 3rem;
+  }
+  .cp-terms-conditions__header .terms-title {
+    font-size: 45px;
+    font-size: 4.5rem;
+    line-height: 45px;
+    line-height: 4.5rem;
+  }
+  .cp-terms-conditions__tab {
+    margin-top: 43px;
+    margin-top: 4.3rem;
+  }
+  .cp-terms-conditions__tab-item {
+    min-height: 54px;
+    min-height: 5.4rem;
+  }
+  .cp-terms-conditions__tab-item .terms-tab-btn span {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+  }
+  .cp-terms-conditions__tab-item, .cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+  }
+  .cp-terms-conditions__tab-item:nth-child(-n+5), .cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item:nth-child(-n+5) {
+    border-top: 0;
+  }
+  .cp-terms-conditions__tab-item:nth-child(-n+2), .cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item:nth-child(-n+2) {
+    border-top: 1px solid #e5e5e5;
+  }
+  .cp-terms-conditions__tab-item:first-child:nth-last-child(1),
+  .cp-terms-conditions__tab-item:first-child:nth-last-child(1) ~ li, .cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item:first-child:nth-last-child(1),
+  .cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item:first-child:nth-last-child(1) ~ li {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+  .cp-terms-conditions__tab-item:first-child:nth-last-child(2),
+  .cp-terms-conditions__tab-item:first-child:nth-last-child(2) ~ li, .cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item:first-child:nth-last-child(2),
+  .cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item:first-child:nth-last-child(2) ~ li {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+  }
+  .cp-terms-conditions__tab-item:first-child:nth-last-child(3),
+  .cp-terms-conditions__tab-item:first-child:nth-last-child(3) ~ li, .cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item:first-child:nth-last-child(3),
+  .cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item:first-child:nth-last-child(3) ~ li {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+  }
+  .cp-terms-conditions__tab-item:first-child:nth-last-child(4),
+  .cp-terms-conditions__tab-item:first-child:nth-last-child(4) ~ li, .cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item:first-child:nth-last-child(4),
+  .cp-terms-conditions__tab.tab-col-5 .cp-terms-conditions__tab-item:first-child:nth-last-child(4) ~ li {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+  }
+  .cp-terms-conditions__body {
+    margin-top: 57px;
+    margin-top: 5.7rem;
+  }
+  .cp-terms-conditions__body-header .terms-sub-title, .cp-terms-conditions__body-header .cm-select {
+    display: block;
+    width: 100%;
+  }
+  .cp-terms-conditions__body-header .terms-sub-title {
+    padding-right: 0;
+    font-size: 30px;
+    font-size: 3rem;
+    line-height: 32px;
+    line-height: 3.2rem;
+  }
+  .cp-terms-conditions__body-header .cm-select {
+    margin: 23px 0 0;
+    margin: 2.3rem 0 0;
+  }
+  .cp-terms-conditions__body-header .cm-select.type2 .cm-select__placeholder {
+    padding-top: 5px;
+    padding-top: 0.5rem;
+    padding-bottom: 6px;
+    padding-bottom: 0.6rem;
+  }
+  .cp-terms-conditions__body-header .cm-select.type2 .cm-select__placeholder span {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 23px;
+    line-height: 2.3rem;
+  }
+  .cp-terms-conditions__content {
+    margin-top: 40px;
+    margin-top: 4rem;
+  }
+  .cp-terms-conditions .cont-anchor {
+    padding-top: 36px;
+    padding-top: 3.6rem;
+    padding-bottom: 31px;
+    padding-bottom: 3.1rem;
+  }
+  .cp-terms-conditions .cont-anchor .lst-area {
+    margin-top: 45px;
+    margin-top: 4.5rem;
+  }
+  .cp-terms-conditions .cont-anchor .lst-area strong + ol {
+    margin-top: 8px;
+    margin-top: 0.8rem;
+  }
+  .cp-terms-conditions .cont-anchor .lst-area ol {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .cp-terms-conditions .cont-anchor .lst-area li {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  .cp-terms-conditions .cont-anchor .lst-area li, .cp-terms-conditions .cont-anchor .lst-area li:nth-child(-n+2) {
+    margin-top: 9px;
+    margin-top: 0.9rem;
+  }
+  .cp-terms-conditions .cont-anchor .lst-area li:first-child {
+    margin-top: 0;
+  }
+  .cp-terms-conditions .desc {
+    margin-top: 46px;
+    margin-top: 4.6rem;
+    line-height: 25px;
+    line-height: 2.5rem;
+  }
+  .cp-terms-conditions .cont-wrap {
+    margin-top: 37px;
+    margin-top: 3.7rem;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 25px;
+    line-height: 2.5rem;
+  }
+  .cp-terms-conditions .cont-wrap .con-lst-area {
+    margin-top: 48px;
+    margin-top: 4.8rem;
+  }
+  .cp-terms-conditions .cont-wrap h3 {
+    padding-bottom: 13px;
+    padding-bottom: 1.3rem;
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+  .cp-terms-conditions .cont-wrap h3 + div h4,
+  .cp-terms-conditions .cont-wrap h3 + div title,
+  .cp-terms-conditions .cont-wrap h3 + div .sub-title {
+    margin-top: 24px;
+    margin-top: 2.4rem;
+  }
+  .cp-terms-conditions .cont-wrap h4, .cp-terms-conditions .cont-wrap .title, .cp-terms-conditions .cont-wrap .sub-title {
+    margin-top: 27px;
+    margin-top: 2.7rem;
+    font-size: 21px;
+    font-size: 2.1rem;
+    line-height: 32px;
+    line-height: 3.2rem;
+  }
+  .cp-terms-conditions .cont-wrap h4 + p,
+  .cp-terms-conditions .cont-wrap h4 + .txt-list, .cp-terms-conditions .cont-wrap .title + p,
+  .cp-terms-conditions .cont-wrap .title + .txt-list, .cp-terms-conditions .cont-wrap .sub-title + p,
+  .cp-terms-conditions .cont-wrap .sub-title + .txt-list {
+    margin-top: 5px;
+    margin-top: 0.5rem;
+  }
+  .cp-terms-conditions .cont-wrap > p, .cp-terms-conditions .cont-wrap .txt-list {
+    margin-top: 25px;
+    margin-top: 2.5rem;
+  }
+  .cp-terms-conditions .cont-wrap li > *:not(li):not(a):not(br):not(.connected-table):not(font) {
+    padding-left: 13px;
+    padding-left: 1.3rem;
+  }
+  .cp-terms-conditions .cont-wrap .connected-table {
+    margin-top: 10px;
+    margin-top: 1rem;
+  }
+  .cp-terms-conditions .terms-cont-in {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 25px;
+    line-height: 2.5rem;
+  }
+  .cp-terms-conditions .terms-cont-in, .cp-terms-conditions .terms-cont-in .policy-cont-in {
+    margin-bottom: 48px;
+    margin-bottom: 4.8rem;
+  }
+  .cp-terms-conditions .terms-cont-in .policy-li-wrap h3:first-child {
+    margin-top: 24px;
+    margin-top: 2.4rem;
+  }
+  .cp-terms-conditions .terms-cont-in h2 {
+    padding-bottom: 13px;
+    padding-bottom: 1.3rem;
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+  .cp-terms-conditions .terms-cont-in h3, .cp-terms-conditions .terms-cont-in .policy-strong01 {
+    margin-top: 27px;
+    margin-top: 2.7rem;
+    font-size: 21px;
+    font-size: 2.1rem;
+    line-height: 32px;
+    line-height: 3.2rem;
+  }
+  .cp-terms-conditions .terms-cont-in h3 + strong,
+  .cp-terms-conditions .terms-cont-in h3 + p,
+  .cp-terms-conditions .terms-cont-in h3 + ol,
+  .cp-terms-conditions .terms-cont-in h3 + ul, .cp-terms-conditions .terms-cont-in .policy-strong01 + strong,
+  .cp-terms-conditions .terms-cont-in .policy-strong01 + p,
+  .cp-terms-conditions .terms-cont-in .policy-strong01 + ol,
+  .cp-terms-conditions .terms-cont-in .policy-strong01 + ul {
+    margin-top: 5px;
+    margin-top: 0.5rem;
+  }
+  .cp-terms-conditions .terms-cont-in strong, .cp-terms-conditions .terms-cont-in p, .cp-terms-conditions .terms-cont-in ol, .cp-terms-conditions .terms-cont-in ul {
+    margin-top: 25px;
+    margin-top: 2.5rem;
+  }
+  .cp-terms-conditions .terms-cont-in li img {
+    margin-right: 3px;
+    margin-right: 0.3rem;
+    margin-left: -11px;
+    margin-left: -1.1rem;
+  }
+  .cp-terms-conditions .terms-cont-in li > *:not(li):not(a):not(strong):not(br):not(.policy-span01):not(font) {
+    padding-left: 13px;
+    padding-left: 1.3rem;
+  }
+  .cp-terms-conditions .terms-cont-in table {
+    margin-top: 10px;
+    margin-top: 1rem;
+  }
+  .cp-terms-conditions .warranty-area, .cp-terms-conditions .warranty-cont {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 25px;
+    line-height: 2.5rem;
+  }
+  .cp-terms-conditions .warranty-area .warranty-cont-in, .cp-terms-conditions .warranty-area strong, .cp-terms-conditions .warranty-cont .warranty-cont-in, .cp-terms-conditions .warranty-cont strong {
+    margin-top: 48px;
+    margin-top: 4.8rem;
+  }
+  .cp-terms-conditions .warranty-area h2, .cp-terms-conditions .warranty-area strong, .cp-terms-conditions .warranty-cont h2, .cp-terms-conditions .warranty-cont strong {
+    padding-bottom: 13px;
+    padding-bottom: 1.3rem;
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+  .cp-terms-conditions .warranty-area h2 + .sml-tit, .cp-terms-conditions .warranty-area strong + .sml-tit, .cp-terms-conditions .warranty-cont h2 + .sml-tit, .cp-terms-conditions .warranty-cont strong + .sml-tit {
+    margin-top: 24px;
+    margin-top: 2.4rem;
+  }
+  .cp-terms-conditions .warranty-area .sml-tit, .cp-terms-conditions .warranty-cont .sml-tit {
+    margin-top: 27px;
+    margin-top: 2.7rem;
+    font-size: 21px;
+    font-size: 2.1rem;
+    line-height: 32px;
+    line-height: 3.2rem;
+  }
+  .cp-terms-conditions .warranty-area .sml-tit + p,
+  .cp-terms-conditions .warranty-area .sml-tit + ol,
+  .cp-terms-conditions .warranty-area .sml-tit + ul, .cp-terms-conditions .warranty-cont .sml-tit + p,
+  .cp-terms-conditions .warranty-cont .sml-tit + ol,
+  .cp-terms-conditions .warranty-cont .sml-tit + ul {
+    margin-top: 5px;
+    margin-top: 0.5rem;
+  }
+  .cp-terms-conditions .warranty-area p, .cp-terms-conditions .warranty-area ol, .cp-terms-conditions .warranty-area ul, .cp-terms-conditions .warranty-cont p, .cp-terms-conditions .warranty-cont ol, .cp-terms-conditions .warranty-cont ul {
+    margin-top: 25px;
+    margin-top: 2.5rem;
+  }
+  .cp-terms-conditions .warranty-area table, .cp-terms-conditions .warranty-cont table {
+    margin-top: 10px;
+    margin-top: 1rem;
+  }
+  .cp-terms-conditions .warranty-area .disclaimer, .cp-terms-conditions .warranty-cont .disclaimer {
+    padding-left: 20px;
+    padding-left: 2rem;
+  }
+  .cp-terms-conditions .warranty-area + .warranty-cont {
+    margin-top: 38px;
+    margin-top: 3.8rem;
+  }
+}

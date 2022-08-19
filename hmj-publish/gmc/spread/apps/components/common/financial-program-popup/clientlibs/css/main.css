@@ -1,0 +1,207 @@
+.financial-program-popup.cm-layer .cm-layer__wrapper {
+  max-width: -webkit-calc(100% - 40px);
+  max-width: calc(100% - 40px);
+  width: 800px;
+  width: 80rem;
+}
+
+.financial-program-popup.cm-layer .cm-layer__content {
+  padding-top: 60px;
+  padding-top: 6rem;
+  padding-bottom: 76px;
+  padding-bottom: 7.6rem;
+}
+
+.financial-program-popup.cm-layer .cm-layer__cta {
+  margin-top: 54px;
+  margin-top: 5.4rem;
+}
+
+.financial-program-popup.cm-layer .cm-layer__close-wrap [data-icon="svg-cross"] {
+  width: 21px;
+  width: 2.1rem;
+  height: 21px;
+  height: 2.1rem;
+}
+
+.financial-program-popup__table-mo {
+  display: none;
+}
+
+.financial-program-popup__table .cm-table th {
+  font-family: "genesis-text-office", sans-serif;
+}
+
+.financial-program-popup__table .cm-table th, .financial-program-popup__table .cm-table td {
+  width: 20%;
+  height: 50px;
+  height: 5rem;
+  padding: 15px 22px 14px;
+  padding: 1.5rem 2.2rem 1.4rem;
+  line-height: 20px;
+  line-height: 2rem;
+}
+
+.financial-program-popup__content {
+  text-align: left;
+}
+
+.financial-program-popup__info {
+  margin-top: 47px;
+  margin-top: 4.7rem;
+}
+
+.financial-program-popup__info:first-child {
+  margin-top: 0;
+}
+
+.financial-program-popup__info-wrap {
+  margin-top: 55px;
+  margin-top: 5.5rem;
+}
+
+.financial-program-popup__info .info-title {
+  display: block;
+  font-family: "genesis-head-office-light", sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  font-size: 3rem;
+  letter-spacing: -0.025em;
+  line-height: 38px;
+  line-height: 3.8rem;
+}
+
+.financial-program-popup__info .info-desc {
+  margin-top: 16px;
+  margin-top: 1.6rem;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #262626;
+  letter-spacing: -0.025em;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+
+.financial-program-popup__disc {
+  margin-top: 40px;
+  margin-top: 4rem;
+}
+
+.financial-program-popup__disc .financial-disc {
+  font-size: 12px;
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 22px;
+  line-height: 2.2rem;
+}
+
+@media screen and (max-width: 1359px) {
+  .financial-program-popup__table .cm-table th, .financial-program-popup__table .cm-table td {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .financial-program-popup.cm-layer .cm-layer__content {
+    padding-top: 37px;
+    padding-top: 3.7rem;
+    padding-bottom: 50px;
+    padding-bottom: 5rem;
+  }
+  .financial-program-popup.cm-layer .cm-layer__cta {
+    margin-top: 35px;
+    margin-top: 3.5rem;
+  }
+  .financial-program-popup.cm-layer .cm-layer__close-wrap [data-icon="svg-cross"] {
+    width: 22px;
+    width: 2.2rem;
+    height: 22px;
+    height: 2.2rem;
+  }
+  .financial-program-popup__table-pc {
+    display: none;
+  }
+  .financial-program-popup__table-mo {
+    display: block;
+  }
+  .financial-program-popup__table .cm-table {
+    margin-top: 37px;
+    margin-top: 3.7rem;
+  }
+  .financial-program-popup__table .cm-table:first-child {
+    margin-top: 0;
+  }
+  .financial-program-popup__table .cm-table th, .financial-program-popup__table .cm-table td {
+    height: 54px;
+    height: 5.4rem;
+    padding: 18px 14px 17px;
+    padding: 1.8rem 1.4rem 1.7rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+    border-left: 1px solid #e5e5e5;
+    line-height: 18px;
+    line-height: 1.8rem;
+  }
+  .financial-program-popup__table .cm-table th:first-child, .financial-program-popup__table .cm-table td:first-child {
+    border-left: 0;
+  }
+  .financial-program-popup__table .cm-table th:nth-child(1), .financial-program-popup__table .cm-table td:nth-child(1) {
+    width: 35.08%;
+  }
+  .financial-program-popup__table .cm-table th:nth-child(2), .financial-program-popup__table .cm-table td:nth-child(2) {
+    width: 64.92%;
+  }
+  .financial-program-popup__table .cm-table td {
+    text-align: left;
+  }
+  .financial-program-popup__table .table-caption {
+    display: block;
+    font-family: "genesis-head-office-light", sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    font-size: 2rem;
+    letter-spacing: -0.025em;
+    line-height: 24px;
+    line-height: 2.4rem;
+    text-align: left;
+  }
+  .financial-program-popup__table .table-caption + table {
+    margin-top: 13px;
+    margin-top: 1.3rem;
+  }
+  .financial-program-popup__info {
+    margin-top: 32px;
+    margin-top: 3.2rem;
+  }
+  .financial-program-popup__info-wrap {
+    margin-top: 38px;
+    margin-top: 3.8rem;
+  }
+  .financial-program-popup__info .info-title {
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 26px;
+    line-height: 2.6rem;
+  }
+  .financial-program-popup__info .info-desc {
+    margin-top: 15px;
+    margin-top: 1.5rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+  .financial-program-popup__disc {
+    margin-top: 20px;
+    margin-top: 2rem;
+    padding-right: 23px;
+    padding-right: 2.3rem;
+  }
+  .financial-program-popup__disc .financial-disc {
+    font-size: 11px;
+    font-size: 1.1rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+  }
+}

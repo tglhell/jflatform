@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tooltip</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+</head>
+<body>
+<div id="wrap">
+    <!-- component -->
+    <div class="guide" style="font-size:16px;padding:20px 0">
+        <h2>Tooltip Sample</h2>
+        <p>color theme : 기본 배경 color type과 별개로 툴팁 type 존재 <br> 
+            <ul>
+                <li>- type light : .tooltip-type-light 클레스 추가</li>
+            </ul>
+        </p>
+    </div>
+
+    <div class="type-dark" style="margin: 10px 0; padding: 150px 40px; font-size: 20px; color: #fff;">
+        <p>
+            If there is a
+            <span class="cm-tooltip js-tooltip">
+                <a href="#" class="cm-tooltip-opener" aria-expanded="false">Tooltip</a>
+                <span class="cm-tooltip-layer">
+                    <span class="cm-tooltip-layer__inner">Specifications may vary depending on model and/or country.
+                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                    </span>
+                </span>
+            </span>
+            between text
+
+
+            <!--/* 2번째 tooltip 테마:dark*/-->
+            <span style="margin-left: 300px;">
+                If there is a
+                <span class="cm-tooltip js-tooltip tooltip-type-light">
+                    <a href="#" class="cm-tooltip-opener" aria-expanded="false">Tooltip</a>
+                    <span class="cm-tooltip-layer">
+                        <span class="cm-tooltip-layer__inner">Specifications may vary depending on model and/or country.
+                            <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                        </span>
+                    </span>
+                </span>
+                between text
+            </span>
+        </p>
+    </div>
+    <div class="type-light" style="margin: 10px 0; padding: 150px 40px; font-size: 20px; color: #000;">
+        <p>
+            If there is a
+            <span class="cm-tooltip js-tooltip tooltip-type-light">
+                <a href="#" class="cm-tooltip-opener" aria-expanded="false">Tooltip</a>
+                <span class="cm-tooltip-layer">
+                    <span class="cm-tooltip-layer__inner">Specifications may vary depending on model and/or country.
+                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                    </span>
+                </span>
+            </span>
+            between text
+
+
+            <!--/* 2번째 tooltip 테마:dark*/-->
+            <span style="margin-left: 300px;">
+                If there is a
+                <span class="cm-tooltip js-tooltip">
+                    <a href="#" class="cm-tooltip-opener" aria-expanded="false">Tooltip</a>
+                    <span class="cm-tooltip-layer">
+                        <span class="cm-tooltip-layer__inner">Specifications may vary depending on model and/or country.
+                            <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                        </span>
+                    </span>
+                </span>
+                between text
+            </span>
+        </p>
+    </div>
+    <!-- //component -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+</body>
+</html>

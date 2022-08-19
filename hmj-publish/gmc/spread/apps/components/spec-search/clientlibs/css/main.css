@@ -1,0 +1,211 @@
+.spec-search .cm-form-check__input-btn .cm-btn {
+  background-color: #111;
+}
+
+.spec-search .cm-form-check__input-btn .cm-btn:after {
+  z-index: 10;
+  border-color: #111;
+}
+
+.spec-search .cm-form-check__input-btn .cm-btn .text {
+  color: #fff;
+}
+
+.spec-search .cm-form-check__input-btn .cm-btn .masker {
+  background-color: #fff;
+}
+
+.spec-search .cm-form-check__input-btn .cm-btn .masker:after {
+  z-index: 10;
+  border-color: #111;
+}
+
+.spec-search .cm-form-check__input-btn .cm-btn .masker span {
+  color: #000;
+}
+
+.spec-search__inner {
+  max-width: 1080px;
+  padding: 0 80px;
+  padding: 0 8rem;
+  margin: 0 auto;
+}
+
+.spec-search .cm-form-check__header {
+  padding: 0px 0 45px;
+  padding: 0rem 0 4.5rem;
+}
+
+.spec-search .cm-form-check__body {
+  margin-top: 80px;
+  margin-top: 8rem;
+}
+
+.spec-search .cm-form-check__input-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.spec-search .cm-form-check__input-btn .cm-input-wrap {
+  position: relative;
+  width: 380px;
+  width: 38rem;
+  margin-right: 40px;
+  margin-right: 4rem;
+}
+
+.spec-search .cm-form-check__input-btn .cm-input-message {
+  position: absolute;
+  top: 100%;
+}
+
+.spec-search .cm-form-check__input-btn .cm-btn {
+  font-size: 14px;
+  font-size: 1.4rem;
+  min-width: 200px;
+  min-width: 20rem;
+  height: 52px;
+  height: 5.2rem;
+  line-height: 54px;
+  line-height: 5.4rem;
+}
+
+.spec-search .cm-form-check__input-btn .cm-btn .masker span {
+  height: 52px;
+  height: 5.2rem;
+  line-height: 54px;
+  line-height: 5.4rem;
+}
+
+.spec-search .cm-layout__notice__inner {
+  padding: 72px 140px 74px;
+  padding: 7.2rem 14rem 7.4rem;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.spec-search .cm-layout__notice .notice-list {
+  margin: 0;
+}
+
+.spec-search .cm-layout__notice .list-text {
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #262626;
+  line-height: 24px;
+  line-height: 2.4rem;
+}
+
+.spec-search .cm-layout__notice .list-text:not(:first-child) {
+  margin-top: 7px;
+  margin-top: 0.7rem;
+}
+
+.spec-search .cm-table col:first-child {
+  width: 22.2222%;
+}
+
+.spec-search .cm-table th {
+  font-family: "genesis-text-office", sans-serif;
+}
+
+.spec-search__result .cm-form-check__title {
+  margin: 74px 0 33px;
+  margin: 7.4rem 0 3.3rem;
+}
+
+.spec-search__result .cm-form-check__title .el-title {
+  font-size: 30px;
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 767px) {
+  .spec-search__inner {
+    max-width: none;
+    padding: 0 30px;
+    padding: 0 3rem;
+  }
+  .spec-search .cm-form-check__header {
+    padding: 0px 0 55px;
+    padding: 0rem 0 5.5rem;
+  }
+  .spec-search .cm-form-check__body {
+    margin-top: 48px;
+    margin-top: 4.8rem;
+  }
+  .spec-search .cm-form-check__desc {
+    margin-top: 9px;
+    margin-top: 0.9rem;
+  }
+  .spec-search .cm-form-check__input-btn {
+    display: block;
+  }
+  .spec-search .cm-form-check__input-btn .cm-input-wrap {
+    width: auto;
+    margin: 0;
+  }
+  .spec-search .cm-form-check__input-btn .cm-input-message {
+    position: static;
+    padding-left: 0;
+    margin-bottom: -4px;
+    margin-bottom: -0.4rem;
+  }
+  .spec-search .cm-form-check__input-btn .cm-btn {
+    font-size: 16px;
+    font-size: 1.6rem;
+    min-width: 0;
+    min-width: 0;
+    height: 56px;
+    height: 5.6rem;
+    line-height: 58px;
+    line-height: 5.8rem;
+    margin-top: 25px;
+    margin-top: 2.5rem;
+  }
+  .spec-search .cm-form-check__input-btn .cm-btn .masker span {
+    height: 56px;
+    height: 5.6rem;
+    line-height: 58px;
+    line-height: 5.8rem;
+  }
+  .spec-search .cm-form-check .cm-input-text__label {
+    padding-top: 0;
+  }
+  .spec-search .cm-layout__notice {
+    margin-bottom: 0;
+  }
+  .spec-search .cm-layout__notice__inner {
+    padding: 54px 30px;
+    padding: 5.4rem 3rem;
+  }
+  .spec-search .cm-layout__notice .list-text {
+    line-height: 25px;
+    line-height: 2.5rem;
+  }
+  .spec-search .cm-layout__notice .list-text:not(:first-child) {
+    margin-top: 13px;
+    margin-top: 1.3rem;
+  }
+  .spec-search .cm-table col:first-child {
+    width: 38.0952%;
+  }
+  .spec-search .cm-table td {
+    padding: 15px 20px;
+    padding: 1.5rem 2rem;
+  }
+  .spec-search__result .cm-form-check__title {
+    margin: 56px 0 34px;
+    margin: 5.6rem 0 3.4rem;
+  }
+  .spec-search__result .cm-form-check__title .el-title {
+    font-size: 25px;
+    font-size: 2.5rem;
+  }
+}

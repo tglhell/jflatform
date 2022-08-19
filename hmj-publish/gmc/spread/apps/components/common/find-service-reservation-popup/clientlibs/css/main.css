@@ -1,0 +1,19 @@
+.find-service-reservation-popup .cm-layer__message p {
+  line-height: 30px;
+  line-height: 3rem;
+}
+
+.find-service-reservation-popup .cm-btn .masker:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid #000;
+  content: '';
+}
+
+.find-service-reservation-popup .cm-layer__message p {
+  line-height: 28px;
+  line-height: 2.8rem;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Cookie Popup</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+
+<!-- 마크업 검수용 코드 -->
+<style>
+.sample-btn{ display:inline-block; padding: 10px 3px; font-size: 18px; }
+</style>
+<!-- // 마크업 검수용 코드 -->
+</head>
+<body>
+<div id="wrap">
+
+    <a href="#" class="sample-btn js-layer-opener" data-layer-target="#cookie-layer">[팝업 열기] Cookie</a> <br>
+
+    <!-- component -->
+    <div class="cm-layer type-alert cookie-popup js-cm-layer" id="cookie-layer">
+        <span class="cm-layer__dimmed"></span>
+        <div class="cm-layer__body">
+            <div class="cm-layer__wrapper" role="dialog">
+                <div class="cm-layer__title">
+                    <strong>쿠키(Cookie) 사용 동의</strong>
+                </div>
+                <div class="cm-layer__content">
+                    <div class="cookie-popup__desc">
+                        <p>Genesis는 사용자에 맞춰 사이트를 설정하고 사용자들이 사이트를 보다 원활하게 이용할 수 있도록 쿠키를 사용하고 있습니다. 제사한 정보를 보려면 개인정보 및 쿠키 정책을 반문하시기 바랍니다.  사이트를 사용하려면 쿠키 사용에 동의하여야 합니다.</p>
+                    </div>
+                    <div class="cookie-popup__cta">
+                        <a href="#" class="cm-btn-more" title=""><span>개인정보 처리방침</span></a>
+                    </div>
+                    <div class="cm-layer__cta">
+                        <button type="button" class="cm-btn">
+                            <span class="text">수락</span>
+                            <span class="masker"><span>수락</span></span>
+                        </button>
+                        <button type="button" class="cm-btn type-white">
+                            <span class="text">취소</span>
+                            <span class="masker"><span>취소</span></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="cm-layer__close-wrap">
+                    <button type="button" class="js-layer-closer">
+                        <span class="js-svg-icon" data-icon="svg-cross"></span>
+                        <span class="blind">Close popup</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- component -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<!-- <script src="clientlibs/js/main.js"></script> -->
+
+</body>
+</html>

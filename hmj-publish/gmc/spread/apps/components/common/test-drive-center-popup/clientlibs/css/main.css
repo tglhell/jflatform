@@ -1,0 +1,750 @@
+.testdrive-center-popup.cm-layer .cm-layer__wrapper {
+  vertical-align: top;
+}
+
+.testdrive-center-popup.cm-layer .cm-layer__title {
+  padding: 24px 60px 24px 39px;
+  padding: 2.4rem 6rem 2.4rem 3.9rem;
+}
+
+.testdrive-center-popup.cm-layer .cm-layer__content {
+  padding: 41px 40px 51px;
+  padding: 4.1rem 4rem 5.1rem;
+  text-align: left;
+}
+
+.testdrive-center-popup.cm-layer .cm-layer__cta {
+  margin: 50px -19px 0;
+  margin: 5rem -1.9rem 0;
+  text-align: center;
+}
+
+.testdrive-center-popup.cm-layer .cm-layer__cta .cm-btn.type-white:after {
+  border-color: #111;
+}
+
+.testdrive-center-popup.cm-layer .cm-layer__cta .cm-btn.type2 {
+  margin: 0 4px;
+  margin: 0 0.4rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-size: 1.6rem;
+  min-width: 45%;
+  min-width: 45%;
+  height: 56px;
+  height: 5.6rem;
+  line-height: 58px;
+  line-height: 5.8rem;
+}
+
+.testdrive-center-popup.cm-layer .cm-layer__cta .cm-btn.type2 .masker span {
+  height: 56px;
+  height: 5.6rem;
+  line-height: 58px;
+  line-height: 5.8rem;
+}
+
+.testdrive-center-popup__location-desc {
+  position: relative;
+  margin-top: 16px;
+  margin-top: 1.6rem;
+  padding-left: 33px;
+  padding-left: 3.3rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+  color: #262626;
+}
+
+.testdrive-center-popup__location-desc:first-child {
+  margin-top: 0;
+  line-height: 18px;
+  line-height: 1.8rem;
+}
+
+.testdrive-center-popup__location-desc:first-child:before {
+  background-image: url(/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-map-popup.png);
+}
+
+.testdrive-center-popup__location-desc:before {
+  position: absolute;
+  top: -1px;
+  top: -0.1rem;
+  left: -3px;
+  left: -0.3rem;
+  width: 24px;
+  width: 2.4rem;
+  height: 24px;
+  height: 2.4rem;
+  background: url(/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-call-popup.png) 0 0/100% 100% no-repeat;
+  content: '';
+}
+
+.testdrive-center-popup__desc p {
+  margin-top: 28px;
+  margin-top: 2.8rem;
+  padding-top: 33px;
+  padding-top: 3.3rem;
+  padding-right: 15px;
+  padding-right: 1.5rem;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+  border-top: 1px solid #e0e0e0;
+  color: #262626;
+}
+
+.testdrive-center-popup__title {
+  position: relative;
+  margin: 41px 0 30px;
+  margin: 4.1rem 0 3rem;
+  padding-right: 150px;
+  padding-right: 15rem;
+  font-size: 0;
+}
+
+.testdrive-center-popup__title strong {
+  font-family: "genesis-head-office-light", sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+  letter-spacing: -0.025em;
+  color: #000;
+}
+
+.testdrive-center-popup__title .cm-btn-more {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  bottom: -0.1rem;
+  padding-right: 12px;
+  padding-right: 1.2rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 18px;
+  line-height: 1.8rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.testdrive-center-popup__select-list {
+  margin-top: 26px;
+  margin-top: 2.6rem;
+}
+
+.testdrive-center-popup__select-list.is-selected:not(.type-show-desc) p:not(.cm-message-error), .testdrive-center-popup__select-list.is-selected.type-find-zipcode p:not(.cm-message-error) {
+  height: 22px;
+  height: 2.2rem;
+  padding-bottom: 17px;
+  padding-bottom: 1.7rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #262626;
+}
+
+.testdrive-center-popup__select-list.is-selected .type-white:after {
+  border-color: #111;
+}
+
+.testdrive-center-popup__select-list.type-show-desc {
+  position: relative;
+  padding-bottom: 8px;
+  padding-bottom: 0.8rem;
+  margin-top: 29px;
+  margin-top: 2.9rem;
+}
+
+.testdrive-center-popup__select-list.type-show-desc p {
+  height: 44px;
+  height: 4.4rem;
+  margin-top: 5px;
+  margin-top: 0.5rem;
+  padding-bottom: 17px;
+  padding-bottom: 1.7rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.testdrive-center-popup__select-list-inner {
+  position: relative;
+}
+
+.type-car-select .testdrive-center-popup__select-list-inner {
+  padding-right: 128px;
+  padding-right: 12.8rem;
+}
+
+.type-show-desc .testdrive-center-popup__select-list-inner {
+  position: static;
+}
+
+.type-show-desc .testdrive-center-popup__select-list-inner:hover p, .type-show-desc .testdrive-center-popup__select-list-inner:focus p {
+  height: 44px;
+  height: 4.4rem;
+}
+
+.testdrive-center-popup__select-list-inner:hover p, .testdrive-center-popup__select-list-inner:focus p {
+  height: 22px;
+  height: 2.2rem;
+  padding-bottom: 17px;
+  padding-bottom: 1.7rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.testdrive-center-popup__select-list-inner span {
+  position: relative;
+  display: block;
+  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
+  font-family: "genesis-head-office-light", sans-serif;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+  padding-left: 35px;
+  padding-left: 3.5rem;
+  color: #757575;
+}
+
+.testdrive-center-popup__select-list-inner span:before {
+  position: absolute;
+  top: 1px;
+  top: 0.1rem;
+  left: 1px;
+  left: 0.1rem;
+  width: 23px;
+  width: 2.3rem;
+  height: 23px;
+  height: 2.3rem;
+  background: url(/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-check-popup.png) 0 0/100% 100% no-repeat;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  content: '';
+}
+
+.testdrive-center-popup__select-list-inner p {
+  overflow: hidden;
+  height: 0;
+  margin-top: 6px;
+  margin-top: 0.6rem;
+  padding-left: 35px;
+  padding-left: 3.5rem;
+  padding-bottom: 8px;
+  padding-bottom: 0.8rem;
+  font-size: 0;
+  color: #757575;
+  line-height: 22px;
+  line-height: 2.2rem;
+  -webkit-transition: height .2s linear;
+  transition: height .2s linear;
+}
+
+.testdrive-center-popup__select-list-inner p:after {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 8px;
+  height: 0.8rem;
+  border-bottom: 1px solid #a2a2a2;
+  content: '';
+}
+
+.testdrive-center-popup__select-list-inner a {
+  display: block;
+}
+
+.is-selected .testdrive-center-popup__select-list-inner span {
+  color: #996449;
+}
+
+.is-selected .testdrive-center-popup__select-list-inner span:before {
+  background-image: url(/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-check-popup-active.png);
+}
+
+.is-selected .testdrive-center-popup__select-list-inner p {
+  color: #262626;
+}
+
+.is-selected .testdrive-center-popup__select-list-inner p:after {
+  border-bottom: 2px solid #996449;
+}
+
+.testdrive-center-popup__select-where {
+  display: none;
+  margin-top: 46px;
+  margin-top: 4.6rem;
+}
+
+.testdrive-center-popup__select-where-title {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 20px;
+  line-height: 2rem;
+}
+
+.is-selected .testdrive-center-popup__select-where {
+  display: block;
+}
+
+.testdrive-center-popup__select-where-input {
+  position: relative;
+  margin-top: 6px;
+  margin-top: 0.6rem;
+}
+
+.testdrive-center-popup__select-where-input.has-error .testdrive-center-popup__input:not(.centerpopup-input-type3) .cm-input-text, .testdrive-center-popup__select-where-input.has-error .testdrive-center-popup__input:not(.centerpopup-input-type3) .cm-input-text:hover, .testdrive-center-popup__select-where-input.has-error .testdrive-center-popup__input:not(.centerpopup-input-type3) .cm-input-text:focus {
+  border-color: #ce2d2d;
+}
+
+.testdrive-center-popup__select-where-input.has-error .testdrive-center-popup__input:not(.centerpopup-input-type3) .cm-input-text.has-text:after, .testdrive-center-popup__select-where-input.has-error .testdrive-center-popup__input:not(.centerpopup-input-type3) .cm-input-text.has-focus:after {
+  background: #ce2d2d;
+}
+
+.testdrive-center-popup__select-where-input .cm-btn.type2 {
+  position: absolute;
+  top: -8px;
+  top: -0.8rem;
+  right: 0;
+  font-size: 12px;
+  font-size: 1.2rem;
+  min-width: 200px;
+  min-width: 20rem;
+  height: 52px;
+  height: 5.2rem;
+  line-height: 54px;
+  line-height: 5.4rem;
+}
+
+.testdrive-center-popup__select-where-input .cm-btn.type2 .masker span {
+  height: 52px;
+  height: 5.2rem;
+  line-height: 54px;
+  line-height: 5.4rem;
+}
+
+.testdrive-center-popup__select-where-input .cm-input-message {
+  margin-bottom: -27px;
+  margin-bottom: -2.7rem;
+}
+
+.testdrive-center-popup__select-desc {
+  position: relative;
+}
+
+.testdrive-center-popup__select-desc.cm-accordion .cm-accordion-item {
+  padding-top: 14px;
+  padding-top: 1.4rem;
+  border: 0;
+}
+
+.testdrive-center-popup__select-desc.cm-accordion .cm-accordion-item.is-active {
+  padding-bottom: 20px;
+  padding-bottom: 2rem;
+}
+
+.testdrive-center-popup__select-desc.cm-accordion .cm-accordion-item .cm-accordion-btn {
+  position: absolute;
+  right: 0;
+  top: -27px;
+  top: -2.7rem;
+  width: 86px;
+  width: 8.6rem;
+  padding: 4px 15px 4px 0px;
+  padding: 0.4rem 1.5rem 0.4rem 0rem;
+  font-size: 12px;
+  font-size: 1.2rem;
+  color: #000;
+  line-height: 16px;
+  line-height: 1.6rem;
+  text-align: right;
+}
+
+.testdrive-center-popup__select-desc.cm-accordion .cm-accordion-item .cm-accordion-btn .ico-accordion {
+  border-color: #996449;
+  right: 1px;
+}
+
+.testdrive-center-popup__select-desc.cm-accordion .cm-accordion-item .cm-accordion-panel {
+  padding-left: 36px;
+  padding-left: 3.6rem;
+  border: 0px;
+}
+
+.testdrive-center-popup__select-desc.cm-accordion .cm-accordion-item .cm-accordion-panel-inner {
+  padding: 16px 20px;
+  padding: 1.6rem 2rem;
+  background: #f8f8f8;
+}
+
+.testdrive-center-popup__select-desc.cm-accordion .cm-accordion-item.is-active .ico-accordion {
+  margin-top: -3px;
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.testdrive-center-popup__select-desc-img {
+  position: absolute;
+  right: 0;
+  top: -12px;
+  top: -1.2rem;
+}
+
+.testdrive-center-popup__select-desc-img .js-picture {
+  width: 98px;
+  width: 9.8rem;
+}
+
+.testdrive-center-popup__select-desc-img img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.testdrive-center-popup__select-desc-list:before, .testdrive-center-popup__select-desc-list:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.testdrive-center-popup__select-desc-list span {
+  font-size: 12px;
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 21px;
+  line-height: 2.1rem;
+}
+
+.testdrive-center-popup__select-desc-list .car-color {
+  display: block;
+  overflow: hidden;
+}
+
+.testdrive-center-popup__select-desc-list .car-color-title {
+  float: left;
+  width: 59px;
+  width: 5.9rem;
+}
+
+.testdrive-center-popup__select + .testdrive-center-popup__title {
+  margin: 99px 0 44px;
+  margin: 9.9rem 0 4.4rem;
+}
+
+.testdrive-center-popup__input {
+  margin-top: 4px;
+  margin-top: 0.4rem;
+}
+
+.testdrive-center-popup__input.centerpopup-input-type1 {
+  max-width: 200px;
+  max-width: 20rem;
+}
+
+.testdrive-center-popup .cm-btn-more.is-default span:before {
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .testdrive-center-popup.cm-layer .cm-layer__title {
+    padding: 18px 50px 18px 24px;
+    padding: 1.8rem 5rem 1.8rem 2.4rem;
+  }
+  .testdrive-center-popup.cm-layer .cm-layer__content {
+    padding: 36px 25px 50px;
+    padding: 3.6rem 2.5rem 5rem;
+  }
+  .testdrive-center-popup.cm-layer .cm-layer__cta {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 40px 0 0;
+    margin: 4rem 0 0;
+  }
+  .testdrive-center-popup.cm-layer .cm-layer__cta .cm-btn.type2 {
+    margin: 0;
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  .testdrive-center-popup.cm-layer .cm-layer__cta .cm-btn.type2.type-white {
+    margin-top: 10px;
+    margin-top: 1rem;
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+  .testdrive-center-popup__location-desc {
+    margin-top: 8px;
+    margin-top: 0.8rem;
+    padding-left: 27px;
+    padding-left: 2.7rem;
+  }
+  .testdrive-center-popup__location-desc:first-child {
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+  .testdrive-center-popup__location-desc:first-child:before {
+    top: 4px;
+    top: 0.4rem;
+  }
+  .testdrive-center-popup__location-desc:before {
+    position: absolute;
+    top: 2px;
+    top: 0.2rem;
+    left: -2px;
+    left: -0.2rem;
+    width: 19px;
+    width: 1.9rem;
+    height: 19px;
+    height: 1.9rem;
+  }
+  .testdrive-center-popup__desc p {
+    margin-top: 22px;
+    margin-top: 2.2rem;
+    padding-top: 25px;
+    padding-top: 2.5rem;
+    padding-right: 19px;
+    padding-right: 1.9rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 23px;
+    line-height: 2.3rem;
+  }
+  .testdrive-center-popup__title {
+    margin: 47px 0 25px;
+    margin: 4.7rem 0 2.5rem;
+  }
+  .testdrive-center-popup__title strong {
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 15px;
+    line-height: 1.5rem;
+  }
+  .testdrive-center-popup__title .cm-btn-more {
+    position: absolute;
+    right: 0;
+    bottom: -7px;
+    bottom: -0.7rem;
+    padding-right: 10px;
+    padding-right: 1rem;
+  }
+  .testdrive-center-popup__select-list {
+    margin-top: 20px;
+    margin-top: 2rem;
+  }
+  .testdrive-center-popup__select-list.is-selected:not(.type-show-desc) p:not(.cm-message-error), .testdrive-center-popup__select-list.is-selected.type-find-zipcode p:not(.cm-message-error) {
+    height: 21px;
+    height: 2.1rem;
+    padding-bottom: 10px;
+    padding-bottom: 1rem;
+    font-size: 13px;
+    font-size: 1.3rem;
+  }
+  .testdrive-center-popup__select-list.type-show-desc {
+    margin-top: 20px;
+    margin-top: 2rem;
+  }
+  .testdrive-center-popup__select-list.type-show-desc p {
+    height: 42px;
+    height: 4.2rem;
+    margin-top: 2px;
+    margin-top: 0.2rem;
+    padding-bottom: 16px;
+    padding-bottom: 1.6rem;
+    font-size: 13px;
+    font-size: 1.3rem;
+  }
+  .type-car-select .testdrive-center-popup__select-list-inner {
+    padding-right: 90px;
+    padding-right: 9rem;
+  }
+  .type-show-desc .testdrive-center-popup__select-list-inner {
+    position: static;
+  }
+  .type-show-desc .testdrive-center-popup__select-list-inner:hover p, .type-show-desc .testdrive-center-popup__select-list-inner:focus p {
+    height: 42px;
+    height: 4.2rem;
+    font-size: 13px;
+    font-size: 1.3rem;
+  }
+  .testdrive-center-popup__select-list-inner:hover p, .testdrive-center-popup__select-list-inner:focus p {
+    height: 0;
+    padding-bottom: 2px;
+    padding-bottom: 0.2rem;
+    font-size: 0;
+  }
+  .testdrive-center-popup__select-list-inner span {
+    position: relative;
+    display: block;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-size: 1.6rem;
+    padding-left: 27px;
+    padding-left: 2.7rem;
+    letter-spacing: -0.025em;
+  }
+  .testdrive-center-popup__select-list-inner span:before {
+    top: 5px;
+    top: 0.5rem;
+    left: 1px;
+    left: 0.1rem;
+    width: 19px;
+    width: 1.9rem;
+    height: 19px;
+    height: 1.9rem;
+  }
+  .testdrive-center-popup__select-list-inner p {
+    margin-top: 5px;
+    margin-top: 0.5rem;
+    padding-left: 28px;
+    padding-left: 2.8rem;
+    padding-bottom: 2px;
+    padding-bottom: 0.2rem;
+    font-size: 0;
+    line-height: 21px;
+    line-height: 2.1rem;
+  }
+  .is-selected .testdrive-center-popup__select-list-inner p:after {
+    border-width: 1px;
+  }
+  .testdrive-center-popup__select-where {
+    margin-top: 40px;
+    margin-top: 4rem;
+  }
+  .testdrive-center-popup__select-where-title {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 16px;
+    line-height: 1.6rem;
+  }
+  .testdrive-center-popup__select-where-input {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+    position: relative;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+  .testdrive-center-popup__select-where-input .cm-btn.type2 {
+    position: relative;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    margin-top: 24px;
+    margin-top: 2.4rem;
+    top: 0;
+    font-size: 16px;
+    font-size: 1.6rem;
+    min-width: 100%;
+    min-width: 100%;
+    height: 56px;
+    height: 5.6rem;
+    line-height: 58px;
+    line-height: 5.8rem;
+  }
+  .testdrive-center-popup__select-where-input .cm-btn.type2 .masker span {
+    height: 56px;
+    height: 5.6rem;
+    line-height: 58px;
+    line-height: 5.8rem;
+  }
+  .testdrive-center-popup__select-where-input .cm-input-message {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+    margin-bottom: -27px;
+    margin-bottom: -2.7rem;
+  }
+  .testdrive-center-popup__select-desc {
+    position: relative;
+  }
+  .testdrive-center-popup__select-desc.cm-accordion .cm-accordion-item {
+    padding-top: 1px;
+    padding-top: 0.1rem;
+  }
+  .testdrive-center-popup__select-desc.cm-accordion .cm-accordion-item.is-active {
+    padding: 19px 0 12px;
+    padding: 1.9rem 0 1.2rem;
+  }
+  .testdrive-center-popup__select-desc.cm-accordion .cm-accordion-item .cm-accordion-btn {
+    top: -23px;
+    top: -2.3rem;
+    padding: 4px 16px 4px 0px;
+    padding: 0.4rem 1.6rem 0.4rem 0rem;
+    font-size: 11px;
+    font-size: 1.1rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+  }
+  .testdrive-center-popup__select-desc.cm-accordion .cm-accordion-item .cm-accordion-panel {
+    padding-left: 29px;
+    padding-left: 2.9rem;
+  }
+  .testdrive-center-popup__select-desc.cm-accordion .cm-accordion-item .cm-accordion-panel-inner {
+    padding: 12px 29px 15px 18px;
+    padding: 1.2rem 2.9rem 1.5rem 1.8rem;
+  }
+  .testdrive-center-popup__select-desc-img {
+    top: 1px;
+    top: 0.1rem;
+  }
+  .testdrive-center-popup__select-desc-img .js-picture {
+    width: 74px;
+    width: 7.4rem;
+  }
+  .testdrive-center-popup__select-desc-list {
+    margin-top: 2px;
+    margin-top: 0.2rem;
+  }
+  .testdrive-center-popup__select-desc-list span {
+    font-size: 11px;
+    font-size: 1.1rem;
+    line-height: 20px;
+    line-height: 2rem;
+  }
+  .testdrive-center-popup__select-desc-list .car-color-title {
+    width: 63px;
+    width: 6.3rem;
+  }
+  .testdrive-center-popup__select + .testdrive-center-popup__title {
+    margin: 78px 0 28px;
+    margin: 7.8rem 0 2.8rem;
+  }
+  .testdrive-center-popup__input {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    width: 100%;
+    margin-top: 14px;
+    margin-top: 1.4rem;
+  }
+  .testdrive-center-popup__input.centerpopup-input-type1 {
+    max-width: none;
+    margin-top: 14px;
+    margin-top: 1.4rem;
+  }
+}

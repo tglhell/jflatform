@@ -1,0 +1,118 @@
+.location-agree-popup .cm-btn.type-white {
+  background-color: #fff;
+}
+
+.location-agree-popup .cm-btn.type-white:after {
+  border-color: #111;
+}
+
+.location-agree-popup .cm-btn.type-white .text {
+  color: #000;
+}
+
+.location-agree-popup .cm-btn.type-white .masker {
+  background-color: #111;
+}
+
+.location-agree-popup .cm-btn.type-white .masker:after {
+  border-color: #111;
+}
+
+.location-agree-popup .cm-btn.type-white .masker span {
+  color: #fff;
+}
+
+.location-agree-popup .cm-btn {
+  background-color: #111;
+}
+
+.location-agree-popup .cm-btn:after {
+  z-index: 10;
+  border-color: #111;
+}
+
+.location-agree-popup .cm-btn .text {
+  color: #fff;
+}
+
+.location-agree-popup .cm-btn .masker {
+  background-color: #fff;
+}
+
+.location-agree-popup .cm-btn .masker:after {
+  z-index: 10;
+  border-color: #111;
+}
+
+.location-agree-popup .cm-btn .masker span {
+  color: #000;
+}
+
+.location-agree-popup__desc {
+  padding: 43px 0 70px;
+  padding: 4.3rem 0 7rem;
+}
+
+.location-agree-popup__desc p {
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: #000;
+  line-height: 30px;
+  line-height: 3rem;
+}
+
+.location-agree-popup .cm-layer__cta {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+}
+
+.location-agree-popup .cm-btn {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0;
+}
+
+.location-agree-popup .cm-btn + .cm-btn {
+  margin-left: 10px;
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .location-agree-popup .cm-layer__cta {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  .location-agree-popup .cm-layer__cta .cm-btn {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+  }
+  .location-agree-popup .cm-layer__cta .cm-btn + .cm-btn {
+    margin: 0 0 10px;
+    margin: 0 0 1rem;
+  }
+  .location-agree-popup__desc {
+    padding: 27px 0 54px;
+    padding: 2.7rem 0 5.4rem;
+  }
+  .location-agree-popup__desc p {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 28px;
+    line-height: 2.8rem;
+  }
+}

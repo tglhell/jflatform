@@ -1,0 +1,70 @@
+.cp-section-title__inner {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 80px;
+  padding: 0 8rem;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "genesis-head-office-light", sans-serif;
+}
+
+.cp-section-title__eyebrow {
+  margin-bottom: 10px;
+  margin-bottom: 1rem;
+}
+
+.cp-section-title__eyebrow .el-eyebrow {
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 22px;
+  line-height: 2.2rem;
+  letter-spacing: -.025em;
+  text-transform: uppercase;
+}
+
+.cp-section-title__title .el-title {
+  font-size: 42px;
+  font-size: 4.2rem;
+  font-weight: normal;
+  line-height: 50px;
+  line-height: 5rem;
+  letter-spacing: -0.025em;
+}
+
+.type-dark2 .cp-section-title__eyebrow .el-eyebrow, .type-dark2 .cp-section-title__title .el-title {
+  color: #fff;
+}
+
+@media (max-width: 1023px) {
+  .cp-section-title__eyebrow .el-eyebrow {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cp-section-title__inner {
+    padding: 0 30px;
+    padding: 0 3rem;
+  }
+  .cp-section-title__eyebrow {
+    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
+  }
+  .cp-section-title__eyebrow .el-eyebrow {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 16px;
+    line-height: 1.6rem;
+  }
+  .cp-section-title__title .el-title {
+    font-size: 26px;
+    font-size: 2.6rem;
+    line-height: 32px;
+    line-height: 3.2rem;
+  }
+}

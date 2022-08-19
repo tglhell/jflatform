@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Standard video</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+</head>
+<body>
+<div id="wrap">
+    <!-- component (Youtube) -->
+    <p style="padding-top:20px;font-size:20px;padding:20px 0">1. cover image / youtube</p>
+
+    <div class="type-light">
+        <!-- [F] playing : .is-playing 추가 -->
+        <div class="cp-standard-video js-video-player" data-video-opts='{
+            "type" : "youtube",
+            "videoId" : "MywJSF5KgNA"
+        }'>
+            <div class="cp-standard-video__inner">
+                <div class="cp-video__area">
+                    <div class="cp-video__poster">
+                        <div class="js-picture">
+                            <div class="js-img-bg" data-media="(min-width: 768px)" data-srcset="http://via.placeholder.com/1920x1080"></div>
+                            <div class="js-img-bg" data-media="(min-width: 0px)" data-srcset="http://via.placeholder.com/750x421"></div>
+                        </div>
+                        <button type="button" class="cm-btn-play">
+                            <span class="icon-play"></span>
+                            <span class="blind">Play video</span>
+                        </button>
+                    </div>
+                    <div class="cp-video__frame"></div>
+                </div>
+                <div class="cp-standard-video__text">
+                    <div class="fold-text-wrap">
+                        <!-- [F] 버튼 click : is-opened 클래스 추가, aria-expanded true로 변경 -->
+                        <div class="fold-text-inner">
+                            <strong class="fold-text-title">Genesis global text</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //component -->
+
+    <!-- component (Html5 Player) -->
+    <p style="font-size:20px;padding:20px 0">2. cover image / mp4</p>
+
+    <div class="type-dark">
+        <!-- [F] playing : .is-playing 추가 -->
+        <div class="cp-standard-video js-video-player">
+            <div class="cp-standard-video__inner">
+                <div class="cp-video__area">
+                    <div class="cp-video__poster">
+                        <div class="js-picture">
+                            <div class="js-img-bg" data-media="(min-width: 768px)" data-srcset="http://via.placeholder.com/1920x1080"></div>
+                            <div class="js-img-bg" data-media="(min-width: 0px)" data-srcset="http://via.placeholder.com/750x421"></div>
+                        </div>
+                        <button type="button" class="cm-btn-play">
+                            <span class="icon-play"></span>
+                            <span class="blind">Play video</span>
+                        </button>
+                    </div>
+                    <div class="cp-video__frame">
+                        <video controls playsinline preload="none">
+                            <source src="/dev/@temp/video/@video2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="cp-standard-video__text">
+                    <div class="fold-text-wrap">
+                        <!-- [F] 버튼 click : is-opened 클래스 추가, aria-expanded true로 변경 -->
+                        <div class="fold-text-inner">
+                            <button type="button" class="fold-text-btn" aria-expanded="false"><strong class="fold-text-title">Genesis global text</strong></button>
+                            <!-- [F] 버튼 활성화 시 height 추가 -->
+                            <div class="fold-desc-wrap">
+                                <div class="fold-desc-inner">
+                                    <div class="fold-desc">
+                                        <p>we strive to create the finest automobiles and related products and services for connoisseurs around the globe</p>
+                                    </div>
+                                    <div class="fold-disc">
+                                        <p>* The signature hexagonal grille exudes luxury and confidence.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //component -->
+
+    <!-- component (Html5 Player) -->
+    <p style="font-size:20px;padding:20px 0">2. cover video / mp4</p>
+
+    <div class="type-dark">
+        <!-- [F] playing : .is-playing 추가 -->
+        <div class="cp-standard-video js-video-player">
+            <div class="cp-standard-video__inner">
+                <div class="cp-video__area">
+                    <div class="cp-video__poster">
+                        <button type="button" class="cm-btn-play">
+                            <span class="icon-play"></span>
+                            <span class="blind">Play video</span>
+                        </button>
+                        <div class="video-container js-video" data-use-scrollfix="true">
+                            <video muted loop playsinline preload="none">
+                                <source src="/apps/components/standard-video/imgs/@video.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="cp-video__frame">
+                        <video controls playsinline preload="none">
+                            <source src="/dev/@temp/video/@video2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="cp-standard-video__text">
+                    <div class="fold-text-wrap">
+                        <!-- [F] 버튼 click : is-opened 클래스 추가, aria-expanded true로 변경 -->
+                        <div class="fold-text-inner">
+                            <button type="button" class="fold-text-btn" aria-expanded="false"><strong class="fold-text-title">Genesis global text</strong></button>
+                            <!-- [F] 버튼 활성화 시 height 추가 -->
+                            <div class="fold-desc-wrap">
+                                <div class="fold-desc-inner">
+                                    <div class="fold-desc">
+                                        <p>we strive to create the finest automobiles and related products and services for connoisseurs around the globe</p>
+                                    </div>
+                                    <div class="fold-disc">
+                                        <p>* The signature hexagonal grille exudes luxury and confidence.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //component -->
+
+    <!-- component (layer popup) -->
+    <p style="font-size:20px;padding:20px 0">3. cover image / layer popup(youtube)</p>
+
+    <div class="type-dark">
+        <!-- [F] playing : .is-playing 추가 -->
+        <div class="cp-standard-video js-video-player" data-video-opts='{
+            "type" : "youtube",
+            "videoId" : "MywJSF5KgNA"
+        }'>
+            <div class="cp-standard-video__inner">
+                <div class="cp-video__area">
+                    <div class="cp-video__poster">
+                        <div class="js-picture">
+                            <div class="js-img-bg" data-media="(min-width: 768px)" data-srcset="http://via.placeholder.com/1920x1080"></div>
+                            <div class="js-img-bg" data-media="(min-width: 0px)" data-srcset="http://via.placeholder.com/750x421"></div>
+                        </div>
+                        <button type="button" class="btn-layer js-layer-opener" data-layer-target="#video-layer1">
+                            <span class="icon-play"></span>
+                            <span class="blind">Play video</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="cp-standard-video__text">
+                    <div class="fold-text-wrap">
+                        <!-- [F] 버튼 click : is-opened 클래스 추가, aria-expanded true로 변경 -->
+                        <div class="fold-text-inner">
+                            <button type="button" class="fold-text-btn" aria-expanded="false"><strong class="fold-text-title">Genesis global text</strong></button>
+                            <!-- [F] 버튼 활성화 시 height 추가 -->
+                            <div class="fold-desc-wrap">
+                                <div class="fold-desc-inner">
+                                    <div class="fold-desc">
+                                        <p>we strive to create the finest automobiles and related products and services for connoisseurs around the globe</p>
+                                    </div>
+                                    <div class="fold-disc">
+                                        <p>* The signature hexagonal grille exudes luxury and confidence.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- layer -->
+            <!-- [F] layer open : html에 .is-layer-opened 추가 -->
+            <div class="cm-layer" id="video-layer1">
+                <span class="cm-layer__dimmed"></span>
+                <div class="cm-layer__body">
+                    <div class="cm-layer__wrapper" role="dialog">
+                        <div class="cm-layer__contents">
+                            <div class="cm-layer__content">
+                                <div class="cp-video__layer-frame" data-video-opts='{
+                                    "type" : "youtube",
+                                    "videoId" : "MywJSF5KgNA"
+                                }'></div>
+                            </div>
+                        </div>
+                        <!-- [F] active : .is-active 추가 -->
+                        <div class="cm-share js-share">
+                            <div class="cm-share__dimmed"></div>
+                            <div class="cm-share__link">
+                                <button type="button" class="btn-share">
+                                    <span class="js-svg-icon" data-icon="svg-share"></span>
+                                    <span class="blind">click to expand</span>
+                                </button>
+                                <button type="button" class="btn-close">
+                                    <span class="js-svg-icon" data-icon="svg-cross"></span>
+                                    <span class="blind">click to collapse</span>
+                                </button>
+                                <div class="cm-share__layer">
+                                    <ul>
+                                    <li class="share-item">
+                                        <a href="#" class="share-item-link">
+                                            <span class="js-svg-icon" data-icon="svg-facebook"></span>
+                                            <span class="blind">Facebook</span>
+                                        </a>
+                                    </li>
+                                    <li class="share-item">
+                                        <a href="#" class="share-item-link">
+                                            <span class="js-svg-icon" data-icon="svg-twitter"></span>
+                                            <span class="blind">Twitter</span>
+                                        </a>
+                                    </li>
+                                    <li class="share-item">
+                                        <a href="#" class="share-item-link">
+                                            <span class="js-svg-icon" data-icon="svg-download"></span>
+                                            <span class="blind">Download</span>
+                                        </a>
+                                    </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cm-layer__close-wrap">
+                            <button type="button" class="js-layer-closer"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">Close popup</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //layer -->
+        </div>
+    </div>
+    <!-- //component -->
+
+    <!-- component (layer popup) -->
+    <p style="font-size:20px;padding:20px 0">4. cover video / layer popup(mp4)</p>
+
+    <div class="type-dark">
+        <!-- [D] video cover 타입 : .type-video-cover 클래스 추가 -->
+        <!-- [F] playing : .is-playing 추가 -->
+        <div class="cp-standard-video type-video-cover js-video-player">
+            <div class="cp-standard-video__inner">
+                <div class="cp-video__area">
+                    <div class="cp-video__poster">
+                        <button type="button" class="btn-layer js-layer-opener" data-layer-target="#video-layer2">
+                            <span class="icon-play"></span>
+                            <span class="txt">Watch the film</span>
+                        </button>
+                        <div class="video-container js-video" data-use-scrollfix="true">
+                            <video muted loop playsinline preload="none">
+                                <source src="/apps/components/standard-video/imgs/@video.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="cp-standard-video__text">
+                    <div class="fold-text-wrap">
+                        <!-- [F] 버튼 click : is-opened 클래스 추가, aria-expanded true로 변경 -->
+                        <div class="fold-text-inner">
+                            <button type="button" class="fold-text-btn" aria-expanded="false"><strong class="fold-text-title">Genesis global text</strong></button>
+                            <!-- [F] 버튼 활성화 시 height 추가 -->
+                            <div class="fold-desc-wrap">
+                                <div class="fold-desc-inner">
+                                    <div class="fold-desc">
+                                        <p>we strive to create the finest automobiles and related products and services for connoisseurs around the globe</p>
+                                    </div>
+                                    <div class="fold-disc">
+                                        <p>* The signature hexagonal grille exudes luxury and confidence.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- layer -->
+            <!-- [F] layer open : html에 .is-layer-opened 추가 -->
+            <div class="cm-layer" id="video-layer2">
+                <span class="cm-layer__dimmed"></span>
+                <div class="cm-layer__body">
+                    <div class="cm-layer__wrapper" role="dialog">
+                        <div class="cm-layer__contents">
+                            <div class="cm-layer__content">
+                                <div class="cp-video__layer-frame">
+                                    <video muted loop controls playsinline preload="none">
+                                        <source src="/apps/components/standard-video/imgs/@video.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- [F] active : .is-active 추가 -->
+                        <div class="cm-share js-share">
+                            <div class="cm-share__dimmed"></div>
+                            <div class="cm-share__link">
+                                <button type="button" class="btn-share">
+                                    <span class="js-svg-icon" data-icon="svg-share"></span>
+                                    <span class="blind">click to expand</span>
+                                </button>
+                                <button type="button" class="btn-close">
+                                    <span class="js-svg-icon" data-icon="svg-cross"></span>
+                                    <span class="blind">click to collapse</span>
+                                </button>
+                                <div class="cm-share__layer">
+                                    <ul>
+                                    <li class="share-item">
+                                        <a href="#" class="share-item-link">
+                                            <span class="js-svg-icon" data-icon="svg-facebook"></span>
+                                            <span class="blind">Facebook</span>
+                                        </a>
+                                    </li>
+                                    <li class="share-item">
+                                        <a href="#" class="share-item-link">
+                                            <span class="js-svg-icon" data-icon="svg-twitter"></span>
+                                            <span class="blind">Twitter</span>
+                                        </a>
+                                    </li>
+                                    <li class="share-item">
+                                        <a href="#" class="share-item-link">
+                                            <span class="js-svg-icon" data-icon="svg-download"></span>
+                                            <span class="blind">Download</span>
+                                        </a>
+                                    </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cm-layer__close-wrap">
+                            <button type="button" class="js-layer-closer"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">Close popup</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //layer -->
+        </div>
+    </div>
+    <!-- //component -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<script src="clientlibs/js/main.js"></script>
+</body>
+</html>

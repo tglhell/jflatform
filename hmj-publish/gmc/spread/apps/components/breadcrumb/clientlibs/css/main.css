@@ -1,0 +1,85 @@
+.cp-breadcrumb {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.cp-breadcrumb__inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 1920px;
+  height: 52px;
+  height: 5.2rem;
+  margin: 0 auto;
+  padding: 0 140px;
+  padding: 0 14rem;
+  font-size: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cp-breadcrumb li {
+  display: inline-block;
+  position: relative;
+  margin: 0 12px;
+  margin: 0 1.2rem;
+  font-family: "genesis-text-office", sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #757575;
+}
+
+.cp-breadcrumb li:first-child {
+  margin-left: 0;
+}
+
+.cp-breadcrumb li:last-child:after {
+  display: none;
+}
+
+.cp-breadcrumb li:after {
+  position: absolute;
+  top: 5px;
+  top: 0.5rem;
+  right: -13px;
+  right: -1.3rem;
+  width: 4px;
+  width: 0.4rem;
+  height: 4px;
+  height: 0.4rem;
+  border-top: 1px solid #a2a2a2;
+  border-right: 1px solid #a2a2a2;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  content: '';
+}
+
+.cp-breadcrumb li a {
+  display: block;
+  color: inherit;
+}
+
+.cp-breadcrumb li strong {
+  font-weight: 400;
+  color: #000;
+}
+
+@media (max-width: 1023px) {
+  .cp-breadcrumb__inner {
+    padding: 0 58px;
+    padding: 0 5.8rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cp-breadcrumb {
+    display: none;
+  }
+}

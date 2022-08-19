@@ -1,0 +1,42 @@
+.cm-apply-info .pc-space {
+  display: block;
+}
+
+.cm-apply-info .mo-space {
+  display: none;
+}
+
+.cm-apply-info__inner {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.cm-apply-info__content {
+  padding: 120px 80px 150px;
+  padding: 12rem 8rem 15rem;
+}
+
+.cm-apply-info__content.has-precaution .cm-layout__notice {
+  display: block;
+}
+
+.cm-apply-info .cm-layout__notice {
+  display: none;
+}
+
+.cm-apply-info .cm-layout__notice .notice-list {
+  color: #262626;
+}
+
+@media screen and (max-width: 767px) {
+  .cm-apply-info .pc-space {
+    display: none;
+  }
+  .cm-apply-info .mo-space {
+    display: block;
+  }
+  .cm-apply-info__content {
+    padding: 59px 30px 75px;
+    padding: 5.9rem 3rem 7.5rem;
+  }
+}

@@ -1,0 +1,80 @@
+<div class="cm-layer type-alert testdrive-history-popup js-cm-layer" id="testdrive-history-layer">
+    <span class="cm-layer__dimmed"></span>
+    <div class="cm-layer__body">
+        <div class="cm-layer__wrapper" role="dialog">
+            <div class="cm-layer__title">
+                <strong>시승 신청 이력조회</strong>
+            </div>
+            <div class="cm-layer__content">
+                <div class="testdrive-history-popup__desc">
+                    <p>시승 신청 시 인증 받은 성명과 휴대전화 번호를 입력하시면 <br class="mobile-hide">시승 내역을 확인하실 수 있습니다. <br>로그인 > MY GENESIS > GUIDE 에서도 확인 하실 수 있습니다</p>
+                </div>
+                <!-- /* 성명 */ -->
+                <div class="testdrive-history-popup__info input-type1">
+                    <!--/* [D] 입력시 노출 :  display:block 처리 */-->
+                    <div class="info-label" style="display: block;"><span>성명</span></div>
+                    <!--/* [D] 에러 시 : has-error 클래스 추가 */-->
+                    <div class="cm-input-wrap has-error">
+                        <div class="cm-input-text js-input-text-wrap">
+                            <input type="text" id="inp1" name="inpTxt" class="cm-input-text__input">
+                            <label for="inp1" class="cm-input-text__label">성명</label>
+                        </div>
+                        <div class="cm-input-message">
+                            <!--/* [D] 에러/유효성 메세지 노출 시 : display:block 처리 */-->
+                            <p class="cm-message-error" style="display:block">성명을 입력하세요.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /* 휴대전화번호 */ -->
+                <div class="testdrive-history-popup__info input-type2">
+                    <!--/* [D] 입력시 노출 :  display:block 처리 */-->
+                    <div class="info-label" style="display: block;"><span>휴대전화번호</span></div>
+                    <!--/* [D] 에러 시 : has-error 클래스 추가 */-->
+                    <div class="cm-input-wrap has-error">
+                        <div class="left-form-wrap type-tel-number">
+                            <div class="cm-select type2 js-select-wrap has-error">
+                                <a href="#" class="cm-select__placeholder" aria-expanded="false">
+                                    <span>010</span>
+                                </a>
+                                <div class="cm-select__options" role="listbox" style="display: none;">
+                                    <ul role="presentation">
+                                    <li role="presentation"><a href="#" role="option">010</a></li>
+                                    <li role="presentation"><a href="#" role="option">011</a></li>
+                                    <li role="presentation"><a href="#" role="option">02</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <em class="dash"></em>
+                            <div class="cm-input-text js-input-text-wrap">
+                                <input type="tel" id="inptel1" name="inptel1" class="cm-input-text__input">
+                            </div>
+                            <em class="dash"></em>
+                            <div class="cm-input-text js-input-text-wrap">
+                                <input type="tel" id="inptel2" name="inptel2" class="cm-input-text__input">
+                            </div>
+                        </div>
+                        <div class="cm-input-message">
+                            <!--/* [D] 에러/유효성 메세지 노출 시 : display:block 처리 */-->
+                            <p class="cm-message-error" style="display:block">휴대전화 번호를 올바르게 입력해주세요.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cm-layer__cta">
+                    <button type="button" class="cm-btn type2">
+                        <span class="text">확인</span>
+                        <span class="masker"><span>확인</span></span>
+                    </button>
+                    <div class="log-in-cta">
+                        <a href="#" class="cm-btn-more is-default" title="로그인"><span>로그인</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="cm-layer__close-wrap">
+                <button type="button" class="js-layer-closer">
+                    <span class="js-svg-icon" data-icon="svg-cross"></span>
+                    <span class="blind">Close popup</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

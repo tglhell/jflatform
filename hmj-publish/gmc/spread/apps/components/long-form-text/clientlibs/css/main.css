@@ -1,0 +1,104 @@
+.long-form-text__inner {
+  max-width: 1080px;
+  padding: 115px 140px 114px;
+  padding: 11.5rem 14rem 11.4rem;
+  margin: 0 auto;
+  background: #f8f8f8;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.long-form-text__title {
+  max-width: 800px;
+  font-family: "genesis-head-office-light", sans-serif;
+  font-size: 34px;
+  font-size: 3.4rem;
+  font-weight: normal;
+  color: #000;
+  line-height: 38px;
+  line-height: 3.8rem;
+  letter-spacing: -.025em;
+}
+
+.long-form-text__desc {
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: #262626;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+
+.long-form-text__desc:not(:first-child) {
+  margin-top: 36px;
+  margin-top: 3.6rem;
+}
+
+.long-form-text__additional {
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #4d4d4d;
+  line-height: 24px;
+  line-height: 2.4rem;
+}
+
+.long-form-text__additional:not(:first-child) {
+  margin-top: 18px;
+  margin-top: 1.8rem;
+}
+
+@media (max-width: 1023px) {
+  .long-form-text__inner {
+    max-width: none;
+    padding: 97px 57px 94px;
+    padding: 9.7rem 5.7rem 9.4rem;
+    margin: 0 58px;
+    margin: 0 5.8rem;
+  }
+  .long-form-text__title {
+    max-width: 364px;
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 28px;
+    line-height: 2.8rem;
+  }
+  .long-form-text__desc {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+  .long-form-text__desc:not(:first-child) {
+    margin-top: 20px;
+    margin-top: 2rem;
+  }
+  .long-form-text__additional {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 22px;
+    line-height: 2.2rem;
+  }
+  .long-form-text__additional:not(:first-child) {
+    margin-top: 13px;
+    margin-top: 1.3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .long-form-text__inner {
+    max-width: none;
+    padding: 78px 40px 74px;
+    padding: 7.8rem 4rem 7.4rem;
+    margin: 0 30px;
+    margin: 0 3rem;
+  }
+  .long-form-text__title {
+    max-width: 0;
+    line-height: 26px;
+    line-height: 2.6rem;
+  }
+  .long-form-text__additional:not(:first-child) {
+    margin-top: 14px;
+    margin-top: 1.4rem;
+  }
+}

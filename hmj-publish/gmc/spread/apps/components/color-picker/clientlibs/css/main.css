@@ -1,0 +1,604 @@
+.cp-color-picker__inner {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 140px;
+  padding: 0 14rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cp-color-picker__head {
+  width: 660px;
+  width: 66rem;
+  margin: 0 auto 40px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.cp-color-picker__title .el-title {
+  color: #fff;
+  font-family: "genesis-head-office-light", sans-serif;
+  font-size: 60px;
+  font-size: 6rem;
+  font-weight: normal;
+  line-height: 62px;
+  line-height: 6.2rem;
+  letter-spacing: -0.025em;
+}
+
+.cp-color-picker__select {
+  width: 380px;
+  width: 38rem;
+  margin: 24px auto 0;
+  margin: 2.4rem auto 0;
+}
+
+.cp-color-picker__select .cm-select.type2 .cm-select__placeholder {
+  overflow: hidden;
+  height: 39px;
+  height: 3.9rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+  line-height: 42px;
+  line-height: 4.2rem;
+  text-align: left;
+}
+
+.cp-color-picker__select .cm-select.type2 .cm-select__placeholder:after {
+  border-color: #fff;
+}
+
+.cp-color-picker__select .cm-select.type2 .cm-select__placeholder span {
+  color: inherit;
+}
+
+.cp-color-picker__select .cm-select.type2 .cm-select__options {
+  background: #111;
+  text-align: left;
+}
+
+.cp-color-picker__select .cm-select.type2 .cm-select__options::-webkit-scrollbar-thumb {
+  background: #333;
+  border-color: #111;
+}
+
+.cp-color-picker__select .cm-select.type2 .cm-select__options li {
+  border-color: #1e1e1e;
+}
+
+.cp-color-picker__select .cm-select.type2 .cm-select__options a {
+  padding-bottom: 13px;
+  padding-bottom: 1.3rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.cp-color-picker__rotate {
+  position: relative;
+  padding-bottom: 50%;
+}
+
+.cp-color-picker__rotate-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.cp-color-picker__rotate .cm-btn-vr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  margin: auto;
+}
+
+.cp-color-picker .cm-tab .js-picture img {
+  width: 100%;
+  height: auto;
+}
+
+.cp-color-picker__tab-media {
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+  padding: 0;
+}
+
+.cp-color-picker__tab-area {
+  padding: 45px 0 0;
+  padding: 4.5rem 0 0;
+}
+
+.cp-color-picker__tab-media + .cp-color-picker__tab-area {
+  border-top: 1px solid #333;
+}
+
+.cp-color-picker__option {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+}
+
+.cp-color-picker__option-head {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 240px;
+  width: 24rem;
+  padding: 10px 40px 0 0;
+  padding: 1rem 4rem 0 0;
+}
+
+.cp-color-picker__option-head .el-option-title,
+.cp-color-picker__option-head .el-option-name {
+  display: block;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 18px;
+  line-height: 1.8rem;
+}
+
+.cp-color-picker__option-head .el-option-title {
+  margin-bottom: 3px;
+  margin-bottom: 0.3rem;
+  color: #999;
+  font-weight: normal;
+}
+
+.cp-color-picker__option-head .el-option-name {
+  color: #fff;
+  font-style: normal;
+}
+
+.cp-color-picker__option-sets {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  padding: 5px 0;
+  padding: 0.5rem 0;
+}
+
+.cp-color-picker__option-set {
+  min-width: 102px;
+  min-width: 10.2rem;
+  margin-left: 40px;
+  margin-left: 4rem;
+}
+
+.cp-color-picker__option-set:first-child {
+  margin-left: 0;
+}
+
+.cp-color-picker__color {
+  display: block;
+  width: 50px;
+  width: 5rem;
+  height: 50px;
+  height: 5rem;
+  background-size: cover;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.cp-color-picker__color-list {
+  margin: -1px 0 0 -1px;
+  margin: -0.1rem 0 0 -0.1rem;
+}
+
+.cp-color-picker__color-list:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+.cp-color-picker__color-item {
+  float: left;
+  position: relative;
+  margin: 1px 0 0 1px;
+  margin: 0.1rem 0 0 0.1rem;
+}
+
+.cp-color-picker__color-item input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cp-color-picker__color-item input:checked + label {
+  z-index: 1;
+}
+
+.cp-color-picker__color-item input:checked + label:before {
+  opacity: 1;
+}
+
+.cp-color-picker__color-item input:checked + label .cp-color-picker__color {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.cp-color-picker__color-item label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.cp-color-picker__color-item label:before {
+  z-index: 2;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 12px;
+  background-image: url("/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-checked-type2.png");
+  background-size: 100% auto;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  content: '';
+}
+
+.cp-color-picker__disclaimer {
+  margin: 65px auto 0;
+  margin: 6.5rem auto 0;
+  padding: 56px 0 52px;
+  padding: 5.6rem 0 5.2rem;
+  background-color: #151515;
+}
+
+.cp-color-picker__disclaimer .el-disclaimer {
+  max-width: 1360px;
+  max-width: 136rem;
+  margin: 0 auto;
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #999;
+  line-height: 22px;
+  line-height: 2.2rem;
+  text-align: center;
+}
+
+@media (max-width: 1919px) {
+  .cp-color-picker__inner {
+    padding: 0 120px;
+    padding: 0 12rem;
+  }
+  .cp-color-picker__option-head {
+    width: 193px;
+    width: 19.3rem;
+  }
+  .cp-color-picker__disclaimer .el-disclaimer {
+    max-width: 1128px;
+    max-width: 112.8rem;
+  }
+}
+
+@media (max-width: 1599px) {
+  .cp-color-picker__inner {
+    padding: 0 100px;
+    padding: 0 10rem;
+  }
+  .cp-color-picker__head {
+    width: 560px;
+    width: 56rem;
+  }
+  .cp-color-picker__title .el-title {
+    font-size: 48px;
+    font-size: 4.8rem;
+    line-height: 50px;
+    line-height: 5rem;
+  }
+  .cp-color-picker__select {
+    margin-top: 26px;
+    margin-top: 2.6rem;
+    width: 260px;
+    width: 26rem;
+  }
+  .cp-color-picker__select .cm-select.type2 .cm-select__placeholder span {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  .cp-color-picker .cm-tab-btn .tab-btn {
+    padding-bottom: 17px;
+    padding-bottom: 1.7rem;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+  }
+  .cp-color-picker__option-head {
+    width: 160px;
+    width: 16rem;
+  }
+  .cp-color-picker__disclaimer {
+    margin-top: 55px;
+    margin-top: 5.5rem;
+    padding: 46px 0 42px;
+    padding: 4.6rem 0 4.2rem;
+  }
+  .cp-color-picker__disclaimer .el-disclaimer {
+    max-width: 960px;
+    max-width: 96rem;
+  }
+}
+
+@media (max-width: 1359px) {
+  .cp-color-picker__inner {
+    padding: 0 76px;
+    padding: 0 7.6rem;
+  }
+  .cp-color-picker__head {
+    width: 416px;
+    width: 41.6rem;
+  }
+  .cp-color-picker__title .el-title {
+    font-size: 48px;
+    font-size: 4.8rem;
+    line-height: 50px;
+    line-height: 5rem;
+  }
+  .cp-color-picker__select {
+    margin-top: 16px;
+    margin-top: 1.6rem;
+    width: 264px;
+    width: 26.4rem;
+  }
+  .cp-color-picker__select .cm-select.type2 .cm-select__placeholder {
+    line-height: 44px;
+    line-height: 4.4rem;
+  }
+  .cp-color-picker__select .cm-select.type2 .cm-select__placeholder span {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+  .cp-color-picker__select .cm-select.type2 .cm-select__options a {
+    padding-top: 16px;
+    padding-top: 1.6rem;
+    padding-bottom: 15px;
+    padding-bottom: 1.5rem;
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+  .cp-color-picker .cm-tab-btn .tab-btn {
+    padding-bottom: 16px;
+    padding-bottom: 1.6rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 16px;
+    line-height: 1.6rem;
+  }
+  .cp-color-picker__tab-area {
+    padding-top: 40px;
+    padding-top: 4rem;
+  }
+  .cp-color-picker__option-head {
+    width: 112px;
+    width: 11.2rem;
+    padding-top: 9px;
+    padding-top: 0.9rem;
+  }
+  .cp-color-picker__option-head .el-option-title,
+  .cp-color-picker__option-head .el-option-name {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 16px;
+    line-height: 1.6rem;
+  }
+  .cp-color-picker__option-head .el-option-title {
+    margin-bottom: 4px;
+    margin-bottom: 0.4rem;
+  }
+  .cp-color-picker__disclaimer {
+    margin-top: 45px;
+    margin-top: 4.5rem;
+    padding: 38px 0 34px;
+    padding: 3.8rem 0 3.4rem;
+  }
+  .cp-color-picker__disclaimer .el-disclaimer {
+    max-width: 720px;
+    max-width: 72rem;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .cp-color-picker__inner {
+    padding: 0 58px;
+    padding: 0 5.8rem;
+  }
+  .cp-color-picker__head {
+    width: auto;
+    margin-bottom: 30px;
+    margin-bottom: 3rem;
+  }
+  .cp-color-picker__select {
+    margin-top: 6px;
+    margin-top: 0.6rem;
+    width: 191px;
+    width: 19.1rem;
+  }
+  .cp-color-picker__select .cm-select.type2 .cm-select__placeholder {
+    padding-left: 5px;
+    padding-left: 0.5rem;
+  }
+  .cp-color-picker__tab-media {
+    margin: 0 -58px 23px;
+    margin: 0 -5.8rem 2.3rem;
+  }
+  .cp-color-picker__tab-area {
+    padding-top: 39px;
+    padding-top: 3.9rem;
+  }
+  .cp-color-picker__option {
+    display: block;
+  }
+  .cp-color-picker__option-head {
+    width: auto;
+    padding: 0;
+  }
+  .cp-color-picker__option-sets {
+    margin-top: 25px;
+    margin-top: 2.5rem;
+  }
+  .cp-color-picker__option-set {
+    margin-left: 20px;
+    margin-left: 2rem;
+  }
+  .cp-color-picker__disclaimer {
+    padding: 37px 0 34px;
+    padding: 3.7rem 0 3.4rem;
+  }
+  .cp-color-picker__disclaimer .el-disclaimer {
+    max-width: 536px;
+    max-width: 53.6rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .cp-color-picker__inner {
+    padding: 0;
+  }
+  .cp-color-picker__head {
+    margin-bottom: 40px;
+    margin-bottom: 4rem;
+    padding: 0 30px;
+    padding: 0 3rem;
+  }
+  .cp-color-picker__title .el-title {
+    font-size: 45px;
+    font-size: 4.5rem;
+    line-height: 45px;
+    line-height: 4.5rem;
+  }
+  .cp-color-picker__select {
+    margin-top: 19px;
+    margin-top: 1.9rem;
+    width: auto;
+  }
+  .cp-color-picker__select .cm-select.type2 .cm-select__placeholder {
+    overflow: hidden;
+    height: 34px;
+    height: 3.4rem;
+    padding-left: 10px;
+    padding-left: 1rem;
+    line-height: 36px;
+    line-height: 3.6rem;
+  }
+  .cp-color-picker__select .cm-select.type2 .cm-select__placeholder span {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  .cp-color-picker__select .cm-select.type2 .cm-select__options a {
+    padding-top: 17px;
+    padding-top: 1.7rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+  .cp-color-picker__rotate {
+    padding-bottom: 56.26%;
+  }
+  .cp-color-picker .cm-tab .cp-swiper-tab-area .swiper-container {
+    margin: -5px 0;
+    margin: -0.5rem 0;
+    padding: 5px 30px;
+    padding: 0.5rem 3rem;
+  }
+  .cp-color-picker .cm-tab .cp-swiper-tab-area .swiper-container .tab-btn {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+  }
+  .cp-color-picker__tab-media {
+    margin: 0;
+  }
+  .cp-color-picker__tab-area {
+    padding-top: 40px;
+    padding-top: 4rem;
+  }
+  .cp-color-picker__tab-media + .cp-color-picker__tab-area {
+    padding-top: 0;
+    border-top: 0;
+  }
+  .cp-color-picker__tab-media + .cp-color-picker__tab-area .cp-color-picker__option-head {
+    margin-top: 30px;
+    margin-top: 3rem;
+    padding-top: 38px;
+    padding-top: 3.8rem;
+    border-top: 1px solid #333;
+  }
+  .cp-color-picker .cp-swiper-tab-area {
+    margin-top: 12px;
+    margin-top: 1.2rem;
+  }
+  .cp-color-picker__option-head {
+    margin: 0 30px;
+    margin: 0 3rem;
+  }
+  .cp-color-picker__option-head .el-option-title,
+  .cp-color-picker__option-head .el-option-name {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+  }
+  .cp-color-picker__option-head .el-option-title {
+    margin-bottom: 3px;
+    margin-bottom: 0.3rem;
+  }
+  .cp-color-picker__option-sets {
+    overflow-x: auto;
+    margin-top: 15px;
+    margin-top: 1.5rem;
+    padding: 10px 0;
+    padding: 1rem 0;
+  }
+  .cp-color-picker__option-set {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+  .cp-color-picker__option-set:first-child {
+    padding-left: 30px;
+    padding-left: 3rem;
+  }
+  .cp-color-picker__option-set:last-child {
+    padding-right: 30px;
+    padding-right: 3rem;
+  }
+  .cp-color-picker__disclaimer {
+    margin: 35px 30px 0;
+    margin: 3.5rem 3rem 0;
+    padding: 46px 0 44px;
+    padding: 4.6rem 0 4.4rem;
+  }
+  .cp-color-picker__disclaimer .el-disclaimer {
+    max-width: 235px;
+    max-width: 23.5rem;
+  }
+}

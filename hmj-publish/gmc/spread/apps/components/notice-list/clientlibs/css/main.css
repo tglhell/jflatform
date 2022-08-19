@@ -1,0 +1,375 @@
+.cp-notice-list__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0px 80px;
+  padding: 0rem 8rem;
+}
+
+.cp-notice-list__contents {
+  overflow: hidden;
+  margin: 30px 0 40px;
+  margin: 3rem 0 4rem;
+}
+
+.cp-notice-list__list-inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: -40px -20px 0;
+  margin: -4rem -2rem 0;
+}
+
+.cp-notice-list__list .cm-results-section {
+  border: 0;
+  background: #f8f8f8;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cp-notice-list__box {
+  width: 50%;
+  padding: 40px 20px 0;
+  padding: 4rem 2rem 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cp-notice-list__box.full-type {
+  width: 100%;
+}
+
+.cp-notice-list__box-inner {
+  height: 100%;
+}
+
+.cp-notice-list .direction-tween-container {
+  height: 100%;
+}
+
+.cp-notice-list .notice-list-box {
+  min-height: 355px;
+  min-height: 35.5rem;
+  height: 100%;
+  padding: 51px 50px 48px;
+  padding: 5.1rem 5rem 4.8rem;
+  border: 1px solid transparent;
+  background: #f8f8f8;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cp-notice-list .notice-list-box:hover {
+  border: 1px solid #111;
+  background: #fff;
+}
+
+.cp-notice-list .notice-list-box .notice-label {
+  font-size: 0;
+}
+
+.cp-notice-list .notice-list-box .notice-label .cm-label {
+  margin: 3px 3px 0 0;
+  margin: 0.3rem 0.3rem 0 0;
+}
+
+.cp-notice-list .notice-list-box .notice-title {
+  overflow: hidden;
+  margin-top: 27px;
+  margin-top: 2.7rem;
+  max-height: 93px;
+  max-height: 9.3rem;
+}
+
+.cp-notice-list .notice-list-box .notice-title a {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 100%;
+  font-family: "genesis-head-office-light", sans-serif;
+  font-size: 28px;
+  font-size: 2.8rem;
+  line-height: 31px;
+  line-height: 3.1rem;
+  letter-spacing: -0.025em;
+  color: #000;
+}
+
+.cp-notice-list .notice-list-box .notice-desc {
+  overflow: hidden;
+  max-height: 56px;
+  max-height: 5.6rem;
+  margin-top: 20px;
+  margin-top: 2rem;
+}
+
+.cp-notice-list .notice-list-box .notice-desc p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+  color: #262626;
+}
+
+.cp-notice-list .notice-list-box .notice-date {
+  margin-top: 23px;
+  margin-top: 2.3rem;
+}
+
+.cp-notice-list .notice-list-box .notice-date span {
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: #262626;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+
+.cp-notice-list__paging {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  width: 100%;
+  height: 29px;
+  height: 2.9rem;
+  padding-top: 6px;
+  padding-top: 0.6rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cp-notice-list__paging .is-mo {
+  display: none;
+}
+
+.cp-notice-list__cta {
+  width: 100%;
+  margin-top: 60px;
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.cp-notice-list__cta .cm-btn {
+  border-color: #000;
+}
+
+.cp-notice-list .cm-results-desc {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 32px;
+  line-height: 3.2rem;
+}
+
+.cp-notice-list .cm-results-tips {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+
+.cp-notice-list .cp-notice-list__cta .cm-btn {
+  font-size: 18px;
+  font-size: 1.8rem;
+  min-width: 240px;
+  min-width: 24rem;
+  height: 56px;
+  height: 5.6rem;
+  line-height: 58px;
+  line-height: 5.8rem;
+}
+
+.cp-notice-list .cp-notice-list__cta .cm-btn .masker span {
+  height: 56px;
+  height: 5.6rem;
+  line-height: 58px;
+  line-height: 5.8rem;
+}
+
+@media (max-width: 1023px) {
+  .cp-notice-list__inner {
+    padding: 0px 58px;
+    padding: 0rem 5.8rem;
+  }
+  .cp-notice-list__box.full-type .notice-list-box {
+    min-height: 268px;
+    min-height: 26.8rem;
+  }
+  .cp-notice-list .notice-list-box {
+    min-height: 325px;
+    min-height: 32.5rem;
+  }
+  .cp-notice-list .notice-list-box .notice-title {
+    margin-top: 27px;
+    margin-top: 2.7rem;
+    max-height: 84px;
+    max-height: 8.4rem;
+  }
+  .cp-notice-list .notice-list-box .notice-title a {
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 28px;
+    line-height: 2.8rem;
+  }
+  .cp-notice-list .notice-list-box .notice-desc {
+    margin-top: 20px;
+    margin-top: 2rem;
+  }
+  .cp-notice-list .notice-list-box .notice-desc p {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  .cp-notice-list .notice-list-box .notice-date {
+    margin-top: 23px;
+    margin-top: 2.3rem;
+  }
+  .cp-notice-list .notice-list-box .notice-date span {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  .cp-notice-list .cm-results-section {
+    padding: 80px 40px;
+    padding: 8rem 4rem;
+  }
+  .cp-notice-list .cm-results-title {
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 28px;
+    line-height: 2.8rem;
+  }
+  .cp-notice-list .cm-results-tips {
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+  .cp-notice-list .cm-select .cm-select__placeholder {
+    padding-top: 7px;
+    padding-top: 0.7rem;
+    padding-bottom: 5px;
+    padding-bottom: 0.5rem;
+  }
+  .cp-notice-list .cm-select .cm-select__placeholder span {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  .cp-notice-list .cm-input-text__input,
+  .cp-notice-list .cm-input-text__label {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cp-notice-list__inner {
+    max-width: none;
+    margin: 0;
+    padding: 0px 30px;
+    padding: 0rem 3rem;
+  }
+  .cp-notice-list__contents {
+    margin: 30px 0 20px;
+    margin: 3rem 0 2rem;
+  }
+  .cp-notice-list__list {
+    margin-top: 0;
+  }
+  .cp-notice-list__list-inner {
+    margin: 0;
+  }
+  .cp-notice-list__box {
+    width: 100%;
+    max-width: 100%;
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    padding: 0 0 20px;
+    padding: 0 0 2rem;
+  }
+  .cp-notice-list__box:last-child {
+    padding: 0;
+  }
+  .cp-notice-list .notice-list-box {
+    min-height: 260px;
+    min-height: 26rem;
+    padding: 31px 24px 30px;
+    padding: 3.1rem 2.4rem 3rem;
+  }
+  .cp-notice-list .notice-list-box .notice-title {
+    margin-top: 17px;
+    margin-top: 1.7rem;
+    max-height: 72px;
+    max-height: 7.2rem;
+  }
+  .cp-notice-list .notice-list-box .notice-title a {
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+  .cp-notice-list .notice-list-box .notice-desc {
+    max-height: 52px;
+    max-height: 5.2rem;
+    margin-top: 13px;
+    margin-top: 1.3rem;
+  }
+  .cp-notice-list .notice-list-box .notice-desc p {
+    line-height: 26px;
+    line-height: 2.6rem;
+  }
+  .cp-notice-list .notice-list-box .notice-date {
+    margin-top: 11px;
+    margin-top: 1.1rem;
+  }
+  .cp-notice-list__paging {
+    height: 29px;
+    height: 2.9rem;
+    padding-top: 6px;
+    padding-top: 0.6rem;
+  }
+  .cp-notice-list__paging .is-pc {
+    display: none;
+  }
+  .cp-notice-list__paging .is-mo {
+    display: block;
+  }
+  .cp-notice-list__cta {
+    margin-top: 40px;
+    margin-top: 4rem;
+  }
+  .cp-notice-list .cm-results-section {
+    padding: 57px 30px 53px;
+    padding: 5.7rem 3rem 5.3rem;
+  }
+  .cp-notice-list .cm-results-title {
+    font-size: 22px;
+    font-size: 2.2rem;
+  }
+  .cp-notice-list .cm-results-desc {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+}

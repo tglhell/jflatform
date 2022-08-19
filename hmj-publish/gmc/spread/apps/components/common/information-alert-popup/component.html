@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Information Alert Popup</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+</head>
+<body>
+<div id="wrap" style="background: #fff;">
+    <a href="#" class="js-layer-opener" data-layer-target="#information-alert-layer" style="font-size:18px">Open Information Alert Popup</a>
+    <!-- component -->
+    <div class="cm-layer type-alert information-alert-popup js-cm-layer" id="information-alert-layer">
+        <span class="cm-layer__dimmed"></span>
+        <div class="cm-layer__body">
+            <div class="cm-layer__wrapper" role="dialog">
+                <div class="cm-layer__title">
+                    <strong>정보 입력</strong>
+                </div>
+                <div class="cm-layer__content">
+                    <div class="information-alert-popup__desc">
+                        <p>정확한 개인 정보를 입력하지 않으면 서비스 이용이 어려울 수 있습니다.</p>
+                    </div>
+                    <!-- /* 성명 */ -->
+                    <div class="information-alert-popup__info input-type1">
+                        <div class="info-label"><span>성명</span></div>
+                        <!-- [D] 에러 시 : has-error 클래스 추가 -->
+                        <div class="cm-input-wrap has-error">
+                            <!-- [F] 포커스 시 : .has-focus 클래스 추가 -->
+                            <!-- [F] 인풋값 존재 시 : .has-text 클래스 추가 -->
+                            <div class="cm-input-text js-input-text-wrap">
+                                <input type="text" id="nameInp1" name="inpTxt" class="cm-input-text__input">
+                                <label for="nameInp1" class="cm-input-text__label">성명</label>
+                            </div>
+                            <div class="cm-input-message">
+                                <!-- [D] 에러/유효성 메세지 노출 시 : display:block 처리 -->
+                                <p class="cm-message-error" style="display:block">성명을 입력하세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /* 휴대전화번호 */ -->
+                    <div class="information-alert-popup__info input-type2">
+                        <div class="info-label"><span>휴대전화번호</span></div>
+                        <!-- [D] 에러 시 : has-error 클래스 추가 -->
+                        <div class="cm-input-wrap has-error">
+                            <div class="left-form-wrap type-tel-number">
+                                <!--/* select */-->
+                                <!-- [F] 포커스 시 : .has-focus 클래스 추가 -->
+                                <!-- [F] 인풋값 존재 시 : .has-text 클래스 추가 -->
+                                <div class="cm-select type2 js-select-wrap has-error">
+                                    <!-- [F] 펼침 시 : aria-expanded값 true로 변경 -->
+                                    <a href="#" class="cm-select__placeholder" aria-expanded="false">
+                                        <span>010</span>
+                                    </a>
+                                    <div class="cm-select__options" role="listbox" style="display: none;">
+                                        <ul role="presentation">
+                                        <li role="presentation"><a href="#" role="option">010</a></li>
+                                        <li role="presentation"><a href="#" role="option">011</a></li>
+                                        <li role="presentation"><a href="#" role="option">02</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <em class="dash"></em>
+                                <!-- [F] 포커스 시 : .has-focus 클래스 추가 -->
+                                <!-- [F] 인풋값 존재 시 : .has-text 클래스 추가 -->
+                                <div class="cm-input-text js-input-text-wrap">
+                                    <input type="tel" id="phoneInp3" name="inpTxt3" class="cm-input-text__input">
+                                </div>
+                                <em class="dash"></em>
+                                <!-- [F] 포커스 시 : .has-focus 클래스 추가 -->
+                                <!-- [F] 인풋값 존재 시 : .has-text 클래스 추가 -->
+                                <div class="cm-input-text js-input-text-wrap">
+                                    <input type="tel" id="inp4" name="phoneInp4" class="cm-input-text__input">
+                                </div>
+                            </div>
+                            <div class="cm-input-message">
+                                <!-- [D] 에러/유효성 메세지 노출 시 : display:block 처리 -->
+                                <p class="cm-message-error" style="display:block">휴대전화 번호를 올바르게 입력해주세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="information-alert-popup__disclaimer">
+                        <p>* 개인정보 확인을 위해 본인인증 절차를 거쳐 시승 신청이 최종 완료됩니다.</p>
+                    </div>
+                    <div class="cm-layer__cta">
+                        <div class="btn-box">
+                            <button type="button" class="cm-btn type-white js-layer-closer">
+                                <span class="text">취소</span>
+                                <span class="masker"><span>취소</span></span>
+                            </button>
+                        </div>
+                        <div class="btn-box">
+                            <button type="button" class="cm-btn js-layer-closer js-layer-opener" data-layer-target="#verification-layer">
+                                <span class="text">다음</span>
+                                <span class="masker"><span>다음</span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cm-layer__close-wrap">
+                    <button type="button" class="js-layer-closer">
+                        <span class="js-svg-icon" data-icon="svg-cross"></span>
+                        <span class="blind">Close popup</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- component -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<script src="clientlibs/js/main.js"></script>
+<script>
+$(function () {
+    //open
+    $('#information-alert-layer').trigger('openLayer');
+    //close
+    // $('#information-alert-layer').trigger('closeLayer');
+})
+</script>
+</body>
+</html>

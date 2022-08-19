@@ -1,0 +1,355 @@
+<!-- [D] 지도영역 DOM 을 다시 그릴시 버튼 애니메이션 재갱신이 필요
+    DOM 을 그린 후, 아래 메서드 호출
+    $('.cm-find-map').trigger('rerun');
+ -->
+<div class="cm-find-map">
+    <!-- [D] 지도 로딩 시 노출 -->
+    <div class="cm-find-map__loading">
+        <div class="loading-inner">
+            <span class="loading-icon">
+                <span class="blind">로딩중</span>
+            </span>
+            <h2 class="loading-title">지도를 불러오고 있습니다.</h2>
+            <p class="loading-desc">방화벽이 설치된 회사 등 제약적인 인터넷 환경에서는 지도를 불러오지 못할 수 있습니다.<br>오랜 시간 지도 화면이 보이지 않으면 다른 PC 환경이나 보유하신 휴대용 단말기로<br>제네시스 모바일 서비스를 이용 부탁드립니다.</p>
+            <a href="#" class="cm-btn" title="돌아가기">
+                <span class="text">돌아가기</span>
+                <span class="masker"><span>돌아가기</span></span>
+            </a>
+        </div>
+    </div>
+
+    <div class="cm-find-map__content">
+        <div class="cm-find-map__search">
+            <ul class="cm-find-map__tab-list">
+            <!-- [F] 활성화 시 : is-active 클래스 추가 -->
+            <li class="cm-find-map__tab-item is-active"><a href="#step1Tab1">빠른 검색</a></li>
+            <li class="cm-find-map__tab-item"><a href="#step1Tab2">지역 검색</a></li>
+            </ul>
+
+            <!-- 빠른 검색 -->
+            <div class="cm-find-map__search-wrap" id="step1Tab1">
+                <div class="cm-find-map__search-form">
+                    <form action="#">
+                        <div class="cm-find-map__search-select">
+                            <div class="cm-select type2 js-select-wrap is-opened" tabindex="0">
+                                <!-- [F] 펼침 시 : aria-expanded값 true로 변경 -->
+                                <a href="#" class="cm-select__placeholder" aria-expanded="true"><span>GENESIS ALL</span></a>
+                                <div class="cm-select__options" role="listbox">
+                                    <ul role="presentation">
+                                    <li role="presentation"><a href="#" role="option">GENESIS G90</a></li>
+                                    <li role="presentation"><a href="#" role="option">GENESIS G80</a></li>
+                                    <li role="presentation"><a href="#" role="option">GENESIS G70</a></li>
+                                    <li role="presentation"><a href="#" role="option">GENESIS GV80</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cm-find-map__search-input">
+                            <!-- [D] 에러 시 : has-error 클래스 추가 -->
+                            <div class="cm-input-wrap has-error">
+                                <div class="cm-input-text type-search js-input-text-wrap">
+                                    <input type="text" id="inp4" name="inpTxt2" class="cm-input-text__input">
+                                    <label for="inp4" class="cm-input-text__label">시/도/구/군 단위로 입력하세요</label>
+                                    <button type="button" class="ico-search">
+                                        <span class="blind">검색</span>
+                                    </button>
+                                </div>
+                                <div class="cm-input-message">
+                                    <!-- [D] 에러/유효성 메세지 노출 시 : display:block 처리 -->
+                                    <p class="cm-message-error" style="display: block;">검색어를 2글자 이상 입력하세요</p>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="cm-find-map__search-result">
+                    <p class="cm-find-map__search-desc">총 <em>3</em>개의 매장이 검색되었습니다.</p>
+
+                    <!-- [D] 검색 결과가 존재하지 않을 경우 -->
+                    <p class="cm-find-map__store-list-none" style="display:none">
+                        <img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-store-none.png" alt="">
+                        검색 결과가 없습니다.
+                    </p>
+
+                    <!-- [D] 검색 결과가 존재할 경우 -->
+                    <div class="cm-find-map__scroll-area" style="display:block">
+                        <ul class="cm-find-map__store-list">
+                        <!-- [D] 활성화 시 : is-active 클래스 추가 -->
+                        <li class="cm-find-map__store-item is-active">
+                            <a href="#">
+                                <!-- [D] 활성화 시 : is-active 클래스 추가 -->
+                                <span class="map-marker is-active">A</span>
+                                <strong class="cm-find-map__store-name">삼성 지점<span>1.4km</span></strong>
+                                <p class="cm-find-map__store-addr">서울특별시 강남구 영동대로 706</p>
+                                <span class="cm-find-map__store-tel">02-516-7341</span>
+                                <span class="cm-find-map__model-tags">
+                                    <span class="cm-find-map__model">GV80</span>
+                                    <span class="cm-find-map__model">G70</span>
+                                    <span class="cm-find-map__model">G80</span>
+                                    <span class="cm-find-map__model">G90</span>
+                                </span>
+                            </a>
+                            <!-- [D] PC : store-detail -->
+                            <div class="store-detail is-pc">
+                                <a href="#" class="cm-btn js-layer-opener"  data-layer-target="#find-show-room-layer" title="자세히 보기">
+                                    <span class="text">자세히 보기</span>
+                                    <span class="masker"><span>자세히 보기</span></span>
+                                </a>
+                            </div>
+                            <!-- [D] Mobile : store-detail -->
+                            <div class="store-detail is-mo">
+                                <a href="#" class="cm-btn js-layer-opener"  data-layer-target="#find-show-room-layer" title="자세히 보기">
+                                    <span class="text">자세히 보기</span>
+                                    <span class="masker"><span>자세히 보기</span></span>
+                                </a>
+                                <div class="cm-find-map__map-area">
+                                    <div class="cm-find-map__map" style="width:100%;height:220px;background:#eee">
+                                        <div class="cm-find-map__map-btn">
+                                            <a href="#" class="btn btn-locate">
+                                                <span class="blind">현재 위치 보기</span>
+                                            </a>
+                                            <a href="#" class="btn btn-zoomin">
+                                                <span class="blind">확대 보기</span>
+                                            </a>
+                                            <a href="#" class="btn btn-zoomout">
+                                                <span class="blind">축소 보기</span>
+                                            </a>
+                                        </div>
+                                        <!-- [D] 마커 -->
+                                        <span class="map-marker is-active" style="top:90px;left:150px">A</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cm-find-map__store-item">
+                            <a href="#">
+                                <span class="map-marker">B</span>
+                                <strong class="cm-find-map__store-name">성수 시승센터<span>2.4km</span></strong>
+                                <p class="cm-find-map__store-addr">서울특별시 성동구 성수이로 132 (성수동2가)</p>
+                                <span class="cm-find-map__store-tel">02-3409-7365</span>
+                                <span class="cm-find-map__model-tags">
+                                    <span class="cm-find-map__model">GV80</span>
+                                    <span class="cm-find-map__model">G70</span>
+                                    <span class="cm-find-map__model">G80</span>
+                                    <span class="cm-find-map__model">G90</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="cm-find-map__store-item">
+                            <a href="#">
+                                <span class="map-marker">C</span>
+                                <strong class="cm-find-map__store-name">서초 시승센터<span>2.6km</span></strong>
+                                <p class="cm-find-map__store-addr">서울특별시 서초구 반포대로 54 (서초동, 서초빌딩)</p>
+                                <span class="cm-find-map__store-tel">02-123-7365</span>
+                                <span class="cm-find-map__model-tags">
+                                    <span class="cm-find-map__model">GV80</span>
+                                    <span class="cm-find-map__model">G70</span>
+                                    <span class="cm-find-map__model">G80</span>
+                                    <span class="cm-find-map__model">G90</span>
+                                </span>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="cm-find-map__fixed-area" style="display:block">
+                        <div class="cm-find-map__store-pagination">
+                            <div class="cm-pagination">
+                                <button type="button" class="btn btn-prev"><span class="blind">이전 페이지로 이동</span></button>
+                                <!-- [D] 페이지 활성화 : on 클래스 추가 -->
+                                <a href="javascript:;" class="page-num on" data-page="1" title="1페이지로 이동"><span>1</span></a>
+                                <a href="javascript:;" class="page-num" data-page="2" title="2페이지로 이동"><span>2</span></a>
+                                <a href="javascript:;" class="page-num" data-page="3" title="3페이지로 이동"><span>3</span></a>
+                                <a href="javascript:;" class="page-num" data-page="4" title="4페이지로 이동"><span>4</span></a>
+                                <a href="javascript:;" class="page-num" data-page="5" title="5페이지로 이동"><span>5</span></a>
+                                <button type="button" class="btn btn-next"><span class="blind">다음 페이지로 이동</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // 빠른 검색 -->
+
+            <!-- 지역 검색 -->
+            <div class="cm-find-map__search-wrap" id="step1Tab2" style="display:none">
+                <!-- Step 1 : 지역 선택 전 -->
+                <div class="cm-find-map__search-form" style="display:none">
+                    <form action="#">
+                        <div class="cm-find-map__search-select">
+                            <div class="cm-select type2 js-select-wrap is-opened" tabindex="0">
+                                <!-- [F] 펼침 시 : aria-expanded값 true로 변경 -->
+                                <a href="#" class="cm-select__placeholder" aria-expanded="true"><span>GENESIS GV80</span></a>
+                                <div class="cm-select__options" role="listbox">
+                                    <ul role="presentation">
+                                    <li role="presentation"><a href="#" role="option">GENESIS G90</a></li>
+                                    <li role="presentation"><a href="#" role="option">GENESIS G80</a></li>
+                                    <li role="presentation"><a href="#" role="option">GENESIS G70</a></li>
+                                    <li role="presentation"><a href="#" role="option">GENESIS GV80</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="cm-find-map__search-result" style="display:none">
+                    <div class="cm-find-map__search-title">지역을 선택하세요</div>
+                    <div class="cm-find-map__scroll-area">
+                        <ul class="cm-find-map__district-list">
+                        <!-- [D] 활성화 시 : is-active 클래스 추가 / 비활성화 시 : is-disabled 클래스 추가  -->
+                        <li class="cm-find-map__district-item is-active"><a href="#">서울</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">경기</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">인천</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">부산</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">대전</a></li>
+                        <li class="cm-find-map__district-item is-disabled"><a href="#">대구</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">울산</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">광주</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">강원</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">세종</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">충북</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">충남</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">경북</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">경남</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">전북</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">전남</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">제주</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- // Step 1 : 지역 선택 전 -->
+
+                <!-- Step 2 : 지역 선택 후 -->
+                <div class="cm-find-map__search-form" style="display:none">
+                    <form action="#">
+                        <div class="cm-find-map__search-select">
+                            <div class="cm-select type2 js-select-wrap is-opened" tabindex="0">
+                                <!-- [F] 펼침 시 : aria-expanded값 true로 변경 -->
+                                <a href="#" class="cm-select__placeholder" aria-expanded="true"><span>GENESIS GV80</span></a>
+                                <div class="cm-select__options" role="listbox">
+                                    <ul role="presentation">
+                                    <li role="presentation"><a href="#" role="option">GENESIS G90</a></li>
+                                    <li role="presentation"><a href="#" role="option">GENESIS G80</a></li>
+                                    <li role="presentation"><a href="#" role="option">GENESIS G70</a></li>
+                                    <li role="presentation"><a href="#" role="option">GENESIS GV80</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="cm-find-map__search-result" style="display:none">
+                    <div class="cm-find-map__search-title">
+                        <button type="button" class="btn-prev">
+                            <span class="blind">이전 단계로 이동</span>
+                        </button>
+                        <em class="txt">서울</em>
+                    </div>
+                    <div class="cm-find-map__scroll-area">
+                        <ul class="cm-find-map__district-list">
+                        <!-- [D] 활성화 시 : is-active 클래스 추가 / 비활성화 시 : is-disabled 클래스 추가  -->
+                        <li class="cm-find-map__district-item is-active"><a href="#">전체</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">강남구</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">강동구</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">강북구</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">서초구</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">성동구</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">양천구</a></li>
+                        <li class="cm-find-map__district-item"><a href="#">용산구</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- // Step 2 : 지역 선택 후 -->
+
+                <!-- Step 3 : 지역구 선택 후  -->
+                <div class="cm-find-map__search-result" style="display:block">
+                    <div class="cm-find-map__search-title">
+                        <button type="button" class="btn-prev">
+                            <span class="blind">이전 단계로 이동</span>
+                        </button>
+                        <em class="txt">서울시 강남구</em>
+                    </div>
+                    <div class="cm-find-map__scroll-area">
+                        <ul class="cm-find-map__store-list">
+                        <!-- [D] 활성화 시 : is-active 클래스 추가 -->
+                        <li class="cm-find-map__store-item is-active">
+                            <a href="#">
+                                <!-- [D] 활성화 시 : is-active 클래스 추가 -->
+                                <span class="map-marker is-active">A</span>
+                                <strong class="cm-find-map__store-name">삼성 지점<span>1.4km</span></strong>
+                                <p class="cm-find-map__store-addr">서울특별시 강남구 영동대로 706</p>
+                                <span class="cm-find-map__store-tel">02-516-7341</span>
+                                <span class="cm-find-map__model-tags">
+                                    <span class="cm-find-map__model">GV80</span>
+                                    <span class="cm-find-map__model">G70</span>
+                                    <span class="cm-find-map__model">G80</span>
+                                    <span class="cm-find-map__model">G90</span>
+                                </span>
+                            </a>
+                            <!-- [D] PC : store-detail -->
+                            <div class="store-detail is-pc">
+                                <a href="#" class="cm-btn js-layer-opener"  data-layer-target="#find-show-room-layer" title="자세히 보기">
+                                    <span class="text">자세히 보기</span>
+                                    <span class="masker"><span>자세히 보기</span></span>
+                                </a>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- // Step 3 : 지역구 선택 후  -->
+            </div>
+            <!-- // 지역 검색 -->
+        </div>
+
+        <!-- [D] PC : 지도 영역 -->
+        <div class="cm-find-map__map-area is-pc">
+            <!-- [D] 지도 -->
+            <div class="cm-find-map__map" style="width:100%;height:100%;background:#eee">
+                <div class="cm-find-map__map-btn">
+                    <a href="#" class="btn btn-locate">
+                        <span class="blind">현재 위치 보기</span>
+                    </a>
+                    <a href="#" class="btn btn-zoomin">
+                        <span class="blind">확대 보기</span>
+                    </a>
+                    <a href="#" class="btn btn-zoomout">
+                        <span class="blind">축소 보기</span>
+                    </a>
+                </div>
+                <!-- [D] 마커 -->
+                <!-- 마커 > 선택 시 : is-active 클래스 추가 -->
+                <span class="map-marker is-active" style="top:320px;left:635px">A</span>
+                <!-- //마커 > 선택 시 -->
+                <!-- 마커 > 기본형 -->
+                <span class="map-marker" style="top:340px;left:740px">B</span>
+                <span class="map-marker" style="top:340px;left:800px">C</span>
+                <!-- //마커 > 기본형 -->
+                <!-- [D] 시승센터 tooltip (기본형일 경우, type-default 클래스 추가 / 확장형일 경우 클래스 제거) -->
+                <!-- 시승센터 tooltip > 기본형 -->
+                <div class="cm-find-map__map-info type-default" style="top:30px;left:500px">
+                    <div class="cm-find-map__map-info-inner">
+                        <strong class="cm-find-map__store-name">삼성 지점<span>1.4km</span></strong>
+                        <p class="cm-find-map__store-addr">서울특별시 강남구 영동대로 706</p>
+                        <span class="cm-find-map__store-tel">02-516-7341</span>
+                        <span class="cm-find-map__model-tags">
+                            <span class="cm-find-map__model">GV80</span>
+                            <span class="cm-find-map__model">G70</span>
+                            <span class="cm-find-map__model">G80</span>
+                            <span class="cm-find-map__model">G90</span>
+                        </span>
+                        <div class="cm-find-map__store-btn">
+                            <a href="#" class="cm-btn js-layer-opener"  data-layer-target="#find-show-room-layer" title="자세히 보기">
+                                <span class="text">자세히 보기</span>
+                                <span class="masker"><span>자세히 보기</span></span>
+                            </a>
+                        </div>
+                        <button type="button" class="btn-close">
+                            <span class="js-svg-icon" data-icon="svg-cross"></span>
+                            <span class="blind">Close popup</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- //시승센터 tooltip > 기본형 -->
+            </div>
+        </div>
+    </div>
+</div>

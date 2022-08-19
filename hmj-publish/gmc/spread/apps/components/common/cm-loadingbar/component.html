@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Loadingbar</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+</head>
+<body>
+<div id="wrap">
+    <div class="guide" style="font-size:16px;padding:20px 0">
+        <h2>Loading Sample</h2>
+        <div style="position:relative;z-index:100000;background:#fff">
+            <button type="button" id="loadShowTest" style="border:1px solid #111">Loading bar 노출</button>
+            <button type="button" id="loadCompleteTest" style="border:1px solid #111">Loading 완료</button>
+            <button type="button" id="loadHideTest" style="border:1px solid #111">Loading bar 삭제</button>
+        </div>
+    </div>
+
+    <!-- component -->
+    <div class="cm-loadingbar" id="loadTest">
+    	<span class="cm-loadingbar__dimmed"></span>
+    	<div class="cm-loadingbar__body">
+    		<div class="cm-loadingbar__wrapper">
+    			<div class="cm-loadingbar__content">
+                    <div class="cm-loadingbar__start">
+                        <div class="cm-loadingbar__title">Loading</div>
+                        <div class="cm-loadingbar__icon-wrap">
+                            <span class="icon"></span><span class="icon"></span><span class="icon"></span>
+                        </div>
+                    </div>
+                    <div class="cm-loadingbar__complete">
+                        <div class="cm-loadingbar__complete-icon"></div>
+                    </div>
+        		</div>
+        	</div>
+    	</div>
+    </div>
+    <!-- //component -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<script src="clientlibs/js/main.js"></script>
+<script>
+// loadTest
+$(function () {
+    var loadShowTest = $('#loadShowTest');
+    var loadCompleteTest = $('#loadCompleteTest');
+    var loadHideTest = $('#loadHideTest');
+    var loadTest = $('#loadTest');
+    loadShowTest.on('click', function () {
+        loadTest.trigger('loadingShow');
+    });
+    loadCompleteTest.on('click', function () {
+        loadTest.trigger('loadingComplete', {
+            afterHide : true, // 기본값 true, true 이면 자동으로 닫히고, false 이면 닫히지 않음(loadingHide 메서드로 닫아야 함)
+            complete : function () {
+                alert('loadingComplete 메서드. 로딩 애니메이션 끝');
+            }
+        });
+    });
+    loadHideTest.on('click', function () {
+        loadTest.trigger('loadingHide', {
+            complete : function () {
+                alert('loadingHide 메서드. 로딩 애니메이션 끝');
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Text & Video with Markers</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+</head>
+<body>
+<div id="wrap">
+    <div class="guide" style="max-width:1920px;margin:0 auto;font-size:16px;padding:20px 0">
+        <p>1) 텍스트 좌/우 정렬 : (default 정렬) / .align-text-right</p>
+    </div>
+
+    <!-- component -->
+    <div class="type-light">
+        <div class="cp-vid-marker">
+            <div class="cp-vid-marker__inner">
+                <div class="cp-vid-marker__video js-animate-vid">
+                    <!-- [F] dimmed 활성화 : is-dimmed 클래스 추가 -->
+                    <div class="cp-vid-marker__video-content">
+                        <!-- PC 비디오 영역 (s) -->
+                        <div class="cp-vid-marker__video-pc">
+                            <div class="video-container js-video" data-use-videoloop="false">
+                                <video muted playsinline preload="none">
+                                    <source src="/apps/components/text-video-with-markers/imgs/@dummy_vid.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <!-- PC 비디오 영역 (e) -->
+                        <!-- MO 비디오 영역 (s) -->
+                        <div class="cp-vid-marker__video-mo">
+                            <div class="video-container js-video">
+                                <video muted playsinline loop preload="none">
+                                    <source src="/apps/components/text-video-with-markers/imgs/@dummy_vid_m.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <!-- MO 비디오 영역 (e) -->
+                    </div>
+                    <!-- [D] 각 marker 레이블명 및 시작지점 data-time-mark 속성값으로 기입 -->
+                    <div class="cp-vid-marker__video-control" data-time-mark='{
+                        "Step01 View" : "0",
+                        "Step02 View" : "3.50",
+                        "Step03 View" : "8.00",
+                        "Step04 View" : "13.50",
+                        "Step05 View" : "17.50"
+                    }'>
+                        <button type="button" class="cm-btn-marker">
+                            <span class="cm-btn-marker-icon"></span>
+                            <span class="cp-vid-marker__video-label"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="cp-vid-marker__content js-animate-cont">
+                    <div class="cp-vid-marker__eyebrow js-animate-txt">
+                        <strong class="el-eyebrow">Genesis global text</strong>
+                    </div>
+                    <div class="cp-vid-marker__title js-animate-txt">
+                        <h2 class="el-title">Genesis global text</h2>
+                    </div>
+                    <div class="cp-vid-marker__desc js-animate-txt">
+                        <p class="el-desc">We strive to create the finest automobiles and related products and services for connoisseurs 
+                            <span class="cm-tooltip js-tooltip tooltip-type-light">
+                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">around</a>
+                                <span class="cm-tooltip-layer">
+                                    <span class="cm-tooltip-layer__inner">
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                    </span>
+                                </span>
+                            </span> the globe</p>
+                    </div>
+                    <div class="cp-vid-marker__cta js-animate-txt">
+                        <a href="#" class="cm-btn">
+                            <span class="text">Primary Button</span>
+                            <span class="masker"><span>Primary Button</span></span>
+                        </a>
+                    </div>
+                    <div class="cp-vid-marker__disclaimer js-animate-txt">
+                        <p class="el-disclaimer">We strive to create the finest automobiles and related products and services for connoisseurs around the globe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //component -->
+
+    <div style="height:50vh"></div>
+
+    <!-- component -->
+    <div class="type-dark">
+        <div class="cp-vid-marker align-text-right">
+            <div class="cp-vid-marker__inner">
+                <div class="cp-vid-marker__video js-animate-vid">
+                    <!-- [F] dimmed 활성화 : is-dimmed 클래스 추가 -->
+                    <div class="cp-vid-marker__video-content">
+                        <!-- PC 비디오 영역 (s) -->
+                        <div class="cp-vid-marker__video-pc">
+                            <div class="video-container js-video" data-use-videoloop="false">
+                                <video muted playsinline preload="none">
+                                    <source src="/apps/components/text-video-with-markers/imgs/@dummy_vid.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <!-- PC 비디오 영역 (e) -->
+                        <!-- MO 비디오 영역 (s) -->
+                        <div class="cp-vid-marker__video-mo">
+                            <div class="video-container js-video">
+                                <video muted playsinline loop preload="none">
+                                    <source src="/apps/components/text-video-with-markers/imgs/@dummy_vid_m.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <!-- MO 비디오 영역 (e) -->
+                    </div>
+                    <!-- [D] 각 marker 레이블명 및 시작지점 data-time-mark 속성값으로 기입 -->
+                    <div class="cp-vid-marker__video-control" data-time-mark='{
+                        "Step01 View" : "0",
+                        "Step02 View" : "3.50",
+                        "Step03 View" : "8.00",
+                        "Step04 View" : "13.50",
+                        "Step05 View" : "17.50"
+                    }'>
+                        <button type="button" class="cm-btn-marker">
+                            <span class="cm-btn-marker-icon"></span>
+                            <span class="cp-vid-marker__video-label"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="cp-vid-marker__content js-animate-cont">
+                    <div class="cp-vid-marker__eyebrow js-animate-txt">
+                        <strong class="el-eyebrow">Genesis global text</strong>
+                    </div>
+                    <div class="cp-vid-marker__title js-animate-txt">
+                        <h2 class="el-title">Genesis global text</h2>
+                    </div>
+                    <div class="cp-vid-marker__desc js-animate-txt">
+                        <p class="el-desc">We strive to create the finest automobiles and related products and <span class="cm-tooltip js-tooltip">
+                            <a href="#" class="cm-tooltip-opener" aria-expanded="false">services</a>
+                            <span class="cm-tooltip-layer">
+                                <span class="cm-tooltip-layer__inner">
+                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                    <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                </span>
+                            </span>
+                        </span> for connoisseurs around the globe</p>
+                    </div>
+                    <div class="cp-vid-marker__cta js-animate-txt">
+                        <a href="#" class="cm-btn">
+                            <span class="text">Primary Button</span>
+                            <span class="masker"><span>Primary Button</span></span>
+                        </a>
+                    </div>
+                    <div class="cp-vid-marker__disclaimer js-animate-txt">
+                        <p class="el-disclaimer">We strive to create the finest automobiles and related products and services for connoisseurs around the globe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //component -->
+
+    <div style="height:50vh"></div>
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<script src="clientlibs/js/main.js"></script>
+</body>
+</html>

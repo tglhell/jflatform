@@ -1,0 +1,2385 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>BYO</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+</head>
+<body>
+<div id="wrap">
+    <!-- component -->
+    <div class="type-dark">
+
+        <!-- device orientation check -->
+        <div class="device-alert">
+            <div class="content">
+                <div class="graphic">
+                    <svg viewBox="0 0 158.5 158.5">
+                        <g fill="#CD9A81" class="device" data-svg-origin="79.75000381469727 78.29999542236328" transform="matrix(0,1,-1,0,158.04999923706055,-1.4500083923339844)">
+                            <path d="M106.7 56.8H52.8c-5.5 0-9.9 4.4-9.9 9.9v23.2c0 5.5 4.4 9.9 9.9 9.9h53.9c5.5 0 9.9-4.5 9.9-9.9V66.7c0-5.5-4.4-9.9-9.9-9.9zm6.6 9.9v23.2c0 3.6-3 6.6-6.6 6.6H52.8c-3.6 0-6.6-3-6.6-6.6V66.7c0-3.6 3-6.6 6.6-6.6h53.9c3.6 0 6.6 2.9 6.6 6.6z"></path>
+                            <circle cx="103.3" cy="79.6" r="2.4"></circle>
+                        </g>
+                        <g fill="#6F6F6F" class="arrows" data-svg-origin="79.25 79.25" transform="matrix(0,1,-1,0,158.5,0)">
+                            <path d="M2 79.3c0-18.3 6.5-36 18.3-49.9v8.3h2V25.8H10.5v2H19C6.7 42.2 0 60.4 0 79.3c0 43.7 35.5 79.2 79.2 79.2 11.7 0 22.9-2.5 33.4-7.4l-.8-1.8c-10.2 4.8-21.2 7.2-32.5 7.2C36.6 156.5 2 121.9 2 79.3zM45.9 7.4l.8 1.8C57 4.4 67.9 2 79.3 2c42.6 0 77.2 34.6 77.2 77.2 0 18.3-6.5 36-18.3 49.9v-8.3h-2v11.8H148v-2h-8.5c12.3-14.3 19-32.5 19-51.5C158.5 35.5 123 0 79.3 0 67.6 0 56.4 2.5 45.9 7.4z"></path>
+                        </g>
+                    </svg>
+                </div>
+                <span class="copy">
+                    사용중인 휴대기기를 돌려주세요. 특별한 견적내기가 시작됩니다.
+                </span>
+            </div>
+        </div>
+        <!-- device orientation check -->
+
+        <!-- [F] 모바일 visual 버튼 클릭시 is-opened 클래스 추가 -->
+        <div class="site-build-order build-price">
+            <!-- [D] 해당 모델 heading text 추가 -->
+            <h1 class="blind">GV80</h1>
+            <nav class="build-order-nav">
+                <div class="build-order-nav__inner">
+                    <div class="build-order-nav__model">
+                        <!-- [F] 셀렉트 활성화 : is-opened 클래스 추가 -->
+                        <div class="build-select-model">
+                            <div class="build-select-model__dimmed"></div>
+                            <div class="build-select-model__contents">
+                                <a href="#" class="build-select-model__placeholder" aria-expanded="false">
+                                    <div class="select-model-text">
+                                        <p>2020 Genesis</p>
+                                        <strong>GV80</strong>
+                                    </div>
+                                </a>
+                                <div class="build-select-model__layer">
+                                    <ul>
+                                    <!-- [D] 활성화 : is-active 클래스 추가 -->
+                                    <li class="is-active">
+                                        <a href="#">
+                                            <div class="select-model-text">
+                                                <p>2020 Genesis</p>
+                                                <strong>GV80</strong>
+                                            </div>
+                                            <div class="select-model-img">
+                                                <img src="/apps/components/build-order/imgs/@model1.jpg" alt="">
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="select-model-text">
+                                                <p>2020 Genesis</p>
+                                                <strong>GV80</strong>
+                                            </div>
+                                            <div class="select-model-img">
+                                                <img src="/apps/components/build-order/imgs/@model2.jpg" alt="">
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="select-model-text">
+                                                <p>2020 Genesis</p>
+                                                <strong>GV80</strong>
+                                            </div>
+                                            <div class="select-model-img">
+                                                <img src="/apps/components/build-order/imgs/@model3.jpg" alt="">
+                                            </div>
+                                        </a>
+                                    </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [F] 스크롤 기능 사용시 is-scroll 클래스 추가 -->
+                    <div class="build-order-nav__step">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="build-order-nav__step-inner" role="group" aria-label="progress">
+                                        <ol>
+                                        <!-- [D] 완료 스텝 : is-complete 클래스 추가,
+                                                활성화 스텝 : is-active 클래스 추가, aria-current="true" 추가 -->
+                                        <li class="progress-step is-active">
+                                            <a href="#">
+                                                <span class="txt">상세 차종</span>
+                                            </a>
+                                        </li>
+                                        <li class="progress-step">
+                                            <a href="#">
+                                                <span class="txt">외장</span>
+                                            </a>
+                                        </li>
+                                        <li class="progress-step">
+                                            <a href="#">
+                                                <span class="txt">내장</span>
+                                            </a>
+                                        </li>
+                                        <li class="progress-step">
+                                            <a href="#">
+                                                <span class="txt">패키지 &amp; 옵션</span>
+                                            </a>
+                                        </li>
+                                        <li class="progress-step">
+                                            <a href="#">
+                                                <span class="txt">할인</span>
+                                            </a>
+                                        </li>
+                                        <li class="progress-step">
+                                            <a href="#">
+                                                <span class="txt">포인트</span>
+                                            </a>
+                                        </li>
+                                        <li class="progress-step">
+                                            <a href="#">
+                                                <span class="txt">과세</span>
+                                            </a>
+                                        </li>
+                                        <li class="progress-step">
+                                            <a href="#">
+                                                <span class="txt">구매 프로그램</span>
+                                            </a>
+                                        </li>
+                                        <li class="progress-step">
+                                            <a href="#">
+                                                <span class="txt">견적 완료</span>
+                                            </a>
+                                        </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- [F] dimmed 활성화 : is-dimmed 클래스 추가 -->
+                        <div class="swiper-btn-prev is-dimmed">
+                            <button type="button" class="btn-prev">
+                                <span class="ico-prev"></span>
+                                <span class="blind">prev</span>
+                            </button>
+                        </div>
+                        <div class="swiper-btn-next is-dimmed">
+                            <button type="button" class="btn-next">
+                                <span class="ico-next"></span>
+                                <span class="blind">next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="build-order-nav__close">
+                        <a href="#" class="btn-close js-layer-opener" data-layer-target="#layer-build-close">
+                            <span class="js-svg-icon" data-icon="svg-cross"></span>
+                            <span class="blind">Back to step</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="build-order-content" style="display:block">
+                <!-- [F] 모바일 토글시 is-layer-active 클래스 추가 -->
+                <div class="build-order-content__left">
+                    <div class="build-order-visual">
+                        <div class="build-order-visual__wrap">
+                            <div class="build-order-visual__item type-vr" data-animate-type="default_byo">
+                                <div class="vr-exterior" style="display:block">
+                                    <div class="vr-ctrl">
+                                        <!-- [F] 클릭시 is-animate 클래스 추가 -->
+                                        <button type="button" class="cm-btn-vr">
+                                            <svg viewBox="0 0 36 36" class="circular-chart">
+                                                <path class="circle"
+                                                stroke-dasharray="100 100"
+                                                d="M18 2.0845
+                                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                                                />
+                                            </svg>
+                                        <span class="blind">View Exterior</span></button>
+                                    </div>
+                                    <div class="canvas">
+                                        <!-- [D] vr 영역, 개발시 img 태그 제거 -->
+                                        <img src="/apps/components/build-order/imgs/@vr-img.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="vr-interior" style="display:none">
+                                    <div class="vr-ctrl">
+                                        <button type="button" class="cm-btn-vr">
+                                            <svg viewBox="0 0 36 36" class="circular-chart">
+                                                <path class="circle"
+                                                stroke-dasharray="100 100"
+                                                d="M18 2.0845
+                                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                                                />
+                                            </svg>
+                                        <span class="blind">View Exterior</span></button>
+                                    </div>
+                                    <div class="canvas">
+                                        <!-- [D] vr 영역, 개발시 img 태그 제거 -->
+                                        <img src="/apps/components/build-order/imgs/@vr-img.jpg" alt="">
+                                    </div>
+                                    <div class="vr-int-ctrl">
+                                        <a href="#" class="zoom-in"><span class="blind">zoom in</span></a>
+                                        <a href="#" class="zoom-out"><span class="blind">zoom out</span></a>
+                                    </div>
+                                </div>
+                                <!-- [F] 활성화 : is-active 클래스 추가 -->
+                                <div class="fold-text-wrap">
+                                    <div class="fold-text-inner">
+                                        <button type="button" class="fold-text-btn" aria-expanded="false">
+                                            <span>면책 조항</span>
+                                        </button>
+                                        <div class="fold-desc-wrap">
+                                            <div class="fold-desc-inner">
+                                                <span class="el-text">상기 이미지는 실제 차량과 사양 및 컬러가 다를 수 있으므로 전시장 방문 및 실차 확인을 권장합니다. 또한 일부 이미지는 대표 등급 기준으로 연출되었으며 추후 사전예고 없이 변경이나 업데이트가 될 수 있습니다.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn-info-wrap">
+                                    <a href="#" class="btn-info js-layer-opener" data-layer-target="#layer-indemnification-clause"><span class="blind">면책조항</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="build-order-content__full-view">
+                    <div class="build-order-visual">
+                        <!-- 견적완료 -->
+                        <!-- [F] 견적완료 스텝일때 .site-build-order에 is-expand 클래스 추가 -->
+                        <div class="build-order-visual__wrap step-complete" style="display:none">
+                            <div class="build-order-visual__item" data-animate-type="result">
+                                <div class="build-type-visual" style="position:static">
+                                    <div class="build-result-wrapper">
+                                        <div class="build-result-hero">
+                                            <div class="build-result-hero__inner">
+                                                <!-- 2020-08-03 수정 -->
+                                                <div class="build-result-hero__content">
+                                                    <div class="build-result-hero__img">
+                                                        <img src="/apps/components/build-order/imgs/@result_byo.jpg" alt="">
+                                                    </div>
+                                                    <div class="build-result-hero__text">
+                                                        <div class="build-result-hero__title">
+                                                            <h2 class="el-title">Genesis <span class="point">GV80</span></h2>
+                                                            <p class="el-text">5.0 리무진 프레스티지</p>
+                                                        </div>
+                                                        <div class="build-result-hero__info">
+                                                            <div class="build-result-hero__price">
+                                                                <span class="point">예상 견적가</span>
+                                                                <strong class="total-price">120,800,000<span>원</span></strong>
+                                                            </div>
+                                                            <div class="build-result-hero__options">
+                                                                <ul>
+                                                                <li>
+                                                                    <p class="result-option">차량 인도금 총액 <a href="#" class="btn-info js-layer-opener" data-layer-target="#layer-vehicle-amount"><span class="blind">information</span></a></p>
+                                                                    <span class="result-price">999,999,999원</span>
+                                                                </li>
+                                                                <li>
+                                                                    <p class="result-option">할부 원금</p>
+                                                                    <span class="result-price">99,999,999원</span>
+                                                                </li>
+                                                                <li>
+                                                                    <p class="result-option">월 납입금액</p>
+                                                                    <span class="result-price">999,999원</span>
+                                                                </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="build-result-hero__desc">
+                                                    <p>* 차량의 이미지는 실제 차량과 다를 수 있습니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="build-result-detail">
+                                            <div class="build-result-detail__list">
+                                                <div class="build-result-header">
+                                                    <h3 class="build-result-header-title">상세견적</h3>
+                                                    <div class="detail-util">
+                                                        <ul>
+                                                        <li>
+                                                            <button type="button" class="btn-util btn-refresh">
+                                                                <span class="util-ico"></span>
+                                                                <span class="util-text">재견적</span>
+                                                            </button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn-util btn-print">
+                                                                <span class="util-ico"></span>
+                                                                <span class="util-text">Print</span>
+                                                            </button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn-util btn-pdf">
+                                                                <span class="util-ico"></span>
+                                                                <span class="util-text">PDF</span>
+                                                            </button>
+                                                        </li>
+                                                        <li class="item-share js-util-share">
+                                                            <button type="button" class="btn-util btn-share" aria-expanded="false">
+                                                                <span class="util-btn-default">
+                                                                    <span class="util-ico"></span>
+                                                                    <span class="util-text">Share</span>
+                                                                </span>
+                                                                <span class="util-btn-close">
+                                                                    <span class="util-ico js-svg-icon" data-icon="svg-cross"></span>
+                                                                    <span class="util-text"><span class="blind">Close</span>Share</span>
+                                                                </span>
+                                                            </button>
+                                                            <ul class="util-list" role="menu">
+                                                            <li role="presentation"><a href="#" role="menuitem"><span class="js-svg-icon" data-icon="svg-facebook"></span><span class="blind">Facebook</span></a></li>
+                                                            <li role="presentation"><a href="#" role="menuitem"><span class="js-svg-icon" data-icon="svg-twitter"></span><span class="blind">Twitter</span></a></li>
+                                                            <li role="presentation">
+                                                                <a href="#" role="menuitem" class="cm-clipboard__btn"><span class="ico-util-url"></span><span class="blind">URL</span></a>
+                                                                <input type="text" class="cm-clipboard__input">
+                                                                <div class="cm-clipboard__alert show-mo">
+                                                                    <div class="cm-clipboard__alert-area">
+                                                                        <p>Copied to clipboard</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            </ul>
+                                                            <div class="cm-clipboard__alert show-pc">
+                                                                <div class="cm-clipboard__alert-area">
+                                                                    <p>Copied to clipboard</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="build-result-detail__content">
+                                                    <div class="detail-row row-title">
+                                                        <div class="detail-row-top type-only-text">
+                                                            <strong class="detail-title">선택 차량 정보</strong>
+                                                            <span class="option-price">999,999,999 원</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail-row">
+                                                        <div class="detail-row-top">
+                                                            <strong class="detail-title">상세 차종</strong>
+                                                            <a href="#" class="btn-edit">변경</a>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="detail-box"><span class="option-name">3.3T 프리미엄 럭셔리(시그니쳐 디자인 셀렉션)</span></div>
+                                                            <span class="option-price">999,999,999 원</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail-row">
+                                                        <div class="detail-row-top">
+                                                            <strong class="detail-title">외장</strong>
+                                                            <a href="#" class="btn-edit">변경</a>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="detail-box"><img src="http://via.placeholder.com/160x160" alt=""><span class="option-name">우유니 화이트</span></div>
+                                                            <span class="option-price">+ 3,500,000 원</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail-row">
+                                                        <div class="detail-row-top">
+                                                            <strong class="detail-title">내장</strong>
+                                                            <a href="#" class="btn-edit">변경</a>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="detail-box"><img src="http://via.placeholder.com/160x160" alt=""><span class="option-name">옵시디언 블랙 모노톤(옵시디언 블랙 시트)/그래이 애쉬</span></div>
+                                                            <span class="option-price">+ 1,000,000 원</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail-row">
+                                                        <div class="detail-row-top">
+                                                            <strong class="detail-title">패키지 &amp; 옵션</strong>
+                                                            <a href="#" class="btn-edit">변경</a>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="detail-box"><img src="http://via.placeholder.com/160x160" alt=""><span class="option-name">세이프티 선루프</span></div>
+                                                            <span class="option-price">+ 700,000 원</span>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="detail-box"><img src="http://via.placeholder.com/160x160" alt=""><span class="option-name">뒷좌석 듀얼 모니터</span></div>
+                                                            <span class="option-price">+ 700,000 원</span>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="detail-box"><img src="http://via.placeholder.com/160x160" alt=""><span class="option-name">뒷좌석 컴포트 패키지Ⅱ</span></div>
+                                                            <span class="option-price">+ 700,000 원</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail-row row-title">
+                                                        <div class="detail-row-top type-only-text">
+                                                            <strong class="detail-title">할인 및 포인트 정보</strong>
+                                                            <span class="option-price">- 9,999,999 원</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail-row has-list">
+                                                        <div class="detail-row-top">
+                                                            <strong class="detail-title">할인</strong>
+                                                            <a href="#" class="btn-edit">변경</a>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="option-list">
+                                                                <span class="option-name">세이브 오토 50만 POINT</span>
+                                                                <span class="option-price">- 999,999 원</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail-row has-list">
+                                                        <div class="detail-row-top">
+                                                            <strong class="detail-title">포인트</strong>
+                                                            <a href="#" class="btn-edit">변경</a>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="option-list">
+                                                                <span class="option-name">M 포인트 할인</span>
+                                                                <span class="option-price">999,999 P</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="option-list">
+                                                                <span class="option-name">블루멤버스 포인트 할인</span>
+                                                                <span class="option-price">999,999 P</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="option-list">
+                                                                <span class="option-name">블루멤버스 포인트 적립(예정)</span>
+                                                                <span class="option-price">999,999 P</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail-row row-title">
+                                                        <div class="detail-row-top type-only-text">
+                                                            <strong class="detail-title">과세 및 부대비용</strong>
+                                                            <span class="option-price">+ 9,999,999 원</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail-row has-list">
+                                                        <div class="detail-row-top">
+                                                            <strong class="detail-title">차량 구매 세금</strong>
+                                                            <a href="#" class="btn-edit">변경</a>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="option-list">
+                                                                <span class="option-name">취득세</span>
+                                                                <span class="option-price">+ 999,999 원</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail-row has-list">
+                                                        <div class="detail-row-top">
+                                                            <strong class="detail-title">부대 비용</strong>
+                                                            <a href="#" class="btn-edit">변경</a>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="option-list">
+                                                                <span class="option-name">탁송료</span>
+                                                                <span class="option-price">+ 999,999 원</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="option-list">
+                                                                <span class="option-name">단기의무보험</span>
+                                                                <span class="option-price">+ 999,999 원</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="option-list">
+                                                                <span class="option-name">등록대행 수수료</span>
+                                                                <span class="option-price">+ 999,999 원</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="option-list">
+                                                                <span class="option-name">증지대(수입인지)</span>
+                                                                <span class="option-price">+ 999,999 원</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="option-list">
+                                                                <span class="option-name">차량번호판</span>
+                                                                <span class="option-price">+ 999,999 원</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail-row row-title">
+                                                        <div class="detail-row-top type-only-text">
+                                                            <strong class="detail-title">할부 정보</strong>
+                                                            <span class="option-price">월 납입금액 999,999,999원 / 월</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail-row has-list">
+                                                        <div class="detail-row-top">
+                                                            <strong class="detail-title">제네시스 구매프로그램</strong>
+                                                            <a href="#" class="btn-edit">변경</a>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="option-list">
+                                                                <span class="option-name">선수금</span>
+                                                                <span class="option-price">999,999 원</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="option-list">
+                                                                <span class="option-name">할부 원금</span>
+                                                                <span class="option-price">999,999 원</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="option-list">
+                                                                <span class="option-name">할부 기간</span>
+                                                                <span class="option-price">60 개월</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="option-list">
+                                                                <span class="option-name">월 납입금액</span>
+                                                                <span class="option-price">+ 999,999 원</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="detail-row-bottom">
+                                                            <div class="option-list">
+                                                                <span class="option-name">할부 이자 총액</span>
+                                                                <span class="option-price">+ 999,999 원</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail-row type-total">
+                                                        <div class="detail-row-top">
+                                                            <strong class="detail-title">총 차량 구입가</strong>
+                                                            <strong class="total-price">120,800,000<span>원</span></strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="build-result-detail__overview">
+                                                <div class="overview-cta">
+                                                    <a href="#" class="cm-btn" target="_blank" title="Open in a new window">
+                                                        <span class="text">구매상담 신청</span>
+                                                        <span class="masker"><span>구매상담 신청</span></span>
+                                                    </a>
+                                                    <a href="#" class="cm-btn type-white" target="_blank" title="Open in a new window">
+                                                        <span class="text">시승신청</span>
+                                                        <span class="masker"><span>시승신청</span></span>
+                                                    </a>
+                                                </div>
+                                                <div class="overview-links">
+                                                    <div class="btn-box-wrap">
+                                                        <div class="btn-box">
+                                                            <a href="#" class="cm-btn-more is-hover is-default" target="_blank" title="Open in a new window"><span>모델 정보 보기</span></a>
+                                                        </div>
+                                                        <div class="btn-box">
+                                                            <a href="#" class="cm-btn-more is-hover is-default" target="_blank" title="Open in a new window"><span>이달의 구매 프로그램 안내</span></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="btn-box-wrap">
+                                                        <div class="btn-box">
+                                                            <a href="#" class="cm-btn-more is-hover is-default" target="_blank" title="Open in a new window"><span>브로슈어 다운로드</span></a>
+                                                        </div>
+                                                        <div class="btn-box">
+                                                            <a href="#" class="cm-btn-more is-hover is-default" target="_blank" title="Open in a new window"><span>멤버십 혜택 안내</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="overview-email">
+                                                    <span class="overview-email-title">견적서 이메일 보내기</span>
+                                                    <div class="cm-input-wrap">
+                                                        <div class="cm-input-text js-bo-input-text-wrap">
+                                                            <input type="text" id="inp1" name="inpTxt" class="cm-input-text__input">
+                                                            <label for="inp1" class="cm-input-text__label" style="display: block;">이메일 주소를 입력하세요</label>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn-email">보내기</button>
+                                                </div>
+                                                <div class="overview-disclaimer">
+                                                    <ul>
+                                                    <li>본 견적내용은 고객의 편의를 위한 간편 견적으로, 계약 시 변경될 수 있으며, 법적 구속력은 없습니다.</li>
+                                                    <li>상기 견적금액은 실제 구매금액과 다소 차이가 있을 수 있습니다.</li>
+                                                    <li>상기 이미지는 실제 차량과 사양 및 컬러가 다를 수 있으므로 전시장 방문 및 실차 확인을 권장합니다.</li>
+                                                    <li>일부 이미지는 대표 등급 기준으로 연출되었으며 추후 사전예고 없이 변경이나 업데이트가 될 수 있습니다.</li>
+                                                    <li>오픈포어 리얼 우드는 고가의 가구 등에 주로 사용되는 천연 원목의 재질감을 그대로 살리는 가공법으로 찍힘, 습도 및 변색에 다소 취약할 수 있으며, 가공법의 특성상 원목에 따라 색감, 무늬결의 방향 등에 차이가 있습니다.</li>
+                                                    <li>탁송료, 할부 등 상세 견적 내용은 지점/대리점을 통해 확인바랍니다.</li>
+                                                    <li>공채금액은 매일 변경되는 부분으로 자세한 내용은 지점/대리점을 통해 확인바랍니다.</li>
+                                                    <li>채권 할인 시 발생되는 위탁수수료는 포함되지 않습니다.</li>
+                                                    <li>주문생산방식으로 계약된 차량의 경우 최소 45일 납기를 예상합니다.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //견적완료 -->
+                    </div>
+                </div>
+                <div class="build-order-content__right">
+                    <div class="build-order-options">
+                        <!-- 상세 차종 -->
+                        <div class="build-order-options__wrap step-vehicle" style="display:block">
+                            <div class="build-order-options__item type-default" style="display:block">
+                                <div class="build-order-options__header js-animate">
+                                    <p class="build-options-title">상세 차종</p>
+                                </div>
+                                <div class="build-order-options__content">
+                                    <!-- [F] 모바일 스크롤 영역 높이값 추가 -->
+                                    <div class="build-order-options__content-inner">
+                                        <div class="build-order-options__tab" role="listbox">
+                                            <!-- [F] 선택시 : is-selected 클래스 추가 -->
+                                            <div class="options-item js-animate is-selected" role="presentation">
+                                                <a href="#" role="option" aria-selected="true">
+                                                    <div class="options-text-wrap">
+                                                        <p class="options-title">5.0 리무진 프레스티지 <span class="popular"><span class="blind">Popular</span></span></p>
+                                                        <span class="options-price">+ 156,570,000 원</span>
+                                                    </div>
+                                                </a>
+                                                <div class="options-dist">
+                                                    <ul>
+                                                    <li><span>최고출력</span> 425PS / 6,000RPM</li>
+                                                    <li><span>최대토크</span> 53.0KG.M / 5,000RPM</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="options-item js-animate" role="presentation">
+                                                <a href="#" role="option" aria-selected="false">
+                                                    <div class="options-text-wrap">
+                                                        <p class="options-title">5.0 프레스티지</p>
+                                                        <span class="options-price">+ 119,570,000 원</span>
+                                                    </div>
+                                                </a>
+                                                <div class="options-dist">
+                                                    <ul>
+                                                    <li><span>최고출력</span> 425PS / 6,000RPM</li>
+                                                    <li><span>최대토크</span> 53.0KG.M / 5,000RPM</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="options-item js-animate" role="presentation">
+                                                <a href="#" role="option" aria-selected="false">
+                                                    <div class="options-text-wrap">
+                                                        <p class="options-title">3.3T 프레스티지</p>
+                                                        <span class="options-price">+ 114,570,000 원</span>
+                                                    </div>
+                                                </a>
+                                                <div class="options-dist">
+                                                    <ul>
+                                                    <li><span>최고출력</span> 425PS / 6,000RPM</li>
+                                                    <li><span>최대토크</span> 53.0KG.M / 5,000RPM</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="options-item js-animate" role="presentation">
+                                                <a href="#" role="option" aria-selected="false">
+                                                    <div class="options-text-wrap">
+                                                        <p class="options-title">3.3T 프리미엄 럭셔리(시그니쳐 디자인 셀렉션)</p>
+                                                        <span class="options-price">+ 114,570,000 원</span>
+                                                    </div>
+                                                </a>
+                                                <div class="options-dist">
+                                                    <ul>
+                                                    <li><span>최고출력</span> 425PS / 6,000RPM</li>
+                                                    <li><span>최대토크</span> 53.0KG.M / 5,000RPM</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="options-item js-animate" role="presentation">
+                                                <a href="#" role="option" aria-selected="false">
+                                                    <div class="options-text-wrap">
+                                                        <p class="options-title">3.3T 프리미엄 럭셔리</p>
+                                                        <span class="options-price">+ 114,570,000 원</span>
+                                                    </div>
+                                                </a>
+                                                <div class="options-dist">
+                                                    <ul>
+                                                    <li><span>최고출력</span> 425PS / 6,000RPM</li>
+                                                    <li><span>최대토크</span> 53.0KG.M / 5,000RPM</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //상세 차종 -->
+
+                        <!-- 외장 디자인 -->
+                        <div class="build-order-options__wrap step-exterior" style="display:none">
+                            <div class="build-order-options__item type-color" style="display:block">
+                                <div class="build-order-options__header js-animate">
+                                    <p class="build-options-title">외장 디자인</p>
+                                </div>
+                                <div class="build-order-options__content">
+                                    <!-- [F] 모바일 스크롤 영역 높이값 추가 -->
+                                    <div class="build-order-options__content-inner">
+                                        <div class="build-order-options__tab">
+                                            <!-- [F] 선택시 : is-selected 클래스 추가 -->
+                                            <div class="options-item js-animate is-selected">
+                                                <ul class="type-select-design" role="listbox">
+                                                <!-- [F] 활성화 : is-active 클래스 추가 -->
+                                                <li class="options-list is-active" role="presentation">
+                                                    <a href="#" role="option" aria-selected="true">
+                                                        <div class="options-img-wrap">
+                                                            <img src="/apps/components/build-order/imgs/@gloss1.jpg" alt="">
+                                                            <span class="blind">카디프 그린</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="options-list" role="presentation">
+                                                    <a href="#" role="option" aria-selected="false">
+                                                        <div class="options-img-wrap">
+                                                            <img src="/apps/components/build-order/imgs/@gloss2.jpg" alt="">
+                                                            <span class="blind">카디프 그린</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="options-list" role="presentation">
+                                                    <a href="#" role="option" aria-selected="false">
+                                                        <div class="options-img-wrap">
+                                                            <img src="/apps/components/build-order/imgs/@gloss3.jpg" alt="">
+                                                            <span class="blind">카디프 그린</span>
+                                                            <span class="popular"><span class="blind">Popular</span></span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="options-list" role="presentation">
+                                                    <a href="#" role="option" aria-selected="false">
+                                                        <div class="options-img-wrap">
+                                                            <img src="/apps/components/build-order/imgs/@gloss4.jpg" alt="">
+                                                            <span class="blind">카디프 그린</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="options-list" role="presentation">
+                                                    <a href="#" role="option" aria-selected="false">
+                                                        <div class="options-img-wrap">
+                                                            <img src="/apps/components/build-order/imgs/@gloss5.jpg" alt="">
+                                                            <span class="blind">카디프 그린</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="options-list" role="presentation">
+                                                    <a href="#" role="option" aria-selected="false">
+                                                        <div class="options-img-wrap">
+                                                            <img src="/apps/components/build-order/imgs/@gloss6.jpg" alt="">
+                                                            <span class="blind">카디프 그린</span>
+                                                            <span class="popular"><span class="blind">Popular</span></span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                                <div class="options-selected">
+                                                    <p class="options-selected-text">카디프 그린 <span class="popular"><span class="blind">Popular</span></span></p>
+                                                    <span class="options-price">+ 0 원</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //외장 디자인 -->
+
+                        <!-- 내장 디자인 -->
+                        <div class="build-order-options__wrap step-interior" style="display:none">
+                            <div class="build-order-options__item type-color" style="display:block">
+                                <div class="build-order-options__header js-animate">
+                                    <p class="build-options-title">내장 디자인</p>
+                                </div>
+                                <div class="build-order-options__content">
+                                    <!-- [F] 모바일 스크롤 영역 높이값 추가 -->
+                                    <div class="build-order-options__content-inner">
+                                        <div class="build-order-options__tab">
+                                            <!-- [F] 선택시 : is-selected 클래스 추가 -->
+                                            <div class="options-item js-animate is-selected">
+                                                <ul class="type-select-design" role="listbox">
+                                                <!-- [F] 활성화 : is-active 클래스 추가 -->
+                                                <li class="options-list is-active" role="presentation">
+                                                    <a href="#" role="option" aria-selected="true">
+                                                        <div class="options-img-wrap">
+                                                            <img src="/apps/components/build-order/imgs/@color1.jpg" alt="">
+                                                            <span class="blind">카디프 그린</span>
+                                                            <span class="popular"><span class="blind">Popular</span></span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="options-list" role="presentation">
+                                                    <a href="#" role="option" aria-selected="false">
+                                                        <div class="options-img-wrap">
+                                                            <img src="/apps/components/build-order/imgs/@color2.jpg" alt="">
+                                                            <span class="blind">카디프 그린</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                                <div class="options-selected">
+                                                    <p class="options-selected-text">카디프 그린 <span class="popular"><span class="blind">Popular</span></span></p>
+                                                    <span class="options-price">+ 0 원</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //내장 디자인 -->
+
+                        <!-- 패키지 & 옵션 -->
+                        <div class="build-order-options__wrap step-options" style="display:none">
+                            <div class="build-order-options__item type-check" style="display:block">
+                                <div class="build-order-options__header js-animate">
+                                    <p class="build-options-title">패키지 &amp; 옵션</p>
+                                    <p class="quantity">3 added</p>
+                                </div>
+                                <div class="build-order-options__content">
+                                    <!-- [F] 모바일 스크롤 영역 높이값 추가 -->
+                                    <div class="build-order-options__content-inner">
+                                        <div class="build-order-options__expand js-animate">
+                                            <!-- [F] 선택시 : is-selected 클래스 추가 -->
+                                            <div class="options-item js-animate is-selected">
+                                                <div class="cm-checkbox js-chkbox-wrap">
+                                                    <input type="checkbox" id="chk1" class="cm-checkbox__input">
+                                                    <label for="chk1" class="cm-checkbox__label"><span class="s-box"></span><span class="blind">옵션 선택</span></label>
+                                                </div>
+                                                <a href="#" class="btn-toggle" aria-expanded="false">
+                                                    <div class="options-text-wrap">
+                                                        <p class="options-title">퍼스트 클래스 VIP 시트 (리무진, 4인승) <span class="popular"><span class="blind">Popular</span></span></p>
+                                                    </div>
+                                                </a>
+                                                <div class="options-panel">
+                                                    <div class="options-panel-inner">
+                                                        <span class="options-price">+ 0 원
+                                                        </span>
+                                                        <span class="info-wrap">
+                                                            <em>(기본 옵션으로 선택됨)</em>
+                                                            <a href="#" class="btn-info js-layer-opener" data-layer-target="#layer-basic-option"><span class="blind">information</span></a>
+                                                        </span>
+                                                        <ul>
+                                                        <li>뒷좌석 전동시트(5:5 분할)</li>
+                                                        <li>타워콘솔(리어 콘솔 퀼팅 포함)</li>
+                                                        <li>뒷좌석 스마트폰 무선 충전 시스템</li>
+                                                        <li>VIP 시트 전동식 레그써포트(4방향)</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="options-panel-img">
+                                                        <img src="/apps/components/build-order/imgs/@package.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="options-item js-animate">
+                                                <div class="cm-checkbox js-chkbox-wrap">
+                                                    <input type="checkbox" id="chk2" class="cm-checkbox__input">
+                                                    <label for="chk2" class="cm-checkbox__label"><span class="s-box"></span><span class="blind">옵션 선택</span></label>
+                                                </div>
+                                                <a href="#" class="btn-toggle" aria-expanded="false">
+                                                    <div class="options-text-wrap">
+                                                        <p class="options-title">뒷좌석 컴포트 패키지Ⅱ</p>
+                                                    </div>
+                                                </a>
+                                                <div class="options-panel">
+                                                    <div class="options-panel-inner">
+                                                        <span class="options-price">+ 6,300,000 원</span>
+                                                        <ul>
+                                                        <li>뒷좌석 전동시트(5:5 분할)</li>
+                                                        <li>타워콘솔(리어 콘솔 퀼팅 포함)</li>
+                                                        <li>뒷좌석 스마트폰 무선 충전 시스템</li>
+                                                        <li>VIP 시트 전동식 레그써포트(4방향)</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="options-panel-img">
+                                                        <img src="/apps/components/build-order/imgs/@package.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="options-item js-animate">
+                                                <div class="cm-checkbox js-chkbox-wrap">
+                                                    <input type="checkbox" id="chk3" class="cm-checkbox__input">
+                                                    <label for="chk3" class="cm-checkbox__label"><span class="s-box"></span><span class="blind">옵션 선택</span></label>
+                                                </div>
+                                                <a href="#" class="btn-toggle" aria-expanded="false">
+                                                    <div class="options-text-wrap">
+                                                        <p class="options-title">세이프티 썬루프</p>
+                                                    </div>
+                                                </a>
+                                                <div class="options-panel">
+                                                    <div class="options-panel-inner">
+                                                        <span class="options-price">+ 6,300,000 원</span>
+                                                        <ul>
+                                                        <li>뒷좌석 전동시트(5:5 분할)</li>
+                                                        <li>타워콘솔(리어 콘솔 퀼팅 포함)</li>
+                                                        <li>뒷좌석 스마트폰 무선 충전 시스템</li>
+                                                        <li>VIP 시트 전동식 레그써포트(4방향)</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="options-panel-img">
+                                                        <img src="/apps/components/build-order/imgs/@package.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //패키지 & 옵션 -->
+
+                        <!-- 할인 -->
+                        <div class="build-order-options__wrap step-discount" style="display:none">
+                            <div class="build-order-options__item type-default" style="display:block">
+                                <div class="build-order-options__header js-animate">
+                                    <p class="build-options-title">할인</p>
+                                </div>
+                                <div class="build-order-options__content">
+                                    <!-- [F] 모바일 스크롤 영역 높이값 추가 -->
+                                    <div class="build-order-options__content-inner">
+                                        <div class="build-order-options__info">
+                                            <p>세이브 오토 할인<a href="#" class="btn-info js-layer-opener" data-layer-target="#layer-info-save"><span class="blind">information</span></a></p>
+                                        </div>
+                                        <div class="build-order-options__tab" role="listbox">
+                                            <!-- [F] 선택시 : is-selected 클래스 추가 -->
+                                            <div class="options-item js-animate is-selected" role="presentation">
+                                                <a href="#" role="option" aria-selected="true">
+                                                    <div class="options-text-wrap">
+                                                        <p class="options-title">적용 안함</p>
+                                                        <span class="options-price">- 0 P</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="options-item js-animate" role="presentation">
+                                                <a href="#" role="option" aria-selected="true">
+                                                    <div class="options-text-wrap">
+                                                        <p class="options-title">세이브 오토 30만 POINT</p>
+                                                        <span class="options-price">- 300,000 P</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="options-item js-animate" role="presentation">
+                                                <a href="#" role="option" aria-selected="true">
+                                                    <div class="options-text-wrap">
+                                                        <p class="options-title">세이브 오토 50만 POINT</p>
+                                                        <span class="options-price">- 500,000 P</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //할인 -->
+
+                        <!-- 포인트 -->
+                        <div class="build-order-options__wrap step-point" style="display:none">
+                            <div class="build-order-options__item type-default" style="display:block">
+                                <div class="build-order-options__header js-animate">
+                                    <p class="build-options-title">포인트</p>
+                                </div>
+                                <div class="build-order-options__content">
+                                    <!-- [F] 모바일 스크롤 영역 높이값 추가 -->
+                                    <div class="build-order-options__content-inner">
+                                        <div class="build-order-options__form js-animate">
+                                            <div class="options-title-wrap">
+                                                <p class="options-title">포인트 사용</p>
+                                            </div>
+                                            <div class="build-order-options__input">
+                                                <div class="options-row">
+                                                    <div class="options-col">
+                                                        <a href="#" class="cm-btn" title="M 포인트 조회"><span class="text">M 포인트 조회</span><span class="masker"><span>M 포인트 조회</span></span></a>
+                                                    </div>
+                                                    <div class="options-col">
+                                                        <div class="cm-input-text js-input-text-wrap">
+                                                            <input type="text" id="point1" class="cm-input-text__input" value="3,000,000" placeholder="0">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="options-row">
+                                                    <div class="options-col">
+                                                        <a href="#" class="cm-btn" title="블루멤버스 포인트 조회"><span class="text">블루멤버스 포인트 조회</span><span class="masker"><span>블루멤버스 포인트 조회</span></span></a>
+                                                    </div>
+                                                    <div class="options-col">
+                                                        <div class="cm-input-text js-input-text-wrap">
+                                                            <input type="text" id="point2" class="cm-input-text__input" placeholder="0">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="build-order-options__desc">
+                                                <p class="el-desc">M포인트 및 블루멤버스 포인트를 조회하기 위해서는 각각 현대카드 및 현대닷컴 홈페이지 로그인이 필요합니다.</p>
+                                            </div>
+                                        </div>
+                                        <div class="build-order-options__form js-animate">
+                                            <div class="options-title-wrap">
+                                                <p class="options-title">적립 예정 포인트 <a href="#" class="btn-info js-layer-opener" data-layer-target="#layer-point-info"><span class="blind">information</span></a></p>
+                                            </div>
+                                            <div class="build-order-options__input">
+                                                <div class="options-row">
+                                                    <div class="options-col">
+                                                        <div class="cm-select type2 js-select-wrap">
+                                                            <!-- [F] 펼침 시 : aria-expanded값 true로 변경 -->
+                                                            <a href="#" class="cm-select__placeholder" aria-expanded="false"><span>구매 횟수 선택</span></a>
+                                                            <div class="cm-select__options" role="listbox" style="display: none;">
+                                                                <ul role="presentation">
+                                                                <li role="presentation"><a href="#" role="option">option1 option1 option1 option1 option1</a></li>
+                                                                <li role="presentation"><a href="#" role="option">option2</a></li>
+                                                                <li role="presentation"><a href="#" role="option">option3</a></li>
+                                                                <li role="presentation"><a href="#" role="option">option4</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="options-col">
+                                                        <div class="cm-input-text js-input-text-wrap">
+                                                            <input type="text" id="point3" class="cm-input-text__input" placeholder="0" readonly>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="build-order-options__desc">
+                                                <p class="el-desc">현재 진행 구매횟수 및 현대차 구매횟수 포함</p>
+                                                <p class="el-desc">법인명의 구입 및 렌트/리스 구입은 구매횟수에 포함되지 않습니다.</p>
+                                                <p class="el-desc">블루멤버스 포인트는 최대 200만 포인트까지 적립됩니다</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //포인트 -->
+
+                        <!-- 과세 -->
+                        <div class="build-order-options__wrap step-tax" style="display:none">
+                            <div class="build-order-options__item type-default" style="display:block">
+                                <div class="build-order-options__header js-animate">
+                                    <p class="build-options-title">과세</p>
+                                </div>
+                                <div class="build-order-options__content">
+                                    <!-- [F] 모바일 스크롤 영역 높이값 추가 -->
+                                    <div class="build-order-options__content-inner">
+                                        <div class="build-order-options__form js-animate">
+                                            <div class="options-title-wrap">
+                                                <p class="options-title">과세 설정<a href="#" class="btn-info js-layer-opener" data-layer-target="#layer-tax-info"><span class="blind">information</span></a></p>
+                                            </div>
+                                            <div class="build-order-options__input">
+                                                <div class="options-row options-row2">
+                                                    <div class="options-col">
+                                                        <div class="cm-input-wrap">
+                                                            <div class="cm-radio js-radio-wrap">
+                                                                <input type="radio" id="tax1" name="tax" class="cm-radio__input" checked="checked">
+                                                                <label for="tax1" class="cm-radio__label">
+                                                                    <span class="s-box"></span><span class="s-label">과세</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="cm-radio js-radio-wrap">
+                                                                <input type="radio" id="tax2" name="tax" class="cm-radio__input">
+                                                                <label for="tax2" class="cm-radio__label">
+                                                                    <span class="s-box"></span><span class="s-label">면제</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="options-col">
+                                                        <p class="options-tax">+ 9,944,000원 <span>(취득세 7.0%)</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="build-order-options__desc">
+                                                <p class="el-desc">공채금액은 매일매일 변경되는 부분으로 자세한 내용은 지점/대리점으로 문의 부탁 드립니다.</p>
+                                            </div>
+                                        </div>
+                                        <div class="build-order-options__form js-animate">
+                                            <div class="options-title-wrap">
+                                                <p class="options-title">부대 비용</p>
+                                                <p class="options-info-text">탁송료<a href="#" class="btn-info js-layer-opener" data-layer-target="#layer-info-charges"><span class="blind">information</span></a></p>
+                                            </div>
+                                            <div class="build-order-options__input">
+                                                <p class="options-sub-title">탁송지 선택</p>
+                                                <div class="options-row">
+                                                    <div class="options-col">
+                                                        <div class="cm-select type2 js-select-wrap">
+                                                            <!-- [F] 펼침 시 : aria-expanded값 true로 변경 -->
+                                                            <a href="#" class="cm-select__placeholder" aria-expanded="false"><span>시/도</span></a>
+                                                            <div class="cm-select__options" role="listbox" style="display: none;">
+                                                                <ul role="presentation">
+                                                                <li role="presentation"><a href="#" role="option">option1 option1 option1 option1 option1</a></li>
+                                                                <li role="presentation"><a href="#" role="option">option2</a></li>
+                                                                <li role="presentation"><a href="#" role="option">option3</a></li>
+                                                                <li role="presentation"><a href="#" role="option">option4</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="options-col">
+                                                        <div class="cm-select type2 js-select-wrap">
+                                                            <!-- [F] 펼침 시 : aria-expanded값 true로 변경 -->
+                                                            <a href="#" class="cm-select__placeholder" aria-expanded="false"><span>군</span></a>
+                                                            <div class="cm-select__options" role="listbox" style="display: none;">
+                                                                <ul role="presentation">
+                                                                <li role="presentation"><a href="#" role="option">option1 option1 option1 option1 option1</a></li>
+                                                                <li role="presentation"><a href="#" role="option">option2</a></li>
+                                                                <li role="presentation"><a href="#" role="option">option3</a></li>
+                                                                <li role="presentation"><a href="#" role="option">option4</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="options-info">
+                                                    <ul>
+                                                    <li>
+                                                        <p class="options-info-item">탁송료</p>
+                                                        <span class="options-info-price">0 원</span>
+                                                    </li>
+                                                    <li>
+                                                        <p class="options-info-item">단기의무보험</p>
+                                                        <span class="options-info-price">2,800 원</span>
+                                                    </li>
+                                                    <li>
+                                                        <p class="options-info-item">등록대행수수료</p>
+                                                        <span class="options-info-price">55,000 원</span>
+                                                    </li>
+                                                    <li>
+                                                        <p class="options-info-item">증지대(수입인지)</p>
+                                                        <span class="options-info-price">2,000 원</span>
+                                                    </li>
+                                                    <li>
+                                                        <p class="options-info-item">차량번호판</p>
+                                                        <span class="options-info-price">25,000 원</span>
+                                                    </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="build-order-options__desc">
+                                                <p class="el-desc">본 탁송료는 울산 출고센터를 기준으로 산정되었으며 실제 출고센터에 따라 탁송료가 변경될 수 있습니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //과세 -->
+
+                        <!-- 구매 프로그램 -->
+                        <div class="build-order-options__wrap step-program" style="display:none">
+                            <div class="build-order-options__item type-default" style="display:block">
+                                <div class="build-order-options__header js-animate">
+                                    <p class="build-options-title">구매 프로그램</p>
+                                </div>
+                                <div class="build-order-options__content">
+                                    <!-- [F] 모바일 스크롤 영역 높이값 추가 -->
+                                    <div class="build-order-options__content-inner">
+                                        <div class="build-order-options__tab" role="listbox">
+                                            <!-- [F] 선택시 : is-selected 클래스 추가 -->
+                                            <div class="options-item js-animate" role="presentation">
+                                                <a href="#" role="option" aria-selected="true">
+                                                    <div class="options-text-wrap">
+                                                        <p class="options-title">현금 일시불</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="options-item js-animate is-selected" role="presentation">
+                                                <a href="#" role="option" aria-selected="true">
+                                                    <div class="options-text-wrap">
+                                                        <p class="options-title">제네시스 구매 프로그램</p>
+                                                    </div>
+                                                </a>
+                                                <div class="build-order-options__form">
+                                                    <div class="build-order-options__input">
+                                                        <div class="options-row">
+                                                            <div class="options-col">
+                                                                <p class="options-sub-title">할부기간(표준형)</p>
+                                                            </div>
+                                                            <div class="options-col">
+                                                                <!-- 2020-07-30 수정 -->
+                                                                <div class="cm-input-text js-input-text-wrap">
+                                                                    <input type="text" id="month" class="cm-input-text__input" value="1">
+                                                                    <span class="unit">개월</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="options-row">
+                                                            <div class="options-col">
+                                                                <p class="options-sub-title">선수금</p>
+                                                            </div>
+                                                            <div class="options-col">
+                                                                <div class="cm-input-text js-input-text-wrap">
+                                                                    <input type="text" id="program" class="cm-input-text__input" placeholder="최소 10만원 이상">
+                                                                    <!-- 2020-07-30 수정 -->
+                                                                    <span class="unit">원</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="options-cta">
+                                                            <a href="#" class="cm-btn" title="할부 금액 확인"><span class="text">할부 금액 확인</span><span class="masker"><span>할부 금액 확인</span></span></a>
+                                                        </div>
+                                                        <div class="options-info">
+                                                            <ul>
+                                                            <li>
+                                                                <p class="options-info-item">할부 원금</p>
+                                                                <span class="options-info-price">146,500,000 원</span>
+                                                            </li>
+                                                            <li>
+                                                                <p class="options-info-item">이자율</p>
+                                                                <span class="options-info-price">5.00 %</span>
+                                                            </li>
+                                                            <li>
+                                                                <p class="options-info-item">월할부금</p>
+                                                                <span class="options-info-price">2,700,000 원</span>
+                                                            </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="build-order-options__desc">
+                                                        <p class="el-desc">할부 원금은 취득세 및 부대비용을 제외한 금액입니다.</p>
+                                                        <p class="el-desc">할부기간, 선수금 여부에 따라 월할부금, 이자율은 변동될 수 있으며, 실제 차량 구매 시 계산되는 금액과 다를 수 있습니다.</p>
+                                                        <p class="el-desc">할부내용의 자세한 내용은 지점/대리점으로 문의 부탁 드립니다.</p>
+                                                        <p class="el-desc">금융 프로모션은 <a href="#">구매 프로그램</a> 페이지를 참조하세요.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //구매 프로그램 -->
+
+                        <!-- 견적완료 -->
+                        <div class="build-order-options__wrap step-complete" style="position:absolute;display:none !important"></div>
+                        <!-- //견적완료 -->
+                    </div>
+                </div>
+            </div>
+            <!-- 2020-07-14 수정 -->
+            <!-- [F] summary 레이어 활성화 : is-opened 클래스 추가 -->
+            <div class="build-order-price">
+                <div class="build-order-price__inner">
+                    <div class="build-order-price__expand">
+                        <!-- [F] 접기버튼 클릭시 build-order-price에 is-hide 추가  -->
+                        <button type="button" class="btn-expand"><span class="blind">Click to collpase</span></button>
+                    </div>
+                    <div class="build-order-price__summary">
+                        <button type="button" class="btn-summary"><span class="blind">요약정보 보기</span></button>
+                        <div class="summary-layer">
+                            <div class="summary-layer__header">
+                                <p class="summary-layer-title">요약 정보</p>
+                            </div>
+                            <!-- [F] 스크롤 발생시 is-scroll 클래스 추가 -->
+                            <div class="summary-layer__content is-scroll">
+                                <ul>
+                                <li>
+                                    <div class="summary-info">
+                                        <div class="summary-option">
+                                            <p class="summary-option-title">기본가격</p>
+                                        </div>
+                                        <div class="summary-price">
+                                            <p class="summary-price-text">+ 60,370,000 원</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="summary-title">
+                                        <span class="summary-type">상세 차종</span>
+                                        <button type="button" class="btn-edit js-layer-opener" data-layer-target="#layer-build-package"><span class="blind">Edit</span></button>
+                                    </div>
+                                    <div class="summary-info">
+                                        <div class="summary-option">
+                                            <p class="summary-option-title">3.3T 프리미엄 럭셔리(시그니쳐 디자인 셀렉션)</p>
+                                        </div>
+                                        <div class="summary-price">
+                                            <p class="summary-price-text">+ 4,000,000 원</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="summary-title">
+                                        <span class="summary-type">외장</span>
+                                        <button type="button" class="btn-edit"><span class="blind">Edit</span></button>
+                                    </div>
+                                    <div class="summary-info">
+                                        <div class="summary-option">
+                                            <p class="summary-option-title">우유니 화이트</p>
+                                        </div>
+                                        <div class="summary-price">
+                                            <p class="summary-price-text">+ 3,500,000 원</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="summary-title">
+                                        <span class="summary-type">내장</span>
+                                        <button type="button" class="btn-edit"><span class="blind">Edit</span></button>
+                                    </div>
+                                    <div class="summary-info">
+                                        <div class="summary-option">
+                                            <p class="summary-option-title">옵시디언 블랙모노톤(옵시디언 블랙 시트)/비취</p>
+                                        </div>
+                                        <div class="summary-price">
+                                            <p class="summary-price-text">+ 1,500,000 원</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="summary-title">
+                                        <span class="summary-type">패키지&amp;옵션</span>
+                                        <button type="button" class="btn-edit"><span class="blind">Edit</span></button>
+                                    </div>
+                                    <div class="summary-info">
+                                        <div class="summary-option">
+                                            <p class="summary-option-title">퍼스트 클래스 VIP 시트 (리무진, 4인승)</p>
+                                        </div>
+                                        <div class="summary-price">
+                                            <p class="summary-price-text">+ 0 원</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="summary-title">
+                                        <span class="summary-type">할인</span>
+                                        <button type="button" class="btn-edit"><span class="blind">Edit</span></button>
+                                    </div>
+                                    <div class="summary-info">
+                                        <div class="summary-option">
+                                            <p class="summary-option-title">세이브 오토 30만 Point</p>
+                                        </div>
+                                        <div class="summary-price">
+                                            <p class="summary-price-text">+ 1,900,000 원</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="summary-title">
+                                        <span class="summary-type">포인트</span>
+                                        <button type="button" class="btn-edit"><span class="blind">Edit</span></button>
+                                    </div>
+                                    <div class="summary-info">
+                                        <div class="summary-option">
+                                            <p class="summary-option-title">M포인트 외</p>
+                                        </div>
+                                        <div class="summary-price">
+                                            <p class="summary-price-text">+ 1,500,000 원</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="summary-title">
+                                        <span class="summary-type">과세</span>
+                                        <button type="button" class="btn-edit"><span class="blind">Edit</span></button>
+                                    </div>
+                                    <div class="summary-info">
+                                        <div class="summary-option">
+                                            <p class="summary-option-title">취득세 및 탁송료 외</p>
+                                        </div>
+                                        <div class="summary-price">
+                                            <p class="summary-price-text">+ 0 원</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="summary-title">
+                                        <span class="summary-type">구매 프로그램</span>
+                                        <button type="button" class="btn-edit"><span class="blind">Edit</span></button>
+                                    </div>
+                                    <div class="summary-info">
+                                        <div class="summary-option">
+                                            <p class="summary-option-title">제네시스 구매프로그램</p>
+                                        </div>
+                                        <div class="summary-price">
+                                            <p class="summary-price-text">+ 6,300,000 원</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="build-order-price__total">
+                        <span class="price-text">예상 가격</span>
+                        <strong class="price-total">168,800,000<span class="price-unit">원</span><span class="price-text-mo">(예상 가격)</span></strong>
+                    </div>
+                    <div class="build-order-price__cta">
+                        <div class="cta-wrap">
+                            <!-- <a class="cm-btn btn-prev is-disabled" title="뒤로"><span class="text">뒤로</span><span class="masker"><span>뒤로</span></span></a> -->
+                            <a href="#" class="cm-btn btn-prev" title="이전으로"><span class="text">이전</span><span class="masker"><span>이전</span></span></a>
+                            <a href="#" class="cm-btn type-white btn-next" title="Next"><span class="text">다음</span><span class="masker"><span>다음</span></span></a>
+                            <a href="#" class="cm-btn type-white btn-complete" title="View quote"><span class="text">견적서 보기</span><span class="masker"><span>견적서 보기</span></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 기본 옵션 popup -->
+        <div class="cm-layer type-alert js-bo-cm-layer layer-basic-option" id="layer-basic-option">
+            <span class="cm-layer__dimmed"></span>
+            <div class="cm-layer__body">
+                <div class="cm-layer__wrapper" role="dialog">
+                    <div class="cm-layer__title">
+                        <strong>기본 옵션</strong>
+                    </div>
+                    <div class="cm-layer__content">
+                        <div class="cm-layer__message">
+                            <p>시그니쳐 디자인 셀렉션에 기본 옵션으로 추가되어 선택해제가 불가합니다. 원하실 경우 전 단계의 상세차종 변경으로 이동하시어 재선택 부탁드립니다.</p>
+                        </div>
+                        <div class="cm-layer__cta">
+                            <button type="button" class="cm-btn type-white js-layer-closer">
+                                <span class="text">확인</span>
+                                <span class="masker"><span>확인</span></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cm-layer__close-wrap">
+                        <button type="button" class="js-layer-closer">
+                            <span class="js-svg-icon" data-icon="svg-cross"></span>
+                            <span class="blind">닫기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //기본 옵션 popup -->
+
+        <!-- 종료 popup -->
+        <div class="cm-layer type-alert layer-build-close js-bo-cm-layer" id="layer-build-close">
+            <span class="cm-layer__dimmed"></span>
+            <div class="cm-layer__body">
+                <div class="cm-layer__wrapper" role="dialog">
+                    <div class="cm-layer__title">
+                        <strong>견적내기</strong>
+                    </div>
+                    <div class="cm-layer__content">
+                        <div class="cm-layer__message">
+                            <p>견적내기를 종료하시겠습니까?</p>
+                        </div>
+                        <div class="cm-layer__cta">
+                            <button type="button" class="cm-btn js-layer-closer">
+                                <span class="text">아니요</span>
+                                <span class="masker"><span>아니요</span></span>
+                            </button>
+                            <button type="button" class="cm-btn type-white">
+                                <span class="text">예</span>
+                                <span class="masker"><span>예</span></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cm-layer__close-wrap">
+                        <button type="button" class="js-layer-closer">
+                            <span class="js-svg-icon" data-icon="svg-cross"></span>
+                            <span class="blind">닫기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //종료 popup -->
+
+        <!-- 패키지 & 옵션변경 확인 popup -->
+        <div class="cm-layer type-size-b js-bo-cm-layer layer-build-package" id="layer-build-package">
+            <span class="cm-layer__dimmed"></span>
+            <div class="cm-layer__body">
+                <div class="cm-layer__wrapper" role="dialog">
+                    <div class="cm-layer__title">
+                        <strong>패키지 &amp; 옵션 변경 확인</strong>
+                        <p>현재 선택하신 패키지 & 옵션에 대해 아래와 같이 더욱 합리적인 제안을 드립니다.</p>
+                    </div>
+                    <div class="cm-layer__content">
+                        <div class="cm-layer__scroll-area">
+                            <div class="build-layer-options">
+                                <div class="layer-select-options">
+                                    <ul class="layer-options-wrap" role="listbox">
+                                    <!-- [D] 활성화 : is-selected 클래스 추가 -->
+                                    <li class="layer-options-item is-selected" role="presentation">
+                                        <a href="#" role="option" aria-selected="true">
+                                            <span class="options-txt">이전 선택</span>
+                                            <strong class="options-title">파퓰러 패키지Ⅱ + 2열 컴포트 패키지Ⅰ</strong>
+                                        </a>
+                                        <div class="layer-options-list">
+                                            <span class="options-price">+ 6,300,000 원</span>
+                                            <ul>
+                                            <li>헤드업 디스플레이</li>
+                                            <li>하이테크 패키지</li>
+                                            <li>드라이빙 어시스턴스 패키지 1</li>
+                                            <li>2열 컴포트 패키지</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="layer-options-item" role="presentation">
+                                        <a href="#" role="option" aria-selected="false">
+                                            <span class="options-txt">고객님을 위한 제안</span>
+                                            <strong class="options-title">2열 컴포트 패키지Ⅱ</strong>
+                                        </a>
+                                        <div class="layer-options-list">
+                                            <span class="options-price">+ 6,300,000 원</span>
+                                            <ul>
+                                            <li>헤드업 디스플레이</li>
+                                            <li>하이테크 패키지</li>
+                                            <li>드라이빙 어시스턴스 패키지 1</li>
+                                            <li>2열 컴포트 패키지</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="layer-options-item" role="presentation">
+                                        <a href="#" role="option" aria-selected="false">
+                                            <span class="options-txt">고객님을 위한 제안</span>
+                                            <strong class="options-title">파퓰러 패키지Ⅱ + 2열 컴포트 패키지Ⅱ</strong>
+                                        </a>
+                                        <div class="layer-options-list">
+                                            <span class="options-price">+ 6,300,000 원</span>
+                                            <ul>
+                                            <li>헤드업 디스플레이</li>
+                                            <li>하이테크 패키지</li>
+                                            <li>드라이빙 어시스턴스 패키지 1</li>
+                                            <li>2열 컴포트 패키지</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cm-layer__fixed-area">
+                            <div class="layer-options-text">
+                                <p>* We strive to create, consectetur adipiscing elit</p>
+                            </div>
+                            <div class="cm-layer__cta">
+                                <button type="button" class="cm-btn js-layer-closer">
+                                    <span class="text">취소</span>
+                                    <span class="masker"><span>취소</span></span>
+                                </button>
+                                <button type="button" class="cm-btn type-white">
+                                    <span class="text">확인</span>
+                                    <span class="masker"><span>확인</span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cm-layer__close-wrap">
+                        <button type="button" class="js-layer-closer">
+                            <span class="js-svg-icon" data-icon="svg-cross"></span>
+                            <span class="blind">닫기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //패키지 & 옵션변경 확인 popup -->
+
+        <!-- 블루멤버스 포인트 지급 정보 popup -->
+        <div class="cm-layer type-size-b js-bo-cm-layer layer-point-info" id="layer-point-info">
+            <span class="cm-layer__dimmed"></span>
+            <div class="cm-layer__body">
+                <div class="cm-layer__wrapper" role="dialog">
+                    <div class="cm-layer__title">
+                        <strong>블루멤버스 제네시스 차종 포인트 지급액 정보</strong>
+                    </div>
+                    <div class="cm-layer__content">
+                        <div class="cm-layer__scroll-area">
+                            <div class="build-layer-content">
+                                <div class="info-table-pc">
+                                    <div class="info-table-row">
+                                        <p class="table-caption">일반회원 (개인/개인사업자)</p>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>구매회수</th>
+                                                    <td>1회</td>
+                                                    <td>2회</td>
+                                                    <td>3회</td>
+                                                    <td>4회</td>
+                                                    <td>5회</td>
+                                                    <td>6회</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th>G90 / EQ900</th>
+                                                    <td>25만</td>
+                                                    <td>50만</td>
+                                                    <td>60만</td>
+                                                    <td>70만</td>
+                                                    <td>80만</td>
+                                                    <td>90만</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>GV80 / G80</th>
+                                                    <td>20만</td>
+                                                    <td>40만</td>
+                                                    <td>50만</td>
+                                                    <td>60만</td>
+                                                    <td>70만</td>
+                                                    <td>80만</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>G70</th>
+                                                    <td>15만</td>
+                                                    <td>20만</td>
+                                                    <td>30만</td>
+                                                    <td>40만</td>
+                                                    <td>50만</td>
+                                                    <td>60만</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="info-table-row">
+                                        <p class="table-caption">렌트/리스 이용 개인</p>
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <th>G90 / EQ900</th>
+                                                    <td>20만</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>GV80 / G80</th>
+                                                    <td>15만</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>G70</th>
+                                                    <td>10만</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="info-table-row">
+                                        <p class="table-caption">일반 법인, 렌트/리스사, 렌트/리스 이용 법인</p>
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <th>G90 / EQ900</th>
+                                                    <td>20만</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>GV80 / G80</th>
+                                                    <td>15만</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>G70</th>
+                                                    <td>10만</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="info-table-mo">
+                                    <div class="info-table-row">
+                                        <p class="table-caption">일반회원 (개인/개인사업자)</p>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>구매회수</th>
+                                                    <td>1회</td>
+                                                    <td>2회</td>
+                                                    <td>3회</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th>G90 / EQ900</th>
+                                                    <td>25만</td>
+                                                    <td>50만</td>
+                                                    <td>60만</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>GV80 / G80</th>
+                                                    <td>20만</td>
+                                                    <td>40만</td>
+                                                    <td>50만</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>G70</th>
+                                                    <td>15만</td>
+                                                    <td>20만</td>
+                                                    <td>30만</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>구매회수</th>
+                                                    <td>4회</td>
+                                                    <td>5회</td>
+                                                    <td>6회</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th>G90 / EQ900</th>
+                                                    <td>70만</td>
+                                                    <td>80만</td>
+                                                    <td>90만</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>GV80 / G80</th>
+                                                    <td>60만</td>
+                                                    <td>70만</td>
+                                                    <td>80만</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>G70</th>
+                                                    <td>40만</td>
+                                                    <td>50만</td>
+                                                    <td>60만</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="info-table-row">
+                                        <p class="table-caption">렌트/리스 이용 개인</p>
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <th>G90 / EQ900</th>
+                                                    <td>20만</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>GV80 / G80</th>
+                                                    <td>15만</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>G70</th>
+                                                    <td>10만</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="info-table-row">
+                                        <p class="table-caption">일반 법인, 렌트/리스사, 렌트/리스 이용 법인</p>
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <th>G90 / EQ900</th>
+                                                    <td>20만</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>GV80 / G80</th>
+                                                    <td>15만</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>G70</th>
+                                                    <td>10만</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="info-table-text">
+                                    <p class="info-table-title">유의 사항</p>
+                                    <ul>
+                                    <li>상기 적립률은 고객이 차량 구매 시 지급한 최종 가격 기준이며, 대당 최대 적립액은 최대 200만 포인트입니다.(원단위 소수점 절사)</li>
+                                    <li>패밀리 임직원(당사/계열사/협력사 등)은 차량구매조건에 따라 포인트 적립률이 달라질 수 있습니다.</li>
+                                    <li>포인트는 주계약자의 당사 차량 구매 이력 기준으로 적립되며, 보유 이력이 사실과 다른 경우, 현대자동차 지점 및 대리점에 자동차 등록 원부를 제출하여 주시기  바랍니다.
+                                        <ul>
+                                        <li>장애인 공동명의에 한하여 공동명의자의 과거 구매 이력이 인정됩니다.(단, 면세 건에 한함)</li>
+                                        <li>차량 구매 계약 전 관련서류를 지점/대리점에 제출해 주신 건에 한하여 이력 확인 후 적립이 가능합니다.</li>
+                                        <li>렌트/리스로 구매하신 이력은 구매 횟수에 포함되지 않습니다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>지급된 포인트는 5년간 사용할 수 있으며, 5년이 지난 시점에 먼저 지급/적립된 포인트부터 월단위로 자동 소멸됩니다.</li>
+                                    <li>차량 구매 취소 시에는 적립된 블루멤버스 포인트도 함께 취소 되며, 포인트 오적립 시 별도의 통지 없이 취소 될 수 있습니다.</li>
+                                    <li>본 혜택은 2013년 12월 1일 이후 출고(제작증 발급)된 차량부터 적용 됩니다. <br>단, 차량 출고(제작증 발급) 후 6개월 이내 블루멤버스 가입한 회원에 한해 적립 되며, 법인 임직원은 신차 구매 시 포인트 적립 대상에서 제외 됩니다.</li>
+                                    <li>차량 계약 조건에 따라 적립률이 달라질 수 있습니다.</li>
+                                    <li>개인택시 구매이력은 구매횟수별 포인트 지급 기준에서 제외됩니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cm-layer__fixed-area">
+                            <div class="cm-layer__cta">
+                                <button type="button" class="cm-btn type-white js-layer-closer">
+                                    <span class="text">확인</span>
+                                    <span class="masker"><span>확인</span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cm-layer__close-wrap">
+                        <button type="button" class="js-layer-closer">
+                            <span class="js-svg-icon" data-icon="svg-cross"></span>
+                            <span class="blind">닫기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //블루멤버스 포인트 지급 정보 popup -->
+
+        <!-- 장애등급 별 세금 면제범위 popup -->
+        <div class="cm-layer type-size-b js-bo-cm-layer layer-tax-info" id="layer-tax-info">
+            <span class="cm-layer__dimmed"></span>
+            <div class="cm-layer__body">
+                <div class="cm-layer__wrapper" role="dialog">
+                    <div class="cm-layer__title">
+                        <strong>장애등급 별 세금면제 범위 (2000CC 이상 차량)</strong>
+                    </div>
+                    <div class="cm-layer__content">
+                        <div class="cm-layer__scroll-area">
+                            <div class="build-layer-content">
+                                <div class="info-table-pc">
+                                    <div class="info-table-row">
+                                        <p class="table-caption">일반장애(시각장애) 1-3급</p>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>차량구입시</th>
+                                                    <th>차량등록시</th>
+                                                    <th>차량등록시</th>
+                                                    <th>차량구입시</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>특별소비세</td>
+                                                    <td>지방세 <br>(등록세, 취득세)</td>
+                                                    <td>공채금액</td>
+                                                    <td>자동차세</td>
+                                                </tr>
+                                                <tr class="ex">
+                                                    <td>면제</td>
+                                                    <td>-</td>
+                                                    <td>면제</td>
+                                                    <td>-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="info-table-row">
+                                        <p class="table-caption">국가유공장애 1-7급</p>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>차량구입시</th>
+                                                    <th>차량등록시</th>
+                                                    <th>차량등록시</th>
+                                                    <th>차량구입시</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>특별소비세</td>
+                                                    <td>지방세 <br>(등록세, 취득세)</td>
+                                                    <td>공채금액</td>
+                                                    <td>자동차세</td>
+                                                </tr>
+                                                <tr class="ex">
+                                                    <td>면제</td>
+                                                    <td>-</td>
+                                                    <td>면제</td>
+                                                    <td>-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="info-table-row">
+                                        <p class="table-caption">시각장애 4급</p>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>차량구입시</th>
+                                                    <th>차량등록시</th>
+                                                    <th>차량등록시</th>
+                                                    <th>차량구입시</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>특별소비세</td>
+                                                    <td>지방세 <br>(등록세, 취득세)</td>
+                                                    <td>공채금액</td>
+                                                    <td>자동차세</td>
+                                                </tr>
+                                                <tr class="ex">
+                                                    <td>면제</td>
+                                                    <td>-</td>
+                                                    <td>면제</td>
+                                                    <td>-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="info-table-row">
+                                        <p class="table-caption">일반장애 4-6급</p>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>차량구입시</th>
+                                                    <th>차량등록시</th>
+                                                    <th>차량등록시</th>
+                                                    <th>차량구입시</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>특별소비세</td>
+                                                    <td>지방세 <br>(등록세, 취득세)</td>
+                                                    <td>공채금액</td>
+                                                    <td>자동차세</td>
+                                                </tr>
+                                                <tr class="ex">
+                                                    <td>면제</td>
+                                                    <td>-</td>
+                                                    <td>면제</td>
+                                                    <td>-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="info-table-mo">
+                                    <div class="info-table-row">
+                                        <p class="table-caption">일반장애(시각장애) 1-3급</p>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>차량구입시</th>
+                                                    <th>차량등록시</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>특별소비세</td>
+                                                    <td>지방세 <br>(등록세, 취득세)</td>
+                                                </tr>
+                                                <tr class="ex">
+                                                    <td>면제</td>
+                                                    <td>-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>차량등록시</th>
+                                                    <th>차량구입시</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>공채금액</td>
+                                                    <td>자동차세</td>
+                                                </tr>
+                                                <tr class="ex">
+                                                    <td>면제</td>
+                                                    <td>-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="info-table-row">
+                                        <p class="table-caption">국가유공장애 1-7급</p>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>차량구입시</th>
+                                                    <th>차량등록시</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>특별소비세</td>
+                                                    <td>지방세 <br>(등록세, 취득세)</td>
+                                                </tr>
+                                                <tr class="ex">
+                                                    <td>면제</td>
+                                                    <td>-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>차량등록시</th>
+                                                    <th>차량구입시</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>공채금액</td>
+                                                    <td>자동차세</td>
+                                                </tr>
+                                                <tr class="ex">
+                                                    <td>면제</td>
+                                                    <td>-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="info-table-row">
+                                        <p class="table-caption">시각장애 4급</p>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>차량구입시</th>
+                                                    <th>차량등록시</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>특별소비세</td>
+                                                    <td>지방세 <br>(등록세, 취득세)</td>
+                                                </tr>
+                                                <tr class="ex">
+                                                    <td>면제</td>
+                                                    <td>-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>차량등록시</th>
+                                                    <th>차량구입시</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>공채금액</td>
+                                                    <td>자동차세</td>
+                                                </tr>
+                                                <tr class="ex">
+                                                    <td>면제</td>
+                                                    <td>-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="info-table-row">
+                                        <p class="table-caption">일반장애 4-6급</p>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>차량구입시</th>
+                                                    <th>차량등록시</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>특별소비세</td>
+                                                    <td>지방세 <br>(등록세, 취득세)</td>
+                                                </tr>
+                                                <tr class="ex">
+                                                    <td>면제</td>
+                                                    <td>-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>차량등록시</th>
+                                                    <th>차량구입시</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>공채금액</td>
+                                                    <td>자동차세</td>
+                                                </tr>
+                                                <tr class="ex">
+                                                    <td>면제</td>
+                                                    <td>-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cm-layer__fixed-area">
+                            <div class="cm-layer__cta">
+                                <button type="button" class="cm-btn type-white js-layer-closer">
+                                    <span class="text">확인</span>
+                                    <span class="masker"><span>확인</span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cm-layer__close-wrap">
+                        <button type="button" class="js-layer-closer">
+                            <span class="js-svg-icon" data-icon="svg-cross"></span>
+                            <span class="blind">닫기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //장애등급 별 세금 면제범위 popup -->
+
+        <!-- 세이브 오토 할인 popup -->
+        <div class="cm-layer type-alert js-bo-cm-layer layer-info-save" id="layer-info-save">
+            <span class="cm-layer__dimmed"></span>
+            <div class="cm-layer__body">
+                <div class="cm-layer__wrapper" role="dialog">
+                    <div class="cm-layer__title">
+                        <strong>세이브 오토 할인</strong>
+                    </div>
+                    <div class="cm-layer__content">
+                        <div class="cm-layer__message">
+                            <p>M포인트가 적립되는 모든 현대카드에서 포인트를 선 지급받아 차량을 구매하고 매달 카드 포인트로 상환하는 차량 구매 프로그램 입니다.</p>
+                        </div>
+                        <div class="cm-layer__cta">
+                            <button type="button" class="cm-btn type-white js-layer-closer">
+                                <span class="text">확인</span>
+                                <span class="masker"><span>확인</span></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cm-layer__close-wrap">
+                        <button type="button" class="js-layer-closer">
+                            <span class="js-svg-icon" data-icon="svg-cross"></span>
+                            <span class="blind">닫기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //세이브 오토 할인 popup -->
+
+        <!-- 탁송료 popup -->
+        <div class="cm-layer type-alert js-bo-cm-layer layer-info-charges" id="layer-info-charges">
+            <span class="cm-layer__dimmed"></span>
+            <div class="cm-layer__body">
+                <div class="cm-layer__wrapper" role="dialog">
+                    <div class="cm-layer__title">
+                        <strong>탁송료</strong>
+                    </div>
+                    <div class="cm-layer__content">
+                        <div class="cm-layer__message">
+                            <p>탁송료의 경우 출고시 출고센터에 따라 금액이 변경 될 수 있으며, 표기 된 모든 비용은 실제 차량 출고 시 발생되는 금액과 다를 수 있습니다.</p>
+                        </div>
+                        <div class="cm-layer__cta">
+                            <button type="button" class="cm-btn type-white js-layer-closer">
+                                <span class="text">확인</span>
+                                <span class="masker"><span>확인</span></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cm-layer__close-wrap">
+                        <button type="button" class="js-layer-closer">
+                            <span class="js-svg-icon" data-icon="svg-cross"></span>
+                            <span class="blind">닫기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //탁송료 popup -->
+
+        <!-- 차량 구입가 및 차량 인도금 총액 popup -->
+        <div class="cm-layer type-alert js-bo-cm-layer layer-vehicle-amount" id="layer-vehicle-amount">
+            <span class="cm-layer__dimmed"></span>
+            <div class="cm-layer__body">
+                <div class="cm-layer__wrapper" role="dialog">
+                    <div class="cm-layer__title">
+                        <strong>차량 구입가 및 차량 인도금 총액</strong>
+                    </div>
+                    <div class="cm-layer__content">
+                        <div class="cm-layer__message">
+                            <ul>
+                            <li>총 차량 구입가는 고객님이 제네시스 차량 구매 시 납입하시는 총 금액입니다.
+                                <p class="el-desc"><span class="point">총 차량 구입가</span> = (차종 + 색상 + 내장 + 옵션) – 할인 금액 + 세금 및 부대비용</p>
+                            </li>
+                            <li>차량 인도금 총액은 할부 원금을 제외하고 고객님이 차량 인수 시 실제로 납입하셔야 하는 총 금액입니다.
+                                <p class="el-desc"><span class="point">차량 인도금 총액</span> = 선수금(총 차량 판매가 – 할부 원금) + 세금 및 부대비용</p>
+                            </li>
+                            </ul>
+                        </div>
+                        <div class="cm-layer__cta">
+                            <button type="button" class="cm-btn type-white js-layer-closer">
+                                <span class="text">확인</span>
+                                <span class="masker"><span>확인</span></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cm-layer__close-wrap">
+                        <button type="button" class="js-layer-closer">
+                            <span class="js-svg-icon" data-icon="svg-cross"></span>
+                            <span class="blind">닫기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //차량 구입가 및 차량 인도금 총액 popup -->
+
+        <!-- 면책조항 popup -->
+        <div class="cm-layer type-alert js-bo-cm-layer layer-indemnification-clause" id="layer-indemnification-clause">
+            <span class="cm-layer__dimmed"></span>
+            <div class="cm-layer__body">
+                <div class="cm-layer__wrapper" role="dialog">
+                    <div class="cm-layer__title">
+                        <strong>면책 조항</strong>
+                    </div>
+                    <div class="cm-layer__content">
+                        <div class="cm-layer__message">
+                            <p>상기 이미지는 실제 차량과 사양 및 컬러가 다를 수 있으므로 전시장 방문 및 실차 확인을 권장합니다. 또한 일부 이미지는 대표 등급 기준으로 연출되었으며 추후 사전예고 없이 변경이나 업데이트가 될 수 있습니다.</p>
+                        </div>
+                        <div class="cm-layer__cta">
+                            <button type="button" class="cm-btn type-white js-layer-closer">
+                                <span class="text">확인</span>
+                                <span class="masker"><span>확인</span></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cm-layer__close-wrap">
+                        <button type="button" class="js-layer-closer">
+                            <span class="js-svg-icon" data-icon="svg-cross"></span>
+                            <span class="blind">닫기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //면책조항 popup -->
+    </div>
+    <!-- //component -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<script src="clientlibs/js/main.js"></script>
+
+<script>
+// [D] 개발 테스트용
+$(function () {
+    var navStepList = $('.build-order-nav__step ol'),
+        navStepChild = navStepList.children(),
+        currentIndex = 0,
+        currentVisualWrap = null,
+        currentOptionsWrap = null,
+        direction = null;
+
+    var testView = function (index) {
+        if (index == (navStepChild.length - 1)) {
+            // 견적완료일 경우
+            currentVisualWrap = $('.build-order-visual__wrap').eq(1);
+        } else {
+            // 견적완료가 아닐 경우
+            currentVisualWrap = $('.build-order-visual__wrap').eq(0);
+            // 상세 차종, 외장, 내장일 경우 비쥬얼이 보여야 함
+            if (index < 3) {
+                console.log('상세 차종, 외장, 내장임');
+                window.setTimeout(function () {
+                    currentVisualWrap.removeClass('is-pc');
+                }, 300);
+            } else {
+                console.log('상세 차종, 외장, 내장이 아님');
+                window.setTimeout(function () {
+                    currentVisualWrap.addClass('is-pc');
+                }, 300);
+            }
+        }
+        currentOptionsWrap = $('.build-order-options__wrap').eq(index);
+        var visualItems = currentVisualWrap.find('.build-order-visual__item'),
+            visualActiveItem = visualItems.filter('.is-active'),
+            optionsItems = currentOptionsWrap.find('.build-order-options__item'),
+            optionsActiveItem = optionsItems.filter('.is-active');
+        if (optionsActiveItem.length) {
+            if (direction === 'next') {
+                if (visualActiveItem.next().length) {
+                    visualActiveItem.next().addClass('is-active').siblings().removeClass('is-active');
+                } else {
+                    visualItems.eq(0).addClass('is-active').siblings().removeClass('is-active');
+                }
+                if (optionsActiveItem.next().length) {
+                    optionsActiveItem.next().addClass('is-active').siblings().removeClass('is-active');
+                } else {
+                    optionsItems.eq(0).addClass('is-active').siblings().removeClass('is-active');
+                }
+            } else if (direction === 'prev') {
+                if (visualActiveItem.prev().length) {
+                    visualActiveItem.prev().addClass('is-active').siblings().removeClass('is-active');
+                } else {
+                    visualItems.last().addClass('is-active').siblings().removeClass('is-active');
+                }
+                if (optionsActiveItem.prev().length) {
+                    optionsActiveItem.prev().addClass('is-active').siblings().removeClass('is-active');
+                } else {
+                    optionsItems.last().addClass('is-active').siblings().removeClass('is-active');
+                }
+            }
+        } else {
+            visualItems.eq(0).addClass('is-active').siblings().removeClass('is-active');
+            optionsItems.eq(0).addClass('is-active').siblings().removeClass('is-active');
+        }
+        navStepChild.eq(index).addClass('is-active').siblings().removeClass('is-active');
+        if (!currentVisualWrap.is(':visible')) {
+            currentVisualWrap.trigger('visualview');
+        }
+        currentOptionsWrap.trigger('optionview');
+        currentIndex = index;
+    };
+
+    // 초기화
+    $('.build-type-visual').removeClass('is-active');
+    $('.build-type-visual:first-child').addClass('is-active').find('.visual-item:first-child').addClass('is-active');
+    testView(currentIndex);
+
+    navStepChild.on('click', 'a', function (e) {
+        e.preventDefault();
+        var _target = $(e.delegateTarget);
+        var _index = navStepChild.index(_target);
+        direction = null;
+        testView(_index);
+    });
+
+    $('.build-order-price__cta .btn-prev').eq(0).on('click', function (e) {
+        e.preventDefault();
+        direction = 'prev';
+        testView(currentIndex);
+    });
+    $('.build-order-price__cta .btn-next').on('click', function (e) {
+        e.preventDefault();
+        direction = 'next';
+        testView(currentIndex);
+    });
+
+    $('.options-item').on('click', '> a', function (e) {
+        e.preventDefault();
+        var init = false,
+            dTarget = $(e.delegateTarget),
+            className = 'is-selected',
+            index = dTarget.index(),
+            condition = dTarget.hasClass(className);
+        if (!condition) {
+            var activeTypeVisual = currentVisualWrap.find('.build-order-visual__item.is-active').find('.build-type-visual').eq(index);
+            var activeVisualItem = activeTypeVisual.find('.visual-item');
+            if (!activeVisualItem.filter('.is-active').length) {
+                activeVisualItem.first().addClass('is-active');
+            }
+            activeTypeVisual.addClass('is-active').siblings().removeClass('is-active');
+            dTarget.closest('.build-order-options__content').find('.build-order-options__img-mo ul li').eq(index)
+                .addClass('is-active').siblings().removeClass('is-active');
+        }
+        dTarget.addClass(className).siblings().removeClass(className);
+    });
+
+    $('.options-list').on('click', '> a', function (e) {
+        e.preventDefault();
+        var init = false,
+            dTarget = $(e.delegateTarget),
+            className = 'is-active',
+            index = dTarget.closest('.options-item').index();
+        var itemIndex = dTarget.index(),
+            activeTypeVisual = currentVisualWrap.find('.build-order-visual__item.is-active').find('.build-type-visual').eq(index).addClass('is-active'),
+            activeVisual = activeTypeVisual.find('.visual-item').eq(itemIndex);
+        dTarget.closest('.options-item').addClass('is-selected').siblings().removeClass('is-selected').find('.options-list').removeClass(className);
+        dTarget.addClass(className).siblings().removeClass(className);
+        activeVisual.addClass('is-active').siblings().removeClass('is-active');
+        var activeVisualItem = activeTypeVisual.find('.visual-item');
+        if (!activeVisualItem.filter('.is-active').length) {
+            activeVisualItem.first().addClass('is-active');
+        }
+        activeTypeVisual.addClass('is-active').siblings().removeClass('is-active');
+        dTarget.closest('.build-order-options__content').find('.build-order-options__img-mo ul li').eq(index)
+            .addClass('is-active').siblings().removeClass('is-active');
+    });
+
+    $('.vr-ctrl .cm-btn-vr').on('closeloader', function () {
+        console.log('closeloader');
+    });
+    $('.vr-ctrl .cm-btn-vr').on('close', function () {
+        console.log('close');
+    });
+});
+// //[D] 개발 테스트용
+</script>
+</body>
+</html>

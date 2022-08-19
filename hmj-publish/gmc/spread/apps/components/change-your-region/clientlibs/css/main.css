@@ -1,0 +1,270 @@
+.cp-change-region__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 80px;
+  padding: 0 8rem;
+}
+
+.cp-change-region__list {
+  margin: 0 -20px;
+  margin: 0 -2rem;
+  font-size: 0;
+}
+
+.cp-change-region__list li {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 72px;
+  margin-bottom: 7.2rem;
+  padding: 0 100px 0 20px;
+  padding: 0 10rem 0 2rem;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+.cp-change-region__title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cp-change-region__title .region-ico {
+  width: 36px;
+  width: 3.6rem;
+}
+
+.cp-change-region__title .region-ico img {
+  width: 100%;
+}
+
+.cp-change-region__title .region-title {
+  margin-left: 13px;
+  margin-left: 1.3rem;
+}
+
+.cp-change-region__title .region-title strong {
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #000;
+}
+
+.cp-change-region__info {
+  margin-top: 23px;
+  margin-top: 2.3rem;
+}
+
+.cp-change-region__info .info-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+}
+
+.cp-change-region__info .info-title {
+  -webkit-flex-basis: 86px;
+  -ms-flex-preferred-size: 86px;
+  flex-basis: 86px;
+  -webkit-flex-basis: 8.6rem;
+  -ms-flex-preferred-size: 8.6rem;
+  flex-basis: 8.6rem;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.cp-change-region__info .info-url a {
+  text-decoration: underline;
+}
+
+.cp-change-region__info .el-title, .cp-change-region__info .el-desc {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+
+.cp-change-region__info .el-title {
+  color: #000;
+}
+
+.cp-change-region__info .el-desc {
+  color: #4d4d4d;
+}
+
+.cp-change-region .region-accordion-item.is-active .ico-accordion:before {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.cp-change-region .region-accordion-panel {
+  overflow: hidden;
+  height: 0;
+  color: #262626;
+}
+
+.cp-change-region.spread-fix .region-accordion-panel {
+  overflow: visible;
+  height: auto;
+}
+
+.cp-change-region .region-accordion .accordion-panel-inner {
+  padding: 43px 0 8px;
+  padding: 4.3rem 0 0.8rem;
+}
+
+.cp-change-region .region-accordion .accordion-btn {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 27px 40px 23px 0;
+  padding: 2.7rem 4rem 2.3rem 0;
+  border-bottom: 1px solid #e5e5e5;
+  font-family: "genesis-head-office-light", sans-serif;
+  font-size: 28px;
+  font-size: 2.8rem;
+  font-weight: normal;
+  color: #000;
+  letter-spacing: -.025em;
+  line-height: 30px;
+  text-align: left;
+}
+
+.cp-change-region.spread-fix .region-accordion .accordion-btn {
+	pointer-events: none;
+}
+
+.cp-change-region .region-accordion .ico-accordion {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  right: 1rem;
+  width: 20px;
+  width: 2rem;
+  height: 20px;
+  height: 2rem;
+  margin-top: -10px;
+  margin-top: -1rem;
+}
+
+.cp-change-region.spread-fix .region-accordion .ico-accordion {
+	display: none;
+}
+
+.cp-change-region .region-accordion .ico-accordion:before, .cp-change-region .region-accordion .ico-accordion:after {
+  position: absolute;
+  background-color: #000;
+  content: '';
+}
+
+.cp-change-region .region-accordion .ico-accordion:before {
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  margin-left: -1px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.cp-change-region .region-accordion .ico-accordion:after {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  margin-top: -1px;
+}
+
+.cp-change-region .br-mo {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .cp-change-region__list li {
+    padding: 0 20px;
+    padding: 0 2rem;
+  }
+  .cp-change-region__title .region-title strong {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+  .cp-change-region__info .el-desc {
+    line-height: 22px;
+    line-height: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cp-change-region__inner {
+    padding: 0 30px;
+    padding: 0 3rem;
+  }
+  .cp-change-region__list {
+    margin: 0;
+  }
+  .cp-change-region__list li {
+    width: 100%;
+    margin-bottom: 42px;
+    margin-bottom: 4.2rem;
+    padding: 0;
+  }
+  .cp-change-region__title .region-ico {
+    width: 32px;
+    width: 3.2rem;
+  }
+  .cp-change-region__title .region-title {
+    margin-left: 15px;
+    margin-left: 1.5rem;
+  }
+  .cp-change-region__info {
+    margin-top: 19px;
+    margin-top: 1.9rem;
+  }
+  .cp-change-region__info .info-title {
+    -webkit-flex-basis: 70px;
+    -ms-flex-preferred-size: 70px;
+    flex-basis: 70px;
+    -webkit-flex-basis: 7rem;
+    -ms-flex-preferred-size: 7rem;
+    flex-basis: 7rem;
+  }
+  .cp-change-region__info .el-title, .cp-change-region__info .el-desc {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 25px;
+    line-height: 2.5rem;
+  }
+  .cp-change-region .region-accordion .accordion-panel-inner {
+    padding: 30px 0 4px;
+    padding: 3rem 0 0.4rem;
+  }
+  .cp-change-region .region-accordion .accordion-btn {
+    padding: 18px 30px 14px 0;
+    padding: 1.8rem 3rem 1.4rem 0;
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 24px;
+  }
+  .cp-change-region .region-accordion .ico-accordion {
+    right: 0;
+    width: 15px;
+    width: 1.5rem;
+    height: 15px;
+    height: 1.5rem;
+    margin-top: -7px;
+    margin-top: -0.7rem;
+  }
+  .cp-change-region .br-mo {
+    display: block;
+  }
+}

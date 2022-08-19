@@ -1,0 +1,737 @@
+.cp-space-vehicles__inner {
+  max-width: 1640px;
+  padding: 0 140px;
+  padding: 0 14rem;
+  margin: 0 auto;
+}
+
+.cp-space-vehicles__header {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cp-space-vehicles__content {
+  margin-top: 52px;
+  margin-top: 5.2rem;
+}
+
+.cp-space-vehicles__content .swiper-container {
+  margin: 0 -5px;
+  margin: 0 -0.5rem;
+  padding: 5px;
+  padding: 0.5rem;
+}
+
+.cp-space-vehicles__title {
+  display: block;
+  margin-top: 10px;
+  margin-top: 1rem;
+  font-family: "genesis-head-office-light", sans-serif;
+  font-size: 48px;
+  font-size: 4.8rem;
+  color: #fff;
+  font-weight: normal;
+  line-height: 50px;
+  line-height: 5rem;
+  letter-spacing: -.025em;
+}
+
+.cp-space-vehicles__title-sub {
+  font-family: "genesis-head-office-light", sans-serif;
+  font-size: 20px;
+  font-size: 2rem;
+  color: #fff;
+  line-height: 22px;
+  line-height: 2.2rem;
+  letter-spacing: -.025em;
+}
+
+.cp-space-vehicles__desc {
+  margin-top: 22px;
+  margin-top: 2.2rem;
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: #ccc;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+
+.cp-space-vehicles__model-name {
+  font-family: "genesis-head-office-light", sans-serif;
+  font-size: 48px;
+  font-size: 4.8rem;
+  color: #fff;
+  font-weight: normal;
+  line-height: 50px;
+  line-height: 5rem;
+}
+
+.cp-space-vehicles__model-img {
+  padding: 17px 0 50px;
+  padding: 1.7rem 0 5rem;
+  border-bottom: 1px solid #333;
+}
+
+.cp-space-vehicles__model-img .js-picture {
+  position: relative;
+  width: 393px;
+  width: 39.3rem;
+  height: 150px;
+  height: 15rem;
+  margin: 0 auto;
+}
+
+.cp-space-vehicles__model-img .js-img-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: center;
+  background-size: cover;
+}
+
+.cp-space-vehicles__info-title {
+  max-width: 320px;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #ad7b61;
+  line-height: 24px;
+  line-height: 2.4rem;
+}
+
+.cp-space-vehicles__info-list {
+  margin-top: 2px;
+  margin-top: 0.2rem;
+}
+
+.cp-space-vehicles__info-item {
+  position: relative;
+  padding-left: 11px;
+  padding-left: 1.1rem;
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: #999;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+
+.cp-space-vehicles__info-item:before {
+  position: absolute;
+  top: 10px;
+  top: 1rem;
+  left: 0;
+  width: 3px;
+  width: 0.3rem;
+  height: 3px;
+  height: 0.3rem;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #5c5c5c;
+  content: '';
+}
+
+.cp-space-vehicles__info-item:not(:first-child) {
+  margin-top: 4px;
+  margin-top: 0.4rem;
+}
+
+.cp-space-vehicles__notice {
+  padding: 58px 140px;
+  padding: 5.8rem 14rem;
+  background: #151515;
+  text-align: center;
+}
+
+.cp-space-vehicles__notice-title {
+  display: block;
+  margin-bottom: 9px;
+  margin-bottom: 0.9rem;
+  font-size: 20px;
+  font-size: 2rem;
+  color: #ccc;
+  font-weight: normal;
+  line-height: 22px;
+  line-height: 2.2rem;
+}
+
+.cp-space-vehicles__notice-desc {
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #ccc;
+  line-height: 24px;
+  line-height: 2.4rem;
+}
+
+.cp-space-vehicles .cm-tab-content {
+  padding: 41px 0 75px;
+  padding: 4.1rem 0 7.5rem;
+}
+
+.cp-space-vehicles .cm-tab-item {
+  position: relative;
+}
+
+.cp-space-vehicles .cm-tab-btn .tab-btn {
+  padding: 14px 123px 14px 0;
+  padding: 1.4rem 12.3rem 1.4rem 0;
+  letter-spacing: -.025em;
+}
+
+.cp-space-vehicles .cm-accordion-panel-inner {
+  padding: 0 53px 15px 10px;
+  padding: 0 5.3rem 1.5rem 1rem;
+}
+
+.cp-space-vehicles .cm-accordion .is-active .cm-accordion-panel {
+  border: 0;
+}
+
+.cp-space-vehicles .cm-accordion .is-active .cm-accordion-btn:after {
+  display: none;
+}
+
+.cp-space-vehicles .cm-accordion .cm-accordion-panel {
+  border: 0;
+}
+
+.cp-space-vehicles .cm-accordion .cm-accordion-btn {
+  width: auto;
+  padding: 21px 123px 18px 10px;
+  padding: 2.1rem 12.3rem 1.8rem 1rem;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+.cp-space-vehicles .cm-accordion .cm-accordion-btn:before, .cp-space-vehicles .cm-accordion .cm-accordion-btn:after {
+  position: absolute;
+  top: 24px;
+  top: 2.4rem;
+  right: 17px;
+  right: 1.7rem;
+  width: 1px;
+  height: 15px;
+  background: #fff;
+  content: '';
+}
+
+.cp-space-vehicles .cm-accordion .cm-accordion-btn:before {
+  position: absolute;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.cp-space-vehicles .swiper-button-prev,
+.cp-space-vehicles .swiper-button-next {
+  top: 117px;
+  top: 11.7rem;
+  margin: 0;
+}
+
+.cp-space-vehicles .swiper-button-prev {
+  left: -111px;
+  left: -11.1rem;
+}
+
+.cp-space-vehicles .swiper-button-next {
+  right: -111px;
+  right: -11.1rem;
+}
+
+@media screen and (max-width: 1919px) {
+  .cp-space-vehicles__inner {
+    max-width: 1360px;
+    padding: 0 120px;
+    padding: 0 12rem;
+  }
+  .cp-space-vehicles__header {
+    max-width: 660px;
+  }
+  .cp-space-vehicles__model-img .js-picture {
+    width: 327px;
+    width: 32.7rem;
+    height: 124px;
+    height: 12.4rem;
+  }
+  .cp-space-vehicles__info-title {
+    max-width: 262px;
+  }
+  .cp-space-vehicles .cm-tab-btn .tab-btn {
+    padding-right: 102px;
+    padding-right: 10.2rem;
+  }
+  .cp-space-vehicles .cm-accordion-panel-inner {
+    padding-right: 67px;
+    padding-right: 6.7rem;
+  }
+  .cp-space-vehicles .swiper-button-prev,
+  .cp-space-vehicles .swiper-button-next {
+    top: 104px;
+    top: 10.4rem;
+  }
+  .cp-space-vehicles .swiper-button-prev {
+    left: -82px;
+    left: -8.2rem;
+  }
+  .cp-space-vehicles .swiper-button-next {
+    right: -82px;
+    right: -8.2rem;
+  }
+}
+
+@media screen and (max-width: 1599px) {
+  .cp-space-vehicles__inner {
+    max-width: 1160px;
+    padding: 0 100px;
+    padding: 0 10rem;
+  }
+  .cp-space-vehicles__header {
+    max-width: 560px;
+  }
+  .cp-space-vehicles__content {
+    margin-top: 35px;
+    margin-top: 3.5rem;
+  }
+  .cp-space-vehicles__title {
+    font-size: 42px;
+    font-size: 4.2rem;
+    line-height: 44px;
+    line-height: 4.4rem;
+  }
+  .cp-space-vehicles__title-sub {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 20px;
+    line-height: 2rem;
+  }
+  .cp-space-vehicles__desc {
+    margin-top: 14px;
+    margin-top: 1.4rem;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+  .cp-space-vehicles__model-name {
+    font-size: 42px;
+    font-size: 4.2rem;
+    line-height: 44px;
+    line-height: 4.4rem;
+  }
+  .cp-space-vehicles__model-img {
+    padding: 15px 0 40px;
+    padding: 1.5rem 0 4rem;
+  }
+  .cp-space-vehicles__model-img .js-picture {
+    width: 277px;
+    width: 27.7rem;
+    height: 105px;
+    height: 10.5rem;
+  }
+  .cp-space-vehicles__info-title {
+    max-width: 230px;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 22px;
+    line-height: 2.2rem;
+  }
+  .cp-space-vehicles__info-item {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+  .cp-space-vehicles__notice {
+    padding: 33px 116px 50px;
+    padding: 3.3rem 11.6rem 5rem;
+  }
+  .cp-space-vehicles__notice-title {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 28px;
+    line-height: 2.8rem;
+  }
+  .cp-space-vehicles__notice-desc {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 22px;
+    line-height: 2.2rem;
+  }
+  .cp-space-vehicles .cm-tab-content {
+    padding-bottom: 55px;
+    padding-bottom: 5.5rem;
+  }
+  .cp-space-vehicles .cm-tab-btn .tab-btn {
+    padding-right: 87px;
+    padding-right: 8.7rem;
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  .cp-space-vehicles .cm-accordion-panel-inner {
+    padding: 0 56px 17px 0;
+    padding: 0 5.6rem 1.7rem 0;
+  }
+  .cp-space-vehicles .cm-accordion .cm-accordion-btn {
+    padding: 23px 97px 19px 0;
+    padding: 2.3rem 9.7rem 1.9rem 0;
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  .cp-space-vehicles .swiper-button-prev,
+  .cp-space-vehicles .swiper-button-next {
+    top: 85px;
+    top: 8.5rem;
+  }
+  .cp-space-vehicles .swiper-button-prev button:after,
+  .cp-space-vehicles .swiper-button-next button:after {
+    width: 21px;
+    width: 2.1rem;
+    height: 38px;
+    height: 3.8rem;
+  }
+  .cp-space-vehicles .swiper-button-prev {
+    left: -73px;
+    left: -7.3rem;
+  }
+  .cp-space-vehicles .swiper-button-next {
+    right: -73px;
+    right: -7.3rem;
+  }
+}
+
+@media screen and (max-width: 1359px) {
+  .cp-space-vehicles__inner {
+    max-width: 872px;
+    padding: 0 76px;
+    padding: 0 7.6rem;
+  }
+  .cp-space-vehicles__header {
+    max-width: 416px;
+  }
+  .cp-space-vehicles__content {
+    margin-top: 25px;
+    margin-top: 2.5rem;
+  }
+  .cp-space-vehicles__title {
+    margin-top: 7px;
+    margin-top: 0.7rem;
+    font-size: 30px;
+    font-size: 3rem;
+    line-height: 32px;
+    line-height: 3.2rem;
+  }
+  .cp-space-vehicles__title-sub {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 16px;
+    line-height: 1.6rem;
+  }
+  .cp-space-vehicles__desc {
+    margin-top: 12px;
+    margin-top: 1.2rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 22px;
+    line-height: 2.2rem;
+  }
+  .cp-space-vehicles__model-name {
+    font-size: 30px;
+    font-size: 3rem;
+    line-height: 32px;
+    line-height: 3.2rem;
+  }
+  .cp-space-vehicles__model-img {
+    padding: 17px 0 35px;
+    padding: 1.7rem 0 3.5rem;
+  }
+  .cp-space-vehicles__model-img .js-picture {
+    width: 208px;
+    width: 20.8rem;
+    height: 78px;
+    height: 7.8rem;
+  }
+  .cp-space-vehicles__info-list {
+    margin-top: 3px;
+    margin-top: 0.3rem;
+  }
+  .cp-space-vehicles__info-item {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 22px;
+    line-height: 2.2rem;
+  }
+  .cp-space-vehicles__info-item:not(:first-child) {
+    margin-top: 8px;
+    margin-top: 0.8rem;
+  }
+  .cp-space-vehicles__info-item:before {
+    top: 7px;
+    top: 0.7rem;
+  }
+  .cp-space-vehicles__notice {
+    padding: 35px 76px 40px;
+    padding: 3.5rem 7.6rem 4rem;
+  }
+  .cp-space-vehicles__notice-title {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+  .cp-space-vehicles .cm-tab-content {
+    padding: 32px 0 45px;
+    padding: 3.2rem 0 4.5rem;
+  }
+  .cp-space-vehicles .cm-tab-btn .tab-btn {
+    padding: 15px 65px 15px 0;
+    padding: 1.5rem 6.5rem 1.5rem 0;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 16px;
+    line-height: 1.6rem;
+  }
+  .cp-space-vehicles .cm-accordion-panel-inner {
+    padding: 0 37px 12px 10px;
+    padding: 0 3.7rem 1.2rem 1rem;
+  }
+  .cp-space-vehicles .cm-accordion .cm-accordion-btn {
+    padding: 17px 77px 14px 10px;
+    padding: 1.7rem 7.7rem 1.4rem 1rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 22px;
+    line-height: 2.2rem;
+  }
+  .cp-space-vehicles .cm-accordion .cm-accordion-btn:before, .cp-space-vehicles .cm-accordion .cm-accordion-btn:after {
+    top: 18px;
+    top: 1.8rem;
+    right: 19px;
+    right: 1.9rem;
+  }
+  .cp-space-vehicles .swiper-button-prev,
+  .cp-space-vehicles .swiper-button-next {
+    top: 61px;
+    top: 6.1rem;
+  }
+  .cp-space-vehicles .swiper-button-prev {
+    left: -65px;
+    left: -6.5rem;
+  }
+  .cp-space-vehicles .swiper-button-next {
+    right: -65px;
+    right: -6.5rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .cp-space-vehicles__inner {
+    max-width: 652px;
+    padding: 0 59px;
+    padding: 0 5.9rem;
+  }
+  .cp-space-vehicles__header {
+    max-width: 421px;
+  }
+  .cp-space-vehicles__model-img .js-picture {
+    width: 156px;
+    width: 15.6rem;
+    height: 58px;
+    height: 5.8rem;
+  }
+  .cp-space-vehicles__info-item:before {
+    top: 9px;
+    top: 0.9rem;
+  }
+  .cp-space-vehicles__notice {
+    padding-right: 58px;
+    padding-right: 5.8rem;
+    padding-left: 58px;
+    padding-left: 5.8rem;
+  }
+  .cp-space-vehicles .cm-tab-btn .tab-btn {
+    padding-right: 38px;
+    padding-right: 3.8rem;
+  }
+  .cp-space-vehicles .cm-accordion .cm-accordion-btn {
+    padding: 18px 40px 16px 10px;
+    padding: 1.8rem 4rem 1.6rem 1rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+  .cp-space-vehicles .cm-accordion .cm-accordion-btn:before, .cp-space-vehicles .cm-accordion .cm-accordion-btn:after {
+    top: 18px;
+    top: 1.8rem;
+    right: 17px;
+    right: 1.7rem;
+  }
+  .cp-space-vehicles .swiper-button-prev,
+  .cp-space-vehicles .swiper-button-next {
+    top: 52px;
+    top: 5.2rem;
+  }
+  .cp-space-vehicles .swiper-button-prev {
+    left: -55px;
+    left: -5.5rem;
+  }
+  .cp-space-vehicles .swiper-button-next {
+    right: -55px;
+    right: -5.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cp-space-vehicles__inner {
+    max-width: none;
+    padding: 0 30px;
+    padding: 0 3rem;
+  }
+  .cp-space-vehicles__header {
+    max-width: none;
+  }
+  .cp-space-vehicles__content {
+    margin-top: 22px;
+    margin-top: 2.2rem;
+  }
+  .cp-space-vehicles__title {
+    margin-top: 9px;
+    margin-top: 0.9rem;
+    font-size: 36px;
+    font-size: 3.6rem;
+    line-height: 38px;
+    line-height: 3.8rem;
+  }
+  .cp-space-vehicles__title-sub {
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 22px;
+    line-height: 2.2rem;
+  }
+  .cp-space-vehicles__desc {
+    margin-top: 16px;
+    margin-top: 1.6rem;
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 28px;
+    line-height: 2.8rem;
+  }
+  .cp-space-vehicles__model-name {
+    font-size: 36px;
+    font-size: 3.6rem;
+    line-height: 38px;
+    line-height: 3.8rem;
+  }
+  .cp-space-vehicles__model-img .js-picture {
+    width: auto;
+    height: auto;
+    padding-top: 38.0952%;
+  }
+  .cp-space-vehicles__info-title, .cp-space-vehicles__info-item {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+  .cp-space-vehicles__info-title {
+    margin-bottom: -2px;
+    margin-bottom: -0.2rem;
+  }
+  .cp-space-vehicles__info-list {
+    margin: 0;
+  }
+  .cp-space-vehicles__info-item:not(:first-child) {
+    margin-top: 7px;
+    margin-top: 0.7rem;
+  }
+  .cp-space-vehicles__notice {
+    padding: 43px 40px;
+    padding: 4.3rem 4rem;
+    padding-left: 40px;
+    padding-left: 4rem;
+    text-align: left;
+  }
+  .cp-space-vehicles__notice-title {
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 22px;
+    line-height: 2.2rem;
+  }
+  .cp-space-vehicles__notice-desc {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+  .cp-space-vehicles .cm-tab-btn .tab-btn {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+  }
+  .cp-space-vehicles .cm-tab-btn li {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 79.37%;
+    -ms-flex: 0 0 79.37%;
+    flex: 0 0 79.37%;
+  }
+  .cp-space-vehicles .cm-tab {
+    margin: 0 -30px;
+    margin: 0 -3rem;
+  }
+  .cp-space-vehicles .cm-tab .swiper-container {
+    margin: -5px 0px;
+    margin: -0.5rem 0rem;
+    padding: 5px 30px;
+    padding: 0.5rem 3rem;
+  }
+  .cp-space-vehicles .cm-tab .swiper-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+  }
+  .cp-space-vehicles .cm-tab .swiper-slide {
+    width: 79.3651%;
+  }
+  .cp-space-vehicles .cm-tab .cm-tab-content .swiper-container {
+    margin: 0px;
+    margin: 0rem;
+  }
+  .cp-space-vehicles .cm-accordion .cm-accordion-btn {
+    padding: 17px 75px 15px 10px;
+    padding: 1.7rem 7.5rem 1.5rem 1rem;
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+  .cp-space-vehicles .cm-accordion .cm-accordion-btn:before, .cp-space-vehicles .cm-accordion .cm-accordion-btn:after {
+    top: 20px;
+    top: 2rem;
+  }
+  .cp-space-vehicles .swiper-button-prev,
+  .cp-space-vehicles .swiper-button-next {
+    top: 45px;
+    top: 4.5rem;
+    width: 30px;
+    width: 3rem;
+    height: 40px;
+    height: 4rem;
+    padding-top: 38.0952%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .cp-space-vehicles .swiper-button-prev button:after,
+  .cp-space-vehicles .swiper-button-next button:after {
+    width: 12px;
+    width: 1.2rem;
+    height: 22px;
+    height: 2.2rem;
+  }
+  .cp-space-vehicles .swiper-button-prev {
+    left: 0;
+  }
+  .cp-space-vehicles .swiper-button-next {
+    right: 0;
+  }
+}

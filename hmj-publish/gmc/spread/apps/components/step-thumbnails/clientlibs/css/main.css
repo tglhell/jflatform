@@ -1,0 +1,261 @@
+.cp-step-thumbnails__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 80px;
+  padding: 0 8rem;
+}
+
+.cp-step-thumbnails__item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 108px;
+  margin-bottom: 10.8rem;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cp-step-thumbnails__item-list {
+  font-size: 0;
+  counter-reset: numbering;
+  margin-bottom: -108px;
+  margin-bottom: -10.8rem;
+}
+
+.cp-step-thumbnails__title {
+  margin-bottom: 33px;
+  margin-bottom: 3.3rem;
+}
+
+.cp-step-thumbnails__title .el-title {
+  display: table;
+  width: 100%;
+  padding-right: 280px;
+  padding-right: 28rem;
+  font-family: "genesis-head-office-light", sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  font-size: 3rem;
+  letter-spacing: -0.025em;
+  line-height: 38px;
+  line-height: 3.8rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cp-step-thumbnails__title .el-title span {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.cp-step-thumbnails__thumb {
+  border: 1px solid #e5e5e5;
+}
+
+.cp-step-thumbnails__thumb img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.cp-step-thumbnails__content {
+  margin-top: 33px;
+  margin-top: 3.3rem;
+}
+
+.cp-step-thumbnails__content .el-notice {
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #262626;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+
+.cp-step-thumbnails.type-2column .cp-step-thumbnails__item {
+  width: 50%;
+  padding: 0 20px;
+  padding: 0 2rem;
+}
+
+.cp-step-thumbnails.type-2column .cp-step-thumbnails__item-list {
+  margin-right: -20px;
+  margin-right: -2rem;
+  margin-left: -20px;
+  margin-left: -2rem;
+}
+
+.cp-step-thumbnails.type-2column .cp-step-thumbnails__title .el-title {
+  padding-right: 50px;
+  padding-right: 5rem;
+}
+
+.cp-step-thumbnails.type-2column .cp-step-thumbnails__content {
+  margin-top: 34px;
+  margin-top: 3.4rem;
+}
+
+.cp-step-thumbnails.type-3column .cp-step-thumbnails__item {
+  width: 33.33%;
+  margin-bottom: 71px;
+  margin-bottom: 7.1rem;
+  padding: 0 70px;
+  padding: 0 7rem;
+}
+
+.cp-step-thumbnails.type-3column .cp-step-thumbnails__item-list {
+  margin: 0 -70px -71px;
+  margin: 0 -7rem -7.1rem;
+}
+
+.cp-step-thumbnails.type-3column .cp-step-thumbnails__title {
+  margin-bottom: 26px;
+  margin-bottom: 2.6rem;
+}
+
+.cp-step-thumbnails.type-3column .cp-step-thumbnails__title .el-title {
+  padding-right: 0;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+}
+
+.cp-step-thumbnails.type-3column .cp-step-thumbnails__title .el-title:before {
+  width: 35px;
+  width: 3.5rem;
+}
+
+.cp-step-thumbnails.type-3column .cp-step-thumbnails__content {
+  margin-top: 23px;
+  margin-top: 2.3rem;
+}
+
+@media (max-width: 1023px) {
+  .cp-step-thumbnails__inner {
+    padding: 0 58px;
+    padding: 0 5.8rem;
+  }
+  .cp-step-thumbnails__item {
+    margin-bottom: 91px;
+    margin-bottom: 9.1rem;
+  }
+  .cp-step-thumbnails__item-list {
+    margin-bottom: -91px;
+    margin-bottom: -9.1rem;
+  }
+  .cp-step-thumbnails__title {
+    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
+  }
+  .cp-step-thumbnails__title .el-title {
+    padding-right: 231px;
+    padding-right: 23.1rem;
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 28px;
+    line-height: 2.8rem;
+  }
+  .cp-step-thumbnails__title .el-title:before {
+    width: 35px;
+    width: 3.5rem;
+    padding-right: 3px;
+    padding-right: 0.3rem;
+  }
+  .cp-step-thumbnails__content {
+    margin-top: 25px;
+    margin-top: 2.5rem;
+  }
+  .cp-step-thumbnails__content .el-notice {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+  .cp-step-thumbnails.type-2column .cp-step-thumbnails__title .el-title {
+    padding-right: 0;
+  }
+  .cp-step-thumbnails.type-2column .cp-step-thumbnails__content {
+    margin-top: 25px;
+    margin-top: 2.5rem;
+  }
+  .cp-step-thumbnails.type-3column .cp-step-thumbnails__item {
+    width: 50%;
+    margin-bottom: 51px;
+    margin-bottom: 5.1rem;
+    padding: 0 20px;
+    padding: 0 2rem;
+  }
+  .cp-step-thumbnails.type-3column .cp-step-thumbnails__item-list {
+    margin: 0 -20px -51px;
+    margin: 0 -2rem -5.1rem;
+  }
+  .cp-step-thumbnails.type-3column .cp-step-thumbnails__title {
+    margin-bottom: 19px;
+    margin-bottom: 1.9rem;
+  }
+  .cp-step-thumbnails.type-3column .cp-step-thumbnails__title .el-title {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+  .cp-step-thumbnails.type-3column .cp-step-thumbnails__title .el-title:before {
+    width: 30px;
+    width: 3rem;
+  }
+  .cp-step-thumbnails.type-3column .cp-step-thumbnails__content {
+    margin-top: 19px;
+    margin-top: 1.9rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cp-step-thumbnails__inner {
+    padding: 0 30px;
+    padding: 0 3rem;
+  }
+  .cp-step-thumbnails__item {
+    margin-bottom: 72px;
+    margin-bottom: 7.2rem;
+  }
+  .cp-step-thumbnails__item-list {
+    margin-bottom: -72px;
+    margin-bottom: -7.2rem;
+  }
+  .cp-step-thumbnails__title {
+    margin-bottom: 25px;
+    margin-bottom: 2.5rem;
+  }
+  .cp-step-thumbnails__title .el-title {
+    padding-right: 0;
+    line-height: 26px;
+    line-height: 2.6rem;
+  }
+  .cp-step-thumbnails.type-2column .cp-step-thumbnails__item {
+    width: 100%;
+    padding: 0;
+  }
+  .cp-step-thumbnails.type-2column .cp-step-thumbnails__item-list {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .cp-step-thumbnails.type-3column .cp-step-thumbnails__item {
+    margin-bottom: 42px;
+    margin-bottom: 4.2rem;
+    padding: 0 10px;
+    padding: 0 1rem;
+  }
+  .cp-step-thumbnails.type-3column .cp-step-thumbnails__item-list {
+    margin: 0 -10px -42px;
+    margin: 0 -1rem -4.2rem;
+  }
+  .cp-step-thumbnails.type-3column .cp-step-thumbnails__title {
+    margin-bottom: 21px;
+    margin-bottom: 2.1rem;
+  }
+  .cp-step-thumbnails.type-3column .cp-step-thumbnails__title .el-title {
+    line-height: 22px;
+    line-height: 2.2rem;
+  }
+  .cp-step-thumbnails.type-3column .cp-step-thumbnails__content {
+    margin-top: 20px;
+    margin-top: 2rem;
+  }
+}

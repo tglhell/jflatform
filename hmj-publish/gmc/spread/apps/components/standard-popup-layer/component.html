@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Standard Popup Layer</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+<!-- 마크업 검수용 코드 -->
+<style>
+.sample-btn{ display:inline-block; padding: 10px 3px; font-size: 18px; }
+</style>
+<!-- // 마크업 검수용 코드 -->
+</head>
+<body>
+<div id="wrap">
+
+    <!-- [D] 팝업 연결 시, 앵커 요소의 data-layer-target 속성값을
+        대상이 될 팝업(.cm-layer)의 id 값과 일치시켜주어, 팝업별로 매칭시켜주시기 바랍니다. -->
+    <div class="sample-btn">
+        [팝업 열기] Standard Popup Layer : <a href="#" class="sample-btn js-layer-opener" data-layer-target="#standard-popup-layer">Light</a> / <a href="#" class="sample-btn js-layer-opener" data-layer-target="#standard-popup-layer2">Dark</a><br>
+    </div>
+
+    <!-- component (type-light) -->
+    <div class="type-light">
+        <div class="cm-layer type-alert standard-popup js-cm-layer" id="standard-popup-layer">
+            <span class="cm-layer__dimmed"></span>
+            <div class="cm-layer__body">
+                <div class="cm-layer__wrapper" role="dialog">
+                    <div class="cm-layer__title">
+                        <strong>알려드립니다.</strong>
+                    </div>
+                    <div class="cm-layer__content">
+                        <ul class="standard-popup__tab-list">
+                        <!-- [F] 활성화 시 : is-active 클래스 추가 -->
+                        <li class="standard-popup__tab-item is-active"><a href="#standardTab1">공지1</a></li>
+                        <li class="standard-popup__tab-item"><a href="#standardTab2">공지2</a></li>
+                        </ul>
+                        <div class="standard-popup__tab-content" id="standardTab1">
+                            <div class="standard-popup__img">
+                                <img src="/apps/components/standard-popup-layer/imgs/@img.gif" alt="">
+                            </div>
+                            <div class="standard-popup__title">개별 소비세 관련 안내 1</div>
+                            <div class="standard-popup__desc">
+                                <p>해당 견적은 3월 1일부터 시행되는 개별소비세율 인하(5% → 1.5%, 100만원 한도)가 반영되지 않은 견적으로, 정확한 가격 산출을 위해서는 지점/대리점으로 문의 바랍니다.</p>
+                            </div>
+                            <div class="standard-popup__cta">
+                                <a href="#" class="cm-btn-more" title=""><span>마이 현대 앱 다운로드 안내 링크</span></a>
+                            </div>
+                        </div>
+                        <div class="standard-popup__tab-content" id="standardTab2" style="display:none">
+                            <div class="standard-popup__title">개별 소비세 관련 안내 2</div>
+                            <div class="standard-popup__desc">
+                                <p>해당 견적은 3월 1일부터 시행되는 개별소비세율 인하(5% → 1.5%, 100만원 한도)가 반영되지 않은 견적으로, 정확한 가격 산출을 위해서는 지점/대리점으로 문의 바랍니다.</p>
+                            </div>
+                            <div class="standard-popup__cta">
+                                <a href="#" class="cm-btn-more" title=""><span>마이 현대 앱 다운로드 안내 링크</span></a>
+                            </div>
+                        </div>
+                        <button type="button" class="cm-btn">
+                            <span class="text">확인</span>
+                            <span class="masker"><span>확인</span></span>
+                        </button>
+                    </div>
+                    <div class="standard-popup__check-wrap">
+                        <div class="cm-input-wrap">
+                            <div class="cm-checkbox js-chkbox-wrap">
+                                <input type="checkbox" id="chk1" name="chk" class="cm-checkbox__input">
+                                <label for="chk1" class="cm-checkbox__label"><span class="s-box"></span><span class="s-label">일주일간 이 창 열지 않음</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cm-layer__close-wrap">
+                        <button type="button" class="js-layer-closer">
+                            <span class="js-svg-icon" data-icon="svg-cross"></span>
+                            <span class="blind">Close popup</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- component -->
+
+    <!-- component (type-dark) -->
+    <div class="type-dark">
+        <div class="cm-layer type-alert standard-popup js-cm-layer" id="standard-popup-layer2">
+            <span class="cm-layer__dimmed"></span>
+            <div class="cm-layer__body">
+                <div class="cm-layer__wrapper" role="dialog">
+                    <div class="cm-layer__title">
+                        <strong>알려드립니다.</strong>
+                    </div>
+                    <div class="cm-layer__content">
+                        <ul class="standard-popup__tab-list">
+                        <!-- [F] 활성화 시 : is-active 클래스 추가 -->
+                        <li class="standard-popup__tab-item is-active"><a href="#standardTab2_1">공지1</a></li>
+                        <li class="standard-popup__tab-item"><a href="#standardTab2_2">공지2</a></li>
+                        </ul>
+                        <div class="standard-popup__tab-content" id="standardTab2_1">
+                            <div class="standard-popup__title">개별 소비세 관련 안내 1</div>
+                            <div class="standard-popup__desc">
+                                <p>해당 견적은 3월 1일부터 시행되는 개별소비세율 인하(5% → 1.5%, 100만원 한도)가 반영되지 않은 견적으로, 정확한 가격 산출을 위해서는 지점/대리점으로 문의 바랍니다.</p>
+                            </div>
+                            <div class="standard-popup__cta">
+                                <a href="#" class="cm-btn-more" title=""><span>마이 현대 앱 다운로드 안내 링크</span></a>
+                            </div>
+                        </div>
+                        <div class="standard-popup__tab-content" id="standardTab2_2" style="display:none">
+                            <div class="standard-popup__title">개별 소비세 관련 안내 2</div>
+                            <div class="standard-popup__desc">
+                                <p>해당 견적은 3월 1일부터 시행되는 개별소비세율 인하(5% → 1.5%, 100만원 한도)가 반영되지 않은 견적으로, 정확한 가격 산출을 위해서는 지점/대리점으로 문의 바랍니다.</p>
+                            </div>
+                            <div class="standard-popup__cta">
+                                <a href="#" class="cm-btn-more" title=""><span>마이 현대 앱 다운로드 안내 링크</span></a>
+                            </div>
+                        </div>
+                        <button type="button" class="cm-btn">
+                            <span class="text">확인</span>
+                            <span class="masker"><span>확인</span></span>
+                        </button>
+                    </div>
+                    <div class="standard-popup__check-wrap">
+                        <div class="cm-input-wrap">
+                            <div class="cm-checkbox js-chkbox-wrap">
+                                <input type="checkbox" id="chk2" name="chk" class="cm-checkbox__input">
+                                <label for="chk2" class="cm-checkbox__label"><span class="s-box"></span><span class="s-label">일주일간 이 창 열지 않음</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cm-layer__close-wrap">
+                        <button type="button" class="js-layer-closer">
+                            <span class="js-svg-icon" data-icon="svg-cross"></span>
+                            <span class="blind">Close popup</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- component -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<script src="clientlibs/js/main.js"></script>
+</body>
+</html>

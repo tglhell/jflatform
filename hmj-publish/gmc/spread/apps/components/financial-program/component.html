@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Financial Program</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+<!--/* popup css */-->
+<!--#include virtual="/apps/components/common/financial-program-popup/@include_css.html"-->
+</head>
+<body>
+<div id="wrap">
+
+    <!-- component -->
+    <div class="type-light">
+        <div class="cp-financial-program" data-global-text='{
+            "Expand" : "Click to expand",
+            "Collapse" : "Click to collapse"
+        }'>
+            <div class="cp-financial-program__inner">
+                <div class="cp-financial-program__tab">
+                    <ul class="cp-financial-program__tab-list" role="tablist">
+                    <!-- [F] Tab 활성화 : .is-selected 클래스 추가 and a태그에 aria-selected="true" 속성 변경 -->
+                    <li class="cp-financial-program__tab-item is-selected" role="presentation"><a href="#financialContent1" id="financialTab1" role="tab" aria-controls="financialContent1" aria-selected="true">GV80</a></li>
+                    <li class="cp-financial-program__tab-item" role="presentation"><a href="#financialContent2" id="financialTab2" role="tab" aria-controls="financialContent2" aria-selected="false">G70</a></li>
+                    <li class="cp-financial-program__tab-item" role="presentation"><a href="#financialContent3" id="financialTab3" role="tab" aria-controls="financialContent3" aria-selected="false">G80</a></li>
+                    <li class="cp-financial-program__tab-item" role="presentation"><a href="#financialContent4" id="financialTab4" role="tab" aria-controls="financialContent4" aria-selected="false">G90</a></li>
+                    </ul>
+                </div>
+                <div class="cp-financial-program__panel">
+                    <!--[F] Panel 활성화 : .is-active 클래스 추가 and aria-hidden="false" 속성 변경 -->
+                    <div id="financialContent1" class="cp-financial-program__panel-item is-active" role="tabpanel" aria-labelledby="financialTab1" aria-hidden="false">
+                        <div class="cp-financial-program__model">
+                            <div class="cp-financial-program__model-content">
+                                <div class="cp-financial-program__model-title">
+                                    <p class="model-eyebrow">Genesis</p>
+                                    <h2 class="model-title">GV80</h2>
+                                </div>
+                                <div class="cp-financial-program__model-info">
+                                    <p class="model-price">차량가 <span class="color-point">6,037</span>만원</p>
+                                    <p class="model-info">2.5T 기본모델 / 선수율 45%</p>
+                                </div>
+                            </div>
+                            <div class="cp-financial-program__model-img">
+                                <img src="imgs/program-overview-GV80.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="cp-financial-program__cta">
+                            <a href="#" class="cm-btn-more js-layer-opener" title="전체 차량 비교하기" data-layer-target="#financial-program-layer"><span>전체 차량 비교하기</span></a>
+                        </div>
+                        <div class="cp-financial-program__accordion">
+                            <div class="cm-accordion type-default">
+                                <div class="cm-accordion-list">
+                                    <div class="cm-accordion-item">
+                                        <a href="#" role="button" class="cm-accordion-btn">
+                                            <span class="cp-financial-program__accordion-btn">
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-title">표준형</span>
+                                                    <span class="program-desc">매월 동일한 금액으로 할부금을 상환</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-price">월 <span class="color-point">61.9</span> 만원</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-info">60개월 기준 / 금리5.0%</span>
+                                                </span>
+                                            </span>
+                                            <span class="blind"></span>
+                                            <span class="ico-accordion"></span>
+                                        </a>
+                                        <div class="cm-accordion-panel">
+                                            <div class="cm-accordion-panel-inner">
+                                                <div class="cp-financial-program__accordion-panel">
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <p class="program-text">할부 원금을 할부 기간동안 매월 일정한 금액으로 나누어 납부하는 방식</p>
+                                                        <div class="program-graph">
+                                                            <div class="js-picture">
+                                                                <img data-media="(min-width: 768px)" data-srcset="imgs/graph-program-overview-pc1.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                                <img data-media="(min-width: 0)" data-srcset="imgs/graph-program-overview-mo1.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <strong class="program-caption">대상 차종 - 제네시스 브랜드 전차종</strong>
+                                                        <div class="program-table">
+                                                            <table class="table-pc">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">할부 기간</th>
+                                                                        <th scope="col">할부 금리</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>3~60개월 (최소선수율 제한없음)</td>
+                                                                        <td>
+                                                                            <p>36개월 4.5%</p>
+                                                                            <p>48개월 5.0%</p>
+                                                                            <p>60개월 5.0%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table-mo">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">할부 기간</th>
+                                                                        <td>3~60개월 <br>(최소선수율 제한없음)</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부 금리</th>
+                                                                        <td>
+                                                                            <p>36개월 4.5%</p>
+                                                                            <p>48개월 5.0%</p>
+                                                                            <p>60개월 5.0%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p class="program-disc">*제네시스 구매 프로그램 관련 자세한 내용은 가까운 지점 / 대리점에서 상담 바랍니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cm-accordion-item">
+                                        <a href="#" role="button" class="cm-accordion-btn">
+                                            <span class="cp-financial-program__accordion-btn">
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-title">잔가보장형</span>
+                                                    <span class="program-desc">만기시 차량 반납으로 유예금 상환을 보장</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-price">월 <span class="color-point">30.8</span> 만원</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-info">
+                                                        <span class="display-pc">36개월 기준 / 금리 5.5% <br>/ 유예율 45%</span>
+                                                        <span class="display-mo">36개월 기준 / 금리 5.5% / 유예율 45%</span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span class="blind"></span>
+                                            <span class="ico-accordion"></span>
+                                        </a>
+                                        <div class="cm-accordion-panel">
+                                            <div class="cm-accordion-panel-inner">
+                                                <div class="cp-financial-program__accordion-panel">
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <p class="program-text">총 할부금의 일부는 원금과 이자를 일정하게 납부하고, 남은 원금은 이자만 납부하다가 만기 시 한번에 상환. 단, 만기에 차량반납만으로 최대유예율 수준 잔가보장</p>
+                                                        <div class="program-graph">
+                                                            <div class="js-picture">
+                                                                <img data-media="(min-width: 768px)" data-srcset="imgs/graph-program-overview-pc2.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                                <img data-media="(min-width: 0)" data-srcset="imgs/graph-program-overview-mo2.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <strong class="program-caption">대상 차종 - 제네시스 브랜드 전차종 ​​​​​​(G90 리무진 제외)</strong>
+                                                        <div class="program-table">
+                                                            <table class="table-pc">
+                                                                <colgroup>
+                                                                    <col style="width:30%">
+                                                                    <col style="width:30%">
+                                                                    <col style="width:40%">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">할부 기간</th>
+                                                                        <th scope="col">할부 금리</th>
+                                                                        <th scope="col">할부기간별 최대 유예율</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>36개월, 48개월</td>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>승용 - 36개월 : 40% / 48개월 : 35%</p>
+                                                                            <p>RV - 36개월 : 45% / 48개월 : 40%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table-mo">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">할부 기간</th>
+                                                                        <td>36개월, 48개월</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부 금리</th>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부기간별 최대 유예율</th>
+                                                                        <td>
+                                                                            <p>승용 - 36개월 : 40% / 48개월 : 35%</p>
+                                                                            <p>RV - 36개월 : 45% / 48개월 : 40%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p class="program-disc">*제네시스 구매 프로그램 관련 자세한 내용은 가까운 지점 / 대리점에서 상담 바랍니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cm-accordion-item">
+                                        <a href="#" role="button" class="cm-accordion-btn">
+                                            <span class="cp-financial-program__accordion-btn">
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-title">거치형</span>
+                                                    <span class="program-desc">제네시스 구매 1년 후부터 할부 원금을 상환</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-price">월 <span class="color-point">15.8</span> 만원</span>
+                                                    <span class="program-price-info">이후 월 100.6만원</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-info">1년 거치+3년 상환 / 금리 5.7%</span>
+                                                </span>
+                                            </span>
+                                            <span class="blind"></span>
+                                            <span class="ico-accordion"></span>
+                                        </a>
+                                        <div class="cm-accordion-panel">
+                                            <div class="cm-accordion-panel-inner">
+                                                <div class="cp-financial-program__accordion-panel">
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <p class="program-text">최초 1년은 이자만 납부하고, 1년 후부터 일정한 할부금을 매월 일정하게 납부하는 방식</p>
+                                                        <div class="program-graph">
+                                                            <div class="js-picture">
+                                                                <img data-media="(min-width: 768px)" data-srcset="imgs/graph-program-overview-pc3.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                                <img data-media="(min-width: 0)" data-srcset="imgs/graph-program-overview-mo3.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <strong class="program-caption">대상 차종 - 제네시스 브랜드 전차종</strong>
+                                                        <div class="program-table">
+                                                            <table class="table-pc">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">할부 기간</th>
+                                                                        <th scope="col">할부 금리</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <p>36개월 (1년거치+2년상환)</p>
+                                                                            <p>48개월 (1년거치+3년상환)</p>
+                                                                            <p> 60개월 (1년거치+4년상환)</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                            <p>60개월 5.7%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table-mo">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">할부 기간</th>
+                                                                        <td>
+                                                                            <p>36개월 (1년거치+2년상환)</p>
+                                                                            <p>48개월 (1년거치+3년상환)</p>
+                                                                            <p> 60개월 (1년거치+4년상환)</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부 금리</th>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                            <p>60개월 5.7%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p class="program-disc">*제네시스 구매 프로그램 관련 자세한 내용은 가까운 지점 / 대리점에서 상담 바랍니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cm-accordion-item">
+                                        <a href="#" role="button" class="cm-accordion-btn">
+                                            <span class="cp-financial-program__accordion-btn">
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-title">유예형</span>
+                                                    <span class="program-desc">월납입금 부담을 줄여주는 최대 55% 유예상환</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-price">월 <span class="color-point">15.2</span> 만원</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-info">
+                                                        <span class="display-pc">36개월 기준 / 금리 5.5% <br>/ 유예율 55%</span>
+                                                        <span class="display-mo">36개월 기준 / 금리 5.5% / 유예율 55%</span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span class="blind"></span>
+                                            <span class="ico-accordion"></span>
+                                        </a>
+                                        <div class="cm-accordion-panel">
+                                            <div class="cm-accordion-panel-inner">
+                                                <div class="cp-financial-program__accordion-panel">
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <p class="program-text">총 할부금의 일부는 원금과 이자를 일정하게 납부하고, 남은 원금은 이자만 납부하다가 만기 시 한번에 상환</p>
+                                                        <div class="program-graph">
+                                                            <div class="js-picture">
+                                                                <img data-media="(min-width: 768px)" data-srcset="imgs/graph-program-overview-pc4.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                                <img data-media="(min-width: 0)" data-srcset="imgs/graph-program-overview-mo4.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <strong class="program-caption">대상 차종 - 제네시스 브랜드 전차종</strong>
+                                                        <div class="program-table">
+                                                            <table class="table-pc">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">할부 기간</th>
+                                                                        <th scope="col">할부 금리</th>
+                                                                        <th scope="col">할부 기간별 최대 유예율</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>36개월, 48개월</td>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>36개월 : 55%</p>
+                                                                            <p>48개월 : 45%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table-mo">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">할부 기간</th>
+                                                                        <td>36개월, 48개월</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부 금리</th>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부 기간별 최대 유예율</th>
+                                                                        <td>
+                                                                            <p>36개월 : 55%</p>
+                                                                            <p>48개월 : 45%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p class="program-disc">*제네시스 구매 프로그램 관련 자세한 내용은 가까운 지점 / 대리점에서 상담 바랍니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="financialContent2" class="cp-financial-program__panel-item" role="tabpanel" aria-labelledby="financialTab2" aria-hidden="true">
+                        <div class="cp-financial-program__model">
+                            <div class="cp-financial-program__model-content">
+                                <div class="cp-financial-program__model-title">
+                                    <p class="model-eyebrow">Genesis</p>
+                                    <h2 class="model-title">G70</h2>
+                                </div>
+                                <div class="cp-financial-program__model-info">
+                                    <p class="model-price">차량가 <span class="color-point">3,848</span>만원</p>
+                                    <p class="model-info">2.OT 어드밴스드</p>
+                                </div>
+                            </div>
+                            <div class="cp-financial-program__model-img">
+                                <img src="imgs/program-overview-G70.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="cp-financial-program__cta">
+                            <a href="#" class="cm-btn-more js-layer-opener" title="전체 차량 비교하기" data-layer-target="#financial-program-layer"><span>전체 차량 비교하기</span></a>
+                        </div>
+                        <div class="cp-financial-program__accordion">
+                            <div class="cm-accordion type-default">
+                                <div class="cm-accordion-list">
+                                    <div class="cm-accordion-item">
+                                        <a href="#" role="button" class="cm-accordion-btn">
+                                            <span class="cp-financial-program__accordion-btn">
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-title">표준형</span>
+                                                    <span class="program-desc">매월 동일한 금액으로 할부금을 상환</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-price">월 <span class="color-point">39.5</span> 만원</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-info">60개월 기준 / 금리4.5% / 선수율45%</span>
+                                                </span>
+                                            </span>
+                                            <span class="blind"></span>
+                                            <span class="ico-accordion"></span>
+                                        </a>
+                                        <div class="cm-accordion-panel">
+                                            <div class="cm-accordion-panel-inner">
+                                                <div class="cp-financial-program__accordion-panel">
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <p class="program-text">할부 원금을 할부 기간동안 매월 일정한 금액으로 나누어 납부하는 방식</p>
+                                                        <div class="program-graph">
+                                                            <div class="js-picture">
+                                                                <img data-media="(min-width: 768px)" data-srcset="imgs/graph-program-overview-pc1.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                                <img data-media="(min-width: 0)" data-srcset="imgs/graph-program-overview-mo1.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <strong class="program-caption">대상 차종 - 제네시스 브랜드 전차종</strong>
+                                                        <div class="program-table">
+                                                            <table class="table-pc">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">할부 기간</th>
+                                                                        <th scope="col">할부 금리</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>3~60개월 (최소선수율 제한없음)</td>
+                                                                        <td>
+                                                                            <p>36개월 4.5%</p>
+                                                                            <p>48개월 5.0%</p>
+                                                                            <p>60개월 5.0%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table-mo">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">할부 기간</th>
+                                                                        <td>3~60개월 <br>(최소선수율 제한없음)</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부 금리</th>
+                                                                        <td>
+                                                                            <p>36개월 4.5%</p>
+                                                                            <p>48개월 5.0%</p>
+                                                                            <p>60개월 5.0%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p class="program-disc">*제네시스 구매 프로그램 관련 자세한 내용은 가까운 지점 / 대리점에서 상담 바랍니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cm-accordion-item">
+                                        <a href="#" role="button" class="cm-accordion-btn">
+                                            <span class="cp-financial-program__accordion-btn">
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-title">잔가보장형</span>
+                                                    <span class="program-desc">만기시 차량 반납으로 유예금 상환을 보장</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-price">월 <span class="color-point">24.5</span> 만원</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-info">36개월 기준 / 금리 5.5% / 선수율 45% / 유예율 40%</span>
+                                                </span>
+                                            </span>
+                                            <span class="blind"></span>
+                                            <span class="ico-accordion"></span>
+                                        </a>
+                                        <div class="cm-accordion-panel">
+                                            <div class="cm-accordion-panel-inner">
+                                                <div class="cp-financial-program__accordion-panel">
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <p class="program-text">총 할부금의 일부는 원금과 이자를 일정하게 납부하고, 남은 원금은 이자만 납부하다가 만기 시 한번에 상환. 단, 만기에 차량반납만으로 최대유예율 수준 잔가보장</p>
+                                                        <div class="program-graph">
+                                                            <div class="js-picture">
+                                                                <img data-media="(min-width: 768px)" data-srcset="imgs/graph-program-overview-pc2.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                                <img data-media="(min-width: 0)" data-srcset="imgs/graph-program-overview-mo2.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <strong class="program-caption">대상 차종 - 제네시스 브랜드 전차종 ​​​​​​(G90 리무진 제외)</strong>
+                                                        <div class="program-table">
+                                                            <table class="table-pc">
+                                                                <colgroup>
+                                                                    <col style="width:30%">
+                                                                    <col style="width:30%">
+                                                                    <col style="width:40%">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">할부 기간</th>
+                                                                        <th scope="col">할부 금리</th>
+                                                                        <th scope="col">할부기간별 최대 유예율</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>36개월, 48개월</td>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>승용 - 36개월 : 40% / 48개월 : 35%</p>
+                                                                            <p>RV - 36개월 : 45% / 48개월 : 40%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table-mo">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">할부 기간</th>
+                                                                        <td>36개월, 48개월</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부 금리</th>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부기간별 최대 유예율</th>
+                                                                        <td>
+                                                                            <p>승용 - 36개월 : 40% / 48개월 : 35%</p>
+                                                                            <p>RV - 36개월 : 45% / 48개월 : 40%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p class="program-disc">*제네시스 구매 프로그램 관련 자세한 내용은 가까운 지점 / 대리점에서 상담 바랍니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cm-accordion-item">
+                                        <a href="#" role="button" class="cm-accordion-btn">
+                                            <span class="cp-financial-program__accordion-btn">
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-title">거치형</span>
+                                                    <span class="program-desc">제네시스 구매 1년 후부터 할부 원금을 상환</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-price">월 <span class="color-point">10.0</span> 만원</span>
+                                                    <span class="program-price-info">이후 월 63.9만원</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-info">1년 거치+3년 상환 / 금리 5.7%</span>
+                                                </span>
+                                            </span>
+                                            <span class="blind"></span>
+                                            <span class="ico-accordion"></span>
+                                        </a>
+                                        <div class="cm-accordion-panel">
+                                            <div class="cm-accordion-panel-inner">
+                                                <div class="cp-financial-program__accordion-panel">
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <p class="program-text">최초 1년은 이자만 납부하고, 1년 후부터 일정한 할부금을 매월 일정하게 납부하는 방식</p>
+                                                        <div class="program-graph">
+                                                            <div class="js-picture">
+                                                                <img data-media="(min-width: 768px)" data-srcset="imgs/graph-program-overview-pc3.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                                <img data-media="(min-width: 0)" data-srcset="imgs/graph-program-overview-mo3.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <strong class="program-caption">대상 차종 - 제네시스 브랜드 전차종</strong>
+                                                        <div class="program-table">
+                                                            <table class="table-pc">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">할부 기간</th>
+                                                                        <th scope="col">할부 금리</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <p>36개월 (1년거치+2년상환)</p>
+                                                                            <p>48개월 (1년거치+3년상환)</p>
+                                                                            <p> 60개월 (1년거치+4년상환)</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                            <p>60개월 5.7%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table-mo">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">할부 기간</th>
+                                                                        <td>
+                                                                            <p>36개월 (1년거치+2년상환)</p>
+                                                                            <p>48개월 (1년거치+3년상환)</p>
+                                                                            <p> 60개월 (1년거치+4년상환)</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부 금리</th>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                            <p>60개월 5.7%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p class="program-disc">*제네시스 구매 프로그램 관련 자세한 내용은 가까운 지점 / 대리점에서 상담 바랍니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cm-accordion-item">
+                                        <a href="#" role="button" class="cm-accordion-btn">
+                                            <span class="cp-financial-program__accordion-btn">
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-title">유예형</span>
+                                                    <span class="program-desc">월납입금 부담을 줄여주는 최대 55% 유예상환</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-price">월 <span class="color-point">9.7</span> 만원</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-info">
+                                                        <span class="display-pc">36개월 기준 / 금리 5.5% <br>/ 유예율 55%</span>
+                                                        <span class="display-mo">36개월 기준 / 금리 5.5% / 유예율 55%</span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span class="blind"></span>
+                                            <span class="ico-accordion"></span>
+                                        </a>
+                                        <div class="cm-accordion-panel">
+                                            <div class="cm-accordion-panel-inner">
+                                                <div class="cp-financial-program__accordion-panel">
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <p class="program-text">총 할부금의 일부는 원금과 이자를 일정하게 납부하고, 남은 원금은 이자만 납부하다가 만기 시 한번에 상환</p>
+                                                        <div class="program-graph">
+                                                            <div class="js-picture">
+                                                                <img data-media="(min-width: 768px)" data-srcset="imgs/graph-program-overview-pc4.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                                <img data-media="(min-width: 0)" data-srcset="imgs/graph-program-overview-mo4.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <strong class="program-caption">대상 차종 - 제네시스 브랜드 전차종</strong>
+                                                        <div class="program-table">
+                                                            <table class="table-pc">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">할부 기간</th>
+                                                                        <th scope="col">할부 금리</th>
+                                                                        <th scope="col">할부 기간별 최대 유예율</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>36개월, 48개월</td>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>36개월 : 55%</p>
+                                                                            <p>48개월 : 45%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table-mo">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">할부 기간</th>
+                                                                        <td>36개월, 48개월</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부 금리</th>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부 기간별 최대 유예율</th>
+                                                                        <td>
+                                                                            <p>36개월 : 55%</p>
+                                                                            <p>48개월 : 45%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p class="program-disc">*제네시스 구매 프로그램 관련 자세한 내용은 가까운 지점 / 대리점에서 상담 바랍니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="financialContent3" class="cp-financial-program__panel-item" role="tabpanel" aria-labelledby="financialTab3" aria-hidden="true">
+                        <div class="cp-financial-program__model">
+                            <div class="cp-financial-program__model-content">
+                                <div class="cp-financial-program__model-title">
+                                    <p class="model-eyebrow">Genesis</p>
+                                    <h2 class="model-title">G80</h2>
+                                </div>
+                                <div class="cp-financial-program__model-info">
+                                    <p class="model-price">차량가 <span class="color-point">5,291</span>만원</p>
+                                    <p class="model-info">2.5T 기본모델</p>
+                                </div>
+                            </div>
+                            <div class="cp-financial-program__model-img">
+                                <img src="imgs/program-overview-G80.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="cp-financial-program__cta">
+                            <a href="#" class="cm-btn-more js-layer-opener" title="전체 차량 비교하기" data-layer-target="#financial-program-layer"><span>전체 차량 비교하기</span></a>
+                        </div>
+                        <div class="cp-financial-program__accordion">
+                            <div class="cm-accordion type-default">
+                                <div class="cm-accordion-list">
+                                    <div class="cm-accordion-item">
+                                        <a href="#" role="button" class="cm-accordion-btn">
+                                            <span class="cp-financial-program__accordion-btn">
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-title">표준형</span>
+                                                    <span class="program-desc">매월 동일한 금액으로 할부금을 상환</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-price">월 <span class="color-point">54.3</span> 만원</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-info">60개월 기준 / 금리4.5%</span>
+                                                </span>
+                                            </span>
+                                            <span class="blind"></span>
+                                            <span class="ico-accordion"></span>
+                                        </a>
+                                        <div class="cm-accordion-panel">
+                                            <div class="cm-accordion-panel-inner">
+                                                <div class="cp-financial-program__accordion-panel">
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <p class="program-text">할부 원금을 할부 기간동안 매월 일정한 금액으로 나누어 납부하는 방식</p>
+                                                        <div class="program-graph">
+                                                            <div class="js-picture">
+                                                                <img data-media="(min-width: 768px)" data-srcset="imgs/graph-program-overview-pc1.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                                <img data-media="(min-width: 0)" data-srcset="imgs/graph-program-overview-mo1.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <strong class="program-caption">대상 차종 - 제네시스 브랜드 전차종</strong>
+                                                        <div class="program-table">
+                                                            <table class="table-pc">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">할부 기간</th>
+                                                                        <th scope="col">할부 금리</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>3~60개월 (최소선수율 제한없음)</td>
+                                                                        <td>
+                                                                            <p>36개월 4.5%</p>
+                                                                            <p>48개월 5.0%</p>
+                                                                            <p>60개월 5.0%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table-mo">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">할부 기간</th>
+                                                                        <td>3~60개월 <br>(최소선수율 제한없음)</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부 금리</th>
+                                                                        <td>
+                                                                            <p>36개월 4.5%</p>
+                                                                            <p>48개월 5.0%</p>
+                                                                            <p>60개월 5.0%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p class="program-disc">*제네시스 구매 프로그램 관련 자세한 내용은 가까운 지점 / 대리점에서 상담 바랍니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cm-accordion-item">
+                                        <a href="#" role="button" class="cm-accordion-btn">
+                                            <span class="cp-financial-program__accordion-btn">
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-title">잔가보장형</span>
+                                                    <span class="program-desc">만기시 차량 반납으로 유예금 상환을 보장</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-price">월 <span class="color-point">33.8</span> 만원</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-info">
+                                                        <span class="display-pc">36개월 기준 / 금리 5.5% <br>/ 유예율 40%</span>
+                                                        <span class="display-mo">36개월 기준 / 금리 5.5% / 유예율 40%</span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span class="blind"></span>
+                                            <span class="ico-accordion"></span>
+                                        </a>
+                                        <div class="cm-accordion-panel">
+                                            <div class="cm-accordion-panel-inner">
+                                                <div class="cp-financial-program__accordion-panel">
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <p class="program-text">총 할부금의 일부는 원금과 이자를 일정하게 납부하고, 남은 원금은 이자만 납부하다가 만기 시 한번에 상환. 단, 만기에 차량반납만으로 최대유예율 수준 잔가보장</p>
+                                                        <div class="program-graph">
+                                                            <div class="js-picture">
+                                                                <img data-media="(min-width: 768px)" data-srcset="imgs/graph-program-overview-pc2.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                                <img data-media="(min-width: 0)" data-srcset="imgs/graph-program-overview-mo2.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <strong class="program-caption">대상 차종 - 제네시스 브랜드 전차종 ​​​​​​(G90 리무진 제외)</strong>
+                                                        <div class="program-table">
+                                                            <table class="table-pc">
+                                                                <colgroup>
+                                                                    <col style="width:30%">
+                                                                    <col style="width:30%">
+                                                                    <col style="width:40%">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">할부 기간</th>
+                                                                        <th scope="col">할부 금리</th>
+                                                                        <th scope="col">할부기간별 최대 유예율</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>36개월, 48개월</td>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>승용 - 36개월 : 40% / 48개월 : 35%</p>
+                                                                            <p>RV - 36개월 : 45% / 48개월 : 40%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table-mo">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">할부 기간</th>
+                                                                        <td>36개월, 48개월</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부 금리</th>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부기간별 최대 유예율</th>
+                                                                        <td>
+                                                                            <p>승용 - 36개월 : 40% / 48개월 : 35%</p>
+                                                                            <p>RV - 36개월 : 45% / 48개월 : 40%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p class="program-disc">*제네시스 구매 프로그램 관련 자세한 내용은 가까운 지점 / 대리점에서 상담 바랍니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cm-accordion-item">
+                                        <a href="#" role="button" class="cm-accordion-btn">
+                                            <span class="cp-financial-program__accordion-btn">
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-title">거치형</span>
+                                                    <span class="program-desc">제네시스 구매 1년 후부터 할부 원금을 상환</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-price">월 <span class="color-point">13.8</span> 만원</span>
+                                                    <span class="program-price-info">이후 월 88.1만원</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-info">1년 거치+3년 상환 / 금리 5.7%</span>
+                                                </span>
+                                            </span>
+                                            <span class="blind"></span>
+                                            <span class="ico-accordion"></span>
+                                        </a>
+                                        <div class="cm-accordion-panel">
+                                            <div class="cm-accordion-panel-inner">
+                                                <div class="cp-financial-program__accordion-panel">
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <p class="program-text">최초 1년은 이자만 납부하고, 1년 후부터 일정한 할부금을 매월 일정하게 납부하는 방식</p>
+                                                        <div class="program-graph">
+                                                            <div class="js-picture">
+                                                                <img data-media="(min-width: 768px)" data-srcset="imgs/graph-program-overview-pc3.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                                <img data-media="(min-width: 0)" data-srcset="imgs/graph-program-overview-mo3.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <strong class="program-caption">대상 차종 - 제네시스 브랜드 전차종</strong>
+                                                        <div class="program-table">
+                                                            <table class="table-pc">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">할부 기간</th>
+                                                                        <th scope="col">할부 금리</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <p>36개월 (1년거치+2년상환)</p>
+                                                                            <p>48개월 (1년거치+3년상환)</p>
+                                                                            <p> 60개월 (1년거치+4년상환)</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                            <p>60개월 5.7%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table-mo">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">할부 기간</th>
+                                                                        <td>
+                                                                            <p>36개월 (1년거치+2년상환)</p>
+                                                                            <p>48개월 (1년거치+3년상환)</p>
+                                                                            <p> 60개월 (1년거치+4년상환)</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부 금리</th>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                            <p>60개월 5.7%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p class="program-disc">*제네시스 구매 프로그램 관련 자세한 내용은 가까운 지점 / 대리점에서 상담 바랍니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cm-accordion-item">
+                                        <a href="#" role="button" class="cm-accordion-btn">
+                                            <span class="cp-financial-program__accordion-btn">
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-title">유예형</span>
+                                                    <span class="program-desc">월납입금 부담을 줄여주는 최대 55% 유예상환</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-price">월 <span class="color-point">13.3</span> 만원</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-info">
+                                                        <span class="display-pc">36개월 기준 / 금리 5.5% <br>/ 유예율 55%</span>
+                                                        <span class="display-mo">36개월 기준 / 금리 5.5% / 유예율 55%</span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span class="blind"></span>
+                                            <span class="ico-accordion"></span>
+                                        </a>
+                                        <div class="cm-accordion-panel">
+                                            <div class="cm-accordion-panel-inner">
+                                                <div class="cp-financial-program__accordion-panel">
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <p class="program-text">총 할부금의 일부는 원금과 이자를 일정하게 납부하고, 남은 원금은 이자만 납부하다가 만기 시 한번에 상환</p>
+                                                        <div class="program-graph">
+                                                            <div class="js-picture">
+                                                                <img data-media="(min-width: 768px)" data-srcset="imgs/graph-program-overview-pc4.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                                <img data-media="(min-width: 0)" data-srcset="imgs/graph-program-overview-mo4.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <strong class="program-caption">대상 차종 - 제네시스 브랜드 전차종</strong>
+                                                        <div class="program-table">
+                                                            <table class="table-pc">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">할부 기간</th>
+                                                                        <th scope="col">할부 금리</th>
+                                                                        <th scope="col">할부 기간별 최대 유예율</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>36개월, 48개월</td>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>36개월 : 55%</p>
+                                                                            <p>48개월 : 45%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table-mo">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">할부 기간</th>
+                                                                        <td>36개월, 48개월</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부 금리</th>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부 기간별 최대 유예율</th>
+                                                                        <td>
+                                                                            <p>36개월 : 55%</p>
+                                                                            <p>48개월 : 45%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p class="program-disc">*제네시스 구매 프로그램 관련 자세한 내용은 가까운 지점 / 대리점에서 상담 바랍니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="financialContent4" class="cp-financial-program__panel-item" role="tabpanel" aria-labelledby="financialTab4" aria-hidden="true">
+                        <div class="cp-financial-program__model">
+                            <div class="cp-financial-program__model-content">
+                                <div class="cp-financial-program__model-title">
+                                    <p class="model-eyebrow">Genesis</p>
+                                    <h2 class="model-title">G90</h2>
+                                </div>
+                                <div class="cp-financial-program__model-info">
+                                    <p class="model-price">차량가 <span class="color-point">7,903</span>만원</p>
+                                    <p class="model-info">3.8 럭셔리</p>
+                                </div>
+                            </div>
+                            <div class="cp-financial-program__model-img">
+                                <img src="imgs/program-overview-G90.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="cp-financial-program__cta">
+                            <a href="#" class="cm-btn-more js-layer-opener" title="전체 차량 비교하기" data-layer-target="#financial-program-layer"><span>전체 차량 비교하기</span></a>
+                        </div>
+                        <div class="cp-financial-program__accordion">
+                            <div class="cm-accordion type-default">
+                                <div class="cm-accordion-list">
+                                    <div class="cm-accordion-item">
+                                        <a href="#" role="button" class="cm-accordion-btn">
+                                            <span class="cp-financial-program__accordion-btn">
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-title">표준형</span>
+                                                    <span class="program-desc">매월 동일한 금액으로 할부금을 상환</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-price">월 <span class="color-point">81.0</span> 만원</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-info">60개월 기준 / 금리4.5%</span>
+                                                </span>
+                                            </span>
+                                            <span class="blind"></span>
+                                            <span class="ico-accordion"></span>
+                                        </a>
+                                        <div class="cm-accordion-panel">
+                                            <div class="cm-accordion-panel-inner">
+                                                <div class="cp-financial-program__accordion-panel">
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <p class="program-text">할부 원금을 할부 기간동안 매월 일정한 금액으로 나누어 납부하는 방식</p>
+                                                        <div class="program-graph">
+                                                            <div class="js-picture">
+                                                                <img data-media="(min-width: 768px)" data-srcset="imgs/graph-program-overview-pc1.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                                <img data-media="(min-width: 0)" data-srcset="imgs/graph-program-overview-mo1.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <strong class="program-caption">대상 차종 - 제네시스 브랜드 전차종</strong>
+                                                        <div class="program-table">
+                                                            <table class="table-pc">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">할부 기간</th>
+                                                                        <th scope="col">할부 금리</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>3~60개월 (최소선수율 제한없음)</td>
+                                                                        <td>
+                                                                            <p>36개월 4.5%</p>
+                                                                            <p>48개월 5.0%</p>
+                                                                            <p>60개월 5.0%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table-mo">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">할부 기간</th>
+                                                                        <td>3~60개월 <br>(최소선수율 제한없음)</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부 금리</th>
+                                                                        <td>
+                                                                            <p>36개월 4.5%</p>
+                                                                            <p>48개월 5.0%</p>
+                                                                            <p>60개월 5.0%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p class="program-disc">*제네시스 구매 프로그램 관련 자세한 내용은 가까운 지점 / 대리점에서 상담 바랍니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cm-accordion-item">
+                                        <a href="#" role="button" class="cm-accordion-btn">
+                                            <span class="cp-financial-program__accordion-btn">
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-title">잔가보장형</span>
+                                                    <span class="program-desc">만기시 차량 반납으로 유예금 상환을 보장</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-price">월 <span class="color-point">50.1</span> 만원</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-info">36개월 기준 / 금리 5.5% / 선수율 45% / 유예율 40%</span>
+                                                </span>
+                                            </span>
+                                            <span class="blind"></span>
+                                            <span class="ico-accordion"></span>
+                                        </a>
+                                        <div class="cm-accordion-panel">
+                                            <div class="cm-accordion-panel-inner">
+                                                <div class="cp-financial-program__accordion-panel">
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <p class="program-text">총 할부금의 일부는 원금과 이자를 일정하게 납부하고, 남은 원금은 이자만 납부하다가 만기 시 한번에 상환. 단, 만기에 차량반납만으로 최대유예율 수준 잔가보장</p>
+                                                        <div class="program-graph">
+                                                            <div class="js-picture">
+                                                                <img data-media="(min-width: 768px)" data-srcset="imgs/graph-program-overview-pc2.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                                <img data-media="(min-width: 0)" data-srcset="imgs/graph-program-overview-mo2.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <strong class="program-caption">대상 차종 - 제네시스 브랜드 전차종 ​​​​​​(G90 리무진 제외)</strong>
+                                                        <div class="program-table">
+                                                            <table class="table-pc">
+                                                                <colgroup>
+                                                                    <col style="width:30%">
+                                                                    <col style="width:30%">
+                                                                    <col style="width:40%">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">할부 기간</th>
+                                                                        <th scope="col">할부 금리</th>
+                                                                        <th scope="col">할부기간별 최대 유예율</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>36개월, 48개월</td>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>승용 - 36개월 : 40% / 48개월 : 35%</p>
+                                                                            <p>RV - 36개월 : 45% / 48개월 : 40%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table-mo">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">할부 기간</th>
+                                                                        <td>36개월, 48개월</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부 금리</th>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부기간별 최대 유예율</th>
+                                                                        <td>
+                                                                            <p>승용 - 36개월 : 40% / 48개월 : 35%</p>
+                                                                            <p>RV - 36개월 : 45% / 48개월 : 40%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p class="program-disc">*제네시스 구매 프로그램 관련 자세한 내용은 가까운 지점 / 대리점에서 상담 바랍니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cm-accordion-item">
+                                        <a href="#" role="button" class="cm-accordion-btn">
+                                            <span class="cp-financial-program__accordion-btn">
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-title">거치형</span>
+                                                    <span class="program-desc">제네시스 구매 1년 후부터 할부 원금을 상환</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-price">월 <span class="color-point">20.6</span> 만원</span>
+                                                    <span class="program-price-info">이후 월 131.4만원</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-info">1년 거치+3년 상환 / 금리 5.7% / 선수율 45%</span>
+                                                </span>
+                                            </span>
+                                            <span class="blind"></span>
+                                            <span class="ico-accordion"></span>
+                                        </a>
+                                        <div class="cm-accordion-panel">
+                                            <div class="cm-accordion-panel-inner">
+                                                <div class="cp-financial-program__accordion-panel">
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <p class="program-text">최초 1년은 이자만 납부하고, 1년 후부터 일정한 할부금을 매월 일정하게 납부하는 방식</p>
+                                                        <div class="program-graph">
+                                                            <div class="js-picture">
+                                                                <img data-media="(min-width: 768px)" data-srcset="imgs/graph-program-overview-pc3.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                                <img data-media="(min-width: 0)" data-srcset="imgs/graph-program-overview-mo3.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <strong class="program-caption">대상 차종 - 제네시스 브랜드 전차종</strong>
+                                                        <div class="program-table">
+                                                            <table class="table-pc">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">할부 기간</th>
+                                                                        <th scope="col">할부 금리</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <p>36개월 (1년거치+2년상환)</p>
+                                                                            <p>48개월 (1년거치+3년상환)</p>
+                                                                            <p> 60개월 (1년거치+4년상환)</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                            <p>60개월 5.7%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table-mo">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">할부 기간</th>
+                                                                        <td>
+                                                                            <p>36개월 (1년거치+2년상환)</p>
+                                                                            <p>48개월 (1년거치+3년상환)</p>
+                                                                            <p> 60개월 (1년거치+4년상환)</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부 금리</th>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                            <p>60개월 5.7%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p class="program-disc">*제네시스 구매 프로그램 관련 자세한 내용은 가까운 지점 / 대리점에서 상담 바랍니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cm-accordion-item">
+                                        <a href="#" role="button" class="cm-accordion-btn">
+                                            <span class="cp-financial-program__accordion-btn">
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-title">유예형</span>
+                                                    <span class="program-desc">월납입금 부담을 줄여주는 최대 55% 유예상환</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-price">월 <span class="color-point">19.9</span> 만원</span>
+                                                </span>
+                                                <span class="cp-financial-program__accordion-btn-inner">
+                                                    <span class="program-info">36개월 기준 / 금리 5.5% / 선수율 45% / 유예율 55%</span>
+                                                </span>
+                                            </span>
+                                            <span class="blind"></span>
+                                            <span class="ico-accordion"></span>
+                                        </a>
+                                        <div class="cm-accordion-panel">
+                                            <div class="cm-accordion-panel-inner">
+                                                <div class="cp-financial-program__accordion-panel">
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <p class="program-text">총 할부금의 일부는 원금과 이자를 일정하게 납부하고, 남은 원금은 이자만 납부하다가 만기 시 한번에 상환</p>
+                                                        <div class="program-graph">
+                                                            <div class="js-picture">
+                                                                <img data-media="(min-width: 768px)" data-srcset="imgs/graph-program-overview-pc4.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                                <img data-media="(min-width: 0)" data-srcset="imgs/graph-program-overview-mo4.png" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cp-financial-program__accordion-panel-content">
+                                                        <strong class="program-caption">대상 차종 - 제네시스 브랜드 전차종</strong>
+                                                        <div class="program-table">
+                                                            <table class="table-pc">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">할부 기간</th>
+                                                                        <th scope="col">할부 금리</th>
+                                                                        <th scope="col">할부 기간별 최대 유예율</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>36개월, 48개월</td>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p>36개월 : 55%</p>
+                                                                            <p>48개월 : 45%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table-mo">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">할부 기간</th>
+                                                                        <td>36개월, 48개월</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부 금리</th>
+                                                                        <td>
+                                                                            <p>36개월 5.5%</p>
+                                                                            <p>48개월 5.7%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">할부 기간별 최대 유예율</th>
+                                                                        <td>
+                                                                            <p>36개월 : 55%</p>
+                                                                            <p>48개월 : 45%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p class="program-disc">*제네시스 구매 프로그램 관련 자세한 내용은 가까운 지점 / 대리점에서 상담 바랍니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //component -->
+
+    <!--/* [D] popup */-->
+    <!--#include virtual="/apps/components/common/financial-program-popup/@include_html.html"-->
+
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<script src="clientlibs/js/main.js"></script>
+</body>
+</html>

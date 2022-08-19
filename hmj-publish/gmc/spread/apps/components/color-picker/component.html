@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Color Picker</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+</head>
+<body>
+<div id="wrap">
+
+    <!-- component -->
+    <div class="type-dark">
+        <div class="cp-color-picker">
+            <div class="cp-color-picker__inner">
+                <div class="cp-color-picker__head">
+                    <div class="cp-color-picker__title">
+                        <h2 class="el-title">Genesis Global Text</h2>
+                    </div>
+                    <div class="cp-color-picker__select">
+                        <div class="cm-select type2 js-select-wrap">
+                            <a href="#" class="cm-select__placeholder" aria-expanded="false"><span>All</span></a>
+                            <div class="cm-select__options" role="listbox" style="display: none;">
+                                <ul role="presentation">
+                                <li role="presentation"><a href="#" role="option">option1 option1 option1 option1 option1</a></li>
+                                <li role="presentation"><a href="#" role="option">option2</a></li>
+                                <li role="presentation"><a href="#" role="option">option3</a></li>
+                                <li role="presentation"><a href="#" role="option">option4</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cp-color-picker__tab">
+                    <div class="cm-tab js-tab">
+                        <div class="cm-tab-content cp-color-picker__tab-media">
+                            <!-- [D] active : .is-active 클래스 추가 -->
+                            <div class="cm-tab-item is-active" data-tabtarget="uniquename">
+                                <!-- [D] 360도 영역-->
+                                <div class="cp-color-picker__rotate">
+                                    <div class="cp-color-picker__rotate-content">
+                                        <!-- [D] 360도 컨첸츠 영역-->
+                                    </div>
+                                    <!-- [D] 360도 로딩 버튼-->
+                                    <button type="button" class="cm-btn-vr">
+                                        <svg viewBox="0 0 36 36" class="circular-chart">
+                                            <path class="circle"
+                                            stroke-dasharray="100 100"
+                                            d="M18 2.0845
+                                                a 15.9155 15.9155 0 0 1 0 31.831
+                                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            />
+                                        </svg>
+                                    <span class="blind">View Exterior</span></button>
+                                </div>
+                            </div>
+                            <div class="cm-tab-item" data-tabtarget="uniquename2">
+                                <!-- [D] 스틸컷 이미지 영역 -->
+                                <div class="js-picture">
+                                    <img data-media="(min-width: 768px)" data-srcset="http://via.placeholder.com/1920x960" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                    <img data-media="(min-width: 0px)" data-srcset="http://via.placeholder.com/750x422" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cp-swiper-tab-area">
+                            <div class="swiper-container cm-tab-btn">
+                                <ul class="swiper-wrapper">
+                                <!-- [D] active : .is-active 클래스 추가 -->
+                                <li class="swiper-slide is-active">
+                                    <div class="btn-wrap">
+                                        <a href="#" class="tab-btn" data-tabtarget-name="uniquename">Global Text <span class="line"><span class="line-inner"></span></span> </a>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="btn-wrap">
+                                        <a href="#" class="tab-btn" data-tabtarget-name="uniquename2">Global Text <span class="line"><span class="line-inner"></span></span> </a>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cm-tab-content cp-color-picker__tab-area">
+                            <!-- [D] active : .is-active 클래스 추가 -->
+                            <div class="cm-tab-item is-active" data-tabtarget="uniquename">
+                                <div class="cp-color-picker__option">
+                                    <div class="cp-color-picker__option-head">
+                                        <strong class="el-option-title">Genesis Global Text</strong>
+                                        <em class="el-option-name">Genesis Global Text</em>
+                                    </div>
+                                    <div class="cp-color-picker__option-sets">
+                                        <div class="cp-color-picker__option-set">
+                                            <ul class="cp-color-picker__color-list">
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet01-01" name="colorchips" checked>
+                                                    <label for="colorSet01-01">
+                                                        <!-- [D] 컬러칩 이미지 background-image로 등록 -->
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss1.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet01-02" name="colorchips">
+                                                    <label for="colorSet01-02">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss2.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet01-03" name="colorchips">
+                                                    <label for="colorSet01-03">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss3.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet01-04" name="colorchips">
+                                                    <label for="colorSet01-04">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss4.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet01-05" name="colorchips">
+                                                    <label for="colorSet01-05">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss5.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet01-06" name="colorchips">
+                                                    <label for="colorSet01-06">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss1.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet01-07" name="colorchips">
+                                                    <label for="colorSet01-07">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss2.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet01-08" name="colorchips">
+                                                    <label for="colorSet01-08">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss3.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet01-09" name="colorchips">
+                                                    <label for="colorSet01-09">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss4.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet01-10" name="colorchips">
+                                                    <label for="colorSet01-10">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss5.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet01-11" name="colorchips">
+                                                    <label for="colorSet01-11">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss1.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet01-12" name="colorchips">
+                                                    <label for="colorSet01-12">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss2.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet01-13" name="colorchips">
+                                                    <label for="colorSet01-13">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss3.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet01-14" name="colorchips">
+                                                    <label for="colorSet01-14">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss3.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="cp-color-picker__option-set">
+                                            <ul class="cp-color-picker__color-list">
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet02-01" name="colorchips">
+                                                    <label for="colorSet02-01">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss1.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet02-02" name="colorchips">
+                                                    <label for="colorSet02-02">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss2.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet02-03" name="colorchips">
+                                                    <label for="colorSet02-03">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss3.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cm-tab-item" data-tabtarget="uniquename2">
+                                <div class="cp-color-picker__option">
+                                    <div class="cp-color-picker__option-head">
+                                        <strong class="el-option-title">Genesis Global Text</strong>
+                                        <em class="el-option-name">Genesis Global Text</em>
+                                    </div>
+                                    <div class="cp-color-picker__option-sets">
+                                        <div class="cp-color-picker__option-set">
+                                            <ul class="cp-color-picker__color-list">
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet04-01" name="colorchips02" checked>
+                                                    <label for="colorSet04-01">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss1.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet04-02" name="colorchips02">
+                                                    <label for="colorSet04-02">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss2.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="cp-color-picker__option-set">
+                                            <ul class="cp-color-picker__color-list">
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet05-01" name="colorchips02">
+                                                    <label for="colorSet05-01">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss1.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet05-02" name="colorchips02">
+                                                    <label for="colorSet05-02">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss2.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet05-03" name="colorchips02">
+                                                    <label for="colorSet05-03">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss3.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet05-04" name="colorchips02">
+                                                    <label for="colorSet05-04">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss4.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="cp-color-picker__option-set">
+                                            <ul class="cp-color-picker__color-list">
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet06-01" name="colorchips02">
+                                                    <label for="colorSet06-01">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss1.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet06-02" name="colorchips02">
+                                                    <label for="colorSet06-02">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss2.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet06-03" name="colorchips02">
+                                                    <label for="colorSet06-03">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss3.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet06-04" name="colorchips02">
+                                                    <label for="colorSet06-04">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss4.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="colorSet06-05" name="colorchips02">
+                                                    <label for="colorSet06-05">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss5.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cm-tab js-tab" style="display: none">
+                        <div class="cm-tab-content cp-color-picker__tab-media">
+                            <!-- [D] active : .is-active 클래스 추가 -->
+                            <div class="cm-tab-item is-active" data-tabtarget="uniquename">
+                                <!-- [D] 360도 영역-->
+                                <div class="cp-color-picker__rotate">
+                                    <div class="cp-color-picker__rotate-content">
+                                        <!-- [D] 360도 컨첸츠 영역-->
+                                    </div>
+                                    <!-- [D] 360도 로딩 버튼-->
+                                    <button type="button" class="cm-btn-vr">
+                                        <svg viewBox="0 0 36 36" class="circular-chart">
+                                            <path class="circle"
+                                            stroke-dasharray="100 100"
+                                            d="M18 2.0845
+                                                a 15.9155 15.9155 0 0 1 0 31.831
+                                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            />
+                                        </svg>
+                                    <span class="blind">View Exterior</span></button>
+                                </div>
+                            </div>
+                            <div class="cm-tab-item" data-tabtarget="uniquename2">
+                                <!-- [D] 스틸컷 이미지 영역 -->
+                                <div class="js-picture">
+                                    <img data-media="(min-width: 768px)" data-srcset="http://via.placeholder.com/1920x960" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                    <img data-media="(min-width: 0px)" data-srcset="http://via.placeholder.com/750x422" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cp-swiper-tab-area">
+                            <div class="swiper-container cm-tab-btn">
+                                <ul class="swiper-wrapper">
+                                <!-- [D] active : .is-active 클래스 추가 -->
+                                <li class="swiper-slide is-active">
+                                    <div class="btn-wrap">
+                                        <a href="#" class="tab-btn" data-tabtarget-name="uniquename">Global Text <span class="line"><span class="line-inner"></span></span> </a>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="btn-wrap">
+                                        <a href="#" class="tab-btn" data-tabtarget-name="uniquename2">Global Text <span class="line"><span class="line-inner"></span></span> </a>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cm-tab-content cp-color-picker__tab-area">
+                            <!-- [D] active : .is-active 클래스 추가 -->
+                            <div class="cm-tab-item is-active" data-tabtarget="uniquename">
+                                <div class="cp-color-picker__option">
+                                    <div class="cp-color-picker__option-head">
+                                        <strong class="el-option-title">Genesis Global Text</strong>
+                                        <em class="el-option-name">Genesis Global Text</em>
+                                    </div>
+                                    <div class="cp-color-picker__option-sets">
+                                        <div class="cp-color-picker__option-set">
+                                            <ul class="cp-color-picker__color-list">
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet01-01" name="colorchips2" checked>
+                                                    <label for="t-colorSet01-01">
+                                                        <!-- [D] 컬러칩 이미지 background-image로 등록 -->
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss1.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet01-02" name="colorchips2">
+                                                    <label for="t-colorSet01-02">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss2.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet01-03" name="colorchips2">
+                                                    <label for="t-colorSet01-03">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss3.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet01-04" name="colorchips2">
+                                                    <label for="t-colorSet01-04">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss4.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet01-05" name="colorchips2">
+                                                    <label for="t-colorSet01-05">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss5.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet01-06" name="colorchips2">
+                                                    <label for="t-colorSet01-06">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss1.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet01-07" name="colorchips2">
+                                                    <label for="t-colorSet01-07">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss2.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet01-08" name="colorchips2">
+                                                    <label for="t-colorSet01-08">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss3.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet01-09" name="colorchips2">
+                                                    <label for="t-colorSet01-09">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss4.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet01-10" name="colorchips2">
+                                                    <label for="t-colorSet01-10">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss5.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet01-11" name="colorchips2">
+                                                    <label for="t-colorSet01-11">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss1.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet01-12" name="colorchips2">
+                                                    <label for="t-colorSet01-12">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss2.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet01-13" name="colorchips2">
+                                                    <label for="t-colorSet01-13">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss3.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="cp-color-picker__option-set">
+                                            <ul class="cp-color-picker__color-list">
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet02-01" name="colorchips2">
+                                                    <label for="t-colorSet02-01">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss1.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet02-02" name="colorchips2">
+                                                    <label for="t-colorSet02-02">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss2.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet02-03" name="colorchips2">
+                                                    <label for="t-colorSet02-03">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss3.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet02-04" name="colorchips2">
+                                                    <label for="t-colorSet02-04">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss4.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet02-05" name="colorchips2">
+                                                    <label for="t-colorSet02-05">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss5.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet02-06" name="colorchips2">
+                                                    <label for="t-colorSet02-06">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss1.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet02-07" name="colorchips2">
+                                                    <label for="t-colorSet02-07">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss2.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet02-08" name="colorchips2">
+                                                    <label for="t-colorSet02-08">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss3.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet02-09" name="colorchips2">
+                                                    <label for="t-colorSet02-09">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss4.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet02-10" name="colorchips2">
+                                                    <label for="t-colorSet02-10">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss5.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet02-11" name="colorchips2">
+                                                    <label for="t-colorSet02-11">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss1.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet02-12" name="colorchips2">
+                                                    <label for="t-colorSet02-12">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss2.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet02-13" name="colorchips2">
+                                                    <label for="t-colorSet02-13">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss3.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="cp-color-picker__option-set">
+                                            <ul class="cp-color-picker__color-list">
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet03-01" name="colorchips2">
+                                                    <label for="t-colorSet03-01">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@color1.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet03-02" name="colorchips2">
+                                                    <label for="t-colorSet03-02">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@color2.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet03-03" name="colorchips2">
+                                                    <label for="t-colorSet03-03">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@color3.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cm-tab-item" data-tabtarget="uniquename2">
+                                <div class="cp-color-picker__option">
+                                    <div class="cp-color-picker__option-head">
+                                        <strong class="el-option-title">Genesis Global Text</strong>
+                                        <em class="el-option-name">Genesis Global Text</em>
+                                    </div>
+                                    <div class="cp-color-picker__option-sets">
+                                        <div class="cp-color-picker__option-set">
+                                            <ul class="cp-color-picker__color-list">
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet04-01" name="colorchips02" checked>
+                                                    <label for="t-colorSet04-01">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss1.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet04-02" name="colorchips02">
+                                                    <label for="t-colorSet04-02">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss2.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet04-03" name="colorchips02">
+                                                    <label for="t-colorSet04-03">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss3.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet04-04" name="colorchips02">
+                                                    <label for="t-colorSet04-04">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss4.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet04-05" name="colorchips02">
+                                                    <label for="t-colorSet04-05">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss5.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet04-06" name="colorchips02">
+                                                    <label for="t-colorSet04-06">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss1.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet04-07" name="colorchips02">
+                                                    <label for="t-colorSet04-07">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss2.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet04-08" name="colorchips02">
+                                                    <label for="t-colorSet04-08">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss3.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet04-09" name="colorchips02">
+                                                    <label for="t-colorSet04-09">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss4.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet04-10" name="colorchips02">
+                                                    <label for="t-colorSet04-10">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss5.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet04-11" name="colorchips02">
+                                                    <label for="t-colorSet04-11">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss1.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet04-12" name="colorchips02">
+                                                    <label for="t-colorSet04-12">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss2.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet04-13" name="colorchips02">
+                                                    <label for="t-colorSet04-13">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss3.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="cp-color-picker__option-set">
+                                            <ul class="cp-color-picker__color-list">
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet05-01" name="colorchips02">
+                                                    <label for="t-colorSet05-01">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss1.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet05-02" name="colorchips02">
+                                                    <label for="t-colorSet05-02">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss2.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet05-03" name="colorchips02">
+                                                    <label for="t-colorSet05-03">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss3.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet05-04" name="colorchips02">
+                                                    <label for="t-colorSet05-04">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss4.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="cp-color-picker__color-item">
+                                                    <input type="radio" id="t-colorSet05-05" name="colorchips02">
+                                                    <label for="t-colorSet05-05">
+                                                        <span class="cp-color-picker__color" style="background-image:url('/apps/components/color-picker/imgs/@gloss5.jpg')">
+                                                            <span class="blind">color name</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cp-color-picker__disclaimer">
+                    <p class="el-disclaimer">* We strive to create the finest automobiles and related products and services for connoisseurs around the globe.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //component -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<script src="clientlibs/js/main.js"></script>
+
+<script>
+$(function () {
+    var testID = 0;
+    $('.cp-color-picker__select').on('click', 'ul li>a', function () {
+        if (testID == 0) {
+            testID = 1;
+        } else if (testID == 1) {
+            testID = 0;
+        }
+        $('.cp-color-picker__tab').find('.cm-tab').eq(testID).css('display', '').siblings().hide();
+        $('.cp-color-picker__tab').find('.cm-tab').eq(testID).trigger('reposition');
+    });
+});
+</script>
+</body>
+</html>

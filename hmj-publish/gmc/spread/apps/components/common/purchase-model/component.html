@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>차량 선택</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+</head>
+<body>
+<div id="wrap">
+    <div class="type-dark">
+        <div class="purchase-model">
+            <div class="purchase-model__img">
+                <div class="js-picture">
+                    <!-- [D] img alt 속성값에 차량명 넣어주시기 바랍니다. -->
+                    <img data-media="(min-width: 768px)" data-srcset="http://via.placeholder.com/1920x960" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="G90">
+                    <img data-media="(min-width: 0px)" data-srcset="http://via.placeholder.com/750x422" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="G90">
+                </div>
+            </div>
+            <div class="purchase-model__content">
+                <div class="purchase-model__option-wrap">
+                    <div class="purchase-model__option">
+                        <div class="purchase-model__option-text">
+                            <strong class="purchase-model__option-title">상세 차종</strong>
+                            <div class="purchase-model__option-name">G90</div>
+                        </div>
+                        <div class="cm-select type2 js-select-wrap" tabindex="0">
+                            <!-- [F] 펼침 시 : aria-expanded값 true로 변경 -->
+                            <a href="#" class="cm-select__placeholder" aria-expanded="false"><span>5.0 리무진 프레스티지</span></a>
+                            <div class="cm-select__options" role="listbox" style="display: none;">
+                                <ul role="presentation">
+                                <li role="presentation"><a href="#" role="option">5.0 리무진 프레스티지</a></li>
+                                <li role="presentation"><a href="#" role="option">5.0 프레스티지</a></li>
+                                <li role="presentation"><a href="#" role="option">3.3T 프레스티지</a></li>
+                                <li role="presentation"><a href="#" role="option">3.3T 프리미엄 럭셔리</a></li>
+                                <li role="presentation"><a href="#" role="option">3.3T 럭셔리</a></li>
+                                <li role="presentation"><a href="#" role="option">3.3T 프리미엄</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="purchase-model__option">
+                        <div class="purchase-model__option-text">
+                            <strong class="purchase-model__option-title">차량 색상</strong>
+                            <div class="purchase-model__option-name">우유니 화이트</div>
+                        </div>
+                        <ul class="purchase-model__color-list">
+                        <li class="purchase-model__color-item">
+                            <input type="radio" id="color1" name="color" checked>
+                            <!-- [D] span.blind 내 대체텍스트에 각 컬러명 넣어주시기 바랍니다. -->
+                            <label for="color1">
+                                <span class="purchase-model__color" style="background-image:url('/apps/components/common/purchase-model/imgs/@gloss1.jpg')">
+                                    <span class="blind">gloss1</span>
+                                </span>
+                            </label>
+                        </li>
+                        <li class="purchase-model__color-item">
+                            <input type="radio" id="color2" name="color">
+                            <label for="color2">
+                                <span class="purchase-model__color" style="background-image:url('/apps/components/common/purchase-model/imgs/@gloss2.jpg')">
+                                    <span class="blind">gloss2</span>
+                                </span>
+                            </label>
+                        </li>
+                        <li class="purchase-model__color-item">
+                            <input type="radio" id="color3" name="color">
+                            <label for="color3">
+                                <span class="purchase-model__color" style="background-image:url('/apps/components/common/purchase-model/imgs/@gloss3.jpg')">
+                                    <span class="blind">gloss3</span>
+                                </span>
+                            </label>
+                        </li>
+                        <li class="purchase-model__color-item">
+                            <input type="radio" id="color4" name="color">
+                            <label for="color4">
+                                <span class="purchase-model__color" style="background-image:url('/apps/components/common/purchase-model/imgs/@gloss4.jpg')">
+                                    <span class="blind">gloss4</span>
+                                </span>
+                            </label>
+                        </li>
+                        <li class="purchase-model__color-item">
+                            <input type="radio" id="color5" name="color">
+                            <label for="color5">
+                                <span class="purchase-model__color" style="background-image:url('/apps/components/common/purchase-model/imgs/@gloss5.jpg')">
+                                    <span class="blind">gloss5</span>
+                                </span>
+                            </label>
+                        </li>
+                        <li class="purchase-model__color-item">
+                            <input type="radio" id="color6" name="color">
+                            <label for="color6">
+                                <span class="purchase-model__color" style="background-image:url('/apps/components/common/purchase-model/imgs/@color1.jpg')">
+                                    <span class="blind">color1</span>
+                                </span>
+                            </label>
+                        </li>
+                        <li class="purchase-model__color-item">
+                            <input type="radio" id="color7" name="color">
+                            <label for="color7">
+                                <span class="purchase-model__color" style="background-image:url('/apps/components/common/purchase-model/imgs/@color2.jpg')">
+                                    <span class="blind">color2</span>
+                                </span>
+                            </label>
+                        </li>
+                        <li class="purchase-model__color-item">
+                            <input type="radio" id="color8" name="color">
+                            <label for="color8">
+                                <span class="purchase-model__color" style="background-image:url('/apps/components/common/purchase-model/imgs/@color3.jpg')">
+                                    <span class="blind">color3</span>
+                                </span>
+                            </label>
+                        </li>
+                        <li class="purchase-model__color-item">
+                            <input type="radio" id="color9" name="color">
+                            <label for="color9">
+                                <span class="purchase-model__color" style="background-image:url('/apps/components/common/purchase-model/imgs/@color4.jpg')">
+                                    <span class="blind">color4</span>
+                                </span>
+                            </label>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="purchase-model__notice-list">
+                <li class="purchase-model__notice-item">*차량컬러는 화면의 색상 및 해상도에 따라 실제 차량의 컬러와는 다소 차이가 있을 수 있습니다.</li>
+                <li class="purchase-model__notice-item">*시그니처 디자인 셀렉션+렉시콘 프리미엄 사운드 옵션은 구매상담 시 상세 문의바랍니다.</li>
+                </ul>
+                <div class="purchase-model__btn">
+                    <a href="#" class="cm-btn" title="이전">
+                        <span class="text">이전</span>
+                        <span class="masker"><span>이전</span></span>
+                    </a>
+                    <a href="#" class="cm-btn type-white" title="다음">
+                        <span class="text">다음</span>
+                        <span class="masker"><span>다음</span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+</body>
+</html>

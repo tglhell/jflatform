@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>FAQ</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* support css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-supportpage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+</head>
+<body>
+<div id="wrap">
+    <!-- component -->
+    <div class="type-light">
+        <div class="cp-faq" data-global-text='{
+            "Expand" : "Click to expand",
+            "Collapse" : "Click to collapse"
+        }'>
+            <div class="cp-faq__inner">
+                <div class="cp-faq__search">
+                    <div class="cp-faq__search-title">
+                        <h2 class="el-title">자주 묻는 질문 검색하기</h2>
+                    </div>
+                    <div class="cp-faq__search-area">
+                        <div class="cm-input-text type-search js-input-text-wrap">
+                            <input type="text" id="inp2" name="inp2" class="cm-input-text__input">
+                            <label for="inp2" class="cm-input-text__label">검색어를 입력해주세요</label>
+                            <span class="cm-input-line"></span>
+                            <button type="submit" class="ico-search">
+                                <span class="blind">검색</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cp-faq__content">
+                    <div class="cp-faq__tab">
+                        <!-- /* [D] select 펼침 : .is-opened 클래스 추가 */ -->
+                        <div class="cp-faq__tab-inner swiper-container">
+                            <!-- /* 모바일 구간 select 버튼 추가 */ -->
+                            <button type="button" class="faq-select-btn" aria-expanded="false">
+                                <span>전체</span>
+                            </button>
+                            <div class="cp-faq__tab-list swiper-wrapper">
+                                <!-- /* [D] 활성화 : .is-selected 클래스 추가 */ -->
+                                <div class="cp-faq__tab-item swiper-slide">
+                                    <div class="slide-inner">
+                                        <a href="#" class="cp-faq__tab-link">
+                                            <div class="faq-tab__img"><img src="imgs/@ico-all.png" alt=""></div>
+                                            <div class="faq-tab__text"><span>전체</span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cp-faq__tab-item swiper-slide is-selected">
+                                    <div class="slide-inner">
+                                        <a href="#" class="cp-faq__tab-link">
+                                            <div class="faq-tab__img"><img src="imgs/@ico-purchase.png" alt=""></div>
+                                            <div class="faq-tab__text"><span>차량구매</span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cp-faq__tab-item swiper-slide">
+                                    <div class="slide-inner">
+                                        <a href="#" class="cp-faq__tab-link">
+                                            <div class="faq-tab__img"><img src="imgs/@ico-reservation.png" alt=""></div>
+                                            <div class="faq-tab__text"><span>정비예약</span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cp-faq__tab-item swiper-slide">
+                                    <div class="slide-inner">
+                                        <a href="#" class="cp-faq__tab-link">
+                                            <div class="faq-tab__img"><img src="imgs/@ico-homepage.png" alt=""></div>
+                                            <div class="faq-tab__text"><span>홈페이지</span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cp-faq__tab-item swiper-slide">
+                                    <div class="slide-inner">
+                                        <a href="#" class="cp-faq__tab-link">
+                                            <div class="faq-tab__img"><img src="imgs/@ico-carpay.png" alt=""></div>
+                                            <div class="faq-tab__text"><span>카페이</span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cp-faq__tab-item swiper-slide">
+                                    <div class="slide-inner">
+                                        <a href="#" class="cp-faq__tab-link">
+                                            <div class="faq-tab__img"><img src="imgs/@ico-connected-service.png" alt=""></div>
+                                            <div class="faq-tab__text"><span>제네시스 커넥티드 <br class="br-pc">서비스</span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cp-faq__tab-item swiper-slide">
+                                    <div class="slide-inner">
+                                        <a href="#" class="cp-faq__tab-link">
+                                            <div class="faq-tab__img"><img src="imgs/@ico-carpay.png" alt=""></div>
+                                            <div class="faq-tab__text"><span>카페이</span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cp-faq__tab-item swiper-slide">
+                                    <div class="slide-inner">
+                                        <a href="#" class="cp-faq__tab-link">
+                                            <div class="faq-tab__img"><img src="imgs/@ico-connected-service.png" alt=""></div>
+                                            <div class="faq-tab__text"><span>제네시스 커넥티드 <br class="br-pc">서비스</span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button swiper-button-next"><button type="button"><span class="blind">Next Slide</span></button></div>
+                        <div class="swiper-button swiper-button-prev"><button type="button"><span class="blind">Previous Slide</span></button></div>
+                    </div>
+                    <div class="cp-faq__panel">
+                        <div class="cp-faq__panel-list">
+                            <div class="cp-faq__panel-item" style="display:block">
+                                <div class="cp-faq__accordion">
+                                    <div class="cp-faq__accordion-list">
+                                        <div class="cp-faq__accordion-item">
+                                            <a href="#" class="accordion-btn"><strong class="accordion-label">[차량구매]</strong><p class="accordion-title">제네시스 차량을 구입하려면 어떻게 해야하나요?</p><span class="blind"></span><span class="ico-accordion"></span></a>
+                                            <div class="accordion-panel">
+                                                <div class="accordion-panel-inner">
+                                                    <p>제네시스에서는 전국 정식 지점/대리점을 통해서만 차량을 판매하고 있습니다. 자세한 지점/대리점 위치는 홈페이지 전시장 / 센터 찾기에서 확인하실 수 있습니다. 그 이외의 유통경로(인터넷 등)로는 차량 공급이 되지 않사오니 차량 구입시 주의해주시기 바라며 전국 어느 곳에서나 같은 제품,같은 가격으로 바른거래를 실천하고 있습니다. 참고로, 제네시스 홈페이지 구매상담 신청을 이용시 고객님께서 원하시는 지점, 대리점을 선택하여 상담신청을 하시면 전문영업사원이 신속하고 친절하게 차량구매에 관한 모든 궁금증을 해결해 드리겠습니다.​​​​​​​</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cp-faq__accordion-item">
+                                            <a href="#" class="accordion-btn"><strong class="accordion-label">차량구매</strong><p class="accordion-title">차량에 부과되는 세금은 어떤 종류가 있나요</p><span class="blind"></span><span class="ico-accordion"></span></a>
+                                            <div class="accordion-panel">
+                                                <div class="accordion-panel-inner">
+                                                    <p>제네시스에서는 전국 정식 지점/대리점을 통해서만 차량을 판매하고 있습니다. 자세한 지점/대리점 위치는 홈페이지 전시장 / 센터 찾기에서 확인하실 수 있습니다. 그 이외의 유통경로(인터넷 등)로는 차량 공급이 되지 않사오니 차량 구입시 주의해주시기 바라며 전국 어느 곳에서나 같은 제품,같은 가격으로 바른거래를 실천하고 있습니다. 참고로, 제네시스 홈페이지 구매상담 신청을 이용시 고객님께서 원하시는 지점, 대리점을 선택하여 상담신청을 하시면 전문영업사원이 신속하고 친절하게 차량구매에 관한 모든 궁금증을 해결해 드리겠습니다.​​​​​​​</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cp-faq__accordion-item">
+                                            <a href="#" class="accordion-btn"><strong class="accordion-label">차량구매</strong><p class="accordion-title">차량구입에 관련된 금액은 어떠한 결제방식이 있나요?</p><span class="blind"></span><span class="ico-accordion"></span></a>
+                                            <div class="accordion-panel">
+                                                <div class="accordion-panel-inner">
+                                                    <p>제네시스에서는 전국 정식 지점/대리점을 통해서만 차량을 판매하고 있습니다. 자세한 지점/대리점 위치는 홈페이지 전시장 / 센터 찾기에서 확인하실 수 있습니다. 그 이외의 유통경로(인터넷 등)로는 차량 공급이 되지 않사오니 차량 구입시 주의해주시기 바라며 전국 어느 곳에서나 같은 제품,같은 가격으로 바른거래를 실천하고 있습니다. 참고로, 제네시스 홈페이지 구매상담 신청을 이용시 고객님께서 원하시는 지점, 대리점을 선택하여 상담신청을 하시면 전문영업사원이 신속하고 친절하게 차량구매에 관한 모든 궁금증을 해결해 드리겠습니다.​​​​​​​</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- [D] '전체' 검색 결과에 있는 경우 -->
+                        <div class="cm-results-section">
+                            <p class="cm-results-title">총 <strong>‘0’</strong>개의 검색결과가 있습니다.</p>
+                            <p class="cm-results-desc">죄송합니다. 검색하신 검색 결과를 찾을 수 없습니다.</p>
+                        </div>
+                        <!-- [D] 검색 결과가 아예 없는 경우 -->
+                        <div class="cm-results-section">
+                            <p class="cm-results-title">총 <strong>‘0’</strong>개의 검색결과가 있습니다.</p>
+                            <p class="cm-results-desc">죄송합니다. 검색하신 검색 결과를 찾을 수 없습니다. 검색 시 아래 내용을 참고해 보세요.</p>
+                            <ul class="cm-results-tips-list">
+                            <li class="cm-results-tips">검색어가 올바르게 입력되었는지 확인해 주세요.</li>
+                            <li class="cm-results-tips">다른 검색어를 입력해 보세요.</li>
+                            <li class="cm-results-tips">두 단어 이상의 경우 띄어쓰기를 사용해 보세요.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //component -->
+    <!-- component -->
+    <div class="type-light">
+        <div class="cp-faq" data-global-text='{
+            "Expand" : "Click to expand",
+            "Collapse" : "Click to collapse"
+        }'>
+            <div class="cp-faq__inner">
+                <div class="cp-faq__search">
+                    <div class="cp-faq__search-title">
+                        <h2 class="el-title">자주 묻는 질문 검색하기</h2>
+                    </div>
+                    <div class="cp-faq__search-area">
+                        <div class="cm-input-text type-search js-input-text-wrap">
+                            <input type="text" id="inp2" name="inp2" class="cm-input-text__input">
+                            <label for="inp2" class="cm-input-text__label">검색어를 입력해주세요</label>
+                            <span class="cm-input-line"></span>
+                            <button type="submit" class="ico-search">
+                                <span class="blind">검색</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cp-faq__content">
+                    <div class="cp-faq__tab">
+                        <!-- /* [D] select 펼침 : .is-opened 클래스 추가 */ -->
+                        <div class="cp-faq__tab-inner swiper-container">
+                            <!-- /* 모바일 구간 select 버튼 추가 */ -->
+                            <button type="button" class="faq-select-btn" aria-expanded="false">
+                                <span>전체</span>
+                            </button>
+                            <div class="cp-faq__tab-list swiper-wrapper">
+                                <!-- /* [D] 활성화 : .is-selected 클래스 추가 */ -->
+                                <div class="cp-faq__tab-item swiper-slide">
+                                    <div class="slide-inner">
+                                        <a href="#" class="cp-faq__tab-link">
+                                            <div class="faq-tab__img"><img src="imgs/@ico-all.png" alt=""></div>
+                                            <div class="faq-tab__text"><span>전체</span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cp-faq__tab-item swiper-slide">
+                                    <div class="slide-inner">
+                                        <a href="#" class="cp-faq__tab-link">
+                                            <div class="faq-tab__img"><img src="imgs/@ico-purchase.png" alt=""></div>
+                                            <div class="faq-tab__text"><span>차량구매</span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cp-faq__tab-item swiper-slide">
+                                    <div class="slide-inner">
+                                        <a href="#" class="cp-faq__tab-link">
+                                            <div class="faq-tab__img"><img src="imgs/@ico-reservation.png" alt=""></div>
+                                            <div class="faq-tab__text"><span>정비예약</span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cp-faq__tab-item swiper-slide">
+                                    <div class="slide-inner">
+                                        <a href="#" class="cp-faq__tab-link">
+                                            <div class="faq-tab__img"><img src="imgs/@ico-homepage.png" alt=""></div>
+                                            <div class="faq-tab__text"><span>홈페이지</span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cp-faq__tab-item swiper-slide">
+                                    <div class="slide-inner">
+                                        <a href="#" class="cp-faq__tab-link">
+                                            <div class="faq-tab__img"><img src="imgs/@ico-carpay.png" alt=""></div>
+                                            <div class="faq-tab__text"><span>카페이</span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cp-faq__tab-item swiper-slide is-selected">
+                                    <div class="slide-inner">
+                                        <a href="#" class="cp-faq__tab-link">
+                                            <div class="faq-tab__img"><img src="imgs/@ico-connected-service.png" alt=""></div>
+                                            <div class="faq-tab__text"><span>제네시스 커넥티드 <br class="br-pc">서비스</span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cp-faq__tab-item swiper-slide">
+                                    <div class="slide-inner">
+                                        <a href="#" class="cp-faq__tab-link">
+                                            <div class="faq-tab__img"><img src="imgs/@ico-carpay.png" alt=""></div>
+                                            <div class="faq-tab__text"><span>카페이</span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cp-faq__tab-item swiper-slide">
+                                    <div class="slide-inner">
+                                        <a href="#" class="cp-faq__tab-link">
+                                            <div class="faq-tab__img"><img src="imgs/@ico-connected-service.png" alt=""></div>
+                                            <div class="faq-tab__text"><span>제네시스 커넥티드 <br class="br-pc">서비스</span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button swiper-button-next"><button type="button"><span class="blind">Next Slide</span></button></div>
+                        <div class="swiper-button swiper-button-prev"><button type="button"><span class="blind">Previous Slide</span></button></div>
+                    </div>
+                    <div class="cp-faq__panel">
+                        <div class="cp-faq__panel-list">
+                            <div class="cp-faq__panel-item" style="display:block">
+                                <div class="cp-faq__tab-depth2 cp-faq__dtab-area swiper-container">
+                                    <div class="depth2-list swiper-wrapper">
+                                        <!-- /* [D] 활성화 : .is-selected 클래스 추가 */ -->
+                                        <div class="depth2-item cp-faq__dtab-item swiper-slide is-selected"><div class="slide-inner"><a href="#" class="depth2-link" data-panel-for="{all}">전체</a></div></div>
+                                        <div class="depth2-item cp-faq__dtab-item swiper-slide"><div class="slide-inner"><a href="#" class="depth2-link" data-panel-for="unique-tab1">가입</a></div></div>
+                                        <div class="depth2-item cp-faq__dtab-item swiper-slide"><div class="slide-inner"><a href="#" class="depth2-link" data-panel-for="unique-tab2">해지</a></div></div>
+                                        <div class="depth2-item cp-faq__dtab-item swiper-slide"><div class="slide-inner"><a href="#" class="depth2-link" data-panel-for="unique-tab3">변경</a></div></div>
+                                        <div class="depth2-item cp-faq__dtab-item swiper-slide"><div class="slide-inner"><a href="#" class="depth2-link" data-panel-for="unique-tab4">오류</a></div></div>
+                                        <div class="depth2-item cp-faq__dtab-item swiper-slide"><div class="slide-inner"><a href="#" class="depth2-link" data-panel-for="unique-tab5">A/S</a></div></div>
+                                        <div class="depth2-item cp-faq__dtab-item swiper-slide"><div class="slide-inner"><a href="#" class="depth2-link" data-panel-for="unique-tab6">요금</a></div></div>
+                                        <div class="depth2-item cp-faq__dtab-item swiper-slide"><div class="slide-inner"><a href="#" class="depth2-link" data-panel-for="unique-tab7">미납</a></div></div>
+                                        <div class="depth2-item cp-faq__dtab-item swiper-slide"><div class="slide-inner"><a href="#" class="depth2-link" data-panel-for="unique-tab8">서비스이용</a></div></div>
+                                    </div>
+                                </div>
+                                <div class="cp-faq__panel-list">
+                                    <div class="cp-faq__panel-item" data-panel-id="unique-tab1">
+                                        <div class="cp-faq__accordion">
+                                            <div class="cp-faq__accordion-list">
+                                                <div class="cp-faq__accordion-item">
+                                                    <a href="#" class="accordion-btn"><strong class="accordion-label">[가입]</strong><p class="accordion-title">제네시스 차량을 구입하려면 어떻게 해야하나요?</p><span class="blind"></span><span class="ico-accordion"></span></a>
+                                                    <div class="accordion-panel">
+                                                        <div class="accordion-panel-inner">
+                                                            <p>제네시스에서는 전국 정식 지점/대리점을 통해서만 차량을 판매하고 있습니다. 자세한 지점/대리점 위치는 홈페이지 전시장 / 센터 찾기에서 확인하실 수 있습니다. 그 이외의 유통경로(인터넷 등)로는 차량 공급이 되지 않사오니 차량 구입시 주의해주시기 바라며 전국 어느 곳에서나 같은 제품,같은 가격으로 바른거래를 실천하고 있습니다. 참고로, 제네시스 홈페이지 구매상담 신청을 이용시 고객님께서 원하시는 지점, 대리점을 선택하여 상담신청을 하시면 전문영업사원이 신속하고 친절하게 차량구매에 관한 모든 궁금증을 해결해 드리겠습니다.​​​​​​​</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cp-faq__accordion-item">
+                                                    <a href="#" class="accordion-btn"><strong class="accordion-label">[가입]</strong><p class="accordion-title">차량에 부과되는 세금은 어떤 종류가 있나요</p><span class="blind"></span><span class="ico-accordion"></span></a>
+                                                    <div class="accordion-panel">
+                                                        <div class="accordion-panel-inner">
+                                                            <p>제네시스에서는 전국 정식 지점/대리점을 통해서만 차량을 판매하고 있습니다. 자세한 지점/대리점 위치는 홈페이지 전시장 / 센터 찾기에서 확인하실 수 있습니다. 그 이외의 유통경로(인터넷 등)로는 차량 공급이 되지 않사오니 차량 구입시 주의해주시기 바라며 전국 어느 곳에서나 같은 제품,같은 가격으로 바른거래를 실천하고 있습니다. 참고로, 제네시스 홈페이지 구매상담 신청을 이용시 고객님께서 원하시는 지점, 대리점을 선택하여 상담신청을 하시면 전문영업사원이 신속하고 친절하게 차량구매에 관한 모든 궁금증을 해결해 드리겠습니다.​​​​​​​</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cp-faq__panel-item" data-panel-id="unique-tab2">
+                                        <div class="cp-faq__accordion">
+                                            <div class="cp-faq__accordion-list">
+                                                <div class="cp-faq__accordion-item">
+                                                    <a href="#" class="accordion-btn"><strong class="accordion-label">[해지]</strong><p class="accordion-title">제네시스 차량을 구입하려면 어떻게 해야하나요?</p><span class="blind"></span><span class="ico-accordion"></span></a>
+                                                    <div class="accordion-panel">
+                                                        <div class="accordion-panel-inner">
+                                                            <p>제네시스에서는 전국 정식 지점/대리점을 통해서만 차량을 판매하고 있습니다. 자세한 지점/대리점 위치는 홈페이지 전시장 / 센터 찾기에서 확인하실 수 있습니다. 그 이외의 유통경로(인터넷 등)로는 차량 공급이 되지 않사오니 차량 구입시 주의해주시기 바라며 전국 어느 곳에서나 같은 제품,같은 가격으로 바른거래를 실천하고 있습니다. 참고로, 제네시스 홈페이지 구매상담 신청을 이용시 고객님께서 원하시는 지점, 대리점을 선택하여 상담신청을 하시면 전문영업사원이 신속하고 친절하게 차량구매에 관한 모든 궁금증을 해결해 드리겠습니다.​​​​​​​</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cp-faq__panel-item" data-panel-id="unique-tab3">
+                                        <div class="cp-faq__accordion">
+                                            <div class="cp-faq__accordion-list">
+                                                <div class="cp-faq__accordion-item">
+                                                    <a href="#" class="accordion-btn"><strong class="accordion-label">[변경]</strong><p class="accordion-title">제네시스 차량을 구입하려면 어떻게 해야하나요?</p><span class="blind"></span><span class="ico-accordion"></span></a>
+                                                    <div class="accordion-panel">
+                                                        <div class="accordion-panel-inner">
+                                                            <p>제네시스에서는 전국 정식 지점/대리점을 통해서만 차량을 판매하고 있습니다. 자세한 지점/대리점 위치는 홈페이지 전시장 / 센터 찾기에서 확인하실 수 있습니다. 그 이외의 유통경로(인터넷 등)로는 차량 공급이 되지 않사오니 차량 구입시 주의해주시기 바라며 전국 어느 곳에서나 같은 제품,같은 가격으로 바른거래를 실천하고 있습니다. 참고로, 제네시스 홈페이지 구매상담 신청을 이용시 고객님께서 원하시는 지점, 대리점을 선택하여 상담신청을 하시면 전문영업사원이 신속하고 친절하게 차량구매에 관한 모든 궁금증을 해결해 드리겠습니다.​​​​​​​</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cp-faq__panel-item" data-panel-id="unique-tab4">
+                                        <div class="cp-faq__accordion">
+                                            <div class="cp-faq__accordion-list">
+                                                <div class="cp-faq__accordion-item">
+                                                    <a href="#" class="accordion-btn"><strong class="accordion-label">[오류]</strong><p class="accordion-title">제네시스 차량을 구입하려면 어떻게 해야하나요?</p><span class="blind"></span><span class="ico-accordion"></span></a>
+                                                    <div class="accordion-panel">
+                                                        <div class="accordion-panel-inner">
+                                                            <p>제네시스에서는 전국 정식 지점/대리점을 통해서만 차량을 판매하고 있습니다. 자세한 지점/대리점 위치는 홈페이지 전시장 / 센터 찾기에서 확인하실 수 있습니다. 그 이외의 유통경로(인터넷 등)로는 차량 공급이 되지 않사오니 차량 구입시 주의해주시기 바라며 전국 어느 곳에서나 같은 제품,같은 가격으로 바른거래를 실천하고 있습니다. 참고로, 제네시스 홈페이지 구매상담 신청을 이용시 고객님께서 원하시는 지점, 대리점을 선택하여 상담신청을 하시면 전문영업사원이 신속하고 친절하게 차량구매에 관한 모든 궁금증을 해결해 드리겠습니다.​​​​​​​</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cp-faq__panel-item" data-panel-id="unique-tab5">
+                                        <div class="cp-faq__accordion">
+                                            <div class="cp-faq__accordion-list">
+                                                <div class="cp-faq__accordion-item">
+                                                    <a href="#" class="accordion-btn"><strong class="accordion-label">[A/S]</strong><p class="accordion-title">제네시스 차량을 구입하려면 어떻게 해야하나요?</p><span class="blind"></span><span class="ico-accordion"></span></a>
+                                                    <div class="accordion-panel">
+                                                        <div class="accordion-panel-inner">
+                                                            <p>제네시스에서는 전국 정식 지점/대리점을 통해서만 차량을 판매하고 있습니다. 자세한 지점/대리점 위치는 홈페이지 전시장 / 센터 찾기에서 확인하실 수 있습니다. 그 이외의 유통경로(인터넷 등)로는 차량 공급이 되지 않사오니 차량 구입시 주의해주시기 바라며 전국 어느 곳에서나 같은 제품,같은 가격으로 바른거래를 실천하고 있습니다. 참고로, 제네시스 홈페이지 구매상담 신청을 이용시 고객님께서 원하시는 지점, 대리점을 선택하여 상담신청을 하시면 전문영업사원이 신속하고 친절하게 차량구매에 관한 모든 궁금증을 해결해 드리겠습니다.​​​​​​​</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cp-faq__panel-item" data-panel-id="unique-tab6">
+                                        <div class="cp-faq__accordion">
+                                            <div class="cp-faq__accordion-list">
+                                                <div class="cp-faq__accordion-item">
+                                                    <a href="#" class="accordion-btn"><strong class="accordion-label">[요금]</strong><p class="accordion-title">제네시스 차량을 구입하려면 어떻게 해야하나요?</p><span class="blind"></span><span class="ico-accordion"></span></a>
+                                                    <div class="accordion-panel">
+                                                        <div class="accordion-panel-inner">
+                                                            <p>제네시스에서는 전국 정식 지점/대리점을 통해서만 차량을 판매하고 있습니다. 자세한 지점/대리점 위치는 홈페이지 전시장 / 센터 찾기에서 확인하실 수 있습니다. 그 이외의 유통경로(인터넷 등)로는 차량 공급이 되지 않사오니 차량 구입시 주의해주시기 바라며 전국 어느 곳에서나 같은 제품,같은 가격으로 바른거래를 실천하고 있습니다. 참고로, 제네시스 홈페이지 구매상담 신청을 이용시 고객님께서 원하시는 지점, 대리점을 선택하여 상담신청을 하시면 전문영업사원이 신속하고 친절하게 차량구매에 관한 모든 궁금증을 해결해 드리겠습니다.​​​​​​​</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cp-faq__panel-item" data-panel-id="unique-tab7">
+                                        <div class="cp-faq__accordion">
+                                            <div class="cp-faq__accordion-list">
+                                                <div class="cp-faq__accordion-item">
+                                                    <a href="#" class="accordion-btn"><strong class="accordion-label">[미납]</strong><p class="accordion-title">제네시스 차량을 구입하려면 어떻게 해야하나요?</p><span class="blind"></span><span class="ico-accordion"></span></a>
+                                                    <div class="accordion-panel">
+                                                        <div class="accordion-panel-inner">
+                                                            <p>제네시스에서는 전국 정식 지점/대리점을 통해서만 차량을 판매하고 있습니다. 자세한 지점/대리점 위치는 홈페이지 전시장 / 센터 찾기에서 확인하실 수 있습니다. 그 이외의 유통경로(인터넷 등)로는 차량 공급이 되지 않사오니 차량 구입시 주의해주시기 바라며 전국 어느 곳에서나 같은 제품,같은 가격으로 바른거래를 실천하고 있습니다. 참고로, 제네시스 홈페이지 구매상담 신청을 이용시 고객님께서 원하시는 지점, 대리점을 선택하여 상담신청을 하시면 전문영업사원이 신속하고 친절하게 차량구매에 관한 모든 궁금증을 해결해 드리겠습니다.​​​​​​​</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cp-faq__panel-item" data-panel-id="unique-tab8">
+                                        <div class="cp-faq__accordion">
+                                            <div class="cp-faq__accordion-list">
+                                                <div class="cp-faq__accordion-item">
+                                                    <a href="#" class="accordion-btn"><strong class="accordion-label">[서비스이용]</strong><p class="accordion-title">제네시스 차량을 구입하려면 어떻게 해야하나요?</p><span class="blind"></span><span class="ico-accordion"></span></a>
+                                                    <div class="accordion-panel">
+                                                        <div class="accordion-panel-inner">
+                                                            <p>제네시스에서는 전국 정식 지점/대리점을 통해서만 차량을 판매하고 있습니다. 자세한 지점/대리점 위치는 홈페이지 전시장 / 센터 찾기에서 확인하실 수 있습니다. 그 이외의 유통경로(인터넷 등)로는 차량 공급이 되지 않사오니 차량 구입시 주의해주시기 바라며 전국 어느 곳에서나 같은 제품,같은 가격으로 바른거래를 실천하고 있습니다. 참고로, 제네시스 홈페이지 구매상담 신청을 이용시 고객님께서 원하시는 지점, 대리점을 선택하여 상담신청을 하시면 전문영업사원이 신속하고 친절하게 차량구매에 관한 모든 궁금증을 해결해 드리겠습니다.​​​​​​​</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //component -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<script src="clientlibs/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+.cp-error-500 {
+  display: table;
+  max-width: 1920px;
+  width: 100%;
+  height: 80.8vh;
+  margin: 0 auto;
+}
+
+.cp-error-500__inner {
+  display: table-cell;
+  width: 100%;
+  padding: 120px 80px 115px;
+  padding: 12rem 8rem 11.5rem;
+  text-align: center;
+  word-break: keep-all;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cp-error-500__content:before {
+  display: inline-block;
+  width: 64px;
+  width: 6.4rem;
+  height: 64px;
+  height: 6.4rem;
+  background: url("/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-warning.png") center center no-repeat;
+  background-size: contain;
+  content: '';
+}
+
+.cp-error-500__content-inner {
+  margin-top: 30px;
+  margin-top: 3rem;
+}
+
+.cp-error-500__title {
+  display: block;
+  font-family: "genesis-head-office-light", sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  font-size: 3.6rem;
+  letter-spacing: -0.027em;
+}
+
+.cp-error-500__desc {
+  margin-top: 16px;
+  margin-top: 1.6rem;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 26px;
+  line-height: 2.6rem;
+  color: #262626;
+}
+
+.cp-error-500__desc p {
+  margin-top: 26px;
+  margin-top: 2.6rem;
+}
+
+.cp-error-500__desc p:first-child {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .cp-error-500__inner {
+    padding: 120px 30px 114px;
+    padding: 12rem 3rem 11.4rem;
+  }
+  .cp-error-500__content:before {
+    width: 50px;
+    width: 5rem;
+    height: 50px;
+    height: 5rem;
+    background-image: url("/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-warning-mo.png");
+  }
+  .cp-error-500__content-inner {
+    margin-top: 31px;
+    margin-top: 3.1rem;
+  }
+  .cp-error-500__title {
+    font-size: 25px;
+    font-size: 2.5rem;
+  }
+  .cp-error-500__desc {
+    margin-top: 19px;
+    margin-top: 1.9rem;
+    line-height: 28px;
+    line-height: 2.8rem;
+  }
+  .cp-error-500__desc p {
+    margin-top: 29px;
+    margin-top: 2.9rem;
+  }
+}

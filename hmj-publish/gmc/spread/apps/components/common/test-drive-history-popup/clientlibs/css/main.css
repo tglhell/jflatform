@@ -1,0 +1,228 @@
+.testdrive-history-popup.cm-layer.type-alert .cm-layer__title {
+  padding: 24px 80px 24px 38px;
+  padding: 2.4rem 8rem 2.4rem 3.8rem;
+}
+
+.testdrive-history-popup.cm-layer.type-alert .cm-layer__content {
+  padding: 42px 40px 43px;
+  padding: 4.2rem 4rem 4.3rem;
+  text-align: left;
+}
+
+.testdrive-history-popup.cm-layer.type-alert .cm-layer__cta {
+  margin-top: 50px;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.testdrive-history-popup.cm-layer.type-alert .cm-layer__cta .cm-btn.type2 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  min-width: 240px;
+  min-width: 24rem;
+  height: 56px;
+  height: 5.6rem;
+  line-height: 58px;
+  line-height: 5.8rem;
+}
+
+.testdrive-history-popup.cm-layer.type-alert .cm-layer__cta .cm-btn.type2 .masker span {
+  height: 56px;
+  height: 5.6rem;
+  line-height: 58px;
+  line-height: 5.8rem;
+}
+
+.testdrive-history-popup.cm-layer.type-alert .cm-layer__cta .cm-btn-more {
+  margin-top: 30px;
+  margin-top: 3rem;
+  padding-right: 13px;
+  padding-right: 1.3rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 18px;
+  line-height: 1.8rem;
+}
+
+.testdrive-history-popup__desc p {
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #262626;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+
+.testdrive-history-popup__info {
+  position: relative;
+  padding-top: 20px;
+  padding-top: 2rem;
+}
+
+.testdrive-history-popup__info.input-type1 {
+  margin-top: 33px;
+  margin-top: 3.3rem;
+}
+
+.testdrive-history-popup__info.input-type2 {
+  margin-top: 42px;
+  margin-top: 4.2rem;
+}
+
+.testdrive-history-popup__info.input-type2 .cm-input-wrap {
+  margin-top: 3px;
+  margin-top: 0.3rem;
+}
+
+.testdrive-history-popup__info .info-label {
+  position: absolute;
+  top: 0;
+  padding: 0 2px;
+  padding: 0 0.2rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #262626;
+  line-height: 20px;
+  line-height: 2rem;
+}
+
+.testdrive-history-popup__info .cm-input-wrap {
+  margin-top: 5px;
+  margin-top: 0.5rem;
+  position: relative;
+}
+
+.testdrive-history-popup__info .cm-input-wrap.is-validated .cm-input-text:before {
+  display: none;
+}
+
+.testdrive-history-popup__info .cm-input-wrap .left-form-wrap {
+  font-size: 0;
+}
+
+.testdrive-history-popup__info .cm-input-wrap .left-form-wrap.type-tel-number .cm-input-text {
+  display: inline-block;
+  width: 27.3%;
+}
+
+.testdrive-history-popup__info .cm-input-wrap .cm-select {
+  display: inline-block;
+  width: 27.5%;
+}
+
+.testdrive-history-popup__info .cm-input-wrap .dash {
+  display: inline-block;
+  height: 43px;
+  height: 4.3rem;
+  font-style: normal;
+  margin: 0 15px 0 16px;
+  margin: 0 1.5rem 0 1.6rem;
+  font-size: 0;
+  vertical-align: top;
+}
+
+.testdrive-history-popup__info .cm-input-wrap .dash:before {
+  display: inline-block;
+  width: 8px;
+  height: 1px;
+  background: #000;
+  vertical-align: middle;
+  content: '';
+}
+
+.testdrive-history-popup__info .cm-input-wrap .dash:after {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  content: '';
+}
+
+.testdrive-history-popup__info .cm-input-message {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.testdrive-history-popup .cm-btn-more.is-default span:before {
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .testdrive-history-popup.cm-layer.type-alert .cm-layer__title {
+    padding: 17px 60px 19px 23px;
+    padding: 1.7rem 6rem 1.9rem 2.3rem;
+  }
+  .testdrive-history-popup.cm-layer.type-alert .cm-layer__content {
+    padding: 35px 25px 46px;
+    padding: 3.5rem 2.5rem 4.6rem;
+  }
+  .testdrive-history-popup.cm-layer.type-alert .cm-layer__cta {
+    margin-top: 39px;
+    margin-top: 3.9rem;
+  }
+  .testdrive-history-popup.cm-layer.type-alert .cm-layer__cta .cm-btn-more {
+    margin-top: 29px;
+    margin-top: 2.9rem;
+    padding-right: 11px;
+    padding-right: 1.1rem;
+  }
+  .testdrive-history-popup.cm-layer.type-alert .cm-layer__cta .cm-btn-more span {
+    top: 0;
+  }
+  .testdrive-history-popup__desc p {
+    padding-right: 11px;
+    padding-right: 1.1rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 23px;
+    line-height: 2.3rem;
+  }
+  .testdrive-history-popup__desc p .mobile-hide {
+    display: none;
+  }
+  .testdrive-history-popup__info {
+    position: relative;
+    padding-top: 13px;
+    padding-top: 1.3rem;
+  }
+  .testdrive-history-popup__info.input-type1 {
+    margin-top: 35px;
+    margin-top: 3.5rem;
+  }
+  .testdrive-history-popup__info.input-type2 {
+    margin-top: 47px;
+    margin-top: 4.7rem;
+  }
+  .testdrive-history-popup__info.input-type2 .cm-input-wrap {
+    margin-top: 7px;
+    margin-top: 0.7rem;
+  }
+  .testdrive-history-popup__info .info-label {
+    padding: 0;
+    font-size: 13px;
+    font-size: 1.3rem;
+    line-height: 13px;
+    line-height: 1.3rem;
+  }
+  .testdrive-history-popup__info .cm-input-wrap {
+    margin-top: 6px;
+    margin-top: 0.6rem;
+  }
+  .testdrive-history-popup__info .cm-input-wrap .cm-select {
+    width: 29%;
+  }
+  .testdrive-history-popup__info .cm-input-wrap .dash {
+    height: 33px;
+    height: 3.3rem;
+    margin: 0 6px 0 7px;
+    margin: 0 0.6rem 0 0.7rem;
+  }
+  .testdrive-history-popup__info .cm-input-wrap .dash:before {
+    width: 5px;
+  }
+  .testdrive-history-popup__info .cm-input-message {
+    position: static;
+    margin-top: 6px;
+    margin-top: 0.6rem;
+    padding-top: 0;
+  }
+}

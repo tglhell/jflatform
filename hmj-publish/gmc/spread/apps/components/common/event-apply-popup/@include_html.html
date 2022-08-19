@@ -1,0 +1,180 @@
+<div class="cm-layer type-alert event-apply-popup js-cm-layer" id="event-apply-layer">
+    <span class="cm-layer__dimmed"></span>
+    <div class="cm-layer__body">
+        <div class="cm-layer__wrapper" role="dialog">
+            <div class="cm-layer__title">
+                <strong>신청여부 확인하기</strong>
+            </div>
+            <div class="cm-layer__content">
+                <!-- [D] 활성화 시 : display:block 처리 -->
+                <div class="event-apply-popup__content step-apply" style="display:block">
+                    <div class="event-apply-popup__desc">
+                        <p>GENESIS EXPERIENCE를 신청하신 고객님의 이름과 휴대전화 번호를 입력하시면 이벤트 신청 내역을 확인하실 수 있습니다.</p>
+                    </div>
+                    <div class="event-apply-popup__info input-type1">
+                        <div class="info-label"><span>성명</span></div>
+                        <!-- [D] 에러 시 : has-error 클래스 추가 -->
+                        <div class="cm-input-wrap">
+                            <div class="cm-input-text js-input-text-wrap">
+                                <input type="text" id="inp1" name="inpTxt" class="cm-input-text__input">
+                                <label for="inp1" class="cm-input-text__label">성명</label>
+                            </div>
+                            <div class="cm-input-message">
+                                <!-- [D] 에러/유효성 메세지 노출 시 : display:block 처리 -->
+                                <p class="cm-message-error" style="display:none">성명을 입력하세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-apply-popup__info input-type2">
+                        <div class="info-label"><span>휴대전화번호</span></div>
+                        <div class="left-form-wrap type-tel-number">
+                            <!-- [D] 에러 시 : has-error 클래스 추가 -->
+                            <div class="cm-input-wrap">
+                                <div class="select-wrap">
+                                    <div class="cm-select type2 js-select-wrap has-error">
+                                        <a href="#" class="cm-select__placeholder" aria-expanded="false">
+                                            <span>010</span>
+                                        </a>
+                                        <div class="cm-select__options" role="listbox" style="display: none;">
+                                            <ul role="presentation">
+                                            <li role="presentation"><a href="#" role="option">010</a></li>
+                                            <li role="presentation"><a href="#" role="option">011</a></li>
+                                            <li role="presentation"><a href="#" role="option">02</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <em class="dash"></em>
+                                    <div class="cm-input-text js-input-text-wrap">
+                                        <input type="tel" id="inp3" name="inpTel" class="cm-input-text__input">
+                                    </div>
+                                    <em class="dash"></em>
+                                    <div class="cm-input-text js-input-text-wrap">
+                                        <input type="tel" id="inp4" name="inpTel" class="cm-input-text__input">
+                                    </div>
+                                </div>
+                                <div class="cm-input-message">
+                                    <!-- [D] 에러/유효성 메세지 노출 시 : display:block 처리 -->
+                                    <p class="cm-message-error" style="display:none">휴대전화 번호를 올바르게 입력해주세요.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-btn-wrap">
+                            <button type="submit" class="cm-btn type-white">
+                                <span class="text">인증번호 전송</span>
+                                <span class="masker"><span>인증번호 전송</span></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="event-apply-popup__info input-type3">
+                        <div class="blind"><span>인증번호</span></div>
+                        <div class="left-form-wrap">
+                            <!-- [D] 유효성 통과시 : is-validated 클래스 추가 -->
+                            <!-- [D] 에러 시 : has-error 클래스 추가 -->
+                            <div class="cm-input-wrap">
+                                <div class="cm-input-text js-input-text-wrap">
+                                    <input type="text" id="inp5" name="inpTxt5" class="cm-input-text__input">
+                                    <label for="inp5" class="cm-input-text__label">인증번호</label>
+                                </div>
+                                <div class="cm-input-message">
+                                    <!-- [D] 에러/유효성 메세지 노출 시 : display:block 처리 -->
+                                    <p class="cm-message-error" style="display:none">휴대전화 번호로 전송된 인증번호를 올바르게 입력해주세요.</p>
+                                    <p class="cm-message-validate" style="display:none">인증번호가 확인 되었습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-btn-wrap">
+                            <button type="submit" class="cm-btn type-white">
+                                <span class="text">인증번호 확인</span>
+                                <span class="masker"><span>인증번호 확인</span></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cm-layer__cta">
+                        <button type="button" class="cm-btn">
+                            <span class="text">확인</span>
+                            <span class="masker"><span>확인</span></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="event-apply-popup__content step-status" style="display:none">
+                    <div class="cm-table type-column">
+                        <table>
+                            <caption class="blind">차량 신청 정보 확인 목록</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">신청일</th>
+                                    <th scope="col">신청차량</th>
+                                    <th scope="col">상태</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>5차 : 2019.12.17 (화) ~ 2019.12.23 (월)</td>
+                                    <td>G90</td>
+                                    <td>신청완료</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="cm-layer__cta">
+                        <button type="button" class="cm-btn type-white">
+                            <span class="text">신청 취소</span>
+                            <span class="masker"><span>신청 취소</span></span>
+                        </button>
+                        <button type="button" class="cm-btn">
+                            <span class="text">확인</span>
+                            <span class="masker"><span>확인</span></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="event-apply-popup__content step-cancel" style="display:none">
+                    <div class="cm-layer__message">
+                        <p>신청을 취소 하시겠습니까?</p>
+                    </div>
+                    <div class="cm-layer__cta">
+                        <button type="button" class="cm-btn">
+                            <span class="text">확인</span>
+                            <span class="masker"><span>확인</span></span>
+                        </button>
+                        <button type="button" class="cm-btn type-white">
+                            <span class="text">취소</span>
+                            <span class="masker"><span>취소</span></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="event-apply-popup__content step-cancel-complete" style="display:none">
+                    <div class="cm-layer__message">
+                        <p>취소가 완료 되었습니다.</p>
+                    </div>
+                    <div class="cm-layer__cta">
+                        <button type="button" class="cm-btn">
+                            <span class="text">확인</span>
+                            <span class="masker"><span>확인</span></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="event-apply-popup__content step-cancel-error" style="display:none">
+                    <div class="cm-layer__message">
+                        <p>죄송합니다. 현재 일시적인 오류로 서비스 이용이 불가능 합니다. 잠시 후 다시 시도해 주세요.</p>
+                    </div>
+                    <div class="cm-layer__cta">
+                        <button type="button" class="cm-btn">
+                            <span class="text">확인</span>
+                            <span class="masker"><span>확인</span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="cm-layer__close-wrap">
+                <button type="button" class="js-layer-closer">
+                    <span class="js-svg-icon" data-icon="svg-cross"></span>
+                    <span class="blind">닫기</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

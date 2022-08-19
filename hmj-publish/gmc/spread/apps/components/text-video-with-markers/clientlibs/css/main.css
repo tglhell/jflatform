@@ -1,0 +1,490 @@
+.type-light .cp-vid-marker .cm-btn {
+  background-color: #fff;
+}
+
+.type-light .cp-vid-marker .cm-btn:after {
+  border-color: #111;
+}
+
+.type-light .cp-vid-marker .cm-btn .text {
+  color: #000;
+}
+
+.type-light .cp-vid-marker .cm-btn .masker {
+  background-color: #111;
+}
+
+.type-light .cp-vid-marker .cm-btn .masker:after {
+  border-color: #111;
+}
+
+.type-light .cp-vid-marker .cm-btn .masker span {
+  color: #fff;
+}
+
+.cp-vid-marker__inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  max-width: 2560px;
+  margin: 0 auto;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.cp-vid-marker__content {
+  float: left;
+  width: 36.45833%;
+  padding-left: 140px;
+  padding-left: 14rem;
+  padding-right: 180px;
+  padding-right: 18rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cp-vid-marker.align-text-right .cp-vid-marker__content {
+  padding-left: 180px;
+  padding-left: 18rem;
+  padding-right: 140px;
+  padding-right: 14rem;
+}
+
+.cp-vid-marker__eyebrow {
+  margin-bottom: 69px;
+  margin-bottom: 6.9rem;
+}
+
+.cp-vid-marker__eyebrow .el-eyebrow {
+  font-family: "genesis-head-office-light", sans-serif;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: -0.4px;
+  line-height: 1.1;
+}
+
+.cp-vid-marker__title .el-title {
+  color: #ad7b61;
+  font-family: "genesis-head-office-light", sans-serif;
+  font-size: 60px;
+  font-size: 6rem;
+  font-weight: normal;
+  letter-spacing: -1.1px;
+  line-height: 1.04;
+}
+
+.cp-vid-marker__desc {
+  margin-top: 39px;
+  margin-top: 3.9rem;
+}
+
+.cp-vid-marker__desc .el-desc {
+  color: #ccc;
+  font-size: 18px;
+  font-size: 1.8rem;
+  letter-spacing: -0.4px;
+  line-height: 1.56;
+}
+
+.cp-vid-marker__cta {
+  margin-top: 40px;
+  margin-top: 4rem;
+}
+
+.cp-vid-marker__disclaimer {
+  margin-top: 26px;
+  margin-top: 2.6rem;
+  color: #999;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.57;
+}
+
+.cp-vid-marker__disclaimer .el-disclaimer:before {
+  display: inline-block;
+  padding-right: 3px;
+  padding-right: 0.3rem;
+  content: '*';
+}
+
+.cp-vid-marker__video {
+  position: relative;
+  float: left;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 63.54167%;
+}
+
+.cp-vid-marker__video video {
+  width: 100%;
+  height: auto;
+}
+
+.cp-vid-marker__video-content:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(0, 0, 0, 0.35)));
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.35));
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in;
+  transition: opacity 0.4s ease-in;
+  z-index: 1;
+  pointer-events: none;
+  content: '';
+}
+
+.cp-vid-marker__video-content.is-dimmed:before {
+  opacity: 1;
+}
+
+.cp-vid-marker__video-control {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 40px;
+  right: 4rem;
+  width: 120px;
+  width: 12rem;
+  margin-right: -18px;
+  margin-right: -1.8rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in;
+  transition: opacity 0.4s ease-in;
+  z-index: 1;
+}
+
+.cp-vid-marker__video-control.is-active {
+  opacity: 1;
+}
+
+.cp-vid-marker__video-control.is-active .cm-btn-marker {
+  display: block;
+}
+
+.cp-vid-marker__video-label {
+  display: block;
+  margin: 15px 0 0;
+  margin: 1.5rem 0 0;
+  font-family: "genesis-text-office-medium", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+}
+
+.cp-vid-marker__video-label .el-control-label {
+  display: none;
+}
+
+.cp-vid-marker__video-label .el-control-label.is-active {
+  display: block;
+}
+
+.cp-vid-marker__video-mo {
+  display: none;
+}
+
+.cp-vid-marker__video .cm-btn-marker {
+  display: none;
+  width: 100%;
+  color: #fff;
+}
+
+.cp-vid-marker__video .cm-btn-marker-icon {
+  margin: 0 auto;
+}
+
+.cp-vid-marker.align-text-right .cp-vid-marker__inner {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.aem-AuthorLayer-Edit .cp-vid-marker .cp-vid-marker__video-control {
+  opacity: 1 !important;
+}
+
+.aem-AuthorLayer-Edit .cp-vid-marker .cp-vid-marker__video-control .cm-btn-marker {
+  display: block !important;
+}
+
+.aem-AuthorLayer-Edit .cp-vid-marker .cp-vid-marker__video-label .el-control-label {
+  display: block !important;
+}
+
+@media (max-width: 1919px) {
+  .cp-vid-marker__content {
+    padding-left: 120px;
+    padding-left: 12rem;
+    padding-right: 156px;
+    padding-right: 15.6rem;
+  }
+  .cp-vid-marker.align-text-right .cp-vid-marker__content {
+    padding-left: 156px;
+    padding-left: 15.6rem;
+    padding-right: 120px;
+    padding-right: 12rem;
+  }
+}
+
+.type-light .cp-vid-marker .cp-vid-marker__eyebrow .el-eyebrow {
+  color: #000;
+}
+
+.type-light .cp-vid-marker .cp-vid-marker__title .el-title {
+  color: #996449;
+}
+
+.type-light .cp-vid-marker .cp-vid-marker__desc .el-desc {
+  color: #262626;
+}
+
+.type-light .cp-vid-marker .cp-vid-marker__disclaimer {
+  color: #666;
+}
+
+@media (max-width: 1599px) {
+  .cp-vid-marker__content {
+    width: 44.54%;
+    padding-left: 100px;
+    padding-left: 10rem;
+    padding-right: 140px;
+    padding-right: 14rem;
+  }
+  .cp-vid-marker.align-text-right .cp-vid-marker__content {
+    padding-left: 140px;
+    padding-left: 14rem;
+    padding-right: 100px;
+    padding-right: 10rem;
+  }
+  .cp-vid-marker__eyebrow {
+    margin-bottom: 52px;
+    margin-bottom: 5.2rem;
+  }
+  .cp-vid-marker__eyebrow .el-eyebrow {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+  .cp-vid-marker__title .el-title {
+    font-size: 48px;
+    font-size: 4.8rem;
+    letter-spacing: -1px;
+  }
+  .cp-vid-marker__desc {
+    margin-top: 22px;
+    margin-top: 2.2rem;
+  }
+  .cp-vid-marker__desc .el-desc {
+    font-size: 16px;
+    font-size: 1.6rem;
+    letter-spacing: 0;
+    line-height: 1.5;
+  }
+  .cp-vid-marker__cta {
+    margin-top: 32px;
+    margin-top: 3.2rem;
+  }
+  .cp-vid-marker__disclaimer {
+    margin-top: 16px;
+    margin-top: 1.6rem;
+  }
+  .cp-vid-marker__video {
+    width: 55.46%;
+  }
+  .cp-vid-marker__video-control {
+    right: 30px;
+    right: 3rem;
+    width: 100px;
+    width: 10rem;
+    margin-right: -20px;
+    margin-right: -2rem;
+  }
+  .cp-vid-marker__video-label {
+    margin-top: 12px;
+    margin-top: 1.2rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 1359px) {
+  .cp-vid-marker__content {
+    padding-left: 76px;
+    padding-left: 7.6rem;
+    padding-right: 115px;
+    padding-right: 11.5rem;
+  }
+  .cp-vid-marker.align-text-right .cp-vid-marker__content {
+    padding-left: 115px;
+    padding-left: 11.5rem;
+    padding-right: 76px;
+    padding-right: 7.6rem;
+  }
+  .cp-vid-marker__eyebrow {
+    margin-bottom: 23px;
+    margin-bottom: 2.3rem;
+  }
+  .cp-vid-marker__eyebrow .el-eyebrow {
+    font-size: 14px;
+    font-size: 1.4rem;
+    letter-spacing: -0.3px;
+  }
+  .cp-vid-marker__title .el-title {
+    font-size: 30px;
+    font-size: 3rem;
+    letter-spacing: -0.7px;
+    line-height: 1.07;
+  }
+  .cp-vid-marker__desc {
+    margin-top: 17px;
+    margin-top: 1.7rem;
+  }
+  .cp-vid-marker__desc .el-desc {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
+  .cp-vid-marker__cta {
+    margin-top: 12px;
+    margin-top: 1.2rem;
+  }
+  .cp-vid-marker__disclaimer {
+    margin-top: 16px;
+    margin-top: 1.6rem;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 1023px) {
+  .cp-vid-marker .display-pc {
+    display: none;
+  }
+  .cp-vid-marker .display-mo {
+    display: block;
+  }
+  .cp-vid-marker__inner {
+    display: block;
+  }
+  .cp-vid-marker__content {
+    float: none;
+    width: 100%;
+    margin-top: 29px;
+    margin-top: 2.9rem;
+    padding-left: 58px;
+    padding-left: 5.8rem;
+    padding-right: 58px;
+    padding-right: 5.8rem;
+  }
+  .cp-vid-marker.align-text-right .cp-vid-marker__content {
+    padding-left: 58px;
+    padding-left: 5.8rem;
+    padding-right: 58px;
+    padding-right: 5.8rem;
+  }
+  .cp-vid-marker__eyebrow {
+    margin-bottom: 14px;
+    margin-bottom: 1.4rem;
+  }
+  .cp-vid-marker__desc {
+    margin-top: 16px;
+    margin-top: 1.6rem;
+  }
+  .cp-vid-marker__video {
+    float: none;
+    width: 100%;
+  }
+  .cp-vid-marker__video-content:before {
+    display: none;
+  }
+  .cp-vid-marker__video-control {
+    display: none;
+  }
+  .cp-vid-marker__video-pc {
+    display: none;
+  }
+  .cp-vid-marker__video-mo {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cp-vid-marker__content {
+    margin-top: 39px;
+    margin-top: 3.9rem;
+    padding-left: 30px;
+    padding-left: 3rem;
+    padding-right: 30px;
+    padding-right: 3rem;
+  }
+  .cp-vid-marker.align-text-right .cp-vid-marker__content {
+    padding-left: 30px;
+    padding-left: 3rem;
+    padding-right: 30px;
+    padding-right: 3rem;
+  }
+  .cp-vid-marker__eyebrow {
+    margin-bottom: 11px;
+    margin-bottom: 1.1rem;
+  }
+  .cp-vid-marker__eyebrow .el-eyebrow {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+  .cp-vid-marker__title .el-title {
+    font-size: 42px;
+    font-size: 4.2rem;
+    line-height: 1.048;
+  }
+  .cp-vid-marker__desc {
+    margin-top: 23px;
+    margin-top: 2.3rem;
+  }
+  .cp-vid-marker__desc .el-desc {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1.56;
+  }
+  .cp-vid-marker__cta {
+    margin-top: 30px;
+    margin-top: 3rem;
+  }
+  .cp-vid-marker__cta .cm-btn {
+    height: 56px;
+    height: 5.6rem;
+    line-height: 58px;
+    line-height: 5.8rem;
+  }
+  .cp-vid-marker__cta .cm-btn .masker span {
+    height: 56px;
+    height: 5.6rem;
+    line-height: 58px;
+    line-height: 5.8rem;
+  }
+}

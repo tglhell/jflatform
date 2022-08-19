@@ -1,0 +1,111 @@
+.cp-notice-detail__inner {
+  max-width: 1080px;
+  padding: 0 80px;
+  padding: 0 8rem;
+  margin: 0px auto;
+}
+
+.cp-notice-detail__body {
+  padding: 80px 0;
+  padding: 8rem 0;
+}
+
+.cp-notice-detail .cm-sup-detailhead__title {
+  max-width: 800px;
+}
+
+.cp-notice-detail .cm-sup-detailhead__title .el-title {
+  font-size: 48px;
+  font-size: 4.8rem;
+}
+
+.cp-notice-detail .cm-sup-detailhead__item .el-nav-eyebrow {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+.cp-notice-detail .cm-sup-detailnav__title .el-nav-title {
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+@media (max-width: 1023px) {
+  .cp-notice-detail__inner {
+    padding: 0 58px;
+    padding: 0 5.8rem;
+  }
+  .cp-notice-detail__body {
+    padding: 60px 0;
+    padding: 6rem 0;
+  }
+  .cp-notice-detail .cm-sup-detailhead__title .el-title {
+    font-size: 42px;
+    font-size: 4.2rem;
+  }
+  .cp-notice-detail .cm-sup-detailhead__date {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+  .cp-notice-detail .cm-sup-detailnav__eyebrow .el-nav-eyebrow {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  .cp-notice-detail .cm-sup-detailnav__title {
+    max-height: 48px;
+    max-height: 4.8rem;
+  }
+  .cp-notice-detail .cm-sup-detailnav__title .el-nav-title {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cp-notice-detail__inner {
+    padding: 0 30px;
+    padding: 0 3rem;
+  }
+  .cp-notice-detail__body {
+    padding: 40px 0;
+    padding: 4rem 0;
+  }
+  .cp-notice-detail .cm-sup-detailhead__label .cm-label .text {
+    font-size: 13px;
+    font-size: 1.3rem;
+  }
+  .cp-notice-detail .cm-sup-detailhead__title .el-title {
+    font-size: 30px;
+    font-size: 3rem;
+  }
+  .cp-notice-detail .cm-sup-detailhead__date {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  .cp-notice-detail .cm-sup-detailnav__title {
+    height: auto;
+    max-height: 48px;
+    max-height: 4.8rem;
+  }
+  .cp-notice-detail .cm-sup-detailnav__title .el-nav-title {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  .cp-notice-detail .cm-sup-detailnav__cta .cm-btn {
+    font-size: 18px;
+    font-size: 1.8rem;
+    min-width: 0;
+    min-width: 0;
+    height: 56px;
+    height: 5.6rem;
+    line-height: 58px;
+    line-height: 5.8rem;
+  }
+  .cp-notice-detail .cm-sup-detailnav__cta .cm-btn .masker span {
+    height: 56px;
+    height: 5.6rem;
+    line-height: 58px;
+    line-height: 5.8rem;
+  }
+}

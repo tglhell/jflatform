@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Main Key Visual Carousel</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+</head>
+<body>
+<div id="wrap">
+    <!-- component -->
+    <div class="type-dark">
+        <!-- [D] 재생/정지 global text -->
+        <div class="main-visual" data-global-text='{
+            "Play" : "Play",
+            "Pause" : "Pause"
+        }'>
+            <div class="main-visual__inner">
+                <div class="main-visual__wrap">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slide-inner">
+                                    <div class="main-visual__media">
+                                        <!-- [D] case 1 : image -->
+                                        <div class="main-visual__media-img js-picture">
+                                            <div class="js-img-bg" data-media="(min-width: 768px)" data-srcset="http://via.placeholder.com/2560x900"></div>
+                                            <div class="js-img-bg" data-media="(min-width: 0px)" data-srcset="http://via.placeholder.com/750x1400"></div>
+                                        </div>
+                                    </div>
+                                    <div class="main-visual__text">
+                                        <div class="main-visual__text-top">
+                                            <span class="main-visual__eyebrow">
+                                                <span class="display-pc">GENESIS DESKTOP</span>
+                                                <span class="display-mo">GENESIS MOBILE</span>
+                                            </span>
+                                            <!-- [D] 문장형일 경우 type-sentence 클래스 추가 바랍니다. -->
+                                            <strong class="main-visual__title">GV80</strong>
+                                            <p class="main-visual__desc">
+                                                <span class="display-pc">We strive to create the finest automobiles and related products and services</span>
+                                                <span class="display-mo">We strive to create the finest automobiles and related products and services</span>
+                                            </p>
+                                        </div>
+                                        <div class="main-visual__text-bottom">
+                                            <p class="main-visual__desc-sub">
+                                                <span class="display-pc">We strive to create the finest automobiles and related products and services for connoisseurs around the globe</span>
+                                                <span class="display-mo">We strive to create the finest automobiles and related products and services for connoisseurs around the globe</span>
+                                            </p>
+                                            <div class="main-visual__cta-wrap">
+                                                <div class="main-visual__cta">
+                                                    <a href="#" class="cm-btn type-white" title="Primary Button"><span class="text">Primary Button</span><span class="masker"><span>Primary Button</span></span></a>
+                                                    <a href="#" class="cm-btn" title="Secondary Button"><span class="text">Secondary Button</span><span class="masker"><span>Secondary Button</span></span></a>
+                                                </div>
+                                                <div class="main-visual__cta">
+                                                    <a href="#" class="cm-btn-more type-white is-hover" title="Learn more"><span>Learn more</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-inner">
+                                    <div class="main-visual__media">
+                                        <!-- [D] case 2 : video -->
+                                        <div class="main-visual__media-video js-picture-video">
+                                            <div class="video-container" data-media="(min-width: 768px)">
+                                                <video muted playsinline loop preload="none" width="1" height="1">
+                                                    <source src="imgs/@video.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                            <div class="video-container" data-media="(min-width: 0px)">
+                                                <video muted playsinline loop preload="none" width="1" height="1">
+                                                    <source src="imgs/@video.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main-visual__text">
+                                        <div class="main-visual__text-top">
+                                            <span class="main-visual__eyebrow">
+                                                <span class="display-pc">GENESIS DESKTOP</span>
+                                                <span class="display-mo">GENESIS MOBILE</span>
+                                            </span>
+                                            <strong class="main-visual__title">GV80</strong>
+                                            <p class="main-visual__desc">
+                                                <span class="display-pc">We strive to create the finest automobiles and related products and services</span>
+                                                <span class="display-mo">We strive to create the finest automobiles and related products and services</span>
+                                            </p>
+                                        </div>
+                                        <div class="main-visual__text-bottom">
+                                            <p class="main-visual__desc-sub">
+                                                <span class="display-pc">We strive to create the finest automobiles and related products and services for connoisseurs around the globe</span>
+                                                <span class="display-mo">We strive to create the finest automobiles and related products and services for connoisseurs around the globe</span>
+                                            </p>
+                                            <div class="main-visual__cta-wrap">
+                                                <div class="main-visual__cta">
+                                                    <a href="#" class="cm-btn type-white" title="Primary Button"><span class="text">Primary Button</span><span class="masker"><span>Primary Button</span></span></a>
+                                                    <a href="#" class="cm-btn" title="Secondary Button"><span class="text">Secondary Button</span><span class="masker"><span>Secondary Button</span></span></a>
+                                                </div>
+                                                <div class="main-visual__cta">
+                                                    <a href="#" class="cm-btn-more type-white is-hover" title="Learn more"><span>Learn more</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-interface">
+                        <div class="swiper-pagination"></div>
+                        <!-- [D] autoplay 가 아닐경우 swiper-control 태그 삭제  -->
+                        <div class="swiper-control">
+                            <!-- [F] play : is-play 클래스 추가,
+                                    pause : is-pause 클래스 추가,
+                                    global text 변경 -->
+                            <button type="button" class="btn-controls is-play"><span class="blind">Play</span></button>
+                        </div>
+                    </div>
+                    <!-- [D] autoplay 가 아닐경우 swiper-timer 태그 삭제  -->
+                    <div class="swiper-timer" style="display:none"><div class="slick-timer-inner"></div></div>
+                    <div class="swiper-button-prev"><button type="button"><span class="blind">Previous Slide</span></button></div>
+                    <div class="swiper-button-next"><button type="button"><span class="blind">Next Slide</span></button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //component -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<script src="clientlibs/js/main.js"></script>
+</body>
+</html>

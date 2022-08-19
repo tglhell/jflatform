@@ -1,0 +1,152 @@
+.customer-pr__article {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 80px;
+  padding: 0 8rem;
+}
+
+.customer-pr__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+}
+
+.customer-pr__list-wrap .cm-results-section {
+  margin-top: 30px;
+  margin-top: 3rem;
+  border: 0;
+  background: #f8f8f8;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.customer-pr__box {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.customer-pr__box:not(:first-child) {
+  margin-left: 40px;
+  margin-left: 4rem;
+}
+
+.customer-pr .cm-sup-post {
+  background: #f8f8f8;
+}
+
+.customer-pr .cm-sup-post > a {
+  min-height: 474px;
+  min-height: 47.4rem;
+}
+
+.customer-pr .cm-sup-post__img {
+  height: 290px;
+  height: 29rem;
+}
+
+.customer-pr .cm-sup-post__info {
+  padding: 37px 40px 43px;
+  padding: 3.7rem 4rem 4.3rem;
+  background: #f8f8f8;
+}
+
+.customer-pr .cm-sup-post__desc p {
+  max-height: 56px;
+  max-height: 5.6rem;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+
+.customer-pr .cm-sup-post__date em {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+
+.customer-pr .cm-sup-post.is-hover .cm-sup-post__desc {
+  height: 73px;
+  height: 7.3rem;
+}
+
+@media (max-width: 1023px) {
+  .customer-pr__article {
+    padding: 0 58px;
+    padding: 0 5.8rem;
+  }
+  .customer-pr .cm-sup-post > a {
+    min-height: 371px;
+    min-height: 37.1rem;
+  }
+  .customer-pr .cm-sup-post__title strong {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+  .customer-pr .cm-sup-post__img {
+    height: 181px;
+    height: 18.1rem;
+  }
+  .customer-pr .cm-sup-post__info {
+    padding-top: 30px;
+    padding-top: 3rem;
+  }
+  .customer-pr .cm-sup-post__desc p {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  .customer-pr .cm-sup-post__date em {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  .customer-pr .cm-sup-post.is-hover .cm-sup-post__desc {
+    height: 63px;
+    height: 6.3rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .customer-pr__article {
+    max-width: none;
+    margin: 0;
+    padding: 0 30px;
+    padding: 0 3rem;
+  }
+  .customer-pr__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0;
+  }
+  .customer-pr__box {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+  }
+  .customer-pr__box:not(:first-child) {
+    margin: 20px 0 0;
+    margin: 2rem 0 0;
+  }
+  .customer-pr .cm-sup-post > a {
+    min-height: 0;
+  }
+  .customer-pr .cm-sup-post__img {
+    height: auto;
+  }
+  .customer-pr .cm-sup-post__info {
+    padding: 25px 26px 28px;
+    padding: 2.5rem 2.6rem 2.8rem;
+  }
+  .customer-pr .cm-sup-post__title strong {
+    font-size: 21px;
+    font-size: 2.1rem;
+  }
+}

@@ -1,0 +1,1205 @@
+<!-- /* Step 2 : 시승 신청 일정 선택 */-->
+<div class="cm-calendar">
+    <div class="cm-calendar__inner">
+        <div class="cm-calendar__header">
+            <div class="cm-calendar__title">
+                <strong class="el-title">시승 날짜</strong>
+            </div>
+            <div class="cm-calendar__date">
+                <em class="el-year">2020년</em>
+                <ul class="el-month">
+                <!-- /* [D] 날짜 활성화 시 : '.is-active' 클래스 추가 */ -->
+                <li class="el-month-item is-active"><a href="#" class="month">4월</a></li>
+                <li class="el-month-item"><a href="#" class="month">5월</a></li>
+                <li class="el-month-item"><a href="#" class="month">6월</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="cm-calendar__contents">
+            <!-- /* [D] PC 예약 선택 */ -->
+            <div class="cp-reserve-calendar is-pc">
+                <div class="cp-reserve-calendar__box">
+                    <div class="cp-reserve-calendar__inner">
+                        <table>
+                        <caption><span class="blind">시승 일정 선택 달력 - 시승 예약가능 / 불가능한 정보를 제공하고 예약선택을 위해 제공된 표입니다.</span></caption>
+                        <thead>
+                        <tr>
+                        <th scope="col">SUN</th>
+                        <th scope="col">MON</th>
+                        <th scope="col">TUE</th>
+                        <th scope="col">WED</th>
+                        <th scope="col">THU</th>
+                        <th scope="col">FRI</th>
+                        <th scope="col">SAT</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <!-- /* [D] 지난 날짜일 경우 '.is-disabled-day 클래스명 추가'
+                                    선택된 날짜일 경우 '.is-selected-day 클래스명 추가' */ -->
+                        <td class="is-disabled-day"><div class="day"></div></td>
+                        <td class="is-disabled-day"><div class="day"></div></td>
+                        <td class="is-disabled-day"><div class="day"></div></td>
+                        <td class="is-disabled-day"><div class="day">1</div></td>
+                        <td class="is-disabled-day"><div class="day">2</div></td>
+                        <td class="is-disabled-day"><div class="day">3</div></td>
+                        <td class="is-disabled-day"><div class="day">4</div></td>
+                        </tr>
+                        <tr>
+                        <td class="is-disabled-day">
+                            <div class="day">5</div>
+                            <div class="cp-reserve-time"></div>
+                        </td>
+                        <td class="is-disabled-day">
+                            <div class="day">6</div>
+                            <div class="cp-reserve-time"></div>
+                        </td>
+                        <td>
+                            <div class="day">7</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <!-- /* [D] 예약 시간 활성화 : input에 checked 추가
+                                                예약 시간 비활성화 : input에 disabled 속성 추가 */ -->
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date07-1" name="calendar-time" class="cm-radio__input" disabled>
+                                        <label for="date07-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date07-2" name="calendar-time" class="cm-radio__input" disabled>
+                                        <label for="date07-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date07-3" name="calendar-time" class="cm-radio__input" disabled>
+                                        <label for="date07-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date07-4" name="calendar-time" class="cm-radio__input" disabled>
+                                        <label for="date07-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="day">8</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date08-1" name="calendar-time" class="cm-radio__input" disabled>
+                                        <label for="date08-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date08-2" name="calendar-time" class="cm-radio__input" disabled>
+                                        <label for="date08-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date08-3" name="calendar-time" class="cm-radio__input" disabled>
+                                        <label for="date08-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date08-4" name="calendar-time" class="cm-radio__input" disabled>
+                                        <label for="date08-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="day">9</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date09-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date09-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date09-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date09-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date09-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date09-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date09-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date09-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="day">10</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date10-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date10-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date10-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date10-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date10-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date10-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date10-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date10-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="is-selected-day">
+                            <div class="day">11</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date11-1" name="calendar-time" class="cm-radio__input" checked>
+                                        <label for="date11-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date11-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date11-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date11-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date11-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date11-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date11-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <div class="day">12</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date12-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date12-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date12-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date12-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date12-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date12-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date12-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date12-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="day">13</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date13-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date13-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date13-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date13-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date13-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date13-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date13-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date13-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="day">14</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date14-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date14-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date14-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date14-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date14-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date14-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date14-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date14-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="day">15</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date15-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date15-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date15-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date15-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date15-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date15-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date15-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date15-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="day">16</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date16-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date16-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date16-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date16-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date16-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date16-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date16-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date16-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="day">17</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date17-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date17-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date17-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date17-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date17-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date17-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date17-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date17-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="day">18</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date18-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date18-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date18-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date18-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date18-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date18-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date18-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date18-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <div class="day">19</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date19-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date19-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date19-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date19-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date19-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date19-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date19-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date19-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="day">20</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date20-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date20-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date20-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date20-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date20-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date20-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date20-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date20-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="day">21</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date21-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date21-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date21-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date21-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date21-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date21-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date21-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date21-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="day">22</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date22-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date22-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date22-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date22-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date22-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date22-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date22-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date22-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="day">23</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date23-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date23-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date23-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date23-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date23-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date23-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date23-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date23-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="day">24</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date24-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date24-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date24-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date24-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date24-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date24-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date24-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date24-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="day">25</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date25-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date25-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date25-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date25-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date25-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date25-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date25-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date25-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <div class="day">26</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date26-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date26-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date26-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date26-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date26-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date26-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date26-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date26-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="day">27</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date27-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date27-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date27-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date27-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date27-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date27-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date27-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date27-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="day">28</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date28-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date28-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date28-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date28-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date28-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date28-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date28-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date28-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="day">29</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date29-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date29-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date29-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date29-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date29-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date29-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date29-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date29-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="day">30</div>
+                            <div class="cp-reserve-time">
+                                <ul class="cp-reserve-time-list">
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date30-1" name="calendar-time" class="cm-radio__input">
+                                        <label for="date30-1" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">10:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date30-2" name="calendar-time" class="cm-radio__input">
+                                        <label for="date30-2" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">12:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date30-3" name="calendar-time" class="cm-radio__input">
+                                        <label for="date30-3" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cm-radio js-radio-wrap">
+                                        <input type="radio" id="date30-4" name="calendar-time" class="cm-radio__input">
+                                        <label for="date30-4" class="cm-radio__label">
+                                            <span class="s-box"></span><span class="s-label">14:00</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- /* // [D] PC 예약 선택 */ -->
+            <!-- /* [D] Mobile 예약 선택 */ -->
+            <div class="cp-reserve-calendar is-mo">
+                <div class="cp-reserve-calendar__box">
+                    <div class="cp-reserve-calendar__inner">
+                        <table>
+                        <caption><span class="blind">시승 일정 선택 달력 - 시승 예약가능 / 불가능한 정보를 제공하고 예약선택을 위해 제공된 표입니다.</span></caption>
+                        <thead>
+                        <tr>
+                        <th scope="col">SUN</th>
+                        <th scope="col">MON</th>
+                        <th scope="col">TUE</th>
+                        <th scope="col">WED</th>
+                        <th scope="col">THU</th>
+                        <th scope="col">FRI</th>
+                        <th scope="col">SAT</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <!-- /* [D] 지난 날짜일 경우 '.is-disabled-day 클래스명 추가' && 버튼에 disabled 추가
+                                    선택된 날짜일 경우 '.is-selected-day 클래스명 추가' */ -->
+                        <td class="is-disabled-day"><button type="button" class="day" disabled></button></td>
+                        <td class="is-disabled-day"><button type="button" class="day" disabled></button></td>
+                        <td class="is-disabled-day"><button type="button" class="day" disabled></button></td>
+                        <td class="is-disabled-day"><button type="button" class="day" disabled>1</button></td>
+                        <td class="is-disabled-day"><button type="button" class="day" disabled>2</button></td>
+                        <td class="is-disabled-day"><button type="button" class="day" disabled>3</button></td>
+                        <td class="is-disabled-day"><button type="button" class="day" disabled>4</button></td>
+                        </tr>
+                        <tr>
+                        <td class="is-disabled-day">
+                            <button type="button" class="day" disabled>5</button>
+                        </td>
+                        <td class="is-disabled-day">
+                            <button type="button" class="day" disabled>6</button>
+                        </td>
+                        <td>
+                            <button type="button" class="day">7</button>
+                        </td>
+                        <td>
+                            <button type="button" class="day">8</button>
+                        </td>
+                        <td>
+                            <button type="button" class="day">9</button>
+                        </td>
+                        <td>
+                            <button type="button" class="day">10</button>
+                        </td>
+                        <td class="is-selected-day">
+                            <button type="button" class="day">11</button>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <button type="button" class="day">12</button>
+                        </td>
+                        <td>
+                            <button type="button" class="day">13</button>
+                        </td>
+                        <td>
+                            <button type="button" class="day">14</button>
+                        </td>
+                        <td>
+                            <button type="button" class="day">15</button>
+                        </td>
+                        <td>
+                            <button type="button" class="day">16</button>
+                        </td>
+                        <td>
+                            <button type="button" class="day">17</button>
+                        </td>
+                        <td>
+                            <button type="button" class="day">18</button>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <button type="button" class="day">19</button>
+                        </td>
+                        <td>
+                            <button type="button" class="day">20</button>
+                        </td>
+                        <td>
+                            <button type="button" class="day">21</button>
+                        </td>
+                        <td>
+                            <button type="button" class="day">22</button>
+                        </td>
+                        <td>
+                            <button type="button" class="day">23</button>
+                        </td>
+                        <td>
+                            <button type="button" class="day">24</button>
+                        </td>
+                        <td>
+                            <button type="button" class="day">25</button>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <button type="button" class="day">26</button>
+                        </td>
+                        <td>
+                            <button type="button" class="day">27</button>
+                        </td>
+                        <td>
+                            <button type="button" class="day">28</button>
+                        </td>
+                        <td>
+                            <button type="button" class="day">29</button>
+                        </td>
+                        <td>
+                            <button type="button" class="day">30</button>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- /* [D] 에러 메시지 */ -->
+            <div class="cp-reseve-description is-mo">
+                <p class="el-desc"><span class="c-point">시승 날짜를 선택해주세요.</span></p>
+            </div>
+            <!-- /* //[D] 에러 메시지 */ -->
+            <div class="cp-reserve-time is-mo">
+                <div class="cm-calendar__title">
+                    <strong class="el-title">시승 시간</strong>
+                </div>
+                <ul class="cp-reserve-time-list">
+                <li>
+                    <!-- /* [D] 예약 시간 활성화 : input에 checked 추가
+                                예약 시간 비활성화 : input에 disabled 속성 추가 */ -->
+                    <div class="cm-radio js-radio-wrap">
+                        <input type="radio" id="date99-1" name="calendar-time-mo" class="cm-radio__input" checked>
+                        <label for="date99-1" class="cm-radio__label">
+                            <span class="s-box"></span><span class="s-label">10:00</span>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="cm-radio js-radio-wrap">
+                        <input type="radio" id="date99-2" name="calendar-time-mo" class="cm-radio__input" disabled>
+                        <label for="date99-2" class="cm-radio__label">
+                            <span class="s-box"></span><span class="s-label">12:00</span>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="cm-radio js-radio-wrap">
+                        <input type="radio" id="date99-3" name="calendar-time-mo" class="cm-radio__input">
+                        <label for="date99-3" class="cm-radio__label">
+                            <span class="s-box"></span><span class="s-label">14:00</span>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="cm-radio js-radio-wrap">
+                        <input type="radio" id="date99-4" name="calendar-time-mo" class="cm-radio__input">
+                        <label for="date99-4" class="cm-radio__label">
+                            <span class="s-box"></span><span class="s-label">14:00</span>
+                        </label>
+                    </div>
+                </li>
+                </ul>
+            </div>
+            <!-- /* // [D] Mobile 예약 시간 선택 */ -->
+            <div class="cp-reseve-description">
+                <!-- /* [D] 에러 메시지 */ -->
+                <p class="el-desc">
+                    <span class="is-pc">
+                        <span class="c-point">시승 일정을 선택해주세요.</span>
+                    </span>
+                    <span class="is-mo">
+                        <span class="c-point">시승 시간을 선택해주세요.</span>
+                    </span>
+                </p>
+                <!-- /* //[D] 에러 메시지 */ -->
+                <p class="el-desc">원활한 시승서비스를 위해 금일 기준 2일 후부터 제공 가능하며 향후 2개월까지 시승 일정을 자유롭게 선택하실 수 있습니다.</p>
+            </div>
+            <div class="cm-layout__cta is-mo-revers">
+                <a href="#" class="cm-btn type-white">
+                    <span class="text">이전</span>
+                    <span class="masker"><span>이전</span></span>
+                </a>
+                <a href="#" class="cm-btn">
+                    <span class="text">다음</span>
+                    <span class="masker"><span>다음</span></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /* // Step 2 : 시승 신청 일정 선택 */-->

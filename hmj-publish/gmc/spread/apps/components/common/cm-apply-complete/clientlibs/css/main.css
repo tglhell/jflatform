@@ -1,0 +1,30 @@
+.cm-apply-complete .pc-space {
+  display: block;
+}
+
+.cm-apply-complete .mo-space {
+  display: none;
+}
+
+.cm-apply-complete__inner {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.cm-apply-complete__content {
+  padding: 120px 80px 139px;
+  padding: 12rem 8rem 13.9rem;
+}
+
+@media screen and (max-width: 767px) {
+  .cm-apply-complete .pc-space {
+    display: none;
+  }
+  .cm-apply-complete .mo-space {
+    display: block;
+  }
+  .cm-apply-complete__content {
+    padding: 59px 30px 65px;
+    padding: 5.9rem 3rem 6.5rem;
+  }
+}

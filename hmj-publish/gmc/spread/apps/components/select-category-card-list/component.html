@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Select Category Card List</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+<!-- #include virtual="/apps/components/common/select-category-card-list-popup/@include_css.html" -->
+</head>
+<body>
+<div id="wrap">
+    <div style="font-size:16px;padding:20px 0">
+        <p>Column 옵션 : (default) / .type-3column </p>
+        <p>Image 옵션 : (default) / .type-icon </p>
+        <p>Tab 이 없을 경우 is-only-list 클래스 추가</p>
+    </div>
+
+    <!-- component (2 Column) -->
+    <div class="type-light">
+        <div class="cp-card-list is-only-list">
+            <div class="cp-card-list__inner">
+                <div class="cp-card-list__tab">
+                    <!-- /* [D] select 펼침 : .is-opened 클래스 추가 */ -->
+                    <div class="cp-card-list__tab-inner swiper-container">
+                        <!-- /* 모바일 구간 select 버튼 추가 */ -->
+                        <button type="button" class="select-btn" aria-expanded="false">
+                            <span>작고 바이며, 바이며, 교향악이다.</span>
+                        </button>
+                        <div class="cp-card-list__tab-list swiper-wrapper">
+                            <!-- /* [D] 활성화 : .is-selected 클래스 추가 */ -->
+                            <div class="cp-card-list__tab-item swiper-slide is-selected">
+                                <div class="slide-inner">
+                                    <a href="#" class="cp-card-list__tab-link">
+                                        <div class="tab-ico"><img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-all.png" alt=""></div>
+                                        <div class="tab-text"><span>작고 바이며, 바이며,</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cp-card-list__tab-item swiper-slide">
+                                <div class="slide-inner">
+                                    <a href="#" class="cp-card-list__tab-link">
+                                        <div class="tab-ico"><img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-reservation.png" alt=""></div>
+                                        <div class="tab-text"><span>작고 바이며, 바이며,</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cp-card-list__tab-item swiper-slide">
+                                <div class="slide-inner">
+                                    <a href="#" class="cp-card-list__tab-link">
+                                        <div class="tab-ico"><img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-reservation.png" alt=""></div>
+                                        <div class="tab-text"><span>작고 바이며, 바이며, 교향악이다.</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cp-card-list__tab-item swiper-slide">
+                                <div class="slide-inner">
+                                    <a href="#" class="cp-card-list__tab-link">
+                                        <div class="tab-ico"><img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-reservation.png" alt=""></div>
+                                        <div class="tab-text"><span>작고 바이며, 바이며, 교향악이다.</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cp-card-list__tab-item swiper-slide">
+                                <div class="slide-inner">
+                                    <a href="#" class="cp-card-list__tab-link">
+                                        <div class="tab-ico"><img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-reservation.png" alt=""></div>
+                                        <div class="tab-text"><span>작고 바이며, 바이며,</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cp-card-list__tab-item swiper-slide">
+                                <div class="slide-inner">
+                                    <a href="#" class="cp-card-list__tab-link">
+                                        <div class="tab-ico"><img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-reservation.png" alt=""></div>
+                                        <div class="tab-text"><span>작고 바이며, 바이며,</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cp-card-list__tab-item swiper-slide">
+                                <div class="slide-inner">
+                                    <a href="#" class="cp-card-list__tab-link">
+                                        <div class="tab-ico"><img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-reservation.png" alt=""></div>
+                                        <div class="tab-text"><span>작고 바이며, 바이며,</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cp-card-list__tab-item swiper-slide">
+                                <div class="slide-inner">
+                                    <a href="#" class="cp-card-list__tab-link">
+                                        <div class="tab-ico"><img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-reservation.png" alt=""></div>
+                                        <div class="tab-text"><span>작고 바이며, 바이며,</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"><button type="button"><span class="blind">Previous Slide</span></button></div>
+                        <div class="swiper-button-next"><button type="button"><span class="blind">Next Slide</span></button></div>
+                    </div>
+                </div>
+                <div class="cp-card-list__panel">
+                    <div class="cp-card-list__panel-card">
+                        <ul class="card-list">
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post">
+                                    <div class="cm-sup-post__img">
+                                        <img src="http://via.placeholder.com/630x350" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 <span class="cm-tooltip js-tooltip tooltip-type-light">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">물방아</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">
+                                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer1" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post js-animate">
+                                    <div class="cm-sup-post__img">
+                                        <img src="http://via.placeholder.com/630x350" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>작고 바이며, 바이며, 교향악이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer2" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="cp-card-list__panel-card">
+                        <ul class="card-list">
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post">
+                                    <div class="cm-sup-post__img">
+                                        <img src="http://via.placeholder.com/630x350" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>1 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 <span class="cm-tooltip js-tooltip tooltip-type-light">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">물방아</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">
+                                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer1" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="cp-card-list__panel-card">
+                        <ul class="card-list">
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post">
+                                    <div class="cm-sup-post__img">
+                                        <img src="http://via.placeholder.com/630x350" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>2 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 <span class="cm-tooltip js-tooltip tooltip-type-light">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">물방아</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">
+                                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer1" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="cp-card-list__panel-card">
+                        <ul class="card-list">
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post">
+                                    <div class="cm-sup-post__img">
+                                        <img src="http://via.placeholder.com/630x350" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>3 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 <span class="cm-tooltip js-tooltip tooltip-type-light">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">물방아</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">
+                                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer1" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="cp-card-list__panel-card">
+                        <ul class="card-list">
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post">
+                                    <div class="cm-sup-post__img">
+                                        <img src="http://via.placeholder.com/630x350" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>4 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 <span class="cm-tooltip js-tooltip tooltip-type-light">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">물방아</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">
+                                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer1" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="cp-card-list__panel-card">
+                        <ul class="card-list">
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post">
+                                    <div class="cm-sup-post__img">
+                                        <img src="http://via.placeholder.com/630x350" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>5 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 <span class="cm-tooltip js-tooltip tooltip-type-light">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">물방아</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">
+                                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer1" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="cp-card-list__panel-card">
+                        <ul class="card-list">
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post">
+                                    <div class="cm-sup-post__img">
+                                        <img src="http://via.placeholder.com/630x350" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>6 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 <span class="cm-tooltip js-tooltip tooltip-type-light">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">물방아</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">
+                                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer1" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="cp-card-list__panel-card">
+                        <ul class="card-list">
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post">
+                                    <div class="cm-sup-post__img">
+                                        <img src="http://via.placeholder.com/630x350" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>7 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 <span class="cm-tooltip js-tooltip tooltip-type-light">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">물방아</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">
+                                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer1" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //component -->
+
+    <!-- component (3 Column) -->
+    <div class="type-light">
+        <div class="cp-card-list">
+            <div class="cp-card-list__inner">
+                <div class="cp-card-list__tab">
+                    <!-- /* [D] select 펼침 : .is-opened 클래스 추가 */ -->
+                    <div class="cp-card-list__tab-inner swiper-container">
+                        <!-- /* 모바일 구간 select 버튼 추가 */ -->
+                        <button type="button" class="select-btn" aria-expanded="false">
+                            <span>작고 바이며, 바이며, 교향악이다.</span>
+                        </button>
+                        <div class="cp-card-list__tab-list swiper-wrapper">
+                            <!-- /* [D] 활성화 : .is-selected 클래스 추가 */ -->
+                            <div class="cp-card-list__tab-item swiper-slide is-selected">
+                                <div class="slide-inner">
+                                    <a href="#" class="cp-card-list__tab-link">
+                                        <div class="tab-ico"><img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-all.png" alt=""></div>
+                                        <div class="tab-text"><span>작고 바이며, 바이며,</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cp-card-list__tab-item swiper-slide">
+                                <div class="slide-inner">
+                                    <a href="#" class="cp-card-list__tab-link">
+                                        <div class="tab-ico"><img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-reservation.png" alt=""></div>
+                                        <div class="tab-text"><span>작고 바이며, 바이며,</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cp-card-list__tab-item swiper-slide">
+                                <div class="slide-inner">
+                                    <a href="#" class="cp-card-list__tab-link">
+                                        <div class="tab-ico"><img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-reservation.png" alt=""></div>
+                                        <div class="tab-text"><span>작고 바이며, 바이며, 교향악이다.</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cp-card-list__tab-item swiper-slide">
+                                <div class="slide-inner">
+                                    <a href="#" class="cp-card-list__tab-link">
+                                        <div class="tab-ico"><img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-reservation.png" alt=""></div>
+                                        <div class="tab-text"><span>작고 바이며, 바이며, 교향악이다.</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cp-card-list__tab-item swiper-slide">
+                                <div class="slide-inner">
+                                    <a href="#" class="cp-card-list__tab-link">
+                                        <div class="tab-ico"><img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-reservation.png" alt=""></div>
+                                        <div class="tab-text"><span>작고 바이며, 바이며,</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cp-card-list__tab-item swiper-slide">
+                                <div class="slide-inner">
+                                    <a href="#" class="cp-card-list__tab-link">
+                                        <div class="tab-ico"><img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-reservation.png" alt=""></div>
+                                        <div class="tab-text"><span>작고 바이며, 바이며,</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cp-card-list__tab-item swiper-slide">
+                                <div class="slide-inner">
+                                    <a href="#" class="cp-card-list__tab-link">
+                                        <div class="tab-ico"><img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-reservation.png" alt=""></div>
+                                        <div class="tab-text"><span>작고 바이며, 바이며,</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cp-card-list__tab-item swiper-slide">
+                                <div class="slide-inner">
+                                    <a href="#" class="cp-card-list__tab-link">
+                                        <div class="tab-ico"><img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-reservation.png" alt=""></div>
+                                        <div class="tab-text"><span>작고 바이며, 바이며,</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"><button type="button"><span class="blind">Previous Slide</span></button></div>
+                        <div class="swiper-button-next"><button type="button"><span class="blind">Next Slide</span></button></div>
+                    </div>
+                </div>
+                <div class="cp-card-list__panel">
+                    <!-- /* [D] 3 Column 타입 : .type-3column 클래스 추가 */ -->
+                    <div class="cp-card-list__panel-card type-3column">
+                        <ul class="card-list">
+                        <li class="card-box">
+                            <!-- /* [D] Button 없을 경우 : .card-no-btn 클래스 추가 */ -->
+                            <div class="card-box-inner card-no-btn">
+                                <div class="cm-sup-post">
+                                    <div class="cm-sup-post__img">
+                                        <img src="http://via.placeholder.com/630x350" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post js-animate">
+                                    <div class="cm-sup-post__img">
+                                        <img src="http://via.placeholder.com/630x350" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>작고 바이며, 바이며, 교향악이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer1" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post js-animate">
+                                    <div class="cm-sup-post__img">
+                                        <img src="http://via.placeholder.com/630x350" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer1" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="cp-card-list__panel-card type-3column">
+                        <ul class="card-list">
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post">
+                                    <div class="cm-sup-post__img">
+                                        <img src="http://via.placeholder.com/630x350" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>1 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 <span class="cm-tooltip js-tooltip tooltip-type-light">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">물방아</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">
+                                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer1" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="cp-card-list__panel-card type-3column">
+                        <ul class="card-list">
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post">
+                                    <div class="cm-sup-post__img">
+                                        <img src="http://via.placeholder.com/630x350" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>2 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 <span class="cm-tooltip js-tooltip tooltip-type-light">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">물방아</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">
+                                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer1" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="cp-card-list__panel-card type-3column">
+                        <ul class="card-list">
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post">
+                                    <div class="cm-sup-post__img">
+                                        <img src="http://via.placeholder.com/630x350" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>3 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 <span class="cm-tooltip js-tooltip tooltip-type-light">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">물방아</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">
+                                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer1" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="cp-card-list__panel-card type-3column">
+                        <ul class="card-list">
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post">
+                                    <div class="cm-sup-post__img">
+                                        <img src="http://via.placeholder.com/630x350" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>4 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 <span class="cm-tooltip js-tooltip tooltip-type-light">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">물방아</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">
+                                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer1" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="cp-card-list__panel-card type-3column">
+                        <ul class="card-list">
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post">
+                                    <div class="cm-sup-post__img">
+                                        <img src="http://via.placeholder.com/630x350" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>5 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 <span class="cm-tooltip js-tooltip tooltip-type-light">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">물방아</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">
+                                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer1" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="cp-card-list__panel-card type-3column">
+                        <ul class="card-list">
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post">
+                                    <div class="cm-sup-post__img">
+                                        <img src="http://via.placeholder.com/630x350" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>6 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 <span class="cm-tooltip js-tooltip tooltip-type-light">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">물방아</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">
+                                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer1" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="cp-card-list__panel-card type-3column">
+                        <ul class="card-list">
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post">
+                                    <div class="cm-sup-post__img">
+                                        <img src="http://via.placeholder.com/630x350" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>7 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 <span class="cm-tooltip js-tooltip tooltip-type-light">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">물방아</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">
+                                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer1" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //component -->
+
+    <!-- component (2 Column) -->
+    <div class="type-light">
+        <div class="cp-card-list">
+            <div class="cp-card-list__inner">
+                <div class="cp-card-list__tab">
+                    <!-- /* [D] select 펼침 : .is-opened 클래스 추가 */ -->
+                    <div class="cp-card-list__tab-inner swiper-container">
+                        <!-- /* 모바일 구간 select 버튼 추가 */ -->
+                        <button type="button" class="select-btn" aria-expanded="false">
+                            <span>작고 바이며, 바이며, 교향악이다.</span>
+                        </button>
+                        <div class="cp-card-list__tab-list swiper-wrapper">
+                            <!-- /* [D] 활성화 : .is-selected 클래스 추가 */ -->
+                            <div class="cp-card-list__tab-item swiper-slide is-selected">
+                                <div class="slide-inner">
+                                    <a href="#" class="cp-card-list__tab-link">
+                                        <div class="tab-ico"><img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-all.png" alt=""></div>
+                                        <div class="tab-text"><span>작고 바이며, 바이며,</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cp-card-list__tab-item swiper-slide">
+                                <div class="slide-inner">
+                                    <a href="#" class="cp-card-list__tab-link">
+                                        <div class="tab-ico"><img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-reservation.png" alt=""></div>
+                                        <div class="tab-text"><span>작고 바이며, 바이며,</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"><button type="button"><span class="blind">Previous Slide</span></button></div>
+                        <div class="swiper-button-next"><button type="button"><span class="blind">Next Slide</span></button></div>
+                    </div>
+                </div>
+                <div class="cp-card-list__panel">
+                    <!-- /* [D] icon 타입 : .type-ico 클래스 추가 */ -->
+                    <div class="cp-card-list__panel-card type-ico">
+                        <ul class="card-list">
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post">
+                                    <div class="cm-sup-post__img">
+                                        <img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-download.png" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer1" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post js-animate">
+                                    <div class="cm-sup-post__img">
+                                        <img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-download.png" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>작고 바이며, 바이며, 교향악이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer1" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="cp-card-list__panel-card type-ico">
+                        <ul class="card-list">
+                        <li class="card-box">
+                            <div class="card-box-inner">
+                                <div class="cm-sup-post">
+                                    <div class="cm-sup-post__img">
+                                        <img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-download.png" alt="">
+                                    </div>
+                                    <div class="cm-sup-post__info">
+                                        <div class="cm-sup-post__title">
+                                            <strong>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다.</strong>
+                                        </div>
+                                        <div class="cm-sup-post__desc">
+                                            <p>작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다. 봄날의 물방아 얼음이 곳이 약동하다. 가장 이상은 많이 내는 생명을 동산에는 불어 가슴이 때문이다. 작고 바이며, 바이며, 교향악이다. 싹이 별과 기쁘며, 과실이 오직 사막이다.</p>
+                                        </div>
+                                        <div class="cm-sup-post__cta">
+                                            <a href="#" class="cm-btn-more is-hover is-default js-layer-opener" data-layer-target="#card-list-layer1" title="Learn more"><span>자세히 보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //component -->
+
+    <!-- Popup -->
+    <!-- #include virtual="/apps/components/common/select-category-card-list-popup/@include_html_a.html" -->
+    <!-- #include virtual="/apps/components/common/select-category-card-list-popup/@include_html_b.html" -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<script src="clientlibs/js/main.js"></script>
+<!--#include virtual="/apps/components/common/select-category-card-list-popup/@include_js.html"-->
+</body>
+</html>

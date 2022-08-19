@@ -1,0 +1,284 @@
+.bluetooth-compatible__detail-item .cm-btn {
+  background-color: #111;
+}
+
+.bluetooth-compatible__detail-item .cm-btn:after {
+  z-index: 10;
+  border-color: #111;
+}
+
+.bluetooth-compatible__detail-item .cm-btn .text {
+  color: #fff;
+}
+
+.bluetooth-compatible__detail-item .cm-btn .masker {
+  background-color: #fff;
+}
+
+.bluetooth-compatible__detail-item .cm-btn .masker:after {
+  z-index: 10;
+  border-color: #111;
+}
+
+.bluetooth-compatible__detail-item .cm-btn .masker span {
+  color: #000;
+}
+
+.bluetooth-compatible__inner {
+  max-width: 1080px;
+  padding: 0 80px;
+  padding: 0 8rem;
+  margin: 0 auto;
+}
+
+.bluetooth-compatible__title {
+  font-family: "genesis-head-office-light", sans-serif;
+  font-size: 30px;
+  font-size: 3rem;
+  color: #000;
+  font-weight: normal;
+  line-height: 38px;
+  line-height: 3.8rem;
+  letter-spacing: -.025em;
+}
+
+.bluetooth-compatible__content {
+  padding: 104px 140px 120px;
+  padding: 10.4rem 14rem 12rem;
+  margin-top: 23px;
+  margin-top: 2.3rem;
+  background: #f8f8f8;
+}
+
+.bluetooth-compatible__model {
+  padding: 0 140px;
+  padding: 0 14rem;
+}
+
+.bluetooth-compatible__model .cm-select {
+  width: 100%;
+}
+
+.bluetooth-compatible__model .cm-select.type2 .cm-select__placeholder {
+  background: transparent;
+}
+
+.bluetooth-compatible__model .cm-select.type2 .cm-select__placeholder span {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+.bluetooth-compatible__detail {
+  margin-top: 97px;
+  margin-top: 9.7rem;
+}
+
+.bluetooth-compatible__detail-title {
+  font-family: "genesis-head-office-light", sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  color: #000;
+  letter-spacing: -.025em;
+}
+
+.bluetooth-compatible__detail-list {
+  margin-top: 24px;
+  margin-top: 2.4rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.bluetooth-compatible__detail-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  min-height: 93px;
+  min-height: 9.3rem;
+  padding: 22px 52.7027% 22px 30px;
+  padding: 2.2rem 52.7027% 2.2rem 3rem;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #000;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.bluetooth-compatible__detail-item .cm-btn {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  right: 3rem;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-size: 1.4rem;
+  min-width: 240px;
+  min-width: 24rem;
+  height: 52px;
+  height: 5.2rem;
+  line-height: 54px;
+  line-height: 5.4rem;
+}
+
+.bluetooth-compatible__detail-item .cm-btn .masker span {
+  height: 52px;
+  height: 5.2rem;
+  line-height: 54px;
+  line-height: 5.4rem;
+}
+
+@media (max-width: 1023px) {
+  .bluetooth-compatible__inner {
+    max-width: 652px;
+    padding: 0 57px;
+    padding: 0 5.7rem;
+  }
+  .bluetooth-compatible__title {
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 28px;
+    line-height: 2.8rem;
+  }
+  .bluetooth-compatible__content {
+    padding: 88px 57px 100px;
+    padding: 8.8rem 5.7rem 10rem;
+    margin-top: 19px;
+    margin-top: 1.9rem;
+  }
+  .bluetooth-compatible__model {
+    padding: 0 58px;
+    padding: 0 5.8rem;
+  }
+  .bluetooth-compatible__detail {
+    margin-top: 77px;
+    margin-top: 7.7rem;
+  }
+  .bluetooth-compatible__detail-title {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+  .bluetooth-compatible__detail-list {
+    margin-top: 20px;
+    margin-top: 2rem;
+  }
+  .bluetooth-compatible__detail-item {
+    min-height: 78px;
+    min-height: 7.8rem;
+    padding: 15px 53.0881% 14px 25px;
+    padding: 1.5rem 53.0881% 1.4rem 2.5rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+  .bluetooth-compatible__detail-item .cm-btn {
+    right: 24px;
+    right: 2.4rem;
+    font-size: 13px;
+    font-size: 1.3rem;
+    min-width: 188px;
+    min-width: 18.8rem;
+    height: 48px;
+    height: 4.8rem;
+    line-height: 50px;
+    line-height: 5rem;
+    width: auto;
+  }
+  .bluetooth-compatible__detail-item .cm-btn .masker span {
+    height: 48px;
+    height: 4.8rem;
+    line-height: 50px;
+    line-height: 5rem;
+  }
+  .bluetooth-compatible .cm-select.type2 .cm-select__placeholder {
+    padding: 9px 21px 7px 0;
+    padding: 0.9rem 2.1rem 0.7rem 0;
+  }
+  .bluetooth-compatible .cm-select.type2 .cm-select__placeholder span {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .bluetooth-compatible__inner {
+    max-width: none;
+    padding: 0 30px;
+    padding: 0 3rem;
+  }
+  .bluetooth-compatible__title {
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 26px;
+    line-height: 2.6rem;
+  }
+  .bluetooth-compatible__content {
+    padding: 47px 30px 80px;
+    padding: 4.7rem 3rem 8rem;
+    margin: 20px -30px 0;
+    margin: 2rem -3rem 0;
+  }
+  .bluetooth-compatible__model {
+    padding: 0;
+  }
+  .bluetooth-compatible__detail {
+    margin-top: 47px;
+    margin-top: 4.7rem;
+  }
+  .bluetooth-compatible__detail-list {
+    margin-top: 15px;
+    margin-top: 1.5rem;
+  }
+  .bluetooth-compatible__detail-item {
+    display: block;
+    min-height: 0;
+    padding: 20px 25px 25px;
+    padding: 2rem 2.5rem 2.5rem;
+  }
+  .bluetooth-compatible__detail-item .cm-btn {
+    display: block;
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 14px;
+    margin-top: 1.4rem;
+    font-size: 16px;
+    font-size: 1.6rem;
+    min-width: 0;
+    min-width: 0;
+    height: 56px;
+    height: 5.6rem;
+    line-height: 58px;
+    line-height: 5.8rem;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+  .bluetooth-compatible__detail-item .cm-btn .masker span {
+    height: 56px;
+    height: 5.6rem;
+    line-height: 58px;
+    line-height: 5.8rem;
+  }
+  .bluetooth-compatible .cm-select.type2 .cm-select__placeholder {
+    padding: 10px 21px 8px 10px;
+    padding: 1rem 2.1rem 0.8rem 1rem;
+  }
+  .bluetooth-compatible .cm-select.type2 .cm-select__placeholder:after {
+    width: 7px;
+    width: 0.7rem;
+    height: 7px;
+    height: 0.7rem;
+    margin-top: -7px;
+    margin-top: -0.7rem;
+  }
+}

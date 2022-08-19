@@ -1,0 +1,160 @@
+.cp-general-tab.type-5more .swiper-slide {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-flex-basis: 25%;
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+}
+
+.cp-general-tab__inner {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 80px;
+  padding: 0 8rem;
+}
+
+.cp-general-tab__item {
+  height: 100%;
+  margin-top: -1px;
+  border-bottom: 1px solid #e5e5e5;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cp-general-tab__item a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  min-height: 52px;
+  min-height: 5.2rem;
+  height: 100%;
+  padding: 20px 60px 20px 0;
+  padding: 2rem 6rem 2rem 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: #757575;
+  line-height: 20px;
+  line-height: 2rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cp-general-tab .swiper-container {
+  position: static;
+}
+
+.cp-general-tab .swiper-container-autoheight, .cp-general-tab .swiper-container-autoheight .swiper-slide, .cp-general-tab .slide-inner {
+  height: 100%;
+}
+
+.cp-general-tab .swiper-slide {
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  height: auto;
+}
+
+.cp-general-tab .swiper-slide.is-selected .cp-general-tab__item {
+  border-color: #996449;
+}
+
+.cp-general-tab .swiper-slide.is-selected .cp-general-tab__item a {
+  color: #996449;
+}
+
+.cp-general-tab .swiper-button-prev, .cp-general-tab .swiper-button-next {
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  width: 4rem;
+  height: 44px;
+  height: 4.4rem;
+  margin: auto;
+}
+
+.cp-general-tab .swiper-button-prev {
+  left: 13px;
+  left: 1.3rem;
+}
+
+.cp-general-tab .swiper-button-next {
+  right: 13px;
+  right: 1.3rem;
+}
+
+.cp-general-tab .swiper-button-prev button:after, .cp-general-tab .swiper-button-next button:after {
+  width: 14px;
+  width: 1.4rem;
+  height: 24px;
+  height: 2.4rem;
+  background-image: url("/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-swiper-arrow3-black.png");
+}
+
+@media screen and (max-width: 1023px) {
+  .cp-general-tab__inner {
+    padding: 0 58px;
+    padding: 0 5.8rem;
+  }
+  .cp-general-tab__item a {
+    min-height: 40px;
+    min-height: 4rem;
+    padding: 10px 50px 10px 0;
+    padding: 1rem 5rem 1rem 0;
+    font-size: 16px;
+    font-size: 1.6rem;
+    letter-spacing: -.025em;
+    line-height: 18px;
+    line-height: 1.8rem;
+  }
+  .cp-general-tab .swiper-button-prev {
+    left: 11px;
+    left: 1.1rem;
+  }
+  .cp-general-tab .swiper-button-next {
+    right: 11px;
+    right: 1.1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .cp-general-tab.type-5more .swiper-slide {
+    -webkit-flex-basis: 53.02%;
+    -ms-flex-preferred-size: 53.02%;
+    flex-basis: 53.02%;
+  }
+  .cp-general-tab__inner {
+    padding: 0;
+  }
+  .cp-general-tab__item a {
+    min-height: 54px;
+    min-height: 5.4rem;
+    padding: 20px 40px 20px 0;
+    padding: 2rem 4rem 2rem 0;
+    letter-spacing: 0;
+  }
+  .cp-general-tab .swiper-container {
+    padding: 0 30px;
+    padding: 0 3rem;
+  }
+  .cp-general-tab .swiper-slide {
+    -webkit-flex-basis: 53.02%;
+    -ms-flex-preferred-size: 53.02%;
+    flex-basis: 53.02%;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+  .cp-general-tab .swiper-button-prev, .cp-general-tab .swiper-button-next {
+    display: none;
+  }
+}

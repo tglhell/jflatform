@@ -1,0 +1,173 @@
+<div class="cm-form-check">
+    <div class="cm-form-check__inner">
+        <div class="cm-form-check__header">
+            <div class="cm-form-check__title">
+                <h3 class="el-title">약관 동의</h3>
+            </div>
+            <div class="cm-form-check__desc">
+                <p class="el-desc">시승 신청을 위해 약관을 읽고 동의해 주세요.</p>
+            </div>
+        </div>
+        <div class="cm-form-check__body">
+            <form action="#">
+                <div class="cm-form-check__agree">
+                    <ul class="el-agree-list">
+                    <!-- [D] 활성화 시 : .is-active 클래스 추가 -->
+                    <!-- [D] 전체 선택 타입 : .type-checkall 클래스 추가 -->
+                    <li class="type-checkall">
+                        <div class="el-agree-list__check">
+                            <!-- [D] 에러 시 : .has-error 클래스 추가 -->
+                            <div class="cm-input-wrap">
+                                <!-- [D] 체크 시 : .is-checked 클래스 추가 및 input에 checked 속성 추가-->
+                                <div class="cm-checkbox js-chkbox-wrap">
+                                    <input type="checkbox" id="agreeCheck" name="agreeCheck" class="cm-checkbox__input">
+                                    <label for="agreeCheck" class="cm-checkbox__label"><span class="s-box"></span><span class="s-label">시승 유의사항, 개인정보 처리방침, 마케팅 정보 수신에 모두 동의합니다.</span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="is-active type-notice">
+                        <div class="el-agree-list__check">
+                            <!-- [D] 에러 시 : .has-error 클래스 추가 -->
+                            <div class="cm-input-wrap">
+                                <!-- [D] 체크 시 : .is-checked 클래스 추가 및 input에 checked 속성 추가-->
+                                <div class="cm-checkbox js-chkbox-wrap">
+                                    <input type="checkbox" id="agreeCheck01" name="agreeCheck" class="cm-checkbox__input">
+                                    <label for="agreeCheck01" class="cm-checkbox__label"><span class="s-box"></span><span class="s-label">1. 제네시스 시승 신청 이용고객 유의사항에 동의합니다. <span class="s-txt-highlight">(필수)</span></span></label>
+                                </div>
+                                <div class="cm-input-message">
+                                    <!-- [D] 에러/유효성 메세지 노출 시 : display:block 처리 -->
+                                    <p class="cm-message-error" style="display:none">시승 유의사항에 동의해주세요.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="el-agree-list__info">
+                            <div class="el-agree-list__info-box">
+                                <ul>
+                                <li>1. 시승 전 운전면허증을 확인하오니, 운전면허증을 꼭 지참해 주시기 바랍니다.</li>
+                                <li>2. 보험 적용 기준에 따라 만21세 이상의 고객님만 시승이 가능합니다.</li>
+                                <li>3. 시승 고객님의 안전한 운행을 위해 시승 시에는 카마스터가 동승합니다. 과속, 위험운전 및 기타 운행이 불가능하다고 판단될 경우 귀사 직원의 판단에 따라 즉시 시승이 중단될 수 있으며 향후 시승 이용이 제한될 수 있습니다.</li>
+                                <li>4. 다음 시승 예약 고객님을 위해 시승 예약 기간을 준수해 주시기 바랍니다.
+                                    <ul>
+                                    <li>1) 예약 변동사항이 있을 경우 시승센터 혹은 담당 카마스터에게 사전연락을 부탁드립니다.</li>
+                                    <li>2) 고객님과의 연락이 두절되는 경우 시승예약이 자동 취소될 수 있습니다.</li>
+                                    <li>3) 시승시간은 차량 준비 및 이동시간을 포함하여 총 2시간입니다.</li>
+                                    <li>4) 단, 주말/공휴일 오후 시승은 1시간 30분 단위로 운영됩니다.</li>
+                                    <li>(오후 13시~14시30분 / 14시30분~16시 / 16시~17시30분)</li>
+                                    </ul>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="is-active">
+                        <div class="el-agree-list__check">
+                            <!-- [D] 에러 시 : .has-error 클래스 추가 -->
+                            <div class="cm-input-wrap">
+                                <div class="cm-checkbox js-chkbox-wrap">
+                                    <input type="checkbox" id="agreeCheck02" name="agreeCheck" class="cm-checkbox__input">
+                                    <label for="agreeCheck02" class="cm-checkbox__label"><span class="s-box"></span><span class="s-label">2. 개인정보 수집 및 이용에 대하여 동의합니다. <span class="s-txt-highlight">(필수)</span></span></label>
+                                </div>
+                                <div class="cm-input-message">
+                                    <!-- [D] 에러/유효성 메세지 노출 시 : display:block 처리 -->
+                                    <p class="cm-message-error" style="display:none">개인정보 수집 및 이용에 동의해주세요.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="el-agree-list__info">
+                            <div class="el-agree-list__info-box">
+                                <ul>
+                                <li>&#9632; 개인정보 수집 및 이용 목적
+                                    <ul>
+                                    <li>- 시승 신청 확인</li>
+                                    </ul>
+                                </li>
+                                <li>&#9632; 개인정보 수집항목
+                                    <ul>
+                                    <li>- 이름, 휴대전화번호</li>
+                                    </ul>
+                                </li>
+                                <li>&#9632; 개인정보의 보유 및 이용기간
+                                    <ul>
+                                    <li>- 신청일 기준 2년간 : 시승 이후 고객만족도 조사 및 시승차량 관리 목적</li>
+                                    </ul>
+                                </li>
+                                </ul>
+                                <p>&#8251;위 개인정보 수집 및 이용에 동의하지 않으실 수 있으며, 동의하지 않을 경우 시승 신청이 불가할 수 있습니다.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="is-active">
+                        <div class="el-agree-list__check">
+                            <!-- [D] 에러 시 : .has-error 클래스 추가 -->
+                            <div class="cm-input-wrap">
+                                <div class="cm-checkbox js-chkbox-wrap">
+                                    <input type="checkbox" id="agreeCheck03" name="agreeCheck" class="cm-checkbox__input">
+                                    <label for="agreeCheck03" class="cm-checkbox__label"><span class="s-box"></span><span class="s-label">3. 개인정보의 처리위탁에 대하여 동의합니다. <span class="s-txt-highlight">(필수)</span></span></label>
+                                </div>
+                                <div class="cm-input-message">
+                                    <!-- [D] 에러/유효성 메세지 노출 시 : display:block 처리 -->
+                                    <p class="cm-message-error" style="display:none">개인정보의 처리위탁에 동의해주세요.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="el-agree-list__info">
+                            <div class="el-agree-list__info-box">
+                                <ul>
+                                <li>1) 시승 신청 시스템 유지/보수 : 현대오토에버(주), 이노션월드와이드(주)</li>
+                                <li>2) 고객상담 : (주)에이서브</li>
+                                </ul>
+                                <p>&#8251;위 개인정보의 처리위탁에 동의하지 않으실 수 있으며, 동의하지 않을 경우 시승 신청이 불가할 수 있습니다.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="is-active">
+                        <div class="el-agree-list__check">
+                            <!-- [D] 에러 시 : .has-error 클래스 추가 -->
+                            <div class="cm-input-wrap">
+                                <div class="cm-checkbox js-chkbox-wrap">
+                                    <input type="checkbox" id="agreeCheck04" name="agreeCheck" class="cm-checkbox__input">
+                                    <label for="agreeCheck04" class="cm-checkbox__label"><span class="s-box"></span><span class="s-label">4. 마케팅 활용 및 광고성 정보 수신에 대하여 동의합니다. <span class="s-txt-highlight">(선택)</span></span></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="el-agree-list__info">
+                            <div class="el-agree-list__info-box">
+                                <ul>
+                                <li>&#9632; 개인정보 수집 및 이용 목적
+                                    <ul>
+                                    <li>- 현대자동차의 마케팅 및 판촉정보 활용</li>
+                                    <li>- 현대자동차의 이벤트 및 신차정보 등 광고성 정보 전송</li>
+                                    </ul>
+                                </li>
+                                <li>&#9632; 개인정보의 수집 항목
+                                    <ul>
+                                    <li>- 이름, 휴대전화 번호</li>
+                                    </ul>
+                                </li>
+                                <li>&#9632; 개인정보의 보유 및 이용기간
+                                    <ul>
+                                    <li>- 2년</li>
+                                    </ul>
+                                </li>
+                                </ul>
+                                <p>&#8251;위 개인정보 수집 및 이용에 동의하지 않으실 수 있으며, 동의하지 않을 경우 불이익은 없습니다.</p>
+                            </div>
+                        </div>
+                    </li>
+                    </ul>
+                </div>
+                <div class="cm-form-check__cta">
+                    <button type="button" class="cm-btn type-white">
+                        <span class="text">이전</span>
+                        <span class="masker"><span>이전</span></span>
+                    </button>
+                    <button type="button" class="cm-btn js-layer-opener" data-layer-target="#information-alert-layer">
+                        <span class="text">다음</span>
+                        <span class="masker"><span>다음</span></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

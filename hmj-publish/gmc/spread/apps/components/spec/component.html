@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Spec</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+<!-- <link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/kr/clientlibs/clientlib-ko/css/ko.css"> -->
+</head>
+<body>
+<div id="wrap">
+    <!-- component -->
+    <div class="type-dark">
+        <div class="cp-spec">
+            <!-- [F] sticky : is-fixed 클래스명 추가 -->
+            <!-- [F] 모바일 해상도에서 swiper 기능 추가 -->
+            <div class="cp-spec__bar-wrap">
+                <div class="cp-spec__bar swiper-container">
+                    <div class="cp-spec__bar-inner swiper-wrapper">
+                        <div class="cp-spec__select swiper-slide">
+                            <div class="slide-inner">
+                                <div class="cm-select type2 js-select-wrap">
+                                    <a href="#" class="cm-select__placeholder" aria-expanded="false">
+                                        <span>GV80</span>
+                                    </a>
+                                    <div class="cm-select__options" role="listbox" style="display: none;">
+                                        <div class="cp-spec__select-title">
+                                            <strong class="el-option-title">GV80</strong>
+                                        </div>
+                                        <ul role="presentation">
+                                        <li role="presentation"><a href="#" role="option">GV80 2.5 가솔린 터보가솔린 터보가솔린 터보</a></li>
+                                        <li role="presentation"><a href="#" role="option">GV80 3.0 가솔린 터보</a></li>
+                                        <li role="presentation"><a href="#" role="option">GV80 3.0 디젤</a></li>
+                                        </ul>
+                                        <div class="cp-spec__select-title">
+                                            <strong class="el-option-title">GV70</strong>
+                                        </div>
+                                        <ul role="presentation">
+                                        <li role="presentation"><a href="#" role="option">GV70 2.0T 어드밴스드</a></li>
+                                        <li role="presentation"><a href="#" role="option">GV70 2.0T 엘리트</a></li>
+                                        <li role="presentation"><a href="#" role="option">GV70 2.0T 엘리트</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cp-spec__select swiper-slide">
+                            <div class="slide-inner">
+                                <div class="cm-select type2 js-select-wrap">
+                                    <a href="#" class="cm-select__placeholder" aria-expanded="false">
+                                        <span>GV80</span>
+                                    </a>
+                                    <div class="cm-select__options" role="listbox" style="display: none;">
+                                        <div class="cp-spec__select-title">
+                                            <strong class="el-option-title">GV80</strong>
+                                        </div>
+                                        <ul role="presentation">
+                                        <li role="presentation"><a href="#" role="option">GV80 2.5 가솔린 터보</a></li>
+                                        <li role="presentation"><a role="option" class="is-disabled">GV80 3.0 가솔린 터보</a></li>
+                                        <li role="presentation"><a href="#" role="option">GV80 3.0 디젤</a></li>
+                                        </ul>
+                                        <div class="cp-spec__select-title">
+                                            <strong class="el-option-title">GV70</strong>
+                                        </div>
+                                        <ul role="presentation">
+                                        <li role="presentation"><a href="#" role="option">GV70 2.0T 어드밴스드</a></li>
+                                        <li role="presentation"><a href="#" role="option">GV70 2.0T 엘리트</a></li>
+                                        <li role="presentation"><a href="#" role="option">GV70 2.0T 엘리트</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cp-spec__select swiper-slide">
+                            <div class="slide-inner">
+                                <div class="cm-select type2 js-select-wrap">
+                                    <a href="#" class="cm-select__placeholder" aria-expanded="false">
+                                        <span>GV80</span>
+                                    </a>
+                                    <div class="cm-select__options" role="listbox" style="display: none;">
+                                        <div class="cp-spec__select-title">
+                                            <strong class="el-option-title">GV80</strong>
+                                        </div>
+                                        <ul role="presentation">
+                                        <li role="presentation"><a href="#" role="option">GV80 2.5 가솔린 터보</a></li>
+                                        <li role="presentation"><a href="#" role="option">GV80 3.0 가솔린 터보</a></li>
+                                        <li role="presentation"><a href="#" role="option">GV80 3.0 디젤</a></li>
+                                        </ul>
+                                        <div class="cp-spec__select-title">
+                                            <strong class="el-option-title">GV70</strong>
+                                        </div>
+                                        <ul role="presentation">
+                                        <li role="presentation"><a href="#" role="option">GV70 2.0T 어드밴스드</a></li>
+                                        <li role="presentation"><a href="#" role="option">GV70 2.0T 엘리트</a></li>
+                                        <li role="presentation"><a href="#" role="option">GV70 2.0T 엘리트</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <!-- [F] mobile 뷰에서 select 선택시 cm-select__options 영역 select-mobile-view 내부로 옮김 -->
+                <div class="select-mobile-view"></div>
+            </div>
+            <div class="cp-spec__content">
+                <div class="cp-spec__content-inner">
+                    <div data-print-wrap>
+                        <!-- [D] print 시 display:block 사용 -->
+                        <div class="print-bar" style="display:none">
+                            <div class="cp-spec__bar-inner">
+                                <div class="cp-spec__select">
+                                    <div class="slide-inner">
+                                        <div class="cm-select type2">
+                                            <span class="cm-select__placeholder">
+                                                <span>GV80</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cp-spec__select">
+                                    <div class="slide-inner">
+                                        <div class="cm-select type2">
+                                            <span class="cm-select__placeholder">
+                                                <span>GV80</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cp-spec__select">
+                                    <div class="slide-inner">
+                                        <div class="cm-select type2">
+                                            <span class="cm-select__placeholder">
+                                                <span>GV80</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cp-spec__section">
+                            <div class="cp-spec__section-title">
+                                <h3 class="el-title">성능/제원</h3>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <h4 class="el-title">엔진</h4>
+                                <!-- [F] 모바일 해상도에서 select영역 swiper 넘어간 경우 모든 .el-content에 is-move 클래스 추가 -->
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                    <li>I4 2.5 T-GDi</li>
+                                    <li>I4 2.5 T-GDi</li>
+                                    <li>I4 2.5 T-GDi</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <h4 class="el-title">연료</h4>
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                    <li>가솔린</li>
+                                    <li>가솔린</li>
+                                    <li>경유</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <h4 class="el-title">변속기</h4>
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                    <li>8단 자동변속기</li>
+                                    <li>8단 자동변속기</li>
+                                    <li>8단 자동변속기</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <h4 class="el-title">최고출력 (PS/rpm)</h4>
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                    <li>304 ps / 5800 rpm</li>
+                                    <li>304 ps / 5800 rpm</li>
+                                    <li>304 ps / 5800 rpm</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <h4 class="el-title">최대토크 (kg.m/rpm)</h4>
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                    <li>43 kg·m / 1650~4000 rpm</li>
+                                    <li>43 kg·m / 1650~4000 rpm</li>
+                                    <li>43 kg·m / 1650~4000 rpm</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cp-spec__section">
+                            <div class="cp-spec__section-title">
+                                <h3 class="el-title">경제성/환경</h3>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <h4 class="el-title">복합연비</h4>
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                    <li>11.1 km/ℓ</li>
+                                    <li>11.1 km/ℓ</li>
+                                    <li>11.1 km/ℓ</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <h4 class="el-title">시내연비</h4>
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                    <li>11.1 km/ℓ</li>
+                                    <li>11.1 km/ℓ</li>
+                                    <li>11.1 km/ℓ</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <h4 class="el-title">고속연비</h4>
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                    <li>11.1 km/ℓ</li>
+                                    <li>11.1 km/ℓ</li>
+                                    <li>11.1 km/ℓ</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <h4 class="el-title">연비등급</h4>
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                    <li>4등급</li>
+                                    <li>5등급</li>
+                                    <li>3등급</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cp-spec__section">
+                            <div class="cp-spec__section-title">
+                                <h3 class="el-title">사양</h3>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <h4 class="el-title">파워트레인</h4>
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                    <li>8단 자동변속기,2WD(후륜),ISG 시스템,통합 주행모드,프리뷰 전자제어 서스펜션,가솔린 2.5 터보,전동식 파워 스티어링(R-MDPS)</li>
+                                    <li>8단 자동변속기,2WD(후륜),ISG 시스템,통합 주행모드,프리뷰 전자제어 서스펜션,가솔린 3.5 터보,전동식 파워 스티어링(R-MDPS)</li>
+                                    <li>8단 자동변속기,2WD(후륜),ISG 시스템,통합 주행모드,프리뷰 전자제어 서스펜션,가솔린 3.5 터보,전동식 파워 스티어링(R-MDPS)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <h4 class="el-title">지능형 안전기술</h4>
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                    <li><b>고속도로 주행 보조</b>,<i>운전자 주의 경고</i>,<u>10 에어백 시스템(앞좌석 어드밴스드, 운전석 무릎, 앞좌석 센터 사이드, 앞 & 뒤 사이드, 전복 대응 커튼)</u>,개별 타이어 공기압 경보 장치,뒷좌석 센터 3점식 시트벨트,뒷좌석 유아용 시트 고정장치,차체자세 제어기능,경사로 밀림 방지 기능,급제동 경보기능,후진 가이드 램프,후측방 충돌방지 보조,후방 교차 충돌방지 보조,하이빔 보조,진동경고 스티어링 휠,전방 충돌방지 보조(차량, 보행자, 이륜차, 교차로 대향차),차로 유지 보조,차로 이탈방지 보조,스마트 크루즈 컨트롤(Stop & Go 포함),후석 승객 알림,내비게이션 기반 스마트 크루즈 컨트롤(안전구간, 곡선로),안전 하차 보조</li>
+                                    <li>고속도로 주행 보조,운전자 주의 경고,10 에어백 시스템(앞좌석 어드밴스드, 운전석 무릎, 앞좌석 센터 사이드, 앞 & 뒤 사이드, 전복 대응 커튼),개별 타이어 공기압 경보 장치,뒷좌석 센터 3점식 시트벨트,뒷좌석 유아용 시트 고정장치,차체자세 제어기능,경사로 밀림 방지 기능,급제동 경보기능,후진 가이드 램프,후측방 충돌방지 보조,후방 교차 충돌방지 보조,하이빔 보조,진동경고 스티어링 휠,전방 충돌방지 보조(차량, 보행자, 이륜차, 교차로 대향차),차로 유지 보조,차로 이탈방지 보조,스마트 크루즈 컨트롤(Stop & Go 포함),후석 승객 알림,내비게이션 기반 스마트 크루즈 컨트롤(안전구간, 곡선로),안전 하차 보조</li>
+                                    <li>고속도로 주행 보조,운전자 주의 경고,10 에어백 시스템(앞좌석 어드밴스드, 운전석 무릎, 앞좌석 센터 사이드, 앞 & 뒤 사이드, 전복 대응 커튼),개별 타이어 공기압 경보 장치,뒷좌석 센터 3점식 시트벨트,뒷좌석 유아용 시트 고정장치,차체자세 제어기능,경사로 밀림 방지 기능,급제동 경보기능,후진 가이드 램프,후측방 충돌방지 보조,후방 교차 충돌방지 보조,하이빔 보조,진동경고 스티어링 휠,전방 충돌방지 보조(차량, 보행자, 이륜차, 교차로 대향차),차로 유지 보조,차로 이탈방지 보조,스마트 크루즈 컨트롤(Stop & Go 포함),후석 승객 알림,내비게이션 기반 스마트 크루즈 컨트롤(안전구간, 곡선로),안전 하차 보조</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <h4 class="el-title">안전</h4>
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                    <li><b>LED 주간전조등,Full LED 헤드램프,Full LED 리어 콤비 램프,LED 방향지시등,265/55R19 피렐리 타이어 및 다이아몬드 컷팅 휠,아웃사이드 미러(로고 패턴 퍼들램프, 열선, 오토 언폴딩),자외선 차단 유리(앞면, 뒷면, 전체 도어),이중접합 차음 유리(앞면, 전체 도어),루프랙</b></li>
+                                    <li><i>LED 주간전조등,Full LED 헤드램프,Full LED 리어 콤비 램프,LED 방향지시등,265/55R19 피렐리 타이어 및 다이아몬드 컷팅 휠,아웃사이드 미러(로고 패턴 퍼들램프, 열선, 오토 언폴딩),자외선 차단 유리(앞면, 뒷면, 전체 도어),이중접합 차음 유리(앞면, 전체 도어),루프랙</i></li>
+                                    <li><u>LED 주간전조등,Full LED 헤드램프,Full LED 리어 콤비 램프,LED 방향지시등,265/55R19 피렐리 타이어 및 다이아몬드 컷팅 휠,아웃사이드 미러(로고 패턴 퍼들램프, 열선, 오토 언폴딩),자외선 차단 유리(앞면, 뒷면, 전체 도어),이중접합 차음 유리(앞면, 전체 도어),루프랙</u></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <h4 class="el-title">선택사항</h4>
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                    <li>파퓰러 패키지 (헤드업 디스플레이, 하이테크 패키지, 드라이빙 어시스턴스 패키지 &#8544;, 2열 컴포트 패키지)</li>
+                                    <li>파퓰러 패키지 (헤드업 디스플레이, 하이테크 패키지, 드라이빙 어시스턴스 패키지 &#8544;, 2열 컴포트 패키지)</li>
+                                    <li>파퓰러 패키지 (헤드업 디스플레이, 하이테크 패키지, 드라이빙 어시스턴스 패키지 &#8544;, 2열 컴포트 패키지)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                        <li>컨비니언스 패키지 (운전석 에르고 모션 시트, 고스트 도어 클로징)</li>
+                                        <li>컨비니언스 패키지 (운전석 에르고 모션 시트, 고스트 도어 클로징)</li>
+                                        <li>컨비니언스 패키지 (운전석 에르고 모션 시트, 고스트 도어 클로징)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cp-spec__section">
+                            <div class="cp-spec__section-title">
+                                <h3 class="el-title">선택사항</h3>
+                            </div>
+                            <div class="cp-spec__section-content"> 
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                    <li>파퓰러 패키지 (헤드업 디스플레이, 하이테크 패키지, 드라이빙 어시스턴스 패키지 &#8544;, 2열 컴포트 패키지)</li>
+                                    <li>파퓰러 패키지 (헤드업 디스플레이, 하이테크 패키지, 드라이빙 어시스턴스 패키지 &#8544;, 2열 컴포트 패키지)</li>
+                                    <li>파퓰러 패키지 (헤드업 디스플레이, 하이테크 패키지, 드라이빙 어시스턴스 패키지 &#8544;, 2열 컴포트 패키지)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                        <li>컨비니언스 패키지 (운전석 에르고 모션 시트, 고스트 도어 클로징)</li>
+                                        <li>컨비니언스 패키지 (운전석 에르고 모션 시트, 고스트 도어 클로징)</li>
+                                        <li>컨비니언스 패키지 (운전석 에르고 모션 시트, 고스트 도어 클로징)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                        <li>하이테크 패키지 (12.3인치 3D 클러스터(전방 주시 경고 포함), 지능형 헤드램프(IFS))</li>
+                                        <li>하이테크 패키지 (12.3인치 3D 클러스터(전방 주시 경고 포함), 지능형 헤드램프(IFS))</li>
+                                        <li>하이테크 패키지 (12.3인치 3D 클러스터(전방 주시 경고 포함), 지능형 헤드램프(IFS))</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                        <li>드라이빙 어시스턴스 패키지 &#8544;(서라운드 뷰 모니터 및 증강현실 내비게이션, 원격 스마트 주차 보조(RSPA), 후측방 모니터(BVM), 후방 주차 충돌방지 보조(PCA))</li>
+                                        <li>드라이빙 어시스턴스 패키지 &#8544;(서라운드 뷰 모니터 및 증강현실 내비게이션, 원격 스마트 주차 보조(RSPA), 후측방 모니터(BVM), 후방 주차 충돌방지 보조(PCA))</li>
+                                        <li>드라이빙 어시스턴스 패키지 &#8544;(서라운드 뷰 모니터 및 증강현실 내비게이션, 원격 스마트 주차 보조(RSPA), 후측방 모니터(BVM), 후방 주차 충돌방지 보조(PCA))</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                        <li>드라이빙 어시스턴스 패키지 &#8545;(고속도로 주행보조 &#8545; (차로 변경 보조 기능 포함), 전방 충돌방지 보조 (교차로 교차 차량, 측방 접근차, 추월 시 대향차, 회피 조향 보조), 내비게이션 기반 스마트 크루즈 컨트롤(진출입로))</li>
+                                        <li>드라이빙 어시스턴스 패키지 &#8545;(고속도로 주행보조 &#8545; (차로 변경 보조 기능 포함), 전방 충돌방지 보조 (교차로 교차 차량, 측방 접근차, 추월 시 대향차, 회피 조향 보조), 내비게이션 기반 스마트 크루즈 컨트롤(진출입로))</li>
+                                        <li>드라이빙 어시스턴스 패키지 &#8545;(고속도로 주행보조 &#8545; (차로 변경 보조 기능 포함), 전방 충돌방지 보조 (교차로 교차 차량, 측방 접근차, 추월 시 대향차, 회피 조향 보조), 내비게이션 기반 스마트 크루즈 컨트롤(진출입로))</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                        <li>2열 컴포넌트 패키지 (2열 전동(리클라이닝, 슬라이딩, 틸팅) 및 통풍 시트, 뒷좌석 전동식 도어커튼, 3존 공조(2열 LCD 공조 조절장치 포함) 뒷좌석 목베개 및 화장거울)</li>
+                                        <li>2열 컴포넌트 패키지 (2열 전동(리클라이닝, 슬라이딩, 틸팅) 및 통풍 시트, 뒷좌석 전동식 도어커튼, 3존 공조(2열 LCD 공조 조절장치 포함) 뒷좌석 목베개 및 화장거울)</li>
+                                        <li>2열 컴포넌트 패키지 (2열 전동(리클라이닝, 슬라이딩, 틸팅) 및 통풍 시트, 뒷좌석 전동식 도어커튼, 3존 공조(2열 LCD 공조 조절장치 포함) 뒷좌석 목베개 및 화장거울)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                        <li>렉시콘 사운드 패키지 (렉시콘 18스피커 시스템(퀀텀 로직 서라운드), 액티브 로드 노이즈 컨트롤)</li>
+                                        <li class="is-no-content">-</li>
+                                        <li class="is-no-content">-</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                        <li>아웃도어 패키지 (2열 220V 파워아울렛, 러기지 스크린 및 러기지 매트)</li>
+                                        <li>아웃도어 패키지 (2열 220V 파워아울렛, 러기지 스크린 및 러기지 매트)</li>
+                                        <li class="is-no-content">-</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                        <li>빌트인 캠 패키지 (빌트인 캠, 보조배터리)</li>
+                                        <li class="is-no-content">-</li>
+                                        <li class="is-no-content">-</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cp-spec__section-content">
+                                <div class="el-content">
+                                    <ul class="el-text">
+                                        <li>파노라마 선루프</li>
+                                        <li class="is-no-content">-</li>
+                                        <li class="is-no-content">-</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cp-spec__section-cta">
+                        <a href="#" class="cm-btn-text type-print" title="Genesis Spec Print : Open in a new window" target="_blank"><span class="text">프린트하기</span></a>
+                    </div>
+                    <div class="cp-spec__section section-type2">
+                        <div class="cp-spec__section-title">
+                            <h3 class="el-title">자료실</h3>
+                        </div>
+                        <div class="cp-spec__section-content">
+                            <h4 class="el-title">카달로그</h4>
+                            <div class="el-content">
+                                <ul class="el-cta">
+                                <li>
+                                    <a href="#" class="cm-btn-more type-white type-download is-default" title="Download"><span>다운로드</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="cm-btn-more type-white type-download is-default" title="Download"><span>다운로드</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="cm-btn-more type-white type-download is-default" title="Download"><span>다운로드</span></a>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cp-spec__section-content">
+                            <h4 class="el-title">취급설명서</h4>
+                            <div class="el-content">
+                                <ul class="el-cta">
+                                <li>
+                                    <a href="#" class="cm-btn-more type-white type-download is-default" title="Download"><span>다운로드</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="cm-btn-more type-white type-download is-default" title="Download"><span>다운로드</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="cm-btn-more type-white type-download is-default" title="Download"><span>다운로드</span></a>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cp-spec__section-content">
+                            <h4 class="el-title">가격표</h4>
+                            <div class="el-content">
+                                <ul class="el-cta">
+                                <li>
+                                    <a href="#" class="cm-btn-more type-white type-download is-default" title="Download"><span>다운로드</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="cm-btn-more type-white type-download is-default" title="Download"><span>다운로드</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="cm-btn-more type-white type-download is-default" title="Download"><span>다운로드</span></a>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cp-spec__section section-type2">
+                        <div class="cp-spec__section-title">
+                            <h3 class="el-title">연비 및 타이어 등급</h3>
+                        </div>
+                        <div class="cp-spec__section-content">
+                            <h4 class="el-title">정부공인 표준연비 및 등급</h4>
+                            <div class="el-content">
+                                <ul class="el-cta">
+                                <li>
+                                    <a href="#" class="cm-btn-more type-white is-default" title="Learn more"><span>보기</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="cm-btn-more type-white is-default" title="Learn more"><span>보기</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="cm-btn-more type-white is-default" title="Learn more"><span>보기</span></a>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cp-spec__section-content">
+                            <h4 class="el-title">타이어 에너지 소비효율 등급</h4>
+                            <div class="el-content">
+                                <ul class="el-cta">
+                                <li>
+                                    <a href="#" class="cm-btn-more type-white is-default" title="Learn more"><span>보기</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="cm-btn-more type-white is-default" title="Learn more"><span>보기</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="cm-btn-more type-white is-default" title="Learn more"><span>보기</span></a>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //component -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<script src="clientlibs/js/main.js"></script>
+</body>
+</html>

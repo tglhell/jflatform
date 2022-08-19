@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>General Cta Popup</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+
+<style>
+    .js-layer-opener { display:inline-block; padding: 10px 3px; font-size: 18px; }
+</style>
+</head>
+<body>
+<div id="wrap">
+    <!-- component -->
+    <!-- [D] Large size popup -->
+    <div class="cm-layer type-alert js-cm-layer general-cta-popup__lg" id="large-freecoding-layer">
+        <span class="cm-layer__dimmed"></span>
+        <div class="cm-layer__body">
+            <div class="cm-layer__wrapper" role="dialog">
+                <div class="cm-layer__title">
+                    <strong>정부 공인 표준 연비 및 등급</strong>
+                </div>
+                <div class="cm-layer__content">
+                    <div class="general-cta-popup__content">
+                        <!--#include virtual="/apps/components/freecode_content/fuel-grade-table/@include_html.html"-->
+                    </div>
+                    <div class="cm-layer__cta">
+                        <button type="button" class="cm-btn js-layer-closer">
+                            <span class="text">닫기</span>
+                            <span class="masker"><span>닫기</span></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="cm-layer__close-wrap">
+                    <button type="button" class="js-layer-closer">
+                        <span class="js-svg-icon" data-icon="svg-cross"></span>
+                        <span class="blind">닫기</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- [D] Small size popup -->
+    <div class="cm-layer type-alert js-cm-layer general-cta-popup__sm" id="small-freecoding-layer">
+        <span class="cm-layer__dimmed"></span>
+        <div class="cm-layer__body">
+            <div class="cm-layer__wrapper" role="dialog">
+                <div class="cm-layer__title">
+                    <strong>타이어 에너지 소비효율 등급</strong>
+                </div>
+                <div class="cm-layer__content">
+                    <div class="general-cta-popup__content">
+                        <!--#include virtual="/apps/components/freecode_content/fuel-grade-table/@include_small_html.html"-->
+                    </div>
+                    <div class="cm-layer__cta">
+                        <button type="button" class="cm-btn js-layer-closer">
+                            <span class="text">닫기</span>
+                            <span class="masker"><span>닫기</span></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="cm-layer__close-wrap">
+                    <button type="button" class="js-layer-closer">
+                        <span class="js-svg-icon" data-icon="svg-cross"></span>
+                        <span class="blind">닫기</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- component -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<!-- <script src="clientlibs/js/main.js"></script> -->
+
+<!--  마크업 검수용 코드 -->
+<div>
+    <a href="#" class="js-layer-opener" data-layer-target="#large-freecoding-layer">[Free Code Large 팝업 열기]</a>
+</div>
+<div>
+    <a href="#" class="js-layer-opener" data-layer-target="#small-freecoding-layer">[Free Code Small 팝업 열기]</a>
+</div>
+<!-- // 마크업 검수용 코드 -->
+</body>
+</html>

@@ -1,0 +1,517 @@
+.cp-contactus__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 80px;
+  padding: 0 8rem;
+}
+
+.cp-contactus__head {
+  padding: 0px 0 74px;
+  padding: 0rem 0 7.4rem;
+  text-align: center;
+  border-bottom: 1px solid #000;
+}
+
+.cp-contactus__title .el-title {
+  font-family: "genesis-head-office-light", sans-serif;
+  font-size: 56px;
+  font-size: 5.6rem;
+  font-weight: normal;
+  line-height: 58px;
+  line-height: 5.8rem;
+  letter-spacing: -0.025em;
+}
+
+.cp-contactus__desc {
+  margin-top: 13px;
+  margin-top: 1.3rem;
+  color: #262626;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 22px;
+  line-height: 2.2rem;
+}
+
+.cp-contactus__content {
+  padding-bottom: 0px;
+  padding-bottom: 0rem;
+}
+
+.cp-contactus__form {
+  margin-top: 79px;
+  margin-top: 7.9rem;
+}
+
+.cp-contactus__form-info {
+  margin-bottom: 35px;
+  margin-bottom: 3.5rem;
+  color: #ad7b61;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+.cp-contactus__form-cta {
+  margin-top: 80px;
+  margin-top: 8rem;
+  text-align: center;
+}
+
+.cp-contactus__form .cm-input-wrap {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.cp-contactus__form .cm-input-wrap + .cm-input-wrap {
+  margin-left: 40px;
+  margin-left: 4rem;
+}
+
+.cp-contactus__form .cm-radio {
+  display: inline-block;
+  padding: 12px 0;
+  padding: 1.2rem 0;
+}
+
+.cp-contactus__form .cm-radio + .cm-radio {
+  margin-left: 40px;
+  margin-left: 4rem;
+}
+
+.cp-contactus__form .cm-input-text,
+.cp-contactus__form .cm-select {
+  display: inline-block;
+}
+
+.cp-contactus__form .cm-input-text + .cm-input-text,
+.cp-contactus__form .cm-input-text + .cm-select,
+.cp-contactus__form .cm-select + .cm-input-text,
+.cp-contactus__form .cm-select + .cm-select {
+  margin-left: 40px;
+  margin-left: 4rem;
+}
+
+.cp-contactus__form .cm-input-message {
+  position: absolute;
+  top: 100%;
+}
+
+.cp-contactus__form .el-required {
+  font-style: normal;
+  color: #ad7b61;
+}
+
+.cp-contactus__form .el-field {
+  margin-bottom: 77px;
+  margin-bottom: 7.7rem;
+  font-size: 0;
+}
+
+.cp-contactus__form .el-field:last-child {
+  margin-bottom: 0;
+}
+
+.cp-contactus__form .el-field-label {
+  position: relative;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 20px;
+  line-height: 2rem;
+}
+
+.cp-contactus__form .el-field-label strong {
+  font-weight: normal;
+}
+
+.cp-contactus__form .el-field-count {
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  color: #666;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.cp-contactus__form .el-field-inputarea {
+  margin-top: 7px;
+  margin-top: 0.7rem;
+}
+
+.cp-contactus__form .el-field-radiogroup {
+  margin: 0 -20px;
+  margin: 0 -2rem;
+}
+
+.cp-contactus__form .el-field-radiogroup .cm-radio {
+  margin: 0 20px;
+  margin: 0 2rem;
+}
+
+.cp-contactus__form .el-field.field-category .cm-select:first-child, .cp-contactus__form .el-field.field-region .cm-select:first-child {
+  width: 240px;
+  width: 24rem;
+}
+
+.cp-contactus__form .el-field.field-category .cm-select:nth-child(2), .cp-contactus__form .el-field.field-region .cm-select:nth-child(2) {
+  width: 380px;
+  width: 38rem;
+}
+
+.cp-contactus__form .el-field.field-name .cm-input-text {
+  width: 380px;
+  width: 38rem;
+}
+
+.cp-contactus__form .el-field.field-email .cm-input-text,
+.cp-contactus__form .el-field.field-email .cm-select {
+  width: 240px;
+  width: 24rem;
+}
+
+.cp-contactus__form .el-field.field-email .cm-input-text:nth-child(2):before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  width: 40px;
+  width: 4rem;
+  height: 20px;
+  height: 2rem;
+  margin: auto 0;
+  font-size: 16px;
+  font-size: 1.6rem;
+  text-align: center;
+  content: '@';
+}
+
+.cp-contactus__form .el-field.field-email .cm-select__placeholder {
+  border-color: #000 !important;
+}
+
+.cp-contactus__form .el-field.field-title .cm-input-wrap {
+  display: block;
+}
+
+.cp-contactus__form .el-field.field-title .cm-input-text {
+  width: 100%;
+}
+
+.cp-contactus__form .el-field.field-inquiry {
+  padding-bottom: 20px;
+  padding-bottom: 2rem;
+}
+
+.cp-contactus__form .el-field.field-inquiry .el-field-inputarea {
+  margin-top: 21px;
+  margin-top: 2.1rem;
+}
+
+.cp-contactus__form .el-field.field-inquiry .cm-input-wrap {
+  display: block;
+}
+
+.cp-contactus__form .el-field.field-confirm .cm-input-message {
+  margin-left: 34px;
+  margin-left: 3.4rem;
+}
+
+.cp-contactus__result {
+  margin-top: 76px;
+  margin-top: 7.6rem;
+}
+
+.cp-contactus__result-info {
+  font-family: "genesis-head-office-light", sans-serif;
+  font-size: 34px;
+  font-size: 3.4rem;
+  line-height: 38px;
+  line-height: 3.8rem;
+  letter-spacing: -0.025em;
+  text-align: center;
+}
+
+.cp-contactus__result-notice {
+  margin-top: 39px;
+  margin-top: 3.9rem;
+  padding: 55px 145px 52px;
+  padding: 5.5rem 14.5rem 5.2rem;
+  background: #f8f8f8;
+}
+
+.cp-contactus__result-notice li {
+  position: relative;
+  margin-top: 5px;
+  margin-top: 0.5rem;
+  padding-left: 13px;
+  padding-left: 1.3rem;
+  color: #262626;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+}
+
+.cp-contactus__result-notice li:before {
+  position: absolute;
+  top: 9px;
+  top: 0.9rem;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  background: #a2a2a2;
+  content: '';
+}
+
+.cp-contactus__result-notice li:first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 1023px) {
+  .cp-contactus__inner {
+    padding: 0 58px;
+    padding: 0 5.8rem;
+  }
+  .cp-contactus__form {
+    margin-top: 58px;
+    margin-top: 5.8rem;
+  }
+  .cp-contactus__form-info {
+    font-size: 11px;
+    font-size: 1.1rem;
+  }
+  .cp-contactus__form-cta {
+    margin-top: 36px;
+    margin-top: 3.6rem;
+  }
+  .cp-contactus__form .cm-radio {
+    padding: 7px 0;
+    padding: 0.7rem 0;
+  }
+  .cp-contactus__form .el-field {
+    margin-bottom: 55px;
+    margin-bottom: 5.5rem;
+  }
+  .cp-contactus__form .el-field-label {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+  .cp-contactus__form .el-field-inputarea {
+    margin-top: 4px;
+    margin-top: 0.4rem;
+  }
+  .cp-contactus__form .el-field.field-category .cm-select:first-child, .cp-contactus__form .el-field.field-region .cm-select:first-child {
+    width: 200px;
+    width: 20rem;
+  }
+  .cp-contactus__form .el-field.field-category .cm-select:nth-child(2), .cp-contactus__form .el-field.field-region .cm-select:nth-child(2) {
+    width: 320px;
+    width: 32rem;
+  }
+  .cp-contactus__form .el-field.field-email .el-field-inputarea {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+  }
+  .cp-contactus__form .el-field.field-email .cm-input-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+  }
+  .cp-contactus__form .el-field.field-email .cm-input-text,
+  .cp-contactus__form .el-field.field-email .cm-select {
+    width: 190px;
+    width: 19rem;
+  }
+  .cp-contactus__form .el-field.field-confirm .cm-input-message {
+    margin-left: 30px;
+    margin-left: 3rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cp-contactus__inner {
+    padding: 0 30px;
+    padding: 0 3rem;
+  }
+  .cp-contactus__head {
+    padding: 0px 0 54px;
+    padding: 0rem 0 5.4rem;
+    text-align: left;
+  }
+  .cp-contactus__title .el-title {
+    font-size: 40px;
+    font-size: 4rem;
+    line-height: 45px;
+    line-height: 4.5rem;
+  }
+  .cp-contactus__desc {
+    margin-top: 15px;
+    margin-top: 1.5rem;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 20px;
+    line-height: 2rem;
+  }
+  .cp-contactus__content {
+    padding-bottom: 0px;
+    padding-bottom: 0rem;
+  }
+  .cp-contactus__form {
+    margin-top: 48px;
+    margin-top: 4.8rem;
+  }
+  .cp-contactus__form-info {
+    margin-bottom: 33px;
+    margin-bottom: 3.3rem;
+    font-size: 11px;
+    font-size: 1.1rem;
+  }
+  .cp-contactus__form-cta {
+    margin-top: 50px;
+    margin-top: 5rem;
+  }
+  .cp-contactus__form .cm-input-wrap {
+    display: block;
+    max-width: none;
+  }
+  .cp-contactus__form .cm-input-wrap + .cm-input-wrap {
+    margin-left: 0;
+  }
+  .cp-contactus__form .cm-radio {
+    padding: 11px 0;
+    padding: 1.1rem 0;
+  }
+  .cp-contactus__form .cm-radio + .cm-radio {
+    margin-left: 28px;
+    margin-left: 2.8rem;
+  }
+  .cp-contactus__form .cm-input-text + .cm-input-text,
+  .cp-contactus__form .cm-input-text + .cm-select,
+  .cp-contactus__form .cm-select + .cm-input-text,
+  .cp-contactus__form .cm-select + .cm-select {
+    margin-left: 20px;
+    margin-left: 2rem;
+  }
+  .cp-contactus__form .cm-input-message {
+    position: static;
+    padding-top: 6px;
+    padding-top: 0.6rem;
+    margin-bottom: -6px;
+    margin-bottom: -0.6rem;
+  }
+  .cp-contactus__form .cm-input-message p {
+    margin: 5px 0 -5px;
+    margin: 0.5rem 0 -0.5rem;
+  }
+  .cp-contactus__form .el-field {
+    margin-bottom: 56px;
+    margin-bottom: 5.6rem;
+  }
+  .cp-contactus__form .el-field-label {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  .cp-contactus__form .el-field-inputarea {
+    margin-top: 9px;
+    margin-top: 0.9rem;
+  }
+  .cp-contactus__form .el-field-radiogroup {
+    margin: 0 -14px;
+    margin: 0 -1.4rem;
+  }
+  .cp-contactus__form .el-field-radiogroup .cm-radio {
+    margin: 0 14px;
+    margin: 0 1.4rem;
+  }
+  .cp-contactus__form .el-field.field-category .cm-select, .cp-contactus__form .el-field.field-region .cm-select {
+    display: block;
+    width: auto !important;
+    margin-left: 0;
+  }
+  .cp-contactus__form .el-field.field-category .cm-select + .cm-select, .cp-contactus__form .el-field.field-region .cm-select + .cm-select {
+    margin-top: 20px;
+    margin-top: 2rem;
+  }
+  .cp-contactus__form .el-field.field-name .cm-input-wrap:nth-child(2) {
+    margin-top: 12px;
+    margin-top: 1.2rem;
+  }
+  .cp-contactus__form .el-field.field-name .cm-input-wrap:nth-child(2) .el-field-radiogroup {
+    margin-bottom: -11px;
+    margin-bottom: -1.1rem;
+  }
+  .cp-contactus__form .el-field.field-name .cm-input-text {
+    width: 100%;
+  }
+  .cp-contactus__form .el-field.field-email .el-field-inputarea,
+  .cp-contactus__form .el-field.field-email .cm-input-wrap {
+    display: block;
+  }
+  .cp-contactus__form .el-field.field-email .cm-input-text {
+    max-width: none;
+  }
+  .cp-contactus__form .el-field.field-email .cm-input-text:first-child {
+    width: 58.7%;
+  }
+  .cp-contactus__form .el-field.field-email .cm-input-text:nth-child(2) {
+    width: -webkit-calc(100% - 58.7% - 20px);
+    width: calc(100% - 58.7% - 20px);
+  }
+  .cp-contactus__form .el-field.field-email .cm-input-text:nth-child(2):before {
+    width: 20px;
+    width: 2rem;
+    height: 16px;
+    height: 1.6rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+  .cp-contactus__form .el-field.field-email .cm-select {
+    width: 100%;
+    max-width: none;
+    margin: 14px 0 0;
+    margin: 1.4rem 0 0;
+  }
+  .cp-contactus__form .el-field.field-inquiry {
+    padding-bottom: 0;
+  }
+  .cp-contactus__form .el-field.field-inquiry .cm-input-textarea textarea {
+    height: 140px;
+    height: 14rem;
+  }
+  .cp-contactus__result {
+    margin-top: 47px;
+    margin-top: 4.7rem;
+  }
+  .cp-contactus__result-info {
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 25px;
+    line-height: 2.5rem;
+    text-align: left;
+  }
+  .cp-contactus__result-notice {
+    margin-top: 21px;
+    margin-top: 2.1rem;
+    padding: 36px 35px 33px;
+    padding: 3.6rem 3.5rem 3.3rem;
+  }
+  .cp-contactus__result-notice li {
+    margin-top: 12px;
+    margin-top: 1.2rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 22px;
+    line-height: 2.2rem;
+  }
+  .cp-contactus__result-notice li:before {
+    top: 8px;
+    top: 0.8rem;
+  }
+}

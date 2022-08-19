@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Support : Event List</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* support css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-supportpage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+</head>
+<body>
+<div id="wrap">
+
+    <!-- component -->
+    <div class="type-light">
+        <div class="cp-event-list">
+            <div class="cp-event-list__inner">
+                <div class="cp-event-list__tab">
+                    <!-- [D] 활성화 시 : .is-active 클래스 추가 및 <a> 요소에 aria-selected 속성값 true로 변경-->
+                    <div class="cp-event-list__tab-item is-active">
+                        <a href="#">카테고리명</a>
+                    </div>
+                    <div class="cp-event-list__tab-item">
+                        <a href="#">카테고리명</a>
+                    </div>
+                    <div class="cp-event-list__tab-item">
+                        <a href="#">카테고리명</a>
+                    </div>
+                    <div class="cp-event-list__tab-item">
+                        <a href="#">카테고리명</a>
+                    </div>
+                </div>
+                <div class="cp-event-list__tool">
+                    <div class="cm-select type2 js-select-wrap">
+                        <a href="#" class="cm-select__placeholder" aria-expanded="false">
+                            <span>All</span>
+                        </a>
+                        <div class="cm-select__options" role="listbox" style="display: none;">
+                            <ul role="presentation">
+                            <li role="presentation"><a href="#" role="option">option1 option1 option1 option1 option1</a></li>
+                            <li role="presentation"><a href="#" role="option">option2</a></li>
+                            <li role="presentation"><a href="#" role="option">option3</a></li>
+                            <li role="presentation"><a href="#" role="option">option4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="cp-event-list__panel">
+                    <!-- [D] 활성화 시 : display:block 처리 -->
+                    <div class="cp-event-list__panel-item" style="display:block">
+                        <ul class="cp-event-list__list">
+                        <!-- [D] Full 컨텐츠 1개 + 이미지 왼쪽에 배치: .full-type 클래스 추가 -->
+                        <!-- [D] Full 컨텐츠 1개 + 이미지 오른쪽에 배치: .full-type .full-reverse 클래스 추가 -->
+                        <li class="cp-event-list__box full-type">
+                            <div class="cp-event-list__box-inner">
+                                <!-- [D] 행사 종료 시 : .has-dimmed 클래스 추가 -->
+                                <!-- [F] 호버 시 : .is-hover 클래스 추가 -->
+                                <div class="cm-sup-post js-animate">
+                                    <a href="#">
+                                        <div class="cm-sup-post__img">
+                                            <div class="js-picture">
+                                                <div class="js-img-bg" data-media="(min-width: 768px)" data-srcset="http://via.placeholder.com/660x370"></div>
+                                                <div class="js-img-bg" data-media="(min-width: 0)" data-srcset="http://via.placeholder.com/660x370"></div>
+                                            </div>
+                                            <span class="el-dimmed">행사가 종료되었습니다.</span>
+                                        </div>
+                                        <div class="cm-sup-post__info">
+                                            <div class="cm-sup-post__title">제네시스 'The All-new G80' 이미지 최초 공개 신형 G80, ‘역동적인 우아함”</div>
+                                            <div class="cm-sup-post__desc">
+                                                <p>신형 G80가 제네시스 세단의 새로운 시대를 선포했다. 제네시스 브랜드는 30일(월) 온라인으로 출시행사를 갖고 G80의 완전 변경 모델 The All</p>
+                                            </div>
+                                            <div class="cm-sup-post__date">
+                                                <em>2020.03.09 ~ 2020.04.09</em>
+                                            </div>
+                                            <div class="cm-sup-post__tags">
+                                                <em class="cm-label"><span class="text">GV80</span></em>
+                                                <em class="cm-label type-white"><span class="text">진행중</span></em>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cp-event-list__box">
+                            <div class="cp-event-list__box-inner">
+                                <div class="cm-sup-post js-animate has-dimmed">
+                                    <a href="#">
+                                        <div class="cm-sup-post__img">
+                                            <div class="js-picture">
+                                                <div class="js-img-bg" data-media="(min-width: 768px)" data-srcset="http://via.placeholder.com/660x370"></div>
+                                                <div class="js-img-bg" data-media="(min-width: 0)" data-srcset="http://via.placeholder.com/660x370"></div>
+                                            </div>
+                                            <span class="el-dimmed">행사가 종료되었습니다.</span>
+                                        </div>
+                                        <div class="cm-sup-post__info">
+                                            <div class="cm-sup-post__title">제네시스 'The All-new G80' 이미지 최초 공개 신형 G80, ‘역동적인 우아함”</div>
+                                            <div class="cm-sup-post__desc">
+                                                <p>신형 G80가 제네시스 세단의 새로운 시대를 선포했다. 제네시스 브랜드는 30일(월) 온라인으로 출시행사를 갖고 G80의 완전 변경 모델 The All</p>
+                                            </div>
+                                            <div class="cm-sup-post__date">
+                                                <em>2020.03.09 ~ 2020.04.09</em>
+                                            </div>
+                                            <div class="cm-sup-post__tags">
+                                                <em class="cm-label"><span class="text">GV80</span></em>
+                                                <em class="cm-label type-white"><span class="text">진행중</span></em>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cp-event-list__box">
+                            <div class="cp-event-list__box-inner">
+                                <div class="cm-sup-post js-animate">
+                                    <a href="#">
+                                        <div class="cm-sup-post__img">
+                                            <div class="js-picture">
+                                                <div class="js-img-bg" data-media="(min-width: 768px)" data-srcset="http://via.placeholder.com/660x370"></div>
+                                                <div class="js-img-bg" data-media="(min-width: 0)" data-srcset="http://via.placeholder.com/660x370"></div>
+                                            </div>
+                                            <span class="el-dimmed">행사가 종료되었습니다.</span>
+                                        </div>
+                                        <div class="cm-sup-post__info">
+                                            <div class="cm-sup-post__title">제네시스 'The All-new G80' 이미지 최초 공개 신형 G80, ‘역동적인 우아함”</div>
+                                            <div class="cm-sup-post__desc">
+                                                <p>신형 G80가 제네시스 세단의 새로운 시대를 선포했다. 제네시스 브랜드는 30일(월) 온라인으로 출시행사를 갖고 G80의 완전 변경 모델 The All</p>
+                                            </div>
+                                            <div class="cm-sup-post__date">
+                                                <em>2020.03.09 ~ 2020.04.09</em>
+                                            </div>
+                                            <div class="cm-sup-post__tags">
+                                                <em class="cm-label"><span class="text">GV80</span></em>
+                                                <em class="cm-label type-white"><span class="text">진행중</span></em>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cp-event-list__box full-type full-reverse">
+                            <div class="cp-event-list__box-inner">
+                                <div class="cm-sup-post js-animate">
+                                    <a href="#">
+                                        <div class="cm-sup-post__img">
+                                            <div class="js-picture">
+                                                <div class="js-img-bg" data-media="(min-width: 768px)" data-srcset="http://via.placeholder.com/660x370"></div>
+                                                <div class="js-img-bg" data-media="(min-width: 0)" data-srcset="http://via.placeholder.com/660x370"></div>
+                                            </div>
+                                            <span class="el-dimmed">행사가 종료되었습니다.</span>
+                                        </div>
+                                        <div class="cm-sup-post__info">
+                                            <div class="cm-sup-post__title">제네시스 'The All-new G80' 이미지 최초 공개 신형 G80, ‘역동적인 우아함”</div>
+                                            <div class="cm-sup-post__desc">
+                                                <p>신형 G80가 제네시스 세단의 새로운 시대를 선포했다. 제네시스 브랜드는 30일(월) 온라인으로 출시행사를 갖고 G80의 완전 변경 모델 The All</p>
+                                            </div>
+                                            <div class="cm-sup-post__date">
+                                                <em>2020.03.09 ~ 2020.04.09</em>
+                                            </div>
+                                            <div class="cm-sup-post__tags">
+                                                <em class="cm-label"><span class="text">GV80</span></em>
+                                                <em class="cm-label type-white"><span class="text">진행중</span></em>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cp-event-list__box">
+                            <div class="cp-event-list__box-inner">
+                                <div class="cm-sup-post js-animate has-dimmed">
+                                    <a href="#">
+                                        <div class="cm-sup-post__img">
+                                            <div class="js-picture">
+                                                <div class="js-img-bg" data-media="(min-width: 768px)" data-srcset="http://via.placeholder.com/660x370"></div>
+                                                <div class="js-img-bg" data-media="(min-width: 0)" data-srcset="http://via.placeholder.com/660x370"></div>
+                                            </div>
+                                            <span class="el-dimmed">행사가 종료되었습니다.</span>
+                                        </div>
+                                        <div class="cm-sup-post__info">
+                                            <div class="cm-sup-post__title">제네시스 'The All-new G80' 이미지 최초 공개 신형 G80, ‘역동적인 우아함”</div>
+                                            <div class="cm-sup-post__desc">
+                                                <p>신형 G80가 제네시스 세단의 새로운 시대를 선포했다. 제네시스 브랜드는 30일(월) 온라인으로 출시행사를 갖고 G80의 완전 변경 모델 The All</p>
+                                            </div>
+                                            <div class="cm-sup-post__date">
+                                                <em>2020.03.09 ~ 2020.04.09</em>
+                                            </div>
+                                            <div class="cm-sup-post__tags">
+                                                <em class="cm-label"><span class="text">GV80</span></em>
+                                                <em class="cm-label type-white"><span class="text">진행중</span></em>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cp-event-list__box">
+                            <div class="cp-event-list__box-inner">
+                                <div class="cm-sup-post js-animate">
+                                    <a href="#">
+                                        <div class="cm-sup-post__img">
+                                            <div class="js-picture">
+                                                <div class="js-img-bg" data-media="(min-width: 768px)" data-srcset="http://via.placeholder.com/660x370"></div>
+                                                <div class="js-img-bg" data-media="(min-width: 0)" data-srcset="http://via.placeholder.com/660x370"></div>
+                                            </div>
+                                            <span class="el-dimmed">행사가 종료되었습니다.</span>
+                                        </div>
+                                        <div class="cm-sup-post__info">
+                                            <div class="cm-sup-post__title">제네시스 'The All-new G80' 이미지 최초 공개 신형 G80, ‘역동적인 우아함”</div>
+                                            <div class="cm-sup-post__desc">
+                                                <p>신형 G80가 제네시스 세단의 새로운 시대를 선포했다. 제네시스 브랜드는 30일(월) 온라인으로 출시행사를 갖고 G80의 완전 변경 모델 The All</p>
+                                            </div>
+                                            <div class="cm-sup-post__date">
+                                                <em>2020.03.09 ~ 2020.04.09</em>
+                                            </div>
+                                            <div class="cm-sup-post__tags">
+                                                <em class="cm-label"><span class="text">GV80</span></em>
+                                                <em class="cm-label type-white"><span class="text">진행중</span></em>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cp-event-list__box full-type">
+                            <div class="cp-event-list__box-inner">
+                                <div class="cm-sup-post js-animate">
+                                    <a href="#">
+                                        <div class="cm-sup-post__img">
+                                            <div class="js-picture">
+                                                <div class="js-img-bg" data-media="(min-width: 768px)" data-srcset="http://via.placeholder.com/660x370"></div>
+                                                <div class="js-img-bg" data-media="(min-width: 0)" data-srcset="http://via.placeholder.com/660x370"></div>
+                                            </div>
+                                            <span class="el-dimmed">행사가 종료되었습니다.</span>
+                                        </div>
+                                        <div class="cm-sup-post__info">
+                                            <div class="cm-sup-post__title">제네시스 'The All-new G80' 이미지 최초 공개 신형 G80, ‘역동적인 우아함”</div>
+                                            <div class="cm-sup-post__desc">
+                                                <p>신형 G80가 제네시스 세단의 새로운 시대를 선포했다. 제네시스 브랜드는 30일(월) 온라인으로 출시행사를 갖고 G80의 완전 변경 모델 The All</p>
+                                            </div>
+                                            <div class="cm-sup-post__date">
+                                                <em>2020.03.09 ~ 2020.04.09</em>
+                                            </div>
+                                            <div class="cm-sup-post__tags">
+                                                <em class="cm-label"><span class="text">GV80</span></em>
+                                                <em class="cm-label type-white"><span class="text">진행중</span></em>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    <!-- [D] 검색 결과가 없는 경우 -->
+                    <!-- [D] 활성화 시 : display:block 처리 -->
+                    <div class="cp-event-list__panel-item" style="display:none">
+                        <div class="cm-results-section">
+                            <p class="cm-results-title">총 <strong>‘0’</strong>개의 검색결과가 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cp-event-list__pagination">
+                    <div class="is-pc">
+                        <div class="cm-pagination">
+                            <button type="button" class="btn btn-prev"><span class="blind">이전 페이지로 이동</span></button>
+                            <!-- /* [D] 페이지 활성화 : on 클래스 추가 */ -->
+                            <a href="javascript:;" class="page-num on" data-page="1" title="Page 1"><span>1</span></a>
+                            <a href="javascript:;" class="page-num" data-page="2" title="Page 2"><span>2</span></a>
+                            <a href="javascript:;" class="page-num" data-page="3" title="Page 3"><span>3</span></a>
+                            <a href="javascript:;" class="page-num" data-page="4" title="Page 4"><span>4</span></a>
+                            <a href="javascript:;" class="page-num" data-page="5" title="Page 5"><span>5</span></a>
+                            <a href="javascript:;" class="page-num" data-page="6" title="Page 6"><span>6</span></a>
+                            <a href="javascript:;" class="page-num" data-page="7" title="Page 7"><span>7</span></a>
+                            <a href="javascript:;" class="page-num" data-page="8" title="Page 8"><span>8</span></a>
+                            <a href="javascript:;" class="page-num" data-page="9" title="Page 9"><span>9</span></a>
+                            <a href="javascript:;" class="page-num" data-page="10" title="Page 10"><span>10</span></a>
+                            <button type="button" class="btn btn-next"><span class="blind">다음 페이지로 이동</span></button>
+                        </div>
+                    </div>
+                    <div class="is-mo">
+                        <div class="cm-pagination">
+                            <button type="button" class="btn btn-prev"><span class="blind">이전 페이지로 이동</span></button>
+                            <!-- /* [D] 페이지 활성화 : on 클래스 추가 */ -->
+                            <a href="javascript:;" class="page-num on" data-page="1" title="Page 1"><span>1</span></a>
+                            <a href="javascript:;" class="page-num" data-page="2" title="Page 2"><span>2</span></a>
+                            <a href="javascript:;" class="page-num" data-page="3" title="Page 3"><span>3</span></a>
+                            <a href="javascript:;" class="page-num" data-page="4" title="Page 4"><span>4</span></a>
+                            <a href="javascript:;" class="page-num" data-page="5" title="Page 5"><span>5</span></a>
+                            <button type="button" class="btn btn-next"><span class="blind">다음 페이지로 이동</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //component -->
+
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* support js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-supportpage/js/main.js"></script>
+<!--/* component js */-->
+<script src="clientlibs/js/main.js"></script>
+
+<!--  마크업 검수용 코드 -->
+<style>
+    .uio-box{position:fixed;top:80px;right:0;z-index:9999;width:120px;border-bottom:1px solid #999}
+    .uio-box a{display:block;padding:4px 10px;margin-top:-1px;border:1px solid #999;border-width:1px 0 0 1px;background:rgba(0,0,0,0.7);color:#fff;font-size:13px;}
+    .uio-box a:hover{background:rgba(255,255,255,0.6);color:#000;font-weight:bold}
+    </style>
+    <script>
+    $(function () {
+        showList = function (idx) {
+            $('.cp-event-list__panel-item').eq(0).show().siblings().hide();
+            $('.cp-event-list__pagination').show();
+        };
+        showNoResult = function () {
+            $('.cp-event-list__panel-item').eq(1).show().siblings().hide();
+            $('.cp-event-list__pagination').hide();
+				};
+				tabDel = function () {
+						$('.cp-event-list__tab').remove();
+				};
+				tabAdd = function () {
+					location.reload();
+				}
+    });
+    </script>
+    <div class="uio-box">
+    <a href="javascript:void(0);" onclick="showList();">이벤트 목록</a>
+    <a href="javascript:void(0);" onclick="showNoResult();">결과없는 경우</a>
+    <a href="javascript:void(0);" onclick="tabDel();">탭 없는 경우</a>
+    <a href="javascript:void(0);" onclick="tabAdd();">탭 있는 경우</a>
+    </div>
+    <!-- // 마크업 검수용 코드 -->
+</body>
+</html>

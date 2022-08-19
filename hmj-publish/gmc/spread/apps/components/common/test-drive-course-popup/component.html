@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Test Drive Course Popup</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+<style>
+    .js-layer-opener { display:inline-block; padding: 10px 3px; font-size: 18px; }
+</style>
+</head>
+<body>
+<div id="wrap" style="background: #fff;">
+    <a href="#" class="js-layer-opener" data-layer-target="#test-course-layer">Test Drive History Popup</a>
+    <!-- component -->
+    <div class="cm-layer type-alert test-course-popup js-cm-layer" id="test-course-layer">
+        <span class="cm-layer__dimmed"></span>
+        <div class="cm-layer__body">
+            <div class="cm-layer__wrapper" role="dialog">
+                <div class="cm-layer__title">
+                    <strong>숏 코스 드라이빙</strong>
+                </div>
+                <div class="cm-layer__content">
+                    <ul class="test-course-popup__tab-list">
+                    <!-- [F] 활성화 시 : is-active 클래스 추가 -->
+                    <li class="test-course-popup__tab-item is-active"><a href="#courseTab1">약도</a></li>
+                    <li class="test-course-popup__tab-item"><a href="#courseTab2">시승 영상</a></li>
+                    </ul>
+                    <div class="test-course-popup__tab-content" id="courseTab1">
+                        <div class="test-course-popup__img">
+                            <img src="http://placehold.it/720x540" alt="">
+                        </div>
+                        <div class="test-course-popup__text">
+                            <p class="test-course-popup__desc">심플한 시내 구간에서 제네시스의 주행 편의 기술을 집중적으로 경험할 수 있는 코스</p>
+                            <p class="test-course-popup__additional">거리/시간 : 7KM / 25분 소요<br>코스 : 시내 구간 + 녹지 구간</p>
+                        </div>
+                        <ol class="test-course-popup__list">
+                        <li class="test-course-popup__item">제네시스 강남 출발</li>
+                        <li class="test-course-popup__item">봉은사역 사거리 U턴</li>
+                        <li class="test-course-popup__item">영동대로(일원터널 방면) 직진</li>
+                        <li class="test-course-popup__item">일원터널 사거리 U턴</li>
+                        <li class="test-course-popup__item">영동대로(삼성역 방면) 직진</li>
+                        <li class="test-course-popup__item">제네시스 강남 도착</li>
+                        <li class="test-course-popup__item">제네시스 강남 출발</li>
+                        <li class="test-course-popup__item">봉은사역 사거리 U턴</li>
+                        <li class="test-course-popup__item">영동대로(일원터널 방면) 직진</li>
+                        <li class="test-course-popup__item">일원터널 사거리 U턴</li>
+                        <li class="test-course-popup__item">영동대로(삼성역 방면) 직진</li>
+                        </ol>
+                    </div>
+                    <div class="test-course-popup__tab-content" id="courseTab2">
+                        <div class="video-container" data-use-scrollmagic="false">
+                            <video muted playsinline preload="none">
+                                <source src="/apps/components/common/test-drive-course-popup/imgs/@dummy-video.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-button-play"><button type="button"><span class="blind">Play video</span></button></div>
+                            <div class="video-button-pause"><button type="button"><span class="blind">Pause video</span></button></div>
+                        </div>
+                        <div class="test-course-popup__text">
+                            <p class="test-course-popup__desc">심플한 시내 구간에서 제네시스의 주행 편의 기술을 집중적으로 경험할 수 있는 코스</p>
+                            <p class="test-course-popup__additional">거리/시간 : 7KM / 25분 소요<br>코스 : 시내 구간 + 녹지 구간</p>
+                        </div>
+                        <ol class="test-course-popup__list">
+                        <li class="test-course-popup__item">제네시스 강남 출발</li>
+                        <li class="test-course-popup__item">봉은사역 사거리 U턴</li>
+                        <li class="test-course-popup__item">영동대로(일원터널 방면) 직진</li>
+                        <li class="test-course-popup__item">일원터널 사거리 U턴</li>
+                        <li class="test-course-popup__item">영동대로(삼성역 방면) 직진</li>
+                        <li class="test-course-popup__item">제네시스 강남 도착</li>
+                        <li class="test-course-popup__item">제네시스 강남 출발</li>
+                        <li class="test-course-popup__item">봉은사역 사거리 U턴</li>
+                        <li class="test-course-popup__item">영동대로(일원터널 방면) 직진</li>
+                        <li class="test-course-popup__item">일원터널 사거리 U턴</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="cm-layer__close-wrap">
+                    <button type="button" class="js-layer-closer">
+                        <span class="js-svg-icon" data-icon="svg-cross"></span>
+                        <span class="blind">Close popup</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- component -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<script src="clientlibs/js/main.js"></script>
+<script>
+$(function () {
+    //open
+    $('#test-course-layer').trigger('openLayer');
+});
+</script>
+</body>
+</html>

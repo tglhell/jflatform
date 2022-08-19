@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Test Drive</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<!--#include virtual="/apps/components/common/cm-find-map/@include_css.html"-->
+<!--#include virtual="/apps/components/common/location-agree-popup/@include_css.html"-->
+<!--#include virtual="/apps/components/common/find-show-room-popup/@include_css.html"-->
+<!-- 모바일 스타일 임시 -->
+<style>
+@media screen and (max-width:767px) {
+.cm-find-map__map-area.is-pc{display:none}
+}
+</style>
+</head>
+<body>
+<div id="wrap">
+
+    <!-- 1. 전시장 찾기 -->
+    <!--#include virtual="/apps/components/common/cm-find-map/@include_showroom_html.html"-->
+    <!-- //1. 전시장 찾기 -->
+
+    <!-- 팝업 -->
+    <!-- 1. 위치정보 사용동의 팝업 -->
+    <!--#include virtual="/apps/components/common/location-agree-popup/@include_html.html"-->
+    <!-- //1. 위치정보 사용동의 팝업 -->
+    
+    <!-- 2. 전시장 상세보기 팝업 -->
+    <!--#include virtual="/apps/components/common/find-show-room-popup/@include_html.html"-->
+    <!-- //2. 전시장 상세보기 팝업 -->
+
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<!--#include virtual="/apps/components/common/cm-find-map/@include_js.html"-->
+<!--#include virtual="/apps/components/common/find-show-room-popup/@include_js.html"-->
+</body>
+</html>

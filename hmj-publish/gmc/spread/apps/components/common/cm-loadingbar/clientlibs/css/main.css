@@ -1,0 +1,106 @@
+.cm-loadingbar {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0);
+}
+
+.cm-loadingbar.is-active {
+  display: block;
+}
+
+.aem-AuthorLayer-Edit .cm-loadingbar, .aem-AuthorLayer-Preview .cm-loadingbar {
+  height: auto;
+}
+
+.cm-loadingbar__dimmed {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.cm-loadingbar__body {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.cm-loadingbar__body::before {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  content: '';
+}
+
+.cm-loadingbar__wrapper {
+  display: inline-block;
+  width: 180px;
+  width: 18rem;
+  height: 180px;
+  height: 18rem;
+  background: #111;
+  font-size: 0;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.cm-loadingbar__wrapper::before {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  content: '';
+}
+
+.cm-loadingbar__content {
+  display: inline-block;
+  width: 100%;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-family: "genesis-text-office", sans-serif;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+
+.cm-loadingbar__icon-wrap {
+  margin-top: 7px;
+  margin-top: 0.7rem;
+  font-size: 0;
+}
+
+.cm-loadingbar__icon-wrap .icon {
+  display: inline-block;
+  width: 4px;
+  width: 0.4rem;
+  height: 4px;
+  height: 0.4rem;
+  margin: 0 3px;
+  margin: 0 0.3rem;
+  background: #fff;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  vertical-align: top;
+}
+
+.cm-loadingbar__complete {
+  display: none;
+}
+
+.cm-loadingbar__complete-icon {
+  width: 20px;
+  height: 14px;
+  margin: 0 auto;
+  background-image: url("/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-loading-complete.png");
+  background-size: cover;
+}

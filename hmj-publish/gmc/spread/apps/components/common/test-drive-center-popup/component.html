@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Test Drive Center Popup</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+<style>
+    .js-layer-opener { display:inline-block; padding: 10px 3px; font-size: 18px; }
+</style>
+</head>
+<body>
+<div id="wrap" style="background: #fff;">
+    <a href="#" class="js-layer-opener is-async" data-layer-target="#testdrive-center-layer">Test Drive Center Popup</a>
+    <!-- component -->
+    <div class="cm-layer testdrive-center-popup type-alert js-cm-layer" id="testdrive-center-layer" data-global-text='{
+        "Expand" : "Click to expand",
+        "Collapse" : "Click to collapse"
+    }'>
+        <span class="cm-layer__dimmed"></span>
+        <div class="cm-layer__body">
+            <div class="cm-layer__wrapper" role="dialog">
+                <div class="cm-layer__title">
+                    <strong>강남 시승센터</strong>
+                </div>
+                <div class="cm-layer__content">
+                    <div class="testdrive-center-popup__location">
+                        <div class="testdrive-center-popup__location-desc">서울특별시 강남구 영동대로 302 (대치동, 국민제1빌딩)</div>
+                        <div class="testdrive-center-popup__location-desc">+82-2-3452-7365</div>
+                    </div>
+                    <div class="testdrive-center-popup__desc">
+                        <p>찾아가는 시승 서비스는 시승 센터에서만 운영하며(지점/대리점 미운영), 시승센터에서 왕복 1시간내 지역에만 제공 가능합니다.</p>
+                    </div>
+                    <div class="testdrive-center-popup__title">
+                        <strong>시승 방식 선택</strong>
+                    </div>
+                    <div class="testdrive-center-popup__select">
+                        <ul>
+                            <!--/* [F] 선택시 : .is-selected 클레스 추가 */-->
+                            <li class="testdrive-center-popup__select-list">
+                                <div class="testdrive-center-popup__select-list-inner">
+                                    <a href="#"><span>센터방문 시승서비스</span></a>
+                                    <p>고객님이 시승 센터로 직접 방문하는 시승</p>
+                                </div>
+                            </li>
+                            <li class="testdrive-center-popup__select-list type-find-zipcode is-selected">
+                                <div class="testdrive-center-popup__select-list-inner">
+                                    <a href="#"><span>찾아가는 시승서비스</span></a>
+                                    <p>카마스터가 고객님의 위치로 찾아가는 시승</p>
+                                </div>
+                                <div class="testdrive-center-popup__select-where">
+                                    <div class="testdrive-center-popup__select-where-title">카마스터가 방문할 지역</div>
+                                    <!-- [D] 에러 시 : has-error 클래스 추가 -->
+                                    <div class="testdrive-center-popup__select-where-input has-error">
+                                        <!-- /* 주소 */ -->
+                                        <div class="testdrive-center-popup__input centerpopup-input-type1">
+                                            <div class="cm-input-wrap">
+                                                <!-- [D] 읽기만 가능한 경우 : .is-disabled 클래스 추가 및 input 요소에 readonly 속성 추가 -->
+                                                <div class="cm-input-text js-input-text-wrap is-disabled">
+                                                    <input type="text" id="testDriveInp1" name="zipcode" class="cm-input-text__input" value="우편번호" readonly>
+                                                    <label for="testDriveInp1" class="cm-input-text__label">우편번호</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="cm-btn type2 type-white" title="우편번호 검색">
+                                            <span class="text">우편번호 검색</span>
+                                            <span class="masker" style=""><span>우편번호 검색</span></span>
+                                        </a>
+                                        <div class="testdrive-center-popup__input centerpopup-input-type2">
+                                            <div class="cm-input-wrap">
+                                                <!-- [D] 읽기만 가능한 경우 : .is-disabled 클래스 추가 및 input 요소에 readonly 속성 추가 -->
+                                                <div class="cm-input-text js-input-text-wrap is-disabled">
+                                                    <input type="text" id="testDriveInp2" name="addr1" class="cm-input-text__input" value="주소" readonly>
+                                                    <label for="testDriveInp2" class="cm-input-text__label">주소</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="testdrive-center-popup__input centerpopup-input-type3">
+                                            <div class="cm-input-wrap">
+                                                <div class="cm-input-text js-input-text-wrap">
+                                                    <input type="text" id="testDriveInp3" name="addr2" class="cm-input-text__input">
+                                                    <label for="testDriveInp3" class="cm-input-text__label">상세 주소</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cm-input-message">
+                                            <!-- [D] 에러/유효성 메세지 노출 시 : display:block 처리 -->
+                                            <p class="cm-message-error" style="display:none">주소를 입력해 주세요.</p>
+                                            <p class="cm-message-error" style="display:block">찾아가는 시승 서비스 불가 지역입니다.센터방문 시승서비스를 선택하세요.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="testdrive-center-popup__title">
+                        <strong>시승 차량 선택</strong>
+                        <a href="https://www.genesis.com/kr/ko/popup-info-color.html " class="cm-btn-more is-default" title="색상정보 확인하기"><span>색상정보 확인하기</span></a>
+                    </div>
+                    <div class="testdrive-center-popup__select type-car-select">
+                        <ul>
+                            <!--/* [F] 선택시 : .is-selected 클레스 추가 */-->
+                            <li class="testdrive-center-popup__select-list type-show-desc is-selected ">
+                                <div class="testdrive-center-popup__select-list-inner">
+                                    <a href="#"><span>Genesis GV80</span></a>
+                                    <p>GV80 가솔린 3.5T 7인승 22인치 SDS2 4WD 오토 런칭</p>
+                                    <div class="testdrive-center-popup__select-desc-img">
+                                        <div class="js-picture">
+                                            <img data-media="(min-width: 0px)" data-srcset="/apps/components/common/test-drive-center-popup/imgs/@gv80-white.jpg" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cm-accordion type-default testdrive-center-popup__select-desc">
+                                    <div class="cm-accordion-list">
+                                        <div class="cm-accordion-item">
+                                            <button type="button" class="cm-accordion-btn">내/외장 색상<span class="blind"></span><span class="ico-accordion"></span></button>
+                                            <div class="cm-accordion-panel">
+                                                <div class="cm-accordion-panel-inner">
+                                                    <div class="testdrive-center-popup__select-desc-list">
+                                                        <span class="car-color-title">외관 색상</span>
+                                                        <span class="car-color">우유니 화이트</span>
+                                                    </div>
+                                                    <div class="testdrive-center-popup__select-desc-list">
+                                                        <span class="car-color-title">내장 색상</span>
+                                                        <span class="car-color">옵시디언 블랙 / 바닐라 베이지 투톤 (바닐라 베이지 시트)</span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="testdrive-center-popup__select-list type-show-desc">
+                                <div class="testdrive-center-popup__select-list-inner">
+                                    <a href="#"><span>Genesis GV80</span></a>
+                                    <p>GV80 디젤 3.0 5인승 22인치 SDS2 4WD 오토 런칭</p>
+                                    <div class="testdrive-center-popup__select-desc-img">
+                                        <div class="js-picture">
+                                            <img data-media="(min-width: 0px)" data-srcset="/apps/components/common/test-drive-center-popup/imgs/@gv80-black.jpg" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cm-accordion type-default testdrive-center-popup__select-desc">
+                                    <div class="cm-accordion-list">
+                                        <div class="cm-accordion-item">
+                                            <button type="button" class="cm-accordion-btn">내/외장 색상<span class="blind"></span><span class="ico-accordion"></span></button>
+                                            <div class="cm-accordion-panel">
+                                                <div class="cm-accordion-panel-inner">
+                                                    <div class="testdrive-center-popup__select-desc-list">
+                                                        <span class="car-color-title">외관 색상</span>
+                                                        <span class="car-color">우유니 화이트</span>
+                                                    </div>
+                                                    <div class="testdrive-center-popup__select-desc-list">
+                                                        <span class="car-color-title">내장 색상</span>
+                                                        <span class="car-color">옵시디언 블랙 / 바닐라 베이지 투톤 (바닐라 베이지 시트)</span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cm-layer__cta">
+                        <button type="button" class="cm-btn type2 type-white js-layer-closer">
+                            <span class="text">취소</span>
+                            <span class="masker"><span>취소</span></span>
+                        </button>
+                        <a href="#" class="cm-btn type2" title="다음">
+                            <span class="text">다음</span>
+                            <span class="masker" style=""><span>다음</span></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="cm-layer__close-wrap">
+                    <button type="button" class="js-layer-closer">
+                        <span class="js-svg-icon" data-icon="svg-cross"></span>
+                        <span class="blind">Close popup</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- component -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<script src="clientlibs/js/main.js"></script>
+<script>
+$(function () {
+    $('.is-async[data-layer-target="#testdrive-center-layer"]').on('click', function () {
+        $(this).trigger('clickCustom');
+    });
+});
+</script>
+</body>
+</html>

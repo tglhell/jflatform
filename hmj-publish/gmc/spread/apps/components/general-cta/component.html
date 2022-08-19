@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>General Cta</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+<!--/* popup css */-->
+<!--#include virtual="/apps/components/common/general-cta-popup/@include_css.html"-->
+</head>
+<body>
+<div id="wrap">
+    <!-- component -->
+    <div class="guide" style="font-size:16px;padding:20px 0">
+        <p>1) layout옵션 
+            <ol>
+                <li>- type-cta1-> title + CTA 줄바꿈 </li>
+                <li>- type-cta2-> title + CTA 한줄 </li>
+                <li>- type-cta3-> title + underline CTA 한줄 </li>
+                <li>- type-cta4-> title + QR코드 한줄 </li>
+            </ol>
+        </p>
+        <p>2) color theme : 기본 배경 테마와 별개로 컴포넌트 테마 존재 <br> 
+            <ol>
+                <li>- dark-bg1-> #111111 </li>
+                <li>- dark-bg2-> #151515 </li>
+                <li>- light-bg1-> #ffffff </li>
+                <li>- light-bg2-> #f8f8f8 </li>
+            </ol>
+        </p>
+    </div>
+    <div class="type-dark">
+        <div class="cp-general-cta type-cta1 dark-bg1">
+            <div class="cp-general-cta__inner">
+                <div class="cp-general-cta__head">
+                    <em>We strive to create the finest automobiles and related products and services for connoisseurs around the globe </em>
+                </div>
+                <div class="cp-general-cta__cta-wrap">
+                    <a href="#" class="cm-btn type2 cp-general-cta__cta-item type-white" title="Primary Button"><span class="text">Primary Button</span><span class="masker"><span>Primary Button</span></span></a>
+                    <a href="#" class="cm-btn type2 cp-general-cta__cta-item" title="Secondary Button"><span class="text">Secondary Button</span><span class="masker"><span>Secondary Button</span></span></a>
+                    <a href="#" class="cm-btn type2 cp-general-cta__cta-item" title="Tertiary"><span class="text">Tertiary</span><span class="masker"><span>Tertiary</span></span></a>
+                    <a href="#" class="cm-btn type2 cp-general-cta__cta-item" title="Quaternary"><span class="text">Quaternary</span><span class="masker"><span>Quaternary</span></span></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cp-general-cta type-cta2 dark-bg2">
+            <div class="cp-general-cta__inner">
+                <div class="cp-general-cta__head">
+                    <em>Genesis global text</em>
+                </div>
+                <div class="cp-general-cta__cta-wrap">
+                    <a href="#" class="cm-btn type2 cp-general-cta__cta-item type-white" title="Primary Button"><span class="text">Primary Button</span><span class="masker"><span>Primary Button</span></span></a>
+                    <a href="#" class="cm-btn type2 cp-general-cta__cta-item" title="Secondary Button"><span class="text">Secondary Button</span><span class="masker"><span>Secondary Button</span></span></a>
+                    <a href="#" class="cm-btn type2 cp-general-cta__cta-item" title="Tertiary"><span class="text">Tertiary</span><span class="masker"><span>Tertiary</span></span></a>
+                </div>
+            </div>
+        </div>
+        
+        <!--/* [D] 레이어 cta */-->
+        <div class="cp-general-cta type-cta3 light-bg2">
+            <div class="cp-general-cta__inner">
+                <div class="cp-general-cta__head">
+                    <em>Genesis global text</em>
+                </div>
+                <div class="cp-general-cta__cta-wrap">
+                    <a href="#" class="cm-btn-more cp-general-cta__cta-item type-layer type-white js-layer-opener" data-layer-target="#large-freecoding-layer" title="Learn more"><span>Learn more</span></a>
+                    <a href="#" class="cm-btn-more cp-general-cta__cta-item type-layer type-white js-layer-opener" data-layer-target="#small-freecoding-layer" title="Learn more"><span>Learn more</span></a>
+                    <a href="#" class="cm-btn-more cp-general-cta__cta-item type-layer type-white js-layer-opener" data-layer-target="#large-freecoding-layer"  title="Learn more"><span>Learn more</span></a>
+                </div>
+            </div>
+        </div>
+        <!--/* [D] 인링크 cta */-->
+        <div class="cp-general-cta type-cta3 light-bg1">
+            <div class="cp-general-cta__inner">
+                <div class="cp-general-cta__head">
+                    <em>Genesis global text</em>
+                </div>
+                <div class="cp-general-cta__cta-wrap">
+                    <a href="#" class="cm-btn-more cp-general-cta__cta-item type-white" title="Learn more"><span>Learn more</span></a>
+                    <a href="#" class="cm-btn-more cp-general-cta__cta-item type-white" title="Learn more"><span>Learn more</span></a>
+                    <a href="#" class="cm-btn-more cp-general-cta__cta-item type-white" title="Learn more"><span>Learn more</span></a>
+                </div>
+            </div>
+        </div>
+        <!--/* [D] 아웃링크 cta */-->
+        <div class="cp-general-cta type-cta3 dark-bg1">
+            <div class="cp-general-cta__inner">
+                <div class="cp-general-cta__head">
+                    <em>Genesis global text</em>
+                </div>
+                <div class="cp-general-cta__cta-wrap">
+                    <a href="#" class="cm-btn-more cp-general-cta__cta-item type-newwindow type-white" title="Learn more" target="_blank"><span>Learn more</span></a>
+                    <a href="#" class="cm-btn-more cp-general-cta__cta-item type-newwindow type-white" title="Learn more" target="_blank"><span>Learn more</span></a>
+                    <a href="#" class="cm-btn-more cp-general-cta__cta-item type-newwindow type-white" title="Learn more" target="_blank"><span>Learn more</span></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cp-general-cta type-cta4 light-bg2">
+            <div class="cp-general-cta__inner">
+                <div class="cp-general-cta__head">
+                    <em>Genesis global text</em>
+                </div>
+                <div class="cp-general-cta__cta-wrap">
+                    <div class="cp-general-cta__cta-item">
+                        <div class="cp-general-cta__cta-item-qr">
+                            <img src="/apps/components/download-center/imgs/@qr1.jpg" class="" alt="">
+                        </div>
+                        <a href="#" class="cm-btn cm-btn-google" target="_blank" title="Google Play : Open in a new window">
+                            <img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-google-play.png" alt="">
+                        </a>
+                    </div>
+                    <div class="cp-general-cta__cta-item">
+                        <div class="cp-general-cta__cta-item-qr">
+                            <img src="/apps/components/download-center/imgs/@qr2.jpg" class="" alt="">
+                        </div>
+                        <a href="#" class="cm-btn cm-btn-app" target="_blank" title="App Store : Open in a new window">
+                            <img src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-app-store.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--/* [D] popup */-->
+        <!--#include virtual="/apps/components/common/general-cta-popup/@include_html.html"-->
+    <!-- //component -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<!-- <script src="clientlibs/js/main.js"></script> -->
+</body>
+</html>

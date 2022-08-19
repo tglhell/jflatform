@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Verification Popup</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+</head>
+<body>
+<div id="wrap" style="background: #fff;">
+    <a href="#" class="js-layer-opener" data-layer-target="#verification-layer" style="font-size:18px">Open Verification Popup</a>
+    <!-- component -->
+    <div class="cm-layer type-alert js-cm-layer is-async verification-popup" id="verification-layer">
+        <span class="cm-layer__dimmed"></span>
+        <div class="cm-layer__body">
+            <div class="cm-layer__wrapper" role="dialog">
+                <div class="cm-layer__title">
+                    <strong>본인인증</strong>
+                </div>
+                <div class="cm-layer__content">
+                    <div class="verification-popup__desc">
+                        <p>회원 본인 확인 시 인증기관을 통한 본인 인증 및 아이핀(i-PIN) 인증을 통해 본인 확인이 가능합니다.</p>
+                    </div>
+                    <div class="verification-popup__content">
+                        <ul class="verification-popup__list">
+                        <li>
+                            <div class="info-box">
+                                <div class="verification-popup__list-info">
+                                    <div class="info-title">
+                                        <strong>아이핀 (I-PIN) 인증</strong>
+                                    </div>
+                                    <div class="info-desc">
+                                        <p>본인 명의의 아이핀 아이디와 비밀번호로 인증</p>
+                                    </div>
+                                </div>
+                                <div class="verification-popup__list-img">
+                                    <img src="imgs/ico-ipin.png" alt="">
+                                </div>
+                            </div>
+                            <div class="verification-popup__list-cta">
+                                <button type="button" class="cm-btn">
+                                    <span class="text">인증하기</span>
+                                    <span class="masker"><span>인증하기</span></span>
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info-box">
+                                <div class="verification-popup__list-info">
+                                    <div class="info-title">
+                                        <strong>휴대폰 인증</strong>
+                                    </div>
+                                    <div class="info-desc">
+                                        <p>본인 명의의 휴대폰으로 인증</p>
+                                    </div>
+                                </div>
+                                <div class="verification-popup__list-img">
+                                    <img src="imgs/ico-phone.png" alt="">
+                                </div>
+                            </div>
+                            <div class="verification-popup__list-cta">
+                                <button type="button" class="cm-btn">
+                                    <span class="text">인증하기</span>
+                                    <span class="masker"><span>인증하기</span></span>
+                                </button>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="verification-popup__disclaimer">
+                        <ul>
+                        <li>* 고객님의 개인정보는 항상 암호화 되어 처리되며, 본인 확인용으로만 사용합니다.</li>
+                        <li>* 타인의 정보 및 주민등록번호를 부정하게 사용하는 경우 3년 이하의 징역 또는 1천만원 이하의 벌금에 처해지게됩니다.</li>
+                        <li>* 관련법률 : 주민등록법 제 37조(벌칙)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cm-layer__close-wrap">
+                    <button type="button" class="js-layer-closer">
+                        <span class="js-svg-icon" data-icon="svg-cross"></span>
+                        <span class="blind">Close popup</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- component -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<script src="clientlibs/js/main.js"></script>
+
+<!--  마크업 검수용 코드 -->
+<script>
+$(function () {
+    //open
+    $('[data-layer-target="#verification-layer.is-async"]').on('click', function () {
+        var _this = $(this);
+        _this.trigger('clickCustom');
+    });
+    //close
+    // $('#verification-layer').trigger('closeLayer');
+})
+</script>
+<!-- // 마크업 검수용 코드 -->
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Full Width Tabs</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+</head>
+<body>
+<div id="wrap">
+    <div class="guide" style="max-width:1920px;margin:0 auto; font-size:16px;padding:20px 0">
+        <dl>
+        <dt>1) 텍스트 정렬 (Add to .cp-full-tabs__item)</dt>
+        <dd>- 우측 정렬 : default 정렬</dd>
+        <dd>- 좌측 정렬 : .align-left</dd>
+        </dl>
+    </div>
+
+    <!-- component -->
+    <div class="type-dark">
+        <div class="cp-full-tabs" data-global-text='{
+            "Play" : "Play",
+            "Pause" : "Pause"
+        }'>
+            <div class="cp-full-tabs__inner">
+                <div class="cp-full-tabs__title">
+                    <strong class="el-title">Genesis global text</strong>
+                </div>
+
+                <div class="cp-full-tabs__carousel-wrapper">
+                    <div class="cp-full-tabs__carousel">
+                        <div class="cp-full-tabs__carousel-wrap">
+                            <div class="cp-full-tabs__carousel-item" data-tabtarget="uniquename00">
+                                <div class="video-container js-video" data-use-scrollmagic="false">
+                                    <video muted playsinline preload="none">
+                                        <source src="imgs/@dummy-video.mp4" type="video/mp4">
+                                    </video>
+                                    <!-- [F] 비디오 재생버튼 : 모바일 해상도 노출 -->
+                                    <div class="video-button-play"><button type="button"><span class="blind">Play video</span></button></div>
+                                    <div class="video-button-pause"><button type="button"><span class="blind">Pause video</span></button></div>
+                                </div>
+                            </div>
+                            <div class="cp-full-tabs__carousel-item" data-tabtarget="uniquename01" style="display: none;">
+                                <div class="js-picture js-animate-picture">
+                                    <img data-media="(min-width: 768px)" data-srcset="http://via.placeholder.com/1920x960" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                    <img data-media="(min-width: 0)" data-srcset="http://via.placeholder.com/750x376" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                </div>
+                            </div>
+                            <div class="cp-full-tabs__carousel-item" data-tabtarget="uniquename02" style="display: none;">
+                                <div class="video-container js-video" data-use-scrollmagic="false">
+                                    <video muted playsinline preload="none">
+                                        <source src="imgs/@dummy-video.mp4" type="video/mp4">
+                                    </video>
+                                    <!-- [F] 비디오 재생버튼 : 모바일 해상도 노출 -->
+                                    <div class="video-button-play"><button type="button"><span class="blind">Play video</span></button></div>
+                                    <div class="video-button-pause"><button type="button"><span class="blind">Pause video</span></button></div>
+                                </div>
+                            </div>
+                            <div class="cp-full-tabs__carousel-item" data-tabtarget="uniquename03" style="display: none;">
+                                <div class="js-picture js-animate-picture">
+                                    <img data-media="(min-width: 768px)" data-srcset="http://via.placeholder.com/1920x960" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                    <img data-media="(min-width: 0)" data-srcset="http://via.placeholder.com/750x376" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                </div>
+                            </div>
+                            <div class="cp-full-tabs__carousel-item" data-tabtarget="uniquename04" style="display: none;">
+                                <div class="js-picture js-animate-picture">
+                                    <img data-media="(min-width: 768px)" data-srcset="http://via.placeholder.com/1920x960" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                    <img data-media="(min-width: 0)" data-srcset="http://via.placeholder.com/750x376" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                </div>
+                            </div>
+                            <div class="cp-full-tabs__carousel-item" data-tabtarget="uniquename05" style="display: none;">
+                                <div class="js-picture js-animate-picture">
+                                    <img data-media="(min-width: 768px)" data-srcset="http://via.placeholder.com/1920x960" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                    <img data-media="(min-width: 0)" data-srcset="http://via.placeholder.com/750x376" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cp-full-tabs__contnav">
+                        <div class="cp-full-tabs__content">
+                            <div class="cp-full-tabs__item" data-tabtarget="uniquename00">
+                                <div class="el-content-wrap">
+                                    <div class="el-content-inner">
+                                        <div class="el-content-info">
+                                            <strong class="el-title">Genesis global text</strong>
+                                            <p class="el-description">We strive to create the finest automobiles and related products and <span class="cm-tooltip js-tooltip">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">services</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">Specifications may vary depending on model and/or country.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> for connoisseurs around the globe</p>
+                                            <div class="el-cta_area">
+                                                <a href="#" class="cm-btn-more type-white is-default" title="Learn more"><span>Learn more</span></a>
+                                            </div>
+                                            <p class="el-disclaimer">* We strive to create the finest automobiles and related products and services for connoisseurs around the globe</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cp-full-tabs__item" data-tabtarget="uniquename01" style="display: none;">
+                                <div class="el-content-wrap">
+                                    <div class="el-content-inner">
+                                        <div class="el-content-info">
+                                            <strong class="el-title">Genesis global text</strong>
+                                            <p class="el-description">We strive to create the finest automobiles and related products and <span class="cm-tooltip js-tooltip">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">services</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">Specifications may vary depending on model and/or country.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> for connoisseurs around the globe</p>
+                                            <div class="el-cta_area">
+                                                <a href="#" class="cm-btn-more type-white is-default" title="Learn more"><span>Learn more</span></a>
+                                            </div>
+                                            <p class="el-disclaimer">* We strive to create the finest automobiles and related products and services for connoisseurs around the globe</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cp-full-tabs__item align-left" data-tabtarget="uniquename02" style="display: none;">
+                                <div class="el-content-wrap">
+                                    <div class="el-content-inner">
+                                        <div class="el-content-info">
+                                            <strong class="el-title">Genesis global text</strong>
+                                            <p class="el-description">We strive to create the finest automobiles and related products and <span class="cm-tooltip js-tooltip">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">services</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">Specifications may vary depending on model and/or country.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> for connoisseurs around the globe</p>
+                                            <div class="el-cta_area">
+                                                <a href="#" class="cm-btn-more type-white is-default" title="Learn more"><span>Learn more</span></a>
+                                            </div>
+                                            <p class="el-disclaimer">* We strive to create the finest automobiles and related products and services for connoisseurs around the globe</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cp-full-tabs__item align-left" data-tabtarget="uniquename03" style="display: none;">
+                                <div class="el-content-wrap">
+                                    <div class="el-content-inner">
+                                        <div class="el-content-info">
+                                            <strong class="el-title">Genesis global text</strong>
+                                            <p class="el-description">We strive to create the finest automobiles and related products and <span class="cm-tooltip js-tooltip">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">services</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">Specifications may vary depending on model and/or country.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> for connoisseurs around the globe</p>
+                                            <div class="el-cta_area">
+                                                <a href="#" class="cm-btn-more type-white is-default" title="Learn more"><span>Learn more</span></a>
+                                            </div>
+                                            <p class="el-disclaimer">* We strive to create the finest automobiles and related products and services for connoisseurs around the globe</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cp-full-tabs__item" data-tabtarget="uniquename04" style="display: none;">
+                                <div class="el-content-wrap">
+                                    <div class="el-content-inner">
+                                        <div class="el-content-info">
+                                            <strong class="el-title">Genesis global text</strong>
+                                            <p class="el-description">We strive to create the finest automobiles and related products and <span class="cm-tooltip js-tooltip">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">services</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">Specifications may vary depending on model and/or country.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> for connoisseurs around the globe</p>
+                                            <div class="el-cta_area">
+                                                <a href="#" class="cm-btn-more type-white is-default" title="Learn more"><span>Learn more</span></a>
+                                            </div>
+                                            <p class="el-disclaimer">* We strive to create the finest automobiles and related products and services for connoisseurs around the globe</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cp-full-tabs__item" data-tabtarget="uniquename05" style="display: none;">
+                                <div class="el-content-wrap">
+                                    <div class="el-content-inner">
+                                        <div class="el-content-info">
+                                            <strong class="el-title">Genesis global text</strong>
+                                            <p class="el-description">We strive to create the finest automobiles and related products and <span class="cm-tooltip js-tooltip">
+                                                <a href="#" class="cm-tooltip-opener" aria-expanded="false">services</a>
+                                                <span class="cm-tooltip-layer">
+                                                    <span class="cm-tooltip-layer__inner">Specifications may vary depending on model and/or country.
+                                                        <a href="#" class="cm-tooltip-close"><span class="js-svg-icon" data-icon="svg-cross"></span><span class="blind">close tooltip</span></a>
+                                                    </span>
+                                                </span>
+                                            </span> for connoisseurs around the globe</p>
+                                            <div class="el-cta_area">
+                                                <a href="#" class="cm-btn-more type-white is-default" title="Learn more"><span>Learn more</span></a>
+                                            </div>
+                                            <p class="el-disclaimer">* We strive to create the finest automobiles and related products and services for connoisseurs around the globe</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cp-full-tabs__nav cp-swiper-tab-area">
+                            <div class="carousel-nav swiper-container">
+                                <ul class="carousel-nav-list swiper-wrapper">
+                                <!-- [F] 활성화 : is-active 클래스 추가 -->
+                                <li class="carousel-nav__item swiper-slide is-active">
+                                    <a href="#" class="tab-btn" data-tabtarget-name="uniquename00">
+                                        <span class="text">We strive to create the finest automobiles and related</span> <span class="line"><span class="line-inner"></span></span>
+                                    </a>
+                                </li>
+                                <li class="carousel-nav__item swiper-slide">
+                                    <a href="#" class="tab-btn" data-tabtarget-name="uniquename01">
+                                        <span class="text">We strive to create the finest automobiles and related</span> <span class="line"><span class="line-inner"></span></span>
+                                    </a>
+                                </li>
+                                <li class="carousel-nav__item swiper-slide">
+                                    <a href="#" class="tab-btn" data-tabtarget-name="uniquename02">
+                                        <span class="text">We strive to create the finest automobiles and related</span> <span class="line"><span class="line-inner"></span></span>
+                                    </a>
+                                </li>
+                                <li class="carousel-nav__item swiper-slide">
+                                    <a href="#" class="tab-btn" data-tabtarget-name="uniquename03">
+                                        <span class="text">We strive to create the finest automobiles and related</span> <span class="line"><span class="line-inner"></span></span>
+                                    </a>
+                                </li>
+                                <li class="carousel-nav__item swiper-slide">
+                                    <a href="#" class="tab-btn" data-tabtarget-name="uniquename04">
+                                        <span class="text">We strive to create the finest automobiles and related</span> <span class="line"><span class="line-inner"></span></span>
+                                    </a>
+                                </li>
+                                <li class="carousel-nav__item swiper-slide">
+                                    <a href="#" class="tab-btn" data-tabtarget-name="uniquename05">
+                                        <span class="text">We strive to create the finest automobiles and related</span> <span class="line"><span class="line-inner"></span></span>
+                                    </a>
+                                </li>
+                                </ul>
+                            </div>
+                            <!-- [F] 모바일 해상도에서 기능 제거 -->
+                            <div class="carousel-nav-controls">
+                                <!--/* [F] play : add .is-play
+                                           pause : add .is-pause */-->
+                                <button type="button" class="btn-controls is-play"><span class="blind">Play</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //component -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<script src="clientlibs/js/main.js"></script>
+</body>
+</html>

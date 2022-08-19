@@ -1,0 +1,58 @@
+.event-schedule-popup__table {
+  margin: 16px 0 50px;
+  margin: 1.6rem 0 5rem;
+}
+
+.event-schedule-popup__table .cm-table th {
+  width: 43.2%;
+  border-right: 1px solid #e5e5e5;
+}
+
+.event-schedule-popup__table .cm-table th:first-child {
+  width: 13.6%;
+}
+
+.event-schedule-popup__table .cm-table th:last-child {
+  border-right: 0;
+}
+
+.event-schedule-popup__table .cm-table td {
+  height: 81px;
+  height: 8.1rem;
+  border-right: 1px solid #e5e5e5;
+}
+
+.event-schedule-popup__table .cm-table td:last-child {
+  border-right: 0;
+}
+
+.event-schedule-popup__table .cm-table td + td {
+  border-left: 0;
+}
+
+.event-schedule-popup__table .cm-table tbody th {
+  color: #262626;
+}
+
+@media screen and (max-width: 767px) {
+  .event-schedule-popup__table {
+    margin: 13px 0 40px;
+    margin: 1.3rem 0 4rem;
+  }
+  .event-schedule-popup__table .cm-table th {
+    width: 41.25%;
+  }
+  .event-schedule-popup__table .cm-table th:first-child {
+    width: 17.5%;
+  }
+  .event-schedule-popup__table .cm-table td {
+    height: 77px;
+    height: 7.7rem;
+  }
+  .event-schedule-popup__table .cm-table tbody th {
+    padding-left: 5px;
+    padding-left: 0.5rem;
+    padding-right: 5px;
+    padding-right: 0.5rem;
+  }
+}

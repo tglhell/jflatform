@@ -1,0 +1,245 @@
+.cp-connected-table .tablet-space {
+  display: none;
+}
+
+.cp-connected-table__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 80px;
+  padding: 0 8rem;
+}
+
+.cp-connected-table__head .el-title {
+  font-family: "genesis-head-office-light", sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  font-size: 3rem;
+  letter-spacing: -0.025em;
+  line-height: 38px;
+  line-height: 3.8rem;
+}
+
+.cp-connected-table__body {
+  margin-top: 25px;
+  margin-top: 2.5rem;
+}
+
+.cp-connected-table__content {
+  margin-top: 72px;
+  margin-top: 7.2rem;
+}
+
+.cp-connected-table__content:first-child {
+  margin-top: 0;
+}
+
+.cp-connected-table__content .el-sub-title {
+  font-family: "genesis-head-office-light", sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  font-size: 2rem;
+  letter-spacing: -0.025em;
+  line-height: 36px;
+  line-height: 3.6rem;
+}
+
+.cp-connected-table__table {
+  margin-top: 20px;
+  margin-top: 2rem;
+}
+
+.cp-connected-table__table .cm-table th, .cp-connected-table__table .cm-table td {
+  line-height: 20px;
+  line-height: 2rem;
+}
+
+.cp-connected-table__table .cm-table th:nth-child(1), .cp-connected-table__table .cm-table td:nth-child(1) {
+  width: 10%;
+}
+
+.cp-connected-table__table .cm-table th:nth-child(2), .cp-connected-table__table .cm-table td:nth-child(2) {
+  width: 10%;
+}
+
+.cp-connected-table__table .cm-table th:nth-child(3), .cp-connected-table__table .cm-table td:nth-child(3) {
+  width: 20%;
+}
+
+.cp-connected-table__table .cm-table th:nth-child(4), .cp-connected-table__table .cm-table td:nth-child(4) {
+  width: 10%;
+}
+
+.cp-connected-table__table .cm-table th:nth-child(5), .cp-connected-table__table .cm-table td:nth-child(5) {
+  width: 10%;
+}
+
+.cp-connected-table__table .cm-table th:nth-child(6), .cp-connected-table__table .cm-table td:nth-child(6) {
+  width: 20%;
+}
+
+.cp-connected-table__table .cm-table th:nth-child(7), .cp-connected-table__table .cm-table td:nth-child(7) {
+  width: 20%;
+}
+
+.cp-connected-table__table .cm-table th {
+  font-family: "genesis-text-office", sans-serif;
+}
+
+.cp-connected-table__table .cm-table.type-column th {
+  padding: 20px 17px 21px;
+  padding: 2rem 1.7rem 2.1rem;
+}
+
+.cp-connected-table__table .cm-table.type-column td {
+  padding: 20px 17px;
+  padding: 2rem 1.7rem;
+}
+
+.cp-connected-table__table.table-mo {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .cp-connected-table .tablet-space {
+    display: block;
+  }
+  .cp-connected-table__inner {
+    padding: 0 58px;
+    padding: 0 5.8rem;
+  }
+  .cp-connected-table__head .el-title {
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 28px;
+    line-height: 2.8rem;
+  }
+  .cp-connected-table__body {
+    margin-top: 19px;
+    margin-top: 1.9rem;
+  }
+  .cp-connected-table__content {
+    margin-top: 44px;
+    margin-top: 4.4rem;
+  }
+  .cp-connected-table__content .el-sub-title {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 28px;
+    line-height: 2.8rem;
+  }
+  .cp-connected-table__table {
+    margin-top: 19px;
+    margin-top: 1.9rem;
+  }
+  .cp-connected-table__table .cm-table th, .cp-connected-table__table .cm-table td {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+  }
+  .cp-connected-table__table .cm-table th:nth-child(1), .cp-connected-table__table .cm-table td:nth-child(1) {
+    width: 10.12%;
+  }
+  .cp-connected-table__table .cm-table th:nth-child(2), .cp-connected-table__table .cm-table td:nth-child(2) {
+    width: 10.12%;
+  }
+  .cp-connected-table__table .cm-table th:nth-child(3), .cp-connected-table__table .cm-table td:nth-child(3) {
+    width: 19.94%;
+  }
+  .cp-connected-table__table .cm-table th:nth-child(4), .cp-connected-table__table .cm-table td:nth-child(4) {
+    width: 9.97%;
+  }
+  .cp-connected-table__table .cm-table th:nth-child(5), .cp-connected-table__table .cm-table td:nth-child(5) {
+    width: 9.97%;
+  }
+  .cp-connected-table__table .cm-table th:nth-child(6), .cp-connected-table__table .cm-table td:nth-child(6) {
+    width: 19.94%;
+  }
+  .cp-connected-table__table .cm-table th:nth-child(7), .cp-connected-table__table .cm-table td:nth-child(7) {
+    width: 19.94%;
+  }
+  .cp-connected-table__table .cm-table.type-column th {
+    padding: 17px 17px 16px;
+    padding: 1.7rem 1.7rem 1.6rem;
+  }
+  .cp-connected-table__table .cm-table.type-column td {
+    padding: 17px 14px 16px;
+    padding: 1.7rem 1.4rem 1.6rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .cp-connected-table__inner {
+    padding: 0 30px;
+    padding: 0 3rem;
+  }
+  .cp-connected-table__head .el-title {
+    line-height: 26px;
+    line-height: 2.6rem;
+  }
+  .cp-connected-table__body {
+    margin-top: 33px;
+    margin-top: 3.3rem;
+  }
+  .cp-connected-table__content {
+    margin-top: 78px;
+    margin-top: 7.8rem;
+  }
+  .cp-connected-table__content .el-sub-title {
+    line-height: 22px;
+    line-height: 2.2rem;
+  }
+  .cp-connected-table__table {
+    margin-top: 14px;
+    margin-top: 1.4rem;
+  }
+  .cp-connected-table__table .el-name {
+    font-weight: normal;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 17px;
+    line-height: 1.7rem;
+  }
+  .cp-connected-table__table .cm-table {
+    margin-top: 47px;
+    margin-top: 4.7rem;
+  }
+  .cp-connected-table__table .cm-table:first-child {
+    margin-top: 0;
+  }
+  .cp-connected-table__table .cm-table table {
+    margin-top: 13px;
+    margin-top: 1.3rem;
+  }
+  .cp-connected-table__table .cm-table tr:nth-child(5) th, .cp-connected-table__table .cm-table tr:nth-child(5) td {
+    height: 126px;
+    height: 12.6rem;
+  }
+  .cp-connected-table__table .cm-table th, .cp-connected-table__table .cm-table td {
+    line-height: 17px;
+    line-height: 1.7rem;
+    text-align: left;
+  }
+  .cp-connected-table__table .cm-table th:nth-child(1), .cp-connected-table__table .cm-table td:nth-child(1) {
+    width: 40%;
+  }
+  .cp-connected-table__table .cm-table th:nth-child(2), .cp-connected-table__table .cm-table td:nth-child(2) {
+    width: 60%;
+  }
+  .cp-connected-table__table .cm-table.type-row th, .cp-connected-table__table .cm-table.type-row td {
+    height: 42px;
+    height: 4.2rem;
+    padding: 12px 19px 12px 14px;
+    padding: 1.2rem 1.9rem 1.2rem 1.4rem;
+    border-left: 1px solid #e5e5e5;
+  }
+  .cp-connected-table__table .cm-table.type-row th:first-child, .cp-connected-table__table .cm-table.type-row td:first-child {
+    border-left: 0;
+  }
+  .cp-connected-table__table.table-pc {
+    display: none;
+  }
+  .cp-connected-table__table.table-mo {
+    display: block;
+  }
+}

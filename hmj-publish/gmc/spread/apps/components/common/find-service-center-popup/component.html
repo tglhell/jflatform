@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Find Service Center Popup</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+<!--/* component css */-->
+<!--#include virtual="/apps/components/common/cm-find-map/@include_css.html"-->
+<style>
+    .js-layer-opener { display:inline-block; padding: 10px 3px; font-size: 18px; }
+</style>
+</head>
+<body>
+<div id="wrap" style="background: #fff;">
+    <a href="#" class="js-layer-opener" data-layer-target="#find-service-center-layer">Find Service Center Popup</a>
+    <!-- component -->
+    <div class="cm-layer find-center-popup type-alert js-cm-layer" id="find-service-center-layer">
+        <span class="cm-layer__dimmed"></span>
+        <div class="cm-layer__body">
+            <div class="cm-layer__wrapper" role="dialog">
+                <div class="cm-layer__title">
+                    <strong>대치북부점현대자동차(주)</strong>
+                </div>
+                <div class="cm-layer__content">
+                    <!-- [D] 팝업 타입 : 서비스센터 or 블루핸즈 -->
+                    <span class="cm-find-map__model">서비스센터</span>
+                    <div class="cm-place-info">
+                        <div class="cm-place-info__desc">서울특별시 강남구 영동대로 706</div>
+                        <div class="cm-place-info__desc">02-516-7341</div>
+                        <div class="cm-place-info__desc">영업시간  08:30 ~ 17:30 (토,일 휴무)</div>
+                    </div>
+                    <div class="service-center__title">
+                        <strong>특화 서비스</strong>
+                    </div>
+                    <ul class="service-center__list">
+                    <li class="service-center__item"><span>Genesis Lounge</span></li>
+                    <li class="service-center__item"><span>여성전용 휴게실</span></li>
+                    <li class="service-center__item"><span>Healing Zone</span></li>
+                    <li class="service-center__item"><span>스크린 골프</span></li>
+                    <li class="service-center__item"><span>우수CS 인증</span></li>
+                    <li class="service-center__item"><span>소상 특장 전담*</span></li>
+                    <li class="service-center__item"><span>전기차 전담</span></li>
+                    </ul>
+                    <p class="service-center__desc">* 소상 특장 전담 블루핸즈 : 포터/스타렉스 특장 차량(냉동/냉장/다용도 탑차, 윙바디, 캠핑카, 구급차 등)에 대한 점검·정비 전담 블루핸즈</p>
+
+                    <!-- [D] 서비스센터 정보 팝업인 경우에만 노출 -->
+                    <!-- 입고 경로 안내 -->
+                    <div class="service-center__route" style="display:block">
+                        <div class="service-center__title">
+                            <strong>입고 경로 안내</strong>
+                        </div>
+                        <div class="service-center__img">
+                            <div class="js-picture">
+                                <img data-media="(min-width: 768px)" data-srcset="http://placehold.it/750x450" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                                <img data-media="(min-width: 0)" data-srcset="http://placehold.it/570x400" src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/blank.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //입고 경로 안내 -->
+
+                    <div class="cm-layer__cta">
+                        <button type="button" class="cm-btn type-white">
+                            <span class="text">취소</span>
+                            <span class="masker"><span>취소</span></span>
+                        </button>
+                        <button type="button" class="cm-btn">
+                            <span class="text">서비스 예약하기</span>
+                            <span class="masker"><span>서비스 예약하기</span></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="cm-layer__close-wrap">
+                    <button type="button" class="js-layer-closer">
+                        <span class="js-svg-icon" data-icon="svg-cross"></span>
+                        <span class="blind">Close popup</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- component -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<!-- <script src="clientlibs/js/main.js"></script> -->
+<script>
+$(function () {
+    //open
+    $('#find-service-center-layer').trigger('openLayer');
+    //close
+    // $('#find-show-room-layer').trigger('closeLayer');
+});
+</script>
+</body>
+</html>

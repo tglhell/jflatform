@@ -1,0 +1,126 @@
+.cp-error-503__cta .cm-btn {
+  background-color: #111;
+}
+
+.cp-error-503__cta .cm-btn:after {
+  z-index: 10;
+  border-color: #111;
+}
+
+.cp-error-503__cta .cm-btn .text {
+  color: #fff;
+}
+
+.cp-error-503__cta .cm-btn .masker {
+  background-color: #fff;
+}
+
+.cp-error-503__cta .cm-btn .masker:after {
+  z-index: 10;
+  border-color: #111;
+}
+
+.cp-error-503__cta .cm-btn .masker span {
+  color: #000;
+}
+
+.cp-error-503 {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.cp-error-503 .mo-space {
+  display: none;
+}
+
+.cp-error-503__inner {
+  display: table-cell;
+  padding: 30px 80px;
+  padding: 3rem 8rem;
+  text-align: center;
+  word-break: keep-all;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.cp-error-503__content:before {
+  display: inline-block;
+  width: 64px;
+  width: 6.4rem;
+  height: 64px;
+  height: 6.4rem;
+  background: url("/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-warning.png") center center no-repeat;
+  background-size: contain;
+  content: '';
+}
+
+.cp-error-503__content-inner {
+  margin-top: 30px;
+  margin-top: 3rem;
+}
+
+.cp-error-503__title {
+  display: block;
+  font-family: "genesis-head-office-light", sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  font-size: 3.6rem;
+  letter-spacing: -0.027em;
+}
+
+.cp-error-503__desc {
+  margin-top: 16px;
+  margin-top: 1.6rem;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #262626;
+  line-height: 26px;
+  line-height: 2.6rem;
+}
+
+.cp-error-503__cta {
+  margin-top: 74px;
+  margin-top: 7.4rem;
+}
+
+@media screen and (max-width: 767px) {
+  .cp-error-503 .pc-space {
+    display: none;
+  }
+  .cp-error-503 .mo-space {
+    display: block;
+  }
+  .cp-error-503__inner {
+    padding: 10px 30px;
+    padding: 1rem 3rem;
+  }
+  .cp-error-503__content:before {
+    width: 50px;
+    width: 5rem;
+    height: 50px;
+    height: 5rem;
+    background-image: url("/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/resources/images/ico-warning-mo.png");
+  }
+  .cp-error-503__content-inner {
+    margin-top: 31px;
+    margin-top: 3.1rem;
+  }
+  .cp-error-503__title {
+    font-size: 25px;
+    font-size: 2.5rem;
+  }
+  .cp-error-503__desc {
+    margin-top: 19px;
+    margin-top: 1.9rem;
+    line-height: 28px;
+    line-height: 2.8rem;
+  }
+  .cp-error-503__cta {
+    margin-top: 53px;
+    margin-top: 5.3rem;
+  }
+}

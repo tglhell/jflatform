@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Spec Search</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+<!--/* component css */-->
+<!--#include virtual="/apps/components/common/cm-form-check/@include_css.html"-->
+</head>
+<body>
+<div id="wrap">
+    <div class="spec-search">
+        <div class="spec-search__inner">
+            <div class="cm-form-check">
+                <div class="cm-form-check__header">
+                    <div class="cm-form-check__title">
+                        <h3 class="el-title">사양 조회하기</h3>
+                    </div>
+                    <div class="cm-form-check__desc">
+                        <p class="el-desc">중고차 구입 고객의 자동차보험 계약 시 편의를 위해 사양 조회 서비스를 제공합니다.<br>차대번호를 입력하시면 해당 차량의 차종명과 판매가격을 조회할 수 있습니다.</p>
+                    </div>
+                </div>
+                <div class="cm-form-check__body">
+                    <form action="#">
+                        <div class="cm-form-check__input-btn">
+                            <div class="cm-input-wrap has-error">
+                                <div class="cm-input-text js-input-text-wrap">
+                                    <input type="text" id="inp1" name="inpTxt" class="cm-input-text__input">
+                                    <label for="inp1" class="cm-input-text__label" style="display: block;">차대번호 17자리를 입력해주세요</label>
+                                </div>
+                                <div class="cm-input-message">
+                                    <!-- [D] 에러/유효성 메세지 노출 시 : display:block 처리 -->
+                                    <p class="cm-message-error" style="display:block">차대번호 17자리를 정확히 입력해 주세요.</p>
+                                </div>
+                            </div>
+                            <!-- [D] 조회 버튼 클릭 시, 조회 결과 노출 -->
+                            <button type="button" class="cm-btn">
+                                <span class="text">조회</span>
+                                <span class="masker"><span>조회</span></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        
+            <div class="cm-layout__notice">
+                <div class="cm-layout__notice__inner">
+                    <ul class="notice-list">
+                    <li class="list-text">1. 2007년 1월 이후 출고차량부터 조회 가능합니다.</li>
+                    <li class="list-text">2. 본 서비스는 시스템 성능을 고려하여 IP당 1일 500회 조회로 제한 됩니다.</li>
+                    <li class="list-text">3. 차대번호는 17자리의 알파벳과 숫자로 이루어져 있으며, 차량등록증이나 차내 운전석 도어 안쪽, 대시보드 하단 등에서 확인이 가능합니다.<br>예) KMHEM42APXA123456</li>
+                    <li class="list-text">※ 실제 구매가와 상이할 수 있습니다.</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- [D] 조회 버튼 클릭 시, 노출 -->
+            <div class="spec-search__result" style="display:block">
+                <div class="cm-form-check__title">
+                    <h4 class="el-title">조회 결과</h4>
+                </div>
+                <div class="cm-table type-row">
+                    <table>
+                        <caption>조회 결과 상세</caption>
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">차종명</th>
+                                <td>제네시스 DH 4도어 가솔린 3.3 Premium 오토 런칭</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">차량 가격</th>
+                                <td>58,300,000원</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">기본 가격</th>
+                                <td>52,600,000원</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">옵션 / 가격</th>
+                                <td>
+                                    <div class="info-option">
+                                        <em>HTRAC</em>2,500,000원<br>
+                                        <em>럭셔리스타일 패키지</em>2,000,000원<br>
+                                        <em>썬루프</em>1,200,000원
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<!--/* component js */-->
+<!--#include virtual="/apps/components/common/cm-find-map/@include_js.html"-->
+</body>
+</html>

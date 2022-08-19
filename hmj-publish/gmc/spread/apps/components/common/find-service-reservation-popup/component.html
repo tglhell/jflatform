@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Find Service Reservation Popup</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--/* common css */-->
+<link rel="stylesheet" type="text/css" href="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/css/main.css">
+<!--/* component css */-->
+<link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+<style>
+    .js-layer-opener { display:inline-block; padding: 10px 3px; font-size: 18px; }
+</style>
+</head>
+<body>
+<div id="wrap" style="background: #fff;">
+    <a href="#" class="js-layer-opener" data-layer-target="#find-service-reservation-layer">Open Find Service Reservation Popup</a>
+    <!-- component -->
+    <div class="cm-layer type-alert find-service-reservation-popup js-cm-layer" id="find-service-reservation-layer">
+        <span class="cm-layer__dimmed"></span>
+        <div class="cm-layer__body">
+            <div class="cm-layer__wrapper" role="dialog">
+                <div class="cm-layer__title">
+                    <strong>안내</strong>
+                </div>
+                <div class="cm-layer__content">
+                    <div class="cm-layer__message">
+                        <p>"남부서비스센터"에<br>예약 가능한 날짜가 없습니다.<br>예약을 원하시는 경우 서비스 거점으로 전화<br>문의 부탁드립니다.</p>
+                    </div>
+                    <button type="button" class="cm-btn">
+                        <span class="text">확인</span>
+                        <span class="masker"><span>확인</span></span>
+                    </button>
+                </div>
+                <div class="cm-layer__close-wrap">
+                    <button type="button" class="js-layer-closer">
+                        <span class="js-svg-icon" data-icon="svg-cross"></span>
+                        <span class="blind">Close popup</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- component -->
+</div>
+
+<!--/* common js */-->
+<script src="/etc.clientlibs/gmc/global/clientlibs/clientlib-basepage/js/main.js"></script>
+<script>
+$(function () {
+    //open
+    $('#find-service-reservation-layer').trigger('openLayer');
+});
+</script>
+</body>
+</html>
