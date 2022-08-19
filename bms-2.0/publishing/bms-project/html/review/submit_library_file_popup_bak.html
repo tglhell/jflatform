@@ -8,7 +8,6 @@
   <title>BMS 2.0</title>
 
   <link rel="stylesheet" href="../../assets/css/lib/jquery-ui.css">
-	<link rel="stylesheet" href="../../assets/css/lib/daterangepicker.css">
   <link rel="stylesheet" href="../../assets/css/lib/customlib.css">
   <link rel="stylesheet" href="../../assets/css/common.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
@@ -16,7 +15,6 @@
 
   <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
   <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
-	<script type="text/javascript" src="../../assets/js/lib/daterangepicker.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/variable.js"></script>
   <script type="text/javascript" src="../../assets/js/lib/customlib.js"></script>
   <script type="text/javascript" src="../../assets/js/common.js"></script>
@@ -119,7 +117,7 @@
 														<tr>
 															<td>
 																<div class="img-chk">
-																	<div class="video-area type-small"></div>
+																	<div class="no-contents-area type-small"></div>
 																	<label class="chk"><input type="checkbox"><span>선택</span></label>
 																</div>
 																<div class="input-outer-box">
@@ -284,7 +282,7 @@
 													</div>
 												</div>
 												<div class="inp-slice-box">
-													<input type="text" class="input-item daterange date-chk" placeholder="MM.DD.YYYY - MM.DD.YYYY">
+													<input type="text" id="inpTxt04" class="input-item date-picker" placeholder="MM/DD/YYYY">
 												</div>
 											</div>
 											<div class="input-outer-box row-type">
@@ -396,7 +394,6 @@
 
 <script>
 	noSroll();
-	reviewManagementFunc ();
 
 	window.onload = () => {
 		$('.pop-open').eq(0).trigger('click');

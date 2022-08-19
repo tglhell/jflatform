@@ -153,6 +153,7 @@
 	display: inline-block;
 	margin: 12px 10px 0 0;
 	padding: 7px 4px 7px 14px;
+	color: var(--cm-color-black3);
 	background-color: var(--cm-color-dark-white2);
 }
 .switch-item-list ul li span {
@@ -195,6 +196,7 @@
 }
 .review-list-filter .search-option-box > span {
 	font-size: 20px;
+	color: var(--cm-color-black3);
 	line-height: 30px;
 }
 .review-list-filter .btn-option {
@@ -271,6 +273,7 @@
 .review-list-top .list-total-num {
 	padding: var(--pc-l-r-padding);
 	font-size: 20px;
+	color: var(--cm-color-black3);
 }
 .review-list-top .list-total-num .num-val {
 	font-weight: var(--fb-bold-xl);
@@ -287,6 +290,7 @@
 	display: inline-block;
 	font-size: 20px;
 	font-weight: var(--fb-bold-lg);
+	color: var(--cm-color-black3);
 	line-height: 24px;
 	vertical-align: middle;
 }
@@ -676,10 +680,17 @@
 }
 .design-review-wrap .input-outer-box .side,
 .design-review-view .input-outer-box .side,
+.layer-popup-wrap.w1200 .input-outer-box .side,
 .review-management .input-outer-box .side {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+.layer-popup-wrap.w1200 .input-outer-box .side {
+	align-items: end;
+}
+.layer-popup-wrap.w1200 .input-outer-box:last-of-type .side label {
+	margin-bottom: 0;
 }
 .timeline {
 	width: 100%;
@@ -760,6 +771,9 @@
 	background: url('../images/review/ico_btn_close_w.svg') no-repeat;
 	background-size: 100%; 
 	text-indent: -9999px;
+}
+.timeline .list .left .tooltip .btn-close:after {
+	display: none;
 }
 .timeline .list .cont {
 	padding: 48px;
@@ -1350,9 +1364,6 @@
 	background: url('../images/review/ico_btn_close_w.svg') no-repeat;
 	background-size: 100%; 
 	text-indent: -9999px;
-}
-.review-management .timeline .list .left .tooltip .btn-close:after {
-	display: none;
 }
 .review-management .timeline .list.type2 .cont {
 	margin-top: 12px;

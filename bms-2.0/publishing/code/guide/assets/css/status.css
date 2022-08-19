@@ -391,7 +391,6 @@ td:last-child {
 .layerPopupCont {
 	position: relative;
 	display: inline-block;
-	min-width: 600px;
 	max-width: 1200px;
 	box-shadow:
 		-7px -7px 20px 0px rgba(241, 241, 241, .9),
@@ -414,11 +413,10 @@ td:last-child {
 }
 
 .layerPopupBody .layerTitle {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	padding: 10px;
+	position: relative;
+	z-index: 2;
+	margin-bottom: -47px;
+	padding: 10px 50px 10px 15px;
 	border-bottom: 1px solid rgba(0,0,0,.05);
 	background: rgba(241, 241, 241, .8);
 	text-align: center;
@@ -430,7 +428,6 @@ td:last-child {
 
 .layerPopupBody .layerCont {
 	overflow-y: auto;
-	min-height: 400px;
 	max-height: 700px;
 	padding: 71px 25px 25px 25px;
 	box-sizing: border-box;
@@ -446,6 +443,7 @@ td:last-child {
 	position: absolute;
 	top: 12px;
 	right: 12px;
+	z-index: 3;
 	width: 20px;
 	height: 20px;
 	margin: 0;

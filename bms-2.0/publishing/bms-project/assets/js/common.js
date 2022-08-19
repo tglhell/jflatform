@@ -394,6 +394,7 @@ $(function(){
 
 		// video & thumbnail img switch
 		$('.training-video .play-list .thumb img').on('click', function(){
+			const _top = $('.video-outer').position().top + 20;
 			const videoName = $(this).attr('src').split('/').reverse()[0].split('.')[0];
 			let videoTitle = $(this).parent('.thumb').next('.tit').text();
 			const imgName = playVideo.attr('src').split('/').reverse()[0].split('.')[0];
@@ -403,6 +404,7 @@ $(function(){
 			playVideoTitle.text(videoTitle);
 			$(this).attr('src', '../../assets/images/brand/' + imgName + '.' + imgExtension);
 			$(this).parent('.thumb').next('.tit').text(imgTitle);
+			$('html, body').animate({scrollTop: _top}, 400)
 		});
 
 		// video title show & hide

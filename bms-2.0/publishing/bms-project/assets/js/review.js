@@ -110,6 +110,7 @@ function reviewManagementFunc () {
 		}
 	});
 	eDateTar[1].on('focusin', function () {
+		$(this).removeClass('date-chk');
 		eDateTar[1].on('apply.daterangepicker', function(ev, picker) {
 			sDateVal = picker.startDate.format('MM.DD.YYYY');
 			eDateVal = picker.endDate.format('MM.DD.YYYY');
@@ -160,7 +161,15 @@ function actDateInp () {
 		autoApply: true,
 	}
 	eDateTar[1].daterangepicker(dateRangeOptions);
-	eDateTar[1].val(sDateVal + ' - ' + eDateVal);
+	if ($(eDateTar[1]).hasClass('date-chk')) {
+		
+		if (!$(eDateTar[1]).parent().is('.active')) {
+			$('.daterange.date-chk').val('');
+		}
+	} else {
+		eDateTar[1].val(sDateVal + ' - ' + eDateVal);
+	}
+	
 	eDateTar[3].eq(0).text(sDateVal);
 	eDateTar[3].eq(1).text(eDateVal);
 }
@@ -436,10 +445,10 @@ function dsSaveToast () {
 /* e : submit_library_write */
 
 function noSroll() {
-	$('.file-detail-input .date-picker').focusin(function() {
+	$('.file-detail-input .daterange.date-chk').focusin(function() {
 		$(this).parents('.layer-popup-cont-inner').css('overflow-y','hidden');
 	})
-	$('.file-detail-input .date-picker').focusout(function() {
+	$('.file-detail-input .daterange.date-chk').focusout(function() {
 		$(this).parents('.layer-popup-cont-inner').css('overflow-y','auto');
 	})
 }

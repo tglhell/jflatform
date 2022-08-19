@@ -323,7 +323,6 @@ a.ui-button:active,
 
 /* s : daterangepicker */
 .daterangepicker {
-	z-index: 99;
 	border-radius: 0;
 	border-color: #ccc;
 	font-family: 'HyundaiSansHeadKR', sans-serif;

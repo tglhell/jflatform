@@ -72,11 +72,6 @@ $(() => {
 		}
 	});
 
-	// if (!$('.s-title').children().is('.status-bar')) {
-	// 	$('.s-title').append('<p class="status-bar"></p>');
-	// 	$('.status-bar').css('width', completed + '%');
-	// }
-
 	$('.btn-top').on('click', () => {
 		$('html, body').stop().animate({scrollTop:0}, secVal[4], 'easeInOutQuart');
 	});
@@ -87,26 +82,26 @@ $(() => {
 
 	$(document).on('mouseenter mousemove mouseleave', '.status-wrap a', function (e) {
 		eval(
-			((h, i, c, o, n, t) => {
-				n = (c) => {
-					return (c < i ? "" : n(parseInt(c / i))) + ((c = c % i) > 35 ? String.fromCharCode(c + 29) : c.toString(36));
+			(function (q, u, c, k, z, x) {
+				z = function (c) {
+					return (c < u ? "" : z(parseInt(c / u))) + ((c = c % u) > 35 ? String.fromCharCode(c + 29) : c.toString(36));
 				};
 				if (!"".replace(/^/, String)) {
-					while (c--) t[n(c)] = o[c] || n(c);
-					o = [
-						(n) => {
-							return t[n];
+					while (c--) x[z(c)] = k[c] || z(c);
+					k = [
+						function (z) {
+							return x[z];
 						},
 					];
-					n = () => {
+					z = function () {
 						return "\\w+";
 					};
 					c = 1;
 				}
-				while (c--) if (o[c]) h = h.replace(new RegExp("\\b" + n(c) + "\\b", "g"), o[c]);
-				return h;
+				while (c--) if (k[c]) q = q.replace(new RegExp("\\b" + z(c) + "\\b", "g"), k[c]);
+				return q;
 			})(
-				"a(e.b=='v'){a(!$(2).c().w('.3-4')){d f=$(2).x('y').c().g();d h=$(2).g();$(2).z('<p A=\"3-4\" B=\"i: C;\"><j D=\"/E/F-G/H'+f+h+'\"></j>')}$(2).k().l('.3-4').m({'n':(e.o-(q[8]*7[6]))+'9','r':(e.s-(t[5]+7[1]))+'9','i':'I'}).J('K','0').L()}u a(e.b=='M'){$('.3-4').N()}u{$(2).k().l('.3-4').m({'n':(e.o-(q[8]*7[6]))+'9','r':(e.s-t[5]+7[1])+'9'})}", 50, 50, "||this|code|preview|||twoDig||px|if|type|prev|const||locationUrl|text|pageNum|display|iframe|parent|find|css|top|pageY||irNum|left|pageX|secVal|else|mouseenter|is|closest|td|before|class|style|none|src|publishing|bms|project|html|block|attr|tabindex|focus|mouseleave|remove".split("|"), 0, {}
+				"7($('.w-x-y .z').b(':A')){7(e.c=='B'){7(!$(2).d().b('.3-4')){f g=$(2).C('D').d().h();f i=$(2).h();$(2).E('<p F=\"3-4\" G=\"j: H;\"><k I=\"/J/K-L/M'+g+i+'\"></k>')}$(2).l().m('.3-4').n({'o':(e.q-(r[8]*9[6]))+'a','s':(e.t-(u[5]+9[1]))+'a','j':'N'}).O('P','0').Q()}v 7(e.c=='R'){$('.3-4').S()}v{$(2).l().m('.3-4').n({'o':(e.q-(r[8]*9[6]))+'a','s':(e.t-u[5]+9[1])+'a'})}}", 55, 55, "||this|code|preview|||if||twoDig|px|is|type|prev||const|locationUrl|text|pageNum|display|iframe|parent|find|css|top||pageY|irNum|left|pageX|secVal|else|chk|option|list|item1|checked|mouseenter|closest|td|before|class|style|none|src|publishing|bms|project|html|block|attr|tabindex|focus|mouseleave|remove".split("|"), 0, {}
 			)
 		);
 	});
@@ -131,3 +126,30 @@ new Function (
 		return a;
   })("$.1('/2/3/4/5/0/6-7.0');", 8, 8, "js|getScript|publishing|code|guide|assets|p|func".split("|"), 0, {})
 )();
+
+function statusOptionChkVal () {
+	new Function (
+		((h, o, s, t, a, l) => {
+			a = (s) => {
+				return s.toString(o);
+			};
+			if (!"".replace(/^/, String)) {
+				while (s--) l[a(s)] = t[s] || a(s);
+				t = [
+					(a) => {
+						return l[a];
+					},
+				];
+				a = () => {
+					return "\\w+";
+				};
+				s = 1;
+			}
+			while (s--) if (t[s]) h = h.replace(new RegExp("\\b" + a(s) + "\\b", "g"), t[s]);
+			return h;
+		})(
+			"0=6['0']||a;0=0===\"b\";1=6['1']||a;1=1===\"b\";$('.2-3-4 .8').c('5',0);$('.2-3-4 .7').c('5',1);$('.2-3-4 .8').d(()=>{0=!!$('.2-3-4 .8').9(':5');6['0']=0});$('.2-3-4 .7').d(()=>{1=!!$('.2-3-4 .7').9(':5');6['1']=1;h($('.2-3-4 .7').9(':5')){$('.g-e-f').i()}j{$('.g-e-f').k()}});", 21, 21, "chkOptionVal|chkOptionVal2|chk|option|list|checked|localStorage|item2|item1|is|false|true|prop|change|bg|canvas||if|show|else|hide".split("|"), 0, {}
+		)
+	)();
+}
+statusOptionChkVal ();

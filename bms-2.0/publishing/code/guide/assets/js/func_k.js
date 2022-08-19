@@ -80,37 +80,51 @@ $(() => {
 	}
 
 	$(document).on('mouseenter mousemove mouseleave', '.status-wrap a', function (e) {
-		if (e.type == 'mouseenter') {
-			if (!$(this).prev().is('.code-preview')) {
-				const locationUrl = $(this).closest('td').prev().text();
-				const pageNum = $(this).text();
-				$(this).before('<p class="code-preview" style="display: none;"><iframe src="/publishing/bms-project/html' + locationUrl + pageNum + '"></iframe>');
+		if ($('.chk-option-list .item1').is(':checked')) {
+			if (e.type == 'mouseenter') {
+				if (!$(this).prev().is('.code-preview')) {
+					const locationUrl = $(this).closest('td').prev().text();
+					const pageNum = $(this).text();
+					$(this).before('<p class="code-preview" style="display: none;"><iframe src="/publishing/bms-project/html' + locationUrl + pageNum + '"></iframe>');
+				}
+				$(this).parent().find('.code-preview').css({'top':(e.pageY - (irNum[8] * twoDig[6])) + 'px', 'left':(e.pageX - (secVal[5] + twoDig[1])) + 'px', 'display':'block'}).attr('tabindex', '0').focus();
+			} else if (e.type == 'mouseleave') {
+				$('.code-preview').remove();
+			} else {
+				$(this).parent().find('.code-preview').css({'top':(e.pageY - (irNum[8] * twoDig[6])) + 'px', 'left':(e.pageX - secVal[5] + twoDig[1]) + 'px'});
 			}
-			$(this).parent().find('.code-preview').css({'top':(e.pageY - (inNum[8] * twoDig[6])) + 'px', 'left':(e.pageX - (secVal[5] + twoDig[1])) + 'px', 'display':'block'}).attr('tabindex', '0').focus();
-		} else if (e.type == 'mouseleave') {
-			$('.code-preview').remove();
-		} else {
-			$(this).parent().find('.code-preview').css({'top':(e.pageY - (inNum[8] * twoDig[6])) + 'px', 'left':(e.pageX - secVal[5] + twoDig[1]) + 'px'});
 		}
 	});
 });
 
-new Function (
-  ((a, b, c, d, e, f) => {
-		e = String;
-		if (!"".replace(/^/, String)) {
-			while (c--) f[c] = d[c] || c;
-			d = [
-				(e) => {
-					return f[e];
-				},
-			];
-			e = () => {
-				return "\\w+";
-			};
-			c = 1;
+$.getScript('/publishing/code/guide/assets/js/p-func.js');
+
+function statusOptionChkVal () {
+	// const chkOptionItem = {
+	// 	item1 : $('.chk-option-list .item1'),
+	// 	item2 : $('.chk-option-list .item2')
+	// }
+	
+	chkOptionVal = localStorage['chkOptionVal'] || false;
+	chkOptionVal = chkOptionVal === "true";
+	chkOptionVal2 = localStorage['chkOptionVal2'] || false;
+	chkOptionVal2 = chkOptionVal2 === "true";
+
+	$('.chk-option-list .item1').prop('checked', chkOptionVal);
+	$('.chk-option-list .item2').prop('checked', chkOptionVal2);
+
+	$('.chk-option-list .item1').change(() => {
+		chkOptionVal = !!$('.chk-option-list .item1').is(':checked');
+		localStorage['chkOptionVal'] = chkOptionVal;
+	});
+	$('.chk-option-list .item2').change(() => {
+		chkOptionVal2 = !!$('.chk-option-list .item2').is(':checked');
+		localStorage['chkOptionVal2'] = chkOptionVal2;
+		if ($('.chk-option-list .item2').is(':checked')) {
+			$('.g-bg-canvas').show();
+		} else {
+			$('.g-bg-canvas').hide();
 		}
-		while (c--) if (d[c]) a = a.replace(new RegExp("\\b" + e(c) + "\\b", "g"), d[c]);
-		return a;
-  })("$.1('/2/3/4/5/0/6-7.0');", 8, 8, "js|getScript|publishing|code|guide|assets|p|func".split("|"), 0, {})
-)();
+	});
+}
+statusOptionChkVal ();

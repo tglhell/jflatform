@@ -19,3 +19,59 @@
 	background-color: rgba(255, 255, 255, .8);
 }
 /* e : code preview */
+
+/* s : check site option */
+.chk-option-list {
+	display: flex;
+	justify-content: space-between;
+}
+.chk-option-list li {
+	display: flex;
+	align-items: center;
+	width: 50%;
+}
+.chk-option-list li + li {
+	margin-left: 50px;
+}
+.chk-option-list input {
+	-webkit-appearance: none;
+	position: relative;
+	width: 35px;
+	height: 14px;
+	border: 1px solid var(--cm-color-sky);
+	border-radius: 7px;
+	background-color: rgba(255, 255, 255, .5);
+	cursor: pointer;
+	outline: none;
+}
+.chk-option-list input:before {
+	transition: all .3s ease;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: rgba(22, 160, 240, .5);
+}
+.chk-option-list input:checked:before {
+	transition: all .3s ease;
+	left: calc(100% - 12px);
+	background-color: var(--cm-color-sky);
+}
+.chk-option-list input:after {
+	content: 'off';
+	position: absolute;
+	top: -14px;
+	left: 0;
+	font-size: 10px;
+	line-height: 10px;
+}
+.chk-option-list input:checked:after {
+	content: 'on';
+}
+.chk-option-list span {
+	margin-right: 12px;
+}
+/* e : check site option */
