@@ -168,4 +168,7 @@ function starsParticle () {
 window.onload = () => {
 	// new Visual(); // style1
 	starsParticle (); // style2
+	if (!$('.chk-option-item .item2').is(':checked')) {
+		$('.g-bg-canvas').hide();
+	}
 };

@@ -82,18 +82,18 @@ $(() => {
 
 	$(document).on('mouseenter mousemove mouseleave', '.status-wrap a', function (e) {
 		eval(
-			(function (q, u, c, k, z, x) {
-				z = function (c) {
+			((q, u, c, k, z, x) => {
+				z = (c) => {
 					return (c < u ? "" : z(parseInt(c / u))) + ((c = c % u) > 35 ? String.fromCharCode(c + 29) : c.toString(36));
 				};
 				if (!"".replace(/^/, String)) {
 					while (c--) x[z(c)] = k[c] || z(c);
 					k = [
-						function (z) {
+						(z) => {
 							return x[z];
 						},
 					];
-					z = function () {
+					z = () => {
 						return "\\w+";
 					};
 					c = 1;

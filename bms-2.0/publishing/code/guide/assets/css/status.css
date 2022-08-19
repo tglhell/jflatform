@@ -152,7 +152,7 @@ table tr.modify td {
 }
 
 table tr.hover td {
-	background-color: rgba(240, 225, 22, 0.15);
+	background-color: #fff;
 }
 
 table tr.none td {
@@ -621,3 +621,26 @@ td:last-child {
   width: 100%;
 }
 /* e : custom button */
+
+/* s : button style */
+.btn-option {
+	padding: 0;
+}
+.btn-option span {
+	opacity: .5;
+	display: block;
+	width: 40px;
+	height: 30px;
+	background: url(/publishing/code/guide/assets/images/ico_option.png) no-repeat center center;
+	background-size: 20px auto;
+	font-size: 0;
+}
+.btn-option:hover span {
+	transition: opacity .5s ease;
+	opacity: .7;
+}
+.btn-option:focus span:after,
+.btn-option:active span:after {
+	content: none;
+}
+/* e : button style */
