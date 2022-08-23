@@ -160,7 +160,17 @@
                     <label for="inpNum01_031">연관 태그</label>
                     <button class="btn btn-type3 btn-small pop-open" data-pop-idx="1"><span>태그 추가</span></button>
                   </div>
-                  <div class="selected-box"></div>
+                  <!-- s : modify 22.08.23 -->
+									<div class="selected-box active">
+										<p>연관 태그를 선택해주세요.</p>
+										<div class="switch-item-list">
+											<ul>
+												<li data-label="Accent(RB)">Accent(RB)<button class="btn-item-del"></button></li>
+												<li data-label="Aslan(AG)">Aslan(AG)<button class="btn-item-del"></button></li>
+											</ul>
+										</div>
+									</div>
+									<!-- e : modify 22.08.23 -->
                 </div>
               </div>
               <div class="tab-box-wrap js-tab">
@@ -433,12 +443,12 @@
 																	<label class="chk"><input type="checkbox"><span>Grandeur / Azera(IG)</span></label>
 																	<label class="chk"><input type="checkbox"><span>Sonata(DN)</span></label>
 																	<label class="chk"><input type="checkbox"><span>Sonata(DN8)</span></label>
-																	<label class="chk"><input type="checkbox"><span>Others</span></label>
-																	<label class="chk"><input type="checkbox"><span>Others jsjs</span></label>
-																	<label class="chk"><input type="checkbox"><span>Others jsjs2</span></label>
-																	<label class="chk"><input type="checkbox"><span>Others jsjs3</span></label>
-																	<label class="chk"><input type="checkbox"><span>Others jsjs4</span></label>
-																	<label class="chk"><input type="checkbox"><span>Others jsjs5</span></label>
+																	<label class="chk"><input type="checkbox"><span>abc</span></label>
+																	<label class="chk"><input type="checkbox"><span>def</span></label>
+																	<label class="chk"><input type="checkbox"><span>ghi</span></label>
+																	<label class="chk"><input type="checkbox"><span>jkl</span></label>
+																	<label class="chk"><input type="checkbox"><span>mno</span></label>
+																	<label class="chk"><input type="checkbox"><span>pqr</span></label>
 																</div>
 															</div>
 														</div>
@@ -457,7 +467,7 @@
 										</div>
 										<div class="cta-outer">
 											<button class="btn btn-middle btn-type2 btn-close"><span>취소</span></button>
-											<button class="btn btn-middle"><span>확인</span></button>
+											<button class="btn btn-middle btn-item-add"><span>확인</span></button> <!-- modify 22.08.23 add to class "btn-item-add" -->
 										</div>
 									</div>
 								</div>

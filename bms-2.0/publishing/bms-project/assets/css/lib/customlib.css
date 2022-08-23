@@ -12,6 +12,10 @@
 .input-item.date-picker::placeholder {
   font-size: 16px;
 }
+.input-item.date-picker.disabled,
+.input-item.date-picker:disabled {
+  padding-right: 30px;
+}
 .ui-datepicker {
   width: auto;
   max-width: 334px;

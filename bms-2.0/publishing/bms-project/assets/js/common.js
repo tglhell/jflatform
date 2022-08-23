@@ -2,6 +2,8 @@ $(function(){
 	const tabTar = $('.js-tab');
 	const inpItem = $('.input-item');
 
+	$('input').attr({"autocomplete":"off"});
+
 	// gnb
 	$('.bms-header .menu, .bms-header .inner-content-bg').on('mouseover', function(){
 		$('.bms-header .sub-menu').stop().animate({height: '523px', paddingTop: '48px'},300);

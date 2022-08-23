@@ -109,9 +109,12 @@ function statusOptionChkVal () {
 	chkOptionVal = chkOptionVal === "true";
 	chkOptionVal2 = localStorage['chkOptionVal2'] || false;
 	chkOptionVal2 = chkOptionVal2 === "true";
+	chkOptionVal3 = localStorage['chkOptionVal3'] || false;
+	chkOptionVal3 = chkOptionVal3 === "true";
 
 	$('.chk-option-list .item1').prop('checked', chkOptionVal);
 	$('.chk-option-list .item2').prop('checked', chkOptionVal2);
+	$('.chk-option-list .item3').prop('checked', chkOptionVal3);
 
 	$('.chk-option-list .item1').change(() => {
 		chkOptionVal = !!$('.chk-option-list .item1').is(':checked');
@@ -125,6 +128,10 @@ function statusOptionChkVal () {
 		} else {
 			$('.g-bg-canvas').hide();
 		}
+	});
+	$('.chk-option-list .item3').change(() => {
+		chkOptionVal3 = !!$('.chk-option-list .item3').is(':checked');
+		localStorage['chkOptionVal3'] = chkOptionVal3;
 	});
 }
 statusOptionChkVal ();

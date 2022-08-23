@@ -484,6 +484,7 @@ body::-webkit-scrollbar-track,
   overflow: hidden;
   padding-top: 48px;
   display: none;
+  z-index: 2;
 }
 .bms-header .inner-content .menu .sub-menu .sub-inner {
   position: relative;
@@ -557,10 +558,14 @@ body::-webkit-scrollbar-track,
   display: block;
 }
 .bms-header .inner-content-bg {
-  width: 100%;
+  width: 100vw;
   height: 0;
   background-color: #fff;
   border-bottom: 1px solid #e9e9e9;
+  position: fixed;
+  left: 0;
+  top: 70px;
+  z-index: 1;
 }
 .bms-header .inner-content-bg.bd-hidden {
   border: none;
@@ -891,7 +896,7 @@ body::-webkit-scrollbar-track,
   min-height: 100vh;
   display: table;
   margin: -127px auto -160px;
-  padding: 200px 0 160px;
+  padding: 160px 0;
 }
 .bms-container .bms-content .cont-outer .none-gnb-cont{
   height: 100%;

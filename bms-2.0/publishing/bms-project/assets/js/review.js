@@ -2,6 +2,7 @@
 function designReview () {
 	maxItemLeng = 10; // 체크박스 체크된 최대 갯수
 	swtParent = $('.js-switch-outer');
+	outerSltTagBox = $('.selected-tag .selected-box');
 	$('.js-switch, .switch-placeholder').on('click', function () {
 		$(this).closest(swtParent).toggleClass('active');
 		chkLeng ($(this));
@@ -31,20 +32,68 @@ function designReview () {
 				$(this).closest(swtParent).find('ul').append(obj);
 			});
 			tagTxt.hide();
-			$('.btn-item-del').on('click', function () {
+			$('.btn-item-del').off().on('click', function () {
 				const dataChkTxt = $(this).parent().attr('data-label');
 				const chkCnt = $(this).closest('.switch-cont');
 				const tarInp = chkCnt.find('.chk input');
+				const btnDelIdx = $(this).closest('li').index();
+				if ($('.add-tag-pop').css('display') === 'none') {
+					$('.add-tag-pop .switch-item-list').find('ul li').eq(btnDelIdx).remove();
+					if ($('.add-tag-pop .switch-item-list').find('ul li').length == 0) {
+						$('.add-tag .switch-item-list').find('p').show();
+					}
+					$('.add-tag-pop').find('.chk span:contains(' + dataChkTxt + ')').parent().removeClass('on').find('input').prop('checked', false);
+				}
 				$(this).parent().remove();
 				chkCnt.find('.chk span:contains(' + dataChkTxt + ')').parent().removeClass('on').find('input').prop('checked', false);
 				chkLeng (tarInp);
 				if (tagTxt.next().children().length = 0 ) {
 					tagTxt.show();
 				}
+				sltItemLeng = outerSltTagBox.find('ul').children('li').length;
+				if (sltItemLeng == 0) {
+					outerSltTagBox.removeClass('active');
+					$('.btn-item-add').off();
+				}
 			});
 		} else {
 			$(this).closest(swtParent).find('ul').find('li[data-label="' + thisTxt + '"]').remove();
 		}
+
+		
+		$('.btn-item-add').on('click', function () {
+			const btnItemCloseTar = $(this).closest('.layer-popup-wrap');
+			outerSltTagBox.addClass('active');
+			outerSltTagBox.find('li').remove();
+			$('.add-tag .switch-item-list').find('ul li').clone(true).appendTo('.selected-tag ul');
+			popClose (btnItemCloseTar);
+			if ($('.add-tag .switch-item-list').find('ul li').length == 0) {
+				outerSltTagBox.removeClass('active');
+				$('.btn-item-add').off();
+			}
+		});
+
+		$('.add-tag-pop .btn-close').off().on('click', function () {
+			$('.add-tag-pop .check-box').find('.chk span').parent().removeClass('on').find('input').prop('checked', false);
+			setTimeout(function () {
+				$('.add-tag .switch-item-list ul').find('li').remove();
+				outerSltTagBox.find('ul li').clone(true).appendTo('.add-tag .switch-item-list ul');
+			}, 500);
+			for (i = 0; i < outerSltTagBox.find('ul li').length; i++) {
+				const chkTagItemLbl = outerSltTagBox.find('ul li').eq(i).attr('data-label');
+				$('.add-tag-pop .check-box').find('.chk span:contains(' + chkTagItemLbl + ')').parent().addClass('on').find('input').prop('checked', true);
+			}
+			if (outerSltTagBox.find('ul li').length == maxItemLeng) {
+				console.log(outerSltTagBox.find('ul li').length);
+				$('.add-tag-pop .check-box').find('.chk:not(.on) input').prop('disabled', true);
+			} else if (outerSltTagBox.find('ul li').length == 0) {
+				setTimeout(function () {
+					$('.add-tag .switch-item-list').find('p').show();
+				}, 500);
+			} else {
+				$('.add-tag-pop .check-box').find('.chk input').prop('disabled', false);
+			}
+		});
 	});
 }
 
@@ -117,6 +166,13 @@ function reviewManagementFunc () {
 			eDateTar[2].find('input').prop('checked', chkSwitch);
 			actDateInp ();
 		});
+		if ($(this).closest('.layer-popup-wrap').is('.w1200')) {
+			$(this).closest('.layer-popup-wrap.w1200').find('.layer-popup-cont-inner').scroll(function () {
+				let drpInpHgt = $(this).find('.daterange').outerHeight(true);
+				let drpPos = $(this).find('.daterange').offset().top + drpInpHgt;
+				$('.daterangepicker').css('top', drpPos);
+			});
+		}
 	});
 	dateInp ();
 }
@@ -162,14 +218,12 @@ function actDateInp () {
 	}
 	eDateTar[1].daterangepicker(dateRangeOptions);
 	if ($(eDateTar[1]).hasClass('date-chk')) {
-		
 		if (!$(eDateTar[1]).parent().is('.active')) {
 			$('.daterange.date-chk').val('');
 		}
 	} else {
 		eDateTar[1].val(sDateVal + ' - ' + eDateVal);
 	}
-	
 	eDateTar[3].eq(0).text(sDateVal);
 	eDateTar[3].eq(1).text(eDateVal);
 }
@@ -313,12 +367,12 @@ function commentFile() {
 
 function thumbReadUrl (input) {
 	if (input.files && input.files[0]) {
-			let reader = new FileReader();
-			reader.onload = function (e) {
-				cateThumbBox.find('.add-file label img').remove();
-				cateThumbBox.find('.add-file label').append('<img src="' + e.target.result + '" alt="대표 이미지">');
-			}
-			reader.readAsDataURL(input.files[0]);
+		let reader = new FileReader();
+		reader.onload = function (e) {
+			cateThumbBox.find('.add-file label img').remove();
+			cateThumbBox.find('.add-file label').append('<img src="' + e.target.result + '" alt="대표 이미지">');
+		}
+		reader.readAsDataURL(input.files[0]);
 	}
 }
 
@@ -435,20 +489,28 @@ function rightGuideSwiper () {
 
 function dsSaveToast () {
 	$('.btn-tp-save').on('click', function () {
-		console.log('test');
 		$('.write-save-toast').addClass('active');
 		setTimeout(() => {
 			$('.write-save-toast').removeClass('active');
 		}, 3000);
 	});
 }
-/* e : submit_library_write */
 
-function noSroll() {
-	$('.file-detail-input .daterange.date-chk').focusin(function() {
-		$(this).parents('.layer-popup-cont-inner').css('overflow-y','hidden');
-	})
-	$('.file-detail-input .daterange.date-chk').focusout(function() {
-		$(this).parents('.layer-popup-cont-inner').css('overflow-y','auto');
-	})
-}
+$(function () {
+	$('.side .right').find('input').on('change', function () {
+		const chkInpTar = $(this).closest('.input-outer-box').find('.inp-slice-box input');
+		if ($(this).is(':checked')) {
+			chkInpTar.addClass('disabled').prop('disabled');
+		} else {
+			chkInpTar.removeClass('disabled').prop('enabled');
+		}
+	});
+
+	$('.selected-tag .btn-item-del').on('click', function () {
+		$(this).parent().remove();
+		if ($('.selected-tag .switch-item-list').find('ul li').length == 0) {
+			outerSltTagBox.removeClass('active');
+		}
+	});
+});
+/* e : submit_library_write */

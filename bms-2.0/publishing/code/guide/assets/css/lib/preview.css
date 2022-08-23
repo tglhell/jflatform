@@ -34,11 +34,12 @@
 	margin-left: 50px;
 }
 .chk-option-list input {
+	transition: border-color .3s ease;
 	-webkit-appearance: none;
 	position: relative;
 	width: 35px;
 	height: 14px;
-	border: 1px solid var(--cm-color-sky);
+	border: 1px solid rgba(22, 160, 240, .5);
 	border-radius: 7px;
 	background-color: rgba(255, 255, 255, .5);
 	cursor: pointer;
@@ -54,6 +55,10 @@
 	height: 12px;
 	border-radius: 50%;
 	background-color: rgba(22, 160, 240, .5);
+}
+.chk-option-list input:checked {
+	transition: border-color .3s ease;
+	border-color: var(--cm-color-sky);
 }
 .chk-option-list input:checked:before {
 	transition: all .3s ease;
