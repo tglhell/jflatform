@@ -62,19 +62,15 @@ html.guide body::-webkit-scrollbar-track,
   font-family:'Nanum Gothic';
   font-style:normal;
   font-weight:400;
-  src:url(/publishing/code/guide/assets/fonts/NanumGothicR.eot);
-  src:url(/publishing/code/guide/assets/fonts/NanumGothicR.eot?#iefix) format('embedded-opentype'),
-			url(/publishing/code/guide/assets/fonts/NanumGothicR.woff) format('woff'),
-			url(/publishing/code/guide/assets/fonts/NanumGothicR.ttf) format('truetype');
+  src: url(/publishing/code/guide/assets/fonts/NanumGothicR.woff) format('woff'),
+		url(/publishing/code/guide/assets/fonts/NanumGothicR.ttf) format('truetype');
 }
 @font-face {
   font-family:'Nanum Gothic';
   font-style:bold;
   font-weight:700;
-  src:url(/publishing/code/guide/assets/fonts/NanumGothicB.eot);
-  src:url(/publishing/code/guide/assets/fonts/NanumGothicB.eot?#iefix) format('embedded-opentype'),
-			url(/publishing/code/guide/assets/fonts/NanumGothicB.woff) format('woff'),
-			url(/publishing/code/guide/assets/fonts/NanumGothicB.ttf) format('truetype');
+  src: url(/publishing/code/guide/assets/fonts/NanumGothicB.woff) format('woff'),
+		url(/publishing/code/guide/assets/fonts/NanumGothicB.ttf) format('truetype');
 }
 
 * {

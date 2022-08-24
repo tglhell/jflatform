@@ -148,7 +148,7 @@ function statusOptionChkVal () {
 			while (s--) if (t[s]) h = h.replace(new RegExp("\\b" + a(s) + "\\b", "g"), t[s]);
 			return h;
 		})(
-			"3=7['3']||a;3=3===\"b\";4=7['4']||a;4=4===\"b\";5=7['5']||a;5=5===\"b\";$('.0-1-2 .c').d('6',3);$('.0-1-2 .8').d('6',4);$('.0-1-2 .e').d('6',5);$('.0-1-2 .c').f(()=>{3=!!$('.0-1-2 .c').9(':6');7['3']=3});$('.0-1-2 .8').f(()=>{4=!!$('.0-1-2 .8').9(':6');7['4']=4;j($('.0-1-2 .8').9(':6')){$('.g-h-i').k()}l{$('.g-h-i').m()}});$('.0-1-2 .e').f(()=>{5=!!$('.0-1-2 .e').9(':6');7['5']=5});", 23, 23, "chk|option|list|chkOptionVal|chkOptionVal2|chkOptionVal3|checked|localStorage|item2|is|false|true|item1|prop|item3|change||bg|canvas|if|show|else|hide".split("|"), 0, {}
+			"3=7['3']||b;3=3===\"c\";4=7['4']||b;4=4===\"c\";5=7['5']||b;5=5===\"c\";$('.0-1-2 .e').f('6',3);$('.0-1-2 .9').f('6',4);$('.0-1-2 .a').f('6',5);$('.0-1-2 .e').h(()=>{3=!!$('.0-1-2 .e').8(':6');7['3']=3});$('.0-1-2 .9').h(()=>{4=!!$('.0-1-2 .9').8(':6');7['4']=4;i($('.0-1-2 .9').8(':6')){$('.g-j-k').o()}l{$('.g-j-k').p()}});$('.0-1-2 .a').h(()=>{5=!!$('.0-1-2 .a').8(':6');7['5']=5;i($('.0-1-2 .a').8(':6')){$('m').q('d-n')}l{$('m').r('d-n')}});", 28, 28, "chk|option|list|chkOptionVal|chkOptionVal2|chkOptionVal3|checked|localStorage|is|item2|item3|false|true||item1|prop||change|if|bg|canvas|else|html|mode|show|hide|addClass|removeClass".split("|"), 0, {}
 		)
 	)();
 }

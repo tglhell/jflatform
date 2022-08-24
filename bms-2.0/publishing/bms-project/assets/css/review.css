@@ -1273,6 +1273,7 @@
 }
 .review-management .timeline {
 	width: 640px;
+	flex-shrink: 0;
 }
 .review-management .timeline .list-cont {
 	display: block;

@@ -54,6 +54,8 @@ function designReview () {
 				if (sltItemLeng == 0) {
 					outerSltTagBox.removeClass('active');
 					$('.btn-item-add').off();
+				} else if (sltItemLeng < maxItemLeng) {
+					$('.add-tag-pop .check-box').find('.chk:not(.on) input').prop('disabled', false);
 				}
 			});
 		} else {

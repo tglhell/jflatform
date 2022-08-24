@@ -132,6 +132,11 @@ function statusOptionChkVal () {
 	$('.chk-option-list .item3').change(() => {
 		chkOptionVal3 = !!$('.chk-option-list .item3').is(':checked');
 		localStorage['chkOptionVal3'] = chkOptionVal3;
+		if ($('.chk-option-list .item3').is(':checked')) {
+			$('html').addClass('d-mode');
+		} else {
+			$('html').removeClass('d-mode');
+		}
 	});
 }
 statusOptionChkVal ();
