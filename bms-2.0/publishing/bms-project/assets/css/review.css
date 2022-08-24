@@ -581,7 +581,6 @@
 	min-width: auto;
 	align-items: center;
 	justify-content: center;
-	padding-top: 24px;
 	border: 1px dashed var(--cm-color-gray);
 	background-color: var(--cm-color-dark-white);
 	font-size: 14px;
@@ -592,6 +591,9 @@
 .input-outer-box.row-type .cate-thumb-box .add-file label {
 	display: flex;
 	margin-bottom: 0;
+}
+.cate-thumb-box .add-file label span {
+	padding-top: 24px;
 }
 .cate-thumb-box .add-file label span:before {
 	content: '';
@@ -642,6 +644,7 @@
 .design-review-view .review-info {
 	flex-shrink: 0;
 	width: 527px;
+	min-height: calc(100vh - 400px);
 	padding: 60px 80px;
 	margin-top: -81px;
 	background-color: var(--cm-color-dark-white);
@@ -653,6 +656,9 @@
 	font-size: 18px;
 	font-family: var(--fs-text-kr);
 	line-height: 23px;
+}
+.design-review-view .review-info .h4-title {
+	word-break: break-all;
 }
 .design-review-view .review-info .info-list {
 	margin-top: 55px;

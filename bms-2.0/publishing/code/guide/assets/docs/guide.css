@@ -759,3 +759,23 @@ html.guide .btn-top:focus {
 	outline: none;
 }
 /* e : btn-top */
+
+/* s : Dark Mode */
+html.guide.d-mode:after {
+	content: '다크모드 작업중...';
+	transform: translateX(-50%);
+	position: fixed;
+	bottom: 50px;
+	left: 50%;
+	font-size: 20px;
+	color: #fff;
+	line-height: 28px;
+}
+html.guide.d-mode .guide_container {
+	background-color: #000;
+}
+
+html.guide.d-mode .s-header h1 {
+	color: #fff;
+}
+/* e : Dark Mode */

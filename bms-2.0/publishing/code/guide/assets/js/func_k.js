@@ -85,7 +85,7 @@ $(() => {
 				if (!$(this).prev().is('.code-preview')) {
 					const locationUrl = $(this).closest('td').prev().text();
 					const pageNum = $(this).text();
-					$(this).before('<p class="code-preview" style="display: none;"><iframe src="/publishing/bms-project/html' + locationUrl + pageNum + '"></iframe>');
+					$(this).before('<p class="code-preview" style="display: none;"><iframe src="/publishing' + locationUrl + pageNum + '"></iframe>');
 				}
 				$(this).parent().find('.code-preview').css({'top':(e.pageY - (irNum[8] * twoDig[6])) + 'px', 'left':(e.pageX - (secVal[5] + twoDig[1])) + 'px', 'display':'block'}).attr('tabindex', '0').focus();
 			} else if (e.type == 'mouseleave') {
@@ -132,11 +132,16 @@ function statusOptionChkVal () {
 	$('.chk-option-list .item3').change(() => {
 		chkOptionVal3 = !!$('.chk-option-list .item3').is(':checked');
 		localStorage['chkOptionVal3'] = chkOptionVal3;
+		darkModeChk ();
+	});
+
+	function darkModeChk () {
 		if ($('.chk-option-list .item3').is(':checked')) {
 			$('html').addClass('d-mode');
 		} else {
 			$('html').removeClass('d-mode');
 		}
-	});
+	}
+	darkModeChk ();
 }
 statusOptionChkVal ();
