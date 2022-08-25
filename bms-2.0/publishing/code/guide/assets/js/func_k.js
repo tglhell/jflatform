@@ -1,6 +1,6 @@
 (function ($) {
 	$.fn.state = function (options) {
-		var settings = $.extend({
+		let settings = $.extend({
 				title: 'h2.s-title',
 				content: 'div.content',
 				files: 'tbody tr',
@@ -12,18 +12,18 @@
 			all_sections = this,
 			header = $('div.header');
 		return this.each(function () {
-			var self = this,
+			let self = this,
 				$self = $(self),
-				title_text = [],
-				completed = 0;
+				title_text = [];
+			completed = 0;
 			self.section_title = $(settings.title, $self);
 			self.content = $(settings.content, $self);
 			self.files = $(settings.files, $self);
 			self.files.each(function () {
-				var date = $(settings.date, this);
+				let date = $(settings.date, this);
 				date.each(function () {
-					var text = $(this).text();
-					if (text) {
+					let text = $(this).text();
+					if (text === 'o') {
 						completed++;
 					}
 				});
@@ -35,8 +35,9 @@
 				.bind('mouseleave', function () {
 					$(this).removeClass('hover');
 				});
+			let barChkSum = ((completed / self.files.length) * 100);
 			title_text = [self.section_title.text(), ' <span class="page-count">(', completed, '/', self.files.length,
-				') - <span style="color:#16a0f0;">1depth</span><span class="s-bar"></span></span>'
+				') - <span style="color:#16a0f0;">1depth</span><p class="s-bar" data-chk="' + parseInt(barChkSum) + '%" style="width: ' + barChkSum + '%"></p></span>'
 			];
 			self.section_title.html(title_text.join(''));
 			self.section_title.bind('click', () => {
