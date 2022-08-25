@@ -213,7 +213,7 @@
 .daterangepicker td.disabled, .daterangepicker option.disabled {
   color: #999;
   cursor: not-allowed;
-  text-decoration: line-through;
+  /* text-decoration: line-through; */
 }
 
 .daterangepicker select.monthselect, .daterangepicker select.yearselect {

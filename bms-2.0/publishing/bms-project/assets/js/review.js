@@ -217,6 +217,7 @@ function actDateInp () {
 			"daysOfWeek": [ "S", "M", "T", "W", "T", "F", "S"],
 		},
 		autoApply: true,
+		minDate: moment()
 	}
 	eDateTar[1].daterangepicker(dateRangeOptions);
 	if ($(eDateTar[1]).hasClass('date-chk')) {
@@ -502,7 +503,7 @@ $(function () {
 	$('.side .right').find('input').on('change', function () {
 		const chkInpTar = $(this).closest('.input-outer-box').find('.inp-slice-box input');
 		if ($(this).is(':checked')) {
-			chkInpTar.addClass('disabled').prop('disabled');
+			chkInpTar.val(null).addClass('disabled').prop('disabled');
 		} else {
 			chkInpTar.removeClass('disabled').prop('enabled');
 		}
