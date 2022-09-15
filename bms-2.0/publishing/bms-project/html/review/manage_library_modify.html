@@ -104,21 +104,42 @@
                   <strong class="tit">등록일</strong>
                   <p>06.25.2022</p>
                 </div>
+                <!-- s : modify 22.08.30 -->
+                <!-- S: 220907 브랜드 타입 추가, 구조 변경 -->
                 <div class="input-outer-box row-type">
-                  <label for="inpNum01">카테고리 구분</label>
-                  <div class="select-box">
-                    <p class="selected-value">선택</p>
-                    <ul class="select-items">
-                      <li>Brand Campaign</li>
-                      <li>Brand Space</li>
-                      <li>Brand Collection</li>
-                      <li>Global Launching Assets</li>
-                      <li>Social Media</li>
-                      <li>Event</li>
-                      <li>GMA</li>
-                    </ul>
+                  <div class="input-group-box">
+                    <div class="input-box"><label for="inpName01_021">카테고리 구분</label></div>
+                    <div class="input-box"><label for="inpName01_021">브랜드</label></div>
+                  </div>
+                  <div class="input-group-box">
+                    <div class="select-box">
+                      <p class="selected-value">카테고리 구분을 선택해주세요.</p>
+                      <ul class="select-items">
+                        <li>Brand Campaign</li>
+                        <li>Brand Space</li>
+                        <li>Brand Collection</li>
+                        <li>Global Launching Assets</li>
+                        <li>Social Media</li>
+                        <li>Event</li>
+                        <li>GMA</li>
+                      </ul>
+                    </div>
+                    <div class="select-box">
+                      <p class="selected-value">브랜드를 선택해주세요.</p>
+                      <ul class="select-items">
+                        <li>Brand Campaign</li>
+                        <li>Brand Space</li>
+                        <li>Brand Collection</li>
+                        <li>Global Launching Assets</li>
+                        <li>Social Media</li>
+                        <li>Event</li>
+                        <li>GMA</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
+                <!-- E: 220907 브랜드 타입 추가, 구조 변경 -->
+                <!-- e : modify 22.08.30 -->
                 <div class="input-outer-box row-type">
                   <div class="input-group-box">
                     <div class="input-box"><label for="inpName01_021">대표 이미지</label></div>
@@ -147,31 +168,40 @@
 												</ul>
 											</div>
 										</div>
-                    <div class="input-box calendar">
-                      <div class="inp-slice-box">
-                        <div class="inp-area"><input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY"></div>
-                        <div class="inp-area"><input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="input-outer-box row-type selected-tag">
-                  <div class="top">
-                    <label for="inpNum01_031">연관 태그</label>
-                    <button class="btn btn-type3 btn-small pop-open" data-pop-idx="1"><span>태그 추가</span></button>
-                  </div>
-                  <!-- s : modify 22.08.23 -->
-									<div class="selected-box active">
-										<p>연관 태그를 선택해주세요.</p>
-										<div class="switch-item-list">
-											<ul>
-												<li data-label="Accent(RB)">Accent(RB)<button class="btn-item-del"></button></li>
-												<li data-label="Aslan(AG)">Aslan(AG)<button class="btn-item-del"></button></li>
-											</ul>
+                    <!-- s : modify 22.08.30 -->
+										<div class="input-outer-box">
+											<div class="input-outer-box"> <!-- validation check class : val-error -->
+												<div class="input-box calendar">
+													<div class="inp-slice-box">
+														<div class="inp-area"><input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY"></div>
+														<div class="inp-area"><input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY"></div>
+													</div>
+												</div>
+											</div>
+											<p class="error-msg">기간을 선택해 주세요.</p>
 										</div>
-									</div>
-									<!-- e : modify 22.08.23 -->
+                  </div>
                 </div>
+                <div class="input-outer-box">
+									<div class="input-outer-box row-type selected-tag"> <!-- validation check class : val-error -->
+										<div class="top">
+											<label for="inpNum01_031">연관 태그</label>
+											<button class="btn btn-type3 btn-small pop-open" data-pop-idx="1"><span>태그 추가</span></button>
+										</div>
+										<!-- s : modify 22.08.23 -->
+										<div class="selected-box active">
+											<p>연관 태그를 선택해주세요.</p>
+											<div class="switch-item-list">
+												<ul>
+													<li data-label="Avante / Elantra(AD)"><span>2</span>Avante / Elantra(AD)<button class="btn-item-del"></button></li>
+												</ul>
+											</div>
+										</div>
+										<!-- e : modify 22.08.23 -->
+									</div>
+									<p class="error-msg">연관 태그를 선택해주세요.</p>
+								</div>
+                <!-- e : modify 22.08.30 -->
               </div>
               <div class="tab-box-wrap js-tab">
                 <div class="tab-box-outer">
@@ -185,12 +215,17 @@
                   <!-- S: 영어 -->
                   <div class="tab-box-item active">
                     <div class="management-lang">
-                      <div class="input-outer-box row-type">
-                        <label for="inpTxt0111">라이브러리 콘텐츠 <span class="required">*</span></label>
-                        <div class="input-box">
-                          <input type="text" id="inpTxt0111" class="input-item" maxlength="30">
+                      <!-- s : modify 22.08.30 -->
+                      <div class="input-outer-box">
+                        <div class="input-outer-box row-type val-error">
+                          <label for="inpTxt0111">라이브러리 콘텐츠 <span class="required">*</span></label>
+                          <div class="input-box">
+                            <input type="text" id="inpTxt0111" class="input-item" maxlength="30">
+                          </div>
                         </div>
+                        <p class="error-msg">라이브러리 콘텐츠를 입력해주세요.</p>
                       </div>
+                      <!-- e : modify 22.08.30 -->
                       <div class="editor-cont">
                         에디터 영역
                       </div>

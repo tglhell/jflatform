@@ -439,21 +439,26 @@
 					<div class="design-review-wrap">
 						<div class="input-info-form">
 							<div class="group-box-cont">
-								<div class="input-outer-box row-type">
-									<label for="inpNum01">카테고리 구분 <span class="required">*</span></label>
-									<div class="select-box">
-										<p class="selected-value">카테고리 구분을 선택해주세요.</p>
-										<ul class="select-items">
-											<li>Brand Campaign</li>
-											<li>Brand Space</li>
-											<li>Brand Collection</li>
-											<li>Global Launching Assets</li>
-											<li>Social Media</li>
-											<li>Event</li>
-											<li>GMA</li>
-										</ul>
+								<!-- s : modify 22.08.30 -->
+								<div class="input-outer-box">
+									<div class="input-outer-box row-type val-error">
+										<label for="inpNum01">카테고리 구분 <span class="required">*</span></label>
+										<div class="select-box">
+											<p class="selected-value">카테고리 구분을 선택해주세요.</p>
+											<ul class="select-items">
+												<li>Brand Campaign</li>
+												<li>Brand Space</li>
+												<li>Brand Collection</li>
+												<li>Global Launching Assets</li>
+												<li>Social Media</li>
+												<li>Event</li>
+												<li>GMA</li>
+											</ul>
+										</div>
 									</div>
+									<p class="error-msg">카테고리 구분을 선택해주세요.</p>
 								</div>
+								<!-- s : modify 22.08.30 -->
 								<div class="input-outer-box row-type">
 									<label for="inpNum01_02">브랜드</label>
 									<div class="select-box">
@@ -494,30 +499,42 @@
 											</ul>
 										</div>
 									</div>
-									<div class="input-box calendar">
-										<div class="inp-slice-box">
-											<div class="inp-area"><input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY"></div>
-											<div class="inp-area"><input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY"></div>
+									<!-- s : modify 22.08.30 -->
+									<div class="input-outer-box">
+										<div class="input-outer-box val-error">
+											<div class="input-box calendar">
+												<div class="inp-slice-box">
+													<div class="inp-area"><input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY"></div>
+													<div class="inp-area"><input type="text" class="input-item date-picker" placeholder="MM.DD.YYYY"></div>
+												</div>
+											</div>
+										</div>
+										<p class="error-msg">기간을 선택해 주세요.</p>
+									</div>
+									<!-- e : modify 22.08.30 -->
+								</div>
+							</div>
+							<!-- s : modify 22.08.30 -->
+							<div class="input-outer-box">
+								<div class="input-outer-box row-type selected-tag val-error">
+									<div class="top">
+										<label for="inpNum01_031">연관 태그 <span class="required">*</span></label>
+										<button class="btn btn-type3 btn-small pop-open" data-pop-idx="1"><span>태그 추가</span></button>
+									</div>
+									<!-- s : modify 22.08.23 -->
+									<div class="selected-box active">
+										<p>연관 태그를 선택해주세요.</p>
+										<div class="switch-item-list">
+											<ul>
+												<li data-label="Avante / Elantra(AD)"><span>2</span>Avante / Elantra(AD)<button class="btn-item-del"></button></li>
+											</ul>
 										</div>
 									</div>
+									<!-- e : modify 22.08.23 -->
 								</div>
+								<p class="error-msg">연관 태그를 선택해주세요.</p>
 							</div>
-							<div class="input-outer-box row-type selected-tag">
-								<div class="top">
-									<label for="inpNum01_031">연관 태그 <span class="required">*</span></label>
-									<button class="btn btn-type3 btn-small pop-open" data-pop-idx="1"><span>태그 추가</span></button>
-								</div>
-								<!-- s : modify 22.08.23 -->
-								<div class="selected-box active">
-									<p>연관 태그를 선택해주세요.</p>
-									<div class="switch-item-list">
-										<ul>
-											<li data-label="Avante / Elantra(AD)"><span>2</span>Avante / Elantra(AD)<button class="btn-item-del"></button></li>
-										</ul>
-									</div>
-								</div>
-								<!-- e : modify 22.08.23 -->
-							</div>
+							<!-- e : modify 22.08.30 -->
 							<div class="tab-box-wrap js-tab">
                 <div class="tab-box-outer">
                   <ul class="tab-box-list">
@@ -530,12 +547,17 @@
                   <!-- S: 영어 -->
                   <div class="tab-box-item active">
                     <div class="management-lang">
-                      <div class="input-outer-box row-type">
-                        <label for="inpTxt0111">라이브러리 콘텐츠 <span class="required">*</span></label>
-                        <div class="input-box">
-                          <input type="text" id="inpTxt0111" class="input-item" placeholder="라이브러리 콘텐츠 제목을 입력해주세요." maxlength="30">
-                        </div>
+											<!-- s : modify 22.08.30 -->
+                      <div class="input-outer-box">
+												<div class="input-outer-box row-type val-error">
+													<label for="inpTxt0111">라이브러리 콘텐츠 <span class="required">*</span></label>
+													<div class="input-box">
+														<input type="text" id="inpTxt0111" class="input-item" placeholder="라이브러리 콘텐츠 제목을 입력해주세요." maxlength="30">
+													</div>
+												</div>
+												<p class="error-msg">라이브러리 콘텐츠 제목을 입력해주세요</p>
                       </div>
+											<!-- e : modify 22.08.30 -->
                       <div class="editor-cont">
                         에디터 영역
                       </div>

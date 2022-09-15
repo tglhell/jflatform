@@ -12,10 +12,10 @@ $(function(){
 		$('.bms-header').addClass('menu-open');
 	})
 
-	$('.bms-header .menu .menu-first-li > a').on('mouseover',function(){
-		$(this).addClass('hover').parent('li').siblings('li').find('> a').removeClass('hover');
+	$('.bms-header .menu .menu-first-li').on('mouseover',function(){
+		$(this).find('> a').addClass('hover').parents('li').siblings('li').find('> a').removeClass('hover');
 		$('.bms-header .sub-menu').hide();
-		$(this).next('.sub-menu').show().parent('li').siblings('li').find('.sub-menu').hide();
+		$(this).find('.sub-menu').show().siblings('li').find('.sub-menu').hide();
 	})
 
 	$('.bms-header .menu, .bms-header .inner-content-bg').on('mouseleave',function(){
@@ -397,15 +397,19 @@ $(function(){
 		// video & thumbnail img switch
 		$('.training-video .play-list .thumb img').on('click', function(){
 			const _top = $('.video-outer').position().top + 20;
+
 			const videoName = $(this).attr('src').split('/').reverse()[0].split('.')[0];
 			let videoTitle = $(this).parent('.thumb').next('.tit').text();
 			const imgName = playVideo.attr('src').split('/').reverse()[0].split('.')[0];
 			let imgTitle = playVideoTitle.text();
 			const imgExtension = $(this).attr('src').split('/').reverse()[0].split('.')[1];
+
 			playVideo.attr('src', '../../assets/video/' + videoName + '.mp4' );
 			playVideoTitle.text(videoTitle);
-			$(this).attr('src', '../../assets/images/brand/' + imgName + '.' + imgExtension);
-			$(this).parent('.thumb').next('.tit').text(imgTitle);
+
+			$(this).closest('li').hide();
+			$(this).closest('li').siblings('li').show();
+
 			$('html, body').animate({scrollTop: _top}, 400)
 		});
 
@@ -629,7 +633,9 @@ function popClose (target) {
 	chkSwitch = false;
 	setObj(function () {
 		if (!target.hasClass('inner-pop')) {
-			$('body').css({'overflow':'auto', 'width':'auto'});
+			if(!($('.layer-popup-wrap').css("display")=="block")){
+				$('body').css({'overflow':'auto', 'width':'auto'});
+			}
 		}
 		if ($('.swiper-container').length >= irNum[0]) {
 			$('.swiper-wrapper').css('transform', 'translate3d(0, 0, 0)');

@@ -255,38 +255,52 @@
 											</div>
 										</div>
 										<div class="right">
-											<div class="input-outer-box row-type">
-												<label for="inpTxt01">저작권 담당자 <span class="required">*</span></label>
-												<div class="input-box">
-													<input type="text" id="inpTxt01" class="input-item">
-													<button class="btn-reset"></button>
-												</div>
-											</div>
-											<div class="input-outer-box row-type">
-												<label for="inpTxt02">담당자 소속 팀 <span class="required">*</span></label>
-												<div class="input-box">
-													<input type="text" id="inpTxt02" class="input-item">
-													<button class="btn-reset"></button>
-												</div>
-											</div>
-											<div class="input-outer-box row-type">
-												<label for="inpTxt03">담당자 이메일 <span class="required">*</span></label>
-												<div class="input-box">
-													<input type="text" id="inpTxt03" class="input-item">
-													<button class="btn-reset"></button>
-												</div>
-											</div>
-											<div class="input-outer-box row-type calendar">
-												<div class="side">
-													<label for="inpTxt04">유효 기간 <span class="required">*</span></label>
-													<div class="right">
-														<label class="chk"><input type="checkbox"><span>제한 없음</span></label>
+											<!-- s : modify 22.08.30 -->
+											<div class="input-outer-box">
+												<div class="input-outer-box row-type val-error">
+													<label for="inpTxt01">저작권 담당자 <span class="required">*</span></label>
+													<div class="input-box">
+														<input type="text" id="inpTxt01" class="input-item">
+														<button class="btn-reset"></button>
 													</div>
 												</div>
-												<div class="inp-slice-box">
-													<input type="text" class="input-item daterange date-chk" placeholder="MM.DD.YYYY - MM.DD.YYYY">
-												</div>
+												<p class="error-msg">저작권 담당자를 입력해주세요.</p>
 											</div>
+											<div class="input-outer-box">
+												<div class="input-outer-box row-type val-error">
+													<label for="inpTxt02">담당자 소속 팀 <span class="required">*</span></label>
+													<div class="input-box">
+														<input type="text" id="inpTxt02" class="input-item">
+														<button class="btn-reset"></button>
+													</div>
+												</div>
+												<p class="error-msg">담당자 소속 팀을 입력해주세요.</p>
+											</div>
+											<div class="input-outer-box">
+												<div class="input-outer-box row-type val-error">
+													<label for="inpTxt03">담당자 이메일 <span class="required">*</span></label>
+													<div class="input-box">
+														<input type="text" id="inpTxt03" class="input-item">
+														<button class="btn-reset"></button>
+													</div>
+												</div>	
+												<p class="error-msg">담당자 이메일을 입력해주세요.</p>
+											</div>
+											<div class="input-outer-box">
+												<div class="input-outer-box row-type calendar val-error">
+													<div class="side">
+														<label for="inpTxt04">유효 기간 <span class="required">*</span></label>
+														<div class="right">
+															<label class="chk"><input type="checkbox"><span>제한 없음</span></label>
+														</div>
+													</div>
+													<div class="inp-slice-box">
+														<input type="text" class="input-item daterange date-chk" placeholder="MM.DD.YYYY - MM.DD.YYYY">
+													</div>
+												</div>
+												<p class="error-msg">유효 기간을 선택해주세요.</p>
+											</div>
+											<!-- e : modify 22.08.30 -->
 											<div class="input-outer-box row-type">
 												<div class="side">
 													<label for="inpTxt05">사용 제한 국가</label>
