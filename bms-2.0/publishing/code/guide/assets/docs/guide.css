@@ -760,6 +760,11 @@ html.guide .btn-top:focus {
 }
 /* e : btn-top */
 
+/* popup initializing */
+.layerPopupWrap {
+	display: none;
+}
+
 /* s : Dark Mode */
 html.guide.d-mode:after {
 	content: '다크모드 작업중...';
