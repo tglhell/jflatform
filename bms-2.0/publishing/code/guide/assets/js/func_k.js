@@ -86,7 +86,7 @@ $(() => {
 				if (!$(this).prev().is('.code-preview')) {
 					const locationUrl = $(this).closest('td').prev().text();
 					const pageNum = $(this).text();
-					$(this).before('<p class="code-preview" style="display: none;"><iframe src="/publishing' + locationUrl + pageNum + '"></iframe>');
+					$(this).before('<p class="code-preview" style="display: none;"><iframe src="/publishing' + locationUrl + pageNum + '" loading="lazy"></iframe>');
 				}
 				$(this).parent().find('.code-preview').css({'top':(e.pageY - (irNum[8] * twoDig[6])) + 'px', 'left':(e.pageX - (secVal[5] + twoDig[1])) + 'px', 'display':'block'}).attr('tabindex', '0').focus();
 			} else if (e.type == 'mouseleave') {

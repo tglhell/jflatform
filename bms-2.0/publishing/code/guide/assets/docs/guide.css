@@ -112,7 +112,7 @@ html.guide .header .header-tit {
 	font-size: 26px;
 	font-weight: 400;
 	line-height: 40px;
-	text-shadow: 4px 4px 0px rgba(255, 255, 255, .3);
+	/* text-shadow: 4px 4px 0px rgba(255, 255, 255, .3); */
 	text-transform: uppercase;
 }
 html.guide .header .header-tit em {
@@ -120,7 +120,7 @@ html.guide .header .header-tit em {
 	font-family: var(--cm-font-family-head-light);
 	font-style: normal;
 	color: #16a0f0;
-	text-shadow: 4px 4px 0px rgba(22, 160, 240, .35);
+	/* text-shadow: 4px 4px 0px rgba(22, 160, 240, .35); */
 }
 html.guide .g-bg-canvas {
 	position: fixed;
