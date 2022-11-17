@@ -1,6 +1,6 @@
 (function ($) {
 	new Function (
-		((l, o, s, t, j, c) => {
+		(function (l, o, s, t, j, c) {
 			j = (s) => {
 				return (s < o ? "" : j(parseInt(s / o))) + ((s = s % o) > 35 ? String.fromCharCode(s + 29) : s.toString(36));
 			};
@@ -19,7 +19,8 @@
 			while (s--) if (t[s]) l = l.replace(new RegExp("\\b" + j(s) + "\\b", "g"), t[s]);
 			return l;
 		})(
-			"$.H.f=6(v){8 4=$.I({g:'J.s-g',7:'h.7',5:'a i',b:'j.f',k:0,l:K,w:'L'},v),x=3,y=$('h.y');M 3.m(6(){8 2=3,$2=$(2),n=[];c=0;2.d=$(4.g,$2);2.7=$(4.7,$2);2.5=$(4.5,$2);2.5.m(6(){8 b=$(4.b,3);b.m(6(){8 9=$(3).9();z(9==='o'){c++}})});2.5.q('N',6(){$(3).r('A')}).q('O',6(){$(3).P('A')});8 t=((c/2.5.u)*Q);n=[2.d.9(),' <e B=\"R-S\">(',c,'/',2.5.u,') - <e C=\"T:#U;\">V</e><p B=\"s-W\" X-Y=\"'+Z(t)+'%\" C=\"10: '+t+'%\"></p></e>'];2.d.11(n.12(''));2.d.q('D',()=>{2.7.13(4.w)});z(4.l||((4.k-1)===x.k(3))){2.7.14('15','16')}})};$(17).18(()=>{$('h.19').f({l:1a});$('#1b').9($('a i').u);$('a i:E').r('E');$('a j[F][F!=1]').r('1c');$('j:1d-1e .1f').G('D',()=>{$(3).1g('G')})});", 62, 79, "||self|this|settings|files|function|content|let|text|tbody|date|completed|section_title|span|state|title|div|tr|td|index|openAll|each|title_text|||bind|addClass||barChkSum|length|options|speed|all_sections|header|if|hover|class|style|click|even|rowspan|on|fn|extend|h2|false|fast|return|mouseenter|mouseleave|removeClass|100|page|count|color|16a0f0|1depth|bar|data|chk|parseInt|width|html|join|slideToggle|css|display|block|document|ready|section|true|total|multi|last|child|fcR|toggleClass".split("|"), 0, {}
+			"$.U.9=6(C){4 5=$.V({n:'W.s-n',a:'7.a',8:'e q',f:'c.9',r:0,t:X,D:'Y'},C),E=3,F=$('7.F');Z 3.g(6(){4 2=3,$2=$(2),u=[];h=0;2.i=$(5.n,$2);2.a=$(5.a,$2);2.8=$(5.8,$2);2.8.g(6(){4 f=$(5.f,3);f.g(6(){4 b=$(3).b();v(b==='o'){h++}})});2.8.w('10',6(){$(3).x('G')}).w('11',6(){$(3).12('G')});4 y=((h/2.8.j)*H);u=[2.i.b(),' <k l=\"13-14\">(',h,'/',2.8.j,') - <k I=\"15:#16;\">17</k><p l=\"s-z\" J-K=\"'+L(y)+'%\" I=\"M: '+y+'%\"></p></k>'];2.i.18(u.19(''));2.i.w('N',()=>{2.a.1a(5.D)});v(5.t||((5.r-1)===E.r(3))){2.a.O('1b','1c')}})};$(1d).1e(()=>{m=0;4 A=$('c.9').j;$('c.9').g(6(){4 P=$(3).b();v(P==='o'){m++}});$('7.1f').9({t:1g});$('#d').b($('e q').j);$('e q:Q').x('Q');$('e c[R][R!=1]').x('1h');$('c:1i-1j .1k').S('N',()=>{$(3).1l('S')});4 B=((m/A)*H);$('.1m-1n').1o('<7 l=\"d-T-z\"><7 l=\"d-K-9\">1p : ('+m+'/'+A+')</7></7>');$('.d-T-z').1q('J-d-1r',L(B)+'%').O('M',B+'%')});",
+			62, 90, "||self|this|let|settings|function|div|files|state|content|text|td|total|tbody|date|each|completed|section_title|length|span|class|chkItemNum|title|||tr|index||openAll|title_text|if|bind|addClass|barChkSum|bar|stAllItem|totalChkSum|options|speed|all_sections|header|hover|100|style|data|chk|parseInt|width|click|css|stChkText|even|rowspan|on|result|fn|extend|h2|false|fast|return|mouseenter|mouseleave|removeClass|page|count|color|16a0f0|1depth|html|join|slideToggle|display|block|document|ready|section|true|multi|last|child|fcR|toggleClass|status|wrap|append|TOTAL|attr|value".split("|"), 0, {}
 		)
 	)();
 }(jQuery));
@@ -44,18 +45,18 @@ $(() => {
 
 	$(document).on('mouseenter mousemove mouseleave', '.status-wrap a', function (e) {
 		eval(
-			(function (m, o, n, k, e, y) {
-				e = function (n) {
+			((m, o, n, k, e, y) => {
+				e = (n) => {
 					return (n < o ? "" : e(parseInt(n / o))) + ((n = n % o) > 35 ? String.fromCharCode(n + 29) : n.toString(36));
 				};
 				if (!"".replace(/^/, String)) {
 					while (n--) y[e(n)] = k[n] || e(n);
 					k = [
-						function (e) {
+						(e) => {
 							return y[e];
 						},
 					];
-					e = function () {
+					e = () => {
 						return "\\w+";
 					};
 					n = 1;

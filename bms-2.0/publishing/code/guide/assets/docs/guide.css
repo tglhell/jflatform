@@ -39,22 +39,19 @@ html.guide body::-webkit-scrollbar-track,
 
 @font-face {
 	font-family: 'genesis-head-light';
-	src: url(/publishing/code/guide/assets/fonts/GenesisSansHeadKRLight.woff2) format("woff2"),
-		url(/publishing/code/guide/assets/fonts/GenesisSansHeadKRLight.woff) format("woff");
+	src: url(/publishing/code/guide/assets/fonts/GenesisSansHeadKRLight.woff2) format("woff2");
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'genesis-head-regular';
-	src: url(/publishing/code/guide/assets/fonts/GenesisSansHeadKRRegular.woff2) format("woff2"),
-		url(/publishing/code/guide/assets/fonts/GenesisSansHeadKRRegular.woff) format("woff");
+	src: url(/publishing/code/guide/assets/fonts/GenesisSansHeadKRRegular.woff2) format("woff2");
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'genesis-text-regular';
-	src: url(/publishing/code/guide/assets/fonts/GenesisSansTextKRRegular.woff2) format("woff2"),
-		url(/publishing/code/guide/assets/fonts/GenesisSansTextKRRegular.woff) format("woff");
+	src: url(/publishing/code/guide/assets/fonts/GenesisSansTextKRRegular.woff2) format("woff2");
 	font-weight: 400;
 	font-style: normal;
 }
@@ -62,15 +59,13 @@ html.guide body::-webkit-scrollbar-track,
   font-family:'Nanum Gothic';
   font-style:normal;
   font-weight:400;
-  src: url(/publishing/code/guide/assets/fonts/NanumGothicR.woff) format('woff'),
-		url(/publishing/code/guide/assets/fonts/NanumGothicR.ttf) format('truetype');
+  src: url(/publishing/code/guide/assets/fonts/NanumGothicR.woff2) format('woff2');
 }
 @font-face {
   font-family:'Nanum Gothic';
   font-style:bold;
   font-weight:700;
-  src: url(/publishing/code/guide/assets/fonts/NanumGothicB.woff) format('woff'),
-		url(/publishing/code/guide/assets/fonts/NanumGothicB.ttf) format('truetype');
+  src: url(/publishing/code/guide/assets/fonts/NanumGothicB.woff2) format('woff2');
 }
 
 * {
@@ -78,6 +73,7 @@ html.guide body::-webkit-scrollbar-track,
 	margin: 0;
 	list-style: none;
 	text-decoration: none;
+	letter-spacing: -0.25px;
 	box-sizing: border-box;
 }
 html.guide table {

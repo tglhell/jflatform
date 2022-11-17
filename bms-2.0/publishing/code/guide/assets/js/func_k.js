@@ -37,8 +37,8 @@
 				});
 			let barChkSum = ((completed / self.files.length) * 100);
 			title_text = [self.section_title.text(), ' <span class="page-count">(', completed, '/', self.files.length,
-				') - <span style="color:#16a0f0;">1depth</span><p class="s-bar" data-chk="' + parseInt(barChkSum) + '%" style="width: ' + barChkSum + '%"></p></span>'
-			];
+			') - <span style="color:#16a0f0;">1depth</span><p class="s-bar" data-chk="' + parseInt(barChkSum) + '%" style="width: ' + barChkSum + '%"></p></span>'
+		];
 			self.section_title.html(title_text.join(''));
 			self.section_title.bind('click', () => {
 				self.content.slideToggle(settings.speed);
@@ -49,6 +49,14 @@
 		});
 	};
 	$(document).ready(() => {
+		chkItemNum = 0;
+		let stAllItem = $('td.state').length;
+		$('td.state').each(function () {
+			let stChkText = $(this).text();
+			if (stChkText === 'o') {
+				chkItemNum++;
+			}
+		});
 		$('div.section').state({
 			openAll: true
 		});
@@ -59,6 +67,9 @@
 		$('td:last-child .fcR').on('click', () => {
 			$(this).toggleClass('on');
 		});
+		let totalChkSum = ((chkItemNum / stAllItem) * 100);
+		$('.status-wrap').append('<div class="total-result-bar"><div class="total-chk-state">TOTAL : (' + chkItemNum + '/' + stAllItem + ')</div></div>');
+		$('.total-result-bar').attr('data-total-value', parseInt(totalChkSum) + '%').css('width', totalChkSum + '%');
 	});
 }(jQuery));
 
