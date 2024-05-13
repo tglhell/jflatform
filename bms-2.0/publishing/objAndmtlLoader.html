@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>My first three.js app</title>
+	<style>
+		body {
+			margin: 0;
+		}
+
+		canvas {
+			width: 100%;
+			height: 100%
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Three js -->
+	<script type="text/javascript" src="/publishing/code/guide/assets/js/three.min.js"></script>
+
+	<!-- WebGL 지원유무 https://github.com/mrdoob/three.js/blob/master/examples/js/WebGL.js 참고 -->
+	<script src="./libs/WebGL.js"></script>
+
+	<!-- OrbitControls.js allow the camera to orbit around a target 마우스와 카메라를 상호작용하게 합니다. -->
+	<script type="text/javascript" src="/publishing/code/guide/assets/js/OrbitControls.js"></script>
+
+	<!-- OBJ Loader를 사용하기 위해 추가. https://github.com/mrdoob/three.js/blob/master/examples/js/loaders/OBJLoader.js 와 동일 소스  -->
+	<script src="./libs/OBJLoader.js"></script>
+
+	<!-- OBJ Loader에 Material을 씌우기 위한 라이브러리 추가. https://github.com/mrdoob/three.js/blob/master/examples/js/loaders/MTLLoader.js 와 동일 소스 -->
+	<script src="./libs/MTLLoader.js"></script>
+
+	<script>
+		window.onload = function (e) {
+
+			let scene = new THREE.Scene();
+			let light;
+			let camera;
+			let objLoader; // OBJLoader 객체를 넣을 변수를 선언합니다.
+			let mtlLoader; // MTLLoader 객체를 넣을 변수를 선언합니다.
+
+			initThree();
+			addDirectionalLight();
+			loadMTLLoader();
+
+			/**
+			 * DirectionalLight를 추가하는 함수
+			 *
+			 * @method addDirectionalLight
+			 */
+			function addDirectionalLight() {
+				let light1 = new THREE.DirectionalLight(0xffffff, 1);
+				light1.position.set(-100, 0, 100);
+				let light2 = new THREE.DirectionalLight(0xffffff, 1);
+				light2.position.set(100, 0, 100);
+				let light3 = new THREE.DirectionalLight(0xffffff, 1);
+				light3.position.set(100, 0, -100);
+				scene.add(light1);
+				scene.add(light2);
+				scene.add(light3);
+			}
+
+			/**
+			 * Material 파일을 로드하는 함수
+			 * 
+			 * @method loadMTLLoader 
+			 */
+			function loadMTLLoader() {
+				mtlLoader = new THREE.MTLLoader();
+
+				// MTLLoader Material 파일을 사용할 전역 경로를 설정합니다.
+				mtlLoader.setPath('resources/Umbreon/');
+
+				// 로드할 Material 파일 명을 입력합니다.
+				mtlLoader.load('UmbreonHighPoly.mtl', function (materials) {
+					// 로드 완료되었을때 호출하는 함수
+					materials.preload();
+
+					loadOBJLoader(materials);
+				}, function (xhr) {
+					// 로드되는 동안 호출되는 함수
+					console.log('MTLLoader: ', xhr.loaded / xhr.total * 100, '% loaded');
+				}, function (error) {
+					// 로드가 실패했을때 호출하는 함수
+					console.error('MTLLoader 로드 중 오류가 발생하였습니다.', error);
+					alert('MTLLoader 로드 중 오류가 발생하였습니다.');
+				});
+			}
+
+			/**
+			 * .obj 파일의 모델을 로드하는 함수
+			 *
+			 * @method loadObjLoader
+			 * @param {Object} materials MTLLoader에서 로드한 Materials 값
+			 */
+			function loadOBJLoader(materials) {
+				loader = new THREE.OBJLoader();
+
+				// MTLLoader에서 로드한 materials 파일을 설정합니다.
+				loader.setMaterials(materials);
+
+				// OBJLoader OBJ 파일을 사용할 전역 경로를 설정합니다.
+				loader.setPath('resources/Umbreon/');
+
+				// 로드할 OBJ 파일 명을 입력합니다.
+				loader.load('UmbreonHighPoly.obj', function (object) {
+					// 모델 로드가 완료되었을때 호출되는 함수
+					object.position.x = 0;
+					object.position.y = 0;
+					object.position.z = 0;
+					scene.add(object);
+				}, function (xhr) {
+					// 모델이 로드되는 동안 호출되는 함수
+					console.log('OBJLoader: ', xhr.loaded / xhr.total * 100, '% loaded');
+				}, function (error) {
+					// 모델 로드가 실패했을 때 호출하는 함수
+					alert('모델을 로드 중 오류가 발생하였습니다.');
+				});
+			}
+
+			/**
+			 * Threejs 초기화 함수
+			 *
+			 * @method initThree
+			 */
+			function initThree() {
+				// 브라우저가 WebGL을 지원하는지 체크
+				if (WEBGL.isWebGLAvailable()) {
+					console.log('이 브라우저는 WEBGL을 지원합니다.');
+				} else {
+					console.log('이 브라우저는 WEBGL을 지원하지 않습니다.');
+				}
+
+				camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+				let renderer = new THREE.WebGLRenderer({
+					antialias: true
+				});
+				renderer.setSize(window.innerWidth, window.innerHeight);
+				renderer.setClearColor(0xffffff, 1); // 전체적인 배경색 수정
+				renderer.shadowMap.enabled = true;
+				renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+				document.body.appendChild(renderer.domElement);
+
+				let axes = new THREE.AxisHelper(10);
+				scene.add(axes);
+
+				camera.position.x = 1;
+				camera.position.y = 3;
+				camera.position.z = 3;
+
+				controls = new THREE.OrbitControls(camera);
+				controls.rotateSpeed = 1.0;
+				controls.zoomSpeed = 1.2;
+				controls.panSpeed = 0.8;
+				controls.minDistance = 3;
+				controls.maxDistance = 10;
+
+				function animate() {
+					requestAnimationFrame(animate);
+
+					renderer.render(scene, camera);
+					controls.update();
+				}
+
+				animate();
+			}
+		}
+	</script>
+</body>
+
+</html>

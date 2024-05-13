@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="guide">
+<head>
+	<link rel="preload" href="/publishing/code/guide/assets/fonts/GenesisSansHeadKRLight.woff2" as="font" type="font/woff2" crossorigin />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>Full Page Scroll</title>
+	<link rel="stylesheet" href="/publishing/code/guide/assets/docs/guide.css">
+	<link rel="shortcut icon" href="/publishing/code/guide/assets/favicon.png" type="image/x-icon">
+	<script type="text/javascript" src="/publishing/code/guide/assets/js/lib/jquery-3.6.0.min.js"></script>
+	<style>
+		/* CSS 스타일링 */
+		body, html {
+			overflow-x: hidden;
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		}
+		.navigation {
+			transform: translateY(-50%);
+			position: absolute;
+			top: 50%;
+			right: 30px;
+		}
+		.navigation a:frst-child {
+			margin-top: 0;
+		}
+		.navigation a {
+			transition: all .8s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+			display: block;
+			width: 14px;
+			height: 14px;
+			margin-top: 5px;
+			border: 1px solid #000;
+			border-radius: 7px;
+			font-size: 0;
+			background-color: #fff;
+		}
+		.navigation a.active {
+			transition: all .8s ease-in-out;
+			background-color: #000;
+			pointer-events : none;
+		}
+		.section {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100vh; /* 화면 높이와 같은 높이 설정 */
+			font-size: 50px;
+			color: #fff;
+		}
+		.footer {
+			padding: 80px 0;
+			background-color: #333;
+			color: #fff;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="section active" style="background-color:#1079db;">페이지 1<br>한 페이지씩 스크롤</div>
+		<div class="section" style="background-color:#33c76c;">페이지 2<br>한 페이지씩 스크롤</div>
+		<div class="section" style="background-color:#c7a433;">페이지 3<br>한 페이지씩 스크롤</div>
+		<div class="section" style="background-color:#9fc733;">페이지 4<br>한 페이지씩 스크롤</div>
+		<div class="section" style="background-color:#c73378;">페이지 5<br>한 페이지씩 스크롤</div>
+		<div class="footer">Footer<br>일반 스크롤</div>
+	</div>
+</body>
+
+<script>
+	function fullpageWithNavigation() {
+		const secCount = $('.section').length;
+		const wHgt = $(window).height();
+		const nav = $('<nav class="navigation"></nav>');
+		let currentPage = 0;
+
+		$('.section').each(function(index) {
+			const sectionId = `section-${index + 1}`;
+			const navItem = $(`<a href="#${sectionId}">Section ${index + 1}</a>`);
+			$(this).attr('id', sectionId);
+			navItem.on('click', function(e) {
+				e.preventDefault();
+				const targetSectionIndex = index;
+				scrollToSection(targetSectionIndex);
+				$('.section').removeClass('active').eq(targetSectionIndex).addClass('active');
+				$('.navigation a').removeClass('active').eq(targetSectionIndex).addClass('active');
+				currentPage = targetSectionIndex;
+			});
+			nav.append(navItem);
+		});
+		$('body').append(nav);
+		$('.navigation a:first').addClass('active');
+
+		$(window).on('wheel', function(e) {
+			if (!$('html, body').is(':animated')) {
+				e.preventDefault();
+				if (e.originalEvent.deltaY > 0) { // scroll down
+					currentPage = Math.min(currentPage + 1, secCount);
+				} else { // scroll up
+					currentPage = Math.max(currentPage - 1, 0);
+				}
+				$('html, body').stop().animate({
+					scrollTop: currentPage * wHgt
+				}, 800);
+			}
+			if (currentPage === secCount) return;
+			$('.section').removeClass('active').eq(currentPage).addClass('active');
+			$('.navigation a').removeClass('active').eq(currentPage).addClass('active');
+		});
+
+		function scrollToSection(index) {
+			const scrollTop = index * wHgt;
+			$('html, body').stop().animate({
+				scrollTop: scrollTop
+			}, 800);
+		}
+	}
+	fullpageWithNavigation();
+</script>
+</html>

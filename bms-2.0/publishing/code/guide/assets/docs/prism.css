@@ -36,7 +36,7 @@ pre[class*="language-"] {
 	overflow: auto;
 	margin-bottom: 10px;
 	border-radius: 7px;
-	background: url(/publishing/code/guide/assets/images/bg_box.jpg) no-repeat center center;
+	background: #000;
 	background-size: cover;
 }
 code[class*="language-"] {

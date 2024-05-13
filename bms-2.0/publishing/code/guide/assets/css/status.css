@@ -738,7 +738,7 @@ td:last-child {
 	content: attr(data-total-value);
 	position: absolute;
 	top: -18px;
-	right: 0;
+	right: 5px;
 }
 .total-chk-state {
 	position: absolute;
